@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "lane": "DPS_EPISTEMIC_SOVEREIGNTY",
+  "head_object_id": "NEXUS_OMEGA_DPS_EPISTEMIC_SOVEREIGNTY_CURSOR_INDEPENDENT_FALSIFICATION_RESULT_20260823_R1_SANITIZED",
+  "head_manifest_path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/manifest.json",
+  "head_manifest_sha256": "6f2080978e06a0f49dba4f85a4372d70147136ff60afe9245d275eeebe1f5fe9",
+  "claim_ceiling": "C1",
+  "canonical_promotion": false,
+  "external_anchor": "NOT_YET_ESTABLISHED"
+}

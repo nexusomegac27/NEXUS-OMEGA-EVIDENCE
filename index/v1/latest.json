@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-23T22:58:41+02:00",
+  "claim_ceiling": "C1",
+  "canonical_promotion": false,
+  "object_id": "NEXUS_OMEGA_DPS_EPISTEMIC_SOVEREIGNTY_CURSOR_INDEPENDENT_FALSIFICATION_RESULT_20260823_R1_SANITIZED",
+  "version": "R1_SANITIZED",
+  "lane": "DPS_EPISTEMIC_SOVEREIGNTY",
+  "manifest_path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/manifest.json",
+  "manifest_bytes": "2258",
+  "manifest_sha256": "6f2080978e06a0f49dba4f85a4372d70147136ff60afe9245d275eeebe1f5fe9",
+  "asset_path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/artifact.md",
+  "asset_bytes": "3144",
+  "asset_sha256": "9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145",
+  "anchor_level": "A0_LOCAL_STAGING",
+  "external_anchor": "NOT_YET_ESTABLISHED"
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusomegac27.github.io/NEXUS-OMEGA-EVIDENCE/schema/anchor-manifest-v1.schema.json",
+  "title": "NEXUS OMEGA Anchor Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "object_id", "version", "lane", "title", "claim",
+    "verdict", "caveats", "asset", "semantic_scopes", "parents", "publication", "authority",
+    "supersedes", "issued_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "object_id": {"type": "string", "pattern": "^[A-Z0-9_\\-]+$"},
+    "version": {"type": "string", "pattern": "^R[0-9]+(?:_[A-Z0-9_]+)?$"},
+    "lane": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "claim": {"const": "C1_ONLY"},
+    "verdict": {"enum": ["PASS", "PASS_WITH_CAVEATS", "FAIL_CLOSED", "NOT_ESTABLISHED", "NOT_COMPUTABLE"]},
+    "caveats": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "media_type", "bytes", "sha256"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^objects/sha256/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]{64}/[^/]+$"},
+        "media_type": {"enum": ["text/markdown", "text/plain", "application/json"]},
+        "bytes": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "semantic_scopes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scope_id", "bytes", "sha256"],
+        "properties": {
+          "scope_id": {"type": "string", "minLength": 1},
+          "bytes": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "parents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["object_id", "bytes", "sha256"],
+        "properties": {
+          "object_id": {"type": "string", "minLength": 1},
+          "bytes": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anchor_level", "github_repository", "git_commit", "release_tag", "release_url", "immutable_release_verified", "release_asset_verified", "zenodo_doi", "software_heritage_swhid"],
+      "properties": {
+        "anchor_level": {"enum": ["A0_LOCAL_STAGING", "A1_PUBLIC_FORGE_BOUND", "A2_GITHUB_IMMUTABLE_RELEASE_VERIFIED", "A3_INDEPENDENT_ARCHIVE_WITNESS", "A4_MULTI_AGENT_REPRODUCTION"]},
+        "github_repository": {"type": "string"},
+        "git_commit": {"type": "string"},
+        "release_tag": {"type": "string"},
+        "release_url": {"type": "string"},
+        "immutable_release_verified": {"type": "boolean"},
+        "release_asset_verified": {"type": "boolean"},
+        "zenodo_doi": {"type": "string"},
+        "software_heritage_swhid": {"type": "string"}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_ceiling", "promotion_authorized", "deployment_authorized"],
+      "properties": {
+        "claim_ceiling": {"const": "C1"},
+        "promotion_authorized": {"const": false},
+        "deployment_authorized": {"const": false}
+      }
+    },
+    "supersedes": {"type": ["null", "object"]},
+    "issued_at": {"type": "string", "format": "date-time"}
+  }
+}

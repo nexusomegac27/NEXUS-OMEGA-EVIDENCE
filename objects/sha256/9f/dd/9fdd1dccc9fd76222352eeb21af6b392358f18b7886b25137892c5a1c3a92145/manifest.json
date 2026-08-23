@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "object_id": "NEXUS_OMEGA_DPS_EPISTEMIC_SOVEREIGNTY_CURSOR_INDEPENDENT_FALSIFICATION_RESULT_20260823_R1_SANITIZED",
+  "version": "R1_SANITIZED",
+  "lane": "DPS_EPISTEMIC_SOVEREIGNTY",
+  "title": "DPS Epistemic Sovereignty — Cursor Independent Falsification — Sanitized Public Derivative",
+  "claim": "C1_ONLY",
+  "verdict": "PASS_WITH_CAVEATS",
+  "caveats": [
+    "SOURCE_R0_PREREGISTRATION_WAS_LATE_RELATIVE_TO_COMPOSITE_SEMANTIC_READ",
+    "PDF_SOURCE_REVIEW_WAS_SAMPLED_NOT_COMPLETE",
+    "JCS_VALIDATION_DID_NOT_COVER_THE_COMPLETE_RFC8785_NUMBER_SUITE",
+    "MARKETING_CLAIMS_WERE_QUARANTINED_NOT_INDIVIDUALLY_ADJUDICATED",
+    "SANDBOX_PASS_DOES_NOT_ESTABLISH_SCIENTIFIC_TRUTH_OR_PRODUCTION_READINESS"
+  ],
+  "asset": {
+    "path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/artifact.md",
+    "media_type": "text/markdown",
+    "bytes": "3144",
+    "sha256": "9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145"
+  },
+  "semantic_scopes": [
+    {
+      "scope_id": "FULL_SANITIZED_OBJECT",
+      "bytes": "3144",
+      "sha256": "9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145"
+    }
+  ],
+  "parents": [
+    {
+      "object_id": "NEXUS_OMEGA_DPS_EPISTEMIC_SOVEREIGNTY_CURSOR_INDEPENDENT_FALSIFICATION_RESULT_20260823_R0_FULL_TRANSPORT",
+      "bytes": "21846",
+      "sha256": "b3a3d665cf379b108d882537b15efc7e7df7b00cea67e881b4d449c9909cdca5"
+    },
+    {
+      "object_id": "NEXUS_OMEGA_DPS_EPISTEMIC_SOVEREIGNTY_FRAMEWORK_PARENT_20260823_R0",
+      "bytes": "28177",
+      "sha256": "f39cf8ee18c259e7254ba2f8d581b02fb0ce4a0b6576d527d79c8a2da88195fe"
+    }
+  ],
+  "publication": {
+    "anchor_level": "A0_LOCAL_STAGING",
+    "github_repository": "SOURCE_NOT_BOUND",
+    "git_commit": "SOURCE_NOT_BOUND",
+    "release_tag": "SOURCE_NOT_BOUND",
+    "release_url": "SOURCE_NOT_BOUND",
+    "immutable_release_verified": false,
+    "release_asset_verified": false,
+    "zenodo_doi": "SOURCE_NOT_BOUND",
+    "software_heritage_swhid": "SOURCE_NOT_BOUND"
+  },
+  "authority": {
+    "claim_ceiling": "C1",
+    "promotion_authorized": false,
+    "deployment_authorized": false
+  },
+  "supersedes": null,
+  "issued_at": "2026-08-23T22:58:41+02:00"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusomegac27.github.io/NEXUS-OMEGA-EVIDENCE/schema/agent-return-v1.schema.json",
+  "title": "NEXUS OMEGA External Agent Return v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "ack_id", "agent", "consumed_manifest_sha256", "consumed_asset_sha256", "verification", "result_manifest_url", "result_manifest_sha256", "claim_ceiling", "timestamp"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "ack_id": {"type": "string", "minLength": 1},
+    "agent": {"type": "string", "minLength": 1},
+    "consumed_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "consumed_asset_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "verification": {"enum": ["PASS", "FAIL", "NOT_COMPUTABLE"]},
+    "result_manifest_url": {"type": "string", "format": "uri"},
+    "result_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_ceiling": {"const": "C1"},
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}

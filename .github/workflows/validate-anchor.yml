@@ -1,0 +1,36 @@
+name: validate-anchor
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact revision without third-party actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Compile validator
+        run: python3 -m py_compile scripts/validate_anchor.py scripts/validate_repository.py tests/test_validate_anchor.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate all staging manifests
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' manifest; do
+            python3 scripts/validate_anchor.py --root . "$manifest"
+          done < <(find objects -name manifest.json -print0 | sort -z)
+      - name: Validate discovery indexes
+        run: python3 scripts/validate_repository.py --root .
