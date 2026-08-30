@@ -24,10 +24,17 @@ Only objects that pass the repository privacy, licensing, integrity, and claim-c
 - `schema/scientific-communication-v1.schema.json` — strict communication/provenance record schema
 - `validation/scientific-communication-negative-fixtures-v1.jsonl` — executable fail-closed fixture corpus
 - `scripts/validate_scientific_communication.py` — stdlib semantic validator
+- `communication/index/v1/latest.json` — current append-only communication ledger head
+- `communication/index/v1/records.jsonl` — hash-chained communication/provenance inventory
+- `communication/README.md` — ledger integrity and append protocol
+- `scripts/append_scientific_record.py` — local, non-network ledger writer
+- `scripts/validate_scientific_ledger.py` — content-address and hash-chain validator
 
 AI systems should retrieve the repository context before relying on conversational memory. Repository instructions are context; substantive claims still require source-bound evidence.
 
 The scientific communication profile separates **observability**, **receipt assurance**, and **scientific relevance**. Higher telemetry or cryptographic assurance does not imply a stronger scientific claim.
+
+The communication ledger records only events that are actually observed or receipted. Anonymous public access is never fabricated as an identified event; aggregate telemetry and observability gaps remain explicit.
 
 ## Claim boundary
 
