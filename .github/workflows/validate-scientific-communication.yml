@@ -1,0 +1,31 @@
+name: validate-scientific-communication
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact revision without third-party actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Compile validator
+        run: python3 -m py_compile scripts/validate_scientific_communication.py tests/test_scientific_communication.py
+      - name: Run protocol tests
+        run: python3 -m unittest tests.test_scientific_communication -v
+      - name: Execute negative fixtures
+        run: python3 scripts/validate_scientific_communication.py --fixtures validation/scientific-communication-negative-fixtures-v1.jsonl
+      - name: Parse schema as strict JSON
+        run: python3 -c 'import json; json.load(open("schema/scientific-communication-v1.schema.json", encoding="utf-8"))'
