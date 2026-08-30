@@ -10,11 +10,17 @@ Only objects that pass the repository privacy, licensing, integrity, and claim-c
 
 ## Agent entry points
 
+- `AGENTS.md` — cross-agent standing instructions and role boundaries
+- `.github/copilot-instructions.md` — persistent GitHub Copilot repository instructions
+- `docs/AI_CONTEXT.md` — public-safe persistent NEXUS OMEGA AI bootstrap context
+- `docs/AI_HANDOFF_PROTOCOL.md` — causal, machine-readable cross-session handoff contract
 - `index/v1/latest.json` — current verified discovery pointer
 - `index/v1/objects.jsonl` — append-only object inventory
 - `docs/agent-protocol.md` — retrieval and return protocol
 - `schema/anchor-manifest-v1.schema.json` — manifest schema
 - `schema/agent-return-v1.schema.json` — external-agent ACK/return schema
+
+AI systems should retrieve the repository context before relying on conversational memory. Repository instructions are context; substantive claims still require source-bound evidence.
 
 ## Claim boundary
 
