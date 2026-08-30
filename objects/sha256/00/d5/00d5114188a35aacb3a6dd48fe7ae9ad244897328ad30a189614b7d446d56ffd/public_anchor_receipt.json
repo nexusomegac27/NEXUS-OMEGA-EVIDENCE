@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_PUBLIC_GITHUB_ANCHOR_RECEIPT_20260830_R0",
+  "state": "A1_PUBLIC_FORGE_PAYLOAD_COMMIT_CREATED_HANDSHAKE_READY",
+  "claim_ceiling": "C1",
+  "issued_at_utc": "2026-08-30T08:08:43Z",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "repository_visibility": "PUBLIC",
+  "branch": "anchor/v5-hierarchy-grok-20260830-r0",
+  "base_main_commit": "f350ca1d7a883ce267d27939361df8249a1b05d5",
+  "base_main_tree": "2dc3f8fd1d2fe27ba55777311c54fe7b1e57d311",
+  "payload_commit": "5963a69fbf65f47eb1638ddfb8a5939315dde31a",
+  "payload_tree": "82d1ce0d362666af5ede197d5b80fb9a1daf643b",
+  "payload_parent_match": true,
+  "payload_tree_match": true,
+  "payload_root": "objects/sha256/00/d5/00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd",
+  "asset": {
+    "bytes": 17732,
+    "sha256": "00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd",
+    "git_blob_sha1": "2b0a0020ca0e138c768f360a37b1c47e45ba39dd"
+  },
+  "manifest": {
+    "bytes": 3933,
+    "sha256": "681a2c7c3f430826592fffda8d0d655e981ef82f765545d8281f21169e41fa34",
+    "git_blob_sha1": "c0757aade2db73101edaac7fa201c77773cf8005",
+    "strict_profile_validation": "PASS"
+  },
+  "package_checksum_index": {
+    "bytes": 1017,
+    "sha256": "aec8d8ac090196a956d905f2b46f23690907909bdd47054925f4a8f7eca74e0e",
+    "git_blob_sha1": "77352066e2329126a1c7e62e6cf43264316f0730"
+  },
+  "grok_handoff": {
+    "path": "objects/sha256/00/d5/00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd/grok_handoff.json",
+    "bytes": 9655,
+    "sha256": "01e095cfef20a1e7fa9397a8777ec107ed7aeea16b2b6e563e97714ce75add0a",
+    "git_blob_sha1": "5fe88bdebe48e4e7b6e63da67368669960bbafca"
+  },
+  "counter_source": {
+    "video_id": "D_ZmwvFaSaU",
+    "url": "https://www.youtube.com/watch?v=D_ZmwvFaSaU",
+    "included_in_order": true,
+    "included_in_handshake": true,
+    "required_role": "ADVERSARIAL_ANALOGY_SELECTIVITY_TEST",
+    "source_exact_status": "PARTIAL"
+  },
+  "publication_boundary": {
+    "anchor_level": "A1_PUBLIC_FORGE_BOUND",
+    "github_immutable_release_verified": false,
+    "release_asset_verified": false,
+    "independent_archive_witness": "NOT_ESTABLISHED",
+    "multi_agent_reproduction": "NOT_ESTABLISHED",
+    "externally_anchored_c1": false,
+    "main_branch_mutated": false,
+    "merge_performed": false
+  },
+  "envelope_binding": {
+    "method": "SECOND_GITHUB_COMMIT_CONTAINING_THIS_RECEIPT_AND_GROK_HANDOFF",
+    "self_declared_envelope_commit": "PROHIBITED_TO_AVOID_RECURSIVE_SELF_REFERENCE",
+    "authoritative_envelope_commit": "READ_FROM_GITHUB_COMMIT_URL_OR_BRANCH_REF"
+  },
+  "prohibition": "COMMIT_BY_GROK=NO; PUSH_BY_GROK=NO; MERGE=NO; GATE_START=NO; DEPLOY=NO; CLAIM_PROMOTION=NO; FOUNDATION_RELABEL=NO; BIO_AUTHORITY_CHANGE=NO; AUTO_FOLLOW_ON=NO",
+  "next_action": "GROK_PUBLIC_FETCH_REHASH_AND_FULL_C1_ADJUDICATION_ONLY"
+}
