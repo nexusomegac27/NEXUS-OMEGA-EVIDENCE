@@ -1,0 +1,29 @@
+name: validate-scientific-ledger
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact revision without third-party actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Compile ledger tools
+        run: python3 -m py_compile scripts/validate_scientific_ledger.py scripts/append_scientific_record.py tests/test_scientific_ledger.py
+      - name: Ledger integrity tests
+        run: python3 -m unittest tests.test_scientific_ledger -v
+      - name: Validate repository communication ledger
+        run: python3 scripts/validate_scientific_ledger.py --root .
