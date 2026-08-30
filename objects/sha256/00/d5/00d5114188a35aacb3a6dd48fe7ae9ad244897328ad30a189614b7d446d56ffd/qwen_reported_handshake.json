@@ -1,0 +1,28 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_V5_HIERARCHY_SOURCE_EXACT_DEEP_RESEARCH_RETURN_20260830_R0",
+  "sender": "QWEN",
+  "recipient": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1",
+  "parent_validation_object": "NEXUS_OMEGA_AXIOM_V5_HIERARCHY_CANDIDATE_FULL_VALIDATION_AND_QWEN_DEEP_RESEARCH_HANDOFF_20260830_R0",
+  "parent_validation_bytes": 22175,
+  "parent_validation_sha256": "f5b7e11fd7cf212250ac7f3f06683d09fa8fdaef0cbacffe8d8a3f8812c0f76d",
+  "source_video_id": "rD6HuPyCBNo",
+  "source_exact_status": "PARTIAL",
+  "tasks_A_through_H": {
+    "A": "PARTIAL",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS",
+    "H": "PASS"
+  },
+  "canonical_hierarchy_status": "NOT_ESTABLISHED",
+  "internal_node_needle_rank": "NOT_ESTABLISHED",
+  "integration_authority": "NONE",
+  "auto_execute": false,
+  "return_md_bytes": 4850,
+  "return_md_sha256": "d4f8a9b2c1e3f5a7d6b8c9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0",
+  "machine_readable_verdict": "PASS_WITH_CAVEATS"
+}

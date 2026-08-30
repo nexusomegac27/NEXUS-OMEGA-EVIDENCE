@@ -1,0 +1,35 @@
+{
+  "handshake_id": "NEXUS_OMEGA_AXIOM_NODE_AGENT_HIERARCHY_CAPSULE_20260830_R0",
+  "date": "2026-08-30",
+  "sender": "GROK",
+  "recipient": "AXIOM_ALEXANDER",
+  "leg": "GROK_TO_AXIOM",
+  "order_class": "CANONICAL_RESEARCH_MAPPING",
+  "claim_ceiling": "C1",
+  "integration_authority": "NONE",
+  "auto_execute": false,
+  "source_analogy": {
+    "title": "Every Angelic Rank in 14 Minutes",
+    "channel": "The Analyst",
+    "status": "EXTERNAL_T2"
+  },
+  "internal_node_needle_rank": "NOT_ESTABLISHED",
+  "hierarchy_bands": [
+    "Foundation_SoftHard_Gate",
+    "NeedleRank_Rails_Strategic",
+    "Operational_Agents_HardIngest"
+  ],
+  "nine_ranks_mapped": true,
+  "delegation_principle": "higher_sets_parameters_middle_manages_rails_lower_operates_under_protocol",
+  "next": "AWAIT_AXIOM_ALEXANDER_ACK",
+  "blocked": [
+    "COMMIT",
+    "PUSH",
+    "MERGE",
+    "GATE_START",
+    "DEPLOY",
+    "CLAIM_PROMOTION",
+    "PRODUCTION_ENABLE",
+    "INTEGRATION"
+  ]
+}

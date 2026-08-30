@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "object_id": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_GITHUB_ANCHORED_VALIDATION_ORDER_20260830_R0",
+  "version": "R0",
+  "lane": "V5_HIERARCHY_EXTERNAL_T2_RESEARCH",
+  "title": "AXIOM V5 QWEN/GEMINI to GROK public GitHub anchor validation order",
+  "claim": "C1_ONLY",
+  "verdict": "PASS_WITH_CAVEATS",
+  "caveats": [
+    "QWEN primary file bytes are absent; only a new AXIOM chat-normalized copy is published.",
+    "GEMINI primary file and citation map are absent; only a new AXIOM chat-normalized copy is published.",
+    "The operator-supplied counter-source D_ZmwvFaSaU is discovery-bound only; channel, publication time, transcript, timestamps and primary snapshot hash remain not established.",
+    "This is an A1 public forge commit anchor only; no immutable release or independent archive witness is established.",
+    "Canonical hierarchy, internal Node/Needle-Rank, overload benefit, Bio authority and integration remain not established."
+  ],
+  "asset": {
+    "path": "objects/sha256/00/d5/00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd/artifact.md",
+    "media_type": "text/markdown",
+    "bytes": "17732",
+    "sha256": "00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd"
+  },
+  "semantic_scopes": [
+    {
+      "scope_id": "GROK_ORIGINAL_CAPSULE_PRIMARY_BYTES",
+      "bytes": "5318",
+      "sha256": "88e65c88774c926281a95d776ab7f3188c58d0bb6639cf610cb5adc2ffe03ea1"
+    },
+    {
+      "scope_id": "GROK_ORIGINAL_HANDSHAKE_PRIMARY_BYTES",
+      "bytes": "961",
+      "sha256": "f69d439c6b23bfc585c30350741fa52b036d99db726891c21af5319be988795e"
+    },
+    {
+      "scope_id": "GROK_ORIGINAL_LOCAL_RECEIPT_PRIMARY_BYTES",
+      "bytes": "1116",
+      "sha256": "b6a96d1a8c8d85d9ef4815127d37f9fc59dfd90093691857e47a2494015e5fd2"
+    },
+    {
+      "scope_id": "GROK_ORIGINAL_V5_HANDOFF_TRANSCRIPT_BYTES",
+      "bytes": "1805",
+      "sha256": "adff1fcf8e4e93e4e6b30e0b64d5362b73a906b7fcfb0cad9982e24dfdf3cd7f"
+    },
+    {
+      "scope_id": "AXIOM_PARENT_FULL_VALIDATION_PRIMARY_BYTES",
+      "bytes": "22175",
+      "sha256": "f5b7e11fd7cf212250ac7f3f06683d09fa8fdaef0cbacffe8d8a3f8812c0f76d"
+    },
+    {
+      "scope_id": "QWEN_CHAT_NORMALIZED_NEW_AXIOM_BYTES",
+      "bytes": "7340",
+      "sha256": "05d4f4fb9c93aada14b0153104783d54342f1e57004d6488cd96f8b1297bc9fd"
+    },
+    {
+      "scope_id": "QWEN_REPORTED_HANDSHAKE_OPERATOR_PASTED_BYTES",
+      "bytes": "1022",
+      "sha256": "ae32975c73701546bbfd96c1706db6d47da1fefe60163d05b04b7d2f282f32c7"
+    },
+    {
+      "scope_id": "GEMINI_CHAT_NORMALIZED_NEW_AXIOM_BYTES",
+      "bytes": "3690",
+      "sha256": "caee2d7ba0ed9df7ae05ffbbc2951b10c56ee10f64b58017d8e53f5eec0b225b"
+    },
+    {
+      "scope_id": "OPERATOR_COUNTER_SOURCE_LOCATOR_NEW_AXIOM_BYTES",
+      "bytes": "818",
+      "sha256": "ce3d49a8ba8b56fa4258fcc6bbfee241a6f3c119a4018236720f3d02520d27c4"
+    }
+  ],
+  "parents": [
+    {
+      "object_id": "NEXUS_OMEGA_AXIOM_NODE_AGENT_HIERARCHY_CAPSULE_20260830_R0",
+      "bytes": "5318",
+      "sha256": "88e65c88774c926281a95d776ab7f3188c58d0bb6639cf610cb5adc2ffe03ea1"
+    },
+    {
+      "object_id": "NEXUS_OMEGA_AXIOM_V5_HIERARCHY_CANDIDATE_FULL_VALIDATION_AND_QWEN_DEEP_RESEARCH_HANDOFF_20260830_R0",
+      "bytes": "22175",
+      "sha256": "f5b7e11fd7cf212250ac7f3f06683d09fa8fdaef0cbacffe8d8a3f8812c0f76d"
+    }
+  ],
+  "publication": {
+    "anchor_level": "A1_PUBLIC_FORGE_BOUND",
+    "github_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "git_commit": "BOUND_BY_SECOND_COMMIT_HANDSHAKE_ENVELOPE",
+    "release_tag": "",
+    "release_url": "",
+    "immutable_release_verified": false,
+    "release_asset_verified": false,
+    "zenodo_doi": "",
+    "software_heritage_swhid": ""
+  },
+  "authority": {
+    "claim_ceiling": "C1",
+    "promotion_authorized": false,
+    "deployment_authorized": false
+  },
+  "supersedes": null,
+  "issued_at": "2026-08-30T07:57:36Z"
+}
