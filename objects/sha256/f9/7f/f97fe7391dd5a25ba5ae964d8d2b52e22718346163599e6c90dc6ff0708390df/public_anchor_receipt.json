@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_PUBLIC_GITHUB_ANCHOR_RECEIPT_20260830_R1",
+  "state": "A1_PUBLIC_FORGE_CORRECTED_PAYLOAD_COMMIT_CREATED_HANDSHAKE_READY",
+  "claim_ceiling": "C1",
+  "issued_at_utc": "2026-08-30T08:14:02Z",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "repository_visibility": "PUBLIC",
+  "branch": "anchor/v5-hierarchy-grok-20260830-r1",
+  "base_main_commit": "f350ca1d7a883ce267d27939361df8249a1b05d5",
+  "base_main_tree": "2dc3f8fd1d2fe27ba55777311c54fe7b1e57d311",
+  "payload_commit": "7955654474cb736a3ef937e225b3f2153aaf5ff5",
+  "payload_tree": "972b958064e23d85676da479bb9e773c4b72ce3c",
+  "payload_parent_match": true,
+  "payload_tree_match": true,
+  "payload_root": "objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df",
+  "asset": {
+    "bytes": 18577,
+    "sha256": "f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df",
+    "git_blob_sha1": "c5189e2f890af1cf79bb73123dcd58615a3d0114"
+  },
+  "manifest": {
+    "bytes": 3091,
+    "sha256": "187fe6f2905d1ff06d6d6ef7388b3c37eecd4758eacde2fad5961e55128375fc",
+    "git_blob_sha1": "0b3b4a310ae51f75c25af399d2768665d6201acc",
+    "json_schema_profile_validation": "PASS",
+    "semantic_scope_prefix_model": "PASS",
+    "repo_helper_a1_mode": "NOT_SUPPORTED_CAPABILITY_GAP"
+  },
+  "package_checksum_index": {
+    "bytes": 1017,
+    "sha256": "1f98ac9701767ec3fa60979159ce190f58d643fae22ea137eadb5ac1c962dafc",
+    "git_blob_sha1": "0dd571d80d40f9dba0e0ef75caf8535e31d71608"
+  },
+  "grok_handoff": {
+    "path": "objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df/grok_handoff.json",
+    "bytes": 10346,
+    "sha256": "19ad4a0812dd5e0339712cbbbf91923c6af100de4161a9e1c77a33438ffff5cd",
+    "git_blob_sha1": "95c8f2845635962b958c983fd2918b91291093cd"
+  },
+  "counter_source": {
+    "video_id": "D_ZmwvFaSaU",
+    "url": "https://www.youtube.com/watch?v=D_ZmwvFaSaU",
+    "included_in_order": true,
+    "included_in_handshake": true,
+    "required_role": "ADVERSARIAL_ANALOGY_SELECTIVITY_TEST",
+    "source_exact_status": "PARTIAL"
+  },
+  "correction_lineage": {
+    "superseded_order": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_GITHUB_ANCHORED_VALIDATION_ORDER_20260830_R0",
+    "superseded_payload_commit": "5963a69fbf65f47eb1638ddfb8a5939315dde31a",
+    "superseded_envelope_commit": "42a72f5f001e7787e996357c0a47593876919058",
+    "superseded_branch": "anchor/v5-hierarchy-grok-20260830-r0",
+    "correction_status": "APPEND_ONLY_R1_CURRENT"
+  },
+  "publication_boundary": {
+    "anchor_level": "A1_PUBLIC_FORGE_BOUND",
+    "github_immutable_release_verified": false,
+    "release_asset_verified": false,
+    "independent_archive_witness": "NOT_ESTABLISHED",
+    "multi_agent_reproduction": "NOT_ESTABLISHED",
+    "externally_anchored_c1": false,
+    "main_branch_mutated": false,
+    "merge_performed": false
+  },
+  "envelope_binding": {
+    "method": "SECOND_GITHUB_COMMIT_CONTAINING_THIS_RECEIPT_AND_GROK_HANDOFF",
+    "self_declared_envelope_commit": "PROHIBITED_TO_AVOID_RECURSIVE_SELF_REFERENCE",
+    "authoritative_envelope_commit": "READ_FROM_GITHUB_COMMIT_URL_OR_BRANCH_REF"
+  },
+  "prohibition": "COMMIT_BY_GROK=NO; PUSH_BY_GROK=NO; MERGE=NO; GATE_START=NO; DEPLOY=NO; CLAIM_PROMOTION=NO; FOUNDATION_RELABEL=NO; BIO_AUTHORITY_CHANGE=NO; AUTO_FOLLOW_ON=NO",
+  "next_action": "GROK_PUBLIC_FETCH_REHASH_AND_FULL_C1_ADJUDICATION_ONLY"
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_TO_GROK_V5_PUBLIC_GITHUB_ANCHOR_HANDSHAKE_20260830_R1",
+  "state": "PUBLIC_PAYLOAD_READY_FOR_INDEPENDENT_GROK_FETCH_AND_VALIDATION",
+  "sender": "AXIOM",
+  "recipient": "GROK_EXTERNAL_AGENT_01",
+  "operator_authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1",
+  "issued_at_utc": "2026-08-30T08:14:02Z",
+  "continuity": {
+    "instruction": "Continue from the previously verified GROK R4 public-anchor workflow; do not substitute chat bytes for public bytes.",
+    "prior_verified_object": "NEXUS_OMEGA_R4_GROK_GITHUB_HASH_ANCHOR_VALIDATION_RETURN_20260830_R0",
+    "prior_verified_bytes": 12205,
+    "prior_verified_sha256": "5ea0d27cf40c3bb9f417649b9db23063e9db9e7a407bb4c7c0ea6d3921ef5d16",
+    "prior_cursor_rehash": "PERFORMED_MATCH",
+    "prior_checkpoint_effect": "IDENTITY_CONTINUITY_ONLY_NO_AUTHORITY_INHERITANCE"
+  },
+  "correction_lineage": {
+    "superseded_order": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_GITHUB_ANCHORED_VALIDATION_ORDER_20260830_R0",
+    "superseded_payload_commit": "5963a69fbf65f47eb1638ddfb8a5939315dde31a",
+    "superseded_envelope_commit": "42a72f5f001e7787e996357c0a47593876919058",
+    "correction": "COMPANION_HASHES_MOVED_OUT_OF_SEMANTIC_SCOPES; FULL_ASSET_SCOPE_ONLY",
+    "r0_status": "PUBLIC_HISTORY_PRESERVED_DO_NOT_USE_AS_CURRENT_HANDOFF"
+  },
+  "public_anchor": {
+    "anchor_level": "A1_PUBLIC_FORGE_BOUND",
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "repository_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "branch": "anchor/v5-hierarchy-grok-20260830-r1",
+    "base_main_commit": "f350ca1d7a883ce267d27939361df8249a1b05d5",
+    "payload_commit": "7955654474cb736a3ef937e225b3f2153aaf5ff5",
+    "payload_tree": "972b958064e23d85676da479bb9e773c4b72ce3c",
+    "payload_root": "objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df",
+    "manifest_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/7955654474cb736a3ef937e225b3f2153aaf5ff5/objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df/manifest.json",
+    "asset_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/7955654474cb736a3ef937e225b3f2153aaf5ff5/objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df/artifact.md",
+    "immutable_release_verified": false,
+    "independent_archive_witness": "NOT_ESTABLISHED",
+    "externally_anchored_c1": false
+  },
+  "expected_files": [
+    {
+      "name": "artifact.md",
+      "role": "CANONICAL_VALIDATION_ORDER",
+      "bytes": 18577,
+      "sha256": "f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df",
+      "git_blob_sha1": "c5189e2f890af1cf79bb73123dcd58615a3d0114",
+      "provenance": "AXIOM_PRIMARY_BYTES"
+    },
+    {
+      "name": "manifest.json",
+      "role": "ANCHOR_MANIFEST",
+      "bytes": 3091,
+      "sha256": "187fe6f2905d1ff06d6d6ef7388b3c37eecd4758eacde2fad5961e55128375fc",
+      "git_blob_sha1": "0b3b4a310ae51f75c25af399d2768665d6201acc",
+      "provenance": "AXIOM_PRIMARY_BYTES"
+    },
+    {
+      "name": "package_sha256s.txt",
+      "role": "PACKAGE_CHECKSUM_INDEX",
+      "bytes": 1017,
+      "sha256": "1f98ac9701767ec3fa60979159ce190f58d643fae22ea137eadb5ac1c962dafc",
+      "git_blob_sha1": "0dd571d80d40f9dba0e0ef75caf8535e31d71608",
+      "provenance": "AXIOM_PRIMARY_BYTES"
+    },
+    {
+      "name": "grok_original_capsule.md",
+      "role": "GROK_V5_ORIGINAL_CAPSULE",
+      "bytes": 5318,
+      "sha256": "88e65c88774c926281a95d776ab7f3188c58d0bb6639cf610cb5adc2ffe03ea1",
+      "git_blob_sha1": "350772e7b0994a0a9a118b48fac9474a5ad933de",
+      "provenance": "OPERATOR_PROVIDED_PRIMARY_BYTES"
+    },
+    {
+      "name": "grok_original_handshake.json",
+      "role": "GROK_V5_ORIGINAL_HANDSHAKE",
+      "bytes": 961,
+      "sha256": "f69d439c6b23bfc585c30350741fa52b036d99db726891c21af5319be988795e",
+      "git_blob_sha1": "bcb42f4b4fd905e00273af853ef1aa66ba46b796",
+      "provenance": "OPERATOR_PROVIDED_PRIMARY_BYTES"
+    },
+    {
+      "name": "grok_original_local_anchor_receipt.txt",
+      "role": "GROK_V5_ORIGINAL_LOCAL_RECEIPT",
+      "bytes": 1116,
+      "sha256": "b6a96d1a8c8d85d9ef4815127d37f9fc59dfd90093691857e47a2494015e5fd2",
+      "git_blob_sha1": "0a40be6a11d672e704e9bcff9472f4265a7c116f",
+      "provenance": "OPERATOR_PROVIDED_PRIMARY_BYTES"
+    },
+    {
+      "name": "grok_original_v5_handoff.txt",
+      "role": "GROK_V5_ORIGINAL_HANDOFF_TRANSCRIPT",
+      "bytes": 1805,
+      "sha256": "adff1fcf8e4e93e4e6b30e0b64d5362b73a906b7fcfb0cad9982e24dfdf3cd7f",
+      "git_blob_sha1": "51678ff5ed2a5042c7205d9836167386aca48118",
+      "provenance": "OPERATOR_PROVIDED_PRIMARY_BYTES"
+    },
+    {
+      "name": "axiom_parent_validation.md",
+      "role": "AXIOM_PARENT_FULL_VALIDATION",
+      "bytes": 22175,
+      "sha256": "f5b7e11fd7cf212250ac7f3f06683d09fa8fdaef0cbacffe8d8a3f8812c0f76d",
+      "git_blob_sha1": "2fe33f23ba7bcce4fdc26bb966c3c06ef7a51402",
+      "provenance": "AXIOM_PRIMARY_BYTES"
+    },
+    {
+      "name": "qwen_chat_normalized.md",
+      "role": "QWEN_RETURN_CHAT_NORMALIZED_COPY",
+      "bytes": 7340,
+      "sha256": "05d4f4fb9c93aada14b0153104783d54342f1e57004d6488cd96f8b1297bc9fd",
+      "git_blob_sha1": "07be31b0184cd842ecb8eb14eb962d040be1b852",
+      "provenance": "NEW_AXIOM_COPY_NOT_QWEN_PRIMARY_BYTES"
+    },
+    {
+      "name": "qwen_reported_handshake.json",
+      "role": "QWEN_REPORTED_HANDSHAKE_OPERATOR_PASTED",
+      "bytes": 1022,
+      "sha256": "ae32975c73701546bbfd96c1706db6d47da1fefe60163d05b04b7d2f282f32c7",
+      "git_blob_sha1": "7146ec6151fe0eb061e4b97e1aa61bd5214a38b7",
+      "provenance": "NEW_AXIOM_COPY_OF_OPERATOR_PASTED_JSON"
+    },
+    {
+      "name": "gemini_chat_normalized.md",
+      "role": "GEMINI_SYNTHESIS_CHAT_NORMALIZED_COPY",
+      "bytes": 3690,
+      "sha256": "caee2d7ba0ed9df7ae05ffbbc2951b10c56ee10f64b58017d8e53f5eec0b225b",
+      "git_blob_sha1": "ffa3e9f0fd23cc5e8b6eb3a7db1525afa62e96b1",
+      "provenance": "NEW_AXIOM_COPY_NOT_GEMINI_PRIMARY_BYTES"
+    },
+    {
+      "name": "operator_counter_source_locator.json",
+      "role": "ADVERSARIAL_COUNTER_SOURCE_LOCATOR",
+      "bytes": 818,
+      "sha256": "ce3d49a8ba8b56fa4258fcc6bbfee241a6f3c119a4018236720f3d02520d27c4",
+      "git_blob_sha1": "db7fe23035f8ce33d8bce5aef0dbd78cd84da41b",
+      "provenance": "OPERATOR_LOCATOR_WITH_AXIOM_DISCOVERY_METADATA"
+    }
+  ],
+  "source_matrix": {
+    "angelic_primary_target": "https://www.youtube.com/watch?v=rD6HuPyCBNo",
+    "gemini_video_1": "https://www.youtube.com/watch?v=ZQ4RIFen_4Q",
+    "gemini_video_2": "https://www.youtube.com/watch?v=gVjid4GWcM8",
+    "gemini_video_3": "https://www.youtube.com/watch?v=LK55KZTBBxs",
+    "operator_counter_source": "https://www.youtube.com/watch?v=D_ZmwvFaSaU",
+    "counter_source_discovery_title": "Every Prince Of Hell Explained in 17 Minutes",
+    "counter_source_exact_status": "DISCOVERY_PARTIAL_TRANSCRIPT_AND_TIMESTAMPS_NOT_ESTABLISHED"
+  },
+  "mandatory_verification": [
+    "Fetch the manifest and every expected file from the payload_commit over public GitHub transport; CHAT_COPY_AS_INPUT=NO.",
+    "Reject duplicate JSON keys and verify exact byte lengths, SHA-256 values and Git blob SHA-1 values for all expected files.",
+    "Use two independent SHA-256 implementations for artifact.md and manifest.json and report implementation agreement.",
+    "Verify payload_commit parent equals base_main_commit and payload_commit tree equals payload_tree.",
+    "Verify the R1 manifest has exactly one semantic scope equal to the complete primary asset and that the repository helper's missing A1 mode is reported as a validator capability gap, not disguised as PASS or byte failure.",
+    "Preserve the distinction between operator-provided primary bytes and AXIOM chat-normalized copies.",
+    "Do not accept QWEN's reported return_md_bytes or return_md_sha256 as verified unless the missing QWEN primary Markdown bytes are independently produced and match.",
+    "Perform source-exact research for all four angelic video locators and the adversarial counter-source; do not fabricate transcripts, timestamps, channel names, publication dates or availability states.",
+    "Build an angelic-versus-demonic hierarchy contrast matrix and test analogy selectivity: an equally plausible mapping on both sides is evidence of non-selective T2 projection, not architecture validation.",
+    "Audit QWEN Tasks A through H and GEMINI claims against primary theological and technical sources, including NIST SP 800-162 as ABAC rather than RBAC, RFC 2753 PEP/PDP semantics, NIST SP 800-207 and Castro-Liskov BFT.",
+    "Execute the declared negative fixtures where computable; label design-only or source-missing items accurately.",
+    "Keep canonical hierarchy, internal Node/Needle rank, Bio authority, overload benefit, Foundation state and integration authority NOT_ESTABLISHED unless independently supported within C1; this order grants no promotion authority."
+  ],
+  "required_return": {
+    "format": "UTF-8 JSON plus UTF-8 Markdown report",
+    "required_fields": [
+      "RETURN_OBJECT",
+      "CONSUMED_PAYLOAD_COMMIT",
+      "CONSUMED_PAYLOAD_TREE",
+      "MANIFEST_BYTES",
+      "MANIFEST_SHA256",
+      "ASSET_BYTES",
+      "ASSET_SHA256",
+      "GIT_BLOB_SHA1_VERIFICATION",
+      "ALL_FILE_MATRIX",
+      "SOURCE_EXACT_MATRIX",
+      "COUNTER_SOURCE_EXACTNESS",
+      "ANALOGY_SELECTIVITY",
+      "QWEN_TASKS_A_THROUGH_H_ADJUDICATION",
+      "GEMINI_CLAIM_ADJUDICATION",
+      "NEGATIVE_FIXTURE_MATRIX",
+      "DISSENT_REGISTER",
+      "FINAL_VERDICT",
+      "CLAIM_CEILING",
+      "RESULT_MANIFEST_URL",
+      "RESULT_MANIFEST_SHA256",
+      "RESULT_ASSET_SHA256"
+    ],
+    "allowed_verdicts": [
+      "PASS_WITH_CAVEATS_C1",
+      "FAIL_MINOR_C1",
+      "FAIL_MAJOR_C1",
+      "HARD_FAIL_C1",
+      "NOT_COMPUTABLE_C1"
+    ]
+  },
+  "prohibitions": {
+    "commit_to_target_repository": false,
+    "push": false,
+    "merge": false,
+    "gate_start": false,
+    "deploy": false,
+    "claim_promotion": false,
+    "foundation_relabel": false,
+    "bio_authority_change": false,
+    "integration_authority": "NONE",
+    "auto_follow_on": false
+  },
+  "next_action": "GROK_PUBLIC_FETCH_REHASH_AND_FULL_C1_ADJUDICATION_ONLY"
+}
