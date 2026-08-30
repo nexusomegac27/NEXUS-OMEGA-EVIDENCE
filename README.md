@@ -19,8 +19,15 @@ Only objects that pass the repository privacy, licensing, integrity, and claim-c
 - `docs/agent-protocol.md` — retrieval and return protocol
 - `schema/anchor-manifest-v1.schema.json` — manifest schema
 - `schema/agent-return-v1.schema.json` — external-agent ACK/return schema
+- `docs/OPEN_SCIENCE_AGENT_COMMUNICATION_MANIFEST.md` — public scientific communication/provenance manifest
+- `docs/SCIENTIFIC_COMMUNICATION_IMPLEMENTATION_PROFILE_V0_1.md` — implementation scope and explicit non-claims
+- `schema/scientific-communication-v1.schema.json` — strict communication/provenance record schema
+- `validation/scientific-communication-negative-fixtures-v1.jsonl` — executable fail-closed fixture corpus
+- `scripts/validate_scientific_communication.py` — stdlib semantic validator
 
 AI systems should retrieve the repository context before relying on conversational memory. Repository instructions are context; substantive claims still require source-bound evidence.
+
+The scientific communication profile separates **observability**, **receipt assurance**, and **scientific relevance**. Higher telemetry or cryptographic assurance does not imply a stronger scientific claim.
 
 ## Claim boundary
 
