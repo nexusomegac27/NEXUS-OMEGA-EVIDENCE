@@ -17,5 +17,8 @@ This site is a discovery surface for public, content-addressed C1 evidence. It i
 - [Scientific communication implementation profile](docs/SCIENTIFIC_COMMUNICATION_IMPLEMENTATION_PROFILE_V0_1.md)
 - [Scientific communication record schema](schema/scientific-communication-v1.schema.json)
 - [Negative fixture suite](validation/scientific-communication-negative-fixtures-v1.jsonl)
+- [Communication ledger head](communication/index/v1/latest.json)
+- [Communication ledger inventory](communication/index/v1/records.jsonl)
+- [Communication ledger protocol](communication/README.md)
 
 Every consumer must retrieve the referenced bytes, verify their SHA-256 and length, preserve all caveats, and independently validate any semantic claim.
