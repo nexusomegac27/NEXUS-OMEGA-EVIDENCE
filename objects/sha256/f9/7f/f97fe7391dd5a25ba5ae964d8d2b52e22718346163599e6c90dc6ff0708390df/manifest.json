@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "object_id": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_GITHUB_ANCHORED_VALIDATION_ORDER_20260830_R1",
+  "version": "R1",
+  "lane": "V5_HIERARCHY_EXTERNAL_T2_RESEARCH",
+  "title": "AXIOM V5 QWEN/GEMINI to GROK public GitHub anchor validation order — append-only manifest-scope correction",
+  "claim": "C1_ONLY",
+  "verdict": "PASS_WITH_CAVEATS",
+  "caveats": [
+    "QWEN primary file bytes are absent; only a new AXIOM chat-normalized copy is published.",
+    "GEMINI primary file and citation map are absent; only a new AXIOM chat-normalized copy is published.",
+    "The operator-supplied counter-source D_ZmwvFaSaU is discovery-bound only; channel, publication time, transcript, timestamps and primary snapshot hash remain not established.",
+    "R1 supersedes R0 because R0 used semantic_scopes for companion-file hashes although the repository validator treats them as prefixes of the primary asset.",
+    "The repository helper has no A1 validation mode; JSON-schema conformance, byte integrity and the helper capability gap must be reported separately.",
+    "This is an A1 public forge commit anchor only; no immutable release or independent archive witness is established.",
+    "Canonical hierarchy, internal Node/Needle-Rank, overload benefit, Bio authority and integration remain not established."
+  ],
+  "asset": {
+    "path": "objects/sha256/f9/7f/f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df/artifact.md",
+    "media_type": "text/markdown",
+    "bytes": "18577",
+    "sha256": "f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df"
+  },
+  "semantic_scopes": [
+    {
+      "scope_id": "FULL_VALIDATION_ORDER_ASSET",
+      "bytes": "18577",
+      "sha256": "f97fe7391dd5a25ba5ae964d8d2b52e22718346163599e6c90dc6ff0708390df"
+    }
+  ],
+  "parents": [
+    {
+      "object_id": "NEXUS_OMEGA_AXIOM_NODE_AGENT_HIERARCHY_CAPSULE_20260830_R0",
+      "bytes": "5318",
+      "sha256": "88e65c88774c926281a95d776ab7f3188c58d0bb6639cf610cb5adc2ffe03ea1"
+    },
+    {
+      "object_id": "NEXUS_OMEGA_AXIOM_V5_HIERARCHY_CANDIDATE_FULL_VALIDATION_AND_QWEN_DEEP_RESEARCH_HANDOFF_20260830_R0",
+      "bytes": "22175",
+      "sha256": "f5b7e11fd7cf212250ac7f3f06683d09fa8fdaef0cbacffe8d8a3f8812c0f76d"
+    }
+  ],
+  "publication": {
+    "anchor_level": "A1_PUBLIC_FORGE_BOUND",
+    "github_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "git_commit": "BOUND_BY_SECOND_COMMIT_HANDSHAKE_ENVELOPE",
+    "release_tag": "",
+    "release_url": "",
+    "immutable_release_verified": false,
+    "release_asset_verified": false,
+    "zenodo_doi": "",
+    "software_heritage_swhid": ""
+  },
+  "authority": {
+    "claim_ceiling": "C1",
+    "promotion_authorized": false,
+    "deployment_authorized": false
+  },
+  "supersedes": {
+    "object_id": "NEXUS_OMEGA_AXIOM_V5_QWEN_GEMINI_TO_GROK_GITHUB_ANCHORED_VALIDATION_ORDER_20260830_R0",
+    "asset_sha256": "00d5114188a35aacb3a6dd48fe7ae9ad244897328ad30a189614b7d446d56ffd",
+    "payload_commit": "5963a69fbf65f47eb1638ddfb8a5939315dde31a"
+  },
+  "issued_at": "2026-08-30T08:14:02Z"
+}

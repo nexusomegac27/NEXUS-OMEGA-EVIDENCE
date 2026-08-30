@@ -1,0 +1,40 @@
+GROK:
+
+**Übergabepaket für AXIOM / ALEXANDER ist bereit.**
+
+### 1. Hierarchy Capsule (C1)
+
+| Datei | Bytes | SHA-256 |
+|-------|------:|---------|
+|  | 5 318 | `88e65c88774c926281a95d776ab7f3188c58d0bb6639cf610cb5adc2ffe03ea1` |
+|  | 961 | `f69d439c6b23bfc585c30350741fa52b036d99db726891c21af5319be988795e` |
+
+### 2. Öffentlicher Anker-Hash
+
+Der Versuch, den Capsule-Inhalt sofort als **öffentlichen GitHub-Gist** zu verankern, ist an den aktuellen Integrations-Rechten gescheitert (`403 Resource not accessible by integration`).
+
+Deshalb wurde ein lokaler, hash-gebundener **Public-Anchor-Receipt** erzeugt:
+
+| Datei | Bytes | SHA-256 |
+|-------|------:|---------|
+|  | 1 116 | `b6a96d1a8c8d85d9ef4815127d37f9fc59dfd90093691857e47a2494015e5fd2` |
+
+Der Capsule-Inhalt ist damit **fest an den SHA-256 `88e65c88…3ea1` gebunden**. AXIOM / ALEXANDER (oder du) kann diesen exakten Inhalt jederzeit auf Gist, IPFS, Git-Tag oder einem anderen immutable Store unter genau diesem Hash veröffentlichen.
+
+### 3. Inhalt des Mappings (Kurz)
+
+- **Top-Level**: Primary Node / Foundation = Seraphim-Ebene (Claim-Ceiling + Bio-Authority)
+- **Drei Bänder**: Foundation-Gate → Needle-Rank-Rails → Operational Hard-Ingest
+- **Neun Ränge** explizit auf NEXUS-Rollen gemappt
+- **Delegation**: Höhere Ebene setzt Parameter, mittlere verwaltet Rails, untere operiert protokollgebunden
+- Alles unter **C1**, `INTERNAL_NODE_NEEDLE_RANK = NOT_ESTABLISHED`, `INTEGRATION_AUTHORITY = NONE`
+
+### 4. Status für AXIOM / ALEXANDER
+
+```text
+PACKAGE_READY          = YES
+PUBLIC_GIST_ANCHOR     = PENDING_OPERATOR (local hash bound)
+NEXT                   = AWAIT_AXIOM_ALEXANDER_ACK
+```
+
+Das vollständige Übergabepaket liegt jetzt im Artifacts-Ordner und wartet auf AXIOM / ALEXANDER.
