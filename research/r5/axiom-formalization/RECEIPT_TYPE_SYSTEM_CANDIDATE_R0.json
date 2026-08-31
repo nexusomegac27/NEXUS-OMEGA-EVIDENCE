@@ -1,0 +1,79 @@
+{
+  "object": "NEXUS_OMEGA_R5_RECEIPT_TYPE_SYSTEM_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "axioms": [
+    "RECEIPT_IS_TYPED_EVIDENCE_OF_A_DEFINED_EVENT_OR_BINDING",
+    "RECEIPT_ASSURANCE_DOES_NOT_IMPLY_SCIENTIFIC_TRUTH",
+    "RECEIPT_SUBJECT_MUST_BE_EXPLICIT",
+    "RECEIPT_EVENT_SCOPE_MUST_BE_EXPLICIT",
+    "SELF_ASSERTED_RECEIPT_IS_NOT_PLATFORM_AUTHENTICATED_RECEIPT",
+    "TRANSPARENCY_WITNESS_IS_ADDITIVE_AND_DOES_NOT_REWRITE_BASE_RECEIPT"
+  ],
+  "receipt_types": [
+    {
+      "id": "BYTE_BINDING_RECEIPT",
+      "subject": "physical or retrievable object bytes",
+      "minimum_fields": ["subject_locator", "bytes", "digest_domain", "digest", "observed_at", "actor"],
+      "establishes": "Bounded statement that specified bytes were measured under a specified digest domain."
+    },
+    {
+      "id": "TRANSPORT_RECEIPT",
+      "subject": "transport event/container",
+      "minimum_fields": ["transport_subject", "sender", "recipient_or_surface", "transport_class", "observed_at", "completeness"],
+      "establishes": "Bounded transport evidence only; does not establish content interpretation or integration."
+    },
+    {
+      "id": "PLATFORM_EVENT_RECEIPT",
+      "subject": "platform-observed event",
+      "minimum_fields": ["provider", "event_locator", "event_type", "observed_at", "platform_identity"],
+      "establishes": "An event observed through a platform/API within the provider's assurance scope."
+    },
+    {
+      "id": "VALIDATION_RECEIPT",
+      "subject": "validator run over fixed subject state",
+      "minimum_fields": ["validator_identity", "validator_independence", "subject_bindings", "validation_profile", "verdict", "executed_at"],
+      "establishes": "Result of named validation profile; scientific meaning remains bounded by the profile."
+    },
+    {
+      "id": "ATTESTATION_RECEIPT",
+      "subject": "typed attestation statement",
+      "minimum_fields": ["subjects", "predicate_type", "statement_digest", "issuer_or_signer", "verification_state"],
+      "establishes": "Authenticated/bound statement existence and verification state, not truth of arbitrary predicate content."
+    },
+    {
+      "id": "TRANSPARENCY_RECEIPT",
+      "subject": "external log/registry inclusion or registration",
+      "minimum_fields": ["log_or_registry", "entry_reference", "subject_or_statement_binding", "inclusion_or_registration_state", "observed_at"],
+      "establishes": "External witness evidence under the log/registry semantics."
+    },
+    {
+      "id": "TIMESTAMP_RECEIPT",
+      "subject": "message imprint / digest submitted to a timestamp authority",
+      "minimum_fields": ["imprint_algorithm", "imprint", "tsa_identity", "timestamp_token_or_reference", "verification_state"],
+      "establishes": "Trusted-time evidence according to timestamp protocol scope; not authorship or scientific validity."
+    },
+    {
+      "id": "CORRECTION_RECEIPT",
+      "subject": "previous record/object assertion",
+      "minimum_fields": ["corrected_subject", "reason", "successor_or_replacement", "issued_at"],
+      "establishes": "Append-only correction/supersession relation without deleting historical evidence."
+    }
+  ],
+  "assurance_mapping": {
+    "RA0_NONE": "No receipt assurance beyond absence of a receipt.",
+    "RA1_SELF_ASSERTED": "Producer/actor assertion without independent byte/platform authentication.",
+    "RA2_MUTUAL_BYTE_BOUND": "Both sides bind the same transferred byte subject/digest within the defined protocol.",
+    "RA3_AUTHENTICATED_PLATFORM": "Provider/platform identity/event evidence within platform semantics.",
+    "RA4_SIGNED_OR_TIMESTAMPED": "Cryptographic signature or trusted timestamp verification established.",
+    "RA5_EXTERNAL_TRANSPARENCY_WITNESS": "External transparency/registry witness established in addition to base evidence."
+  },
+  "forbidden_inferences": [
+    "RA4 -> SCIENTIFIC_TRUTH",
+    "RA5 -> SCIENTIFIC_TRUTH",
+    "TRANSPORT_RECEIPT -> PAYLOAD_VALID",
+    "PLATFORM_EVENT_RECEIPT -> HUMAN_IDENTITY_VERIFIED_UNLESS_PLATFORM_SEMANTICS_ESTABLISH_IT",
+    "TIMESTAMP_RECEIPT -> AUTHORSHIP",
+    "ATTESTATION_RECEIPT -> PREDICATE_TRUE"
+  ]
+}
