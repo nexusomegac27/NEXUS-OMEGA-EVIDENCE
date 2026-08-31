@@ -37,6 +37,12 @@
     "scientific_evidence": {
       "index": "index/v1",
       "objects": "objects/sha256"
+    },
+    "research_pipeline": {
+      "root": "research/pipeline",
+      "packages": "research/pipeline/packages",
+      "events": "research/pipeline/events",
+      "index": "research/pipeline/index"
     }
   },
   "symbiotic_phase_lane": {
@@ -68,7 +74,28 @@
   "research_lane_contract": {
     "direct_child_readme_required": true,
     "raw_research_not_integration_authority": true,
-    "producer_return_not_independent_validation": true
+    "producer_return_not_independent_validation": true,
+    "cross_phase_infrastructure_exception": "research/pipeline"
+  },
+  "shared_research_pipeline": {
+    "path": "research/pipeline",
+    "owners": ["AXIOM", "CURSOR_PRAXIS"],
+    "package_path_template": "research/pipeline/packages/YYYY/MM/<PACKAGE_ID>",
+    "event_path_template": "research/pipeline/events/YYYY/MM/DD/<TIMESTAMP>_<EVENT_ID>.json",
+    "stable_package_paths": true,
+    "event_sourced_lifecycle": true,
+    "sealed_snapshots_immutable": true,
+    "derived_indexes_non_authoritative": true,
+    "lifecycle_states": [
+      "INTAKE",
+      "ACTIVE",
+      "READY_FOR_CURSOR",
+      "CURSOR_PROCESSING",
+      "PROCESSED",
+      "BLOCKED",
+      "SUPERSEDED",
+      "REOPENED"
+    ]
   },
   "historical_path_constraints": [
     "docs/phase2",
@@ -94,5 +121,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
