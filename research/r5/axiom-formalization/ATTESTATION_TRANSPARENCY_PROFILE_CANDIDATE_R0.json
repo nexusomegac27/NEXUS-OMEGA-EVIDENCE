@@ -1,0 +1,59 @@
+{
+  "object": "NEXUS_OMEGA_R5_ATTESTATION_TRANSPARENCY_PROFILE_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "profile_principles": [
+    "SUBJECT_IDENTITY_AND_PREDICATE_TYPE_MUST_BE_SEPARATE",
+    "ATTESTATION_AUTHENTICATION_DOES_NOT_PROVE_ARBITRARY_PREDICATE_TRUTH",
+    "TRANSPARENCY_WITNESS_IS_ADDITIVE_TO_BASE_EVIDENCE",
+    "TIMESTAMPING_ESTABLISHES_TIME_SCOPE_NOT_AUTHORSHIP_OR_SCIENTIFIC_VALIDITY",
+    "EXTERNAL_WITNESS_FAILURE_MUST_NOT_PROMOTE_OR_REWRITE_THE_BASE_RECORD",
+    "SCITT_STYLE_RECEIPT_SEMANTICS_AND_SIGSTORE_STYLE_LOG_SEMANTICS_MUST_REMAIN_TYPED"
+  ],
+  "candidate_statement": {
+    "subjects": "array of typed subject identities",
+    "predicate_type": "URI identifying predicate schema/semantics",
+    "predicate": "typed JSON object",
+    "issuer_or_signer": "asserted/authenticated identity scope",
+    "issued_at": "timestamp if available",
+    "verification": "signature/attestation verification state",
+    "external_witnesses": "zero or more typed transparency/timestamp/publication receipts",
+    "claim_ceiling": "C1"
+  },
+  "interoperability_targets": [
+    {
+      "target": "in-toto Attestation Framework v1",
+      "mapping": "NEXUS subjects -> in-toto subjects; NEXUS predicate_type -> predicateType; candidate predicate -> predicate"
+    },
+    {
+      "target": "SLSA provenance v1",
+      "mapping": "Use only for build provenance subjects/predicate semantics; do not repurpose SLSA provenance as a generic scientific validation assertion."
+    },
+    {
+      "target": "Sigstore Rekor",
+      "mapping": "External transparency witness for supported signed/attested materials; inclusion evidence remains separate from content validity."
+    },
+    {
+      "target": "RFC 9943 SCITT Architecture",
+      "mapping": "Use receipt/transparency-service concepts as an architectural reference for registered signed statements and verifiable receipts."
+    },
+    {
+      "target": "RFC 3161 TSP",
+      "mapping": "Optional trusted timestamp witness over an explicitly defined message imprint/digest domain."
+    }
+  ],
+  "required_failure_modes": [
+    "ATTESTATION_SUBJECT_UNBOUND",
+    "PREDICATE_TYPE_UNKNOWN",
+    "SIGNATURE_INVALID",
+    "SIGNATURE_VALID_PREDICATE_NOT_INDEPENDENTLY_VALIDATED",
+    "TRANSPARENCY_WITNESS_NOT_PRESENT",
+    "TRANSPARENCY_WITNESS_MISMATCH",
+    "TIMESTAMP_IMPRINT_DOMAIN_MISMATCH",
+    "WITNESS_REPLAY_OR_WRONG_SUBJECT"
+  ],
+  "non_claims": [
+    "This candidate does not assert Sigstore, Rekor, SCITT, or RFC3161 deployment in the repository.",
+    "This candidate does not create RA4 or RA5 assurance for any historical artifact by itself."
+  ]
+}
