@@ -1,0 +1,58 @@
+{
+  "object": "NEXUS_OMEGA_R5_FAILURE_CODE_REGISTRY_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "design": "NAMESPACE:CODE with stable machine meaning; human text is explanatory only",
+  "namespaces": {
+    "SOURCE": [
+      {"code":"SOURCE:NOT_PRESENT","meaning":"Required source bytes were not observed in the searched environment."},
+      {"code":"SOURCE:SUBSTITUTION","meaning":"A derivative, transport object, or different object was used as if it were the required source object."},
+      {"code":"SOURCE:IDENTITY_UNBOUND","meaning":"Bytes are present but required source identity has not been established."}
+    ],
+    "BIND": [
+      {"code":"BIND:BYTES_MISMATCH","meaning":"Declared byte count differs from subject bytes."},
+      {"code":"BIND:DIGEST_MISMATCH","meaning":"Digest recomputation in the declared digest domain differs."},
+      {"code":"BIND:DOMAIN_MISMATCH","meaning":"Digest values were compared across incompatible domains."},
+      {"code":"BIND:SELF_PROJECTION_INVALID","meaning":"Manifest self-binding projection is undefined, inconsistent, or recursively includes its own digest field."}
+    ],
+    "CANON": [
+      {"code":"CANON:JCS_PRECONDITION","meaning":"Input does not satisfy prerequisites for RFC 8785 JCS canonicalization."},
+      {"code":"CANON:JCS_MISMATCH","meaning":"Declared JCS digest does not match independent RFC 8785 canonicalization."},
+      {"code":"CANON:NEXUS_SORTED_JSON_MISMATCH","meaning":"NEXUS_SORTED_JSON_V1 bytes do not match the defined local serialization."}
+    ],
+    "SCHEMA": [
+      {"code":"SCHEMA:DIALECT_MISMATCH","meaning":"Instance/schema evaluated under a different JSON Schema dialect than declared."},
+      {"code":"SCHEMA:VALIDATION_FAIL","meaning":"Instance fails the required schema assertions."},
+      {"code":"SCHEMA:SEMANTIC_PROFILE_FAIL","meaning":"Schema-valid instance violates NEXUS semantic invariants outside structural JSON Schema."}
+    ],
+    "ROLE": [
+      {"code":"ROLE:UNDECLARED","meaning":"Object role required by the operation is not explicitly declared."},
+      {"code":"ROLE:CONFUSION","meaning":"Two distinct object roles were treated as equivalent, such as receipt=payload or transport=source."}
+    ],
+    "CAUSAL": [
+      {"code":"CAUSAL:PARENT_MISSING","meaning":"Required predecessor identity is not present/bound."},
+      {"code":"CAUSAL:CYCLE","meaning":"A relationship that must form a DAG introduces a cycle."},
+      {"code":"CAUSAL:SUPERSESSION_REWRITE","meaning":"Historical object was rewritten instead of corrected/superseded append-only."}
+    ],
+    "AUTH": [
+      {"code":"AUTH:ROLE_ESCALATION","meaning":"Actor or artifact claims authority beyond its declared role."},
+      {"code":"AUTH:CLAIM_PROMOTION","meaning":"Claim ceiling/promotion changed without separately authorized process."},
+      {"code":"AUTH:SELF_VALIDATION_AS_INDEPENDENT","meaning":"Producer self-validation represented as independent validation."}
+    ],
+    "OBS": [
+      {"code":"OBS:UNOBSERVABLE_AS_ZERO","meaning":"Unobservable activity represented as a zero count."},
+      {"code":"OBS:AGGREGATE_AS_EVENT","meaning":"Aggregate telemetry represented as an identified individual event."}
+    ],
+    "LEDGER": [
+      {"code":"LEDGER:CONCURRENT_WRITER_RACE","meaning":"Multiple writers can derive/write competing next states without serialization or CAS."},
+      {"code":"LEDGER:PARTIAL_TRANSACTION","meaning":"Object/index/head transaction is partially persisted."},
+      {"code":"LEDGER:ORPHAN_OBJECT","meaning":"Content-addressed record object exists without index reference."},
+      {"code":"LEDGER:HEAD_MISMATCH","meaning":"Latest/head pointer does not correspond to validated final index entry."}
+    ],
+    "PLATFORM": [
+      {"code":"PLATFORM:CHECK_ID_COLLISION","meaning":"Distinct logical workflows publish the same status-check identity where distinct enforcement is expected."},
+      {"code":"PLATFORM:REQUIRED_GATE_NOT_ESTABLISHED","meaning":"A logical check exists but is not demonstrated as a separately required platform gate."}
+    ]
+  },
+  "compatibility_rule": "Existing stable failure codes remain valid; candidate names must be mapped explicitly rather than silently renamed during adoption."
+}
