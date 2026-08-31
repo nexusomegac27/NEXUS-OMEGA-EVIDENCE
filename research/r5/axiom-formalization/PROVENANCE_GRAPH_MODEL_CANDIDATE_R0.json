@@ -1,0 +1,50 @@
+{
+  "object": "NEXUS_OMEGA_R5_PROVENANCE_GRAPH_MODEL_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "graph_kind": "DIRECTED_ACYCLIC_GRAPH_FOR_DERIVATION_CAUSALITY_PLUS_TYPED_NON_DERIVATION_EDGES",
+  "node_identity": "typed object identity including digest domain or immutable platform identity",
+  "node_classes": [
+    "SOURCE_OBJECT",
+    "DERIVATIVE_OBJECT",
+    "TRANSPORT_CONTAINER",
+    "MANIFEST",
+    "RECEIPT",
+    "ATTESTATION",
+    "SCHEMA",
+    "VALIDATION_RESULT",
+    "INDEX_ENTRY",
+    "LEDGER_HEAD",
+    "PATCH_CANDIDATE",
+    "PUBLICATION_WITNESS"
+  ],
+  "edge_types": [
+    {"id":"DERIVED_FROM","acyclic":true,"meaning":"Target bytes/result were produced using source node as an input."},
+    {"id":"TRANSFORMED_BY","acyclic":true,"meaning":"Derivative is linked to explicit transformation/tool/profile identity."},
+    {"id":"TRANSPORTS","acyclic":false,"meaning":"Transport container/event carried or referenced subject; does not imply derivation."},
+    {"id":"DESCRIBES","acyclic":false,"meaning":"Manifest/schema/metadata describes a subject."},
+    {"id":"BINDS","acyclic":false,"meaning":"Receipt/manifest binds a subject identity under a typed procedure."},
+    {"id":"VALIDATES","acyclic":false,"meaning":"Validation result applies a named profile to subject(s)."},
+    {"id":"ATTESTS_TO","acyclic":false,"meaning":"Attestation statement names subject(s) under a predicate type."},
+    {"id":"WITNESSES","acyclic":false,"meaning":"External platform/transparency/archive evidence witnesses another subject/statement."},
+    {"id":"CORRECTS","acyclic":true,"meaning":"Successor correction addresses an earlier record without deleting it."},
+    {"id":"SUPERSEDES","acyclic":true,"meaning":"New object/state replaces prior one for a declared purpose while preserving history."},
+    {"id":"INDEXES","acyclic":false,"meaning":"Index entry points to content-addressed object."},
+    {"id":"HEADS","acyclic":false,"meaning":"Ledger head/checkpoint points to a validated chain state."}
+  ],
+  "required_edge_fields": ["edge_type", "from", "to", "declared_at", "declared_by", "claim_ceiling"],
+  "derivation_requirements": [
+    "DERIVED_FROM edges must not form cycles",
+    "Derivative nodes must preserve source-object identity and transformation identity",
+    "Source substitution is prohibited: a transport or derivative node cannot satisfy a required SOURCE_OBJECT edge",
+    "Correction/supersession edges are append-only and must not rewrite predecessor bytes"
+  ],
+  "query_examples": [
+    "Which exact source bytes produced this derivative?",
+    "Which receipts bind the source bytes independently?",
+    "Which validator results apply to this exact digest-domain identity?",
+    "Which external witness is additive to, rather than substituted for, the base record?",
+    "What is the newest non-retracted successor for this purpose without deleting historical nodes?"
+  ],
+  "interoperability_note": "The node/edge model should be mapped, not conflated, with SLSA/in-toto subject and predicate semantics during stable implementation."
+}
