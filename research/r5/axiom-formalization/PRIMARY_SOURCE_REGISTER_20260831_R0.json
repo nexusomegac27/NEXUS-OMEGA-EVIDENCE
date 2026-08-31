@@ -1,0 +1,78 @@
+{
+  "object": "NEXUS_OMEGA_R5_AXIOM_PRIMARY_SOURCE_REGISTER_20260831_R0",
+  "claim_ceiling": "C1",
+  "purpose": "Primary standards and platform sources used for independent R5 formalization research",
+  "sources": [
+    {
+      "id": "RFC8785",
+      "title": "JSON Canonicalization Scheme (JCS)",
+      "locator": "https://www.rfc-editor.org/rfc/rfc8785.html",
+      "authority_class": "RFC_EDITOR",
+      "use": ["WP-C", "WP-D", "WP-E"]
+    },
+    {
+      "id": "JSON_SCHEMA_2020_12_CORE",
+      "title": "JSON Schema: A Media Type for Describing JSON Documents",
+      "locator": "https://json-schema.org/draft/2020-12/json-schema-core",
+      "authority_class": "JSON_SCHEMA_SPECIFICATION",
+      "use": ["WP-N", "schema_interoperability"]
+    },
+    {
+      "id": "JSON_SCHEMA_2020_12_VALIDATION",
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON",
+      "locator": "https://json-schema.org/draft/2020-12/json-schema-validation",
+      "authority_class": "JSON_SCHEMA_SPECIFICATION",
+      "use": ["WP-N", "schema_interoperability"]
+    },
+    {
+      "id": "IN_TOTO_ATTESTATION_V1",
+      "title": "Specification for in-toto attestation layers",
+      "locator": "https://github.com/in-toto/attestation/blob/main/spec/v1/README.md",
+      "authority_class": "UPSTREAM_SPECIFICATION_REPOSITORY",
+      "use": ["WP-K", "subject_predicate_separation"]
+    },
+    {
+      "id": "SLSA_V1_2",
+      "title": "SLSA specification v1.2",
+      "locator": "https://slsa.dev/spec/v1.2/",
+      "authority_class": "SLSA_SPECIFICATION",
+      "use": ["WP-I", "WP-K", "build_provenance"]
+    },
+    {
+      "id": "SLSA_BUILD_PROVENANCE_V1",
+      "title": "SLSA Build Provenance predicate",
+      "locator": "https://slsa.dev/spec/v1.2/build-provenance",
+      "authority_class": "SLSA_SPECIFICATION",
+      "use": ["WP-I", "WP-K"]
+    },
+    {
+      "id": "SIGSTORE_REKOR",
+      "title": "Sigstore Rekor transparency log overview",
+      "locator": "https://docs.sigstore.dev/logging/overview/",
+      "authority_class": "SIGSTORE_DOCUMENTATION",
+      "use": ["WP-F", "WP-K", "external_transparency_witness"]
+    },
+    {
+      "id": "RFC9943",
+      "title": "An Architecture for Trustworthy and Transparent Digital Supply Chains",
+      "locator": "https://www.rfc-editor.org/info/rfc9943/",
+      "authority_class": "RFC_EDITOR_IETF_PROPOSED_STANDARD",
+      "use": ["WP-F", "WP-I", "WP-K", "receipt_transparency"]
+    },
+    {
+      "id": "RFC3161",
+      "title": "Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP)",
+      "locator": "https://www.rfc-editor.org/info/rfc3161/",
+      "authority_class": "RFC_EDITOR_IETF_STANDARDS_TRACK",
+      "use": ["WP-F", "trusted_timestamp"]
+    },
+    {
+      "id": "GITHUB_RULESET_TROUBLESHOOTING",
+      "title": "GitHub troubleshooting required status checks",
+      "locator": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/troubleshooting-rules",
+      "authority_class": "GITHUB_OFFICIAL_DOCUMENTATION",
+      "use": ["WP-L"]
+    }
+  ],
+  "non_claim": "Presence in this register does not imply adoption, conformance, scientific truth, or claim promotion."
+}
