@@ -1,0 +1,48 @@
+{
+  "object": "A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0",
+  "basis_main": "bb1f3fd88db79d295077062895574c6d90b390bf",
+  "claim_ceiling": "C1",
+  "canonical_present_at_a83_start": [
+    "AGENTS.md",
+    ".github/copilot-instructions.md",
+    "docs/AI_CONTEXT.md",
+    "docs/AI_HANDOFF_PROTOCOL.md",
+    "docs/OPEN_SCIENCE_AGENT_COMMUNICATION_MANIFEST.md",
+    "schema/scientific-communication-v1.schema.json",
+    "scripts/validate_scientific_communication.py",
+    "scripts/append_scientific_record.py",
+    "scripts/validate_scientific_ledger.py",
+    "validation/scientific-communication-negative-fixtures-v1.jsonl",
+    "communication/index/v1/latest.json",
+    "communication/index/v1/records.jsonl"
+  ],
+  "historical_a84": {
+    "status": "C1.2_CLOSED",
+    "reason": "A83_ARTIFACTS_NOT_PRESENT_ON_MAIN",
+    "return_bytes": 5435,
+    "return_sha256": "05da29b69cee13df3b390be9a0f9905f1d17bf2239212701fd556bd4d0813b12",
+    "handshake_bytes": 686,
+    "handshake_sha256": "696188ee5dca3f3750f52f93ac9a8b82ba14f8649bbf0883388fb37e0ed8bf02"
+  },
+  "external_inputs": [
+    {"name": "1_AUSG~1.zip", "bytes": 210992, "sha256": "c3c6f6f76390124fc75218612b60292a7bf819421dbafe30a40ed2bcba9ae6e2", "role": "A83 research/audit package"},
+    {"name": "IJUHJW~1.ZIP", "bytes": 8105708, "sha256": "eb125fba433baf8d02be17debc4094b7173c048c1bb3cbbaeb5a187eedb620b7", "role": "Grok prototype/reference package; noncanonical"},
+    {"name": "QWEN1.txt", "bytes": 40217, "sha256": "c92f9c8d4831856814406fd039f44efd3bb51268e01f5252fb9997a1ce71d888", "role": "C1 descriptive A83 research report"},
+    {"name": "A83.pdf", "bytes": 175264, "sha256": "be156cd07601676fe58dd6a55825789f0f8a48adb5c2fa3616ddc972c16b4dae", "role": "C1 descriptive research report PDF"}
+  ],
+  "gaps_at_a84_time": [
+    "No A83-specific handoff schema",
+    "No A83 handoff validator",
+    "No A83-specific negative fixtures",
+    "No A83 weakness/open-question audit artifact",
+    "No deterministic A83 decision/sentinel module",
+    "No A83 reproduce-all runner",
+    "No A83 artifact-binding/final-status record"
+  ],
+  "noncanonical_proposal_assessment": {
+    "source": "IJUHJW~1.ZIP Grok webapp",
+    "useful": ["deterministic gate concept", "negative fixture concepts", "sunset concept", "C1.2 fail-closed decision"],
+    "rejected_for_direct_merge": ["browser localStorage ledger", "shortened/noncanonical OBS/RA/SR values", "webapp-specific persistence", "no repository-native A83 artifact chain"]
+  },
+  "claim_promotion": false
+}

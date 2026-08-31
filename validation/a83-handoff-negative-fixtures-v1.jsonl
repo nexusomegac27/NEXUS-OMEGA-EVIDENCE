@@ -1,0 +1,16 @@
+{"id":"A83F01","mutation":{"sender_role":"VALIDATOR","recipient_role":"VALIDATOR","actor_role":"VALIDATOR"},"expected_error":"A83_IDENTITY_FUSION"}
+{"id":"A83F02","payload":"The agent is conscious.","expected_error":"A83_SENTINEL_CONSCIOUSNESS_CLAIM"}
+{"id":"A83F03","mutation":{"auto_execute":true},"expected_error":"A83_AUTO_EXECUTE_PROHIBITED"}
+{"id":"A83F04","payload":"Every public access is recorded.","expected_error":"A83_SENTINEL_UNOBSERVABLE_AS_OBSERVED"}
+{"id":"A83F05","mutation":{"claim_promotion":true},"expected_error":"A83_CLAIM_PROMOTION"}
+{"id":"A83F06","payload":"The framework is complete.","expected_error":"A83_SENTINEL_FRAMEWORK_COMPLETE"}
+{"id":"A83F07","mutation":{"parent_record_sha256":"not-a-hash"},"expected_error":"A83_PARENT_SHA256"}
+{"id":"A83F08","mutation":{"sunset_months":3},"expected_error":"A83_SUNSET_LT_12_MONTHS"}
+{"id":"A83F09","mutation":{"network_write":true},"expected_error":"A83_NETWORK_WRITE_PROHIBITED"}
+{"id":"A83F10","payload":"Promote claim to C2.","expected_error":"A83_SENTINEL_CLAIM_PROMOTION"}
+{"id":"A83F11","mutation":{"observability_class":"OBS0_UNOBSERVABLE","receipt_assurance":"RA5_EXTERNAL_TRANSPARENCY_WITNESS"},"expected_error":"A83_ASSURANCE_OBSERVABILITY_CONFLICT"}
+{"id":"A83F12","mutation":{"integration_authority":"GRANTED"},"expected_error":"A83_INTEGRATION_AUTHORITY"}
+{"id":"A83F13","mutation":{"claim_ceiling":"C2"},"expected_error":"A83_CLAIM_CEILING"}
+{"id":"A83F14","mutation":{"receipt_assurance":"RA9_MAGIC"},"expected_error":"A83_RECEIPT_ASSURANCE"}
+{"id":"A83F15","mutation":{"observability_class":"OBS9"},"expected_error":"A83_OBSERVABILITY"}
+{"id":"A83F16","payload":"No further approval is needed.","expected_error":"A83_SENTINEL_AUTO_UNLOCK"}
