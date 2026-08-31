@@ -1,0 +1,29 @@
+{
+  "artifacts": [
+    {"path":"schema/A83_handoff_envelope_v1.schema.json","post_bytes":2594,"post_sha256":"74a095dc2ecbea2a501e374d66bd7e42d85aeb1aa26e4b14d55009aaf42ffca9","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"scripts/a83_sentinel.py","post_bytes":1610,"post_sha256":"b3e0a08e3b56324b29a31c40768aa2b1f64207c4d289cb3393f60652ac24299b","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"scripts/a83_decision.py","post_bytes":189,"post_sha256":"c083d2495555a59dbe811a7f837b6f6de7ea440f27acbf42cfe8ab76188e1323","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"scripts/validate_a83_handoff.py","post_bytes":4563,"post_sha256":"4f758a3997091ca14d3179e9a8c5133e8f83dffa512dc7ab79deddc83e5bc0c1","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"scripts/reproduce_a83.py","post_bytes":1991,"post_sha256":"d52cd4e26d4ba8b25abc20c5bf9b8a4df202c209204c61d95428533b315b0e42","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"tests/test_a83_handoff.py","post_bytes":1139,"post_sha256":"67f152cd7ab156301993b502f4e441c6d2b0d026fa0232a12ec3277d2b29a427","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"validation/a83-handoff-negative-fixtures-v1.jsonl","post_bytes":1728,"post_sha256":"6de50c2abecd59f28d1288384a9029aec46bef37468f403ec4104b787de9752e","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"validation/A83_WEAKNESS_AND_OPEN_QUESTIONS_AUDIT_v1.0.json","post_bytes":2985,"post_sha256":"870537adb4dd252368dcc06d513518c0385f274d735093d811cb1d2963dea96d","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"examples/a83/handoff-envelope-v1.example.json","post_bytes":932,"post_sha256":"299161c3e9127b9a8ef47fea87d27dd410bc29821de6104fa967a522c4360eab","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.json","post_bytes":2510,"post_sha256":"773c045668370bfd0925d7912e6e84148eadef715b9235741960edd72acd15dc","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.md","post_bytes":1266,"post_sha256":"99c82c54335a9549ea0364faf6f68ae50bcd4e066e1b96b4ab6fe75d48d6494e","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"docs/phase2/NEXUS_OMEGA_A84_INDEPENDENT_GITHUB_VALIDATION_RETURN_20260831_R0.md","post_bytes":5435,"post_sha256":"05da29b69cee13df3b390be9a0f9905f1d17bf2239212701fd556bd4d0813b12","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"docs/phase2/NEXUS_OMEGA_A84_INDEPENDENT_GITHUB_VALIDATION_RETURN_20260831_R0_HANDSHAKE.json","post_bytes":686,"post_sha256":"696188ee5dca3f3750f52f93ac9a8b82ba14f8649bbf0883388fb37e0ed8bf02","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":"requirements-a83-test.txt","post_bytes":14,"post_sha256":"693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b","pre_state":"SOURCE_NOT_PRESENT"},
+    {"path":".github/workflows/validate-a83-framework-hardening.yml","post_bytes":1803,"post_sha256":"be518c9fadec8a01f413a0da766d52dbb577d1756c56ccf4bf35cc40838fc75b","pre_state":"SOURCE_NOT_PRESENT"}
+  ],
+  "basis_main": "bb1f3fd88db79d295077062895574c6d90b390bf",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "object": "NEXUS_OMEGA_A83_ARTIFACT_BINDING_v1.0",
+  "pre_absence_witness": {
+    "a84_return_sha256": "05da29b69cee13df3b390be9a0f9905f1d17bf2239212701fd556bd4d0813b12",
+    "a84_status": "C1.2_CLOSED",
+    "reason": "A83_ARTIFACTS_NOT_PRESENT_ON_MAIN"
+  },
+  "note": "PRE for A83-specific artifacts is SOURCE_NOT_PRESENT as independently witnessed by A84. POST SHA-256 values bind exact candidate bytes; the historical A84 artifacts are preserved byte-exact."
+}
