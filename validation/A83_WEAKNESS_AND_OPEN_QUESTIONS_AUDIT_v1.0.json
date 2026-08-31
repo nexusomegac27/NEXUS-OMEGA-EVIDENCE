@@ -1,0 +1,49 @@
+{
+  "object": "A83_WEAKNESS_AND_OPEN_QUESTIONS_AUDIT_v1.0",
+  "basis_main": "bb1f3fd88db79d295077062895574c6d90b390bf",
+  "claim_ceiling": "C1",
+  "priorities": [
+    {
+      "priority": 1,
+      "area": "claim_boundary_enforcement",
+      "finding": "The Phase-1 record schema enforces claim_promotion=false, but a dedicated ledger-bound handoff primitive was absent at A84 time.",
+      "reproduction": "Search main@bb1f3fd for A83 handoff schema/validator; A84 found zero A83 artifacts.",
+      "remediation": "Add strict A83 handoff schema, deterministic validator/sentinel, and fail-closed decision function."
+    },
+    {
+      "priority": 2,
+      "area": "observability_classification",
+      "finding": "The Phase-1 schema correctly separates OBS/RA/SR; external prototypes using shortened OBS1/RA1/SR1 labels are incompatible with the canonical enums.",
+      "reproduction": "Compare canonical scientific-communication-v1 enums with the Grok browser-local A82 prototype.",
+      "remediation": "Require exact canonical enums in A83 envelopes and reject incompatible classes."
+    },
+    {
+      "priority": 3,
+      "area": "replay_tamper_orphan_resistance",
+      "finding": "The Phase-1 ledger rejects duplicate record IDs, hash-chain breaks, tampered object bytes, and orphan content-addressed records. A83 handoffs additionally need parent membership validation.",
+      "reproduction": "Run existing ledger tests plus A83 parent-not-in-ledger test.",
+      "remediation": "Validate parent_record_sha256 against an existing communication-ledger record when repository root is supplied."
+    },
+    {
+      "priority": 4,
+      "area": "sunset_governance",
+      "finding": "Phase-1 communication records have no handoff-specific expiry primitive.",
+      "reproduction": "Inspect scientific-communication-v1 schema; no handoff sunset field exists.",
+      "remediation": "Require sunset_months >= 12 in A83 handoff envelopes; future revisions should define renewal semantics before operational authorization."
+    },
+    {
+      "priority": 5,
+      "area": "semantic_sentinel_limits",
+      "finding": "Deterministic string sentinels can detect declared forbidden phrases but cannot establish semantic absence of overclaim.",
+      "reproduction": "Paraphrase a prohibited proposition without sentinel phrases.",
+      "remediation": "Treat sentinels as structural guardrails only; retain human/independent review for substantive semantic adjudication."
+    }
+  ],
+  "open_questions": [
+    "How should sunset renewal be represented without rewriting history?",
+    "Should a future handoff record be a dedicated record_type in scientific-communication-v2 or remain an envelope linked to a generic event?",
+    "Which external identity assurance mechanisms can be added without making them mandatory for baseline interoperability?",
+    "How should independent revalidation be represented after the historical A84 C1.2_CLOSED result?"
+  ],
+  "claim_promotion": false
+}
