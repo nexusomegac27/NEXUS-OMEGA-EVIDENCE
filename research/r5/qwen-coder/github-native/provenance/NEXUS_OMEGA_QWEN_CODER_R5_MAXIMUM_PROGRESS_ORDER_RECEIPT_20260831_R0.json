@@ -1,0 +1,23 @@
+{
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "foundation": {
+    "bytes": 35019,
+    "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_20260831_R0.md",
+    "sha256": "fa319c72c93185a3d40f091f74f96b98098a059d61bb17f80a019a273182e317"
+  },
+  "foundation_receipt": {
+    "bytes": 1084,
+    "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0.json",
+    "sha256": "c5ca69d48593b46b70af64ef1398157820dbfde484958cf8a3348177e779c355"
+  },
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_ORDER_RECEIPT_20260831_R0",
+  "order": {
+    "bytes": 27944,
+    "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_END_TO_END_ORDER_20260831_R0.md",
+    "sha256": "15d9d3f2016f50d383f40d2b8fdfe1d3e6b6b6e48e8816ee54680d89c43e162d"
+  },
+  "public_write_authorized": false,
+  "r5_primary_external_partner": "QWEN-CODER",
+  "state": "PHYSICAL_ORDER_ESTABLISHED"
+}

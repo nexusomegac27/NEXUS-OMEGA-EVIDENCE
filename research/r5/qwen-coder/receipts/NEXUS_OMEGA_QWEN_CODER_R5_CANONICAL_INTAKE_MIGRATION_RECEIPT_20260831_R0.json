@@ -1,0 +1,69 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_CANONICAL_INTAKE_MIGRATION_RECEIPT_20260831_R0",
+  "state": "CANONICAL_INTAKE_PREPARED_FROM_HISTORICAL_GIT_BLOBS",
+  "issued_at": "2026-08-31T23:06:33+02:00",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "integration_authority": "NONE",
+  "target_base_main": "003c2072b8e29a1c29cbb17e49b5f18bae0581bb",
+  "target_base_tree": "04757c31820e7739de9d14aeafbfcdceb7dc4825",
+  "source_surfaces": [
+    {
+      "branch": "axiom/r5-qwen-coder-start-20260831",
+      "commit": "6217649d63026f52205daa6eea52dcd61a4d926e",
+      "tree": "203c97b788e272b7135b2dcb64d7391b612df766",
+      "role": "LEGACY_DELIVERY_SURFACE"
+    },
+    {
+      "branch": "qwen-coder/r5-start-20260831",
+      "commit": "af7ed94ba51f09daeece188c58f355d97f62f383",
+      "tree": "30c35f2ad9d8b79a20ed5b223880f5fb4109a247",
+      "role": "GITHUB_NATIVE_QWEN_TRANSPORT_SURFACE"
+    }
+  ],
+  "physical_local_cross_checks": [
+    {
+      "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_END_TO_END_ORDER_20260831_R0.md",
+      "bytes": 27944,
+      "sha256": "15d9d3f2016f50d383f40d2b8fdfe1d3e6b6b6e48e8816ee54680d89c43e162d",
+      "git_blob": "1ad714f6af5a134f3e1aa11d8fe21c96bbc44068"
+    },
+    {
+      "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_20260831_R0.md",
+      "bytes": 35019,
+      "sha256": "fa319c72c93185a3d40f091f74f96b98098a059d61bb17f80a019a273182e317",
+      "git_blob": "443bec223ba2e394559e3c7ca23b0633d5752260"
+    },
+    {
+      "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_ORDER_RECEIPT_20260831_R0.json",
+      "bytes": 938,
+      "sha256": "df7ca28105c1bf25883bfcc55cc9b4ffab38c5ada8cea3317033d82f44027427",
+      "git_blob": "b255c51d41f38075eb05e3f22399a6392fe9eb42",
+      "github_blob_match": true
+    },
+    {
+      "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0.json",
+      "bytes": 1084,
+      "sha256": "c5ca69d48593b46b70af64ef1398157820dbfde484958cf8a3348177e779c355",
+      "git_blob": "dad402893a51a2f433ea5bce22da4985b86fdce5",
+      "github_blob_match": true
+    },
+    {
+      "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_20260831_R0.zip",
+      "bytes": 26395,
+      "sha256": "9a8c2882d8fe8bda6021256ee4e351755b637761ab651bdbd480fe1955303331"
+    },
+    {
+      "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_RECEIPT_20260831_R0.json",
+      "bytes": 871,
+      "sha256": "bf94fafe0ebc4552e9544b9300b66323d2a8a073772a2c095d9c5332cf382eeb",
+      "git_blob": "8c6dc817e5d24a820dffba5df13ece7739238ff2",
+      "github_blob_match": true
+    }
+  ],
+  "migration_method": "GIT_BLOB_REUSE_FOR_PUBLIC_HISTORICAL_FILES",
+  "historical_source_branches_mutated": false,
+  "qwen_public_return_present": false,
+  "qwen_return_absence_scope": "PUBLIC_GITHUB_SURFACE_ONLY",
+  "independent_r5_validation": "NOT_YET_EXECUTED"
+}

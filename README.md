@@ -21,11 +21,12 @@ INTEGRATION_AUTHORITY = NONE
 2. The repository root is an allowlisted control surface, never a dump directory.
 3. One artifact class has one canonical owning directory.
 4. Active research belongs under `research/<phase>/<agent-or-topic>/`.
-5. Stable R5 work is mirrored symbiotically across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, and `examples/r5/`.
-6. Content-addressed evidence remains under `objects/` + `index/`; communication provenance remains under `communication/objects/` + `communication/index/`.
-7. Historical path-bound evidence is not relocated merely for aesthetics. A path move requires a migration receipt and all affected bindings/references to remain reproducible.
-8. Every structural change updates this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
-9. Disorder is corrected at intake. A noncritical placement error does not halt unrelated research, but it must not be allowed to become canonical debt.
+5. Every direct `research/r5/<lane>/` directory must contain a `README.md` defining purpose, source/provenance status, and integration status.
+6. Stable R5 work is mirrored symbiotically across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, and `examples/r5/`.
+7. Content-addressed evidence remains under `objects/` + `index/`; communication provenance remains under `communication/objects/` + `communication/index/`.
+8. Historical path-bound evidence is not relocated merely for aesthetics. A path move requires a migration receipt and all affected bindings/references to remain reproducible.
+9. Every structural change updates this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
+10. Disorder is corrected at intake. A noncritical placement error does not halt unrelated research, but it must not be allowed to become canonical debt.
 
 Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 
@@ -143,16 +144,54 @@ The tracked structure for this architecture version is:
 │   ├── a83-handoff-negative-fixtures-v1.jsonl
 │   ├── scientific-communication-negative-fixtures-v1.jsonl
 │   └── r5/
-│       └── README.md
+│       ├── README.md
+│       └── NEXUS_OMEGA_R5_GITHUB_PLATFORM_RECEIPT_20260831_R0.json
 ├── research/
 │   ├── README.md
 │   └── r5/
-│       └── README.md
+│       ├── README.md
+│       ├── axiom-platform-audit/
+│       │   ├── README.md
+│       │   └── NEXUS_OMEGA_R5_GITHUB_PLATFORM_AUDIT_20260831_R0.md
+│       └── qwen-coder/
+│           ├── README.md
+│           ├── github-native/
+│           │   ├── README.md
+│           │   ├── REMOTE_TRANSPORT_RECEIPT.json
+│           │   ├── START_HERE.md
+│           │   └── provenance/
+│           │       ├── NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0.json
+│           │       ├── NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_ORDER_RECEIPT_20260831_R0.json
+│           │       └── NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_RECEIPT_20260831_R0.json
+│           ├── legacy-delivery/
+│           │   ├── README.md
+│           │   ├── DELIVERY_RECEIPT.json
+│           │   ├── REMOTE_REHASH_EXPECTATIONS.json
+│           │   ├── START_HERE.md
+│           │   ├── STATUS.txt
+│           │   └── transport/
+│           │       ├── TRANSPORT_MANIFEST.json
+│           │       ├── r5_qwen_transport.part01.b64
+│           │       ├── r5_qwen_transport.part02.b64
+│           │       ├── r5_qwen_transport.part03.b64
+│           │       ├── r5_qwen_transport.part04.b64
+│           │       ├── r5_qwen_transport.part05.b64
+│           │       └── r5_qwen_transport.part06.b64
+│           ├── original-local-bindings/
+│           │   └── README.md
+│           ├── receipts/
+│           │   └── NEXUS_OMEGA_QWEN_CODER_R5_CANONICAL_INTAKE_MIGRATION_RECEIPT_20260831_R0.json
+│           └── returns/
+│               └── README.md
 └── archive/
     └── README.md
 ```
 
 `docs/phase2/` and `requirements-a83-test.txt` remain in their historical paths because the published A83 artifact binding names those paths explicitly. Their location is therefore a provenance constraint, not unsorted residue.
+
+The QWEN-CODER R5 historical transport branches also remain unchanged. Their public files are reused by exact Git blob identity inside the ordered R5 research lane; migration does not silently rewrite the historical source surfaces.
+
+The two original local R5 Markdown objects are independently rehashed and recorded under `research/r5/qwen-coder/original-local-bindings/`. They are intentionally not reconstructed from the GitHub-native derivative.
 
 ## Domain ownership
 
@@ -186,6 +225,28 @@ research/r5/     external and exploratory research inputs/returns
 ```
 
 A candidate is not considered structurally integrated if only one layer exists while required companion layers are missing.
+
+Each direct `research/r5/<lane>/` directory must be self-describing through its own `README.md`; presence in a research lane does not create integration authority.
+
+## Current R5 research lanes
+
+### QWEN-CODER
+
+`research/r5/qwen-coder/` now separates:
+
+- `legacy-delivery/` — the earlier AXIOM Base64/chunk delivery surface;
+- `github-native/` — the later GitHub-native QWEN transport derivative;
+- `original-local-bindings/` — independently rehashed identities of the original physical R5 Markdown inputs;
+- `receipts/` — ordered migration/intake receipts;
+- `returns/` — landing zone for actual physical QWEN-CODER R5 returns.
+
+At this structure version, the public GitHub return landing zone contains no QWEN R5 producer return. This is a repository-presence statement only and does not assert absence from chat, local, or ephemeral environments.
+
+### AXIOM platform audit
+
+`research/r5/axiom-platform-audit/` records independently observed public GitHub platform state relevant to R5. Its current receipt records that the active `main-evidence-protection` ruleset still requires only the status context `validate`, while the new repository-structure workflow has the distinct check identity `validate-repository-structure`. Therefore four distinct historical CI gates remain not established at the platform-required level, and the structure check is not yet a required ruleset context.
+
+No ruleset mutation is implied or authorized by that observation.
 
 ## Agent entry points
 

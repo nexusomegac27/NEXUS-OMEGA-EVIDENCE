@@ -1,0 +1,34 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_GITHUB_NATIVE_REMOTE_TRANSPORT_RECEIPT_20260831_R0",
+  "state": "GITHUB_NATIVE_TRANSPORT_SURFACE_PUBLISHED",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "qwen-coder/r5-start-20260831",
+  "base_commit": "bc312c4d2cd6afa579db1f077c88d8fe08fc9470",
+  "pre_seal_branch_head": "a2825006c53c5064505b7186462dfe9979ba823d",
+  "start_object": "research/r5/qwen-coder/START_HERE.md",
+  "provenance_objects": [
+    "research/r5/qwen-coder/provenance/NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0.json",
+    "research/r5/qwen-coder/provenance/NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_ORDER_RECEIPT_20260831_R0.json",
+    "research/r5/qwen-coder/provenance/NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_RECEIPT_20260831_R0.json"
+  ],
+  "historical_local_foundation": {
+    "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_20260831_R0.md",
+    "bytes": 35019,
+    "sha256": "fa319c72c93185a3d40f091f74f96b98098a059d61bb17f80a019a273182e317",
+    "remote_byte_identity_claim": "NO"
+  },
+  "historical_local_order": {
+    "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_END_TO_END_ORDER_20260831_R0.md",
+    "bytes": 27944,
+    "sha256": "15d9d3f2016f50d383f40d2b8fdfe1d3e6b6b6e48e8816ee54680d89c43e162d",
+    "remote_byte_identity_claim": "NO"
+  },
+  "transport_semantics": "START_HERE.md is a new GitHub-native derivative created because QWEN-CODER cannot receive chat attachments. Historical local byte identities are preserved as provenance only and are not falsely claimed for the derivative.",
+  "qwen_write_authority": "NONE",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "main_mutation": false,
+  "pr_created": false,
+  "merge": false,
+  "next_action": "QWEN-CODER independently fetches this branch, records current branch HEAD/tree and starts from START_HERE.md"
+}

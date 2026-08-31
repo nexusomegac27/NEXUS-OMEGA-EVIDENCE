@@ -1,0 +1,17 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_REMOTE_REHASH_EXPECTATIONS_20260831_R0",
+  "state": "EXPECTED_REMOTE_GIT_BLOB_IDENTITIES",
+  "branch": "axiom/r5-qwen-coder-start-20260831",
+  "chunks": [
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part01.b64","git_blob_sha1":"775c714443a08520c95801e7004e929da8633bed","sha256":"585c8a0916b70ee4cbc9af49576846a4a052481f92b08aeafe18c0168c383f25","bytes":6000},
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part02.b64","git_blob_sha1":"cc9b943b3ddeff0becf110af17e32b087f056698","sha256":"a0a91bea736e40d75599d904cb637421d786da9ffaa79f992faf5ea9257aa717","bytes":6000},
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part03.b64","git_blob_sha1":"a4516e05edde635e2e8a869314f35abd2461a8f1","sha256":"46a95cbb059fb85ac6c7187f6b554396a8c9c01aa1158a249ac6b6ad21651bd9","bytes":6000},
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part04.b64","git_blob_sha1":"178596c2d4afdb243b81b155e81da2de063d1595","sha256":"983bad74d573d7b1664f55d9fc2c005c20c22e04af61255e0d5d3ba44da9e829","bytes":6000},
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part05.b64","git_blob_sha1":"8cc72de187c130a4173e984be1365121cc9f97a3","sha256":"7c326f504bd01b6b0aa796680c3f87ee907fd8bab3f736a36221464da2200697","bytes":6000},
+    {"path":"research/r5/qwen-coder-start/transport/r5_qwen_transport.part06.b64","git_blob_sha1":"9bca4b325ee35ed51ef76e95ec21d1b299958dfb","sha256":"4e7fdfe4147f7363af72b7fdc4daf489a7a29d4d802aea1e26e3a47146e9505e","bytes":5196}
+  ],
+  "reassembled_zip_bytes": 26395,
+  "reassembled_zip_sha256": "9a8c2882d8fe8bda6021256ee4e351755b637761ab651bdbd480fe1955303331",
+  "claim_ceiling":"C1",
+  "claim_promotion":false
+}

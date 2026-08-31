@@ -1,0 +1,40 @@
+{
+  "object": "NEXUS_OMEGA_R5_GITHUB_PLATFORM_RECEIPT_20260831_R0",
+  "state": "PLATFORM_STATE_OBSERVED_C1",
+  "claim_ceiling": "C1",
+  "base_main": "003c2072b8e29a1c29cbb17e49b5f18bae0581bb",
+  "base_tree": "04757c31820e7739de9d14aeafbfcdceb7dc4825",
+  "qwen_frozen_main": "bc312c4d2cd6afa579db1f077c88d8fe08fc9470",
+  "live_main_drift": true,
+  "ruleset": {
+    "id": 21252293,
+    "name": "main-evidence-protection",
+    "enforcement": "active",
+    "include": ["refs/heads/main"],
+    "current_user_can_bypass": "never",
+    "bypass_actors": [],
+    "required_status_checks": {
+      "strict": true,
+      "contexts": [
+        {"context": "validate", "integration_id": 15368}
+      ]
+    }
+  },
+  "workflow_job_identities": {
+    "validate-anchor": "validate",
+    "validate-scientific-communication": "validate",
+    "validate-scientific-ledger": "validate",
+    "validate-a83-framework-hardening": "validate",
+    "Validate repository structure": "validate-repository-structure"
+  },
+  "conclusions": {
+    "main_protected_by_active_ruleset": true,
+    "four_logical_ci_workflows": "ESTABLISHED",
+    "four_distinct_platform_required_gates": "NOT_ESTABLISHED",
+    "structure_check_executes": true,
+    "structure_check_has_distinct_identity": true,
+    "structure_check_ruleset_required": false
+  },
+  "ruleset_mutation": false,
+  "claim_promotion": false
+}
