@@ -1,0 +1,30 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_R5_LEDGER_DURABILITY_SEED_SOURCE_REGISTER_R0",
+  "claim_ceiling": "C1",
+  "purpose": "Non-exhaustive starting seeds. QWEN must expand, verify, rank, and may reject any seed.",
+  "open_source_artifact_seeds": [
+    {"name":"SQLite","url":"https://sqlite.org/","focus":["atomic commit","rollback journal","WAL","crash-test VFS","single-writer/multi-reader semantics"]},
+    {"name":"Git update-ref transactions","url":"https://git-scm.com/docs/git-update-ref.html","focus":["lock files","transaction prepare/commit/abort","old-OID compare-and-swap style verification","multi-ref caveats"]},
+    {"name":"RocksDB","url":"https://github.com/facebook/rocksdb","focus":["WAL","WriteBatch atomicity","TransactionDB","optimistic/pessimistic conflict control","recovery modes","fsync/fdatasync"]},
+    {"name":"Trillian","url":"https://github.com/google/trillian","focus":["append-only transparency log","sequencing","Merkle consistency","storage backend separation"]},
+    {"name":"Tessera","url":"https://github.com/transparency-dev/tessera","focus":["modern tile-based transparency logs","POSIX/GCP/AWS storage drivers","sequencing","synchronous integration","witnessing"]},
+    {"name":"Sigstore Rekor","url":"https://github.com/sigstore/rekor","focus":["tamper-resistant transparency log","Trillian/Tessera evolution","auditing","inclusion/consistency proofs"]},
+    {"name":"immudb","url":"https://github.com/codenotary/immudb","focus":["append-only tamper-evident database","transaction sequence","cryptographic state","auditing"]},
+    {"name":"OSTree","url":"https://github.com/ostreedev/ostree","focus":["content-addressing","transactional deployment","atomic update patterns","rollback"]},
+    {"name":"CrashMonkey + Ace","url":"https://github.com/utsaslab/crashmonkey","focus":["black-box crash consistency testing","record/replay","workload generation","fault exploration"]},
+    {"name":"LMDB","url":"https://github.com/LMDB/lmdb","focus":["single-writer MVCC","copy-on-write pages","ACID durability","mmap persistence"]},
+    {"name":"etcd","url":"https://github.com/etcd-io/etcd","focus":["MVCC","transactions/CAS","WAL","snapshot/recovery","single logical revision"]}
+  ],
+  "open_access_research_seeds": [
+    {"title":"Fast and Synchronous Crash Consistency with Metadata Write-Once File System","venue":"OSDI 2025","url":"https://www.usenix.org/conference/osdi25/presentation/pan","focus":["write-once metadata package","single ordering point","recovery"]},
+    {"title":"PoWER Never Corrupts: Tool-Agnostic Verification of Crash Consistency and Corruption Detection","venue":"OSDI 2025","url":"https://www.usenix.org/conference/osdi25/presentation/leblanc","focus":["formal crash-consistency verification","recoverability preconditions","verified storage"]},
+    {"title":"Decentralized, Epoch-based F2FS Journaling with Fine-grained Crash Recovery","venue":"OSDI 2025","url":"https://www.usenix.org/conference/osdi25/presentation/cui","focus":["epoch journaling","lock contention","fine-grained recovery","open-source prototype"]},
+    {"title":"Silhouette: Leveraging Consistency Mechanisms to Detect Bugs in Persistent Memory-Based File Systems","venue":"FAST 2025","url":"https://www.usenix.org/conference/fast25/presentation/jiao","focus":["crash bug detection","journaling/checkpoint mechanism-aware exploration"]},
+    {"title":"Fast, Transparent Filesystem Microkernel Recovery with Ananke","venue":"FAST 2025","url":"https://www.usenix.org/conference/fast25/presentation/liu-jing","focus":["fault injection","recovery state capture","lossless recovery experiments"]},
+    {"title":"DJFS: Directory-Granularity Filesystem Journaling for CMM-H SSDs","venue":"FAST 2025","url":"https://www.usenix.org/conference/fast25/presentation/yoo","focus":["fine-grained transaction scope","lock contention","journal commit/recovery"]},
+    {"title":"AWUPF Rediscovered: Atomic Writes to Unleash Pivotal Fault-Tolerance in SSDs","venue":"FAST 2025","url":"https://www.usenix.org/conference/fast25/presentation/jeon","focus":["hardware atomic write units","reduced WAL/journaling need","crash consistency"]},
+    {"title":"MlsDisk: Trusted Block Storage for TEEs Based on Layered Secure Logging","venue":"FAST 2026","url":"https://www.usenix.org/conference/fast26/presentation/xu","focus":["out-of-place logging","layered secure logging","recovery/security"]},
+    {"title":"Discard-Based Garbage Collection for Distributed Log-Structured Storage Systems in ByteDance","venue":"FAST 2026","url":"https://www.usenix.org/conference/fast26/presentation/bian","focus":["production append-only storage","log-structured lifecycle","deployed-system lessons"]}
+  ],
+  "rule": "Seeds are hypotheses and search starting points, not required conclusions. Prefer exact source code, design docs, tests, release notes and open-access papers over summaries."
+}
