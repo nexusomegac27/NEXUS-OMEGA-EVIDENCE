@@ -1,0 +1,144 @@
+{
+  "bindings": [
+    {
+      "actual_bytes": 37851,
+      "actual_sha256": "ced7f39c03bad6c28168b155d0a7ec29b640133a9900f14ff3e65c019bb99eba",
+      "declared_bytes": 37851,
+      "declared_sha256": "ced7f39c03bad6c28168b155d0a7ec29b640133a9900f14ff3e65c019bb99eba",
+      "filename": "NEXUS-OMEGA-FRAMEWORK-LIVE-20260831-R0.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 4287,
+      "actual_sha256": "a22b58b5e0aca07d8f6471280853b31ed66ae7e6f4eadd4939c404d8d3dcf3a6",
+      "declared_bytes": 4287,
+      "declared_sha256": "a22b58b5e0aca07d8f6471280853b31ed66ae7e6f4eadd4939c404d8d3dcf3a6",
+      "filename": "AGENTS.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 1396,
+      "actual_sha256": "1b17497044da48826840fe7906cba99c1d7144d1f5483bc626964a900576326b",
+      "declared_bytes": 1396,
+      "declared_sha256": "1b17497044da48826840fe7906cba99c1d7144d1f5483bc626964a900576326b",
+      "filename": "GOVERNANCE.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 4572,
+      "actual_sha256": "5c9204879169197f22b49fa3127b6702a05d389c8cc439477f513709936738a8",
+      "declared_bytes": 4572,
+      "declared_sha256": "5c9204879169197f22b49fa3127b6702a05d389c8cc439477f513709936738a8",
+      "filename": "AI_CONTEXT.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 1062,
+      "actual_sha256": "55bd84945c954425ec85e1d0ba1da81daf3aa365e278b9ceaff3eddd4b91e3fb",
+      "declared_bytes": 1062,
+      "declared_sha256": "55bd84945c954425ec85e1d0ba1da81daf3aa365e278b9ceaff3eddd4b91e3fb",
+      "filename": "agent-protocol.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 9260,
+      "actual_sha256": "d46108f0343581edea133d4b9675645c22929e0e7d8d1fc7c78aa85c50122634",
+      "declared_bytes": 9260,
+      "declared_sha256": "d46108f0343581edea133d4b9675645c22929e0e7d8d1fc7c78aa85c50122634",
+      "filename": "R2-Recherche-Fixes.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 2758,
+      "actual_sha256": "fdf8ed7dba92d0839813defdc87f47e781a3426020b91979312d66322653fbda",
+      "declared_bytes": 2758,
+      "declared_sha256": "fdf8ed7dba92d0839813defdc87f47e781a3426020b91979312d66322653fbda",
+      "filename": "Recherchebefunde.md",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 9329,
+      "actual_sha256": "14a53196e00e6716eb4321c12e4560e867b448a20a08d46d239813c0d17ded36",
+      "declared_bytes": 9329,
+      "declared_sha256": "14a53196e00e6716eb4321c12e4560e867b448a20a08d46d239813c0d17ded36",
+      "filename": "r2-candidate.patch",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 5796,
+      "actual_sha256": "12ecaf633d43959c7a434cd5b8988dc3be7f290febf0224a1548f2cc36e6a6a1",
+      "declared_bytes": 5796,
+      "declared_sha256": "12ecaf633d43959c7a434cd5b8988dc3be7f290febf0224a1548f2cc36e6a6a1",
+      "filename": "append_scientific_record.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 5063,
+      "actual_sha256": "74da9b80383fd5dd09c57198da9da2d487e7b9f9672ef1a59bafc38a59c7d633",
+      "declared_bytes": 5063,
+      "declared_sha256": "74da9b80383fd5dd09c57198da9da2d487e7b9f9672ef1a59bafc38a59c7d633",
+      "filename": "validate_a83_handoff.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 7478,
+      "actual_sha256": "d9c56f2561c1236a5c94f38bc25fc1025a0ffca55c1cfe769d71399efd79876d",
+      "declared_bytes": 7478,
+      "declared_sha256": "d9c56f2561c1236a5c94f38bc25fc1025a0ffca55c1cfe769d71399efd79876d",
+      "filename": "validate_scientific_ledger.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 1209,
+      "actual_sha256": "4f1b02cf32a45be6839f8d6e7113c82b8819ede6ce78c4abc1029fddd758a887",
+      "declared_bytes": 1209,
+      "declared_sha256": "4f1b02cf32a45be6839f8d6e7113c82b8819ede6ce78c4abc1029fddd758a887",
+      "filename": "verify_a83_artifact_binding.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 4366,
+      "actual_sha256": "4338f19b6143a3dac0ffb87410ca1a66fc99952eac7812635e7aa1e3d99fef4b",
+      "declared_bytes": 4366,
+      "declared_sha256": "4338f19b6143a3dac0ffb87410ca1a66fc99952eac7812635e7aa1e3d99fef4b",
+      "filename": "test_scientific_ledger.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 1635,
+      "actual_sha256": "259bfc3389f7b10f8d07e344e61c5ed485ca5011dcdd1f89f121e97dddeb8be0",
+      "declared_bytes": 1635,
+      "declared_sha256": "259bfc3389f7b10f8d07e344e61c5ed485ca5011dcdd1f89f121e97dddeb8be0",
+      "filename": "test_a83_handoff.py",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 4211,
+      "actual_sha256": "1ef533b8079d72c9cfc0bb67c4e0adfbd95cffee4cdedfcb385e499250aeb771",
+      "declared_bytes": 4211,
+      "declared_sha256": "1ef533b8079d72c9cfc0bb67c4e0adfbd95cffee4cdedfcb385e499250aeb771",
+      "filename": "final-validation.txt",
+      "status": "MATCH"
+    },
+    {
+      "actual_bytes": 2225,
+      "actual_sha256": "2ee710d2674c8b1a33af672578bf6800fa1f4ff9c18732411d78c2c1a24406ff",
+      "declared_bytes": 2225,
+      "declared_sha256": "2ee710d2674c8b1a33af672578bf6800fa1f4ff9c18732411d78c2c1a24406ff",
+      "filename": "test-results.txt",
+      "status": "MATCH"
+    }
+  ],
+  "manifest_self": {
+    "actual_bytes": 4549,
+    "actual_sha256": "23fd323a0b24668b59e8e8561a58d5b6872f06453a21257a3b8b940c5d6e8bf8",
+    "note": "identity_binding_sha256 is declared by the manifest; no independent recomputation is asserted here"
+  },
+  "package": {
+    "actual_bytes": 2598531,
+    "actual_sha256": "51ae10b55d1f6cfa7f4ed4aa85ecf4dc3d1e451ee31a7ecc50d48c30febd5487",
+    "declared_bytes": 212788,
+    "declared_sha256": "c8ad4fa891580c5983a88caf807bddefb1c77616e298c3c15fb70bb38fbd4864",
+    "status": "MISMATCH"
+  }
+}
