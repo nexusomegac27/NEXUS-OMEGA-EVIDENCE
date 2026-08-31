@@ -10,14 +10,20 @@
     "a83_negative_fixtures": "16_OF_16_FAIL_CLOSED_AS_EXPECTED",
     "reproduce_all": "EXIT_0"
   },
-  "github_ci": "PENDING",
+  "first_github_ci_head_sha": "33ddf1b8fe180b1835693dc2a9ff4c4215cdf188",
+  "github_ci": {
+    "validate_a83_framework_hardening": {"run_id": 33346887418, "status": "PASS"},
+    "validate_anchor": {"run_id": 33346887397, "status": "PASS"},
+    "validate_scientific_communication": {"run_id": 33346887403, "status": "PASS"},
+    "validate_scientific_ledger": {"run_id": 33346887402, "status": "PASS"}
+  },
   "independent_post_merge_revalidation": "NOT_YET_EXECUTED",
   "claim_ceiling": "C1",
   "claim_promotion": false,
   "integration_authority": "NONE",
   "network_write_by_a83_runtime": false,
   "ledger_append": false,
-  "decision": "C1.2_CLOSED_PENDING_GITHUB_CI",
-  "max_possible_after_ci": "C1.1_ARTIFACT_VALIDATED_STRUCTURE_ONLY",
-  "note": "This later implementation does not retroactively alter the historical A84 C1.2_CLOSED result."
+  "decision": "C1.1_ARTIFACT_VALIDATED_STRUCTURE_ONLY_CANDIDATE",
+  "merge_authority_from_this_status": false,
+  "note": "This later implementation does not retroactively alter the historical A84 C1.2_CLOSED result. The status records mechanical GitHub CI only and is not an independent scientific validation."
 }
