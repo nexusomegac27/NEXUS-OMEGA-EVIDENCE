@@ -1,0 +1,7 @@
+{
+  "object": "NEXUS_OMEGA_RESEARCH_PIPELINE_PACKAGE_CATALOG_V1",
+  "generated_from": "EVENT_STORE_AND_PACKAGE_MANIFESTS",
+  "generated_at_utc": "2026-08-31T23:26:00Z",
+  "packages": [],
+  "note": "Derived catalog; package manifests, sealed snapshots, and immutable lifecycle events remain the evidentiary sources."
+}

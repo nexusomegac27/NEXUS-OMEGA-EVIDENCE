@@ -1,0 +1,33 @@
+name: Validate research pipeline
+
+on:
+  push:
+    paths:
+      - 'research/pipeline/**'
+      - 'schema/research-pipeline-*.schema.json'
+      - 'scripts/research_pipeline.py'
+      - 'tests/test_research_pipeline.py'
+      - '.github/workflows/validate-research-pipeline.yml'
+  pull_request:
+    paths:
+      - 'research/pipeline/**'
+      - 'schema/research-pipeline-*.schema.json'
+      - 'scripts/research_pipeline.py'
+      - 'tests/test_research_pipeline.py'
+      - '.github/workflows/validate-research-pipeline.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-research-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current pipeline archive
+        run: python scripts/research_pipeline.py --root . validate
+      - name: Run pipeline unit tests
+        run: python -m unittest tests.test_research_pipeline

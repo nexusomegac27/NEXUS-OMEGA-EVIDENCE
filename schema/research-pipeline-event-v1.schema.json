@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/nexus/research-pipeline-event-v1.schema.json",
+  "title": "NEXUS OMEGA Research Pipeline Event v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "package_id", "event_type", "recorded_at_utc",
+    "actor", "prior_state", "new_state", "activity", "subject_refs", "evidence_refs",
+    "claim_ceiling", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "event_id": {"type": "string", "pattern": "^NEXUS_RPE_[0-9]{8}T[0-9]{6}Z_[0-9a-f]{8}$"},
+    "package_id": {"type": "string", "pattern": "^NEXUS_RP_[0-9]{8}T[0-9]{6}Z_[a-z0-9][a-z0-9_-]{0,63}_[0-9a-f]{8}$"},
+    "event_type": {"enum": ["PACKAGE_CREATED", "ITEM_ADDED", "FINDING_ADDED", "STATE_CHANGED", "SNAPSHOT_SEALED", "CURSOR_ACK", "CURSOR_RESULT", "CORRECTION", "SUPERSESSION"]},
+    "recorded_at_utc": {"type": "string", "format": "date-time"},
+    "actor": {"type": "string", "minLength": 1},
+    "prior_state": {"type": ["string", "null"]},
+    "new_state": {"type": ["string", "null"]},
+    "activity": {"type": "string", "minLength": 1},
+    "subject_refs": {"type": "array", "items": {"type": "string"}},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "claim_ceiling": {"const": "C1"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
