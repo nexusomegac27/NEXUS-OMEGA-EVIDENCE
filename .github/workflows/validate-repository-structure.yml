@@ -1,0 +1,20 @@
+name: Validate repository structure
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-repository-structure:
+    name: validate-repository-structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repository-order contract
+        run: python scripts/validate_repository_structure.py --root .
+      - name: Run repository-structure tests
+        run: python -m unittest tests.test_repository_structure
