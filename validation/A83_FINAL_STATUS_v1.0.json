@@ -1,0 +1,23 @@
+{
+  "object": "NEXUS_OMEGA_A83_FINAL_STATUS_v1.0",
+  "basis_main": "bb1f3fd88db79d295077062895574c6d90b390bf",
+  "historical_a84_status": "C1.2_CLOSED",
+  "historical_a84_reason": "A83_ARTIFACTS_NOT_PRESENT_ON_MAIN",
+  "implementation_state": "A83_ARTIFACTS_IMPLEMENTED_ON_REVIEW_BRANCH",
+  "local_preflight": {
+    "compileall": "PASS",
+    "pytest": "3_PASSED",
+    "a83_negative_fixtures": "16_OF_16_FAIL_CLOSED_AS_EXPECTED",
+    "reproduce_all": "EXIT_0"
+  },
+  "github_ci": "PENDING",
+  "independent_post_merge_revalidation": "NOT_YET_EXECUTED",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "integration_authority": "NONE",
+  "network_write_by_a83_runtime": false,
+  "ledger_append": false,
+  "decision": "C1.2_CLOSED_PENDING_GITHUB_CI",
+  "max_possible_after_ci": "C1.1_ARTIFACT_VALIDATED_STRUCTURE_ONLY",
+  "note": "This later implementation does not retroactively alter the historical A84 C1.2_CLOSED result."
+}
