@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_R5_STATUS_ALGEBRA_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "model": "MULTI_AXIS_NOT_SINGLE_SEVERITY_SCALE",
+  "axes": {
+    "source_state": ["SOURCE_NOT_PRESENT", "SOURCE_PRESENT_UNBOUND", "SOURCE_BOUND"],
+    "computability_state": ["NOT_COMPUTABLE", "COMPUTABLE"],
+    "validation_state": ["NOT_YET_EXECUTED", "IN_PROGRESS", "EXECUTED"],
+    "verdict": ["NOT_ESTABLISHED", "PASS", "PASS_WITH_CAVEATS", "FAIL_MAJOR", "HARD_FAIL"],
+    "integration_state": ["RESEARCH_ONLY", "CANDIDATE", "INDEPENDENTLY_VALIDATED_CANDIDATE", "INTEGRATED"]
+  },
+  "principles": [
+    "SOURCE_NOT_PRESENT_IS_NOT_A_NEGATIVE_CONTENT_VERDICT",
+    "NOT_COMPUTABLE_IS_NOT_FAIL",
+    "PASS_WITH_CAVEATS_IS_NOT_STRONGER_OR_WEAKER_THAN_ALL_FAIL_STATES_ON_A_SINGLE_TOTAL_ORDER",
+    "PRODUCER_SELF_PASS_DOES_NOT_SET_INDEPENDENT_VALIDATION",
+    "INTEGRATION_REQUIRES_SEPARATE_AUTHORITY_FROM_VALIDATION",
+    "CORRECTION_CREATES_A_SUCCESSOR_STATE_OR_OBJECT_INSTEAD_OF_REWRITING_HISTORY"
+  ],
+  "transition_requirements": [
+    {"from":"SOURCE_NOT_PRESENT","to":"SOURCE_PRESENT_UNBOUND","requires":"physical or retrievable bytes observed"},
+    {"from":"SOURCE_PRESENT_UNBOUND","to":"SOURCE_BOUND","requires":"identity/binding procedure succeeds"},
+    {"from":"NOT_YET_EXECUTED","to":"IN_PROGRESS","requires":"named validation profile and subject fixed"},
+    {"from":"IN_PROGRESS","to":"EXECUTED","requires":"terminal validation output persisted"},
+    {"from":"RESEARCH_ONLY","to":"CANDIDATE","requires":"explicit candidate artifact and traceability"},
+    {"from":"CANDIDATE","to":"INDEPENDENTLY_VALIDATED_CANDIDATE","requires":"independent validator over actual candidate bytes"},
+    {"from":"INDEPENDENTLY_VALIDATED_CANDIDATE","to":"INTEGRATED","requires":"separate operator/governance authorization plus repository gates"}
+  ],
+  "forbidden_transitions": [
+    "SOURCE_NOT_PRESENT -> PASS",
+    "PRODUCER_SELF_PASS -> INDEPENDENTLY_VALIDATED_CANDIDATE",
+    "HASH_MATCH -> SCIENTIFIC_TRUTH",
+    "CI_PASS -> CLAIM_PROMOTION",
+    "PUBLICATION -> CLAIM_PROMOTION",
+    "CHAT_ASSERTION -> SOURCE_BOUND"
+  ],
+  "monotonicity_definition": "Previously established history is never silently weakened or overwritten. New evidence may create a successor state, correction, supersession, or additional axis value; it does not mutate historical receipts in place."
+}
