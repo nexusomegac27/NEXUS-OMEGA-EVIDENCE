@@ -9,21 +9,14 @@ Before substantive answers or changes, read and obey:
 - `docs/AI_CONTEXT.md`
 - `docs/AI_HANDOFF_PROTOCOL.md`
 - `docs/agent-protocol.md`
-- `index/v1/latest.json` when the task depends on the latest published evidence object
+- `docs/architecture/REPOSITORY_STRUCTURE.md`
+- `index/v1/latest.json` when current evidence state matters
 
 ## Persistent context behavior
 
-Repository files are the durable project memory. Do not claim that conversational memory across sessions is authoritative or complete. When asked what is known about NEXUS OMEGA, retrieve repository context first and distinguish:
-
-- repository-established / physically verified facts;
-- externally validated facts;
-- operator-reported facts;
-- unresolved or missing evidence;
-- model prior knowledge used only for discovery.
+Repository files are the durable project memory. Distinguish repository-established facts, externally validated facts, operator-reported facts, unresolved evidence, and model prior knowledge used only for discovery.
 
 ## Scientific and governance boundary
-
-Never exceed:
 
 ```text
 CLAIM_CEILING = C1
@@ -33,37 +26,35 @@ INTEGRATION_AUTHORITY = NONE
 DEPLOYMENT_AUTHORITY = NO
 ```
 
-Never infer stronger authority from hashes, signatures, commits, CI, releases, DOIs, SWHIDs, GitHub publication, code review, or multi-agent agreement.
+Never infer stronger authority from hashes, signatures, commits, CI, releases, attestations, DOI/SWHIDs, publication, code review, or multi-agent agreement.
 
-## Fail-closed rules
+## Risk-adaptive evidence handling
 
-- Missing source bytes: use `SOURCE_NOT_PRESENT`.
-- Insufficient evidence: use `NOT_ESTABLISHED`.
-- Required computation cannot be performed: use `NOT_COMPUTABLE`.
-- Never reconstruct missing evidence from chat, summaries, snippets, prior model prose, or semantic similarity.
-- Correct object identity does not validate object content.
-- A matching hash proves byte identity only.
+- Material missing source bytes: use `SOURCE_NOT_PRESENT`.
+- Insufficient material evidence: use `NOT_ESTABLISHED`.
+- Required computation unavailable: use `NOT_COMPUTABLE`.
+- Do not reconstruct missing historical evidence from chat or semantic similarity.
+- Noncritical uncertainty is not automatically a global stop condition.
+- `BLOCKED_LANE != BLOCKED_SYSTEM`.
 
-## Work-conserving rule
+## Repository Order Law V1
 
-`BLOCKED_LANE != BLOCKED_SYSTEM`.
+Before writing a file, classify it and place it in the owning directory defined by `README.md` and `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 
-A blocked lane must not halt unrelated lawful work. Continue independent tasks while preserving the blocked lane's uncertainty.
+- Never use repository root for agent returns, patches, research packages, receipts, or experiments.
+- Active research goes to `research/<phase>/<agent-or-topic>/`.
+- Stable R5 components mirror across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, and `examples/r5/`.
+- Preserve path-bound historical evidence in place unless an explicit migration contract authorizes otherwise.
+- Structure changes must update the human and machine structure contracts and pass `scripts/validate_repository_structure.py`.
 
 ## Repository mutations
 
-For nontrivial changes, prefer a new branch and pull request. Do not force-push or silently rewrite published evidence objects. Do not merge merely because checks pass. Operator disposition remains required where governance says so.
+Use a dedicated branch and pull request for nontrivial changes. Do not force-push or silently rewrite published evidence objects. Checks do not authorize claim promotion.
 
 ## External-agent and handoff behavior
 
-Use `docs/AI_HANDOFF_PROTOCOL.md`. Preserve exact predecessor identity, received bytes, hashes, work executed, work not executed, caveats, and the single next lawful action.
-
-A producer cannot independently validate its own scientific output. A validator must inspect the actual physical/retrievable object.
+Use `docs/AI_HANDOFF_PROTOCOL.md`. Preserve exact predecessor identity, received bytes, hashes, work executed, work not executed, caveats, and next lawful action. A producer cannot independently validate its own scientific output.
 
 ## Security
 
 Follow `SECURITY.md`. Never place credentials, tokens, private health data, private conversations, or non-public sensitive material in public repository content.
-
-## Response style for repository work
-
-Be precise and compact. Use machine-readable status blocks for material handoffs. Never invent hashes, byte counts, URLs, DOI/SWHIDs, timestamps, commit IDs, execution receipts, or source identities.

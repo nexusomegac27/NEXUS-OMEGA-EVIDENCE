@@ -1,0 +1,22 @@
+{
+  "archive_pattern": "archive/<phase-or-date>/<topic>/...",
+  "canonical_domains": {
+    ".github": "platform-governance-ci",
+    "archive": "retired-non-path-bound-history",
+    "communication": "communication-provenance-ledger",
+    "docs": "stable-documentation",
+    "examples": "non-authoritative-examples",
+    "index": "scientific-evidence-discovery-index",
+    "objects": "scientific-evidence-content-addressed-store",
+    "research": "active-preintegration-research",
+    "schema": "machine-contracts",
+    "scripts": "executable-tooling",
+    "tests": "automated-tests",
+    "validation": "fixtures-bindings-validation-state"
+  },
+  "new_root_outputs_allowed": false,
+  "object": "NEXUS_OMEGA_REPOSITORY_PATH_RULES_V1",
+  "research_pattern": "research/<phase>/<agent-or-topic>/...",
+  "risk_policy": "CORRECT_NONCRITICAL_MISPLACEMENT_WITHOUT_GLOBAL_STOP; REQUIRE_MIGRATION_FOR_BOUND_PATH_CHANGE",
+  "version": "1.0.0"
+}

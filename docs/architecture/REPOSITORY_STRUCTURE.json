@@ -1,0 +1,79 @@
+{
+  "claim_ceiling": "C1",
+  "object": "NEXUS_OMEGA_REPOSITORY_STRUCTURE_V1",
+  "order_law": "REPOSITORY_ORDER_LAW_V1",
+  "root_directories": [
+    ".github",
+    "archive",
+    "communication",
+    "docs",
+    "examples",
+    "index",
+    "objects",
+    "research",
+    "schema",
+    "scripts",
+    "tests",
+    "validation"
+  ],
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "CITATION.cff",
+    "GOVERNANCE.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "_config.yml",
+    "index.md",
+    "requirements-a83-test.txt"
+  ],
+  "stores": {
+    "communication": {
+      "index": "communication/index/v1",
+      "objects": "communication/objects/sha256"
+    },
+    "scientific_evidence": {
+      "index": "index/v1",
+      "objects": "objects/sha256"
+    }
+  },
+  "symbiotic_phase_lane": {
+    "phase": "r5",
+    "paths": [
+      "docs/r5",
+      "schema/r5",
+      "scripts/r5",
+      "tests/r5",
+      "validation/r5",
+      "examples/r5",
+      "research/r5"
+    ]
+  },
+  "historical_path_constraints": [
+    "docs/phase2",
+    "requirements-a83-test.txt",
+    "schema/A83_handoff_envelope_v1.schema.json",
+    "scripts/a83_decision.py",
+    "scripts/a83_sentinel.py",
+    "scripts/reproduce_a83.py",
+    "scripts/validate_a83_handoff.py",
+    "scripts/verify_a83_artifact_binding.py",
+    "tests/test_a83_handoff.py",
+    "validation/A83_ARTIFACT_BINDING_v1.0.json",
+    "validation/A83_WEAKNESS_AND_OPEN_QUESTIONS_AUDIT_v1.0.json",
+    "validation/a83-handoff-negative-fixtures-v1.jsonl",
+    "examples/a83/handoff-envelope-v1.example.json",
+    ".github/workflows/validate-a83-framework-hardening.yml"
+  ],
+  "structure_change_requires": [
+    "README.md update",
+    "REPOSITORY_STRUCTURE.json update",
+    "domain README update when applicable",
+    "structure validator pass",
+    "affected path-reference migration",
+    "historical binding preservation or explicit supersession"
+  ],
+  "version": "1.0.0"
+}
