@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "handoff_id": "handoff:axiom-external:20260831:0001",
+  "object_id": "NEXUS_OMEGA_A83_EXAMPLE_HANDOFF",
+  "parent_record_sha256": "1cdfcc74319f6f8500d969e8345ce5b6e1e6298482e03b6c96881cbbbd99dece",
+  "sender_role": "AXIOM",
+  "recipient_role": "EXTERNAL_AGENT",
+  "actor_role": "PRODUCER",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "integration_authority": "NONE",
+  "observability_class": "OBS3_MEDIATED_EVENT",
+  "receipt_assurance": "RA2_MUTUAL_BYTE_BOUND",
+  "scientific_relevance_class": "SR2_PROCESS_EVENT",
+  "transport_class": "FILE_UPLOAD",
+  "payload_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "payload_bytes": 128,
+  "sunset_months": 12,
+  "auto_execute": false,
+  "network_write": false,
+  "created_at_utc": "2026-08-31T01:30:00Z",
+  "caveats": ["Example structure only; payload hash is illustrative and does not bind a real payload."]
+}
