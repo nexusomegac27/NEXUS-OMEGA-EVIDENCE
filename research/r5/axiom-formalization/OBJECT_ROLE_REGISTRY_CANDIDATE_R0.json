@@ -1,0 +1,36 @@
+{
+  "object": "NEXUS_OMEGA_R5_OBJECT_ROLE_REGISTRY_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "principles": [
+    "OBJECT_IDENTITY_IS_SEPARATE_FROM_OBJECT_ROLE",
+    "ROLE_IS_CONTEXTUAL_AND_MUST_NOT_BE_INFERRED_FROM_FILENAME_OR_EXTENSION_ALONE",
+    "DERIVATIVE_MUST_REFERENCE_PREDECESSOR_AND_TRANSFORMATION",
+    "TRANSPORT_CONTAINER_IS_NOT_SOURCE_OBJECT",
+    "RECEIPT_IS_NOT_PAYLOAD",
+    "ATTESTATION_IS_NOT_SCIENTIFIC_TRUTH",
+    "INDEX_ENTRY_IS_NOT_INDEXED_OBJECT"
+  ],
+  "roles": [
+    {"id":"SOURCE_OBJECT","definition":"Original bytes treated as the subject of a validation, claim, or transformation."},
+    {"id":"DERIVATIVE_OBJECT","definition":"Bytes produced from one or more predecessor objects by an explicit transformation."},
+    {"id":"TRANSPORT_CONTAINER","definition":"Container or encoding used to transport objects; never substitutes for contained source objects."},
+    {"id":"MANIFEST","definition":"Structured description of objects, bindings, roles, relationships, or publication state."},
+    {"id":"RECEIPT","definition":"Evidence that a defined event, binding, or platform action occurred within an assurance scope."},
+    {"id":"ATTESTATION","definition":"Authenticated or otherwise bound statement about one or more subjects under a typed predicate."},
+    {"id":"SCHEMA","definition":"Machine-readable structural or semantic contract for instances."},
+    {"id":"VALIDATION_RESULT","definition":"Result of applying a named validator/test profile to named subject bytes/state."},
+    {"id":"INDEX_ENTRY","definition":"Discovery or chain entry that points to another object and records bounded metadata."},
+    {"id":"LEDGER_HEAD","definition":"Current pointer/checkpoint to a ledger state; mutable by append-only progression, not by historical rewrite."},
+    {"id":"PATCH_CANDIDATE","definition":"Proposed change bytes not yet integrated into the stable implementation."},
+    {"id":"PUBLICATION_WITNESS","definition":"External publication/transparency/archive evidence about an object or statement."}
+  ],
+  "required_role_binding_fields": [
+    "role",
+    "subject_identity",
+    "context_id",
+    "declared_by",
+    "claim_ceiling"
+  ],
+  "open_question": "Whether one immutable object may carry multiple simultaneous role assertions should be represented through separate role bindings rather than a single role field on the object itself."
+}
