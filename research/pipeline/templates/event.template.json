@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "NEXUS_RPE_YYYYMMDDTHHMMSSZ_00000000",
+  "package_id": "NEXUS_RP_YYYYMMDDTHHMMSSZ_slug_00000000",
+  "event_type": "STATE_CHANGED",
+  "recorded_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "actor": "AXIOM",
+  "prior_state": "INTAKE",
+  "new_state": "ACTIVE",
+  "activity": "research-accumulation",
+  "subject_refs": [],
+  "evidence_refs": [],
+  "claim_ceiling": "C1",
+  "notes": []
+}
