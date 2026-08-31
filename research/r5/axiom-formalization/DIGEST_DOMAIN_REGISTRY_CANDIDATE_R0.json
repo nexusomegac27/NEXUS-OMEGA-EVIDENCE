@@ -1,0 +1,61 @@
+{
+  "object": "NEXUS_OMEGA_R5_DIGEST_DOMAIN_REGISTRY_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "axiom": "DIGEST_EQUALITY_IS_MEANINGFUL_ONLY_WITHIN_THE_SAME_DECLARED_DOMAIN",
+  "domain_identity_fields": [
+    "hash_algorithm",
+    "byte_projection",
+    "serialization",
+    "media_or_object_type"
+  ],
+  "domains": [
+    {
+      "id": "SHA256_RAW_BYTES_V1",
+      "hash_algorithm": "SHA-256",
+      "byte_projection": "entire physical byte sequence",
+      "serialization": "NONE",
+      "media_or_object_type": "ANY_BYTES",
+      "use": "Exact physical file/object identity"
+    },
+    {
+      "id": "SHA256_RFC8785_JCS_V1",
+      "hash_algorithm": "SHA-256",
+      "byte_projection": "complete JSON value after RFC 8785 canonicalization",
+      "serialization": "RFC8785_JCS",
+      "media_or_object_type": "I_JSON_COMPATIBLE_JSON",
+      "use": "Cross-implementation canonical JSON digest when JCS preconditions are satisfied"
+    },
+    {
+      "id": "SHA256_NEXUS_SORTED_JSON_V1",
+      "hash_algorithm": "SHA-256",
+      "byte_projection": "NEXUS-defined JSON object bytes",
+      "serialization": "NEXUS_SORTED_JSON_V1",
+      "media_or_object_type": "NEXUS_LEDGER_INDEX_ENTRY",
+      "use": "Historical/current communication-ledger index chaining",
+      "must_not_alias": "SHA256_RFC8785_JCS_V1"
+    },
+    {
+      "id": "SHA256_BINDING_PROJECTION_V1",
+      "hash_algorithm": "SHA-256",
+      "byte_projection": "defined manifest projection excluding only its self-binding field",
+      "serialization": "RFC8785_JCS",
+      "media_or_object_type": "NEXUS_R5_MANIFEST_CANDIDATE",
+      "use": "Candidate non-recursive manifest self-binding"
+    },
+    {
+      "id": "GIT_BLOB_SHA1_V1",
+      "hash_algorithm": "SHA-1 via current repository Git object format",
+      "byte_projection": "Git blob object framing plus file bytes",
+      "serialization": "GIT_OBJECT_FORMAT",
+      "media_or_object_type": "GIT_BLOB",
+      "use": "Repository-internal Git blob identity",
+      "warning": "Must not be compared directly with raw-file SHA-256 or treated as a scientific content digest."
+    }
+  ],
+  "comparison_rule": {
+    "allowed": "same domain id and same digest value",
+    "cross_domain": "PROHIBITED_WITHOUT_EXPLICIT_RECOMPUTATION_IN_COMMON_DOMAIN"
+  },
+  "live_gap": "Current schema can declare RFC8785_JCS but the current semantic validator does not recompute or verify JCS canonicalization."
+}
