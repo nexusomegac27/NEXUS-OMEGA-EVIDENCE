@@ -1,0 +1,37 @@
+{
+  "object": "NEXUS_OMEGA_R5_MANIFEST_SELF_BINDING_CANDIDATE_R0",
+  "claim_ceiling": "C1",
+  "status": "RESEARCH_CANDIDATE_NOT_INTEGRATED",
+  "problem": "A manifest cannot include the digest of its own complete bytes in the same byte projection without recursion.",
+  "candidate_solution": {
+    "binding_field": "self_binding",
+    "projection_rule": "Remove only the complete self_binding member from the top-level manifest object, then RFC8785-JCS canonicalize the remaining JSON value and SHA-256 hash those canonical bytes.",
+    "domain": "SHA256_BINDING_PROJECTION_V1",
+    "stored_binding_shape": {
+      "domain": "SHA256_BINDING_PROJECTION_V1",
+      "algorithm": "SHA-256",
+      "projection": "TOP_LEVEL_EXCLUDE_SELF_BINDING_MEMBER_THEN_RFC8785_JCS",
+      "digest": "64 lowercase hex"
+    }
+  },
+  "verification_algorithm": [
+    "Parse JSON while rejecting duplicate object member names.",
+    "Require a top-level self_binding member with the exact supported domain/projection identifiers.",
+    "Create an in-memory copy of the top-level JSON value excluding only self_binding.",
+    "Verify the remaining value satisfies RFC 8785 / I-JSON canonicalization preconditions required by the implementation profile.",
+    "RFC8785-JCS canonicalize the projection.",
+    "SHA-256 hash the canonical projection bytes.",
+    "Compare with self_binding.digest using the declared digest domain.",
+    "Fail closed on mismatch or unsupported projection/domain."
+  ],
+  "anti_confusion": [
+    "self_binding digest is not the raw SHA-256 of the complete manifest file",
+    "raw-file SHA-256 may be recorded independently under SHA256_RAW_BYTES_V1",
+    "JCS digest and NEXUS_SORTED_JSON_V1 digest must never be compared as if they share a domain",
+    "changing any top-level member other than self_binding changes the projection digest"
+  ],
+  "open_questions": [
+    "Whether the binding projection should exclude only self_binding or use a detached envelope for broader ecosystem interoperability.",
+    "Whether stable adoption should use in-toto Statement subjects rather than custom manifest self-binding for some artifact classes."
+  ]
+}
