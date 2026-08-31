@@ -59,6 +59,17 @@ def validate_root_entries(names: set[str]) -> list[str]:
     return errors
 
 
+def validate_r5_lane_readmes(r5_root: Path) -> list[str]:
+    """Require every direct R5 research lane to declare its purpose/status."""
+    if not r5_root.is_dir():
+        return ["R5_RESEARCH_ROOT_MISSING"]
+    errors = []
+    for lane in sorted((p for p in r5_root.iterdir() if p.is_dir()), key=lambda p: p.name):
+        if not (lane / "README.md").is_file():
+            errors.append(f"R5_LANE_README_MISSING:{lane.name}")
+    return errors
+
+
 def validate(root: Path) -> list[str]:
     root = root.resolve()
     errors: list[str] = []
@@ -82,6 +93,8 @@ def validate(root: Path) -> list[str]:
         errors.append("STRUCTURE_CONTRACT_ROOT_DIRS_MISMATCH")
     if contract.get("order_law") != "REPOSITORY_ORDER_LAW_V1":
         errors.append("STRUCTURE_CONTRACT_ORDER_LAW_MISMATCH")
+
+    errors.extend(validate_r5_lane_readmes(root / "research" / "r5"))
 
     # Prevent the common failure mode: agent/research outputs dumped at root.
     for p in root.iterdir():

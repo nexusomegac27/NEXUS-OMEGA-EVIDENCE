@@ -1,0 +1,22 @@
+{
+  "bytes": 35019,
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "filename": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_20260831_R0.md",
+  "live_main_commit": "bc312c4d2cd6afa579db1f077c88d8fe08fc9470",
+  "live_main_tree": "c8856faa74efa5770717d2d44dc7d51e4269cb22",
+  "live_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "next_phase": "R5",
+  "object": "NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0",
+  "phase_closed": "R4",
+  "public_write_authorized": false,
+  "r4_corpus_bytes": 3230220,
+  "r4_corpus_sha256": "d0fe17130d5d520335155e0615e86ef345b9bdc0c7a7a0f173e30f3b86b1919c",
+  "r4_outer_stack_bytes": 8436902,
+  "r4_outer_stack_sha256": "b3a9b944a6a39f43bcc2d3495bcf6a490ce10837aaaa55b7524b80addfefaad7",
+  "r4_public_branch": "axiom/m50grn-r0-20260831",
+  "r4_public_branch_head": "ed8e005c92b7c0ba647856f4f86bb29f6638d95d",
+  "r5_primary_external_partner": "QWEN-CODER",
+  "sha256": "fa319c72c93185a3d40f091f74f96b98098a059d61bb17f80a019a273182e317",
+  "state": "PHYSICAL_FOUNDATION_ESTABLISHED"
+}

@@ -1,0 +1,50 @@
+{
+  "chunk_count": 6,
+  "chunk_size_chars": 6000,
+  "chunks": [
+    {
+      "chars": 6000,
+      "filename": "r5_qwen_transport.part01.b64",
+      "index": 1,
+      "sha256": "585c8a0916b70ee4cbc9af49576846a4a052481f92b08aeafe18c0168c383f25"
+    },
+    {
+      "chars": 6000,
+      "filename": "r5_qwen_transport.part02.b64",
+      "index": 2,
+      "sha256": "a0a91bea736e40d75599d904cb637421d786da9ffaa79f992faf5ea9257aa717"
+    },
+    {
+      "chars": 6000,
+      "filename": "r5_qwen_transport.part03.b64",
+      "index": 3,
+      "sha256": "46a95cbb059fb85ac6c7187f6b554396a8c9c01aa1158a249ac6b6ad21651bd9"
+    },
+    {
+      "chars": 6000,
+      "filename": "r5_qwen_transport.part04.b64",
+      "index": 4,
+      "sha256": "983bad74d573d7b1664f55d9fc2c005c20c22e04af61255e0d5d3ba44da9e829"
+    },
+    {
+      "chars": 6000,
+      "filename": "r5_qwen_transport.part05.b64",
+      "index": 5,
+      "sha256": "7c326f504bd01b6b0aa796680c3f87ee907fd8bab3f736a36221464da2200697"
+    },
+    {
+      "chars": 5196,
+      "filename": "r5_qwen_transport.part06.b64",
+      "index": 6,
+      "sha256": "4e7fdfe4147f7363af72b7fdc4daf489a7a29d4d802aea1e26e3a47146e9505e"
+    }
+  ],
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "encoding": "base64-rfc4648-no-whitespace",
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_GITHUB_BASE64_TRANSPORT_MANIFEST_20260831_R0",
+  "reassembly": "concatenate chunks in numeric order with no separator, base64-decode, then verify source_bytes and source_sha256",
+  "source_bytes": 26395,
+  "source_filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_20260831_R0.zip",
+  "source_sha256": "9a8c2882d8fe8bda6021256ee4e351755b637761ab651bdbd480fe1955303331"
+}

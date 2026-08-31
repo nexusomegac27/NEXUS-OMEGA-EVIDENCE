@@ -1,0 +1,32 @@
+{
+  "object": "NEXUS_OMEGA_QWEN_CODER_R5_GITHUB_DELIVERY_RECEIPT_20260831_R1",
+  "state": "GITHUB_NATIVE_TRANSPORT_CHUNK_IDENTITY_VERIFIED",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r5-qwen-coder-start-20260831",
+  "base_commit": "bc312c4d2cd6afa579db1f077c88d8fe08fc9470",
+  "transport_encoding": "base64-rfc4648-no-whitespace-split-6",
+  "source_transport": {
+    "filename": "NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_20260831_R0.zip",
+    "bytes": 26395,
+    "sha256": "9a8c2882d8fe8bda6021256ee4e351755b637761ab651bdbd480fe1955303331"
+  },
+  "remote_chunk_count": 6,
+  "remote_chunk_byte_identity": "MATCH_6_OF_6_BY_EXPECTED_SIZE_AND_GIT_BLOB_ID",
+  "initial_transport_anomaly": {
+    "chunk": "r5_qwen_transport.part02.b64",
+    "initial_remote_bytes": 5999,
+    "expected_bytes": 6000,
+    "disposition": "DETECTED_FAIL_CLOSED_AND_CORRECTED_BEFORE_RECEIVER_START"
+  },
+  "receiver_must_reconstruct_and_rehash_zip": true,
+  "expected_receiver_result": {
+    "bytes": 26395,
+    "sha256": "9a8c2882d8fe8bda6021256ee4e351755b637761ab651bdbd480fe1955303331"
+  },
+  "main_mutation": false,
+  "pr_created": false,
+  "merge": false,
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "receiver_required_action": "RECONSTRUCT_ZIP_FROM_CHUNKS_AND_INDEPENDENTLY_REHASH_BEFORE_SEMANTIC_USE"
+}

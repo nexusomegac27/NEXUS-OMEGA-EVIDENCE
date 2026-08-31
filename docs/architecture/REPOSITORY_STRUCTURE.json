@@ -51,6 +51,25 @@
       "research/r5"
     ]
   },
+  "active_research_lanes": {
+    "qwen-coder": {
+      "path": "research/r5/qwen-coder",
+      "state": "TRANSPORT_CANONICALIZED_RETURN_PENDING",
+      "historical_sources": [
+        "axiom/r5-qwen-coder-start-20260831@6217649d63026f52205daa6eea52dcd61a4d926e",
+        "qwen-coder/r5-start-20260831@af7ed94ba51f09daeece188c58f355d97f62f383"
+      ]
+    },
+    "axiom-platform-audit": {
+      "path": "research/r5/axiom-platform-audit",
+      "state": "ACTIVE_C1_PLATFORM_OBSERVATION"
+    }
+  },
+  "research_lane_contract": {
+    "direct_child_readme_required": true,
+    "raw_research_not_integration_authority": true,
+    "producer_return_not_independent_validation": true
+  },
   "historical_path_constraints": [
     "docs/phase2",
     "requirements-a83-test.txt",
@@ -75,5 +94,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -33,6 +34,23 @@ class RepositoryStructureTests(unittest.TestCase):
             "REQUIRED_ROOT_ENTRY_MISSING:research",
             MODULE.validate_root_entries(names),
         )
+
+    def test_r5_lane_without_readme_fails(self):
+        with tempfile.TemporaryDirectory() as td:
+            r5_root = Path(td) / "research" / "r5"
+            (r5_root / "anonymous-agent").mkdir(parents=True)
+            self.assertEqual(
+                MODULE.validate_r5_lane_readmes(r5_root),
+                ["R5_LANE_README_MISSING:anonymous-agent"],
+            )
+
+    def test_r5_lane_with_readme_passes(self):
+        with tempfile.TemporaryDirectory() as td:
+            r5_root = Path(td) / "research" / "r5"
+            lane = r5_root / "declared-agent"
+            lane.mkdir(parents=True)
+            (lane / "README.md").write_text("# declared\n", encoding="utf-8")
+            self.assertEqual(MODULE.validate_r5_lane_readmes(r5_root), [])
 
 
 if __name__ == "__main__":
