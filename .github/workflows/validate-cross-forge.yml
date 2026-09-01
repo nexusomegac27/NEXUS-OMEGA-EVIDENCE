@@ -1,0 +1,33 @@
+name: validate-cross-forge
+
+on:
+  pull_request:
+    paths:
+      - 'cross_forge/**'
+      - 'docs/NEXUS_GITLAB_PARALLEL_FORGE_POLICY_V1.md'
+      - 'docs/NEXUS_GITLAB_STANDARDS_COMPARISON_20260901_R0.md'
+      - 'scripts/validate_cross_forge_manifest.py'
+      - 'tests/test_cross_forge_manifest.py'
+      - '.github/workflows/validate-cross-forge.yml'
+  push:
+    branches:
+      - 'axiom/cross-forge-gitlab-integration-20260901'
+    paths:
+      - 'cross_forge/**'
+      - 'scripts/validate_cross_forge_manifest.py'
+      - 'tests/test_cross_forge_manifest.py'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-cross-forge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_cross_forge_manifest.py
+      - run: python -m pip install pytest
+      - run: pytest -q tests/test_cross_forge_manifest.py
