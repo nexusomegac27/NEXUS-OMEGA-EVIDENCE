@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://nexus-omega.example/schema/r5/file-protocol/nexus-file-event-v1.schema.json",
+  "title":"NEXUS File Event V1",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","event_id","recorded_at_utc","actor","task","operation","artifact_class","digest_domain","before","after","reason","git","claim_ceiling"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "event_id":{"type":"string","minLength":1},
+    "recorded_at_utc":{"type":"string","format":"date-time"},
+    "actor":{"type":"object","additionalProperties":false,"required":["actor_type","role","provider","model","session_id","admission_id"],"properties":{"actor_type":{"enum":["AGENT","HUMAN","SYSTEM"]},"role":{"type":"string"},"provider":{"type":"string"},"model":{"type":"string"},"session_id":{"type":"string"},"admission_id":{"type":"string"},"rank_profile":{"type":["string","null"]},"capability_profile_sha256":{"type":["string","null"],"pattern":"^[0-9a-f]{64}$"}}},
+    "task":{"type":"object","additionalProperties":false,"required":["order_id","order_sha256"],"properties":{"order_id":{"type":"string"},"order_sha256":{"type":["string","null"],"pattern":"^[0-9a-f]{64}$"},"parent_event_id":{"type":["string","null"]}}},
+    "operation":{"enum":["CREATE","MODIFY","DELETE","MOVE","COPY","RESTORE","GENERATE"]},
+    "artifact_class":{"type":"string","minLength":1},
+    "digest_domain":{"const":"SHA256_RAW_BYTES_V1"},
+    "before":{"$ref":"#/$defs/fileState"},
+    "after":{"$ref":"#/$defs/fileState"},
+    "reason":{"type":"string","minLength":1},
+    "git":{"type":"object","additionalProperties":false,"required":["repository","base_commit","result_commit","pr_number"],"properties":{"repository":{"type":"string"},"base_commit":{"type":["string","null"]},"result_commit":{"type":["string","null"]},"pr_number":{"type":["integer","null"]}}},
+    "validation":{"type":"object","additionalProperties":false,"properties":{"producer_self_report":{"type":["string","null"]},"independent_validation":{"type":["string","null"]}}},
+    "claim_ceiling":{"const":"C1"}
+  },
+  "$defs":{"fileState":{"type":"object","additionalProperties":false,"required":["exists","path","bytes","sha256"],"properties":{"exists":{"type":"boolean"},"path":{"type":["string","null"]},"bytes":{"type":["integer","null"],"minimum":0},"sha256":{"type":["string","null"],"pattern":"^[0-9a-f]{64}$"}}}}
+}
