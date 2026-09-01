@@ -8,11 +8,12 @@ This contract defines the canonical GitHub repository topology and the placement
 
 1. **Root minimalism.** Root is reserved for universal repository controls and historically path-bound compatibility files.
 2. **Single ownership.** Each artifact class has one owning directory.
-3. **Evidence/provenance separation.** Scientific evidence (`objects` + `index`) and communication provenance (`communication`) remain distinct stores.
+3. **Evidence/provenance separation.** Scientific evidence (`objects` + `index`), communication provenance (`communication`), and provider-independent cross-forge control (`cross_forge`) remain distinct stores.
 4. **Symbiotic lifecycle.** A phase/domain can be traced across documentation → schema → implementation → tests → validation → examples → research.
 5. **Immutable history.** A published binding that names a path makes that path part of the reproducibility contract unless an explicit migration is created.
 6. **Machine enforcement.** Structural rules are validated by `scripts/validate_repository_structure.py` and CI.
 7. **Risk-adaptive order.** Misplacement is corrected promptly, but ordinary routing errors do not freeze unrelated research.
+8. **Forge independence.** Provider-local statuses are non-transitive; cross-forge identity and divergence are explicitly bound rather than inferred.
 
 ## Canonical top-level domains
 
@@ -22,6 +23,7 @@ This contract defines the canonical GitHub repository topology and the placement
 | `objects/` | content-addressed scientific evidence assets/manifests | yes |
 | `index/` | discovery/index state for `objects/` | yes, provenance/index |
 | `communication/` | content-addressed communication/provenance ledger | process/provenance evidence |
+| `cross_forge/` | provider-independent replication, divergence, reconciliation and CI-correlation control | cross-forge control/provenance only |
 | `docs/` | stable documentation, protocol, architecture, governance, history | descriptive only unless separately bound |
 | `schema/` | machine contracts | structural |
 | `scripts/` | executable tooling/validators | implementation |
@@ -30,6 +32,21 @@ This contract defines the canonical GitHub repository topology and the placement
 | `examples/` | non-authoritative examples | no |
 | `research/` | active/pre-integration research | candidate only |
 | `archive/` | retired non-path-bound material and migration records | historical only |
+
+## Cross-forge domain
+
+`cross_forge/` is a provider-neutral control-plane surface. It may record exact repository/ref/commit bindings, SHA-256 content identity, provider-native Git object locators, independent CI/pipeline identities, append-only divergence receipts, and reconciliation state.
+
+It must not silently duplicate or replace the owning domains for scientific evidence, communication provenance, or active research. A GitHub pass is not a GitLab pass; a GitLab pass is not a GitHub pass. Content equality is distinct from scientific validation.
+
+Current baseline:
+
+```text
+cross_forge/
+├── README.md
+├── manifest.json
+└── receipts/
+```
 
 ## Symbiotic phase lane
 
