@@ -1,9 +1,1 @@
-{
-  "object": "NEXUS_OMEGA_RESEARCH_PIPELINE_LATEST_V1",
-  "generated_from": "EVENT_STORE",
-  "generated_at_utc": "2026-08-31T23:26:00Z",
-  "latest_active_package": null,
-  "latest_ready_for_cursor": null,
-  "latest_processed_package": null,
-  "note": "Derived navigation view; authoritative lifecycle history is the immutable event store."
-}
+{"generated_at_utc":"2026-09-01T04:03:02Z","generated_from":"EVENT_STORE","latest_active_package":null,"latest_processed_package":null,"latest_ready_for_cursor":"NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27","note":"Derived navigation view; authoritative lifecycle history is package/event/snapshot state.","object":"NEXUS_OMEGA_RESEARCH_PIPELINE_LATEST_V1"}
