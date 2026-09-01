@@ -1,0 +1,14 @@
+# A90 AXIOM Plan — exact external binding
+
+```text
+OBJECT = NEXUS_OMEGA_A90_PLAN_GITHUB_BINDING_20260901_R0
+ORIGINAL_FILENAME = NEXUS_OMEGA_A90_SELF_LEARNING_SANDBOX_AXIOM_COMPLETION_AND_INDEPENDENCE_PLAN_20260901_R0.md
+ORIGINAL_BYTES = 24350
+ORIGINAL_SHA256 = 483b18845cf39357ff399e6c16d0a79eb8fe992bd19c971d27c52d35382ddfb7
+DIGEST_DOMAIN = SHA256_RAW_BYTES_V1
+PHYSICAL_COPY_IN_THIS_GITHUB_SNAPSHOT = NO
+SOURCE_OBJECT_SUBSTITUTION = PROHIBITED
+```
+
+The full operational requirements needed by Cursor are restated in `CURSOR_FULL_BUNDLED_ORDER.md`.
+The external binding preserves the exact AXIOM artifact identity without reconstructing or silently normalizing its bytes.
