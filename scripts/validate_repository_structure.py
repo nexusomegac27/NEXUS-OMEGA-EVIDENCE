@@ -15,11 +15,11 @@ ROOT_FILES = {
     "requirements-a83-test.txt",
 }
 ROOT_DIRS = {
-    ".github", "archive", "communication", "docs", "examples", "index", "objects",
+    ".github", "archive", "communication", "cross_forge", "docs", "examples", "index", "objects",
     "research", "schema", "scripts", "tests", "validation",
 }
 REQUIRED_READMES = {
-    "archive/README.md", "communication/README.md", "docs/README.md",
+    "archive/README.md", "communication/README.md", "cross_forge/README.md", "docs/README.md",
     "examples/README.md", "index/README.md", "objects/README.md", "research/README.md",
     "schema/README.md", "scripts/README.md", "tests/README.md", "validation/README.md",
     "docs/r5/README.md", "examples/r5/README.md", "research/r5/README.md",
