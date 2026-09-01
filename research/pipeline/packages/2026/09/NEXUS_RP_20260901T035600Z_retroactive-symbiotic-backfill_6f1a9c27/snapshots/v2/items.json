@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27",
+  "snapshot": "v2",
+  "claim_ceiling": "C1",
+  "items": [
+    {
+      "id": "cursor_ack_input",
+      "path": "CURSOR_ACK_INPUT.txt",
+      "object_role": "RESEARCH_RETURN",
+      "source_status": "OPERATOR_TRANSMITTED_CURSOR_ACK"
+    },
+    {
+      "id": "cursor_full_bundled_order",
+      "path": "CURSOR_FULL_BUNDLED_ORDER.md",
+      "object_role": "RESEARCH_ORDER",
+      "source_status": "AXIOM_GENERATED"
+    },
+    {
+      "id": "github_bridge_protocol",
+      "path": "GITHUB_BRIDGE_PROTOCOL.md",
+      "object_role": "PROTOCOL_CANDIDATE",
+      "source_status": "AXIOM_GENERATED"
+    },
+    {
+      "id": "a90_plan_binding",
+      "path": "A90_PLAN_BINDING.md",
+      "object_role": "BINDING_RECEIPT",
+      "source_status": "EXACT_EXTERNAL_BYTE_BINDING",
+      "bound_original_filename": "NEXUS_OMEGA_A90_SELF_LEARNING_SANDBOX_AXIOM_COMPLETION_AND_INDEPENDENCE_PLAN_20260901_R0.md",
+      "bound_original_bytes": 24350,
+      "bound_original_sha256": "483b18845cf39357ff399e6c16d0a79eb8fe992bd19c971d27c52d35382ddfb7",
+      "digest_domain": "SHA256_RAW_BYTES_V1"
+    },
+    {
+      "id": "a90_state",
+      "path": "A90_AXIOM_COMPLETION_STATE.json",
+      "object_role": "VALIDATION_STATE",
+      "source_status": "AXIOM_BYTE_BOUND_COPY",
+      "original_bytes": 3190,
+      "original_sha256": "aee1204df3e4ddcdeb8c34b7c633bf2af02ddcebf0ed822beb02e862a741cd6a"
+    },
+    {
+      "id": "live_main_anchor",
+      "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+      "commit": "7c93e73c0e39a6604b4c00996b5b04c3ef413b4e",
+      "tree": "d2d2b53eea95a747fb3a62ff63a4bb601849ff3a",
+      "object_role": "PUBLICATION_WITNESS",
+      "source_status": "GITHUB_REVERIFIED"
+    },
+    {
+      "id": "axiom_r5_formalization",
+      "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+      "branch": "axiom/r5-formalization-research-20260831",
+      "commit": "eaf6c3ad95c8bf021aeaf959752e56e77128ef0b",
+      "tree": "8be893f6744cb34aaeeaaa4781129de547abb1e9",
+      "object_role": "RESEARCH_BRANCH",
+      "source_status": "GITHUB_REVERIFIED_RESEARCH_ONLY"
+    },
+    {
+      "id": "predecessor_snapshot",
+      "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1",
+      "object_role": "PREDECESSOR_CONTEXT",
+      "source_status": "PUBLIC_GITHUB_BOUND"
+    }
+  ]
+}
