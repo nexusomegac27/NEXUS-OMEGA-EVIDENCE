@@ -1,6 +1,6 @@
 # NEXUS OMEGA Evidence
 
-Public, content-addressed C1 evidence and verification repository with persistent AI communication, provenance, validation, research and a shared AXIOM↔Cursor research-pipeline archive.
+Public, content-addressed C1 evidence and verification repository with persistent AI communication, provenance, validation, research, a shared AXIOM↔Cursor research-pipeline archive, and provider-independent cross-forge reconciliation.
 
 ## Repository status
 
@@ -24,9 +24,10 @@ INTEGRATION_AUTHORITY = NONE
 5. `research/pipeline/` is the sole cross-phase research-infrastructure exception and is jointly owned by AXIOM and Cursor/PRAXIS.
 6. Stable R5 work is mirrored symbiotically across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, `examples/r5/` and `research/r5/`.
 7. Scientific evidence remains under `objects/` + `index/`; communication provenance remains under `communication/objects/` + `communication/index/`.
-8. Historical path-bound evidence is not relocated merely for aesthetics.
-9. Structural changes update this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
-10. Disorder is corrected at intake; noncritical placement errors do not halt unrelated research.
+8. Provider-independent replication/divergence/reconciliation control belongs under `cross_forge/`; provider-local CI status is non-transitive.
+9. Historical path-bound evidence is not relocated merely for aesthetics.
+10. Structural changes update this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
+11. Disorder is corrected at intake; noncritical placement errors do not halt unrelated research.
 
 Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 
@@ -40,6 +41,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   └── workflows/
 │       ├── validate-a83-framework-hardening.yml
 │       ├── validate-anchor.yml
+│       ├── validate-cross-forge.yml
 │       ├── validate-repository-structure.yml
 │       ├── validate-research-pipeline.yml
 │       ├── validate-scientific-communication.yml
@@ -57,12 +59,18 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── README.md
 │   ├── index/v1/{latest.json,records.jsonl}
 │   └── objects/sha256/.../record.json
+├── cross_forge/
+│   ├── README.md
+│   ├── manifest.json
+│   └── receipts/
 ├── docs/
 │   ├── README.md
 │   ├── AI_CONTEXT.md
 │   ├── AI_HANDOFF_PROTOCOL.md
 │   ├── OPEN_SCIENCE_AGENT_COMMUNICATION_MANIFEST.md
 │   ├── SCIENTIFIC_COMMUNICATION_IMPLEMENTATION_PROFILE_V0_1.md
+│   ├── NEXUS_GITLAB_PARALLEL_FORGE_POLICY_V1.md
+│   ├── NEXUS_GITLAB_STANDARDS_COMPARISON_20260901_R0.md
 │   ├── agent-protocol.md
 │   ├── release-checklist.md
 │   ├── architecture/
@@ -103,6 +111,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── research_pipeline.py
 │   ├── validate_a83_handoff.py
 │   ├── validate_anchor.py
+│   ├── validate_cross_forge_manifest.py
 │   ├── validate_repository.py
 │   ├── validate_repository_structure.py
 │   ├── validate_scientific_communication.py
@@ -112,6 +121,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 ├── tests/
 │   ├── README.md
 │   ├── test_a83_handoff.py
+│   ├── test_cross_forge_manifest.py
 │   ├── test_repository_structure.py
 │   ├── test_research_pipeline.py
 │   ├── test_scientific_communication.py
@@ -149,6 +159,25 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 
 `docs/phase2/` and `requirements-a83-test.txt` remain in historical paths because A83 artifact bindings name those paths explicitly. Their location is a provenance constraint, not unsorted residue.
 
+## Cross-forge control plane
+
+`cross_forge/` binds provider-independent replication state between GitHub and GitLab without treating either forge as a transitive source of truth for the other.
+
+```text
+GITHUB_SUCCESS != GITLAB_SUCCESS
+GITLAB_SUCCESS != GITHUB_SUCCESS
+CONTENT_EQUALITY != SCIENTIFIC_VALIDATION
+CANONICAL_CONTENT_DIGEST = SHA256
+```
+
+Provider-native Git object IDs remain useful provenance locators. Cross-forge divergence is preserved append-only and must not be silently resolved by force push.
+
+See:
+
+- `cross_forge/README.md`
+- `docs/NEXUS_GITLAB_PARALLEL_FORGE_POLICY_V1.md`
+- `docs/NEXUS_GITLAB_STANDARDS_COMPARISON_20260901_R0.md`
+
 ## Shared AXIOM↔Cursor research pipeline
 
 `research/pipeline/` accumulates coherent research intervals into timestamped packages. Packages remain at stable paths; lifecycle changes are append-only events.
@@ -179,6 +208,7 @@ See:
 | `objects/` | content-addressed scientific evidence |
 | `index/` | discovery index for scientific evidence |
 | `communication/` | content-addressed communication/provenance ledger |
+| `cross_forge/` | provider-independent replication, divergence and reconciliation control |
 | `docs/` | stable specifications, architecture and governance |
 | `schema/` | machine-readable contracts |
 | `scripts/` | executable tooling and validators |
@@ -197,19 +227,22 @@ Read in this order:
 3. `docs/AI_CONTEXT.md`
 4. `docs/agent-protocol.md`
 5. `docs/architecture/REPOSITORY_STRUCTURE.md`
-6. `research/pipeline/README.md` when accumulating or processing batched research
-7. `index/v1/latest.json` when current scientific evidence state is relevant
+6. `cross_forge/README.md` when reconciling GitHub/GitLab state
+7. `research/pipeline/README.md` when accumulating or processing batched research
+8. `index/v1/latest.json` when current scientific evidence state is relevant
 
 ## Validation
 
 ```bash
 python scripts/validate_repository_structure.py --root .
 python -m unittest tests.test_repository_structure
+python scripts/validate_cross_forge_manifest.py
+python -m pytest -q tests/test_cross_forge_manifest.py
 python scripts/research_pipeline.py --root . validate
 python -m unittest tests.test_research_pipeline
 ```
 
-Dedicated pipeline CI check: `validate-research-pipeline`.
+Dedicated CI checks: `validate-repository-structure`, `validate-cross-forge`, and `validate-research-pipeline`.
 
 ## Licensing
 
