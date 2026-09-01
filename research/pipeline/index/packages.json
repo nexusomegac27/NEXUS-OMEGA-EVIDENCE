@@ -1,7 +1,1 @@
-{
-  "object": "NEXUS_OMEGA_RESEARCH_PIPELINE_PACKAGE_CATALOG_V1",
-  "generated_from": "EVENT_STORE_AND_PACKAGE_MANIFESTS",
-  "generated_at_utc": "2026-08-31T23:26:00Z",
-  "packages": [],
-  "note": "Derived catalog; package manifests, sealed snapshots, and immutable lifecycle events remain the evidentiary sources."
-}
+{"generated_at_utc":"2026-09-01T04:03:02Z","generated_from":"EVENT_STORE_AND_PACKAGE_MANIFESTS","note":"Derived catalog; package/event/snapshot objects remain the evidentiary sources.","object":"NEXUS_OMEGA_RESEARCH_PIPELINE_PACKAGE_CATALOG_V1","packages":[{"created_at_utc":"2026-09-01T03:56:00Z","latest_snapshot":"v1","package_id":"NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27","path":"research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27","phase":"R5","state":"READY_FOR_CURSOR","strand":"retroactive-symbiotic-research-backfill","title":"Retroactive symbiotic research backfill since last Cursor order","updated_at_utc":"2026-09-01T04:03:00Z"}]}
