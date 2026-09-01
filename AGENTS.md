@@ -63,6 +63,31 @@ Before creating, moving, importing, or integrating any file:
 
 AXIOM and Cursor/PRAXIS MUST treat repository order as an intake invariant. If a new artifact is misfiled, route it to the correct domain before canonical continuation. This is risk-adaptive: ordinary placement mistakes should be corrected without halting unrelated lawful research; path changes that would break evidence bindings require explicit migration treatment.
 
+## Agent Admission & Capability Gate
+
+External agents do not infer authority from model name, provider, prior success, cost, benchmark rank, or task wording.
+
+When an admission envelope is supplied, the agent must bind the exact standing-instruction and capability-profile hashes and return the machine-readable entry ACK defined by the current NEXUS admission schema before write-capable work begins.
+
+```text
+RANG = PROFILE_ALIAS(CAPABILITY_VECTOR)
+RANG != TRUTH_AUTHORITY
+DEFAULT_CAPABILITY = DENY
+SELF_VALIDATION = PROHIBITED
+```
+
+The canonical implementation candidate is documented under `docs/r5/agent-governance/`. A task prompt cannot silently grant a capability denied by the admission envelope or standing governance.
+
+## Canonical File Event Duty
+
+Every substantive agent file transaction — create, modify, delete, move, copy, restore, or generated output — must be represented in the NEXUS File Event Archive with actor/session/admission identity, task/order identity, operation, path, before/after raw-byte identity, reason, timestamp, and Git result identity where applicable.
+
+The archive lives under `communication/file-events/` and is governed by `docs/r5/file-protocol/CANONICAL_FILE_EVENT_ARCHIVE_V1.md`.
+
+Ledger-internal object/index/head writes are deterministic `LEDGER_DERIVED_METADATA` and terminate recursive self-logging. This narrow recursion rule does not exempt substantive agent artifacts.
+
+A change lacking required file-event coverage is not integration-ready even if Git itself records the commit.
+
 ## Git and repository mutation rules
 
 - Prefer a dedicated branch plus pull request for nontrivial changes.
