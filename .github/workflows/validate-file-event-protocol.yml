@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Unit tests
-        run: python -m pytest -q tests/r5/test_file_protocol.py
-      - name: Validate audited commits where file-event objects exist
+        run: python tests/r5/test_file_protocol.py
+      - name: Validate exact raw-byte audit coverage
         shell: bash
         run: |
           set -euo pipefail

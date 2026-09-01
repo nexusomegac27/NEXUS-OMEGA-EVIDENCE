@@ -32,12 +32,12 @@ def main():
     data=canon(event); digest=sha(data)
     obj=root/DERIVED_ROOT/"objects"/"sha256"/digest[:2]/digest[2:4]/digest/"event.json"
     if obj.exists() and obj.read_bytes()!=data: raise SystemExit("content-address collision")
-    if not obj.exists(): atomic_write(obj, data+b"\n")
+    if not obj.exists(): atomic_write(obj, data)
     idx=root/DERIVED_ROOT/"index"/"v1"/"events.jsonl"; latest=root/DERIVED_ROOT/"index"/"v1"/"latest.json"
     previous=None; seq=1
     if latest.exists():
         cur=json.loads(latest.read_text(encoding="utf-8")); previous=cur.get("head_index_line_sha256"); seq=int(cur.get("sequence",0))+1
-    line={"sequence":seq,"event_id":event["event_id"],"event_bytes":len(data)+1,"event_sha256":digest,"object_path":obj.relative_to(root).as_posix(),"previous_index_line_sha256":previous}
+    line={"sequence":seq,"event_id":event["event_id"],"event_bytes":len(data),"event_sha256":digest,"object_path":obj.relative_to(root).as_posix(),"previous_index_line_sha256":previous}
     line_bytes=canon(line)
     idx.parent.mkdir(parents=True,exist_ok=True)
     with idx.open("ab") as f:
