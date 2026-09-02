@@ -1,0 +1,28 @@
+{
+  "ack_state": "HANDOFF_ACCEPTED_FOR_RELAY_STRUCTURE_ONLY",
+  "claim_ceiling": "C0_EXPLORATORY_C1_DESCRIPTIVE",
+  "claim_promotion": false,
+  "decision": "AUTO_ACK_VALIDATED_STRUCTURE_ONLY",
+  "foundation_promotion": false,
+  "generated_at_utc": "2026-09-02T19:53:22Z",
+  "generation_context": "LOCAL_REPOSITORY_RECEIPT",
+  "github_context": {},
+  "handoff_id": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+  "integration_authority": "NONE",
+  "operator_required": false,
+  "protocol": "INBOX_VALIDATE_BIND_RELAY_ACK_V1",
+  "receipt_type": "ACK",
+  "schema_version": "1.0.0",
+  "self_validation": false,
+  "source_envelope_sha256": "40951f2c8ebb88b93ba38b07db9dd41048e3bf97b8aa4448511e98b7460f9da9",
+  "source_return_id": "NEXUS_OMEGA_CURSOR_R3_COMPLETION_R1_R2_R3_SYMBIOSIS_RETURN_20260902_R0",
+  "source_return_path": "research/r3/completion-symbiosis-20260902/terminal_return.md",
+  "token_continuation": {
+    "continuation_capsule_path": null,
+    "continuation_required": false,
+    "continuation_required_on_token_pressure": true,
+    "requested_token_class": "T128",
+    "token_class_used": "PROVIDER_DEFAULT_UNEXPOSED",
+    "token_telemetry": "NOT_EXPOSED_BY_PROVIDER"
+  }
+}

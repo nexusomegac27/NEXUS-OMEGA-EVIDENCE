@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusomegac27.github.io/NEXUS-OMEGA-EVIDENCE/schema/artifact-handoff-receipt-v1.schema.json",
+  "title": "NEXUS OMEGA Artifact Handoff Receipt v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "protocol",
+    "handoff_id",
+    "receipt_type",
+    "generated_at_utc",
+    "decision",
+    "claim_ceiling",
+    "claim_promotion",
+    "foundation_promotion",
+    "integration_authority"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol": {"const": "INBOX_VALIDATE_BIND_RELAY_ACK_V1"},
+    "handoff_id": {"type": "string", "pattern": "^NEXUS_AH_[0-9]{8}T[0-9]{6}Z_[a-z0-9][a-z0-9_-]{0,79}_R[0-9]+$"},
+    "receipt_type": {"enum": ["BIND", "RELAY", "ACK"]},
+    "generated_at_utc": {"type": "string", "format": "date-time"},
+    "decision": {"enum": ["BOUND_STRUCTURE_ONLY_C1", "AUTO_RELAY_ALLOWED_STRUCTURE_ONLY", "AUTO_ACK_VALIDATED_STRUCTURE_ONLY", "FAIL_CLOSED"]},
+    "claim_ceiling": {"enum": ["C0_EXPLORATORY", "C1_DESCRIPTIVE", "C0_EXPLORATORY_C1_DESCRIPTIVE", "C1"]},
+    "claim_promotion": {"const": false},
+    "foundation_promotion": {"const": false},
+    "integration_authority": {"const": "NONE"}
+  }
+}

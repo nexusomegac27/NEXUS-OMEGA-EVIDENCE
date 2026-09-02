@@ -76,6 +76,34 @@ research/<phase>/<agent>/
 
 Research artifacts are not live implementation merely because they are public.
 
+## Artifact handoff automation
+
+External-agent and Cursor returns that should continue through GitHub without
+routine Operator mediation enter through:
+
+```text
+research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json
+```
+
+The fixed stage order is:
+
+```text
+INBOX
+-> VALIDATE
+-> BIND
+-> RELAY
+-> ACK
+```
+
+The handoff surface is a cross-phase transport and receipt layer inside
+`research/pipeline/`. It references the canonical research-lane artifacts by
+exact repository path, byte count and SHA-256.
+
+Generated bound/relay/ack receipts are process evidence only. They do not
+merge, force-push, write main, promote claims, promote foundations or validate
+producer scientific content. Any open Authority-Gate fails closed for Operator
+disposition.
+
 ## Structural change procedure
 
 A structural change must update in one change set:
