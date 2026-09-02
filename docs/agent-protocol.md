@@ -51,6 +51,30 @@ artifacts or repository receipts, but it cannot merge, force-push, write main,
 promote claims, promote foundations or validate a producer's own scientific
 return.
 
+## GitHub rollout preparation
+
+For a validated handoff chain that needs a complete rollout package, submit or
+consume a v1 rollout plan under:
+
+```text
+research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json
+```
+
+The fixed preparation order is:
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+Rollout preparation may emit readiness, authority-gate and ack receipts. It
+must not execute merge, main-write, force-push, public release, deployment,
+claim promotion, foundation promotion or integration authority without a
+separate Operator receipt.
+
 ## Failure
 
 Missing or divergent bytes are reported as `SOURCE_NOT_PRESENT`, `NOT_COMPUTABLE`, or `FAIL_CLOSED` as appropriate. Never reconstruct missing evidence from conversation order.

@@ -42,6 +42,12 @@
       "relay": "research/pipeline/handoff/relay",
       "root": "research/pipeline/handoff"
     },
+    "artifact_rollout": {
+      "plans": "research/pipeline/rollout/plans",
+      "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+      "receipts": "research/pipeline/rollout/receipts",
+      "root": "research/pipeline/rollout"
+    },
     "scientific_evidence": {
       "index": "index/v1",
       "objects": "objects/sha256"
@@ -91,6 +97,7 @@
     "package_path_template": "research/pipeline/packages/YYYY/MM/<PACKAGE_ID>",
     "event_path_template": "research/pipeline/events/YYYY/MM/DD/<TIMESTAMP>_<EVENT_ID>.json",
     "handoff_inbox_path_template": "research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json",
+    "rollout_plan_path_template": "research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json",
     "stable_package_paths": true,
     "event_sourced_lifecycle": true,
     "sealed_snapshots_immutable": true,
@@ -153,5 +160,31 @@
     "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
     "stages": ["INBOX", "VALIDATE", "BIND", "RELAY", "ACK"]
   },
-  "version": "1.3.0"
+  "artifact_rollout": {
+    "forbids": [
+      "execution before Operator receipt",
+      "self-validation",
+      "merge automation",
+      "force push",
+      "main write",
+      "public release automation",
+      "deployment automation",
+      "claim promotion",
+      "foundation promotion"
+    ],
+    "path": "research/pipeline/rollout",
+    "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+    "requires": [
+      "rollout plan",
+      "source byte bindings",
+      "readiness receipt",
+      "authority-gate packet",
+      "ack receipt",
+      "workflow-event ledger",
+      "token and continuation status"
+    ],
+    "seed_rollout": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+    "stages": ["PREPARE", "VALIDATE", "PACKAGE", "AUTHORITY_GATE", "ACK"]
+  },
+  "version": "1.4.0"
 }

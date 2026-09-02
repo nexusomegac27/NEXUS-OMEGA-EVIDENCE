@@ -145,3 +145,27 @@ INBOX
 
 `VALIDATE` is fail-closed and structure/byte-bound only. `BIND`, `RELAY` and
 `ACK` are receipt stages, not semantic validation or authority promotion.
+
+## Artifact rollout preparation
+
+When a validated handoff chain needs complete rollout preparation without
+execution, use:
+
+```text
+research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json
+```
+
+The required order is:
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+The generated readiness, gate and acknowledgement receipts do not close
+Authority-Gates. Merge, main write, force-push, public release, deployment,
+claim promotion, foundation promotion and integration authority remain
+Operator-only.

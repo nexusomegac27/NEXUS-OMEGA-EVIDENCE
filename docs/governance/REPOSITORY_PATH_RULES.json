@@ -16,7 +16,11 @@
   },
   "new_root_outputs_allowed": false,
   "object": "NEXUS_OMEGA_REPOSITORY_PATH_RULES_V1",
+  "pipeline_exceptions": {
+    "handoff": "research/pipeline/handoff",
+    "rollout": "research/pipeline/rollout"
+  },
   "research_pattern": "research/<phase>/<agent-or-topic>/...",
   "risk_policy": "CORRECT_NONCRITICAL_MISPLACEMENT_WITHOUT_GLOBAL_STOP; REQUIRE_MIGRATION_FOR_BOUND_PATH_CHANGE",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

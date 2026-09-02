@@ -25,7 +25,8 @@ Before any write, answer:
 8. Is this a validation fixture/binding/status artifact? → `validation/`.
 9. Is this an example? → `examples/`.
 10. Is this active/pre-integration research? → `research/<phase>/<agent-or-topic>/`.
-11. Is this retired, non-path-bound historical material? → `archive/`.
+11. Is this a cross-phase handoff or rollout control object? → `research/pipeline/handoff/` or `research/pipeline/rollout/`.
+12. Is this retired, non-path-bound historical material? → `archive/`.
 
 ## Root prohibition
 
@@ -59,6 +60,7 @@ AXIOM and Cursor/PRAXIS permanently check repository order when:
 - preparing a patch;
 - preparing a commit/PR;
 - ingesting a new research package;
+- preparing a rollout package;
 - closing a phase.
 
 If routing is wrong but evidence identity is unaffected, correct routing and continue. If routing changes a bound path or source identity, treat it as a material migration.

@@ -104,6 +104,31 @@ merge, force-push, write main, promote claims, promote foundations or validate
 producer scientific content. Any open Authority-Gate fails closed for Operator
 disposition.
 
+## Artifact rollout preparation
+
+Validated handoff chains that need a complete rollout package, but no automatic
+execution, use:
+
+```text
+research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json
+```
+
+The fixed preparation order is:
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+The rollout surface is separate from `handoff/`. It binds the source PR head,
+handoff receipts, GitHub observations, token/continuation handling and
+Authority-Gate packet, then stops. Generated rollout receipts are readiness
+evidence only. They do not merge, force-push, write main, release, deploy,
+promote claims, promote foundations or grant integration authority.
+
 ## Structural change procedure
 
 A structural change must update in one change set:

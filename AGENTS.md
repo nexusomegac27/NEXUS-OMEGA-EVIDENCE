@@ -11,8 +11,9 @@ Before substantive work in this repository, read in this order:
 3. `docs/AI_CONTEXT.md`
 4. `docs/agent-protocol.md`
 5. `docs/artifact-handoff-protocol.md` when receiving or relaying an agent return
-6. `docs/architecture/REPOSITORY_STRUCTURE.md`
-7. `index/v1/latest.json` when the task depends on current evidence state
+6. `docs/artifact-rollout-protocol.md` when preparing a rollout package
+7. `docs/architecture/REPOSITORY_STRUCTURE.md`
+8. `index/v1/latest.json` when the task depends on current evidence state
 
 If any required object is missing or unreadable, report the gap explicitly and continue in independent lanes when reasonable.
 
@@ -83,6 +84,18 @@ Automated relay is limited to byte binding, receipt generation, ledger parsing
 and GitHub workflow artifacts. It must fail closed on missing bytes, hash
 mismatches, open Authority-Gates, producer/validator identity fusion,
 force-push, merge, main-write, claim promotion or foundation promotion.
+
+## Artifact rollout preparation
+
+Complete rollout packages for validated handoff chains use
+`research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json`. The canonical
+protocol is `PREPARE -> VALIDATE -> PACKAGE -> AUTHORITY_GATE -> ACK` as
+defined in `docs/artifact-rollout-protocol.md`.
+
+Rollout preparation is separate from rollout execution. It may generate
+readiness, gate and ack receipts, but it must not close Authority-Gates or
+enable merge, main-write, force-push, public release, deployment, claim
+promotion, foundation promotion, integration authority or self-validation.
 
 ## Security and privacy
 

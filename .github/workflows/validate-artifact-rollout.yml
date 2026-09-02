@@ -1,0 +1,51 @@
+name: Validate artifact rollout
+
+on:
+  pull_request:
+    paths:
+      - 'research/pipeline/rollout/**'
+      - 'schema/artifact-rollout-*.schema.json'
+      - 'scripts/artifact_rollout.py'
+      - 'tests/test_artifact_rollout.py'
+      - 'validation/artifact-rollout-negative-fixtures-v1.jsonl'
+      - 'docs/artifact-rollout-protocol.md'
+      - '.github/workflows/validate-artifact-rollout.yml'
+  push:
+    paths:
+      - 'research/pipeline/rollout/**'
+      - 'schema/artifact-rollout-*.schema.json'
+      - 'scripts/artifact_rollout.py'
+      - 'tests/test_artifact_rollout.py'
+      - 'validation/artifact-rollout-negative-fixtures-v1.jsonl'
+      - 'docs/artifact-rollout-protocol.md'
+      - '.github/workflows/validate-artifact-rollout.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-package-authority-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python sources
+        run: python -m compileall -q scripts tests
+      - name: Validate rollout preparation fail-closed
+        run: python scripts/artifact_rollout.py --root . validate
+      - name: Run rollout unit tests
+        run: python -m unittest tests.test_artifact_rollout
+      - name: Generate rollout preparation package
+        run: python scripts/artifact_rollout.py --root . process --output _artifact_rollout_out
+      - name: Write workflow summary
+        shell: bash
+        run: cat _artifact_rollout_out/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload rollout preparation package
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-rollout-prep-receipts
+          path: _artifact_rollout_out

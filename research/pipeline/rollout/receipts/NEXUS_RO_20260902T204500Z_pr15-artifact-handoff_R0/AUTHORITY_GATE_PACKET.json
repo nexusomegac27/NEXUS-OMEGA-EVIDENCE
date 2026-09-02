@@ -1,0 +1,70 @@
+{
+  "authority_gates": [
+    {
+      "auto_execute": false,
+      "gate": "MERGE",
+      "operator_confirmation_required": true,
+      "status": "PENDING_OPERATOR"
+    },
+    {
+      "auto_execute": false,
+      "gate": "MAIN_WRITE",
+      "operator_confirmation_required": true,
+      "status": "PENDING_OPERATOR"
+    },
+    {
+      "auto_execute": false,
+      "gate": "FORCE_PUSH",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "auto_execute": false,
+      "gate": "PUBLIC_RELEASE",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "auto_execute": false,
+      "gate": "DEPLOYMENT",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "auto_execute": false,
+      "gate": "CLAIM_PROMOTION",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "auto_execute": false,
+      "gate": "FOUNDATION_PROMOTION",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    },
+    {
+      "auto_execute": false,
+      "gate": "INTEGRATION_AUTHORITY",
+      "operator_confirmation_required": false,
+      "status": "NOT_REQUESTED"
+    }
+  ],
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "decision": "BLOCKED_ON_OPERATOR_AUTHORITY_GATES",
+  "foundation_promotion": false,
+  "generated_at_utc": "2026-09-02T20:47:54Z",
+  "generation_context": "LOCAL_REPOSITORY_RECEIPT",
+  "github_context": {},
+  "instruction": "Only the Operator can close pending Authority-Gates. Automated agents may not execute gated actions from this packet.",
+  "integration_authority": "NONE",
+  "operator_required": true,
+  "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+  "receipt_type": "AUTHORITY_GATE_PACKET",
+  "rollout_id": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+  "schema_version": "1.0.0",
+  "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+  "source_head": "ab4081133ad9d37d6a3ae3fce2c838ef1d6eea9a",
+  "source_plan_sha256": "2c0d94848b3f126b039df3b10b924097066e87e984dd8b9b84fbe4f737022c5c",
+  "source_pr": 15
+}

@@ -6,3 +6,6 @@ Historical A83 files remain at their bound paths. New R5 validation corpora and 
 
 `artifact-handoff-negative-fixtures-v1.jsonl` exercises fail-closed cases for
 the GitHub artifact handoff protocol.
+
+`artifact-rollout-negative-fixtures-v1.jsonl` exercises fail-closed cases for
+the separate rollout-preparation protocol.

@@ -128,3 +128,31 @@ does not replace the canonical research lane of the underlying return.
 The validator must fail closed on missing bytes, hash mismatch, open
 Authority-Gates, producer/validator self-validation, merge, main-write,
 force-push, claim promotion or foundation promotion.
+
+## 14. Artifact rollout preparation
+
+Validated handoff chains that need a complete rollout package enter the
+separate rollout-preparation surface:
+
+```text
+research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json
+```
+
+Rollout preparation is not rollout execution. The validator must fail closed on
+execution enablement, merge automation, main-write automation, force-push,
+public release automation, deployment automation, claim promotion, foundation
+promotion, self-validation, R2/PR13 lane fusion or missing continuation
+capsules under token pressure.
+
+The automated flow is:
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+Only the Operator can close a pending Authority-Gate. Generated rollout
+readiness, gate and ack receipts are process evidence only.

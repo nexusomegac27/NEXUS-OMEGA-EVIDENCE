@@ -187,6 +187,21 @@ byte length and SHA-256. The generated receipts are workflow/provenance objects
 only and cannot promote claims, foundations, merge status or integration
 authority.
 
+## Artifact rollout preparation rule
+
+Validated handoff chains that need a complete rollout package use
+`research/pipeline/rollout/`, separate from `handoff/`.
+
+```text
+plans/     -> rollout-preparation plan
+receipts/  -> readiness, authority-gate, ack and workflow-event receipts
+```
+
+The rollout sequence is `PREPARE -> VALIDATE -> PACKAGE -> AUTHORITY_GATE ->
+ACK`. It stops at pending Operator gates and cannot execute merge, main write,
+force-push, public release, deployment, claim promotion, foundation promotion
+or integration authority.
+
 ## Scientific boundaries
 
 ```text
@@ -195,6 +210,7 @@ CURSOR_ACK != CURSOR_PASS
 PROCESSED != INTEGRATED
 ARCHIVED != TRUE
 HANDOFF_ACK != SCIENTIFIC_VALIDATION
+ROLLOUT_PREPARED != ROLLOUT_EXECUTED
 ```
 
 ## Future optional interoperability

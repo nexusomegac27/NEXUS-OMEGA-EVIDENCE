@@ -40,6 +40,10 @@ research/pipeline/
 │   ├── bound/
 │   ├── relay/
 │   └── ack/
+├── rollout/
+│   ├── README.md                # separate rollout preparation and gates
+│   ├── plans/
+│   └── receipts/
 └── templates/
     ├── package-manifest.template.json
     └── event.template.json
@@ -100,6 +104,34 @@ Workflow-Event Ledgers, token/continuation status and Authority-Gate status.
 It fails closed on merge, force-push, main write, claim promotion, foundation
 promotion, producer/validator identity fusion or missing material evidence.
 
+## Artifact rollout preparation
+
+`rollout/` is the separate preparation surface for a validated handoff chain
+that needs a complete rollout package without automatic execution.
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+The rollout validator checks source byte bindings, GitHub-observed handoff
+state, token/continuation policy and Authority-Gate routing. It fails closed
+when execution, merge, force-push, main write, release, deployment, claim
+promotion, foundation promotion or self-validation is enabled.
+
+The current seed is:
+
+```text
+NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0
+```
+
+It is bound to PR15 head
+`ab4081133ad9d37d6a3ae3fce2c838ef1d6eea9a`, but it does not modify PR15 and
+does not integrate R2 or PR13.
+
 ## Package identity
 
 Recommended ID:
@@ -140,6 +172,8 @@ PIPELINE_PACKAGE != IMPLEMENTATION_AUTHORITY
 RESEARCH_ACCUMULATION != CURSOR_EXECUTION
 READY_FOR_CURSOR != VALIDATED
 PROCESSED != CLAIM_PROMOTED
+ROLLOUT_PREPARED != ROLLOUT_EXECUTED
+AUTHORITY_GATE_PACKET != OPERATOR_RECEIPT
 ```
 
 Package/archive metadata may improve provenance and efficiency. It cannot promote scientific claims.

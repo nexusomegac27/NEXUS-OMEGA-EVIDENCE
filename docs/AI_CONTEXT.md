@@ -111,3 +111,10 @@ is `research/pipeline/handoff/` using the `INBOX -> VALIDATE -> BIND -> RELAY ->
 ACK` protocol. It preserves C0/C1 ceilings and separates byte/receipt transport
 from scientific validation, merge, integration, claim promotion and foundation
 promotion.
+
+For complete rollout preparation after a validated handoff chain, the canonical
+GitHub surface is `research/pipeline/rollout/` using the `PREPARE -> VALIDATE ->
+PACKAGE -> AUTHORITY_GATE -> ACK` protocol. It may package readiness and
+Authority-Gate evidence, but it cannot execute merge, main write, force-push,
+release, deployment, claim promotion, foundation promotion or integration
+authority.

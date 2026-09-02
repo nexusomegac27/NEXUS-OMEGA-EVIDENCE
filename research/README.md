@@ -29,6 +29,8 @@ It does **not** replace the canonical source lane of any research artifact. Pipe
 ```text
 research/pipeline/
 ├── events/      append-only lifecycle events
+├── handoff/     GitHub agent-return inbox and transport receipts
+├── rollout/     separate rollout preparation and Authority-Gate packets
 ├── packages/    stable package roots + immutable sealed snapshots
 ├── index/       rebuildable navigation projections
 └── templates/   package/event templates
