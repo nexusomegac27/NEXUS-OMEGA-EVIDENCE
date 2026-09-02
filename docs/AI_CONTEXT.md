@@ -105,3 +105,9 @@ Never reconstruct a lost historical object and relabel it as the original.
 ## Communication objective
 
 GitHub is the durable transport and memory surface between the Operator, AXIOM, Cursor/PRAXIS, external experts, and GitHub-native AI systems. Handoffs must recover causal state without relying on chat chronology.
+
+For external-agent and Cursor returns, the canonical GitHub automation surface
+is `research/pipeline/handoff/` using the `INBOX -> VALIDATE -> BIND -> RELAY ->
+ACK` protocol. It preserves C0/C1 ceilings and separates byte/receipt transport
+from scientific validation, merge, integration, claim promotion and foundation
+promotion.

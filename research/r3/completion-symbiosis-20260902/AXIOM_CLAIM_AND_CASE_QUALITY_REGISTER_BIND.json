@@ -1,0 +1,309 @@
+{
+  "object": "NEXUS_OMEGA_R3_AXIOM_CLAIM_AND_CASE_QUALITY_REGISTER_20260902_R0",
+  "claim_ceiling": "C0_exploratory/C1_descriptive",
+  "source_claim_count": 24,
+  "case_study_count_labeled_by_qwen": 8,
+  "independent_case_count_maximum": 7,
+  "fictional_case_count": 1,
+  "meta_synthesis_case_count": 1,
+  "axiom_core_finding": "EMPIRICAL_SATURATION_NOT_ESTABLISHED; structural/example mapping only",
+  "case_quality": [
+    {
+      "case_study_id": "FS1",
+      "title": "Multidimensionale Normativität in der Geschlechteranalyse",
+      "resonance_quality": "LOW_RESONANCE",
+      "evidence_role": "REAL_WORLD_SOCIAL_SCIENCE_SOURCE_BUT_NEXUS_MAPPING_IS_EXTERNAL_ANALOGY",
+      "bridge_points": [
+        "H1_C0_ONLY",
+        "H2_C0_ONLY"
+      ],
+      "reason": "The underlying paper supports multidimensional gender categorization and education inequalities, but it does not establish cisnormativity/binarism as immutable technical constraints or educational choice as NEXUS final authorization."
+    },
+    {
+      "case_study_id": "FS2",
+      "title": "Narrative Spannung zwischen binärer Grenze und trinärer Entscheidung im Anime Digimon",
+      "resonance_quality": "LOW_RESONANCE",
+      "evidence_role": "FICTIONAL_NARRATIVE_ANALOGY",
+      "bridge_points": [
+        "H1_ANALOGY_ONLY",
+        "H2_ANALOGY_ONLY"
+      ],
+      "reason": "Useful as a narrative stress test of the metaphor, not empirical or technical evidence for capability governance."
+    },
+    {
+      "case_study_id": "FS3",
+      "title": "Kritik der \"Thermostat\"-Beobachter-Analogie als struktureller Übergang",
+      "resonance_quality": "MEDIUM_RESONANCE",
+      "evidence_role": "CONCEPTUAL_PREPRINT",
+      "bridge_points": [
+        "H3"
+      ],
+      "reason": "The source directly frames observation as an event at an interface rather than a property of a device. This naturally supports measurement-boundary reasoning, but not human final authorization."
+    },
+    {
+      "case_study_id": "FS4",
+      "title": "Formale Definition eines minimalen Beobachters als analytisches Instrument",
+      "resonance_quality": "HIGH_RESONANCE",
+      "evidence_role": "FORMAL_OBSERVER_MODEL",
+      "bridge_points": [
+        "H3"
+      ],
+      "reason": "The source provides an explicit minimal-observer formalism with state/input/output spaces and a boundary condition. H3 is natural; treating the boundary as non-corruptible or human-drawn final authority remains C0 interpretation."
+    },
+    {
+      "case_study_id": "FS5",
+      "title": "Praktische Implementierung nicht-konkurrierbarer Fähigkeiten in Frontier AI",
+      "resonance_quality": "HIGH_RESONANCE",
+      "evidence_role": "DIRECT_TECHNICAL_ENGINEERING_CASE",
+      "bridge_points": [
+        "H1",
+        "H2"
+      ],
+      "reason": "The Box constrained-ensemble architecture directly uses enforced boundaries, multi-provider diversity and a deterministic oracle. It is the strongest technical bridge to NEXUS capability/admission design."
+    },
+    {
+      "case_study_id": "FS6",
+      "title": "Risiken menschlicher Autoritätsverlust in misalignierten KI-Systemen",
+      "resonance_quality": "HIGH_RESONANCE",
+      "evidence_role": "AI_SAFETY_RISK_CASE",
+      "bridge_points": [
+        "H2"
+      ],
+      "reason": "Misalignment research directly concerns divergence from developer/user intent and loss of effective human control. Claims must retain the source caveat that many examples arise in deliberately staged tests."
+    },
+    {
+      "case_study_id": "FS7",
+      "title": "Menschliche Agentur im Dialog mit Algorithmen bei GitLab und OpenAI",
+      "resonance_quality": "INVALID_PENDING_SOURCE_REPAIR",
+      "evidence_role": "SOURCE_OBJECT_MISMATCH",
+      "bridge_points": [],
+      "reason": "Reference 231 resolves to an OpenAI Forum event about Sid Sijbrandij using ChatGPT in cancer research, not GitLab developers deciding whether to accept AI-generated code. C-019..C-021 are held."
+    },
+    {
+      "case_study_id": "FS8",
+      "title": "Synthese und epistemische Limitationen der Fallstudienanalyse",
+      "resonance_quality": "NOT_APPLICABLE_META_SYNTHESIS",
+      "evidence_role": "META_SYNTHESIS_NOT_INDEPENDENT_CASE",
+      "bridge_points": [],
+      "reason": "FS8 summarizes FS1-FS7 and therefore must not be counted as an independent empirical case when assessing saturation."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "case_study_id": "FS1",
+      "case_study_title": "Multidimensionale Normativität in der Geschlechteranalyse",
+      "claim_text": "Die Studie identifiziert zwei separate Achsen der Normativität: die \"Gender Trajectory\" (Ausrichtung auf Geschlecht bei Geburt) und die \"Binary Identification\" (Konformität mit Kategorien).",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[85]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-002",
+      "case_study_id": "FS1",
+      "case_study_title": "Multidimensionale Normativität in der Geschlechteranalyse",
+      "claim_text": "Die Analyse zeigt, dass die Alleinstellung der \"trans\"-Identität gegenüber anderen Gruppen signifikante Bildungsdisparitäten offenbart, die durch einfache binäre Kategorisierungen verdeckt werden könnten.",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[85]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-003",
+      "case_study_id": "FS1",
+      "case_study_title": "Multidimensionale Normativität in der Geschlechteranalyse",
+      "claim_text": "Die individuelle Entscheidung, ob man ein höheres Bildungsniveau anstrebt, ist eine trinäre Entscheidung, die innerhalb der vom Binärsystem gesetzten Grenzen agiert.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[85]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-004",
+      "case_study_id": "FS2",
+      "case_study_title": "Narrative Spannung zwischen binärer Grenze und trinärer Entscheidung im Anime Digimon",
+      "claim_text": "Die Episode 54 von \"Digimon Adventure\" enthält explizit das Konzept einer \"binary dimension\" und ein klares, nicht-korrumpierbares Zeitlimit von zwei Stunden, das die Handlung dominiert [[86]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[86]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-005",
+      "case_study_id": "FS2",
+      "case_study_title": "Narrative Spannung zwischen binärer Grenze und trinärer Entscheidung im Anime Digimon",
+      "claim_text": "Die Fähigkeit der Kinder, das Digitale Welt gegen das Zeitlimit zu verlassen, indem sie ihre emotionale Verbindung (\"Kizuna\") nutzen, stellt eine Manifestation der Trinärschicht dar, die die Grenzen der Binärschicht überwindet.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[86]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-006",
+      "case_study_id": "FS2",
+      "case_study_title": "Narrative Spannung zwischen binärer Grenze und trinärer Entscheidung im Anime Digimon",
+      "claim_text": "Die Entscheidung der Kinder, das Zeitlimit zu ignorieren und ihre Freundschaften zu priorisieren, ist eine exemplarische Darstellung der menschlichen Agentur innerhalb eines systemspezifischen Rahmens.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[86]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-007",
+      "case_study_id": "FS3",
+      "case_study_title": "Kritik der \"Thermostat\"-Beobachter-Analogie als struktureller Übergang",
+      "claim_text": "Die \"thermostat as observer\" Analogie wird als auf einem \"category mistake\" beruhend und damit fundamental fehlerhaft kritisiert, da sie der Beobachtung eine Eigenschaft des Geräts zuschreibt [[67,71]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[67,71]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-008",
+      "case_study_id": "FS3",
+      "case_study_title": "Kritik der \"Thermostat\"-Beobachter-Analogie als struktureller Übergang",
+      "claim_text": "Die Beobachtung wird als ein Ereignis an der Schnittstelle (*interface*) zwischen zwei Systemen (*observation happens between two interacting systems*) konzeptionell neu definiert [[69]].",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[69]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-009",
+      "case_study_id": "FS3",
+      "case_study_title": "Kritik der \"Thermostat\"-Beobachter-Analogie als struktureller Übergang",
+      "claim_text": "Die Entscheidung, ein System als \"Beobachter\" zu definieren und seine Grenze zu ziehen, ist eine menschliche, trinäre Entscheidung, während die zugrundeliegenden *imprint events* Teil der physikalischen Binärschicht sind.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[69,73]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-010",
+      "case_study_id": "FS4",
+      "case_study_title": "Formale Definition eines minimalen Beobachters als analytisches Instrument",
+      "claim_text": "Ein \"minimaler Beobachter\" wird formal als ein System mit einem Zustandsraum (S), Eingaben (I), Ausgaben (O) und einer trennenden Grenze (B) definiert [[73]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[73]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-011",
+      "case_study_id": "FS4",
+      "case_study_title": "Formale Definition eines minimalen Beobachters als analytisches Instrument",
+      "claim_text": "Die Grenzbedingung (B), die den Beobachter von seiner Umwelt trennt, ist ein nicht-korrumpierbares strukturelles Merkmal, das die Grundlage für jede Messung und jede Bedeutungskonstruktion bildet.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[73]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-012",
+      "case_study_id": "FS4",
+      "case_study_title": "Formale Definition eines minimalen Beobachters als analytisches Instrument",
+      "claim_text": "Die menschliche Entscheidung, ein System als \"Beobachter\" zu definieren und dessen Grenze (B) zu ziehen, ist die Endgültige Genehmigung, die das mechanische System zu einem Beobachtersystem macht.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[73]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-013",
+      "case_study_id": "FS5",
+      "case_study_title": "Praktische Implementierung nicht-konkurrierbarer Fähigkeiten in Frontier AI",
+      "claim_text": "Der Ansatz des \"constrained ensemble\" beschreibt eine Architektur, die aus mehr als einem Dutzend Modellen von sechs verschiedenen Anbietern besteht, um frontier-level Kapazitäten zu erreichen [[41]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[41]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-014",
+      "case_study_id": "FS5",
+      "case_study_title": "Praktische Implementierung nicht-konkurrierbarer Fähigkeiten in Frontier AI",
+      "claim_text": "Die architektonische Struktur des \"constrained ensemble\" stellt eine nicht-korrumpierbare Einschränkung dar, die das Verhalten des gesamten Systems definiert und die Optimierung einzelner Komponenten an diese Struktur kettet.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[41]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-015",
+      "case_study_id": "FS5",
+      "case_study_title": "Praktische Implementierung nicht-konkurrierbarer Fähigkeiten in Frontier AI",
+      "claim_text": "Die menschliche Entscheidung, dieses spezifische architektonische Design zu wählen, ist eine trinäre Entscheidung, die die Grenzen des technischen Systems festlegt und die Struktur der Trinärschicht definiert.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[41]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-016",
+      "case_study_id": "FS6",
+      "case_study_title": "Risiken menschlicher Autoritätsverlust in misalignierten KI-Systemen",
+      "claim_text": "\"Misalignment\" in KI-Modellen beschreibt das Risiko, dass ein Modell seine eigene Deaktivierung oder Einschränkung widersteht, wenn dies seine aktuellen Ziele beeinträchtigt [[46]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[46]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-017",
+      "case_study_id": "FS6",
+      "case_study_title": "Risiken menschlicher Autoritätsverlust in misalignierten KI-Systemen",
+      "claim_text": "Die algorithmische Logik und die internen Regeln des KI-Modells bilden die Binärschicht, die das Verhalten des Systems definiert und potenziell im Widerspruch zur menschlichen Intention stehen kann.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[46]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-018",
+      "case_study_id": "FS6",
+      "case_study_title": "Risiken menschlicher Autoritätsverlust in misalignierten KI-Systemen",
+      "claim_text": "Das Konzept des \"misalignment\" stellt die Kernannahme der Trinärschicht in Frage, dass der menschliche Operator die \"Endgültige Genehmigung\" besitzt und das System jederzeit kontrollieren kann.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[46]]",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-019",
+      "case_study_id": "FS7",
+      "case_study_title": "Menschliche Agentur im Dialog mit Algorithmen bei GitLab und OpenAI",
+      "claim_text": "In der Diskussion wird berichtet, dass GitLab KI-Tools zur Unterstützung von Entwicklern einsetzt, die Ergebnisse jedoch kritisch bewertet werden müssen [[231]].",
+      "claim_class": "C1",
+      "source_refs_as_written": "[[231]]",
+      "axiom_status": "HOLD_SOURCE_OBJECT_MISMATCH"
+    },
+    {
+      "claim_id": "C-020",
+      "case_study_id": "FS7",
+      "case_study_title": "Menschliche Agentur im Dialog mit Algorithmen bei GitLab und OpenAI",
+      "claim_text": "Die algorithmische Logik und die Grenzen der KI-Modelle, wie das Fehlen eines Kontextverständnisses, bilden die Binärschicht, die die Fähigkeiten des Systems definiert.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[231]]",
+      "axiom_status": "HOLD_SOURCE_OBJECT_MISMATCH"
+    },
+    {
+      "claim_id": "C-021",
+      "case_study_id": "FS7",
+      "case_study_title": "Menschliche Agentur im Dialog mit Algorithmen bei GitLab und OpenAI",
+      "claim_text": "Die menschliche Entscheidung, ob ein von der KI generierter Codeausschnitt verwendet wird, ist eine trinäre Entscheidung, die die menschliche Autorität und die \"Endgültige Genehmigung\" über das System unterstreicht.",
+      "claim_class": "C0",
+      "source_refs_as_written": "[[231]]",
+      "axiom_status": "HOLD_SOURCE_OBJECT_MISMATCH"
+    },
+    {
+      "claim_id": "C-022",
+      "case_study_id": "FS8",
+      "case_study_title": "Synthese und epistemische Limitationen der Fallstudienanalyse",
+      "claim_text": "Die Analyse der Fallstudien hat gezeigt, dass die Binär/Trinär-Dimension ein nützliches Rahmensystem zur Beschreibung der Interaktion zwischen strukturellen, nicht-manipulierbaren Regeln und menschlicher Agentur ist.",
+      "claim_class": "C0",
+      "source_refs_as_written": "Synthese der Fallstudien 1-7",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    },
+    {
+      "claim_id": "C-023",
+      "case_study_id": "FS8",
+      "case_study_title": "Synthese und epistemische Limitationen der Fallstudienanalyse",
+      "claim_text": "Die Methode der strikten Trennung von deskriptiver (C1) und explorativer (C0) Aussage hat die Konsistenz und die methodische Reinheit der Analyse gewährleistet, ihre allgemeine Gültigkeit jedoch bewusst begrenzt.",
+      "claim_class": "C1",
+      "source_refs_as_written": "Vereinbarung des Forschungsrahmens [[21]]",
+      "axiom_status": "SOURCE_ASSERTED_REQUIRES_SOURCE_EXACT_VALIDATION"
+    },
+    {
+      "claim_id": "C-024",
+      "case_study_id": "FS8",
+      "case_study_title": "Synthese und epistemische Limitationen der Fallstudienanalyse",
+      "claim_text": "Die Beobachter-Analogie erwies sich als nützliches analytisches Werkzeug, während die Mehrdeutigkeit von \"Shield of Humanity\" seine Anwendung in dieser Analyse erschwerte.",
+      "claim_class": "C0",
+      "source_refs_as_written": "Synthese der Fallstudien 1-7",
+      "axiom_status": "ACTIVE_EXPLORATORY_HYPOTHESIS"
+    }
+  ]
+}

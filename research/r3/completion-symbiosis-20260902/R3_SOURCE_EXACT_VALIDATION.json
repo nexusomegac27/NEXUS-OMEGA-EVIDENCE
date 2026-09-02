@@ -1,0 +1,110 @@
+{
+  "object": "R3_SOURCE_EXACT_VALIDATION",
+  "retrieval_time": "2026-09-02T19:19:25Z",
+  "entries": [
+    {
+      "source_id": "85",
+      "case_study_id": "FS1",
+      "SOURCE_LOCATOR": "NOT_ESTABLISHED_IN_THIS_PASS",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "ACADEMIC_PAPER",
+      "CLAIM_IDS": [
+        "C-001",
+        "C-002",
+        "C-003"
+      ],
+      "SUPPORT": "NOT_ESTABLISHED",
+      "probe": {
+        "retrieved": false
+      },
+      "notes": null
+    },
+    {
+      "source_id": "69",
+      "case_study_id": "FS3",
+      "SOURCE_LOCATOR": "https://zenodo.org/records/14794174",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "PREPRINT",
+      "CLAIM_IDS": [
+        "C-008"
+      ],
+      "SUPPORT": "PARTIAL",
+      "probe": {
+        "http_status": 200,
+        "final_url": "https://zenodo.org/records/14794174",
+        "retrieved": true
+      },
+      "notes": null
+    },
+    {
+      "source_id": "73",
+      "case_study_id": "FS4",
+      "SOURCE_LOCATOR": "https://arxiv.org/abs/2504.16205",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "ARXIV",
+      "CLAIM_IDS": [
+        "C-010"
+      ],
+      "SUPPORT": "PARTIAL",
+      "probe": {
+        "http_status": 200,
+        "final_url": "https://arxiv.org/abs/2504.16205",
+        "retrieved": true
+      },
+      "notes": null
+    },
+    {
+      "source_id": "41",
+      "case_study_id": "FS5",
+      "SOURCE_LOCATOR": "https://www.box.com/",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "VENDOR_TECHNICAL",
+      "CLAIM_IDS": [
+        "C-013"
+      ],
+      "SUPPORT": "PARTIAL",
+      "probe": {
+        "http_status": 200,
+        "final_url": "https://www.box.com/",
+        "retrieved": true
+      },
+      "notes": "exact constrained-ensemble URL pending finer bind"
+    },
+    {
+      "source_id": "46",
+      "case_study_id": "FS6",
+      "SOURCE_LOCATOR": "https://www.csis.org/",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "THINK_TANK",
+      "CLAIM_IDS": [
+        "C-016"
+      ],
+      "SUPPORT": "PARTIAL",
+      "probe": {
+        "http_status": 200,
+        "final_url": "https://www.csis.org/",
+        "retrieved": true
+      },
+      "notes": null
+    },
+    {
+      "source_id": "231",
+      "case_study_id": "FS7",
+      "SOURCE_LOCATOR": "https://community.openai.com/",
+      "RETRIEVAL_TIME": "2026-09-02T19:19:25Z",
+      "SOURCE_CLASS": "FORUM_NARRATIVE",
+      "CLAIM_IDS": [
+        "C-019",
+        "C-020",
+        "C-021"
+      ],
+      "SUPPORT": "MISMATCH",
+      "probe": {
+        "http_status": 200,
+        "final_url": "https://community.openai.com/",
+        "retrieved": true
+      },
+      "notes": null
+    }
+  ]
+}

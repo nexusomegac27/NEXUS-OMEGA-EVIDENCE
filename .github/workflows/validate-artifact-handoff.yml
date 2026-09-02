@@ -1,0 +1,51 @@
+name: Validate artifact handoff
+
+on:
+  pull_request:
+    paths:
+      - 'research/pipeline/handoff/**'
+      - 'schema/artifact-handoff-*.schema.json'
+      - 'scripts/artifact_handoff.py'
+      - 'tests/test_artifact_handoff.py'
+      - 'validation/artifact-handoff-negative-fixtures-v1.jsonl'
+      - 'docs/artifact-handoff-protocol.md'
+      - '.github/workflows/validate-artifact-handoff.yml'
+  push:
+    paths:
+      - 'research/pipeline/handoff/**'
+      - 'schema/artifact-handoff-*.schema.json'
+      - 'scripts/artifact_handoff.py'
+      - 'tests/test_artifact_handoff.py'
+      - 'validation/artifact-handoff-negative-fixtures-v1.jsonl'
+      - 'docs/artifact-handoff-protocol.md'
+      - '.github/workflows/validate-artifact-handoff.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-bind-relay-ack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python sources
+        run: python -m compileall -q scripts tests
+      - name: Validate handoff inbox fail-closed
+        run: python scripts/artifact_handoff.py --root . validate
+      - name: Run handoff unit tests
+        run: python -m unittest tests.test_artifact_handoff
+      - name: Generate bind relay ack package
+        run: python scripts/artifact_handoff.py --root . process --output _artifact_handoff_out
+      - name: Write workflow summary
+        shell: bash
+        run: cat _artifact_handoff_out/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload bind relay ack package
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-handoff-bind-relay-ack
+          path: _artifact_handoff_out

@@ -87,7 +87,10 @@ def validate_manifest(root: Path, manifest_path: Path, strict_external: bool) ->
     require(set(asset) == {"path", "media_type", "bytes", "sha256"}, "ASSET_FIELD_SET_MISMATCH")
     require(HEX64.fullmatch(asset["sha256"]) is not None, "ASSET_HASH_FORMAT_INVALID")
     asset_path = (root / asset["path"]).resolve()
-    require(str(asset_path).startswith(str(root.resolve()) + "/"), "ASSET_PATH_ESCAPE")
+    try:
+        asset_path.relative_to(root.resolve())
+    except ValueError as exc:
+        raise ValidationError("ASSET_PATH_ESCAPE") from exc
     require(asset_path.is_file(), "ASSET_SOURCE_NOT_PRESENT")
     data = asset_path.read_bytes()
     require(len(data) == int(asset["bytes"]), "ASSET_LENGTH_MISMATCH")

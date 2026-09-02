@@ -112,3 +112,19 @@ A package should generally represent a coherent research interval rather than a 
 ## 12. No silent completion
 
 `PROCESSED` requires a Cursor terminal processing event or another explicitly authorized processor. AXIOM may prepare, seal and adjudicate research, but does not mark Cursor processing complete on Cursor's behalf.
+
+## 13. Artifact handoff inbox
+
+External agent and Cursor returns that should be handled by GitHub automation
+enter through:
+
+```text
+research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json
+```
+
+This path is a cross-phase transport surface inside the shared pipeline. It
+does not replace the canonical research lane of the underlying return.
+
+The validator must fail closed on missing bytes, hash mismatch, open
+Authority-Gates, producer/validator self-validation, merge, main-write,
+force-push, claim promotion or foundation promotion.

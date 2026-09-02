@@ -34,6 +34,12 @@ research/pipeline/
 │   └── README.md                # one immutable JSON event per file
 ├── packages/
 │   └── README.md                # stable package roots, timestamp partitioned
+├── handoff/
+│   ├── README.md                # GitHub agent-return inbox and receipts
+│   ├── inbox/
+│   ├── bound/
+│   ├── relay/
+│   └── ack/
 └── templates/
     ├── package-manifest.template.json
     └── event.template.json
@@ -75,6 +81,24 @@ REOPENED
 ```
 
 Lifecycle changes are append-only event files under `events/YYYY/MM/DD/`. `index/latest.json` and `index/packages.json` are rebuildable projections.
+
+## Artifact handoff inbox
+
+`handoff/` is the fixed GitHub surface for external agent and Cursor returns
+that should continue without routine Operator mediation.
+
+```text
+INBOX
+-> VALIDATE
+-> BIND
+-> RELAY
+-> ACK
+```
+
+The handoff validator checks bytes, receipts, File-Event Ledgers,
+Workflow-Event Ledgers, token/continuation status and Authority-Gate status.
+It fails closed on merge, force-push, main write, claim promotion, foundation
+promotion, producer/validator identity fusion or missing material evidence.
 
 ## Package identity
 

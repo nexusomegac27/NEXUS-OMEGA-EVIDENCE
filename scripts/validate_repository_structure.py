@@ -32,6 +32,24 @@ REQUIRED_CONTRACTS = {
     "docs/governance/REPOSITORY_ORDER_POLICY.md",
     "docs/governance/REPOSITORY_PATH_RULES.json",
 }
+ARTIFACT_HANDOFF_PATHS = {
+    ".github/workflows/validate-artifact-handoff.yml",
+    "docs/artifact-handoff-protocol.md",
+    "examples/artifact-handoff/README.md",
+    "examples/artifact-handoff/handoff.example.json",
+    "research/pipeline/handoff/README.md",
+    "research/pipeline/handoff/ack/README.md",
+    "research/pipeline/handoff/bound/README.md",
+    "research/pipeline/handoff/inbox/README.md",
+    "research/pipeline/handoff/inbox/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/handoff.json",
+    "research/pipeline/handoff/relay/README.md",
+    "schema/artifact-handoff-envelope-v1.schema.json",
+    "schema/artifact-handoff-ledger-event-v1.schema.json",
+    "schema/artifact-handoff-receipt-v1.schema.json",
+    "scripts/artifact_handoff.py",
+    "tests/test_artifact_handoff.py",
+    "validation/artifact-handoff-negative-fixtures-v1.jsonl",
+}
 HISTORICAL_PATHS = {
     "requirements-a83-test.txt",
     "docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.json",
@@ -76,7 +94,7 @@ def validate(root: Path) -> list[str]:
     names = {p.name for p in root.iterdir() if p.name != ".git"}
     errors.extend(validate_root_entries(names))
 
-    for rel in sorted(REQUIRED_READMES | REQUIRED_CONTRACTS | HISTORICAL_PATHS):
+    for rel in sorted(REQUIRED_READMES | REQUIRED_CONTRACTS | HISTORICAL_PATHS | ARTIFACT_HANDOFF_PATHS):
         if not (root / rel).is_file():
             errors.append(f"REQUIRED_PATH_MISSING:{rel}")
 
@@ -93,6 +111,17 @@ def validate(root: Path) -> list[str]:
         errors.append("STRUCTURE_CONTRACT_ROOT_DIRS_MISMATCH")
     if contract.get("order_law") != "REPOSITORY_ORDER_LAW_V1":
         errors.append("STRUCTURE_CONTRACT_ORDER_LAW_MISMATCH")
+    stores = contract.get("stores", {})
+    handoff_store = stores.get("artifact_handoff", {})
+    if handoff_store.get("root") != "research/pipeline/handoff":
+        errors.append("STRUCTURE_CONTRACT_HANDOFF_ROOT_MISMATCH")
+    if handoff_store.get("protocol") != "INBOX_VALIDATE_BIND_RELAY_ACK_V1":
+        errors.append("STRUCTURE_CONTRACT_HANDOFF_PROTOCOL_MISMATCH")
+    artifact_handoff = contract.get("artifact_handoff", {})
+    if artifact_handoff.get("seed_handoff") != "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0":
+        errors.append("STRUCTURE_CONTRACT_HANDOFF_SEED_MISMATCH")
+    if artifact_handoff.get("stages") != ["INBOX", "VALIDATE", "BIND", "RELAY", "ACK"]:
+        errors.append("STRUCTURE_CONTRACT_HANDOFF_STAGES_MISMATCH")
 
     errors.extend(validate_r5_lane_readmes(root / "research" / "r5"))
 
