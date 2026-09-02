@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+  "rollout_id": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+  "stage": "PREPARE_ONLY",
+  "object_id": "EXAMPLE_ONLY",
+  "state": "PREPARED_SEPARATE_C1",
+  "created_at_utc": "2026-09-02T20:45:00Z",
+  "claim_ceiling": "C1",
+  "source": {},
+  "github_observations": {},
+  "source_refs": [
+    {
+      "role": "EXAMPLE_REF",
+      "path": "research/pipeline/handoff/README.md",
+      "bytes": 0,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "rollout_policy": {},
+  "rollout_phases": [
+    {
+      "phase": "VERIFY_SOURCE",
+      "status": "PREPARED",
+      "authority_required": false,
+      "auto_execute": false
+    }
+  ],
+  "authority_gates": [],
+  "token_continuation": {},
+  "relay": {},
+  "caveats": []
+}

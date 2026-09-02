@@ -9,6 +9,7 @@ The files at `docs/` root are intentionally stable public entry points used by a
 ## Subdomains
 
 - `artifact-handoff-protocol.md` - GitHub Inbox -> Validate -> Bind -> Relay -> Ack protocol for external agent returns.
+- `artifact-rollout-protocol.md` - separate Prepare -> Validate -> Package -> Authority-Gate -> Ack protocol for rollout readiness packages.
 - `architecture/` — repository/system architecture and machine structure contract.
 - `governance/` — durable operational laws and placement policy.
 - `phase2/` — historical path-bound A83/A84 evidence; location is frozen by published artifact bindings.

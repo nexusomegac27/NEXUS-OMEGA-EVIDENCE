@@ -9,3 +9,8 @@ Repository-wide artifact handoff automation is defined by:
 - `artifact-handoff-envelope-v1.schema.json`
 - `artifact-handoff-receipt-v1.schema.json`
 - `artifact-handoff-ledger-event-v1.schema.json`
+
+Repository-wide artifact rollout preparation is defined by:
+
+- `artifact-rollout-plan-v1.schema.json`
+- `artifact-rollout-receipt-v1.schema.json`

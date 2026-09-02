@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusomegac27.github.io/NEXUS-OMEGA-EVIDENCE/schema/artifact-rollout-receipt-v1.schema.json",
+  "title": "NEXUS OMEGA artifact rollout preparation receipt v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "protocol",
+    "rollout_id",
+    "receipt_type",
+    "generated_at_utc",
+    "source_plan_sha256",
+    "decision",
+    "claim_ceiling",
+    "claim_promotion",
+    "foundation_promotion",
+    "integration_authority",
+    "operator_required"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol": {"const": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1"},
+    "rollout_id": {"type": "string", "pattern": "^NEXUS_RO_[0-9]{8}T[0-9]{6}Z_[a-z0-9][a-z0-9_-]{0,79}_R[0-9]+$"},
+    "receipt_type": {"enum": ["READINESS", "AUTHORITY_GATE_PACKET", "ACK"]},
+    "generated_at_utc": {"type": "string"},
+    "source_plan_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "decision": {"type": "string"},
+    "claim_ceiling": {"enum": ["C0_EXPLORATORY", "C1_DESCRIPTIVE", "C0_EXPLORATORY_C1_DESCRIPTIVE", "C1"]},
+    "claim_promotion": {"const": false},
+    "foundation_promotion": {"const": false},
+    "integration_authority": {"const": "NONE"},
+    "operator_required": {"type": "boolean"}
+  }
+}

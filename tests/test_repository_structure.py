@@ -42,6 +42,13 @@ class RepositoryStructureTests(unittest.TestCase):
             MODULE.ARTIFACT_HANDOFF_PATHS,
         )
 
+    def test_artifact_rollout_paths_are_part_of_structure_contract(self):
+        self.assertIn("scripts/artifact_rollout.py", MODULE.ARTIFACT_ROLLOUT_PATHS)
+        self.assertIn(
+            "research/pipeline/rollout/plans/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/rollout.json",
+            MODULE.ARTIFACT_ROLLOUT_PATHS,
+        )
+
     def test_r5_lane_without_readme_fails(self):
         with tempfile.TemporaryDirectory() as td:
             r5_root = Path(td) / "research" / "r5"

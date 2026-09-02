@@ -1,0 +1,14 @@
+{"id":"ARF01","mutation":{"rollout_policy":{"execution_enabled":true}},"expected_error":"ROLLOUT_EXECUTION_ENABLED"}
+{"id":"ARF02","mutation":{"rollout_policy":{"auto_merge":true}},"expected_error":"ROLLOUT_AUTO_MERGE"}
+{"id":"ARF03","mutation":{"rollout_policy":{"auto_claim_promotion":true}},"expected_error":"ROLLOUT_AUTO_CLAIM_PROMOTION"}
+{"id":"ARF04","mutation":{"rollout_policy":{"auto_foundation_promotion":true}},"expected_error":"ROLLOUT_AUTO_FOUNDATION_PROMOTION"}
+{"id":"ARF05","mutation":{"rollout_policy":{"auto_force_push":true}},"expected_error":"ROLLOUT_AUTO_FORCE_PUSH"}
+{"id":"ARF06","mutation":{"rollout_policy":{"auto_main_write":true}},"expected_error":"ROLLOUT_AUTO_MAIN_WRITE"}
+{"id":"ARF07","mutation":{"rollout_policy":{"self_validation":true}},"expected_error":"ROLLOUT_SELF_VALIDATION"}
+{"id":"ARF08","mutation":{"rollout_policy":{"r2_pr13_separation":"FUSED"}},"expected_error":"ROLLOUT_R2_PR13_SEPARATION"}
+{"id":"ARF09","mutation":{"source":{"source_head":"0000000000000000000000000000000000000000"}},"expected_error":"ROLLOUT_SOURCE_HEAD"}
+{"id":"ARF10","mutation":{"source":{"seed_handoff":"NEXUS_AH_20260902T192400Z_wrong_R0"}},"expected_error":"ROLLOUT_SOURCE_SEED_HANDOFF"}
+{"id":"ARF11","mutation":{"authority_gates":[{"gate":"MERGE","status":"PENDING_OPERATOR","operator_confirmation_required":true,"auto_execute":true}]},"expected_error":"AUTHORITY_GATE_AUTO_EXECUTE:MERGE"}
+{"id":"ARF12","mutation":{"authority_gates":[{"gate":"MERGE","status":"CLOSED","operator_confirmation_required":true,"auto_execute":false}]},"expected_error":"AUTHORITY_GATE_CLOSED_WITHOUT_OPERATOR_RECORD:MERGE"}
+{"id":"ARF13","mutation":{"token_continuation":{"continuation_required":true,"continuation_capsule_path":null}},"expected_error":"CONTINUATION_CAPSULE_MISSING"}
+{"id":"ARF14","mutation":{"source_refs":[]},"expected_error":"SOURCE_REFS"}

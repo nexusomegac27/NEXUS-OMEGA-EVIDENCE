@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+  "rollout_id": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+  "stage": "PREPARE_ONLY",
+  "object_id": "NEXUS_OMEGA_PR15_ARTIFACT_HANDOFF_FULL_ROLLOUT_PREP_20260902_R0",
+  "state": "PREPARED_SEPARATE_C1",
+  "created_at_utc": "2026-09-02T20:45:00Z",
+  "claim_ceiling": "C1",
+  "source": {
+    "object": "NEXUS_OMEGA_PR15_ARTIFACT_HANDOFF_ACK_CHAIN",
+    "state": "PR15_ARTIFACT_HANDOFF_ACK_CHAIN_OBSERVED_C1",
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "source_pr": 15,
+    "source_pr_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/15",
+    "source_branch": "axiom/agent-authorization-admission-r3-open-research-20260902",
+    "source_head": "ab4081133ad9d37d6a3ae3fce2c838ef1d6eea9a",
+    "parent": "5c1dc9df32fd8d96277e98ef754602d9726e52d7",
+    "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+    "repository_structure_version_observed": "1.3.0"
+  },
+  "github_observations": {
+    "checks": "ALL_OBSERVED_PASS",
+    "actions_artifact": "artifact-handoff-bind-relay-ack",
+    "actions_artifact_bytes": 4869,
+    "actions_run_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/actions/runs/33676282233",
+    "axiom_comment_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/15#issuecomment-5515603473",
+    "cursor_comment_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/15#issuecomment-5515668010",
+    "cursor_action": "NONE"
+  },
+  "source_refs": [
+    {
+      "role": "HANDOFF_ENVELOPE",
+      "path": "research/pipeline/handoff/inbox/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/handoff.json",
+      "bytes": 6450,
+      "sha256": "40951f2c8ebb88b93ba38b07db9dd41048e3bf97b8aa4448511e98b7460f9da9"
+    },
+    {
+      "role": "BIND_RECEIPT",
+      "path": "research/pipeline/handoff/bound/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/BIND_RECEIPT.json",
+      "bytes": 4661,
+      "sha256": "e13d7662dc27b164eb61592e41ee13480de2ba181ea26d6910542dfd502538e1"
+    },
+    {
+      "role": "RELAY_PACKET",
+      "path": "research/pipeline/handoff/relay/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/RELAY_PACKET.json",
+      "bytes": 1289,
+      "sha256": "2d70b3e1fc9f6060b562071a656b67a7503cf9c65ae8e56213cc6d8187ed15a6"
+    },
+    {
+      "role": "ACK_RECEIPT",
+      "path": "research/pipeline/handoff/ack/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/ACK_RECEIPT.json",
+      "bytes": 1197,
+      "sha256": "02446b64d9ad5c33f55efb40cb8580a766aa173121b4589df37bcf4f7170e1e9"
+    },
+    {
+      "role": "HANDOFF_WORKFLOW_EVENT_LEDGER",
+      "path": "research/pipeline/handoff/ack/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/HANDOFF_WORKFLOW_EVENTS.jsonl",
+      "bytes": 508,
+      "sha256": "30336a07126ffe8f9f7025abd3eb13283a44685acaa0bab31c859e446fd3d3fb"
+    },
+    {
+      "role": "HANDOFF_WORKFLOW",
+      "path": ".github/workflows/validate-artifact-handoff.yml",
+      "bytes": 1776,
+      "sha256": "46718c200e56c4c20da9d534c2d66c2010297f8d40096a88f479229c04e4e246"
+    },
+    {
+      "role": "HANDOFF_VALIDATOR",
+      "path": "scripts/artifact_handoff.py",
+      "bytes": 23993,
+      "sha256": "5d3ea22a6efb0b1dd6bffe8cc2e41d6ad00355110c4900f195344018ec9a3623"
+    },
+    {
+      "role": "HANDOFF_PROTOCOL",
+      "path": "docs/artifact-handoff-protocol.md",
+      "bytes": 3087,
+      "sha256": "afc683fc2563cbb6089aae85888269d48d5de5175a6d72a764f53bcee39cde14"
+    }
+  ],
+  "rollout_policy": {
+    "execution_enabled": false,
+    "auto_merge": false,
+    "auto_main_write": false,
+    "auto_force_push": false,
+    "auto_claim_promotion": false,
+    "auto_foundation_promotion": false,
+    "auto_public_release": false,
+    "auto_deployment": false,
+    "self_validation": false,
+    "r2_pr13_separation": "PRESERVED"
+  },
+  "rollout_phases": [
+    {
+      "phase": "VERIFY_SOURCE",
+      "status": "PREPARED",
+      "authority_required": false,
+      "auto_execute": false
+    },
+    {
+      "phase": "PACKAGE_RECEIPTS",
+      "status": "PREPARED",
+      "authority_required": false,
+      "auto_execute": false
+    },
+    {
+      "phase": "OPERATOR_AUTHORITY_GATE",
+      "status": "PENDING_OPERATOR",
+      "authority_required": true,
+      "auto_execute": false
+    },
+    {
+      "phase": "POST_GATE_EXECUTION",
+      "status": "BLOCKED_UNTIL_OPERATOR",
+      "authority_required": true,
+      "auto_execute": false
+    }
+  ],
+  "authority_gates": [
+    {
+      "gate": "MERGE",
+      "status": "PENDING_OPERATOR",
+      "operator_confirmation_required": true,
+      "auto_execute": false
+    },
+    {
+      "gate": "MAIN_WRITE",
+      "status": "PENDING_OPERATOR",
+      "operator_confirmation_required": true,
+      "auto_execute": false
+    },
+    {
+      "gate": "FORCE_PUSH",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    },
+    {
+      "gate": "PUBLIC_RELEASE",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    },
+    {
+      "gate": "DEPLOYMENT",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    },
+    {
+      "gate": "CLAIM_PROMOTION",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    },
+    {
+      "gate": "FOUNDATION_PROMOTION",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    },
+    {
+      "gate": "INTEGRATION_AUTHORITY",
+      "status": "NOT_REQUESTED",
+      "operator_confirmation_required": false,
+      "auto_execute": false
+    }
+  ],
+  "token_continuation": {
+    "requested_token_class": "T128",
+    "token_class_used": "NOT_EXPOSED",
+    "token_telemetry": "NOT_EXPOSED",
+    "continuation_required_on_token_pressure": true,
+    "continuation_required": false,
+    "continuation_capsule_path": null
+  },
+  "relay": {
+    "next_actor": "OPERATOR_AT_AUTHORITY_GATE",
+    "cursor_action": "NONE",
+    "prepared_artifact": "artifact-rollout-prep-receipts",
+    "instruction": "Use this rollout package as readiness evidence only. Do not infer merge, main write, release, deployment, claim promotion, foundation promotion or integration authority."
+  },
+  "caveats": [
+    "C0_C1_ONLY",
+    "PREPARE_ONLY",
+    "NO_MERGE_AUTOMATION",
+    "NO_CLAIM_PROMOTION",
+    "NO_FOUNDATION_PROMOTION",
+    "NO_FORCE_PUSH",
+    "NO_MAIN_WRITE",
+    "NO_SELF_VALIDATION",
+    "NO_PUBLIC_RELEASE_AUTOMATION",
+    "NO_DEPLOYMENT_AUTOMATION",
+    "R2_PR13_SEPARATION_PRESERVED",
+    "CURSOR_ACTION_NONE",
+    "HOSTED_CI_OBSERVED_NOT_REEXECUTED_BY_CURSOR"
+  ]
+}

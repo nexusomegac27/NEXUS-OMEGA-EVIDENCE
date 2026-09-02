@@ -50,6 +50,26 @@ ARTIFACT_HANDOFF_PATHS = {
     "tests/test_artifact_handoff.py",
     "validation/artifact-handoff-negative-fixtures-v1.jsonl",
 }
+ARTIFACT_ROLLOUT_PATHS = {
+    ".github/workflows/validate-artifact-rollout.yml",
+    "docs/artifact-rollout-protocol.md",
+    "examples/artifact-rollout/README.md",
+    "examples/artifact-rollout/rollout.example.json",
+    "research/pipeline/rollout/README.md",
+    "research/pipeline/rollout/plans/README.md",
+    "research/pipeline/rollout/plans/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/ROLL_OUT_PLAN.md",
+    "research/pipeline/rollout/plans/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/rollout.json",
+    "research/pipeline/rollout/receipts/README.md",
+    "research/pipeline/rollout/receipts/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/AUTHORITY_GATE_PACKET.json",
+    "research/pipeline/rollout/receipts/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/READINESS_RECEIPT.json",
+    "research/pipeline/rollout/receipts/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/ROLL_OUT_ACK.json",
+    "research/pipeline/rollout/receipts/NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0/ROLLOUT_WORKFLOW_EVENTS.jsonl",
+    "schema/artifact-rollout-plan-v1.schema.json",
+    "schema/artifact-rollout-receipt-v1.schema.json",
+    "scripts/artifact_rollout.py",
+    "tests/test_artifact_rollout.py",
+    "validation/artifact-rollout-negative-fixtures-v1.jsonl",
+}
 HISTORICAL_PATHS = {
     "requirements-a83-test.txt",
     "docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.json",
@@ -94,7 +114,14 @@ def validate(root: Path) -> list[str]:
     names = {p.name for p in root.iterdir() if p.name != ".git"}
     errors.extend(validate_root_entries(names))
 
-    for rel in sorted(REQUIRED_READMES | REQUIRED_CONTRACTS | HISTORICAL_PATHS | ARTIFACT_HANDOFF_PATHS):
+    required_paths = (
+        REQUIRED_READMES
+        | REQUIRED_CONTRACTS
+        | HISTORICAL_PATHS
+        | ARTIFACT_HANDOFF_PATHS
+        | ARTIFACT_ROLLOUT_PATHS
+    )
+    for rel in sorted(required_paths):
         if not (root / rel).is_file():
             errors.append(f"REQUIRED_PATH_MISSING:{rel}")
 
@@ -117,11 +144,21 @@ def validate(root: Path) -> list[str]:
         errors.append("STRUCTURE_CONTRACT_HANDOFF_ROOT_MISMATCH")
     if handoff_store.get("protocol") != "INBOX_VALIDATE_BIND_RELAY_ACK_V1":
         errors.append("STRUCTURE_CONTRACT_HANDOFF_PROTOCOL_MISMATCH")
+    rollout_store = stores.get("artifact_rollout", {})
+    if rollout_store.get("root") != "research/pipeline/rollout":
+        errors.append("STRUCTURE_CONTRACT_ROLLOUT_ROOT_MISMATCH")
+    if rollout_store.get("protocol") != "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1":
+        errors.append("STRUCTURE_CONTRACT_ROLLOUT_PROTOCOL_MISMATCH")
     artifact_handoff = contract.get("artifact_handoff", {})
     if artifact_handoff.get("seed_handoff") != "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0":
         errors.append("STRUCTURE_CONTRACT_HANDOFF_SEED_MISMATCH")
     if artifact_handoff.get("stages") != ["INBOX", "VALIDATE", "BIND", "RELAY", "ACK"]:
         errors.append("STRUCTURE_CONTRACT_HANDOFF_STAGES_MISMATCH")
+    artifact_rollout = contract.get("artifact_rollout", {})
+    if artifact_rollout.get("seed_rollout") != "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0":
+        errors.append("STRUCTURE_CONTRACT_ROLLOUT_SEED_MISMATCH")
+    if artifact_rollout.get("stages") != ["PREPARE", "VALIDATE", "PACKAGE", "AUTHORITY_GATE", "ACK"]:
+        errors.append("STRUCTURE_CONTRACT_ROLLOUT_STAGES_MISMATCH")
 
     errors.extend(validate_r5_lane_readmes(root / "research" / "r5"))
 

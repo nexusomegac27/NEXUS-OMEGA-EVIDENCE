@@ -23,11 +23,12 @@ INTEGRATION_AUTHORITY = NONE
 4. Normal active research belongs under `research/<phase>/<agent-or-topic>/`.
 5. `research/pipeline/` is the sole cross-phase research-infrastructure exception and is jointly owned by AXIOM and Cursor/PRAXIS.
 6. `research/pipeline/handoff/` is the fixed GitHub Inbox -> Validate -> Bind -> Relay -> Ack surface for external agent and Cursor returns.
-7. Stable R5 work is mirrored symbiotically across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, `examples/r5/` and `research/r5/`.
-8. Scientific evidence remains under `objects/` + `index/`; communication provenance remains under `communication/objects/` + `communication/index/`.
-9. Historical path-bound evidence is not relocated merely for aesthetics.
-10. Structural changes update this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
-11. Disorder is corrected at intake; noncritical placement errors do not halt unrelated research.
+7. `research/pipeline/rollout/` is the separate rollout-preparation surface for validated handoff chains and stops at Operator Authority-Gates.
+8. Stable R5 work is mirrored symbiotically across `docs/r5/`, `schema/r5/`, `scripts/r5/`, `tests/r5/`, `validation/r5/`, `examples/r5/` and `research/r5/`.
+9. Scientific evidence remains under `objects/` + `index/`; communication provenance remains under `communication/objects/` + `communication/index/`.
+10. Historical path-bound evidence is not relocated merely for aesthetics.
+11. Structural changes update this README and `docs/architecture/REPOSITORY_STRUCTURE.json` in the same change.
+12. Disorder is corrected at intake; noncritical placement errors do not halt unrelated research.
 
 Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 
@@ -42,6 +43,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │       ├── validate-a83-framework-hardening.yml
 │       ├── validate-anchor.yml
 │       ├── validate-artifact-handoff.yml
+│       ├── validate-artifact-rollout.yml
 │       ├── validate-repository-structure.yml
 │       ├── validate-research-pipeline.yml
 │       ├── validate-scientific-communication.yml
@@ -66,6 +68,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── OPEN_SCIENCE_AGENT_COMMUNICATION_MANIFEST.md
 │   ├── SCIENTIFIC_COMMUNICATION_IMPLEMENTATION_PROFILE_V0_1.md
 │   ├── artifact-handoff-protocol.md
+│   ├── artifact-rollout-protocol.md
 │   ├── agent-protocol.md
 │   ├── release-checklist.md
 │   ├── architecture/
@@ -81,6 +84,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── README.md
 │   ├── a83/
 │   ├── artifact-handoff/
+│   ├── artifact-rollout/
 │   ├── scientific-communication/
 │   └── r5/README.md
 ├── index/
@@ -96,6 +100,8 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── artifact-handoff-envelope-v1.schema.json
 │   ├── artifact-handoff-ledger-event-v1.schema.json
 │   ├── artifact-handoff-receipt-v1.schema.json
+│   ├── artifact-rollout-plan-v1.schema.json
+│   ├── artifact-rollout-receipt-v1.schema.json
 │   ├── anchor-manifest-v1.schema.json
 │   ├── research-pipeline-event-v1.schema.json
 │   ├── research-pipeline-package-v1.schema.json
@@ -107,6 +113,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── a83_sentinel.py
 │   ├── append_scientific_record.py
 │   ├── artifact_handoff.py
+│   ├── artifact_rollout.py
 │   ├── reproduce_a83.py
 │   ├── research_pipeline.py
 │   ├── validate_a83_handoff.py
@@ -121,6 +128,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── README.md
 │   ├── test_a83_handoff.py
 │   ├── test_artifact_handoff.py
+│   ├── test_artifact_rollout.py
 │   ├── test_repository_structure.py
 │   ├── test_research_pipeline.py
 │   ├── test_scientific_communication.py
@@ -134,6 +142,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── A83_WEAKNESS_AND_OPEN_QUESTIONS_AUDIT_v1.0.json
 │   ├── a83-handoff-negative-fixtures-v1.jsonl
 │   ├── artifact-handoff-negative-fixtures-v1.jsonl
+│   ├── artifact-rollout-negative-fixtures-v1.jsonl
 │   ├── scientific-communication-negative-fixtures-v1.jsonl
 │   └── r5/
 ├── research/
@@ -148,6 +157,10 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   │   │   ├── bound/
 │   │   │   ├── relay/
 │   │   │   └── ack/
+│   │   ├── rollout/
+│   │   │   ├── README.md
+│   │   │   ├── plans/
+│   │   │   └── receipts/
 │   │   ├── packages/README.md
 │   │   ├── index/
 │   │   │   ├── latest.json
@@ -218,6 +231,38 @@ NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0
 
 under PR15/R3 research branch scope. R2 and PR13 remain separate lanes.
 
+## Artifact rollout preparation
+
+Validated handoff chains that need a complete rollout package use:
+
+```text
+research/pipeline/rollout/plans/<ROLLOUT_ID>/rollout.json
+```
+
+The GitHub workflow `validate-artifact-rollout` performs:
+
+```text
+PREPARE
+-> VALIDATE
+-> PACKAGE
+-> AUTHORITY_GATE
+-> ACK
+```
+
+It validates source byte bindings, GitHub-observed handoff state,
+token/continuation policy and Authority-Gate routing. It fails closed if
+execution, merge, main write, force-push, release, deployment, claim promotion,
+foundation promotion or self-validation is enabled.
+
+The current PR15 rollout-preparation seed is:
+
+```text
+NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0
+```
+
+It is a separate preparation package only. It stops before Operator
+Authority-Gates and does not modify PR15, R2 or PR13.
+
 ## Domain ownership
 
 | Path | Canonical responsibility |
@@ -244,9 +289,10 @@ Read in this order:
 3. `docs/AI_CONTEXT.md`
 4. `docs/agent-protocol.md`
 5. `docs/artifact-handoff-protocol.md` when receiving or relaying an agent return
-6. `docs/architecture/REPOSITORY_STRUCTURE.md`
-7. `research/pipeline/README.md` when accumulating or processing batched research
-8. `index/v1/latest.json` when current scientific evidence state is relevant
+6. `docs/artifact-rollout-protocol.md` when preparing a rollout package
+7. `docs/architecture/REPOSITORY_STRUCTURE.md`
+8. `research/pipeline/README.md` when accumulating or processing batched research
+9. `index/v1/latest.json` when current scientific evidence state is relevant
 
 ## Validation
 
@@ -257,9 +303,12 @@ python scripts/research_pipeline.py --root . validate
 python -m unittest tests.test_research_pipeline
 python scripts/artifact_handoff.py --root . validate
 python -m unittest tests.test_artifact_handoff
+python scripts/artifact_rollout.py --root . validate
+python -m unittest tests.test_artifact_rollout
 ```
 
-Dedicated CI checks: `validate-research-pipeline`, `validate-artifact-handoff`.
+Dedicated CI checks: `validate-research-pipeline`, `validate-artifact-handoff`,
+`validate-artifact-rollout`.
 
 ## Licensing
 

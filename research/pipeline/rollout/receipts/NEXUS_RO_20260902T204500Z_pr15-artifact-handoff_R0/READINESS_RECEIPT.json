@@ -1,0 +1,122 @@
+{
+  "caveats": [
+    "C0_C1_ONLY",
+    "PREPARE_ONLY",
+    "NO_MERGE_AUTOMATION",
+    "NO_CLAIM_PROMOTION",
+    "NO_FOUNDATION_PROMOTION",
+    "NO_FORCE_PUSH",
+    "NO_MAIN_WRITE",
+    "NO_SELF_VALIDATION",
+    "NO_PUBLIC_RELEASE_AUTOMATION",
+    "NO_DEPLOYMENT_AUTOMATION",
+    "R2_PR13_SEPARATION_PRESERVED",
+    "CURSOR_ACTION_NONE",
+    "HOSTED_CI_OBSERVED_NOT_REEXECUTED_BY_CURSOR"
+  ],
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "decision": "ROLLOUT_PREPARED_C1_NO_EXECUTION",
+  "foundation_promotion": false,
+  "generated_at_utc": "2026-09-02T20:47:54Z",
+  "generation_context": "LOCAL_REPOSITORY_RECEIPT",
+  "github_context": {},
+  "integration_authority": "NONE",
+  "operator_required": true,
+  "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+  "receipt_type": "READINESS",
+  "rollout_id": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+  "rollout_phases": [
+    {
+      "authority_required": false,
+      "auto_execute": false,
+      "phase": "VERIFY_SOURCE",
+      "status": "PREPARED"
+    },
+    {
+      "authority_required": false,
+      "auto_execute": false,
+      "phase": "PACKAGE_RECEIPTS",
+      "status": "PREPARED"
+    },
+    {
+      "authority_required": true,
+      "auto_execute": false,
+      "phase": "OPERATOR_AUTHORITY_GATE",
+      "status": "PENDING_OPERATOR"
+    },
+    {
+      "authority_required": true,
+      "auto_execute": false,
+      "phase": "POST_GATE_EXECUTION",
+      "status": "BLOCKED_UNTIL_OPERATOR"
+    }
+  ],
+  "rollout_policy": {
+    "auto_claim_promotion": false,
+    "auto_deployment": false,
+    "auto_force_push": false,
+    "auto_foundation_promotion": false,
+    "auto_main_write": false,
+    "auto_merge": false,
+    "auto_public_release": false,
+    "execution_enabled": false,
+    "r2_pr13_separation": "PRESERVED",
+    "self_validation": false
+  },
+  "schema_version": "1.0.0",
+  "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+  "source_head": "ab4081133ad9d37d6a3ae3fce2c838ef1d6eea9a",
+  "source_plan_sha256": "2c0d94848b3f126b039df3b10b924097066e87e984dd8b9b84fbe4f737022c5c",
+  "source_pr": 15,
+  "source_refs": [
+    {
+      "bytes": 6450,
+      "path": "research/pipeline/handoff/inbox/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/handoff.json",
+      "role": "HANDOFF_ENVELOPE",
+      "sha256": "40951f2c8ebb88b93ba38b07db9dd41048e3bf97b8aa4448511e98b7460f9da9"
+    },
+    {
+      "bytes": 4661,
+      "path": "research/pipeline/handoff/bound/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/BIND_RECEIPT.json",
+      "role": "BIND_RECEIPT",
+      "sha256": "e13d7662dc27b164eb61592e41ee13480de2ba181ea26d6910542dfd502538e1"
+    },
+    {
+      "bytes": 1289,
+      "path": "research/pipeline/handoff/relay/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/RELAY_PACKET.json",
+      "role": "RELAY_PACKET",
+      "sha256": "2d70b3e1fc9f6060b562071a656b67a7503cf9c65ae8e56213cc6d8187ed15a6"
+    },
+    {
+      "bytes": 1197,
+      "path": "research/pipeline/handoff/ack/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/ACK_RECEIPT.json",
+      "role": "ACK_RECEIPT",
+      "sha256": "02446b64d9ad5c33f55efb40cb8580a766aa173121b4589df37bcf4f7170e1e9"
+    },
+    {
+      "bytes": 508,
+      "path": "research/pipeline/handoff/ack/NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0/HANDOFF_WORKFLOW_EVENTS.jsonl",
+      "role": "HANDOFF_WORKFLOW_EVENT_LEDGER",
+      "sha256": "30336a07126ffe8f9f7025abd3eb13283a44685acaa0bab31c859e446fd3d3fb"
+    },
+    {
+      "bytes": 1776,
+      "path": ".github/workflows/validate-artifact-handoff.yml",
+      "role": "HANDOFF_WORKFLOW",
+      "sha256": "46718c200e56c4c20da9d534c2d66c2010297f8d40096a88f479229c04e4e246"
+    },
+    {
+      "bytes": 23993,
+      "path": "scripts/artifact_handoff.py",
+      "role": "HANDOFF_VALIDATOR",
+      "sha256": "5d3ea22a6efb0b1dd6bffe8cc2e41d6ad00355110c4900f195344018ec9a3623"
+    },
+    {
+      "bytes": 3087,
+      "path": "docs/artifact-handoff-protocol.md",
+      "role": "HANDOFF_PROTOCOL",
+      "sha256": "afc683fc2563cbb6089aae85888269d48d5de5175a6d72a764f53bcee39cde14"
+    }
+  ]
+}

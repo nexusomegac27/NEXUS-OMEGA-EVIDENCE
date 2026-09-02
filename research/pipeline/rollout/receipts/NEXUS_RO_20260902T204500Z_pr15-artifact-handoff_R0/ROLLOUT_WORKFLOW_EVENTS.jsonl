@@ -1,0 +1,4 @@
+{"event":"VALIDATE_PASS","rollout_id":"NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0","ts":"2026-09-02T20:47:54Z"}
+{"event":"READINESS_RECEIPT_CREATED","rollout_id":"NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0","ts":"2026-09-02T20:47:54Z"}
+{"event":"AUTHORITY_GATE_PACKET_CREATED","rollout_id":"NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0","ts":"2026-09-02T20:47:54Z"}
+{"event":"ROLL_OUT_ACK_CREATED","rollout_id":"NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0","ts":"2026-09-02T20:47:54Z"}

@@ -1,0 +1,34 @@
+{
+  "ack_state": "SEPARATE_ROLLOUT_PREPARATION_COMPLETE_C1",
+  "claim_ceiling": "C1",
+  "claim_promotion": false,
+  "decision": "ROLL_OUT_PREP_ACK_ONLY",
+  "foundation_promotion": false,
+  "generated_at_utc": "2026-09-02T20:47:54Z",
+  "generation_context": "LOCAL_REPOSITORY_RECEIPT",
+  "github_context": {},
+  "integration_authority": "NONE",
+  "operator_required": false,
+  "protocol": "PR15_ARTIFACT_HANDOFF_ROLLOUT_PREP_V1",
+  "receipt_type": "ACK",
+  "relay": {
+    "cursor_action": "NONE",
+    "instruction": "Use this rollout package as readiness evidence only. Do not infer merge, main write, release, deployment, claim promotion, foundation promotion or integration authority.",
+    "next_actor": "OPERATOR_AT_AUTHORITY_GATE",
+    "prepared_artifact": "artifact-rollout-prep-receipts"
+  },
+  "rollout_id": "NEXUS_RO_20260902T204500Z_pr15-artifact-handoff_R0",
+  "schema_version": "1.0.0",
+  "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+  "source_head": "ab4081133ad9d37d6a3ae3fce2c838ef1d6eea9a",
+  "source_plan_sha256": "2c0d94848b3f126b039df3b10b924097066e87e984dd8b9b84fbe4f737022c5c",
+  "source_pr": 15,
+  "token_continuation": {
+    "continuation_capsule_path": null,
+    "continuation_required": false,
+    "continuation_required_on_token_pressure": true,
+    "requested_token_class": "T128",
+    "token_class_used": "NOT_EXPOSED",
+    "token_telemetry": "NOT_EXPOSED"
+  }
+}
