@@ -1,0 +1,39 @@
+{
+  "object": "R3_INDEPENDENT_VALIDATOR_PASS",
+  "validator": "CURSOR_LOCAL_SELF_CHECK_NOT_EXTERNAL_AGENT",
+  "checks": [
+    {
+      "check": "R2_ZIP_SHA256",
+      "pass": true
+    },
+    {
+      "check": "R3_ZIP_SHA256",
+      "pass": true
+    },
+    {
+      "check": "R2_INTERNAL_SUMS_BOM_TOLERANT",
+      "pass": true
+    },
+    {
+      "check": "NO_FAKE_QWEN_ACK",
+      "pass": true
+    },
+    {
+      "check": "FS7_NO_SILENT_REWRITE",
+      "pass": true
+    },
+    {
+      "check": "EMPIRICAL_SATURATION_NOT_CLAIMED",
+      "pass": true
+    },
+    {
+      "check": "LANE_B_H_CORPUS_NOT_GLOBALIZED",
+      "pass": true
+    },
+    {
+      "check": "PR13_CHAIN_SEPARATE",
+      "pass": true
+    }
+  ],
+  "verdict": "PASS_WITH_CAVEATS"
+}

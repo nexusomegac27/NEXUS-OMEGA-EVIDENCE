@@ -1,0 +1,22 @@
+{
+  "object": "R3_AGENT_ENTRY_ACK",
+  "ack_id": "CURSOR_R3_COMPLETION_ENTRY_ACK_20260902_R0",
+  "agent_id": "CURSOR_PRAXIS",
+  "producer_class": "NON_QWEN_R3_COMPLETION_CANDIDATE",
+  "qwen_provider_execution": "NOT_AVAILABLE",
+  "qwen_historical_entry_ack": "NOT_PRESENT",
+  "identity_substitution": "PROHIBITED_AND_NOT_PERFORMED",
+  "token_class_requested": "T128",
+  "token_class_used": "PROVIDER_DEFAULT_UNEXPOSED",
+  "token_telemetry": "NOT_EXPOSED_BY_PROVIDER",
+  "order_sha256": "bd8778b3d171a053853fac0fd22bbabd0e3f2d07350defeb084bb71cefa39520",
+  "claim_ceiling": "C0_EXPLORATORY / C1_DESCRIPTIVE",
+  "accepted_at": "2026-09-02T19:19:25Z",
+  "prohibitions": [
+    "MERGE",
+    "CLAIM_PROMOTION",
+    "FOUNDATION_PROMOTION",
+    "REWRITE_R1_R2",
+    "FAKE_QWEN_ACK"
+  ]
+}

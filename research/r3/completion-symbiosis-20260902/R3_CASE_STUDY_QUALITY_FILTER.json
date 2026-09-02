@@ -1,0 +1,85 @@
+{
+  "object": "R3_CASE_STUDY_QUALITY_FILTER",
+  "claim_ceiling": "C0/C1",
+  "empirical_saturation": "NOT_ESTABLISHED",
+  "labeled_cases": 8,
+  "max_independent_source_cases": 7,
+  "fictional_cases": 1,
+  "meta_synthesis_cases": 1,
+  "cases": [
+    {
+      "case_study_id": "FS1",
+      "resonance_quality": "LOW",
+      "evidence_domain": "CASE_STUDY_ANALOGY",
+      "h_support": [
+        "H1_C0_ONLY",
+        "H2_C0_ONLY"
+      ],
+      "reason": "Reale Sozialwissenschaft; NEXUS-Mapping bleibt externe C0-Analogie."
+    },
+    {
+      "case_study_id": "FS2",
+      "resonance_quality": "LOW",
+      "evidence_domain": "METAPHORICAL_FRAME",
+      "evidence_role": "FICTIONAL_NARRATIVE_ANALOGY",
+      "h_support": [
+        "H1_ANALOGY_ONLY",
+        "H2_ANALOGY_ONLY"
+      ],
+      "reason": "Fiktionale Stressprobe; keine empirische Evidenz."
+    },
+    {
+      "case_study_id": "FS3",
+      "resonance_quality": "MEDIUM",
+      "evidence_domain": "EXTERNAL_COMPARATIVE",
+      "h_support": [
+        "H3"
+      ],
+      "reason": "Beobachtung als Interface-Ereignis stützt H3."
+    },
+    {
+      "case_study_id": "FS4",
+      "resonance_quality": "HIGH",
+      "evidence_domain": "EXTERNAL_COMPARATIVE",
+      "h_support": [
+        "H3"
+      ],
+      "reason": "Minimal-Observer-Modell als H3-Anker."
+    },
+    {
+      "case_study_id": "FS5",
+      "resonance_quality": "HIGH",
+      "evidence_domain": "DIRECT_ENGINEERING",
+      "h_support": [
+        "H1",
+        "H2"
+      ],
+      "reason": "Constrained ensemble: direkter technischer Anschluss."
+    },
+    {
+      "case_study_id": "FS6",
+      "resonance_quality": "HIGH",
+      "evidence_domain": "EXTERNAL_COMPARATIVE",
+      "h_support": [
+        "H2"
+      ],
+      "reason": "Misalignment/Human-Control; staged-test Caveat."
+    },
+    {
+      "case_study_id": "FS7",
+      "resonance_quality": "INVALID_PENDING_SOURCE_REPAIR",
+      "evidence_domain": "PRODUCER_SELF_REPORT",
+      "evidence_role": "SOURCE_OBJECT_MISMATCH",
+      "h_support": [],
+      "reason": "Ref 231 trägt GitLab-Code-Claims nicht."
+    },
+    {
+      "case_study_id": "FS8",
+      "resonance_quality": "N/A",
+      "evidence_domain": "CASE_STUDY_ANALOGY",
+      "evidence_role": "META_SYNTHESIS_NOT_INDEPENDENT_CASE",
+      "h_support": [],
+      "reason": "Synthese; keine unabhängige Beobachtung."
+    }
+  ]
+}
