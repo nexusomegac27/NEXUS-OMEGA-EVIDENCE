@@ -2,7 +2,7 @@
 
 ```text
 BRANCH = axiom/r3-tristate-admission-implementation-20260902
-HEAD = TBD_AFTER_COMMIT
+HEAD = 
 DRAFT_PR = 14
 PR_URL = https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/14
 PR_STATE = OPEN_DRAFT
