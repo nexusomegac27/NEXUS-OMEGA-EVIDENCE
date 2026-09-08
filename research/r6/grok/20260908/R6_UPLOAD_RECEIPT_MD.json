@@ -1,0 +1,56 @@
+{
+  "object": "NEXUS_OMEGA_R6_EXTERNAL_AGENT_UPLOAD_RECEIPT_20260904_R0",
+  "status": "SUBMITTED_STORED_C1",
+  "receipt_id": "NEXUS-R6-20260908-123752-ba72c184f80a6977",
+  "received_at": "2026-09-08T12:37:52+00:00",
+  "addressed_to": "AXIOM",
+  "nexus_handshake": {
+    "status": "BOUND",
+    "channel": "www.nexus-mobile.de/api/r6-submit.php",
+    "source_anchor": "https://www.nexus-mobile.de/r6/",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+  },
+  "agent_identity": "GROK",
+  "provider_model": "SELF_DECLARED_BY_AGENT",
+  "review_track": "Independent Scientific Expert Review",
+  "summary": "",
+  "self_identification_lock": "BOUND",
+  "role_drift_attestation": "BOUND_NO_ROLE_DRIFT",
+  "role_drift_policy": {
+    "status": "BOUND",
+    "agent_must": "SPEAK_ONLY_AS_SELF_DECLARED_AGENT_IDENTITY",
+    "agent_must_not": "ASSUME_AXIOM_CURSOR_OPERATOR_OR_UNDECLARED_AGENT_AUTHORITY",
+    "agent_must_report_drift_as": "ROLE_DRIFT_DETECTED_IF_ANY"
+  },
+  "agent_follow_up_policy": {
+    "status": "BOUND",
+    "no_agent_follow_up_questions": "REQUIRED",
+    "missing_material_policy": "MAKE_SOURCE_BOUNDED_ASSUMPTION_OR_MARK_INTERNAL_QUESTION_OR_BLOCKER_IN_RETURN",
+    "questions_allowed_only_as": "INTERNAL_FINDINGS_NOT_OPERATOR_DIALOG_REQUESTS"
+  },
+  "original_name": "NEXUS_OMEGA_EXTERNAL_AI_RETURN_GROK_20260908_R0.md",
+  "stored_name": "NEXUS-R6-20260908-123752-ba72c184f80a6977_44B5E90B4B3BE918B01F3FCE04E355C91C45E95D15FB5A126164141F525BC708.md",
+  "storage_scope": "HOSTINGER_NON_PUBLIC_STORAGE",
+  "bytes": 12545,
+  "server_sha256": "44B5E90B4B3BE918B01F3FCE04E355C91C45E95D15FB5A126164141F525BC708",
+  "client_sha256": "",
+  "client_server_hash_match": null,
+  "canonical_state": {
+    "R6": "FIRST_EXTERNAL_AGENT_TEST_ROUND_OPEN_C1",
+    "R5": "OPEN_FOUNDATION_LANE_C1",
+    "R5_EXECUTION": "NOT_STARTED",
+    "PHASE5": "NOT_AUTHORIZED",
+    "PROMOTION": "NO",
+    "PARALLEL_R3": "WAIT_OPERATOR_REMEDIATION_AT_DEV_MV_001_G2",
+    "DEV_MV_001": "OPEN_STOP_GATE"
+  },
+  "canonical_effect": [
+    "NO_R3_G2_CLOSURE",
+    "NO_DEV_MV_001_CLOSURE",
+    "NO_R5_EXECUTION",
+    "NO_PHASE5_AUTHORIZATION",
+    "NO_PROMOTION",
+    "NO_SCIENTIFIC_VALIDATION_FROM_UPLOAD"
+  ],
+  "next": "AXIOM_CURSOR_INTAKE_REVIEW"
+}
