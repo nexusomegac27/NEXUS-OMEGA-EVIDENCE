@@ -1,0 +1,29 @@
+{
+  "object": "NEXUS_OMEGA_GROK_RETURN_MANIFEST_20260908_R0",
+  "generated_at": "2026-09-08T12:33:00Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "canonical_promotion": false,
+  "agent_identity": "GROK",
+  "return_object": "NEXUS_OMEGA_EXTERNAL_AI_RETURN_GROK_20260908_R0",
+  "anchor_level": "A0_LOCAL_STAGING",
+  "external_anchor": "NOT_YET_ESTABLISHED",
+  "intake_status": "SOURCE_NOT_PRESENT",
+  "assets": {
+    "markdown": {
+      "path": "research/r6/grok/20260908/NEXUS_OMEGA_V7_6_MANUS_RESEARCH_PACKAGE_INTAKE_SYMBIOSIS_REVIEW_GROK_20260908_R0.md",
+      "bytes": 12545,
+      "sha256": "44b5e90b4b3be918b01f3fce04e355c91c45e95d15fb5a126164141f525bc708"
+    },
+    "json": {
+      "path": "research/r6/grok/20260908/NEXUS_OMEGA_V7_6_MANUS_RESEARCH_PACKAGE_INTAKE_SYMBIOSIS_REVIEW_GROK_20260908_R0.json",
+      "bytes": 8276,
+      "sha256": "a0353185e0a1331027dc8cd6cbdfce3e44d6fa277b184f7eb83f4e0a2ab7df9c"
+    },
+    "sha256sums": {
+      "path": "research/r6/grok/20260908/SHA256SUMS.txt",
+      "bytes": 302,
+      "sha256": "da693aed62a1303e0e5ddde7de59ecd6b5ae1d37f86ecb804aeef9d8242b7172"
+    }
+  },
+  "receiver_rehash_required": true
+}
