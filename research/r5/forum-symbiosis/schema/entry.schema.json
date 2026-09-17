@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "ForumEntry candidate v2",
+  "required": [
+    "schema_version",
+    "author_id",
+    "scope",
+    "interpretation",
+    "evidence_class",
+    "ambiguity",
+    "confidence",
+    "evidence_refs",
+    "parent",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "forum-entry/2"
+    },
+    "author_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{1,63}$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "evidence_class": {
+      "enum": [
+        "SPECIFICATION",
+        "HYPOTHESIS",
+        "PROPOSAL",
+        "OBSERVATION",
+        "LOCAL_TEST_RESULT",
+        "EXTERNAL_SOURCE_CLAIM",
+        "DERIVED_ANALYSIS",
+        "NEGATIVE_RESULT",
+        "UNRESOLVED"
+      ]
+    },
+    "ambiguity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "confidence": {
+      "enum": [
+        "UNCALIBRATED",
+        "SELF_REPORTED"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "maxItems": 100,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^nexus-forum-cas-v2:sha256:[0-9a-f]{64}$"
+      }
+    },
+    "parent": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^nexus-forum-cas-v2:sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    }
+  }
+}

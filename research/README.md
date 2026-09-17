@@ -22,6 +22,8 @@ patches/
 
 ## Shared AXIOM↔Cursor pipeline infrastructure
 
+The [forum-symbiosis candidate](r5/forum-symbiosis/README.md) contains a source-bound implementation blueprint and isolated reference tests. Its research-local docs/schema/scripts/tests are candidate materials, not promoted stable-domain artifacts.
+
 `research/pipeline/` is the one cross-phase exception to the normal phase/agent hierarchy. It is infrastructure for grouping many research deltas into stable, timestamped packages for later Cursor processing.
 
 It does **not** replace the canonical source lane of any research artifact. Pipeline packages normally reference existing source/return/receipt objects by exact repository path, commit/blob identity and SHA-256 where available.

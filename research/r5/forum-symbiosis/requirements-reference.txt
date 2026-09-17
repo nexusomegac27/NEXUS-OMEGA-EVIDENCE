@@ -1,0 +1,2 @@
+# Reference schema-validator version used for the recorded local run.
+jsonschema==4.26.0

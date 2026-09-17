@@ -1,0 +1,12 @@
+{
+  "schema_version": "forum-symbiosis-handshake/1",
+  "object": "DELIVERY_HANDSHAKE",
+  "package_id": "NEXUS_FORUM_SYMBIOSIS_FOUNDATION_20260917_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "output_manifest_sha256": "376c4d0b2366cd4db2f293a01ae80099e008befb519cf7d7e339fbb4866244f6",
+  "return_sha256": "ecba93ad158db946f7b07fcfe02c1fd8fc7d95a32def7175b3de63e7d37b566c",
+  "state": "REVIEWABLE_BLUEPRINT_WITH_REFERENCE_TESTS_C1",
+  "authority": "User-authorized new codex branch push only; no merge, no live publication",
+  "review_state": "PENDING",
+  "cursor_action": "READ_AND_PREPARE_REVIEW; DEPENDENT_INTEGRATION_AFTER_BOUND_REVIEW"
+}

@@ -4,6 +4,9 @@ Public, content-addressed C1 evidence and verification repository with persisten
 
 ## Repository status
 
+New research candidate: [NEXUS FORUM symbiosis foundation R0](research/r5/forum-symbiosis/README.md).
+Implementable blueprint, isolated reference contracts/tests, source conflicts and open review gates; not integrated into the stable framework and not a live forum deployment.
+
 This repository records exact bytes, provenance, validation state, caveats, research handoffs and platform receipts. Hashes, signatures, commits, CI, releases, attestations, agent agreement and public availability do **not** establish scientific truth.
 
 ```text

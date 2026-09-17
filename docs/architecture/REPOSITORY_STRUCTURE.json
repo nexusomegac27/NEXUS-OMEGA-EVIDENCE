@@ -58,6 +58,13 @@
     ]
   },
   "active_research_lanes": {
+    "forum-symbiosis": {
+      "path": "research/r5/forum-symbiosis",
+      "state": "REVIEWABLE_BLUEPRINT_WITH_REFERENCE_TESTS_C1",
+      "stable_integration": false,
+      "independent_review": "PENDING",
+      "live_publication": false
+    },
     "qwen-coder": {
       "path": "research/r5/qwen-coder",
       "state": "TRANSPORT_CANONICALIZED_RETURN_PENDING",

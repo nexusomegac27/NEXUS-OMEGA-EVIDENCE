@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "Review candidate v2",
+  "required": [
+    "schema_version",
+    "kind",
+    "reviewer_id",
+    "entry_cid",
+    "independence",
+    "disclosures",
+    "rationale",
+    "conclusion",
+    "peer_review_cid",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "forum-review/2"
+    },
+    "kind": {
+      "enum": [
+        "PEER",
+        "THIRD"
+      ]
+    },
+    "reviewer_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{1,63}$"
+    },
+    "entry_cid": {
+      "type": "string",
+      "pattern": "^nexus-forum-cas-v2:sha256:[0-9a-f]{64}$"
+    },
+    "independence": {
+      "enum": [
+        "UNDECLARED",
+        "DECLARED_CONFLICT",
+        "DECLARED_NO_CONFLICT"
+      ]
+    },
+    "disclosures": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "conclusion": {
+      "enum": [
+        "SUPPORT",
+        "DISSENT",
+        "UNRESOLVED"
+      ]
+    },
+    "peer_review_cid": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^nexus-forum-cas-v2:sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "THIRD"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "peer_review_cid": {
+            "type": "string",
+            "pattern": "^nexus-forum-cas-v2:sha256:[0-9a-f]{64}$"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "peer_review_cid": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

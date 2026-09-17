@@ -17,6 +17,7 @@ No direct child lane is authoritative merely because it exists in Git.
 ```text
 research/r5/qwen-coder/
 research/r5/axiom-platform-audit/
+research/r5/forum-symbiosis/
 ```
 
 `qwen-coder/` preserves the historical delivery surfaces, records the independently rehashed local-original bindings, and provides the ordered landing zone for physical QWEN R5 returns.

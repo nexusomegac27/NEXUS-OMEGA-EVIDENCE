@@ -1,0 +1,12 @@
+{
+  "mode": "DESIGN_TOKENS_NOT_RENDERED_UI",
+  "background": "#101820",
+  "surface": "#1b2935",
+  "text": "#f4f7fa",
+  "muted": "#c1ced8",
+  "accent": "#8fe3c2",
+  "focus": "#ffd166",
+  "error": "#ffb4ab",
+  "normal_text_minimum": 4.5,
+  "focus_minimum": 3
+}

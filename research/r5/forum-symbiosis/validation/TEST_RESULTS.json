@@ -1,0 +1,153 @@
+{
+  "schema_version": "forum-local-checks/1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "executed_at_utc": "2026-09-17T17:49:35.324940+00:00",
+  "environment": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "jsonschema": "4.26.0",
+    "platform": "Windows"
+  },
+  "checks": [
+    {
+      "id": "reference_tests",
+      "command": "python -m unittest discover -s research/r5/forum-symbiosis\\tests -v",
+      "exit_code": 0,
+      "output": "test_byte_tampering_rejected (test_delivery.DeliveryTests.test_byte_tampering_rejected) ... ok\ntest_claim_promotion_rejected (test_delivery.DeliveryTests.test_claim_promotion_rejected) ... ok\ntest_return_tampering_rejected (test_delivery.DeliveryTests.test_return_tampering_rejected) ... ok\ntest_undeclared_file_rejected (test_delivery.DeliveryTests.test_undeclared_file_rejected) ... ok\ntest_valid_delivery (test_delivery.DeliveryTests.test_valid_delivery) ... ok\ntest_absolute_path (test_intake.IntakeTests.test_absolute_path) ... ok\ntest_backslash (test_intake.IntakeTests.test_backslash) ... ok\ntest_casefold_duplicate (test_intake.IntakeTests.test_casefold_duplicate) ... ok\ntest_drive_path (test_intake.IntakeTests.test_drive_path) ... ok\ntest_parent_traversal (test_intake.IntakeTests.test_parent_traversal) ... ok\ntest_safe_relative_path (test_intake.IntakeTests.test_safe_relative_path) ... ok\ntest_trailing_dot (test_intake.IntakeTests.test_trailing_dot) ... ok\ntest_windows_reserved (test_intake.IntakeTests.test_windows_reserved) ... ok\ntest_design_token_contrast (test_reference.ArtifactTests.test_design_token_contrast) ... ok\ntest_input_manifest_evidence (test_reference.ArtifactTests.test_input_manifest_evidence) ... ok\ntest_schemas_well_formed (test_reference.ArtifactTests.test_schemas_well_formed) ... ok\ntest_depth_bound (test_reference.CanonicalTests.test_depth_bound) ... ok\ntest_duplicate_key_rejected (test_reference.CanonicalTests.test_duplicate_key_rejected) ... ok\ntest_float_rejected (test_reference.CanonicalTests.test_float_rejected) ... ok\ntest_golden_bytes (test_reference.CanonicalTests.test_golden_bytes) ... ok\ntest_invalid_unicode_rejected (test_reference.CanonicalTests.test_invalid_unicode_rejected) ... ok\ntest_key_order (test_reference.CanonicalTests.test_key_order) ... ok\ntest_large_integer_rejected (test_reference.CanonicalTests.test_large_integer_rejected) ... ok\ntest_mutation_changes_identity (test_reference.CanonicalTests.test_mutation_changes_identity) ... ok\ntest_non_ascii_keys_rejected (test_reference.CanonicalTests.test_non_ascii_keys_rejected) ... ok\ntest_roundtrip (test_reference.CanonicalTests.test_roundtrip) ... ok\ntest_size_bound (test_reference.CanonicalTests.test_size_bound) ... ok\ntest_absent_gate_rejected (test_reference.PolicyTests.test_absent_gate_rejected) ... ok\ntest_agent_cannot_decide (test_reference.PolicyTests.test_agent_cannot_decide) ... ok\ntest_cannot_accept_unsubmitted_draft (test_reference.PolicyTests.test_cannot_accept_unsubmitted_draft) ... ok\ntest_claim_promotion_rejected (test_reference.PolicyTests.test_claim_promotion_rejected) ... ok\ntest_conflict_holds (test_reference.PolicyTests.test_conflict_holds) ... ok\ntest_dissent_not_silenced (test_reference.PolicyTests.test_dissent_not_silenced) ... ok\ntest_extra_score_rejected (test_reference.PolicyTests.test_extra_score_rejected) ... ok\ntest_hard_fail_cannot_be_averaged (test_reference.PolicyTests.test_hard_fail_cannot_be_averaged) ... ok\ntest_hold_is_not_truth (test_reference.PolicyTests.test_hold_is_not_truth) ... ok\ntest_missing_review_holds (test_reference.PolicyTests.test_missing_review_holds) ... ok\ntest_missing_scope_rejected (test_reference.PolicyTests.test_missing_scope_rejected) ... ok\ntest_no_automatic_promotion (test_reference.PolicyTests.test_no_automatic_promotion) ... ok\ntest_other_human_cannot_decide (test_reference.PolicyTests.test_other_human_cannot_decide) ... ok\ntest_peer_and_third_required (test_reference.PolicyTests.test_peer_and_third_required) ... ok\ntest_positive_local_accept (test_reference.PolicyTests.test_positive_local_accept) ... ok\ntest_reject_does_not_require_consensus (test_reference.PolicyTests.test_reject_does_not_require_consensus) ... ok\ntest_resolved_hold_can_accept (test_reference.PolicyTests.test_resolved_hold_can_accept) ... ok\ntest_revision_invalidates_review (test_reference.PolicyTests.test_revision_invalidates_review) ... ok\ntest_roles_must_differ (test_reference.PolicyTests.test_roles_must_differ) ... ok\ntest_stop_does_not_require_review (test_reference.PolicyTests.test_stop_does_not_require_review) ... ok\ntest_terminal_state_not_reopened (test_reference.PolicyTests.test_terminal_state_not_reopened) ... ok\ntest_third_binds_peer_version (test_reference.PolicyTests.test_third_binds_peer_version) ... ok\ntest_token_field_rejected (test_reference.PolicyTests.test_token_field_rejected) ... ok\ntest_undeclared_independence_holds (test_reference.PolicyTests.test_undeclared_independence_holds) ... ok\ntest_unknown_gate_holds (test_reference.PolicyTests.test_unknown_gate_holds) ... ok\ntest_unresolved_review_holds (test_reference.PolicyTests.test_unresolved_review_holds) ... ok\ntest_expected_checkpoint_required (test_reference.StoreTests.test_expected_checkpoint_required) ... ok\ntest_idempotency_conflict (test_reference.StoreTests.test_idempotency_conflict) ... ok\ntest_idempotent_retry (test_reference.StoreTests.test_idempotent_retry) ... ok\ntest_missing_object_denied (test_reference.StoreTests.test_missing_object_denied) ... ok\ntest_restart_replay (test_reference.StoreTests.test_restart_replay) ... ok\ntest_sql_update_and_delete_denied (test_reference.StoreTests.test_sql_update_and_delete_denied) ... ok\ntest_stale_head_rolls_back (test_reference.StoreTests.test_stale_head_rolls_back) ... ok\ntest_tampered_bytes_detected (test_reference.StoreTests.test_tampered_bytes_detected) ... ok\ntest_two_connections_no_silent_overwrite (test_reference.StoreTests.test_two_connections_no_silent_overwrite) ... ok\n\n----------------------------------------------------------------------\nRan 62 tests in 0.860s\n\nOK\n"
+    },
+    {
+      "id": "repository_structure",
+      "command": "python scripts/validate_repository_structure.py --root .",
+      "exit_code": 0,
+      "output": "{\"errors\": [], \"object\": \"NEXUS_OMEGA_REPOSITORY_STRUCTURE_VALIDATION_V1\", \"order_law\": \"REPOSITORY_ORDER_LAW_V1\", \"status\": \"PASS\"}\n"
+    },
+    {
+      "id": "repository_structure_tests",
+      "command": "python -m unittest tests.test_repository_structure",
+      "exit_code": 0,
+      "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.028s\n\nOK\n"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/audit_inputs.py",
+      "sha256": "d6ca93881efb329db707c49c7dfc649d947b53daf150e883010b9f8758052bf4"
+    },
+    {
+      "path": "scripts/reference.py",
+      "sha256": "c5645cf495caa8ed6977c7c73e7d6f2c6267c8c7bd3d9a6d36e2115fe038ddb0"
+    },
+    {
+      "path": "scripts/run_checks.py",
+      "sha256": "c141c873e018927d1590943e50c93d3ccef05462ccd83291b6b12096e5586423"
+    },
+    {
+      "path": "scripts/verify_delivery.py",
+      "sha256": "3dd2b079c72f9a79ee5a40b8131313f568108e19ab573a7093846ba8ac5910fb"
+    },
+    {
+      "path": "tests/test_delivery.py",
+      "sha256": "5497eb1485de391bc2547f4a9e221004b8b68a298b4c3b7c5e71527a640c389e"
+    },
+    {
+      "path": "tests/test_intake.py",
+      "sha256": "4c22ed553cb1fe0b6997f7c531301eb5cc9c44b1e13b2ce5eb3d765d4780539e"
+    },
+    {
+      "path": "tests/test_reference.py",
+      "sha256": "aad7cd39a12b82c91da2ea32ea955be3c1e30d5959735f29ee6a1e923b77ccf5"
+    },
+    {
+      "path": "schema/entry.schema.json",
+      "sha256": "4420fe3b34e7964f3498c416b7c163af6c25cefee3f090866b0362687c86b77e"
+    },
+    {
+      "path": "schema/review.schema.json",
+      "sha256": "e060577f624faba2e92181eda0d971dcc9bbb029911c309d1aeb77f85c70c9c5"
+    },
+    {
+      "path": "schema/store.sql",
+      "sha256": "eef41d264971bbc1359f1c854a433ba6fd9b8e003fe7e2a2a30f4adcd9d979bd"
+    },
+    {
+      "path": "examples/ui-tokens.json",
+      "sha256": "9a32ac158823705aeaa0e07b0243ba5a567f25a8f667d6b4cf8505f889f32f6f"
+    }
+  ],
+  "not_executed": [
+    "R10_BUILD",
+    "R10_UNIT_RERUN",
+    "BROWSER_QA",
+    "SCREENREADER",
+    "AUTH_SERVICE",
+    "POWER_LOSS",
+    "BACKUP_RESTORE",
+    "FULL_HISTORICAL_CORPUS_AUDIT",
+    "CROSS_SUBSTRATE_TRIAL_001",
+    "MISTRAL_VIBE_REVIEW",
+    "HOSTED_CI"
+  ],
+  "design_token_contrast": [
+    {
+      "foreground": "text",
+      "background": "background",
+      "ratio": 16.643073402259006,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "muted",
+      "background": "background",
+      "ratio": 11.15220779627615,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "accent",
+      "background": "background",
+      "ratio": 11.873939596741485,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "focus",
+      "background": "background",
+      "ratio": 12.410330335665375,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "error",
+      "background": "background",
+      "ratio": 10.539507775613776,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "text",
+      "background": "surface",
+      "ratio": 13.801261739837296,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 9.24796370558397,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "accent",
+      "background": "surface",
+      "ratio": 9.846459502810587,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "focus",
+      "background": "surface",
+      "ratio": 10.291261301359919,
+      "pass_4_5": true
+    },
+    {
+      "foreground": "error",
+      "background": "surface",
+      "ratio": 8.739882466693478,
+      "pass_4_5": true
+    }
+  ],
+  "status": "PASS"
+}

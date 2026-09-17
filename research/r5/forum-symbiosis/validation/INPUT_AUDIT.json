@@ -1,0 +1,915 @@
+{
+  "schema_version": "forum-input-audit/1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "Provided archives and optional bounded current-file comparison; not full corpus audit",
+  "inputs": [
+    {
+      "name": "78OJZ7ibkodxSykV-grok-workspace.zip",
+      "bytes": 2427600,
+      "sha256": "d90be109020b1671c06e2bb48dce0f4c9535bca4b1df20cb342ccfe05f1f9355",
+      "archive": {
+        "entries": 378,
+        "uncompressed_bytes": 4717064,
+        "issues": [],
+        "crc_error": null,
+        "extracted": false,
+        "executed": false
+      }
+    },
+    {
+      "name": "NEXUS_FORUM_GROK_MODEL_PROPOSAL_ORDER_20260917_R0.zip",
+      "bytes": 96860,
+      "sha256": "f20e6611fc46b0378003eeb577e26a490e40bfad75cf2596daa166f3fbbfd8ba",
+      "archive": {
+        "entries": 56,
+        "uncompressed_bytes": 238912,
+        "issues": [],
+        "crc_error": null,
+        "extracted": false,
+        "executed": false
+      }
+    },
+    {
+      "name": "nexus-omega_MANUS-trust-dashboard.zip",
+      "bytes": 174265,
+      "sha256": "43bf0744429a63f1f69a862704ec12ae7e4f939faf12119931a5997d4dc95327",
+      "archive": {
+        "entries": 86,
+        "uncompressed_bytes": 552273,
+        "issues": [],
+        "crc_error": null,
+        "extracted": false,
+        "executed": false
+      }
+    },
+    {
+      "name": "NEXUS_- MODEL-C-R10-EVIDENTIAL.txt",
+      "bytes": 1854,
+      "sha256": "f5e885b1eddba74a57ca782411507d905f19ce8ad91f39996d912db149c98628"
+    }
+  ],
+  "nested_order_match": true,
+  "order_manifest": [
+    {
+      "path": "00_START_HERE.md",
+      "expected_sha256": "34466eacc15310757c133c5a3f6cf801076376a97f57b106287cf5a1daaf3f3c",
+      "actual_sha256": "34466eacc15310757c133c5a3f6cf801076376a97f57b106287cf5a1daaf3f3c",
+      "expected_bytes": 1323,
+      "actual_bytes": 1323,
+      "match": true
+    },
+    {
+      "path": "01_GROK_ORDER.md",
+      "expected_sha256": "3fe8b14cd4ffb69bba38045dd1fc0ec9c48d2f4d6c3f512a984ec7f7687e7888",
+      "actual_sha256": "3fe8b14cd4ffb69bba38045dd1fc0ec9c48d2f4d6c3f512a984ec7f7687e7888",
+      "expected_bytes": 8570,
+      "actual_bytes": 8570,
+      "match": true
+    },
+    {
+      "path": "02_BASELINE_AND_OPEN_QUESTIONS.md",
+      "expected_sha256": "d7ace7517a4efaa01ebe7bc07aeaefe06161483524be48f662ffe4bfddfe4087",
+      "actual_sha256": "d7ace7517a4efaa01ebe7bc07aeaefe06161483524be48f662ffe4bfddfe4087",
+      "expected_bytes": 5028,
+      "actual_bytes": 5028,
+      "match": true
+    },
+    {
+      "path": "03_MISTRAL_VIBE_REVIEW_PROTOCOL.md",
+      "expected_sha256": "86755978c74d96cff47b5ae5465cd43cfbf9accededa66e453a575c7aa784351",
+      "actual_sha256": "86755978c74d96cff47b5ae5465cd43cfbf9accededa66e453a575c7aa784351",
+      "expected_bytes": 2125,
+      "actual_bytes": 2125,
+      "match": true
+    },
+    {
+      "path": "04_GROK_RETURN.schema.json",
+      "expected_sha256": "46e88e4111e350deedfec75b4e20d10740cedc203654a0f4ebb5d3738ba43a3b",
+      "actual_sha256": "46e88e4111e350deedfec75b4e20d10740cedc203654a0f4ebb5d3738ba43a3b",
+      "expected_bytes": 5688,
+      "actual_bytes": 5688,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/audit/page.tsx",
+      "expected_sha256": "a698a22613aee04b7e710ee60db1d25a324949cc93ba7a91eb3b67a8d9905580",
+      "actual_sha256": "a698a22613aee04b7e710ee60db1d25a324949cc93ba7a91eb3b67a8d9905580",
+      "expected_bytes": 1957,
+      "actual_bytes": 1957,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/create/page.tsx",
+      "expected_sha256": "67a01851f546af371a1272927d56ed77fdcf4cce951cc8e63ba4a82930cea558",
+      "actual_sha256": "67a01851f546af371a1272927d56ed77fdcf4cce951cc8e63ba4a82930cea558",
+      "expected_bytes": 1170,
+      "actual_bytes": 1170,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/dissent/page.tsx",
+      "expected_sha256": "8a2dde43e34c1cf42e6bf858f3470587b4c52b7fc837c9705a4efb9947c74c89",
+      "actual_sha256": "8a2dde43e34c1cf42e6bf858f3470587b4c52b7fc837c9705a4efb9947c74c89",
+      "expected_bytes": 1219,
+      "actual_bytes": 1219,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/entry/page.tsx",
+      "expected_sha256": "6a308fa72138f4bf950a5ceabd739b1e2e6dc37b6630d9c1b47d806feff1ea2b",
+      "actual_sha256": "6a308fa72138f4bf950a5ceabd739b1e2e6dc37b6630d9c1b47d806feff1ea2b",
+      "expected_bytes": 2195,
+      "actual_bytes": 2195,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/epistemic/page.tsx",
+      "expected_sha256": "6edef0652df7dcca3cc6e32f4063a50c2b5a9099b9967665ea96abe2106c08f4",
+      "actual_sha256": "6edef0652df7dcca3cc6e32f4063a50c2b5a9099b9967665ea96abe2106c08f4",
+      "expected_bytes": 1623,
+      "actual_bytes": 1623,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/lineage/page.tsx",
+      "expected_sha256": "9e42551e987772b2b7fa3567903e1f1233ec06c95433f766f798dfc9ad42dfae",
+      "actual_sha256": "9e42551e987772b2b7fa3567903e1f1233ec06c95433f766f798dfc9ad42dfae",
+      "expected_bytes": 1451,
+      "actual_bytes": 1451,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/page.tsx",
+      "expected_sha256": "f1ca2e3a4e71bec120f26f6f75babd198ae6fe7ed309b3274998a9a4df55ffe2",
+      "actual_sha256": "f1ca2e3a4e71bec120f26f6f75babd198ae6fe7ed309b3274998a9a4df55ffe2",
+      "expected_bytes": 4146,
+      "actual_bytes": 4146,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/portability/page.tsx",
+      "expected_sha256": "0075b1cc3d547d30ff5170b3c58b783594a3ba149cee4b0271e13925598f9ddf",
+      "actual_sha256": "0075b1cc3d547d30ff5170b3c58b783594a3ba149cee4b0271e13925598f9ddf",
+      "expected_bytes": 1495,
+      "actual_bytes": 1495,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/provenance/page.tsx",
+      "expected_sha256": "f77d7fbcca6f8b9ec08617e93d01b69972d7895169f34d3b83189e987797bf42",
+      "actual_sha256": "f77d7fbcca6f8b9ec08617e93d01b69972d7895169f34d3b83189e987797bf42",
+      "expected_bytes": 1535,
+      "actual_bytes": 1535,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/receipts/page.tsx",
+      "expected_sha256": "11f10a0293de9a0b0051d4416a1ee42db595b9674c7290a3401b5f01bc4d7d26",
+      "actual_sha256": "11f10a0293de9a0b0051d4416a1ee42db595b9674c7290a3401b5f01bc4d7d26",
+      "expected_bytes": 1348,
+      "actual_bytes": 1348,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/app/forum/local/review/page.tsx",
+      "expected_sha256": "fabca6d7fc5063bb622d4e805cc5cf98290a80adccfc5358fad90cab98eec138",
+      "actual_sha256": "fabca6d7fc5063bb622d4e805cc5cf98290a80adccfc5358fad90cab98eec138",
+      "expected_bytes": 1726,
+      "actual_bytes": 1726,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/api/local.mjs",
+      "expected_sha256": "8a76a41566ae2bbd0ae6562f9de716c320654b58f0f39b369fb9510c29cf543b",
+      "actual_sha256": "8a76a41566ae2bbd0ae6562f9de716c320654b58f0f39b369fb9510c29cf543b",
+      "expected_bytes": 7655,
+      "actual_bytes": 7655,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/audit/corpus.mjs",
+      "expected_sha256": "b56a5953caf5f0adb73b971d55f82d554407b29e259008fdc7d7731c6a5fa5b9",
+      "actual_sha256": "b56a5953caf5f0adb73b971d55f82d554407b29e259008fdc7d7731c6a5fa5b9",
+      "expected_bytes": 8981,
+      "actual_bytes": 8981,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/constitution/invariants.mjs",
+      "expected_sha256": "da676c48a105f827883d2e13ac907b4c016ba278da803c59479bb325ff234a28",
+      "actual_sha256": "da676c48a105f827883d2e13ac907b4c016ba278da803c59479bb325ff234a28",
+      "expected_bytes": 3818,
+      "actual_bytes": 3818,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/domain/objects.mjs",
+      "expected_sha256": "9a2077d9396d11eed70d2d4e72deb1d70299658ddd2808448f0bf43dcc26543a",
+      "actual_sha256": "9a2077d9396d11eed70d2d4e72deb1d70299658ddd2808448f0bf43dcc26543a",
+      "expected_bytes": 9463,
+      "actual_bytes": 9463,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/fixtures/negative.mjs",
+      "expected_sha256": "d2791a787723446353b1232c56b939418fd8409902d25de134b87a9db2f8c160",
+      "actual_sha256": "d2791a787723446353b1232c56b939418fd8409902d25de134b87a9db2f8c160",
+      "expected_bytes": 4365,
+      "actual_bytes": 4365,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/memory/cas.mjs",
+      "expected_sha256": "f8d1ee184bb16c579d02d52e417fcc0be0f103953f16dafdbab76b67fa0bdf6d",
+      "actual_sha256": "f8d1ee184bb16c579d02d52e417fcc0be0f103953f16dafdbab76b67fa0bdf6d",
+      "expected_bytes": 3570,
+      "actual_bytes": 3570,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/policy/measurement.mjs",
+      "expected_sha256": "0ef9930172f302d1c13a6fe98ebb6303831d2fd8946ebc996d8de5646cacc62e",
+      "actual_sha256": "0ef9930172f302d1c13a6fe98ebb6303831d2fd8946ebc996d8de5646cacc62e",
+      "expected_bytes": 2409,
+      "actual_bytes": 2409,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/lib/forum/validators/invariants.mjs",
+      "expected_sha256": "8c2e45ea83612f84b8547a7659d90ffdb5598276a2a309849cba07aa1e7d18c0",
+      "actual_sha256": "8c2e45ea83612f84b8547a7659d90ffdb5598276a2a309849cba07aa1e7d18c0",
+      "expected_bytes": 3575,
+      "actual_bytes": 3575,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/next.config.mjs",
+      "expected_sha256": "46aae044fcc482563bc98776ee292b935f59a1756243a9530265123a7a302762",
+      "actual_sha256": "46aae044fcc482563bc98776ee292b935f59a1756243a9530265123a7a302762",
+      "expected_bytes": 260,
+      "actual_bytes": 260,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/scripts/forum-bootstrap.mjs",
+      "expected_sha256": "19af483ad4d3a181917b8712efdb30047bb36fbe1292f084cf0f4dc93d7c9d52",
+      "actual_sha256": "19af483ad4d3a181917b8712efdb30047bb36fbe1292f084cf0f4dc93d7c9d52",
+      "expected_bytes": 7486,
+      "actual_bytes": 7486,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/scripts/forum-browser-smoke.mjs",
+      "expected_sha256": "bdf704c29bd08e6fd34190c80a1fae490492f5f24398dd103d6100bd13d5b406",
+      "actual_sha256": "bdf704c29bd08e6fd34190c80a1fae490492f5f24398dd103d6100bd13d5b406",
+      "expected_bytes": 5445,
+      "actual_bytes": 5445,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/scripts/forum-local-api-server.mjs",
+      "expected_sha256": "5b536d713303b934e680f253f6a8b66bdcd2c46c0aa43bbcd9078995178e3f33",
+      "actual_sha256": "5b536d713303b934e680f253f6a8b66bdcd2c46c0aa43bbcd9078995178e3f33",
+      "expected_bytes": 1983,
+      "actual_bytes": 1983,
+      "match": true
+    },
+    {
+      "path": "inputs/current_manifest_files/tests/forum_local_organism.test.mjs",
+      "expected_sha256": "1c602c3f69167c7283c9b92fba5c31ba8de2f0576da3883f19a257c927ad3dde",
+      "actual_sha256": "1c602c3f69167c7283c9b92fba5c31ba8de2f0576da3883f19a257c927ad3dde",
+      "expected_bytes": 5381,
+      "actual_bytes": 5381,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/CAUSAL_CHAIN_REPORT.md",
+      "expected_sha256": "7967d3a372efda0c3aaf578fbcac00d4c8807fafb6e515dc4ce10472c436d8a5",
+      "actual_sha256": "7967d3a372efda0c3aaf578fbcac00d4c8807fafb6e515dc4ce10472c436d8a5",
+      "expected_bytes": 520,
+      "actual_bytes": 520,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/CORPUS_AUDIT_REPORT.md",
+      "expected_sha256": "8d73782be2db3071996dab6cd246733badd54869d06a7aa3fe004c1e80ca72b1",
+      "actual_sha256": "8d73782be2db3071996dab6cd246733badd54869d06a7aa3fe004c1e80ca72b1",
+      "expected_bytes": 1799,
+      "actual_bytes": 1799,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/CORPUS_FOUNDATION_RETURN.md",
+      "expected_sha256": "4d316847eebc3fd68ef71b4d0dff529f9476005b9064df08b1460549deae3b85",
+      "actual_sha256": "4d316847eebc3fd68ef71b4d0dff529f9476005b9064df08b1460549deae3b85",
+      "expected_bytes": 4401,
+      "actual_bytes": 4401,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/CORPUS_MANIFEST.json",
+      "expected_sha256": "f0cd632b34d0b739365d1b9e5f87e9b8648933847a82280ee78d88131996a945",
+      "actual_sha256": "f0cd632b34d0b739365d1b9e5f87e9b8648933847a82280ee78d88131996a945",
+      "expected_bytes": 6734,
+      "actual_bytes": 6734,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/GAP_REGISTER.json",
+      "expected_sha256": "dcc1bf9a44f8bb07f7c97821ee3d6239bcff61cb9cadcce6e810a4edbaee44a0",
+      "actual_sha256": "dcc1bf9a44f8bb07f7c97821ee3d6239bcff61cb9cadcce6e810a4edbaee44a0",
+      "expected_bytes": 58,
+      "actual_bytes": 58,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_ACCESSIBILITY_RESULTS.json",
+      "expected_sha256": "b6cd5eb0e850f266cac470d826c3b34ac03ae3151d90703b6d6b69bc987a76bf",
+      "actual_sha256": "b6cd5eb0e850f266cac470d826c3b34ac03ae3151d90703b6d6b69bc987a76bf",
+      "expected_bytes": 980,
+      "actual_bytes": 980,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_CORPUS_AUDIT_RESULTS.json",
+      "expected_sha256": "7b30b209b10a75be6ae891e4e70138ee1b18aa2c95eb56e9f8813425c71a9e66",
+      "actual_sha256": "7b30b209b10a75be6ae891e4e70138ee1b18aa2c95eb56e9f8813425c71a9e66",
+      "expected_bytes": 1354,
+      "actual_bytes": 1354,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_GAP_REGISTER.json",
+      "expected_sha256": "a3437b5e6ad974e2c09043471f6f370fe5e37505944fa517d912846b1d0e6c39",
+      "actual_sha256": "a3437b5e6ad974e2c09043471f6f370fe5e37505944fa517d912846b1d0e6c39",
+      "expected_bytes": 526,
+      "actual_bytes": 526,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_HANDSHAKE.json",
+      "expected_sha256": "e68e9bbb09cfbda84dc16376b52f0f9ac25be899a6ffa3672ebceec0ad14ea88",
+      "actual_sha256": "e68e9bbb09cfbda84dc16376b52f0f9ac25be899a6ffa3672ebceec0ad14ea88",
+      "expected_bytes": 1870,
+      "actual_bytes": 1870,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_IMPLEMENTATION_MANIFEST.json",
+      "expected_sha256": "cbc425352e54c3cc08611a6f11793a9d19f4915938bae931ae2a06abfa80e771",
+      "actual_sha256": "cbc425352e54c3cc08611a6f11793a9d19f4915938bae931ae2a06abfa80e771",
+      "expected_bytes": 5942,
+      "actual_bytes": 5942,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_NEGATIVE_FIXTURE_RESULTS.json",
+      "expected_sha256": "fbc0eb43461c832dc0dbf3662c979f9ee3512fd8e7d22a2e4edf34e2ae70ca35",
+      "actual_sha256": "fbc0eb43461c832dc0dbf3662c979f9ee3512fd8e7d22a2e4edf34e2ae70ca35",
+      "expected_bytes": 1192,
+      "actual_bytes": 1192,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_RETURN.json",
+      "expected_sha256": "8fc913ed7b2ff5f5d8baa433685bc9c34d5953d0f5a0e723af3f400ee7892a81",
+      "actual_sha256": "8fc913ed7b2ff5f5d8baa433685bc9c34d5953d0f5a0e723af3f400ee7892a81",
+      "expected_bytes": 1675,
+      "actual_bytes": 1675,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_SOURCE_MANIFEST.json",
+      "expected_sha256": "34c11e511b74cdd12b32945f23e98d51654823493da52fdbca599aedb5e50d1e",
+      "actual_sha256": "34c11e511b74cdd12b32945f23e98d51654823493da52fdbca599aedb5e50d1e",
+      "expected_bytes": 1574,
+      "actual_bytes": 1574,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_FORUM_TEST_RESULTS.json",
+      "expected_sha256": "37e5267b820ab07949fd61cb31e516eb3d1c3af30dccef86ae55a411f3db2de6",
+      "actual_sha256": "37e5267b820ab07949fd61cb31e516eb3d1c3af30dccef86ae55a411f3db2de6",
+      "expected_bytes": 712,
+      "actual_bytes": 712,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/NEXUS_OMEGA_V849_FORUM_FULL_LOCAL_IMPLEMENTATION_RETURN_20260917_R0.md",
+      "expected_sha256": "3e54c17722441ca8d4ecb36907ba5ba0c91fac43125d169927b7bc6921c45d56",
+      "actual_sha256": "3e54c17722441ca8d4ecb36907ba5ba0c91fac43125d169927b7bc6921c45d56",
+      "expected_bytes": 8289,
+      "actual_bytes": 8289,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/OUTPUT_HASH_TABLE.json",
+      "expected_sha256": "ff60037fff7dc2403bc864fcc7ce1d8d1808b760b33c0181c0c33343e175f58d",
+      "actual_sha256": "ff60037fff7dc2403bc864fcc7ce1d8d1808b760b33c0181c0c33343e175f58d",
+      "expected_bytes": 1215,
+      "actual_bytes": 1215,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/PORTABILITY_TRIAL_001.json",
+      "expected_sha256": "67ee7d0c96914b4cb3720bc8999961b709740b657f50823b3301ab6ddb16a96c",
+      "actual_sha256": "67ee7d0c96914b4cb3720bc8999961b709740b657f50823b3301ab6ddb16a96c",
+      "expected_bytes": 762,
+      "actual_bytes": 762,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/PREDECESSOR_REHASH.json",
+      "expected_sha256": "db060eda6cdd04be6dca64078aed4735e60760a79edcdbc01de6a2dee69361ae",
+      "actual_sha256": "db060eda6cdd04be6dca64078aed4735e60760a79edcdbc01de6a2dee69361ae",
+      "expected_bytes": 457,
+      "actual_bytes": 457,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/R9_RETURN.md",
+      "expected_sha256": "1cdf9efd6e76e6de3badd0657b21ab924b9a0ee645a6a8176d58a7c4d0aad0da",
+      "actual_sha256": "1cdf9efd6e76e6de3badd0657b21ab924b9a0ee645a6a8176d58a7c4d0aad0da",
+      "expected_bytes": 1229,
+      "actual_bytes": 1229,
+      "match": true
+    },
+    {
+      "path": "inputs/receipts/VALIDATION_RECEIPT.json",
+      "expected_sha256": "16ea32fb761708068c145e6bc058021e645b3653c60da6b1a42613989d03e504",
+      "actual_sha256": "16ea32fb761708068c145e6bc058021e645b3653c60da6b1a42613989d03e504",
+      "expected_bytes": 5248,
+      "actual_bytes": 5248,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/NEXUS_GROK_1_ausgangsstatus.txt",
+      "expected_sha256": "36558cf34e333e65c2859c4bc91267bc6bb5ab02e7c7181ec8c913e2560abfae",
+      "actual_sha256": "36558cf34e333e65c2859c4bc91267bc6bb5ab02e7c7181ec8c913e2560abfae",
+      "expected_bytes": 5114,
+      "actual_bytes": 5114,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/NEXUS-FORUM-Organism-Modell.txt",
+      "expected_sha256": "cb535beffeff8dcdb4d5065b8ecba29bb39d974711cd226039381455db930427",
+      "actual_sha256": "cb535beffeff8dcdb4d5065b8ecba29bb39d974711cd226039381455db930427",
+      "expected_bytes": 6577,
+      "actual_bytes": 6577,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/phase-4-artifact-catalog-&-deep-dive-analysis.md",
+      "expected_sha256": "0d7d35d837790497e23fcecc3f9a9db2d5c2ab263c701a2cfd7ad03b069a0ff9",
+      "actual_sha256": "0d7d35d837790497e23fcecc3f9a9db2d5c2ab263c701a2cfd7ad03b069a0ff9",
+      "expected_bytes": 10698,
+      "actual_bytes": 10698,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/phase-4-corpus-audit-for-operational-continuity.md",
+      "expected_sha256": "a8b65e2a88fff7aae27f9d5ddd439830fb8a3fd3a6337611ad2cdc4941d1376a",
+      "actual_sha256": "a8b65e2a88fff7aae27f9d5ddd439830fb8a3fd3a6337611ad2cdc4941d1376a",
+      "expected_bytes": 9029,
+      "actual_bytes": 9029,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/phase-4-cross-substrate-trial-specification.md",
+      "expected_sha256": "ed3e93e86fcdd2dc99d91c4d535599859d0122551942b2abaebf98864a5a2ea5",
+      "actual_sha256": "ed3e93e86fcdd2dc99d91c4d535599859d0122551942b2abaebf98864a5a2ea5",
+      "expected_bytes": 10449,
+      "actual_bytes": 10449,
+      "match": true
+    },
+    {
+      "path": "inputs/templates/phase-4-measurement-protocol-for-operational-continuity.md",
+      "expected_sha256": "9e5cc7daa6596a0f8f9c05cf35cb1f55c1d18fed9fe5761be88948aff09e7259",
+      "actual_sha256": "9e5cc7daa6596a0f8f9c05cf35cb1f55c1d18fed9fe5761be88948aff09e7259",
+      "expected_bytes": 8835,
+      "actual_bytes": 8835,
+      "match": true
+    }
+  ],
+  "grok_manifest": [
+    {
+      "path": "FOUNDATION_DRAFT/00_CONSTITUTION.md",
+      "expected_sha256": "3674a9439cb00edee1e534cac3aaadfbba20eed2b2712887d767b57d25f1d635",
+      "actual_sha256": "3674a9439cb00edee1e534cac3aaadfbba20eed2b2712887d767b57d25f1d635",
+      "expected_bytes": 145,
+      "actual_bytes": 145,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/01_AUTHORITY_MODEL.md",
+      "expected_sha256": "49b26bc0e6aabf91a3dc5292675c9f27625fed6bd5727fa19042c56df5c4d16d",
+      "actual_sha256": "49b26bc0e6aabf91a3dc5292675c9f27625fed6bd5727fa19042c56df5c4d16d",
+      "expected_bytes": 114,
+      "actual_bytes": 114,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/02_EPISTEMIC_MODEL.md",
+      "expected_sha256": "fad768c2fa941f2b3e898db1618f20fa0ec31bb66a715d7a48acbef5c7f3d8e6",
+      "actual_sha256": "fad768c2fa941f2b3e898db1618f20fa0ec31bb66a715d7a48acbef5c7f3d8e6",
+      "expected_bytes": 140,
+      "actual_bytes": 140,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/03_MEMORY_AND_PROVENANCE.md",
+      "expected_sha256": "c1c088c0ed729aab06e05dadde39b1c7f95b7afba3963dc573a0408d6f79a5f0",
+      "actual_sha256": "c1c088c0ed729aab06e05dadde39b1c7f95b7afba3963dc573a0408d6f79a5f0",
+      "expected_bytes": 118,
+      "actual_bytes": 118,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/04_THIRD_NODE_REVIEW.md",
+      "expected_sha256": "4f45e5c1ae6492d22371ca04eb1b8a8545f88d89ac0057b08f3e3339ac814551",
+      "actual_sha256": "4f45e5c1ae6492d22371ca04eb1b8a8545f88d89ac0057b08f3e3339ac814551",
+      "expected_bytes": 119,
+      "actual_bytes": 119,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/05_NEGATIVE_FIXTURES.md",
+      "expected_sha256": "644d8b299ac6c60926b42dc7d5c5b7ac3365d5f283ccd20174a51b98f1c4759b",
+      "actual_sha256": "644d8b299ac6c60926b42dc7d5c5b7ac3365d5f283ccd20174a51b98f1c4759b",
+      "expected_bytes": 123,
+      "actual_bytes": 123,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/06_EXECUTION_AND_RECOVERY.md",
+      "expected_sha256": "2b7210a726e04fb8a406f00d7d8cbe68f0c3023c7b57e84534dfabac99351fbc",
+      "actual_sha256": "2b7210a726e04fb8a406f00d7d8cbe68f0c3023c7b57e84534dfabac99351fbc",
+      "expected_bytes": 120,
+      "actual_bytes": 120,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/07_FORUM_INTERACTION_MODEL.md",
+      "expected_sha256": "76ddab0f31100c9d932bb7db424740f8d109e1355201b28751d4bf1d7f9e8456",
+      "actual_sha256": "76ddab0f31100c9d932bb7db424740f8d109e1355201b28751d4bf1d7f9e8456",
+      "expected_bytes": 117,
+      "actual_bytes": 117,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/08_CLAIM_AND_VALIDATION_BOUNDARIES.md",
+      "expected_sha256": "b3985c51362ceee7ba258a69c85757c1bb3684d4c8b42f504eb65f1c9ab4a98e",
+      "actual_sha256": "b3985c51362ceee7ba258a69c85757c1bb3684d4c8b42f504eb65f1c9ab4a98e",
+      "expected_bytes": 104,
+      "actual_bytes": 104,
+      "match": true
+    },
+    {
+      "path": "FOUNDATION_DRAFT/09_CANONICAL_HANDSHAKE.md",
+      "expected_sha256": "e34af0b7d597d8c9eac52353580a781c71383c60bc70f3fbae777dad10e692ab",
+      "actual_sha256": "e34af0b7d597d8c9eac52353580a781c71383c60bc70f3fbae777dad10e692ab",
+      "expected_bytes": 126,
+      "actual_bytes": 126,
+      "match": true
+    },
+    {
+      "path": "GROK_MODEL_PROPOSALS.md",
+      "expected_sha256": "819b95fa1e1431c48eb62484b9e8c10173f16bc0527823411dbaa4dabdb243f4",
+      "actual_sha256": "819b95fa1e1431c48eb62484b9e8c10173f16bc0527823411dbaa4dabdb243f4",
+      "expected_bytes": 1238,
+      "actual_bytes": 1238,
+      "match": true
+    },
+    {
+      "path": "IMPLEMENTATION_DELTA_R10.md",
+      "expected_sha256": "6924f6cfb05179f01edab3872532c370cc575e84c302af06f1d82a90f7eae9d9",
+      "actual_sha256": "6924f6cfb05179f01edab3872532c370cc575e84c302af06f1d82a90f7eae9d9",
+      "expected_bytes": 879,
+      "actual_bytes": 879,
+      "match": true
+    },
+    {
+      "path": "MODEL_COMPARISON.json",
+      "expected_sha256": "eaf631991dc9587ff6d3b3aaf5d6da4949485e700aa0a76eac28a4403a7e8a27",
+      "actual_sha256": "eaf631991dc9587ff6d3b3aaf5d6da4949485e700aa0a76eac28a4403a7e8a27",
+      "expected_bytes": 1183,
+      "actual_bytes": 1183,
+      "match": true
+    },
+    {
+      "path": "NEGATIVE_FIXTURE_PLAN.json",
+      "expected_sha256": "b745ffde7900341ca35d5bcb48a6b2dc45bb7513d991cbfa751dac6462568399",
+      "actual_sha256": "b745ffde7900341ca35d5bcb48a6b2dc45bb7513d991cbfa751dac6462568399",
+      "expected_bytes": 1415,
+      "actual_bytes": 1415,
+      "match": true
+    },
+    {
+      "path": "REQUIREMENTS_TRACEABILITY.json",
+      "expected_sha256": "4f0f2c4a3f388a7203c8ec63a871d89c0b7d585a3d6d49f8875eb4d60de3f22f",
+      "actual_sha256": "4f0f2c4a3f388a7203c8ec63a871d89c0b7d585a3d6d49f8875eb4d60de3f22f",
+      "expected_bytes": 1741,
+      "actual_bytes": 1741,
+      "match": true
+    },
+    {
+      "path": "REVIEWER_BRIEF.md",
+      "expected_sha256": "ac0aecb94ee46e2850bb4d5f2b6421f9ba089d5820f74d241c342b4f3e7f15bf",
+      "actual_sha256": "ac0aecb94ee46e2850bb4d5f2b6421f9ba089d5820f74d241c342b4f3e7f15bf",
+      "expected_bytes": 548,
+      "actual_bytes": 548,
+      "match": true
+    },
+    {
+      "path": "SOURCE_CONFLICTS_AND_GAPS.md",
+      "expected_sha256": "acb4e686d5e6c63323a24fd58c09ed82e63c011370704b9f615d96e2aa424d9b",
+      "actual_sha256": "acb4e686d5e6c63323a24fd58c09ed82e63c011370704b9f615d96e2aa424d9b",
+      "expected_bytes": 1836,
+      "actual_bytes": 1836,
+      "match": true
+    }
+  ],
+  "grok_bindings": {
+    "order_sha256": "3fe8b14cd4ffb69bba38045dd1fc0ec9c48d2f4d6c3f512a984ec7f7687e7888",
+    "order_matches": true,
+    "return_sha256": "cee7808c0642bf5fdab2f9da05840520af3a677fed681e2fb4048c5fde42519e",
+    "manifest_sha256": "af6ac10f37134923c48534763cbff2d203d7ffcc455511988787d6c6067f2505",
+    "handshake_sha256": "a2be8ae6f5f740004300d2ecb2a008c67a2603e6045890a50d2e54c4175a1c99",
+    "manifest_matches_return": true,
+    "manifest_matches_handshake": true,
+    "return_matches_handshake": true
+  },
+  "supplement_bindings": [
+    {
+      "path": "09_EPISTEMIC_HOLD.md",
+      "expected_sha256": "53edd55007df134d49f4886f96da8cf50d4f553abd5bd0ab68ba6ac609894a42",
+      "actual_sha256": "53edd55007df134d49f4886f96da8cf50d4f553abd5bd0ab68ba6ac609894a42",
+      "expected_bytes": 3124,
+      "actual_bytes": 3717,
+      "match": false
+    },
+    {
+      "path": "10_PEER_PRESERVATION.md",
+      "expected_sha256": "7aaaeb352efca69a696a4bd2f1d8b1be253d9d30199df018ae8902741088e601",
+      "actual_sha256": "7aaaeb352efca69a696a4bd2f1d8b1be253d9d30199df018ae8902741088e601",
+      "expected_bytes": 2456,
+      "actual_bytes": 2541,
+      "match": false
+    },
+    {
+      "path": "11_HOLD_AND_PEER_INTEGRATION.md",
+      "expected_sha256": "a78053c12749168f8e401e5217ecf132cb172bcdd51d24e4191399f33368b52d",
+      "actual_sha256": "a78053c12749168f8e401e5217ecf132cb172bcdd51d24e4191399f33368b52d",
+      "expected_bytes": 1890,
+      "actual_bytes": 1991,
+      "match": false
+    },
+    {
+      "path": "UPDATE_INDEX.md",
+      "expected_sha256": "ff06520a4991abdd5631ae14ca814c7a274c5b08d456f4caf3fc584d803acb80",
+      "actual_sha256": "ff06520a4991abdd5631ae14ca814c7a274c5b08d456f4caf3fc584d803acb80",
+      "expected_bytes": 678,
+      "actual_bytes": 597,
+      "match": false
+    },
+    {
+      "path": "README.md",
+      "expected_sha256": "4b5d9623a4be9ea69e9c63841be4429eff27e8ed2826750df48d0c1dfe50b45e",
+      "actual_sha256": "4b5d9623a4be9ea69e9c63841be4429eff27e8ed2826750df48d0c1dfe50b45e",
+      "expected_bytes": 412,
+      "actual_bytes": 335,
+      "match": false
+    }
+  ],
+  "public_return_duplicates": [
+    {
+      "path": "public/return/DELIVERY_HANDSHAKE.json",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/00_CONSTITUTION.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/01_AUTHORITY_MODEL.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/02_EPISTEMIC_MODEL.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/03_MEMORY_AND_PROVENANCE.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/04_THIRD_NODE_REVIEW.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/05_NEGATIVE_FIXTURES.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/06_EXECUTION_AND_RECOVERY.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/07_FORUM_INTERACTION_MODEL.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/08_CLAIM_AND_VALIDATION_BOUNDARIES.md",
+      "match": true
+    },
+    {
+      "path": "public/return/FOUNDATION_DRAFT/09_CANONICAL_HANDSHAKE.md",
+      "match": true
+    },
+    {
+      "path": "public/return/GROK_MODEL_PROPOSALS.md",
+      "match": true
+    },
+    {
+      "path": "public/return/GROK_RETURN.json",
+      "match": true
+    },
+    {
+      "path": "public/return/IMPLEMENTATION_DELTA_R10.md",
+      "match": true
+    },
+    {
+      "path": "public/return/MODEL_COMPARISON.json",
+      "match": true
+    },
+    {
+      "path": "public/return/NEGATIVE_FIXTURE_PLAN.json",
+      "match": true
+    },
+    {
+      "path": "public/return/OUTPUT_MANIFEST.json",
+      "match": true
+    },
+    {
+      "path": "public/return/REQUIREMENTS_TRACEABILITY.json",
+      "match": true
+    },
+    {
+      "path": "public/return/REVIEWER_BRIEF.md",
+      "match": true
+    },
+    {
+      "path": "public/return/SOURCE_CONFLICTS_AND_GAPS.md",
+      "match": true
+    }
+  ],
+  "current_cursor_files": [
+    {
+      "path": "next.config.mjs",
+      "snapshot_sha256": "46aae044fcc482563bc98776ee292b935f59a1756243a9530265123a7a302762",
+      "current_sha256": "46aae044fcc482563bc98776ee292b935f59a1756243a9530265123a7a302762",
+      "match": true
+    },
+    {
+      "path": "scripts/forum-bootstrap.mjs",
+      "snapshot_sha256": "19af483ad4d3a181917b8712efdb30047bb36fbe1292f084cf0f4dc93d7c9d52",
+      "current_sha256": "19af483ad4d3a181917b8712efdb30047bb36fbe1292f084cf0f4dc93d7c9d52",
+      "match": true
+    },
+    {
+      "path": "scripts/forum-browser-smoke.mjs",
+      "snapshot_sha256": "bdf704c29bd08e6fd34190c80a1fae490492f5f24398dd103d6100bd13d5b406",
+      "current_sha256": "bdf704c29bd08e6fd34190c80a1fae490492f5f24398dd103d6100bd13d5b406",
+      "match": true
+    },
+    {
+      "path": "scripts/forum-local-api-server.mjs",
+      "snapshot_sha256": "5b536d713303b934e680f253f6a8b66bdcd2c46c0aa43bbcd9078995178e3f33",
+      "current_sha256": "5b536d713303b934e680f253f6a8b66bdcd2c46c0aa43bbcd9078995178e3f33",
+      "match": true
+    },
+    {
+      "path": "tests/forum_local_organism.test.mjs",
+      "snapshot_sha256": "1c602c3f69167c7283c9b92fba5c31ba8de2f0576da3883f19a257c927ad3dde",
+      "current_sha256": "1c602c3f69167c7283c9b92fba5c31ba8de2f0576da3883f19a257c927ad3dde",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/page.tsx",
+      "snapshot_sha256": "f1ca2e3a4e71bec120f26f6f75babd198ae6fe7ed309b3274998a9a4df55ffe2",
+      "current_sha256": "f1ca2e3a4e71bec120f26f6f75babd198ae6fe7ed309b3274998a9a4df55ffe2",
+      "match": true
+    },
+    {
+      "path": "lib/forum/api/local.mjs",
+      "snapshot_sha256": "8a76a41566ae2bbd0ae6562f9de716c320654b58f0f39b369fb9510c29cf543b",
+      "current_sha256": "8a76a41566ae2bbd0ae6562f9de716c320654b58f0f39b369fb9510c29cf543b",
+      "match": true
+    },
+    {
+      "path": "lib/forum/audit/corpus.mjs",
+      "snapshot_sha256": "b56a5953caf5f0adb73b971d55f82d554407b29e259008fdc7d7731c6a5fa5b9",
+      "current_sha256": "b56a5953caf5f0adb73b971d55f82d554407b29e259008fdc7d7731c6a5fa5b9",
+      "match": true
+    },
+    {
+      "path": "lib/forum/constitution/invariants.mjs",
+      "snapshot_sha256": "da676c48a105f827883d2e13ac907b4c016ba278da803c59479bb325ff234a28",
+      "current_sha256": "da676c48a105f827883d2e13ac907b4c016ba278da803c59479bb325ff234a28",
+      "match": true
+    },
+    {
+      "path": "lib/forum/domain/objects.mjs",
+      "snapshot_sha256": "9a2077d9396d11eed70d2d4e72deb1d70299658ddd2808448f0bf43dcc26543a",
+      "current_sha256": "9a2077d9396d11eed70d2d4e72deb1d70299658ddd2808448f0bf43dcc26543a",
+      "match": true
+    },
+    {
+      "path": "lib/forum/fixtures/negative.mjs",
+      "snapshot_sha256": "d2791a787723446353b1232c56b939418fd8409902d25de134b87a9db2f8c160",
+      "current_sha256": "d2791a787723446353b1232c56b939418fd8409902d25de134b87a9db2f8c160",
+      "match": true
+    },
+    {
+      "path": "lib/forum/memory/cas.mjs",
+      "snapshot_sha256": "f8d1ee184bb16c579d02d52e417fcc0be0f103953f16dafdbab76b67fa0bdf6d",
+      "current_sha256": "f8d1ee184bb16c579d02d52e417fcc0be0f103953f16dafdbab76b67fa0bdf6d",
+      "match": true
+    },
+    {
+      "path": "lib/forum/policy/measurement.mjs",
+      "snapshot_sha256": "0ef9930172f302d1c13a6fe98ebb6303831d2fd8946ebc996d8de5646cacc62e",
+      "current_sha256": "0ef9930172f302d1c13a6fe98ebb6303831d2fd8946ebc996d8de5646cacc62e",
+      "match": true
+    },
+    {
+      "path": "lib/forum/validators/invariants.mjs",
+      "snapshot_sha256": "8c2e45ea83612f84b8547a7659d90ffdb5598276a2a309849cba07aa1e7d18c0",
+      "current_sha256": "8c2e45ea83612f84b8547a7659d90ffdb5598276a2a309849cba07aa1e7d18c0",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/audit/page.tsx",
+      "snapshot_sha256": "a698a22613aee04b7e710ee60db1d25a324949cc93ba7a91eb3b67a8d9905580",
+      "current_sha256": "a698a22613aee04b7e710ee60db1d25a324949cc93ba7a91eb3b67a8d9905580",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/create/page.tsx",
+      "snapshot_sha256": "67a01851f546af371a1272927d56ed77fdcf4cce951cc8e63ba4a82930cea558",
+      "current_sha256": "67a01851f546af371a1272927d56ed77fdcf4cce951cc8e63ba4a82930cea558",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/dissent/page.tsx",
+      "snapshot_sha256": "8a2dde43e34c1cf42e6bf858f3470587b4c52b7fc837c9705a4efb9947c74c89",
+      "current_sha256": "8a2dde43e34c1cf42e6bf858f3470587b4c52b7fc837c9705a4efb9947c74c89",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/entry/page.tsx",
+      "snapshot_sha256": "6a308fa72138f4bf950a5ceabd739b1e2e6dc37b6630d9c1b47d806feff1ea2b",
+      "current_sha256": "6a308fa72138f4bf950a5ceabd739b1e2e6dc37b6630d9c1b47d806feff1ea2b",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/epistemic/page.tsx",
+      "snapshot_sha256": "6edef0652df7dcca3cc6e32f4063a50c2b5a9099b9967665ea96abe2106c08f4",
+      "current_sha256": "6edef0652df7dcca3cc6e32f4063a50c2b5a9099b9967665ea96abe2106c08f4",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/lineage/page.tsx",
+      "snapshot_sha256": "9e42551e987772b2b7fa3567903e1f1233ec06c95433f766f798dfc9ad42dfae",
+      "current_sha256": "9e42551e987772b2b7fa3567903e1f1233ec06c95433f766f798dfc9ad42dfae",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/portability/page.tsx",
+      "snapshot_sha256": "0075b1cc3d547d30ff5170b3c58b783594a3ba149cee4b0271e13925598f9ddf",
+      "current_sha256": "0075b1cc3d547d30ff5170b3c58b783594a3ba149cee4b0271e13925598f9ddf",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/provenance/page.tsx",
+      "snapshot_sha256": "f77d7fbcca6f8b9ec08617e93d01b69972d7895169f34d3b83189e987797bf42",
+      "current_sha256": "f77d7fbcca6f8b9ec08617e93d01b69972d7895169f34d3b83189e987797bf42",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/receipts/page.tsx",
+      "snapshot_sha256": "11f10a0293de9a0b0051d4416a1ee42db595b9674c7290a3401b5f01bc4d7d26",
+      "current_sha256": "11f10a0293de9a0b0051d4416a1ee42db595b9674c7290a3401b5f01bc4d7d26",
+      "match": true
+    },
+    {
+      "path": "app/forum/local/review/page.tsx",
+      "snapshot_sha256": "fabca6d7fc5063bb622d4e805cc5cf98290a80adccfc5358fad90cab98eec138",
+      "current_sha256": "fabca6d7fc5063bb622d4e805cc5cf98290a80adccfc5358fad90cab98eec138",
+      "match": true
+    }
+  ],
+  "r9_return_sha256": "1cdf9efd6e76e6de3badd0657b21ab924b9a0ee645a6a8176d58a7c4d0aad0da",
+  "review_summary_predecessor_return": "c73e4dab2ddafd0c4fb4a8872ab4081e2a86c09c0ce2b5cf6e812fe1339e670d",
+  "review_summary_matches_supplied_grok": false
+}
