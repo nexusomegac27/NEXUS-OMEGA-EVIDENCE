@@ -1,0 +1,44 @@
+{
+  "schema_version": "nexus-source-binding/1",
+  "object": "NEXUS_OMEGA_MACCULLOCH_MARY_PROTESTANTS_SOURCE_ANCHOR_20260917_R0",
+  "push_order": "NEXUS_OMEGA_AXIOM_TO_CURSOR_MACCULLOCH_SOURCE_ANCHOR_PUSH_AUTHORIZATION_20260917_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "role": "FUNDAMENTAL_CONTEXT_SOURCE",
+  "claim_status": "SOURCE_ANCHOR_NOT_TRUTH_AUTHORITY",
+  "source_class": "SCHOLARLY_HISTORICAL_SECONDARY_SOURCE",
+  "doi": "10.1017/S0424208400015096",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/maccullouch-mary-protestants-source-anchor-20260917",
+  "package_path": "research/c1-source-anchors/maccullouch-mary-protestants-20260917/",
+  "path_rationale": "Fits research/<phase>/<agent-or-topic>/; avoids inventing research/sources/historical/... parallel hierarchy absent from repository contract.",
+  "predecessor_canonical_ref": "NEXUS_OMEGA_TRANSFER/10_TO_AXIOM/NEXUS_OMEGA_MACCULLOCH_MARY_PROTESTANTS_SOURCE_ANCHOR_20260917_R0/",
+  "source_rehash": {
+    "expected_sha256": "fd7a0d4d6d1a2867373df016038b8f8889e321cb86e5f96f410995f9200e47c6",
+    "observed_sha256": "fd7a0d4d6d1a2867373df016038b8f8889e321cb86e5f96f410995f9200e47c6",
+    "status": "MATCH"
+  },
+  "public_package_hash": {
+    "SOURCE_ANCHOR.md": {
+      "sha256": "d5b8e7cbdb7c592dca3c1a88832593cf954affaefe05a90ed3f6a3e3c89e6a72",
+      "bytes": 3540,
+      "note": "Path-sanitized public derivative; canonical hash preserved in source_rehash"
+    }
+  },
+  "prohibitions": {
+    "merge": true,
+    "default_branch_mutation": true,
+    "claim_promotion": true,
+    "foundation_promotion": true,
+    "live_deployment": true,
+    "source_rewrite_of_canonical": true,
+    "force_push": true,
+    "full_article_copy": true
+  },
+  "not_equal": [
+    "PRIMARY",
+    "CONFESSIONAL",
+    "AXIOM_SYNTHESIS",
+    "TRUTH_AUTHORITY"
+  ]
+}

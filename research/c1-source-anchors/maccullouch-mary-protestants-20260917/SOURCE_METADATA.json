@@ -1,0 +1,80 @@
+{
+  "schema_version": "nexus-source-anchor-public/1",
+  "object": "NEXUS_OMEGA_MACCULLOCH_MARY_PROTESTANTS_SOURCE_ANCHOR_20260917_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "bind_date": "2026-09-17",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "state": "SOURCE_ANCHOR_PUBLIC_PACKAGE_C1",
+  "role": "FUNDAMENTAL_CONTEXT_SOURCE",
+  "claim_status": "SOURCE_ANCHOR_NOT_TRUTH_AUTHORITY",
+  "source_class": "SCHOLARLY_HISTORICAL_SECONDARY_SOURCE",
+  "evidence_class": "SCHOLARLY_SECONDARY",
+  "epistemic_class": [
+    "S",
+    "H"
+  ],
+  "hierarchy": {
+    "PRIMARY": false,
+    "SECONDARY": true,
+    "CONFESSIONAL": false,
+    "AXIOM_SYNTHESIS": false,
+    "TRUTH_AUTHORITY": false
+  },
+  "corpus": {
+    "corpus_id": "NEXUS_SCIENTIFIC_CORPUS_V1",
+    "placement": "ADDITIVE_REFERENCE_ONLY",
+    "foundation_state": "INITIALIZED_C1"
+  },
+  "bibliographic": {
+    "title": "Mary and Sixteenth-Century Protestants",
+    "author": "Diarmaid MacCulloch",
+    "journal": "Studies in Church History",
+    "volume": 39,
+    "volume_title": "The Church and Mary",
+    "year": 2004,
+    "pages": "191–217",
+    "doi": "10.1017/S0424208400015096",
+    "publisher": "Cambridge University Press",
+    "online_publication": "2016-03-21",
+    "doi_landing": "https://doi.org/10.1017/S0424208400015096"
+  },
+  "verification": {
+    "status": "PUBLIC_METADATA_MATCH_PARTIAL_C1",
+    "public_match_fields": [
+      "title",
+      "author",
+      "doi",
+      "journal",
+      "volume",
+      "year",
+      "pages"
+    ],
+    "operator_stated_not_independently_rehashed": [
+      "online_publication",
+      "publisher_label_cambridge_university_press"
+    ],
+    "bibliographic_nuance": "Print volume also catalogued for Ecclesiastical History Society / Boydell; recorded without authority conflict.",
+    "fulltext_fetch": "NOT_PERFORMED",
+    "copyrighted_substantial_text_pasted": false,
+    "article_fulltext_bound": false
+  },
+  "canonical_transfer_ref": "NEXUS_OMEGA_TRANSFER/10_TO_AXIOM/NEXUS_OMEGA_MACCULLOCH_MARY_PROTESTANTS_SOURCE_ANCHOR_20260917_R0/",
+  "hashes": {
+    "canonical_SOURCE_ANCHOR_md_sha256": "fd7a0d4d6d1a2867373df016038b8f8889e321cb86e5f96f410995f9200e47c6",
+    "canonical_SOURCE_ANCHOR_md_bytes": 3556,
+    "public_SOURCE_ANCHOR_md_sha256": "d5b8e7cbdb7c592dca3c1a88832593cf954affaefe05a90ed3f6a3e3c89e6a72",
+    "public_SOURCE_ANCHOR_md_bytes": 3540,
+    "public_vs_canonical": "SANITIZED_CANONICAL_PATH_ONLY",
+    "sanitize_reason": "LOCAL_ABSOLUTE_PATH_PROHIBITED_IN_PUBLIC_REPO"
+  },
+  "flags": {
+    "truth_authority": false,
+    "sole_authority": false,
+    "claim_promotion": false,
+    "foundation_promotion": false,
+    "live_publication": false,
+    "live_deployment": false,
+    "article_fulltext_bound": false,
+    "auto_citation_as_proof": false
+  }
+}
