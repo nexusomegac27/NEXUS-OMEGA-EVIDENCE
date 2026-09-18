@@ -46,7 +46,7 @@ Representation order:
 
 The source package contains or references human likeness material. Because `CONSENT_BIND` remains open, this review branch does not publish biometric/reference media, embedded-person HTML, the style GIF, source portrait, or presentation MP4.
 
-Instead, the branch binds the private/local source family by hashes and publishes only C1-safe derived text, provenance, remediation, and research-order artifacts.
+Instead, the branch binds the private/local source family by hashes and publishes only C1-safe derived text, provenance and remediation artifacts.
 
 ## Explicit exclusions
 
@@ -68,10 +68,9 @@ The source MP4 is excluded from the evidentiary path. The 16-frame style GIF is 
 - `PRIVATE_SOURCE_HASH_LEDGER.json`
 - `C1_REMEDIATION_LEDGER.md`
 - `DELIVERY_HANDSHAKE.json`
-- `NEXUS_OMEGA_AXIOM_TO_VIBE_BODYTWIN_MAXIMUM_RESEARCH_ORDER_20260918_R0.md`
 
 ## Open gates
 
-`MANIFEST_V1_2 · C1_REMEDIATION · CONSENT_BIND · ABBILD/TRIAL`
+`CONSENT_BIND · ABBILD/TRIAL`
 
-This branch may close the first two only at public-derivative level. It must not falsely close consent or experimental validation.
+The public derivative records `MANIFEST_V1_2` and `C1_REMEDIATION` work without modifying the private source bytes. It must not falsely close consent or experimental validation.
