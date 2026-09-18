@@ -1,0 +1,43 @@
+{
+  "object": "NEXUS_OMEGA_BODYTWIN_PRIVATE_SOURCE_HASH_LEDGER_20260918_R0",
+  "state": "HASH_BOUND_PRIVATE_SOURCE_FAMILY_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "note": "Hashes bind local/private source identities. This ledger does not authorize publication or establish consent.",
+  "package_sha256": "bc7957e0670f42e8acfaf54884a3e227491abe60dd9fede42772a3c6e48979af",
+  "biometric_or_person_media_publication": "PROHIBITED_PENDING_CONSENT_BIND",
+  "items": [
+    {
+      "object": "BODYTWIN_CANONICAL_LAYER_SOURCE",
+      "sha256": "637bf5cc52d3f850de1a1314a4adc5e35c79b29cd688e7a8bad52838d1eab432",
+      "bytes": 11115
+    },
+    {
+      "object": "FORUM_LIVING_FOUNDATION_SOURCE",
+      "sha256": "3b3a9f59ed69292e6b208952cdb7804645cfb2f8b6c3d5d9f5a515e23aa3335c",
+      "bytes": 21048
+    },
+    {
+      "object": "STYLE_GIF_EMBEDDED_SOURCE",
+      "sha256": "98f24cf545a789499163ff221b2d314d794fb09d55ef7426b1fa1e3d88179be0",
+      "bytes": 1860746,
+      "role": "DEMONSTRATOR_NOT_PROOF"
+    },
+    {
+      "object": "REFERENCE_FRAME_EMBEDDED_SOURCE",
+      "sha256": "82b9efc594282a6d5b5678e302c6da3efeb9f8d0cf93005cb2819fcd0454be3e",
+      "bytes": 238975
+    },
+    {
+      "object": "PRESENTATION_MP4",
+      "sha256": "ed0d62d9538fdf1c4a47604a956a12621a5806442663ed3fc4df2cdecc9b0ea8",
+      "bytes": 3389468,
+      "evidence_status": "EXCLUDED"
+    },
+    {
+      "object": "HTML_WITH_EMBEDDED_MEDIA",
+      "sha256": "5d8d252dd908798d10982604fd0d77db034568d07d59d1ac0165a79cb2a19bf0",
+      "bytes": 2984444,
+      "publication": "HOLD"
+    }
+  ]
+}
