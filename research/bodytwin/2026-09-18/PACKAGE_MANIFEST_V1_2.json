@@ -1,0 +1,101 @@
+{
+  "object": "NEXUS_OMEGA_BODYTWIN_PACKAGE_MANIFEST_V1_2_20260918_R0",
+  "version": "1.2.0",
+  "state": "PUBLIC_SAFE_REBIND_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_package": {
+    "filename": "abd9ba19-8062-4775-a64d-efc2dc73bd59.zip",
+    "bytes": 5742539,
+    "sha256": "bc7957e0670f42e8acfaf54884a3e227491abe60dd9fede42772a3c6e48979af",
+    "zip_integrity": "PASS_9_OF_9"
+  },
+  "source_inventory": [
+    {
+      "path": "HASH-MANIFEST-V1-1.json",
+      "bytes": 1026,
+      "sha256": "47fd787e12545cbdcd72b4610a87c82a118d5724738f2bc6fe9b2104dc5f0956",
+      "publication": "HASH_ONLY_CONTEXT"
+    },
+    {
+      "path": "NEXUS-BodyTwin-Maennlich-Neutral-Canonical-Layer-V1-1.md",
+      "bytes": 11115,
+      "sha256": "637bf5cc52d3f850de1a1314a4adc5e35c79b29cd688e7a8bad52838d1eab432",
+      "publication": "PUBLIC_DERIVATIVE_ONLY"
+    },
+    {
+      "path": "NEXUS_Governance-Muster als Fundament - Soziotechnische Steuerung im Kollektiv.txt",
+      "bytes": 46047,
+      "sha256": "4fb1a6309725faaf2bfb3dfc536b434afd9165225cc0915e4cd8344fd929ffe5",
+      "publication": "HASH_ONLY_CONTEXT"
+    },
+    {
+      "path": "NEXUS_Living Foundation Principle.txt",
+      "bytes": 30566,
+      "sha256": "c6169d3b28da74946c7b5f50f7aba7e80b5f1f57f3e4bf5c6d652a391e4764fd",
+      "publication": "HASH_ONLY_CONTEXT"
+    },
+    {
+      "path": "NEXUS_QWEN_Living Foundation — Wissenschaftliches Präsentations- & Visionsvideo.txt",
+      "bytes": 84920,
+      "sha256": "27ae05b79139a9f37493f3e9f34e066d9a9eb98c1da710b70fd4e232b24ba8ae",
+      "publication": "HASH_ONLY_CONTEXT"
+    },
+    {
+      "path": "Nexus-Bodytwin-Mannlich-Neutral.html",
+      "bytes": 2984444,
+      "sha256": "5d8d252dd908798d10982604fd0d77db034568d07d59d1ac0165a79cb2a19bf0",
+      "publication": "WITHHELD_CONSENT_AND_EMBEDDED_MEDIA"
+    },
+    {
+      "path": "Stützpunkte für ein lebendes Fundament — interdisziplinäre Analyse.pdf",
+      "bytes": 262987,
+      "sha256": "5b181e9b89542f7130250bb427b42d2e405e5a4dcf573ba710784b442ce8f7cc",
+      "publication": "HASH_ONLY_CONTEXT"
+    },
+    {
+      "path": "abd9ba19-8062-4775-a64d-efc2dc73bd59.mp4",
+      "bytes": 3389468,
+      "sha256": "ed0d62d9538fdf1c4a47604a956a12621a5806442663ed3fc4df2cdecc9b0ea8",
+      "publication": "EXCLUDED_FROM_EVIDENCE_PATH"
+    },
+    {
+      "path": "nexus-omega-forum-living-foundation-package.md",
+      "bytes": 21048,
+      "sha256": "3b3a9f59ed69292e6b208952cdb7804645cfb2f8b6c3d5d9f5a515e23aa3335c",
+      "publication": "SOURCE_HASH_BOUND_DERIVATIVE_CONTEXT"
+    }
+  ],
+  "legacy_manifest_logical_objects": {
+    "count": 5,
+    "recoverable": "5_OF_5",
+    "direct_standalone_match": "2_OF_5",
+    "embedded_or_prefix_exact_recovery": "3_OF_5",
+    "original_layout_preserved": false
+  },
+  "embedded_objects": [
+    {
+      "logical_path": "Alexander_16_styles_python.gif",
+      "bytes": 1860746,
+      "sha256": "98f24cf545a789499163ff221b2d314d794fb09d55ef7426b1fa1e3d88179be0",
+      "relation": "EMBEDDED_IN_HTML_EXACT",
+      "publication": "WITHHELD_PENDING_CONSENT_BIND",
+      "role": "NONCANONICAL_LAYER_VARIABILITY_DEMONSTRATOR"
+    },
+    {
+      "logical_path": "frame_0.png",
+      "bytes": 238975,
+      "sha256": "82b9efc594282a6d5b5678e302c6da3efeb9f8d0cf93005cb2819fcd0454be3e",
+      "relation": "EMBEDDED_IN_HTML_EXACT",
+      "publication": "WITHHELD_PENDING_CONSENT_BIND"
+    }
+  ],
+  "gates_open": [
+    "CONSENT_BIND",
+    "ABBILD_TRIAL"
+  ],
+  "public_derivative_closes": [
+    "MANIFEST_V1_2_PUBLIC_REBIND",
+    "C1_REMEDIATION_PUBLIC_DERIVATIVE"
+  ],
+  "claim_promotion": false
+}
