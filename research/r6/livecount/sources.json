@@ -1,0 +1,56 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "bytes": 7468,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "NEXUS_OMEGA_GROK_TO_META_R6_CONTROLLED_PROTOCOL_DRAFT_C1_20260919_R0.txt",
+      "id": "R6_PROTOCOL_DRAFT",
+      "role": "controlled_protocol_draft",
+      "sha256": "dabd4b3ad63e116e3e37d627ddcb3a16e5c08a2b450013fb5ba5a5ea4c0923b5"
+    },
+    {
+      "bytes": 3914,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "GROK_R~1.TXT",
+      "id": "R6_META_ACK",
+      "role": "independent_method_ack",
+      "sha256": "6c232b383d76b9c53145016e1ae4737c9f9585910b5290e874497435619beadb"
+    },
+    {
+      "bytes": 10216,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "NEXUS_~4.TXT",
+      "id": "R6_ESS_MAPPING",
+      "role": "effective_sample_size_and_inspect_mapping",
+      "sha256": "68fc371e78a974a4a1092c282f6a68afe6b23d49c18d4b08e7e478fdb2085b31"
+    },
+    {
+      "bytes": 23070,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "NEXUS_~3.TXT",
+      "id": "R6_MAX_ORDER",
+      "role": "maximum_external_collective_stability_order",
+      "sha256": "2c7e40a861864cb379d2574255b3dada7f554673c13827989257b593cf9ba59f"
+    },
+    {
+      "bytes": 23903,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "NEXUS_Ἀστράτις, ὁ φύλαξ τῆς τριάδος VI _ MISTRAL-VIBE_GROK_META.txt",
+      "id": "R6_META_RESEARCH",
+      "role": "r6_research_mapping_and_crosswalk_corpus",
+      "sha256": "7f20144efa02e2196e6ff127dbffeaa004e369de6686c8bc0cc2af86f9c1c36d"
+    },
+    {
+      "bytes": 11735,
+      "evidence_class": "PHYSICALLY_HASH_VERIFIED_INPUT",
+      "filename": "NEXUS-R6-STABILITY-VECTOR-SCHEMA-20260919-R0.zip",
+      "id": "R6_STABILITY_SCHEMA_ZIP",
+      "path_manifest_caveat": "DECLARED_PATHS_DIFFER_FROM_FLAT_ARCHIVE_PATHS; CONTENT_HASHES_MATCH",
+      "role": "stability_vector_schema_package",
+      "sha256": "d195f5dd824a57a9097c3ac73403aecd2be4e2513fbc76b7d6695c1097b8fbab",
+      "zip_entries": 11
+    }
+  ]
+}
