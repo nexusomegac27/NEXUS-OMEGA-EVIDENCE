@@ -12,6 +12,15 @@ This lane is a public-safe, append-only validation derivative of the supplied
 The raw package is **not** published here because it contains chat/history and local-path material.
 Only independently verified scientific/provenance findings are exposed.
 
+## Late supplement R1
+
+Two omitted files were supplied after the initial R8 validation and are bound in
+[`LATE_SUPPLEMENT_VALIDATION_20260919_R1.md`](LATE_SUPPLEMENT_VALIDATION_20260919_R1.md).
+
+The late final ZIP contains a `02_SHA256SUMS.txt` absent from the original outer/nested package. All 10 listed objects rehash MATCH, but the manifest covers only 10 of 11 non-self ZIP entries; `26_PUBLICATION_ELIGIBILITY.json` is not covered. Therefore the corrected state is `CHECKSUM_MANIFEST_PRESENT=YES` and `SEALED_FULL_PACKAGE_MANIFEST=NOT_ESTABLISHED`.
+
+The late supplement does not alter the empirical terminal state: B04/B08/SCL remain absent, NDVI remains `NOT_COMPUTED`, NDVI uncertainty remains `NOT_ESTABLISHED`, and the REANA draft remains non-executable as supplied.
+
 ## Terminal scientific state
 
 - R7.1.2 corrected C1 derivative remains the immutable public predecessor.
