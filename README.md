@@ -42,6 +42,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │       ├── validate-anchor.yml
 │       ├── validate-repository-structure.yml
 │       ├── validate-research-pipeline.yml
+│       ├── validate-r7-radiometric.yml
 │       ├── validate-scientific-communication.yml
 │       └── validate-scientific-ledger.yml
 ├── AGENTS.md

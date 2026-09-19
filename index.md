@@ -23,5 +23,6 @@ This site is a discovery surface for public, content-addressed C1 evidence. It i
 - [R6 scientific livecount — machine-readable state](research/r6/livecount/current.json)
 - [R6 scientific livecount — visualization](research/r6/livecount/index.html)
 - [R6 scientific livecount — methodology and reproduction](research/r6/livecount/README.md)
+- [R7.1.2 radiometric cross-validation — corrected C1 derivative](research/r7/radiometric-extension/README.md)
 
 Every consumer must retrieve the referenced bytes, verify their SHA-256 and length, preserve all caveats, and independently validate any semantic claim.

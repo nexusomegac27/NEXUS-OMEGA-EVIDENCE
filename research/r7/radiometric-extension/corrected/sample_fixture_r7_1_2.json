@@ -1,0 +1,35 @@
+{
+  "stac_version": "1.0.0",
+  "id": "NEXUS_R7_1_2_SYNTHETIC_LUEBECK_FIXTURE",
+  "type": "Feature",
+  "bbox": [10.5, 53.8, 10.9, 54.0],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[[10.5,53.8],[10.9,53.8],[10.9,54.0],[10.5,54.0],[10.5,53.8]]]
+  },
+  "properties": {
+    "datetime": "2026-05-09T10:10:31Z",
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "proj:epsg": 32632,
+    "processing:level": "L2A",
+    "processing:version": "05.11",
+    "nexus:fixture": true,
+    "nexus:boa_add_offset": -1000,
+    "nexus:quantification_value": 10000
+  },
+  "links": [],
+  "assets": {
+    "B04": {"href":"./NOT_SUPPLIED_B04.jp2","type":"image/jp2","raster:bands":[{"raster:scale":0.0001,"raster:offset":-0.1,"raster:nodata":0}]},
+    "B08": {"href":"./NOT_SUPPLIED_B08.jp2","type":"image/jp2","raster:bands":[{"raster:scale":0.0001,"raster:offset":-0.1,"raster:nodata":0}]},
+    "SCL": {"href":"./NOT_SUPPLIED_SCL.jp2","type":"image/jp2"}
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
+  ]
+}

@@ -1,0 +1,40 @@
+name: validate-r7-radiometric
+
+on:
+  pull_request:
+    paths:
+      - 'research/r7/radiometric-extension/**'
+      - '.github/workflows/validate-r7-radiometric.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/r7/radiometric-extension/**'
+      - '.github/workflows/validate-r7-radiometric.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify R7.1.2 corrected derivative checksums
+        working-directory: research/r7/radiometric-extension
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Run R7.1.2 reference tests
+        run: python -m unittest research/r7/radiometric-extension/tests/test_reference_mapper_r7_1_2.py -v
+      - name: Parse machine-readable validation artifacts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/r7/radiometric-extension')
+          json.loads((root/'VALIDATION_REPORT_20260919_R0.json').read_text())
+          json.loads((root/'corrected/reference_result_r7_1_2.json').read_text())
+          json.loads((root/'corrected/sample_fixture_r7_1_2.json').read_text())
+          print('PASS')
+          PY
