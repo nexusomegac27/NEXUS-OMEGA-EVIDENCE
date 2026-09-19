@@ -1,0 +1,74 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R8_LATE_SUPPLEMENT_VALIDATION_20260919_R1",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_LATE_SUPPLEMENT_BOUND_NO_EMPIRICAL_PROMOTION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "late_files": {
+    "html": {
+      "filename": "Nexus-R8-Final-Mistral-Vibe.html",
+      "bytes": 195838,
+      "sha256": "541b4394003b35330a53f9897b9f98d152e59b480aeac406a7ddd9b8a37a78f9",
+      "role": "VISUALIZATION_REFERENCE_ONLY",
+      "canonical_hash_receipt": false,
+      "empirical_result": false
+    },
+    "final_zip": {
+      "filename": "R8_0_R8_1_CUSTODY_BIND_FINAL_MISTRAL_VIBE_VALIDATED.zip",
+      "bytes": 13030,
+      "sha256": "5b7e46f0604f9bddc8d76ecbbc8909f07c928c89e1b2c1bc92ac0807bed839dd",
+      "zip_entries": 12,
+      "zip_crc": "PASS",
+      "path_traversal": "NONE_FOUND"
+    }
+  },
+  "relation_to_prior_nested_r8_1": {
+    "prior_zip_sha256": "1614a7be408b4fdeb744f35a14375dd00a7e285d7710985d8c6608e5f762a135",
+    "prior_entries": 8,
+    "common_entries_byte_identical": "8_OF_8",
+    "new_entries": [
+      "R8_0_CUSTODY_BIND_FINAL.json",
+      "01_INPUT_INVENTORY.json",
+      "02_SHA256SUMS.txt",
+      "26_PUBLICATION_ELIGIBILITY.json"
+    ]
+  },
+  "checksum_manifest": {
+    "present": true,
+    "listed_objects": 10,
+    "listed_rehash_match": "10_OF_10",
+    "non_self_objects_in_zip": 11,
+    "covered_non_self_objects": 10,
+    "uncovered": ["26_PUBLICATION_ELIGIBILITY.json"],
+    "full_sealed_package_manifest": "NOT_ESTABLISHED"
+  },
+  "empirical_gate": {
+    "b04": "ABSENT",
+    "b08": "ABSENT",
+    "scl": "ABSENT",
+    "source_identity": "NOT_ESTABLISHED",
+    "pixel_level": "NOT_ESTABLISHED",
+    "ndvi": "NOT_COMPUTED",
+    "ndvi_uncertainty": "NOT_ESTABLISHED",
+    "reana_execution": "NOT_ESTABLISHED"
+  },
+  "persistent_defects": {
+    "reana_yaml_parse": "FAIL",
+    "referenced_workflow_inputs": "ABSENT",
+    "implementation_hashes": "PLACEHOLDER",
+    "container_digests": "PLACEHOLDER",
+    "hardcoded_valid_fraction_0_87": "EXAMPLE_NOT_MEASUREMENT",
+    "fixed_ndvi_tier_0_005": "NOT_VALIDATED",
+    "fixed_ndvi_tier_0_025": "NOT_VALIDATED",
+    "ce90_8m_generic_current_product_claim": "NOT_ACCEPTED"
+  },
+  "uncertainty_crosscheck": {
+    "sigma_ndvi_for_red_0_08_nir_0_25_sigma_band_0_02": 0.09641435995156428,
+    "sigma_ndvi_for_stated_0_15_percent_relative_example": 0.0007791810261008788
+  },
+  "publication": {
+    "validated_addendum": "YES_C1",
+    "raw_html_as_validated_scientific_evidence": "NO",
+    "raw_final_zip_promotion": "NO",
+    "empirical_pixel_claims": "NO"
+  }
+}
