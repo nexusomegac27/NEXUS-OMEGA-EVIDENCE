@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.nexus-mobile.de/schema/r6-livecount-v1.schema.json",
+  "title": "NEXUS OMEGA R6 Scientific Livecount v1",
+  "type": "object",
+  "required": ["schema_version","object","generated_at_utc","claim_ceiling","payload","payload_sha256"],
+  "properties": {
+    "schema_version": {"const":"1.0.0"},
+    "object": {"const":"NEXUS_OMEGA_R6_SCIENTIFIC_LIVECOUNT"},
+    "generated_at_utc": {"type":"string"},
+    "claim_ceiling": {"const":"C1_DESCRIPTIVE_ONLY"},
+    "payload": {
+      "type":"object",
+      "required":["phase","phase_closure","counts","estimands","source_manifest_sha256","interpretation"],
+      "properties":{
+        "phase":{"const":"R6"},
+        "phase_closure":{"type":"string"},
+        "counts":{"type":"object"},
+        "estimands":{"type":"object"},
+        "source_manifest_sha256":{"pattern":"^[0-9a-f]{64}$"},
+        "interpretation":{"type":"object"}
+      },
+      "additionalProperties":true
+    },
+    "payload_sha256":{"pattern":"^[0-9a-f]{64}$"}
+  },
+  "additionalProperties":false
+}
