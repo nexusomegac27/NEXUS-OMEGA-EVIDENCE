@@ -19,21 +19,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify public derivative SHA-256 manifest
+      - name: Verify public derivative SHA-256 manifests
         working-directory: research/r8/r8-0-custody-validation
-        run: sha256sum -c SHA256SUMS.txt
+        run: |
+          sha256sum -c SHA256SUMS.txt
+          if [ -f LATE_SUPPLEMENT_SHA256SUMS.txt ]; then
+            sha256sum -c LATE_SUPPLEMENT_SHA256SUMS.txt
+          fi
       - name: Validate machine-readable adjudication
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('research/r8/r8-0-custody-validation/VALIDATION_REPORT_20260919_R0.json')
-          x=json.loads(p.read_text(encoding='utf-8'))
+          root=Path('research/r8/r8-0-custody-validation')
+          x=json.loads((root/'VALIDATION_REPORT_20260919_R0.json').read_text(encoding='utf-8'))
           assert x['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
           assert x['truth_authority']=='NONE'
           assert x['r7_2_empirical_gate']['state']=='HOLD_C1_PHYSICAL_RASTER_EVIDENCE_ABSENT'
           assert x['r7_2_empirical_gate']['ndvi']=='NOT_COMPUTED'
           assert x['r8_1_protocol']['yaml_parse']=='FAIL'
           assert x['publication']['empirical_pixel_claims']=='NO'
+          q=root/'LATE_SUPPLEMENT_VALIDATION_20260919_R1.json'
+          if q.exists():
+              y=json.loads(q.read_text(encoding='utf-8'))
+              assert y['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+              assert y['checksum_manifest']['listed_rehash_match']=='10_OF_10'
+              assert y['checksum_manifest']['full_sealed_package_manifest']=='NOT_ESTABLISHED'
+              assert y['empirical_gate']['ndvi']=='NOT_COMPUTED'
+              assert y['empirical_gate']['ndvi_uncertainty']=='NOT_ESTABLISHED'
           print('PASS')
           PY
