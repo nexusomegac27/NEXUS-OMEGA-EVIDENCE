@@ -43,6 +43,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │       ├── validate-repository-structure.yml
 │       ├── validate-research-pipeline.yml
 │       ├── validate-r7-radiometric.yml
+│       ├── validate-r8-custody.yml
 │       ├── validate-scientific-communication.yml
 │       └── validate-scientific-ledger.yml
 ├── AGENTS.md

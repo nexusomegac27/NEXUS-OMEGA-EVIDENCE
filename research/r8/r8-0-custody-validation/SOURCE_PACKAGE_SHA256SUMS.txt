@@ -1,0 +1,11 @@
+dc4b6a9664ae6bd2ceb8af5cd908d799d7a649d5d2a9876c28c10116ce8267b4  nexus-omega-r8-0-custody-bind-r7-1-2-→-r8-transition-R1.zip
+01ade359c7a962ab91526cb5369527d71611ffc85b570e84dc29012ce5e95b8d  NEXUS_OMEGA_AXIOM_TO_CURSOR_ASTRATIS_VIII_R7_2_PHYSICAL_RASTER_RADIOMETRIC_NDVI_AND_PROVENANCE_CLOSURE_ORDER_20260919_R0.txt
+f44648d30356e51e6cf36d5d41b9c93b7c6e1ebca8f3d42dbc06f57b2d1a6463  Nexus-R8-Astratis-Viii.html
+a685d21c2255a94186ce478da605310fe13cadf6defdcb35162752a45e2a988d  R8 - Kanonischer Copy&Paste - Chatverlauf.txt
+1614a7be408b4fdeb744f35a14375dd00a7e285d7710985d8c6608e5f762a135  R8_ASTRATIS_VIII_R8_1_MULTI_RUN_GROK_CURSOR_MISTRAL.zip
+14999f05915cf9379214bea30e98017cc1c62080e696cef17ee3daabc909ac9c  nexus-omega-cursor-ἀστράτις-viii-r7-2-executive-return.md
+596f3fec6298b79390b8b0f52fcbdb5a955a5228c5fd659a39fdc704cb4c4a81  nexus-omega-deep-research-sentinel-2-open-data-quellen-&-blockadelösungen-für-r7-2-r8-1.md
+79fac5811768e154051673082b9b4ebbf339fb8604a216cbacfef1dc281deaed  nexus-omega-provenance_erratum_r1-hash-mismatch-r7-1-2.md
+4c3cb47c3a15d2f7697b84d0296f14aa60ba9560026a914bc21edb3021936da0  nexus-omega-r8-0-custody-bind-r7-1-2-→-r8-transition.md
+4e006d964d831a4ce37271bec89970b50ea6393b01d5fdefafeed3cebdc47f18  nexus-omega-r8-1-multi-run-protocol-radiometric-&-ndvi-symbiose.md
+4e006d964d831a4ce37271bec89970b50ea6393b01d5fdefafeed3cebdc47f18  nexus-omega-r8-1-multi-run-protocol-radiometric-&-ndvi-symbiose(1).md

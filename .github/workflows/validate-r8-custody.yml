@@ -1,0 +1,39 @@
+name: validate-r8-custody
+
+on:
+  pull_request:
+    paths:
+      - 'research/r8/r8-0-custody-validation/**'
+      - '.github/workflows/validate-r8-custody.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/r8/r8-0-custody-validation/**'
+      - '.github/workflows/validate-r8-custody.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public derivative SHA-256 manifest
+        working-directory: research/r8/r8-0-custody-validation
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Validate machine-readable adjudication
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/r8/r8-0-custody-validation/VALIDATION_REPORT_20260919_R0.json')
+          x=json.loads(p.read_text(encoding='utf-8'))
+          assert x['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert x['truth_authority']=='NONE'
+          assert x['r7_2_empirical_gate']['state']=='HOLD_C1_PHYSICAL_RASTER_EVIDENCE_ABSENT'
+          assert x['r7_2_empirical_gate']['ndvi']=='NOT_COMPUTED'
+          assert x['r8_1_protocol']['yaml_parse']=='FAIL'
+          assert x['publication']['empirical_pixel_claims']=='NO'
+          print('PASS')
+          PY
