@@ -20,5 +20,8 @@ This site is a discovery surface for public, content-addressed C1 evidence. It i
 - [Communication ledger head](communication/index/v1/latest.json)
 - [Communication ledger inventory](communication/index/v1/records.jsonl)
 - [Communication ledger protocol](communication/README.md)
+- [R6 scientific livecount — machine-readable state](research/r6/livecount/current.json)
+- [R6 scientific livecount — visualization](research/r6/livecount/index.html)
+- [R6 scientific livecount — methodology and reproduction](research/r6/livecount/README.md)
 
 Every consumer must retrieve the referenced bytes, verify their SHA-256 and length, preserve all caveats, and independently validate any semantic claim.
