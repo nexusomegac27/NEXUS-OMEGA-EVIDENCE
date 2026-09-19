@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXUS OMEGA R6 Scientific Livecount</title>
+<style>
+:root{color-scheme:dark;--bg:#08100f;--panel:#0d1715;--line:#28423b;--ink:#e7f2ee;--muted:#94aaa3;--ok:#a7dfc5;--warn:#f0ca7b;--accent:#8fbfb1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.wrap{max-width:1180px;margin:auto;padding:32px 20px 64px}h1{font:600 34px/1.1 system-ui,sans-serif;margin:.2em 0}.eyebrow,.muted{color:var(--muted)}.banner{border:1px solid var(--line);padding:14px 16px;margin:20px 0;background:#0a1412}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card,.section{border:1px solid var(--line);background:var(--panel);padding:16px}.n{font:600 30px/1 system-ui,sans-serif;margin:8px 0}.label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.section{margin-top:16px}.rows{display:grid;gap:8px}.row{display:grid;grid-template-columns:minmax(220px,1fr) 150px 1fr;gap:12px;padding:10px 0;border-top:1px solid #1e302c}.row:first-child{border-top:0}.hash{word-break:break-all;color:var(--accent)}.status{display:inline-block;border:1px solid var(--line);padding:2px 7px}.ok{color:var(--ok)}.warn{color:var(--warn)}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-top:1px solid #1e302c;vertical-align:top}th{color:var(--muted);font-weight:500}.bar{height:7px;background:#152521;margin-top:7px}.bar i{display:block;height:100%;background:var(--accent)}pre{white-space:pre-wrap}@media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}}@media(max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="eyebrow">NEXUS OMEGA · R6 · C1 DESCRIPTIVE ONLY</div>
+<h1>Scientific hash-verified livecount</h1>
+<p class="muted">A measurement surface for reproducible counts and explicit non-estimability. No trust score. No majority-as-truth. No gamification.</p>
+<div class="banner"><strong>Interpretation boundary:</strong> this page counts declared evidence objects and protocol structure. It does not claim that agent stabilization is empirically established.</div>
+<div id="summary" class="grid"></div>
+<section class="section"><h2>Estimands</h2><div id="estimands" class="rows"></div></section>
+<section class="section"><h2>Protocol inventory</h2><div id="protocol" class="rows"></div></section>
+<section class="section"><h2>Cryptographic verification</h2><div id="verify">Verifying…</div></section>
+<section class="section"><h2>Bound source objects</h2><table><thead><tr><th>Object</th><th>Bytes</th><th>SHA-256</th><th>Role / caveat</th></tr></thead><tbody id="sources"></tbody></table></section>
+<section class="section"><h2>Scientific laws</h2><pre>COUNT != TRUTH
+AGREEMENT != INDEPENDENCE
+RAW_N != EFFECTIVE_N
+OUTLIER != ERROR
+KSM != TRUTH
+KSE != ACCEPTABLE_BELIEF_BOUNDARY
+HASH_MATCH != SCIENTIFIC_VALIDITY</pre></section>
+</main>
+<script>
+const stable=x=>{if(Array.isArray(x))return'['+x.map(stable).join(',')+']';if(x&&typeof x==='object')return'{'+Object.keys(x).sort().map(k=>JSON.stringify(k)+':'+stable(x[k])).join(',')+'}';return JSON.stringify(x)};
+const hex=b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+const sha=async x=>hex(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(stable(x))));
+const card=(label,value,sub='')=>'<article class="card"><div class="label">'+label+'</div><div class="n">'+value+'</div><div class="muted">'+sub+'</div></article>';
+(async()=>{
+ const [live,src]=await Promise.all([fetch('./current.json',{cache:'no-store'}).then(r=>r.json()),fetch('./sources.json',{cache:'no-store'}).then(r=>r.json())]);
+ const c=live.payload.counts;
+ summary.innerHTML=card('Verified input artifacts',c.hash_verified_input_artifacts,'SHA-256 bound')+card('Verified input bytes',c.hash_verified_input_bytes.toLocaleString(),'physical supplied bytes')+card('External empirical RAW_N',c.external_empirical_observations_raw_n,'actual ingested observations')+card('Dependency clusters',c.dependency_clusters_lower_bound,'conservative lower-bound clusters');
+ estimands.innerHTML=Object.entries(live.payload.estimands).map(([k,v])=>'<div class="row"><strong>'+k.toUpperCase()+'</strong><span class="status '+(v.status==='NOT_ESTIMABLE'?'warn':'ok')+'">'+v.status+'</span><span>'+(v.value??'No numeric estimate published')+'</span></div>').join('');
+ const proto=[['ESS method candidates',c.ess_method_candidates],['Null hypotheses retained',c.null_hypotheses_retained],['Stability-vector dimensions',c.stability_vector_dimensions],['Independence classes',c.independence_classes],['Preregistered controls',c.preregistered_controls],['Schema reference instances validated',c.schema_reference_instances_validated],['Schema ZIP entries',c.stability_schema_zip_entries]],max=Math.max(...proto.map(x=>x[1]));
+ protocol.innerHTML=proto.map(([k,v])=>'<div class="row"><strong>'+k+'</strong><span>'+v+'</span><span><div class="bar"><i style="width:'+(100*v/max)+'%"></i></div></span></div>').join('');
+ const [ph,sh]=await Promise.all([sha(live.payload),sha(src)]);
+ verify.innerHTML='<div class="rows"><div class="row"><strong>Payload SHA-256</strong><span class="status '+(ph===live.payload_sha256?'ok':'warn')+'">'+(ph===live.payload_sha256?'PASS':'FAIL')+'</span><span class="hash">'+live.payload_sha256+'</span></div><div class="row"><strong>Source manifest SHA-256</strong><span class="status '+(sh===live.payload.source_manifest_sha256?'ok':'warn')+'">'+(sh===live.payload.source_manifest_sha256?'PASS':'FAIL')+'</span><span class="hash">'+live.payload.source_manifest_sha256+'</span></div><div class="row"><strong>Generated</strong><span></span><span>'+live.generated_at_utc+'</span></div></div>';
+ sources.innerHTML=src.sources.map(s=>'<tr><td>'+s.id+'</td><td>'+Number(s.bytes).toLocaleString()+'</td><td class="hash">'+s.sha256+'</td><td>'+s.role+(s.path_manifest_caveat?'<br><span class="warn">'+s.path_manifest_caveat+'</span>':'')+'</td></tr>').join('');
+})();
+</script>
+</body></html>
