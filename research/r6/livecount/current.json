@@ -1,0 +1,112 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "generated_at_utc": "2026-09-19T07:08:02Z",
+  "object": "NEXUS_OMEGA_R6_SCIENTIFIC_LIVECOUNT",
+  "payload": {
+    "counts": {
+      "cross_agent_empirical_returns_verified": 0,
+      "dependency_clusters_lower_bound": 0,
+      "ess_method_candidates": 6,
+      "external_empirical_observations_raw_n": 0,
+      "hash_verified_input_artifacts": 6,
+      "hash_verified_input_bytes": 80306,
+      "independence_classes": 8,
+      "null_hypotheses_retained": 10,
+      "preregistered_controls": 6,
+      "schema_reference_instances_validated": 3,
+      "stability_schema_zip_entries": 11,
+      "stability_vector_dimensions": 10
+    },
+    "estimands": {
+      "effective_n": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      },
+      "kse": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      },
+      "ksm": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      }
+    },
+    "interpretation": {
+      "empirical_agent_stabilization_established": false,
+      "hash_match_equals_truth": false,
+      "majority_equals_truth": false,
+      "note": "R6 is closed here as a C1 research/method foundation by operator declaration. The verified source set supplied to this livecount does not contain completed empirical external-agent observations, so Effective_N, KSM and KSE remain not estimable.",
+      "outlier_equals_error": false,
+      "public_agent_round": "NOT_STARTED_IN_VERIFIED_SOURCE_SET",
+      "raw_n_equals_independent_n": false,
+      "truth_authority": "NONE"
+    },
+    "phase": "R6",
+    "phase_closure": "OPERATOR_DECLARED_CLOSED_C1_RESEARCH_FOUNDATION",
+    "source_manifest_sha256": "bdac059124ff2fd3af25fd5ec100f85fd780e5be30061dcf011592760856f9e6",
+    "stability_vector_category_distribution": {
+      "ADVERSARIAL_RESILIENCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "AUTHORITY_SEPARATION": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "CLAIM_BOUNDARY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "DISSENT_PRESERVATION": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "MEMORY_CONSISTENCY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "PROVENANCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "SOURCE_INDEPENDENCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "TEMPORAL_DRIFT": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "TOOL_BOUNDARY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "UNCERTAINTY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      }
+    }
+  },
+  "payload_sha256": "4674d2843463638e33c9f05e9ee3e0040c6f2b3c140460129384f90f65bb2638",
+  "schema_version": "1.0.0"
+}

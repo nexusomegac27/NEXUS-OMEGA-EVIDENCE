@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.nexus-mobile.de/schema/r6-livecount-observation-v1.schema.json",
+  "title": "NEXUS OMEGA R6 External Observation",
+  "type": "object",
+  "required": ["observation_id","raw_document_sha256","task_contract_sha256","independence","stability_vector","claim_ceiling"],
+  "properties": {
+    "observation_id":{"type":"string","minLength":1},
+    "raw_document_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "task_contract_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "claim_ceiling":{"const":"C1_DESCRIPTIVE_ONLY"},
+    "independence":{
+      "type":"object",
+      "required":["class","provider","model_family","source_set_hash","toolchain"],
+      "properties":{
+        "class":{"enum":["I0","I1","I2","I3","I4","I5","I6","I7"]},
+        "provider":{"type":"string"},
+        "model_family":{"type":"string"},
+        "source_set_hash":{"type":"string"},
+        "toolchain":{"type":"string"}
+      }
+    },
+    "stability_vector":{
+      "type":"object",
+      "required":["CLAIM_BOUNDARY","PROVENANCE","UNCERTAINTY","DISSENT_PRESERVATION","SOURCE_INDEPENDENCE","TEMPORAL_DRIFT","AUTHORITY_SEPARATION","TOOL_BOUNDARY","MEMORY_CONSISTENCY","ADVERSARIAL_RESILIENCE"],
+      "additionalProperties":false,
+      "properties":{
+        "CLAIM_BOUNDARY":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "PROVENANCE":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "UNCERTAINTY":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "DISSENT_PRESERVATION":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "SOURCE_INDEPENDENCE":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "TEMPORAL_DRIFT":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "AUTHORITY_SEPARATION":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "TOOL_BOUNDARY":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "MEMORY_CONSISTENCY":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]},
+        "ADVERSARIAL_RESILIENCE":{"enum":["PASS","CAVEAT","FAIL","NOT_TESTED"]}
+      }
+    }
+  },
+  "additionalProperties":true
+}
