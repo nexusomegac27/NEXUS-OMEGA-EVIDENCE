@@ -18,9 +18,18 @@
       "stability_vector_dimensions": 10
     },
     "estimands": {
-      "effective_n": {"status": "NOT_ESTIMABLE", "value": null},
-      "kse": {"status": "NOT_ESTIMABLE", "value": null},
-      "ksm": {"status": "NOT_ESTIMABLE", "value": null}
+      "effective_n": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      },
+      "kse": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      },
+      "ksm": {
+        "status": "NOT_ESTIMABLE",
+        "value": null
+      }
     },
     "interpretation": {
       "empirical_agent_stabilization_established": false,
@@ -36,16 +45,66 @@
     "phase_closure": "OPERATOR_DECLARED_CLOSED_C1_RESEARCH_FOUNDATION",
     "source_manifest_sha256": "bdac059124ff2fd3af25fd5ec100f85fd780e5be30061dcf011592760856f9e6",
     "stability_vector_category_distribution": {
-      "ADVERSARIAL_RESILIENCE": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "AUTHORITY_SEPARATION": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "CLAIM_BOUNDARY": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "DISSENT_PRESERVATION": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "MEMORY_CONSISTENCY": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "PROVENANCE": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "SOURCE_INDEPENDENCE": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "TEMPORAL_DRIFT": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "TOOL_BOUNDARY": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0},
-      "UNCERTAINTY": {"CAVEAT":0,"FAIL":0,"NOT_TESTED":0,"PASS":0}
+      "ADVERSARIAL_RESILIENCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "AUTHORITY_SEPARATION": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "CLAIM_BOUNDARY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "DISSENT_PRESERVATION": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "MEMORY_CONSISTENCY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "PROVENANCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "SOURCE_INDEPENDENCE": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "TEMPORAL_DRIFT": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "TOOL_BOUNDARY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      },
+      "UNCERTAINTY": {
+        "CAVEAT": 0,
+        "FAIL": 0,
+        "NOT_TESTED": 0,
+        "PASS": 0
+      }
     }
   },
   "payload_sha256": "4674d2843463638e33c9f05e9ee3e0040c6f2b3c140460129384f90f65bb2638",
