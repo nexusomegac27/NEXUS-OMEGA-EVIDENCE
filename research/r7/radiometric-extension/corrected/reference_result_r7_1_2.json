@@ -1,0 +1,77 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "geometry": {
+    "ce90_8m_claim": "NOT_USED_IN_CORRECTED_DERIVATIVE",
+    "current_collection1_l2a_absolute_geolocation_characteristic": "<12 m at 95.5% confidence",
+    "declared_epsg": 32632,
+    "display_coordinate_check": {
+      "expected_epsg25832": [
+        611054.534,
+        5970313.421
+      ],
+      "input_epsg4326": [
+        10.689,
+        53.8694
+      ],
+      "status": "INDEPENDENTLY_REPRODUCED_BY_AXIOM_WITH_PYPROJ_3_7_2"
+    }
+  },
+  "object": "NEXUS_OMEGA_R7_1_2_RADIOMETRIC_REFERENCE_ATOM_R1",
+  "pixel_derived": {
+    "ndvi": {
+      "reason": "B04/B08 raster bytes are not supplied",
+      "status": "NOT_COMPUTED"
+    },
+    "ndvi_uncertainty": {
+      "reason": "No empirical band uncertainty inputs or raster observations are supplied",
+      "status": "NOT_ESTABLISHED"
+    },
+    "valid_pixel_fraction": {
+      "reason": "SCL raster bytes are not supplied",
+      "status": "NOT_COMPUTED"
+    }
+  },
+  "provenance": {
+    "correction_model": "APPEND_ONLY_DERIVATIVE_DO_NOT_REWRITE_ORIGINAL",
+    "original_r2_zip_sha256": "270ad395c6d4676358f78cd0846cb14769142028c67f8024c39961a8ae388ef9",
+    "source_package_sha256": "1a758589480533fc703281c2c03f04ff74bf5723153f4e0178ad88132a6231b9"
+  },
+  "radiometric": {
+    "asset_band_transforms": {
+      "B04": {
+        "nodata": 0,
+        "offset": -0.1,
+        "scale": 0.0001
+      },
+      "B08": {
+        "nodata": 0,
+        "offset": -0.1,
+        "scale": 0.0001
+      }
+    },
+    "equivalent_scale_offset": {
+      "offset": -0.1,
+      "scale": 0.0001
+    },
+    "fixture_boa_add_offset": -1000,
+    "fixture_quantification_value": 10000,
+    "official_l2a_relation": "BOA = (DN + BOA_ADD_OFFSET) / QUANTIFICATION_VALUE",
+    "pixel_processing_performed": false
+  },
+  "reference_order_sha256": "d053289ee688ef14363df80f5d862d19d5a760e83d23009ef22cb0347a179d1e",
+  "source_kind": "SYNTHETIC_FIXTURE",
+  "source_sha256_canonical_json": "13163a7e331a4e35e6fa1c13c210aff7347d8795c4e74ac70ed8617e0e818833",
+  "stac": {
+    "declared_extension_count": 6,
+    "declared_extensions": [
+      "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+      "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+      "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+      "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+      "https://stac-extensions.github.io/view/v1.1.0/schema.json",
+      "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
+    ],
+    "quality_extension_declared": false
+  },
+  "truth_authority": "NONE"
+}
