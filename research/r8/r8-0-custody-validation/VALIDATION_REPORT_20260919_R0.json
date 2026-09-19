@@ -1,0 +1,73 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R8_0_R8_1_CUSTODY_AND_PROTOCOL_CROSSVALIDATION_20260919_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_CUSTODY_VALIDATED_PROTOCOL_HOLD",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "source_package": {
+    "filename": "nexus-omega-r8-0-custody-bind-r7-1-2-→-r8-transition-R1.zip",
+    "bytes": 131090,
+    "sha256": "dc4b6a9664ae6bd2ceb8af5cd908d799d7a649d5d2a9876c28c10116ce8267b4",
+    "zip_entries": 10,
+    "zip_crc": "PASS",
+    "path_traversal": "NONE_FOUND"
+  },
+  "nested_r8_1_zip": {
+    "bytes": 10078,
+    "sha256": "1614a7be408b4fdeb744f35a14375dd00a7e285d7710985d8c6608e5f762a135",
+    "zip_entries": 8,
+    "zip_crc": "PASS"
+  },
+  "physical_r7_2_order": {
+    "filename": "NEXUS_OMEGA_AXIOM_TO_CURSOR_ASTRATIS_VIII_R7_2_PHYSICAL_RASTER_RADIOMETRIC_NDVI_AND_PROVENANCE_CLOSURE_ORDER_20260919_R0.txt",
+    "bytes": 17518,
+    "sha256": "01ade359c7a962ab91526cb5369527d71611ffc85b570e84dc29012ce5e95b8d",
+    "inherited_r7_parent_order_sha256": "d053289ee688ef14363df80f5d862d19d5a760e83d23009ef22cb0347a179d1e",
+    "relation": "DISTINCT_OBJECTS_DO_NOT_CONFLATE"
+  },
+  "r7_2_empirical_gate": {
+    "state": "HOLD_C1_PHYSICAL_RASTER_EVIDENCE_ABSENT",
+    "b04": "ABSENT",
+    "b08": "ABSENT",
+    "scl": "ABSENT",
+    "source_exact_stac": "ABSENT",
+    "product_metadata": "ABSENT",
+    "pixel_level": "NOT_ESTABLISHED",
+    "ndvi": "NOT_COMPUTED",
+    "ndvi_uncertainty": "NOT_ESTABLISHED"
+  },
+  "r8_0_custody": {
+    "physical_zip_integrity": "PASS",
+    "checksum_manifest_02_present": false,
+    "sealed_manifest_claim": "NOT_ESTABLISHED"
+  },
+  "r8_1_protocol": {
+    "status": "HOLD_METHOD_REMEDIATION_REQUIRED",
+    "yaml_parse": "FAIL",
+    "referenced_input_files_present": false,
+    "container_digests": "PLACEHOLDER",
+    "implementation_method_hashes": "PLACEHOLDER",
+    "hardcoded_valid_pixel_fraction": 0.87,
+    "hardcoded_values_are_measurements": false,
+    "reana_execution": "NOT_ESTABLISHED",
+    "independent_raster_replication": "NOT_ESTABLISHED"
+  },
+  "uncertainty_crosscheck": {
+    "red_example": 0.08,
+    "nir_example": 0.25,
+    "sigma_band_conservative_example": 0.02,
+    "sigma_ndvi_from_declared_formula_conservative": 0.09641435995156428,
+    "sigma_band_relative_fraction_example": 0.0015,
+    "sigma_ndvi_from_declared_formula_relative": 0.0007791810261008788,
+    "published_tier_0_025_supported_by_declared_equation": false,
+    "published_tier_0_005_supported_by_declared_equation": false,
+    "empirical_uncertainty": "NOT_ESTABLISHED"
+  },
+  "publication": {
+    "validated_custody_facts": "YES_C1",
+    "validated_hold_state": "YES_C1",
+    "corrected_source_discovery": "YES_C1",
+    "r8_1_protocol_as_executable": "NO",
+    "empirical_pixel_claims": "NO",
+    "www_deploy": "NO"
+  }
+}
