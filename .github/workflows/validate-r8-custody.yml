@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify public derivative SHA-256 manifest
         working-directory: research/r8/r8-0-custody-validation
-        run: sha256sum -c SHA256SUMS.txt
+        run: |\n          sha256sum -c SHA256SUMS.txt\n          if [ -f LATE_SUPPLEMENT_SHA256SUMS.txt ]; then sha256sum -c LATE_SUPPLEMENT_SHA256SUMS.txt; fi
       - name: Validate machine-readable adjudication
         run: |
           python - <<'PY'
