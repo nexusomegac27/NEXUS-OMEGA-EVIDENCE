@@ -1,0 +1,22 @@
+{
+  "object": "ASTRATIS_VIII_R3_CLOSURE_PUBLIC_SAFE_C1",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_VIII_CLOSED_PARTIAL_PUBLICATION_IX_BOOTSTRAP_READY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "r3_zip_sha256": "a5421d326dc09824ee9950407cc7ebd8b82fbeca727667b5103c5137fcfb6632",
+  "r3_zip_rehash": "MATCH",
+  "claude_zip_sha256": "55be5450510b4e79f1600db079024bcbef92c311b5b3d1a43a304aa622f2d6aa",
+  "sim01_numeric_reproduction": "MATCH",
+  "empirical_ndvi": "NOT_COMPUTED",
+  "pixel_processing_performed": false,
+  "reana_execution": "NOT_ESTABLISHED",
+  "r3_full_atomic_closure": "NO",
+  "astratis_viii": "CLOSED_BY_OPERATOR",
+  "ix_execution": "NOT_STARTED",
+  "gt1pct_bug_rule": "REJECTED",
+  "publication": {
+    "empirical_pixel_claims": "NO",
+    "raw_html": "NO",
+    "loop_as_replication": "NO"
+  }
+}

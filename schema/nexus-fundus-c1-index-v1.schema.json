@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-omega.example/schema/nexus-fundus-c1-index-v1.schema.json",
+  "title": "NEXUS Fundus C1 Index",
+  "description": "Reference index of adjudicated checkpoints. TRUTH_AUTHORITY=NO. HOLD and negative knowledge first-class.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "reference",
+    "truth_authority",
+    "claim_ceiling",
+    "hold_may_be_dropped",
+    "entries"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NEXUS_FUNDUS_C1_INDEX_V1"
+    },
+    "reference": {
+      "const": true
+    },
+    "truth_authority": {
+      "const": "NO"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "hold_may_be_dropped": {
+      "const": false
+    },
+    "negative_knowledge_first_class": {
+      "const": true
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "entry_id",
+          "kind",
+          "state",
+          "pointer"
+        ],
+        "properties": {
+          "entry_id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "CHECKPOINT",
+              "HOLD",
+              "NEGATIVE",
+              "CORRECTION"
+            ]
+          },
+          "state": {
+            "type": "string"
+          },
+          "pointer": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

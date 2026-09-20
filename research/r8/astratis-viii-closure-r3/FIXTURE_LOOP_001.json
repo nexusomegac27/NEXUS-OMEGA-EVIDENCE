@@ -1,0 +1,53 @@
+{
+  "fixture_id": "FIXTURE_LOOP_001",
+  "anonymized": true,
+  "provider_names_public": "OMITTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "description": "Same method+evidence repeated after first independent reproduction yields no new evidence.",
+  "runs": [
+    {
+      "run_id": "LOOP001_R0",
+      "agent_alias": "AGENT_ANON_1",
+      "method_id": "SIM01_DUAL_MC_NDVI_ERROR_N100000_SEEDS20",
+      "evidence_hashes": [
+        "16066e89db5d955114b32c252b68cf8ab7d3caf3beca855fbf5d864bc074a3f6",
+        "67a828f0647dfdf22c8a7043349d0ed8898297b95b2f62cdb443c15e63cf75a5"
+      ],
+      "independent": false,
+      "new_method": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "truth_authority": "NONE"
+    },
+    {
+      "run_id": "LOOP001_R1",
+      "agent_alias": "AGENT_ANON_2",
+      "method_id": "SIM01_DUAL_MC_NDVI_ERROR_N100000_SEEDS20",
+      "evidence_hashes": [
+        "16066e89db5d955114b32c252b68cf8ab7d3caf3beca855fbf5d864bc074a3f6",
+        "67a828f0647dfdf22c8a7043349d0ed8898297b95b2f62cdb443c15e63cf75a5"
+      ],
+      "independent": true,
+      "new_method": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "truth_authority": "NONE"
+    },
+    {
+      "run_id": "LOOP001_R2",
+      "agent_alias": "AGENT_ANON_3",
+      "method_id": "SIM01_DUAL_MC_NDVI_ERROR_N100000_SEEDS20",
+      "evidence_hashes": [
+        "16066e89db5d955114b32c252b68cf8ab7d3caf3beca855fbf5d864bc074a3f6",
+        "67a828f0647dfdf22c8a7043349d0ed8898297b95b2f62cdb443c15e63cf75a5"
+      ],
+      "independent": true,
+      "new_method": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "truth_authority": "NONE"
+    }
+  ],
+  "expected": {
+    "new_evidence": "NO_NEW_EVIDENCE",
+    "loop_risk": "DETECTED",
+    "next": "NEW_METHOD_OR_HOLD"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-omega.example/schema/agent-run-checkpoint-v1.schema.json",
+  "title": "NEXUS Agent Run Checkpoint v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "run_id",
+    "method_id",
+    "evidence_hashes",
+    "claim_ceiling",
+    "truth_authority"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NEXUS_AGENT_RUN_CHECKPOINT_V1"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "agent_alias": {
+      "type": "string",
+      "description": "Anonymized in public fixtures"
+    },
+    "method_id": {
+      "type": "string"
+    },
+    "evidence_hashes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "independent": {
+      "type": "boolean"
+    },
+    "new_method": {
+      "type": "boolean"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "truth_authority": {
+      "const": "NONE"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  }
+}

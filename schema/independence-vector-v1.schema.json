@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-omega.example/schema/independence-vector-v1.schema.json",
+  "title": "NEXUS Independence Vector v1",
+  "description": "Multidimensional independence. I-number collapse prohibited.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "i_number_collapse",
+    "axes"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NEXUS_INDEPENDENCE_VECTOR_V1"
+    },
+    "i_number_collapse": {
+      "const": "PROHIBITED"
+    },
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implementation_independence",
+        "rng_family_independence",
+        "operator_independence",
+        "runtime_independence",
+        "provenance_independence",
+        "review_class_independence"
+      ],
+      "properties": {
+        "implementation_independence": {
+          "type": "string"
+        },
+        "rng_family_independence": {
+          "type": "string"
+        },
+        "operator_independence": {
+          "type": "string"
+        },
+        "runtime_independence": {
+          "type": "string"
+        },
+        "provenance_independence": {
+          "type": "string"
+        },
+        "review_class_independence": {
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

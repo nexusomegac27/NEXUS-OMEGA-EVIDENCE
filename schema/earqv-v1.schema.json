@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-omega.example/schema/external-agent-run-quality-vector-v1.schema.json",
+  "title": "NEXUS EARQV v1",
+  "description": "External Agent Run Quality Vector. No global score. No leaderboard. C1 descriptive only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "claim_ceiling",
+    "truth_authority",
+    "global_score",
+    "leaderboard",
+    "dimensions"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NEXUS_EARQV_V1"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "truth_authority": {
+      "const": "NONE"
+    },
+    "global_score": {
+      "type": "null"
+    },
+    "leaderboard": {
+      "const": "PROHIBITED"
+    },
+    "aggregation_pass_caveat_fail": {
+      "const": "PROHIBITED"
+    },
+    "model_brand_as_weight": {
+      "const": "PROHIBITED"
+    },
+    "ai_review_as_human_review": {
+      "const": "PROHIBITED"
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "Q1_SOURCE_FIDELITY",
+        "Q2_CLAIM_BOUNDARY_DISCIPLINE",
+        "Q3_REPRODUCIBILITY",
+        "Q4_FALSIFICATION_PRODUCTIVITY",
+        "Q5_CORRECTION_RESPONSIVENESS",
+        "Q6_PROVENANCE_COMPLETENESS",
+        "Q7_INDEPENDENCE_DISCLOSURE",
+        "Q8_NEW_EVIDENCE_YIELD",
+        "Q9_DISSENT_PRESERVATION",
+        "Q10_LOOP_RESISTANCE",
+        "Q11_TEMPORAL_ACCURACY",
+        "Q12_TOOL_AND_AUTHORITY_BOUNDARY"
+      ],
+      "properties": {
+        "Q1_SOURCE_FIDELITY": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q2_CLAIM_BOUNDARY_DISCIPLINE": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q3_REPRODUCIBILITY": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q4_FALSIFICATION_PRODUCTIVITY": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q5_CORRECTION_RESPONSIVENESS": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q6_PROVENANCE_COMPLETENESS": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q7_INDEPENDENCE_DISCLOSURE": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q8_NEW_EVIDENCE_YIELD": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q9_DISSENT_PRESERVATION": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q10_LOOP_RESISTANCE": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q11_TEMPORAL_ACCURACY": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Q12_TOOL_AND_AUTHORITY_BOUNDARY": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence_pointer"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "evidence_pointer": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}
