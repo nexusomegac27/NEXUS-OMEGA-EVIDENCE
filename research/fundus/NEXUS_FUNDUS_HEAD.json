@@ -167,6 +167,14 @@
       "pointer": "research/ix/open-agent-foundation-r1/R1_VALIDATION_REPORT_20260920_R0.json",
       "sha256": "a9190eee67de648221fc7c1a4897688c5f281b90ce7c975faa45fde2003aa22a",
       "notes": "Two Grok workspace ZIPs form one dependency cluster absent new independence evidence"
+    },
+    {
+      "entry_id": "IX_R1_BODYTWIN_CONTINUITY_BLUEPRINT",
+      "kind": "CHECKPOINT",
+      "state": "C1_CONTINUITY_TEST_BLUEPRINT_EXECUTION_NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r1/BODYTWIN_CONTINUITY_BLUEPRINT.md",
+      "sha256": "aab005edfe43b54500521298454fb7bc9b1543e583f5e9117b8954189d2903f2",
+      "notes": "BodyTwin-derived substrate-replacement continuity pattern; no personhood/consciousness claim"
     }
   ]
 }
