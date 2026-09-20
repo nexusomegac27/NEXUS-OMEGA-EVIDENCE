@@ -1,0 +1,172 @@
+{
+  "schema_id": "NEXUS_FUNDUS_C1_INDEX_V1",
+  "reference": true,
+  "truth_authority": "NO",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "hold_may_be_dropped": false,
+  "negative_knowledge_first_class": true,
+  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R1",
+  "one_canonical_core": true,
+  "entries": [
+    {
+      "entry_id": "R6_LIVECOUNT",
+      "kind": "CHECKPOINT",
+      "state": "CLOSED_C1_RAW_N_0",
+      "pointer": "research/r6/livecount/",
+      "sha256": "020dac990415fa477f5436b469f69daee6f698eb",
+      "notes": "MAIN historical; RAW_N=0 preserved"
+    },
+    {
+      "entry_id": "R7_1_2_CORRECTED_DERIVATIVE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_CORRECTED_DERIVATIVE_PUBLISHED",
+      "pointer": "research/r7/radiometric-extension/",
+      "sha256": "b2520f1f42836d416c3937085b1a24296c908a0f",
+      "notes": "NDVI still NOT_COMPUTED empirically"
+    },
+    {
+      "entry_id": "R7_2_RASTER",
+      "kind": "HOLD",
+      "state": "HOLD_C1_PHYSICAL_RASTER_EVIDENCE_ABSENT",
+      "pointer": "research/r8/r8-0-custody-validation/",
+      "sha256": null,
+      "notes": "Empirical raster HOLD"
+    },
+    {
+      "entry_id": "R8_0_CUSTODY",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_CUSTODY_VALIDATED_PROTOCOL_HOLD",
+      "pointer": "research/r8/r8-0-custody-validation/",
+      "sha256": "7f78a8dc",
+      "notes": "Historical main prefix; protocol HOLD"
+    },
+    {
+      "entry_id": "R8_1_DRAFT_FALSIFIED",
+      "kind": "NEGATIVE",
+      "state": "DRAFT_PROTOCOL_FALSIFIED_YAML_INVALID",
+      "pointer": "research/r8/r8-0-custody-validation/R8_1_PROTOCOL_CORRECTION_R1.md",
+      "sha256": null,
+      "notes": "Failed workflow is not a result"
+    },
+    {
+      "entry_id": "R8_LATE_SUPPLEMENT",
+      "kind": "CHECKPOINT",
+      "state": "PARTIAL_MANIFEST_10_OF_11",
+      "pointer": "research/r8/r8-0-custody-validation/LATE_SUPPLEMENT_VALIDATION_20260919_R1.json",
+      "sha256": "9c139bdc",
+      "notes": "26_PUBLICATION_ELIGIBILITY uncovered; SEALED_FULL_PACKAGE_MANIFEST=NOT_ESTABLISHED"
+    },
+    {
+      "entry_id": "R8_1_R1_R8_2_XVAL",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1",
+      "pointer": "research/r8/r8-1-r1-r8-2-crossvalidation/",
+      "sha256": "2578374411a8c93f8218d1b96d066b43c7f8350c",
+      "notes": "Current public main at intake"
+    },
+    {
+      "entry_id": "R3_SIM01_DUAL",
+      "kind": "CHECKPOINT",
+      "state": "FOUNDATIONAL_C1_NUMERIC_MATCH",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "Filled post-merge"
+    },
+    {
+      "entry_id": "ASTRATIS_VIII_CLOSED",
+      "kind": "CHECKPOINT",
+      "state": "CLOSED_BY_OPERATOR",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "R3_FULL_ATOMIC_CLOSURE=NO preserved"
+    },
+    {
+      "entry_id": "EMPIRICAL_NDVI",
+      "kind": "HOLD",
+      "state": "NOT_COMPUTED",
+      "pointer": "research/r8/",
+      "sha256": null,
+      "notes": "Must not be dropped"
+    },
+    {
+      "entry_id": "REANA",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED",
+      "pointer": "research/r8/",
+      "sha256": null,
+      "notes": "Invalid YAML preserved"
+    },
+    {
+      "entry_id": "ACIC",
+      "kind": "HOLD",
+      "state": "AWAITING_EXTERNAL_RETURNS",
+      "pointer": "research/r7/",
+      "sha256": null,
+      "notes": "RAW_N=0"
+    },
+    {
+      "entry_id": "F01_F15",
+      "kind": "HOLD",
+      "state": "RESIDUAL_RISK_SET",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "Fixtures not executed"
+    },
+    {
+      "entry_id": "IX_EXECUTION",
+      "kind": "HOLD",
+      "state": "NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r1/README.md",
+      "sha256": null,
+      "notes": "R1 foundation published; execution/activation remains explicitly NOT_STARTED"
+    },
+    {
+      "entry_id": "HTML_AS_HASH_RECEIPT",
+      "kind": "NEGATIVE",
+      "state": "HTML_AS_CANONICAL_HASH_RECEIPT=NO",
+      "pointer": "Nexus-R8-Final-Mistral-Vibe.html",
+      "sha256": "541b4394003b35330a53f9897b9f98d152e59b480aeac406a7ddd9b8a37a78f9",
+      "notes": "bytes 195838; visualization only"
+    },
+    {
+      "entry_id": "IX_R1_OPEN_AGENT_FOUNDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_FOUNDATION_PUBLISHED_EXECUTION_NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r1/",
+      "sha256": "a9190eee67de648221fc7c1a4897688c5f281b90ce7c975faa45fde2003aa22a",
+      "notes": "Provider-neutral continuity-body architecture; no component selection or activation"
+    },
+    {
+      "entry_id": "IX_R1_OPEN_SOURCE_CANDIDATES",
+      "kind": "CHECKPOINT",
+      "state": "PRIMARY_SOURCE_CHECKED_CANDIDATES_NOT_SELECTED",
+      "pointer": "research/ix/open-agent-foundation-r1/OPEN_SOURCE_CANDIDATE_MATRIX.md",
+      "sha256": "8ac5c07aec57ce3e76a8fce3a5cebc4777439cdbf5c036090a4530489a2ed599",
+      "notes": "Open-source/open-weight/open-resource candidates separated by openness class; R2 testing required"
+    },
+    {
+      "entry_id": "IX_R1_REASONING_METHODS",
+      "kind": "CORRECTION",
+      "state": "HEURISTICS_NARROWED_NO_VALIDATION_AUTHORITY",
+      "pointer": "research/ix/open-agent-foundation-r1/ARTIFACT_REASONING_METHODS_CORRECTION.md",
+      "sha256": "c010489dceafa06b3614904f03944329dcf181cea8fadd0218cc92439a0e46e6",
+      "notes": "Self-explanation, graph mapping and linked notes retained as heuristics; left/right-brain overclaim rejected"
+    },
+    {
+      "entry_id": "IX_R1_FIELD_LAB_AIRGAP",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_CAVEATS_C1_ILLUSTRATIVE_MATH_AND_CODE",
+      "pointer": "research/ix/open-agent-foundation-r1/FIELD_LAB_AIRGAP_VALIDATION.md",
+      "sha256": "74fed508e7f77bc0dc002606196fd3415bde8c231852037c0f9adcd35f7a310b",
+      "notes": "Stationary line/divergence/curl/transverse derivative reproduced; no physical/security/metaphysical claim"
+    },
+    {
+      "entry_id": "IX_R1_WORKSPACE_INDEPENDENCE",
+      "kind": "NEGATIVE",
+      "state": "NOT_INDEPENDENT_NEAR_IDENTICAL_SNAPSHOTS",
+      "pointer": "research/ix/open-agent-foundation-r1/R1_VALIDATION_REPORT_20260920_R0.json",
+      "sha256": "a9190eee67de648221fc7c1a4897688c5f281b90ce7c975faa45fde2003aa22a",
+      "notes": "Two Grok workspace ZIPs form one dependency cluster absent new independence evidence"
+    }
+  ]
+}
