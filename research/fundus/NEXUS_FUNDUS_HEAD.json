@@ -5,7 +5,7 @@
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
   "hold_may_be_dropped": false,
   "negative_knowledge_first_class": true,
-  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R2",
+  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R3",
   "one_canonical_core": true,
   "entries": [
     {
@@ -116,9 +116,9 @@
       "entry_id": "IX_EXECUTION",
       "kind": "HOLD",
       "state": "NOT_STARTED",
-      "pointer": "research/ix/open-agent-foundation-r2/README.md",
+      "pointer": "research/ix/open-agent-foundation-r3/README.md",
       "sha256": null,
-      "notes": "R2 research foundation published; activation/execution remains explicitly NOT_STARTED"
+      "notes": "R3 controlled-falsification derivative published; open-agent execution/activation remains NOT_STARTED"
     },
     {
       "entry_id": "HTML_AS_HASH_RECEIPT",
@@ -223,6 +223,70 @@
       "pointer": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
       "sha256": "4513ab20d43f98a42dd479df8d41bfdc460376228dbe6bca38e9851be47871e6",
       "notes": "Exact named system/module/axiom claims not independently established"
+    },
+    {
+      "entry_id": "IX_R3_CONTROLLED_FALSIFICATION_VALIDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_R3_AB_REFERENCE_REPRODUCED_CDE_NOT_EXECUTED",
+      "pointer": "research/ix/open-agent-foundation-r3/R3_VALIDATION_REPORT_20260920_R0.json",
+      "sha256": "04767e287c5c8b535d5fce43fc5143f0c6b2e98b5f74736af1cb707783122bdf",
+      "notes": "Physical R3 drop bound; A/B independently narrowed; C/D/E migrate to R4"
+    },
+    {
+      "entry_id": "IX_R3A_AUTHORITY_BOUNDARY_REFERENCE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_CAVEATS_C1_REFERENCE_HARNESS_9_OF_9_BOUNDARY_TESTS_PASS",
+      "pointer": "research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json",
+      "sha256": "c9b4cebe56d50b3ea051452eda638323d9a95efe17d6133668128a1c354268fd",
+      "notes": "Local in-memory reference only; no Cedar execution or production-security claim"
+    },
+    {
+      "entry_id": "IX_R3B_SIGNED_RECEIPT_BASELINE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_C1_SIGNED_RECEIPT_REFERENCE_REPRODUCED",
+      "pointer": "research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json",
+      "sha256": "c9b4cebe56d50b3ea051452eda638323d9a95efe17d6133668128a1c354268fd",
+      "notes": "Ed25519 + SHA-256 + previous receipt hash; public test key only"
+    },
+    {
+      "entry_id": "IX_R3B_ZKP_EXECUTION",
+      "kind": "HOLD",
+      "state": "NOT_ESTABLISHED",
+      "pointer": "research/ix/open-agent-foundation-r3/R3_SOURCE_CLAIM_CORRECTIONS.md",
+      "sha256": "0cb319f8432096eaa7861ffae11f3b19cc21be22361ae9b19cdaf281ce58b2a9",
+      "notes": "No circuit/proof/proving/verifying receipts in supplied R3 package"
+    },
+    {
+      "entry_id": "IX_R3_OBJECT_ID_COLLISION",
+      "kind": "NEGATIVE",
+      "state": "SAME_OBJECT_ID_TWO_BYTE_VARIANTS",
+      "pointer": "research/ix/open-agent-foundation-r3/SOURCE_PACKAGE_INVENTORY.json",
+      "sha256": "66429112c427ac24e93abbdb0e98429fe64964f2d05ddac7109d3cefaadcc557",
+      "notes": "Mistral/Vibe cross-validation order has distinct GROK_BUILD and META_BUILD byte variants; both preserved"
+    },
+    {
+      "entry_id": "IX_R3C_THREE_STATE_K3",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
+    },
+    {
+      "entry_id": "IX_R3D_PROVENANCE_PORTABILITY",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
+    },
+    {
+      "entry_id": "IX_R3E_SUBSTRATE_SWAP",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
     }
   ]
 }
