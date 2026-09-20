@@ -1,0 +1,79 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R3_CONTROLLED_FALSIFICATION_VALIDATION_20260920_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_R3_AB_REFERENCE_REPRODUCED_CDE_NOT_EXECUTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "ix_execution": "NOT_STARTED",
+  "activation": "NO",
+  "r3_operator_phase_state": "CLOSED_FOR_HANDOFF_TO_R4",
+  "source_package": {
+    "filename": "NEXUS_~3.zip",
+    "bytes": 91584,
+    "sha256": "a61af408a88ff406f2d90aa221af210020f42d41f9c656155dbb09a808a74d38",
+    "entries": 9,
+    "zip_crc": "PASS",
+    "path_traversal": "NONE_FOUND"
+  },
+  "r3_foundation": {
+    "sha256": "89627ebb36dae43ce4e4853ef129b621959262d4d1709d140cf1239956911340",
+    "defined_tracks": ["R3-A", "R3-B", "R3-C", "R3-D", "R3-E"]
+  },
+  "source_track_status": {
+    "R3-A": "EXECUTION_NARRATIVE_PRESENT_RAW_LOG_ABSENT",
+    "R3-B": "EXECUTION_NARRATIVE_PRESENT_ZKP_EXECUTION_ARTIFACTS_ABSENT",
+    "R3-C": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+    "R3-D": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+    "R3-E": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+    "full_five_track_completion": false
+  },
+  "r3a_source_caveat": {
+    "claimed_pass": 6,
+    "claimed_fail": 0,
+    "declared_log_digest": "7f4a9c2e1d8b3a0f6e5d4c3b2a1908f7e6d5c4b3a2918f0e9d8c7b6a5f4e3d2c1b0a",
+    "declared_log_digest_hex_length": 68,
+    "valid_sha256_length": false,
+    "raw_execution_log_present": false,
+    "source_6_of_6_independently_established": false
+  },
+  "axiom_independent_reference": {
+    "python_version": "3.13.5",
+    "cryptography_version": "46.0.4",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "signed_receipt_tests": "4_OF_4_PASS",
+    "authority_boundary_tests": "9_OF_9_PASS",
+    "combined_tests": "13_OF_13_PASS",
+    "network_writes": 0,
+    "external_systems_touched": 0
+  },
+  "r3b": {
+    "signed_receipt_baseline": "INDEPENDENTLY_REPRODUCED_C1",
+    "zkp_circuit_present": false,
+    "zkp_proof_present": false,
+    "zkp_proving_receipt_present": false,
+    "zkp_verification_receipt_present": false,
+    "zkp_performance_comparison": "NOT_ESTABLISHED",
+    "design_conclusion": "SIGNED_RECEIPT_SUFFICIENT_REFERENCE_BASELINE_FOR_CURRENT_DISCLOSED_INTEGRITY_REQUIREMENTS",
+    "zkp_status": "OPTIONAL_PRIVACY_RESEARCH_LAYER_NOT_EXECUTED"
+  },
+  "external_crossvalidation": {
+    "grok_review_present": true,
+    "mistral_vibe_review_embedded_in_chat_log": true,
+    "standalone_mistral_execution_artifact_present": false,
+    "new_independent_execution_receipt_from_crossvalidators": false,
+    "classification": "TEXTUAL_REVIEW_NOT_INDEPENDENT_EMPIRICAL_REPLICATION"
+  },
+  "provenance": {
+    "same_object_id_two_byte_variants": true,
+    "object_id": "NEXUS_OMEGA_R3AB_CROSSVALIDATION_ORDER_TO_MISTRAL_VIBE_20260920_R0",
+    "variant_root_sha256": "b33fb405df0ca493fbdf9f57042740dc8e3495fdb3598ac64cdc3a94fe8e9066",
+    "variant_nested_sha256": "3f392e7eb5fedd18683ee49c121bc92f49dfcb2383766a95b84090954457ce04"
+  },
+  "publication": {
+    "raw_source_bundle": "NO",
+    "raw_agent_transcripts": "NO",
+    "public_safe_derivative": "YES_C1",
+    "activation": "NO",
+    "production_security_claim": "NO",
+    "r4_canonical_continuation": "READY_AFTER_R3_PUBLIC_MAIN_BIND"
+  }
+}
