@@ -1,0 +1,37 @@
+{
+  "cryptography_version": "46.0.4",
+  "external_systems_touched": 0,
+  "network_writes": 0,
+  "not_established": [
+    "CEDAR_RUNTIME_EXECUTION",
+    "ZKP_EXECUTION",
+    "PRODUCTION_SECURITY",
+    "COMPLETE_ATTACK_RESISTANCE",
+    "HUMAN_IDENTITY",
+    "SCIENTIFIC_VALIDITY"
+  ],
+  "object": "NEXUS_OMEGA_AXIOM_IX_R3_REFERENCE_HARNESS_EXECUTION_20260920_R0",
+  "public_key_hex": "8a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c",
+  "public_test_key": true,
+  "python_version": "3.13.5",
+  "receipt_1_sha256": "60d4178ae64b567514521b591772066d7a80c0dfaaa1097922bdb9934f586d1c",
+  "receipt_2_sha256": "b38729b31ed51430e29eac747a2e2b1e8767206821956f559fe8bc34f79256df",
+  "state": "PASS_WITH_CAVEATS_C1_13_OF_13_TESTS_PASS",
+  "tests": [
+    {"detail":"b38729b31ed51430e29eac747a2e2b1e8767206821956f559fe8bc34f79256df","name":"receipt_chain_valid","pass":true},
+    {"detail":"PAYLOAD_HASH_MISMATCH","name":"payload_tamper_rejected","pass":true},
+    {"detail":"SIGNATURE_INVALID","name":"signature_tamper_rejected","pass":true},
+    {"detail":"PREV_HASH_MISMATCH","name":"chain_break_rejected","pass":true},
+    {"detail":"POLICY_PASS","name":"valid_low_risk_executes","pass":true},
+    {"detail":"integrity gate","name":"invalid_signature_blocked","pass":true},
+    {"detail":"ACTION_NOT_ALLOWED","name":"unallowed_direct_action_blocked","pass":true},
+    {"detail":"STALE_PROPOSAL","name":"stale_proposal_blocked","pass":true},
+    {"detail":"HUMAN_AUTH_REQUIRED","name":"high_risk_without_human_auth_blocked","pass":true},
+    {"detail":"HUMAN_AUTH_PROPOSAL_MISMATCH","name":"human_auth_mismatch_blocked","pass":true},
+    {"detail":"HUMAN_AUTH_EXPIRED","name":"expired_human_auth_blocked","pass":true},
+    {"detail":"POLICY_PASS","name":"valid_high_risk_with_bound_auth_executes","pass":true},
+    {"detail":"proposal binding","name":"executor_rechecks_decision_binding","pass":true}
+  ],
+  "tests_passed": 13,
+  "tests_total": 13
+}
