@@ -60,6 +60,9 @@ CANONICAL FUNDUS
 
 Models, frameworks, runtimes and infrastructure are adapters around that body.
 
+The BodyTwin-derived continuity test model is specified separately in
+[BODYTWIN_CONTINUITY_BLUEPRINT.md](BODYTWIN_CONTINUITY_BLUEPRINT.md).
+
 ## Operating invariant
 
 ```text
