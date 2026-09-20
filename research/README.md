@@ -40,6 +40,7 @@ Research publication is not live implementation. Promotion into stable `docs/sch
 
 - `research/ix/open-agent-foundation-r1/` — provider-neutral Open-Agent research foundation.
 - `research/ix/open-agent-foundation-r2/` — integrity/boundary/provenance research foundation.
+- `research/ix/open-agent-foundation-r3/` — controlled-falsification validation and R4 carry-forward.
 - IX remains `IX_EXECUTION=NOT_STARTED`.
 - `research/fundus/` — cross-session C1 reference index; not a truth authority.
 

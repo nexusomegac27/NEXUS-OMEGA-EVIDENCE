@@ -1,0 +1,76 @@
+name: validate-ix-r3-controlled-falsification
+
+on:
+  pull_request:
+    paths:
+      - 'research/ix/open-agent-foundation-r3/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r3-controlled-falsification.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/ix/open-agent-foundation-r3/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r3-controlled-falsification.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify IX R3 derivative manifest
+        working-directory: research/ix/open-agent-foundation-r3
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Verify Fundus manifest
+        working-directory: research/fundus
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Install pinned reference dependency
+        run: python -m pip install --disable-pip-version-check -r research/ix/open-agent-foundation-r3/requirements.txt
+      - name: Re-run public-safe R3 reference harness
+        run: |
+          python research/ix/open-agent-foundation-r3/reference_harness.py > /tmp/r3-result.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          got=json.loads(Path('/tmp/r3-result.json').read_text())
+          expected=json.loads(Path('research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json').read_text())
+          assert got['tests_total']==13 and got['tests_passed']==13
+          assert got['public_key_hex']==expected['public_key_hex']
+          assert got['receipt_1_sha256']==expected['receipt_1_sha256']
+          assert got['receipt_2_sha256']==expected['receipt_2_sha256']
+          assert [x['name'] for x in got['tests']]==[x['name'] for x in expected['tests']]
+          assert all(x['pass'] for x in got['tests'])
+          PY
+      - name: Validate R3 machine-readable invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/ix/open-agent-foundation-r3')
+          r=json.loads((root/'R3_VALIDATION_REPORT_20260920_R0.json').read_text())
+          inv=json.loads((root/'SOURCE_PACKAGE_INVENTORY.json').read_text())
+          f=json.loads(Path('research/fundus/NEXUS_FUNDUS_HEAD.json').read_text())
+          snap=json.loads(Path('research/fundus/heads/NEXUS_FUNDUS_HEAD_20260920_R3.json').read_text())
+          assert r['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert r['truth_authority']=='NONE'
+          assert r['ix_execution']=='NOT_STARTED'
+          assert r['activation']=='NO'
+          assert r['source_package']['sha256']=='a61af408a88ff406f2d90aa221af210020f42d41f9c656155dbb09a808a74d38'
+          assert r['source_track_status']['full_five_track_completion'] is False
+          assert r['r3a_source_caveat']['valid_sha256_length'] is False
+          assert r['r3b']['zkp_performance_comparison']=='NOT_ESTABLISHED'
+          assert r['provenance']['same_object_id_two_byte_variants'] is True
+          assert inv['package']['zip_crc']=='PASS'
+          assert inv['nested_packages'][0]['manifest']['coverage']=='5_OF_6'
+          assert inv['nested_packages'][2]['manifest']['coverage']=='6_OF_7'
+          assert snap['head_id']=='NEXUS_FUNDUS_HEAD_20260920_R3'
+          ix=[e for e in f['entries'] if e['entry_id']=='IX_EXECUTION']
+          assert len(ix)==1 and ix[0]['state']=='NOT_STARTED'
+          print('PASS')
+          PY

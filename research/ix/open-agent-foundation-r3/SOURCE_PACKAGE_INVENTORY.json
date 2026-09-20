@@ -1,0 +1,57 @@
+{
+  "package": {
+    "filename": "NEXUS_~3.zip",
+    "bytes": 91584,
+    "sha256": "a61af408a88ff406f2d90aa221af210020f42d41f9c656155dbb09a808a74d38",
+    "entries": [
+      {"name":"NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R2_INTEGRITY_BOUNDARY_PUBLICATION_CLOSURE_20260920_R0.txt","bytes":8406,"sha256":"a2940487e66d2c325564bc3b7de2486cfa2bf61c28909f364585bcf836ee5603"},
+      {"name":"NEXUS_OMEGA_AXIOM_R3_CONTROLLED_FALSIFICATION_FOUNDATION_20260920_R0.md","bytes":6482,"sha256":"89627ebb36dae43ce4e4853ef129b621959262d4d1709d140cf1239956911340"},
+      {"name":"NEXUS_GROK_R3-A bis R3-E.txt","bytes":23384,"sha256":"b8414bb0a8429f5c42cde70e729b814b32fdac7655fa27e26442db9f52b70835"},
+      {"name":"NEXUS_OMEGA_R3_AB_PACKAGE_20260920.zip","bytes":17704,"sha256":"7ac0d47ba58d32c26ea5191fe4967d85c35dcd57e1d7baba32d972af1ae814cc"},
+      {"name":"NEXUS-OMEGA-AXIOM-R3-B-META-EXECUTION-20260920-R1.md","bytes":7647,"sha256":"178ea045cc51b1c92416bcbad27fdea0c301bc9abb752de4eb8915549df95676"},
+      {"name":"NEXUS_OMEGA_R3AB_META_EXECUTION_GROK_CROSSVALIDATION_AND_ZKP_ANALYSIS_20260920_R0.md","bytes":6418,"sha256":"90eac8867c3cc3ce0226fbb81346f23b57cccc4a509a41af060001d7e0010feb"},
+      {"name":"NEXUS_OMEGA_R3AB_ORDER_FOR_MISTRAL_VIBE_20260920.zip","bytes":26787,"sha256":"097c8f66a659ddaa538047a69675a56f46f32231c17b7e9bb06fd7cc94a92d25"},
+      {"name":"NEXUS_OMEGA_R3AB_CROSSVALIDATED_PACKAGE_20260920.zip","bytes":20343,"sha256":"e941a0462aec344132b84b517585d7219ff248b63fa4f4b9f83d84e816ae9de2"},
+      {"name":"NEXUS_OMEGA_R3AB_CROSSVALIDATION_ORDER_TO_MISTRAL_VIBE_20260920_R0.md","bytes":5876,"sha256":"b33fb405df0ca493fbdf9f57042740dc8e3495fdb3598ac64cdc3a94fe8e9066"}
+    ],
+    "zip_crc": "PASS"
+  },
+  "nested_packages": [
+    {
+      "name":"NEXUS_OMEGA_R3_AB_PACKAGE_20260920.zip",
+      "bytes":17704,
+      "sha256":"7ac0d47ba58d32c26ea5191fe4967d85c35dcd57e1d7baba32d972af1ae814cc",
+      "entries":7,
+      "zip_crc":"PASS",
+      "manifest":{"name":"MANIFEST_SHA256SUMS.txt","listed":5,"match":5,"non_self_entries":6,"coverage":"5_OF_6","uncovered":["README_NEXUS_R3_PACKAGE.txt"]}
+    },
+    {
+      "name":"NEXUS_OMEGA_R3AB_ORDER_FOR_MISTRAL_VIBE_20260920.zip",
+      "bytes":26787,
+      "sha256":"097c8f66a659ddaa538047a69675a56f46f32231c17b7e9bb06fd7cc94a92d25",
+      "entries":8,
+      "zip_crc":"PASS",
+      "manifest":{"present":false}
+    },
+    {
+      "name":"NEXUS_OMEGA_R3AB_CROSSVALIDATED_PACKAGE_20260920.zip",
+      "bytes":20343,
+      "sha256":"e941a0462aec344132b84b517585d7219ff248b63fa4f4b9f83d84e816ae9de2",
+      "entries":8,
+      "zip_crc":"PASS",
+      "manifest":{"name":"MANIFEST_SHA256SUMS_R3AB_CROSSVAL.txt","listed":6,"match":6,"non_self_entries":7,"coverage":"6_OF_7","uncovered":["README_NEXUS_R3AB_CROSSVAL.txt"]}
+    }
+  ],
+  "object_identity_collision": {
+    "object":"NEXUS_OMEGA_R3AB_CROSSVALIDATION_ORDER_TO_MISTRAL_VIBE_20260920_R0",
+    "variant_root":{"bytes":5876,"sha256":"b33fb405df0ca493fbdf9f57042740dc8e3495fdb3598ac64cdc3a94fe8e9066","authority":"GROK_BUILD"},
+    "variant_nested":{"bytes":7738,"sha256":"3f392e7eb5fedd18683ee49c121bc92f49dfcb2383766a95b84090954457ce04","authority":"META_BUILD"},
+    "same_object_id_different_bytes":true
+  },
+  "r3a_source_log": {
+    "declared_log_sha256":"7f4a9c2e1d8b3a0f6e5d4c3b2a1908f7e6d5c4b3a2918f0e9d8c7b6a5f4e3d2c1b0a",
+    "declared_length":68,
+    "valid_sha256_length":false,
+    "raw_log_present":false
+  }
+}

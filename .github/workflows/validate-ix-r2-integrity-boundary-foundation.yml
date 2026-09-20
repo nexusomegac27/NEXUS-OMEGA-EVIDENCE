@@ -37,6 +37,7 @@ jobs:
           d=json.loads((root/'EVIDENCE_DELTA.json').read_text())
           inv=json.loads((root/'SOURCE_PACKAGE_INVENTORY.json').read_text())
           f=json.loads(Path('research/fundus/NEXUS_FUNDUS_HEAD.json').read_text())
+          r2_snapshot=json.loads(Path('research/fundus/heads/NEXUS_FUNDUS_HEAD_20260920_R2.json').read_text())
           assert r['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
           assert r['truth_authority']=='NONE'
           assert r['ix_execution']=='NOT_STARTED'
@@ -50,7 +51,9 @@ jobs:
           assert inv['package']['entries']==15 and len(inv['entries'])==15
           assert d['loop_state']=='NO_LOOP_R2_HAS_MATERIAL_EVIDENCE_DELTA'
           assert d['activation_authority'] is False
-          assert f['head_id']=='NEXUS_FUNDUS_HEAD_20260920_R2'
+          assert r2_snapshot['head_id']=='NEXUS_FUNDUS_HEAD_20260920_R2'
+          ix_r2=[e for e in r2_snapshot['entries'] if e['entry_id']=='IX_EXECUTION']
+          assert len(ix_r2)==1 and ix_r2[0]['state']=='NOT_STARTED'
           ix=[e for e in f['entries'] if e['entry_id']=='IX_EXECUTION']
           assert len(ix)==1 and ix[0]['state']=='NOT_STARTED'
           print('PASS')

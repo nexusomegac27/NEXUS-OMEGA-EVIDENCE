@@ -47,6 +47,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │       ├── validate-r8-r1-r2-crossvalidation.yml
 │       ├── validate-ix-r1-open-agent-foundation.yml
 │       ├── validate-ix-r2-integrity-boundary-foundation.yml
+│       ├── validate-ix-r3-controlled-falsification.yml
 │       ├── validate-scientific-communication.yml
 │       └── validate-scientific-ledger.yml
 ├── AGENTS.md
@@ -140,7 +141,8 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   ├── ix/
 │   │   ├── README.md
 │   │   ├── open-agent-foundation-r1/
-│   │   └── open-agent-foundation-r2/
+│   │   ├── open-agent-foundation-r2/
+│   │   └── open-agent-foundation-r3/
 │   ├── pipeline/
 │   │   ├── README.md
 │   │   ├── POLICY.md
