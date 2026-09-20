@@ -11,8 +11,9 @@ Historical head snapshots are retained under `heads/`. Git history plus explicit
 Current snapshots:
 - `heads/NEXUS_FUNDUS_HEAD_20260920_R1.json`
 - `heads/NEXUS_FUNDUS_HEAD_20260920_R2.json`
+- `heads/NEXUS_FUNDUS_HEAD_20260920_R3.json`
 
-Current discovery head: `NEXUS_FUNDUS_HEAD_20260920_R2`.
+Current discovery head: `NEXUS_FUNDUS_HEAD_20260920_R3`.
 
 ```text
 FUNDUS_REFERENCE != TRUTH_AUTHORITY
