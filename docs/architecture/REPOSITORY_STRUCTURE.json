@@ -69,6 +69,26 @@
     "axiom-platform-audit": {
       "path": "research/r5/axiom-platform-audit",
       "state": "ACTIVE_C1_PLATFORM_OBSERVATION"
+    },
+    "fundus": {
+      "path": "research/fundus",
+      "state": "REFERENCE_INDEX_C1_NO_TRUTH_AUTHORITY"
+    },
+    "r6-livecount": {
+      "path": "research/r6/livecount",
+      "state": "CLOSED_C1_RAW_N_0"
+    },
+    "r7-radiometric": {
+      "path": "research/r7/radiometric-extension",
+      "state": "PUBLISHED_C1_CORRECTED_DERIVATIVE"
+    },
+    "r8": {
+      "path": "research/r8",
+      "state": "ASTRATIS_VIII_CLOSED_R3_PARTIAL_CHECKPOINTS_PUBLISHED"
+    },
+    "astratis-ix-open-agent-r1": {
+      "path": "research/ix/open-agent-foundation-r1",
+      "state": "FOUNDATION_PUBLISHED_EXECUTION_NOT_STARTED"
     }
   },
   "research_lane_contract": {
@@ -79,7 +99,10 @@
   },
   "shared_research_pipeline": {
     "path": "research/pipeline",
-    "owners": ["AXIOM", "CURSOR_PRAXIS"],
+    "owners": [
+      "AXIOM",
+      "CURSOR_PRAXIS"
+    ],
     "package_path_template": "research/pipeline/packages/YYYY/MM/<PACKAGE_ID>",
     "event_path_template": "research/pipeline/events/YYYY/MM/DD/<TIMESTAMP>_<EVENT_ID>.json",
     "stable_package_paths": true,
@@ -121,5 +144,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.2.0"
+  "version": "1.3.0"
 }

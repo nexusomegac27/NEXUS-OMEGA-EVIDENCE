@@ -1,0 +1,66 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R1_OPEN_AGENT_FOUNDATION_VALIDATION_20260920_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_FOUNDATION_PUBLISHED_EXECUTION_NOT_STARTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "ix_execution": "NOT_STARTED",
+  "activation": "NO",
+  "source_package": {
+    "filename": "NEXUS_~1.zip",
+    "bytes": 20460827,
+    "sha256": "d8eb542e704d979915fe7ff986ea26526baf856720ec033019ed0c926c2ce9c6",
+    "entries": 10,
+    "zip_crc": "PASS",
+    "path_traversal": "NONE_FOUND"
+  },
+  "order_bind": {
+    "object": "NEXUS_OMEGA_AXIOM_ACK_ASTRATIS_VIII_CLOSURE_AND_PHASE_IX_OPEN_SOURCE_AGENT_DIRECTION_20260920_R0",
+    "sha256": "077b53700f9d60b7daf7b90807a6e119fea1df32c7697ea680b794e531b2672e",
+    "physical_rehash": "MATCH"
+  },
+  "workspace_dependency": {
+    "workspace_a_sha256": "6d7506f18c4cc9190e0cb0715f37da04f08e794cf34b2e600db8b4e19bb4e130",
+    "workspace_b_sha256": "618af3f9431eaec2220211c22673ed7a92ffccb6a0c74d511d87deb09b8905d5",
+    "workspace_a_file_count": 420,
+    "workspace_b_file_count": 419,
+    "common_files": 419,
+    "common_files_content_changed": 1,
+    "only_a_files": 1,
+    "only_b_files": 0,
+    "scientific_independence": "NOT_ESTABLISHED_NEAR_IDENTICAL_SNAPSHOTS",
+    "evidence_cluster_rule": "COUNT_AS_ONE_DEPENDENCY_CLUSTER_UNLESS_NEW_INDEPENDENCE_IS_SHOWN"
+  },
+  "field_lab_airgap": {
+    "state": "PASS_WITH_CAVEATS_C1_ILLUSTRATIVE_MATH_AND_CODE",
+    "fixed_line_y_0": "REPRODUCED",
+    "symbolic_divergence": "REPRODUCED",
+    "symbolic_curl": "REPRODUCED",
+    "time_dependent_heun_caveat": "PRESERVED",
+    "physical_airgap_claim": "NO",
+    "trinary_ontology_claim": "NO"
+  },
+  "reasoning_methods": {
+    "self_explanation": "HEURISTIC_WITH_EMPIRICAL_COMPONENT_SUPPORT_NOT_VALIDATION_AUTHORITY",
+    "mind_mapping": "STRUCTURING_HEURISTIC_DOMAIN_DEPENDENT",
+    "left_right_hemisphere_claim": "REJECTED_AS_NEUROMYTH_OVERSTATEMENT",
+    "zettelkasten": "INFORMATION_ARCHITECTURE_PATTERN_NOT_SCIENTIFIC_VALIDATOR",
+    "humility_score": "NOT_A_SCIENTIFIC_METRIC_UNLESS_OPERATIONALLY_DEFINED_AND_VALIDATED"
+  },
+  "open_agent": {
+    "identity_independent_of_model": true,
+    "identity_independent_of_provider": true,
+    "identity_independent_of_framework": true,
+    "identity_independent_of_runtime": true,
+    "candidate_matrix": "RESEARCH_CANDIDATES_NOT_SELECTED",
+    "execution": "NOT_STARTED",
+    "installation": "NO",
+    "credential_creation": "NO",
+    "deployment": "NO"
+  },
+  "publication": {
+    "raw_source_bundle": "NO",
+    "raw_workspaces": "NO",
+    "validated_public_safe_derivative": "YES",
+    "third_party_license_inheritance_claim": "NO"
+  }
+}

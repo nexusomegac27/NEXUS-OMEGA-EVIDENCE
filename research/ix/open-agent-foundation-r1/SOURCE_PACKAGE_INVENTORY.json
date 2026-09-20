@@ -1,0 +1,62 @@
+{
+  "package": {
+    "filename": "NEXUS_~1.zip",
+    "bytes": 20460827,
+    "sha256": "d8eb542e704d979915fe7ff986ea26526baf856720ec033019ed0c926c2ce9c6",
+    "entries": 10,
+    "zip_crc": "PASS"
+  },
+  "entries": [
+    {
+      "name": "NEXUS_OMEGA_FEYNMAN_MINDMAPPING_ZETTELKASTEN_ARTIFACT_SYSTEMATICS_FOUNDATION_20260920_R1.md",
+      "bytes": 7727,
+      "sha256": "e0b166c3fe6ffa653c7deba75c3c2be94995dd06abc1be356f02042ae01df462"
+    },
+    {
+      "name": "NEXUS_OMEGA_FEYNMAN_MINDMAPPING_ARTIFACT_SYSTEMATICS_FOUNDATION_20260920_R0.md",
+      "bytes": 7432,
+      "sha256": "8bb9e58c89d305392c0211826195e39344134a6941531749782cf5305e33ef69"
+    },
+    {
+      "name": "wissenschaftliche-gesamtzusammenstellung-nexus-connector-nexus_omega_c27_1dd8.md",
+      "bytes": 33005,
+      "sha256": "9898b1955d1aefc537e71e8fcebf1adf277187cc9801dace20cb1ad5c1efebbc"
+    },
+    {
+      "name": "NEXUS_OMEGA_FIELD_LAB_AIRGAP_LUFTSPALT_CLAUDE_GROK_CROSSVALIDATION_20260920_R0.md",
+      "bytes": 8249,
+      "sha256": "744cdc671f83a7bfae65db0a2710bea3690f7dab895e90b024d0362484715422"
+    },
+    {
+      "name": "e9dK5njlczocUhMG-grok-workspace.zip",
+      "bytes": 10362668,
+      "sha256": "6d7506f18c4cc9190e0cb0715f37da04f08e794cf34b2e600db8b4e19bb4e130"
+    },
+    {
+      "name": "NEXUS_CLAUDE_ARTEFAKTPRUEFUNG.txt",
+      "bytes": 3671,
+      "sha256": "f5cd6085322a6048681fef7d269e1a9158908b2a6b67d629971a53f9170540cb"
+    },
+    {
+      "name": "Gf4soaoZHU7GRTLX-grok-workspace.zip",
+      "bytes": 10174607,
+      "sha256": "618af3f9431eaec2220211c22673ed7a92ffccb6a0c74d511d87deb09b8905d5"
+    },
+    {
+      "name": "nexus-omega-c27-forschungsbericht-wissenschaftliche-open-source-artefakte-&-agentenautonomie.md",
+      "bytes": 23056,
+      "sha256": "15c67559619766a51baa96351af2f4a937c082512f75186a8d1019c949ab3d3a"
+    },
+    {
+      "name": "GROK_PASS_WITH_MAJOR_CAVEATS_C1_VIII_CLOSED_IX_STRATEGIC_FOUNDATION_ACCEPTED.txt",
+      "bytes": 4264,
+      "sha256": "e41dee9f68620b6defa840538749c236ac83d75cb0c6da496fb285a85dee2787"
+    },
+    {
+      "name": "NEXUS_OMEGA_AXIOM_ACK_ASTRATIS_VIII_CLOSURE_AND_PHASE_IX_OPEN_SOURCE_AGENT_DIRECTION_20260920_R0.txt",
+      "bytes": 9205,
+      "sha256": "077b53700f9d60b7daf7b90807a6e119fea1df32c7697ea680b794e531b2672e"
+    }
+  ],
+  "publication_note": "Inventory records identity only. Raw bundled materials are not republished and are not thereby licensed by NEXUS OMEGA."
+}

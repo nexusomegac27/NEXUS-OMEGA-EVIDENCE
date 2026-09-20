@@ -45,6 +45,7 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │       ├── validate-r7-radiometric.yml
 │       ├── validate-r8-custody.yml
 │       ├── validate-r8-r1-r2-crossvalidation.yml
+│       ├── validate-ix-r1-open-agent-foundation.yml
 │       ├── validate-scientific-communication.yml
 │       └── validate-scientific-ledger.yml
 ├── AGENTS.md
@@ -131,6 +132,13 @@ Detailed policy: `docs/governance/REPOSITORY_ORDER_POLICY.md`.
 │   └── r5/
 ├── research/
 │   ├── README.md
+│   ├── fundus/
+│   ├── r6/
+│   ├── r7/
+│   ├── r8/
+│   ├── ix/
+│   │   ├── README.md
+│   │   └── open-agent-foundation-r1/
 │   ├── pipeline/
 │   │   ├── README.md
 │   │   ├── POLICY.md
