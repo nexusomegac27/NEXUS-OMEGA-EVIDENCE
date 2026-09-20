@@ -75,6 +75,38 @@ Exact model revision and model-card terms must still be frozen per experiment.
 
 R1 status for all: candidate only; no NEXUS activation or security assertion.
 
+## Runtime / identity details
+
+### llama.cpp
+
+The current upstream README identifies llama.cpp as a C/C++ LLM-inference project and displays the
+MIT license. The experiment must still pin the exact commit/release and third-party dependency
+notices used in a build.
+
+- https://github.com/ggml-org/llama.cpp
+
+R1 status: `PRIMARY_SOURCE_CHECKED_CANDIDATE`.
+
+### LocalAI
+
+The current upstream repository and LICENSE identify LocalAI as MIT-licensed. Its modular backend
+design makes it relevant as a compatibility/runtime adapter, but that architectural claim must be
+tested rather than assumed to improve NEXUS continuity.
+
+- https://github.com/mudler/LocalAI
+- https://github.com/mudler/LocalAI/blob/master/LICENSE
+
+R1 status: `PRIMARY_SOURCE_CHECKED_CANDIDATE`.
+
+### SPIFFE / SPIRE
+
+The SPIRE upstream repository identifies the project as Apache-2.0 licensed and documents workload
+attestation plus issuance of SPIFFE IDs/SVIDs.
+
+- https://github.com/spiffe/spire
+
+R1 status: `PRIMARY_SOURCE_CHECKED_CANDIDATE`.
+
 ## Local canonical-data candidates
 
 ### SQLite
