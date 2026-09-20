@@ -1,0 +1,292 @@
+{
+  "schema_id": "NEXUS_FUNDUS_C1_INDEX_V1",
+  "reference": true,
+  "truth_authority": "NO",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "hold_may_be_dropped": false,
+  "negative_knowledge_first_class": true,
+  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R3",
+  "one_canonical_core": true,
+  "entries": [
+    {
+      "entry_id": "R6_LIVECOUNT",
+      "kind": "CHECKPOINT",
+      "state": "CLOSED_C1_RAW_N_0",
+      "pointer": "research/r6/livecount/",
+      "sha256": "020dac990415fa477f5436b469f69daee6f698eb",
+      "notes": "MAIN historical; RAW_N=0 preserved"
+    },
+    {
+      "entry_id": "R7_1_2_CORRECTED_DERIVATIVE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_CORRECTED_DERIVATIVE_PUBLISHED",
+      "pointer": "research/r7/radiometric-extension/",
+      "sha256": "b2520f1f42836d416c3937085b1a24296c908a0f",
+      "notes": "NDVI still NOT_COMPUTED empirically"
+    },
+    {
+      "entry_id": "R7_2_RASTER",
+      "kind": "HOLD",
+      "state": "HOLD_C1_PHYSICAL_RASTER_EVIDENCE_ABSENT",
+      "pointer": "research/r8/r8-0-custody-validation/",
+      "sha256": null,
+      "notes": "Empirical raster HOLD"
+    },
+    {
+      "entry_id": "R8_0_CUSTODY",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_CUSTODY_VALIDATED_PROTOCOL_HOLD",
+      "pointer": "research/r8/r8-0-custody-validation/",
+      "sha256": "7f78a8dc",
+      "notes": "Historical main prefix; protocol HOLD"
+    },
+    {
+      "entry_id": "R8_1_DRAFT_FALSIFIED",
+      "kind": "NEGATIVE",
+      "state": "DRAFT_PROTOCOL_FALSIFIED_YAML_INVALID",
+      "pointer": "research/r8/r8-0-custody-validation/R8_1_PROTOCOL_CORRECTION_R1.md",
+      "sha256": null,
+      "notes": "Failed workflow is not a result"
+    },
+    {
+      "entry_id": "R8_LATE_SUPPLEMENT",
+      "kind": "CHECKPOINT",
+      "state": "PARTIAL_MANIFEST_10_OF_11",
+      "pointer": "research/r8/r8-0-custody-validation/LATE_SUPPLEMENT_VALIDATION_20260919_R1.json",
+      "sha256": "9c139bdc",
+      "notes": "26_PUBLICATION_ELIGIBILITY uncovered; SEALED_FULL_PACKAGE_MANIFEST=NOT_ESTABLISHED"
+    },
+    {
+      "entry_id": "R8_1_R1_R8_2_XVAL",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1",
+      "pointer": "research/r8/r8-1-r1-r8-2-crossvalidation/",
+      "sha256": "2578374411a8c93f8218d1b96d066b43c7f8350c",
+      "notes": "Current public main at intake"
+    },
+    {
+      "entry_id": "R3_SIM01_DUAL",
+      "kind": "CHECKPOINT",
+      "state": "FOUNDATIONAL_C1_NUMERIC_MATCH",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "Filled post-merge"
+    },
+    {
+      "entry_id": "ASTRATIS_VIII_CLOSED",
+      "kind": "CHECKPOINT",
+      "state": "CLOSED_BY_OPERATOR",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "R3_FULL_ATOMIC_CLOSURE=NO preserved"
+    },
+    {
+      "entry_id": "EMPIRICAL_NDVI",
+      "kind": "HOLD",
+      "state": "NOT_COMPUTED",
+      "pointer": "research/r8/",
+      "sha256": null,
+      "notes": "Must not be dropped"
+    },
+    {
+      "entry_id": "REANA",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED",
+      "pointer": "research/r8/",
+      "sha256": null,
+      "notes": "Invalid YAML preserved"
+    },
+    {
+      "entry_id": "ACIC",
+      "kind": "HOLD",
+      "state": "AWAITING_EXTERNAL_RETURNS",
+      "pointer": "research/r7/",
+      "sha256": null,
+      "notes": "RAW_N=0"
+    },
+    {
+      "entry_id": "F01_F15",
+      "kind": "HOLD",
+      "state": "RESIDUAL_RISK_SET",
+      "pointer": "research/r8/astratis-viii-closure-r3/",
+      "sha256": null,
+      "notes": "Fixtures not executed"
+    },
+    {
+      "entry_id": "IX_EXECUTION",
+      "kind": "HOLD",
+      "state": "NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r3/README.md",
+      "sha256": null,
+      "notes": "R3 controlled-falsification derivative published; open-agent execution/activation remains NOT_STARTED"
+    },
+    {
+      "entry_id": "HTML_AS_HASH_RECEIPT",
+      "kind": "NEGATIVE",
+      "state": "HTML_AS_CANONICAL_HASH_RECEIPT=NO",
+      "pointer": "Nexus-R8-Final-Mistral-Vibe.html",
+      "sha256": "541b4394003b35330a53f9897b9f98d152e59b480aeac406a7ddd9b8a37a78f9",
+      "notes": "bytes 195838; visualization only"
+    },
+    {
+      "entry_id": "IX_R1_OPEN_AGENT_FOUNDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_FOUNDATION_PUBLISHED_EXECUTION_NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r1/",
+      "sha256": "a9190eee67de648221fc7c1a4897688c5f281b90ce7c975faa45fde2003aa22a",
+      "notes": "Provider-neutral continuity-body architecture; no component selection or activation"
+    },
+    {
+      "entry_id": "IX_R1_OPEN_SOURCE_CANDIDATES",
+      "kind": "CHECKPOINT",
+      "state": "PRIMARY_SOURCE_CHECKED_CANDIDATES_NOT_SELECTED",
+      "pointer": "research/ix/open-agent-foundation-r1/OPEN_SOURCE_CANDIDATE_MATRIX.md",
+      "sha256": "8ac5c07aec57ce3e76a8fce3a5cebc4777439cdbf5c036090a4530489a2ed599",
+      "notes": "Open-source/open-weight/open-resource candidates separated by openness class; R2 testing required"
+    },
+    {
+      "entry_id": "IX_R1_REASONING_METHODS",
+      "kind": "CORRECTION",
+      "state": "HEURISTICS_NARROWED_NO_VALIDATION_AUTHORITY",
+      "pointer": "research/ix/open-agent-foundation-r1/ARTIFACT_REASONING_METHODS_CORRECTION.md",
+      "sha256": "c010489dceafa06b3614904f03944329dcf181cea8fadd0218cc92439a0e46e6",
+      "notes": "Self-explanation, graph mapping and linked notes retained as heuristics; left/right-brain overclaim rejected"
+    },
+    {
+      "entry_id": "IX_R1_FIELD_LAB_AIRGAP",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_CAVEATS_C1_ILLUSTRATIVE_MATH_AND_CODE",
+      "pointer": "research/ix/open-agent-foundation-r1/FIELD_LAB_AIRGAP_VALIDATION.md",
+      "sha256": "74fed508e7f77bc0dc002606196fd3415bde8c231852037c0f9adcd35f7a310b",
+      "notes": "Stationary line/divergence/curl/transverse derivative reproduced; no physical/security/metaphysical claim"
+    },
+    {
+      "entry_id": "IX_R1_WORKSPACE_INDEPENDENCE",
+      "kind": "NEGATIVE",
+      "state": "NOT_INDEPENDENT_NEAR_IDENTICAL_SNAPSHOTS",
+      "pointer": "research/ix/open-agent-foundation-r1/R1_VALIDATION_REPORT_20260920_R0.json",
+      "sha256": "a9190eee67de648221fc7c1a4897688c5f281b90ce7c975faa45fde2003aa22a",
+      "notes": "Two Grok workspace ZIPs form one dependency cluster absent new independence evidence"
+    },
+    {
+      "entry_id": "IX_R1_BODYTWIN_CONTINUITY_BLUEPRINT",
+      "kind": "CHECKPOINT",
+      "state": "C1_CONTINUITY_TEST_BLUEPRINT_EXECUTION_NOT_STARTED",
+      "pointer": "research/ix/open-agent-foundation-r1/BODYTWIN_CONTINUITY_BLUEPRINT.md",
+      "sha256": "aab005edfe43b54500521298454fb7bc9b1543e583f5e9117b8954189d2903f2",
+      "notes": "BodyTwin-derived substrate-replacement continuity pattern; no personhood/consciousness claim"
+    },
+    {
+      "entry_id": "IX_R2_INTEGRITY_BOUNDARY_FOUNDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_PUBLIC_SAFE_DERIVATIVE_READY",
+      "pointer": "research/ix/open-agent-foundation-r2/",
+      "sha256": "dd388118b379711db24019ab5a254b4e4d09e9be44b3015cb69c11364730ebd8",
+      "notes": "ZKP, authority-boundary, provenance and ternary research narrowed to validated C1 scope; no activation"
+    },
+    {
+      "entry_id": "IX_R2_ZKP_SCOPE",
+      "kind": "CORRECTION",
+      "state": "FORMAL_PREDICATE_PROOF_NOT_SCIENTIFIC_VALIDITY",
+      "pointer": "research/ix/open-agent-foundation-r2/ZKP_INTEGRITY_CORRECTIONS.md",
+      "sha256": "290b571e96014f41af3e4c4ec543d858dd788217448f4133a2a1707348e64519",
+      "notes": "Key possession != authorship; range proof != quality validation; no hidden global quality score"
+    },
+    {
+      "entry_id": "IX_R2_TERNARY_KLEENE_SCOPE",
+      "kind": "CORRECTION",
+      "state": "BALANCED_TERNARY_NOT_KLEENE_K3",
+      "pointer": "research/ix/open-agent-foundation-r2/TERNARY_KLEENE_CORRECTIONS.md",
+      "sha256": "1badb559bd63fe260df05e572949e3ff97cb18ea739dcab986909ab8ad7b0a97",
+      "notes": "Helix9 and SBTCVM established as numerical ternary artifacts; epistemic K3 equivalence rejected"
+    },
+    {
+      "entry_id": "IX_R2_AUTHORITY_BOUNDARY_CANDIDATES",
+      "kind": "CHECKPOINT",
+      "state": "PRIMARY_SOURCE_CHECKED_CANDIDATES_NOT_SELECTED",
+      "pointer": "research/ix/open-agent-foundation-r2/BOUNDARY_PROVENANCE_CANDIDATE_MATRIX.md",
+      "sha256": "4897eb4da7d940e0c1db49b30b8abe129a56da611bff50ee9798261d4756bbc8",
+      "notes": "CUSTODY/MAIW/Cedar/provenance candidates; control objective and enforcement implementation remain separate"
+    },
+    {
+      "entry_id": "IX_R2_FLAMEWALKER_SOURCE_GAP",
+      "kind": "NEGATIVE",
+      "state": "SOURCE_GAP",
+      "pointer": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
+      "sha256": "4513ab20d43f98a42dd479df8d41bfdc460376228dbe6bca38e9851be47871e6",
+      "notes": "Exact named public artifact not independently established"
+    },
+    {
+      "entry_id": "IX_R2_HE2_NET_SOURCE_GAP",
+      "kind": "NEGATIVE",
+      "state": "SOURCE_GAP",
+      "pointer": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
+      "sha256": "4513ab20d43f98a42dd479df8d41bfdc460376228dbe6bca38e9851be47871e6",
+      "notes": "Exact named system/module/axiom claims not independently established"
+    },
+    {
+      "entry_id": "IX_R3_CONTROLLED_FALSIFICATION_VALIDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_R3_AB_REFERENCE_REPRODUCED_CDE_NOT_EXECUTED",
+      "pointer": "research/ix/open-agent-foundation-r3/R3_VALIDATION_REPORT_20260920_R0.json",
+      "sha256": "04767e287c5c8b535d5fce43fc5143f0c6b2e98b5f74736af1cb707783122bdf",
+      "notes": "Physical R3 drop bound; A/B independently narrowed; C/D/E migrate to R4"
+    },
+    {
+      "entry_id": "IX_R3A_AUTHORITY_BOUNDARY_REFERENCE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_CAVEATS_C1_REFERENCE_HARNESS_9_OF_9_BOUNDARY_TESTS_PASS",
+      "pointer": "research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json",
+      "sha256": "c9b4cebe56d50b3ea051452eda638323d9a95efe17d6133668128a1c354268fd",
+      "notes": "Local in-memory reference only; no Cedar execution or production-security claim"
+    },
+    {
+      "entry_id": "IX_R3B_SIGNED_RECEIPT_BASELINE",
+      "kind": "CHECKPOINT",
+      "state": "PASS_C1_SIGNED_RECEIPT_REFERENCE_REPRODUCED",
+      "pointer": "research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json",
+      "sha256": "c9b4cebe56d50b3ea051452eda638323d9a95efe17d6133668128a1c354268fd",
+      "notes": "Ed25519 + SHA-256 + previous receipt hash; public test key only"
+    },
+    {
+      "entry_id": "IX_R3B_ZKP_EXECUTION",
+      "kind": "HOLD",
+      "state": "NOT_ESTABLISHED",
+      "pointer": "research/ix/open-agent-foundation-r3/R3_SOURCE_CLAIM_CORRECTIONS.md",
+      "sha256": "0cb319f8432096eaa7861ffae11f3b19cc21be22361ae9b19cdaf281ce58b2a9",
+      "notes": "No circuit/proof/proving/verifying receipts in supplied R3 package"
+    },
+    {
+      "entry_id": "IX_R3_OBJECT_ID_COLLISION",
+      "kind": "NEGATIVE",
+      "state": "SAME_OBJECT_ID_TWO_BYTE_VARIANTS",
+      "pointer": "research/ix/open-agent-foundation-r3/SOURCE_PACKAGE_INVENTORY.json",
+      "sha256": "66429112c427ac24e93abbdb0e98429fe64964f2d05ddac7109d3cefaadcc557",
+      "notes": "Mistral/Vibe cross-validation order has distinct GROK_BUILD and META_BUILD byte variants; both preserved"
+    },
+    {
+      "entry_id": "IX_R3C_THREE_STATE_K3",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
+    },
+    {
+      "entry_id": "IX_R3D_PROVENANCE_PORTABILITY",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
+    },
+    {
+      "entry_id": "IX_R3E_SUBSTRATE_SWAP",
+      "kind": "HOLD",
+      "state": "NOT_EXECUTED_IN_SUPPLIED_PACKAGE",
+      "pointer": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "sha256": "a9fcf93a5d778ad35d4cbc6a7ee7a4abb1dd9e111ce37a51342a1f85dd24cc6e",
+      "notes": "Carry forward to R4"
+    }
+  ]
+}
