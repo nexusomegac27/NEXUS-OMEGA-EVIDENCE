@@ -1,0 +1,44 @@
+name: validate-r8-r1-r2-crossvalidation
+
+on:
+  pull_request:
+    paths:
+      - 'research/r8/r8-1-r1-r8-2-crossvalidation/**'
+      - '.github/workflows/validate-r8-r1-r2-crossvalidation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/r8/r8-1-r1-r8-2-crossvalidation/**'
+      - '.github/workflows/validate-r8-r1-r2-crossvalidation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SHA-256 manifest
+        working-directory: research/r8/r8-1-r1-r8-2-crossvalidation
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Validate adjudication invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/r8/r8-1-r1-r8-2-crossvalidation')
+          r1=json.loads((root/'R8_1_R1_VALIDATION_20260920_R0.json').read_text())
+          r2=json.loads((root/'R8_2_SIMULATION_VALIDATION_20260920_R0.json').read_text())
+          assert r1['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert r1['truth_authority']=='NONE'
+          assert r1['package']['manifest_match']=='15_OF_15'
+          assert r1['not_established']['empirical_ndvi'] is True
+          assert r2['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert r2['package']['listed_manifest_match']=='6_OF_6'
+          assert r2['package']['manifest_coverage']=='6_OF_7'
+          assert r2['sim_01']['package_gt_1_percent_equals_bug_fixture']=='REJECTED_AS_INVALID_UNIVERSAL_FALSIFIER'
+          assert r2['reana']['execution']=='NOT_ESTABLISHED'
+          assert r2['publication']['full_atomic_simulation_promotion']=='NO_R3_REQUIRED'
+          print('PASS')
+          PY
