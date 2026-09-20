@@ -1,0 +1,47 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R8_1_R1_VALIDATION_20260920_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_CUSTODY_AND_GUARD_METHOD_VALIDATED_EMPIRICAL_HOLD",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "package": {
+    "filename": "[STRIPPED-83-bytes].zip",
+    "bytes": 9074,
+    "sha256": "feb93ac28ec960b43df873b01d62c0b6f226274e97aea8ab02d6d122ed3e6c3a",
+    "zip_entries": 16,
+    "zip_crc": "PASS",
+    "manifest_listed": 15,
+    "manifest_match": "15_OF_15",
+    "full_non_self_manifest_coverage": "15_OF_15"
+  },
+  "workspace_bind": {
+    "workspace_sha256": "6647ec76db1b217bd58c68185fac036d21014ccf9a405e1d2f1b9da6f8c5eb79",
+    "subtree": "artifacts/r8_1_r1_package/",
+    "byte_identity": "16_OF_16"
+  },
+  "validated": {
+    "json_parse": "PASS",
+    "python_stub_compile": "PASS",
+    "provenance_hash_separation": "PASS",
+    "scl_policy_explicit": "PASS_AS_PREREGISTERED_POLICY",
+    "hardcoded_valid_fraction_rejected": true,
+    "hardcoded_ndvi_values_rejected": true,
+    "fixed_sigma_0_005_rejected": true,
+    "fixed_sigma_0_025_rejected": true
+  },
+  "not_established": {
+    "physical_b04": true,
+    "physical_b08": true,
+    "physical_scl": true,
+    "source_identity": true,
+    "empirical_ndvi": true,
+    "empirical_ndvi_uncertainty": true,
+    "reana_successor_yaml_present": false,
+    "snap_implementation_present": false,
+    "container_digest_bound": false,
+    "dual_implementation_complete": false
+  },
+  "publication": {
+    "validated_c1_derivative": "YES",
+    "empirical_claims": "NO"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R8_2_SIMULATION_VALIDATION_20260920_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_SIMULATION_CORE_PARTIALLY_REPRODUCED_R3_REQUIRED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "package": {
+    "filename": "R8_2_SIMULATION_CATEGORY_MISTRAL_VIBE_GROK_R1.zip",
+    "bytes": 6484,
+    "sha256": "4f6a0f9059edc33aacb8db41a25e0b3a9c636f2b071f3892dc80d6cc2e214a76",
+    "zip_entries": 8,
+    "zip_crc": "PASS",
+    "listed_manifest_match": "6_OF_6",
+    "non_self_objects": 7,
+    "manifest_coverage": "6_OF_7",
+    "uncovered": ["26_PUBLICATION_ELIGIBILITY_SIMULATION.json"]
+  },
+  "sim_01": {
+    "script_sha256": "0b3a51eabf91c1c617f43d034608f382176ed1ba0a50c60c5dfa82aab72ac010",
+    "red": 0.08,
+    "nir": 0.25,
+    "ndvi": 0.515151515151515,
+    "analytic_sigma_abs": 0.09641435995156428,
+    "analytic_sigma_rel": 0.0007791810261008788,
+    "package_declared_mc_n": 100000,
+    "script_main_mc_n": 10000,
+    "independent_mc_100000_seed_42_sigma_abs": 0.0978928157035729,
+    "independent_mc_100000_seed_42_sigma_rel": 0.0007795006983539178,
+    "abs_mc_vs_taylor_percent": 1.5334393681100567,
+    "rel_mc_vs_taylor_percent": 0.04102669884540333,
+    "package_gt_1_percent_equals_bug_fixture": "REJECTED_AS_INVALID_UNIVERSAL_FALSIFIER",
+    "method_hash_field": "PLACEHOLDER_IN_SOURCE_JSON",
+    "container_digest": "PLACEHOLDER_IN_SOURCE_JSON"
+  },
+  "sim_02": {
+    "synthetic_distribution": true,
+    "policy_a_valid_fraction": 0.835,
+    "policy_b_core_fraction": 0.55,
+    "arithmetic": "REPRODUCED",
+    "empirical_valid_fraction": "NOT_ESTABLISHED"
+  },
+  "sim_03": {
+    "input_epsg4326": [10.689, 53.8694],
+    "output_epsg25832": [611054.5344123215, 5970313.421324412],
+    "pyproj_version": "3.7.2",
+    "proj_version": "9.5.1",
+    "crs_transform": "REPRODUCED",
+    "helmert_itrf2020_to_etrs89": "NOT_ESTABLISHED",
+    "generic_ce90_8m": "NOT_ACCEPTED",
+    "package_ecef": [3703561.7, 699063.4, 5128190.2],
+    "independent_wgs84_ecef_h0": [3703567.9290410704, 699060.0318260607, 5128186.228187429],
+    "ecef_vector_difference_m": 8.119165193665802
+  },
+  "reana": {
+    "yaml_parse": "PASS",
+    "execution": "NOT_ESTABLISHED",
+    "all_consumed_files_declared_as_inputs": false,
+    "pyproj_dependency_bound": false,
+    "container_digest_bound": false,
+    "fresh_run_receipts": false
+  },
+  "publication": {
+    "validated_partial_simulation_findings": "YES_C1",
+    "full_atomic_simulation_promotion": "NO_R3_REQUIRED",
+    "empirical_claims": "NO"
+  }
+}
