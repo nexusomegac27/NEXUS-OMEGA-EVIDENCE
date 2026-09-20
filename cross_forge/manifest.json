@@ -1,0 +1,34 @@
+{
+  "object": "NEXUS_OMEGA_CROSS_FORGE_FOUNDATION_MANIFEST_V1",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1",
+  "canonical_content_digest": "SHA256",
+  "provider_git_object_id_role": "PROVENANCE_LOCATOR_NOT_SCIENTIFIC_DIGEST",
+  "github": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "main_anchor": "7c93e73c0e39a6604b4c00996b5b04c3ef413b4e",
+    "active_pr": 11,
+    "active_pr_head": "3c7910e4d53679d1c6eb4e642464b9e1cabf5ed4",
+    "pr_state": "OPEN_DRAFT_UNMERGED"
+  },
+  "gitlab": {
+    "project_id": 81872416,
+    "project": "nexus.omega.c27-group/nexus.omega.c27-project",
+    "main_anchor": "a4402fe01e173d1e0e040c6f71dce6b961d5acac",
+    "foundation_branch": "axiom/gitlab-parallel-forge-foundation-20260901",
+    "role": "INDEPENDENT_SECONDARY_FORGE"
+  },
+  "terminal_bundle": {
+    "state": "CURSOR_REPORTED_TERMINAL_COMPLETE_PENDING_AXIOM_BYTE_ADJUDICATION",
+    "verdict": "T2_BUNDLED_RESEARCH_PROCESSED_WITH_MATERIAL_SOURCE_GAPS_C1",
+    "master_sha256": "e8ec4d788d6f2999ea0ca98ba0df9d7baaa7788cfce13696aa5df4eb4161a9b8",
+    "payload_verify": "16_OF_16_OK_REPORTED_BY_CURSOR",
+    "repair_receipt_sha256": "a3a63ba36581052ab92970bcb3d9f31cf89724a4418a523973543767f04b39cd",
+    "axiom_independent_rehash": "NOT_EXECUTED_SOURCE_BYTES_NOT_PRESENT"
+  },
+  "cross_forge_state": "FOUNDATION_ONLY_REPLICATION_NOT_YET_ESTABLISHED",
+  "merge": false,
+  "deploy": false,
+  "claim_promotion": false,
+  "source_object_substitution": false
+}

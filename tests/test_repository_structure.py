@@ -35,6 +35,10 @@ class RepositoryStructureTests(unittest.TestCase):
             MODULE.validate_root_entries(names),
         )
 
+    def test_cross_forge_is_allowlisted_domain(self):
+        self.assertIn("cross_forge", MODULE.ROOT_DIRS)
+        self.assertIn("cross_forge/README.md", MODULE.REQUIRED_READMES)
+
     def test_r5_lane_without_readme_fails(self):
         with tempfile.TemporaryDirectory() as td:
             r5_root = Path(td) / "research" / "r5"

@@ -18,14 +18,21 @@ Before any write, answer:
 1. Is this universal repository control? → root or `.github/` only if allowlisted.
 2. Is this content-addressed scientific evidence? → `objects/` + `index/`.
 3. Is this communication/provenance ledger material? → `communication/`.
-4. Is this stable documentation? → `docs/`.
-5. Is this a machine contract? → `schema/`.
-6. Is this executable repository tooling? → `scripts/`.
-7. Is this an automated test? → `tests/`.
-8. Is this a validation fixture/binding/status artifact? → `validation/`.
-9. Is this an example? → `examples/`.
-10. Is this active/pre-integration research? → `research/<phase>/<agent-or-topic>/`.
-11. Is this retired, non-path-bound historical material? → `archive/`.
+4. Is this provider-independent cross-forge replication/divergence/reconciliation control? → `cross_forge/`.
+5. Is this stable documentation? → `docs/`.
+6. Is this a machine contract? → `schema/`.
+7. Is this executable repository tooling? → `scripts/`.
+8. Is this an automated test? → `tests/`.
+9. Is this a validation fixture/binding/status artifact? → `validation/`.
+10. Is this an example? → `examples/`.
+11. Is this active/pre-integration research? → `research/<phase>/<agent-or-topic>/`.
+12. Is this retired, non-path-bound historical material? → `archive/`.
+
+## Cross-forge rule
+
+`cross_forge/` owns only provider-independent control-plane records: exact ref/commit bindings, content reconciliation, divergence receipts, CI correlation, and cross-forge state. It does not absorb scientific evidence, communication provenance, or active research simply because those objects are present on more than one provider.
+
+A GitHub pass is never copied into GitLab as a GitLab pass, and vice versa. Cross-forge equality requires explicit content binding; divergence is append-only evidence and must not be erased by force-push reconciliation.
 
 ## Root prohibition
 
@@ -59,6 +66,7 @@ AXIOM and Cursor/PRAXIS permanently check repository order when:
 - preparing a patch;
 - preparing a commit/PR;
 - ingesting a new research package;
+- reconciling two forge states;
 - closing a phase.
 
 If routing is wrong but evidence identity is unaffected, correct routing and continue. If routing changes a bound path or source identity, treat it as a material migration.

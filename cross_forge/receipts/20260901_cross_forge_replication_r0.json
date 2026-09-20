@@ -1,0 +1,80 @@
+{
+  "object": "NEXUS_OMEGA_CROSS_FORGE_REPLICATION_RECEIPT_20260901_R0",
+  "claim_ceiling": "C1",
+  "state": "CONTENT_REPLICATED_SHA256_BOUND_CI_INDEPENDENCE_PENDING",
+  "github": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "branch": "axiom/cross-forge-gitlab-integration-20260901",
+    "base_main": "7c93e73c0e39a6604b4c00996b5b04c3ef413b4e",
+    "pre_receipt_head": "2fadaea33d8cf457c6d2eab20e3273b22f7954fa"
+  },
+  "gitlab": {
+    "project_id": 81872416,
+    "project": "nexus.omega.c27-group/nexus.omega.c27-project",
+    "branch": "axiom/gitlab-parallel-forge-foundation-20260901",
+    "pre_receipt_head": "92a852e018fb5643b6c9c63976ce63559c89fc39",
+    "merge_request": 1
+  },
+  "identity_method": "INDEPENDENT_PROVIDER_FETCH_PLUS_IDENTICAL_GIT_BLOB_ID_PLUS_GITLAB_CONTENT_SHA256",
+  "github_direct_sha256_rehash": "NOT_EXECUTED",
+  "objects": [
+    {
+      "path": "docs/NEXUS_GITLAB_PARALLEL_FORGE_POLICY_V1.md",
+      "bytes": 3353,
+      "sha256": "02c3d6f1ee2485846dd323c0de024ed4bd831ac7b689f301a5f020cc2ce301e4",
+      "github_blob": "8a1d613eadf48e6b7c770d414767f1bd2dc5690b",
+      "gitlab_blob": "8a1d613eadf48e6b7c770d414767f1bd2dc5690b",
+      "blob_match": true
+    },
+    {
+      "path": "docs/NEXUS_GITLAB_STANDARDS_COMPARISON_20260901_R0.md",
+      "bytes": 2861,
+      "sha256": "9372e6f9edc9ec0de7d2dcb30171b96ac9623505dda3b2d85f617deb5b0b0214",
+      "github_blob": "885d89f39fda6e9bc06ccd085fc9babae356c0aa",
+      "gitlab_blob": "885d89f39fda6e9bc06ccd085fc9babae356c0aa",
+      "blob_match": true
+    },
+    {
+      "path": "cross_forge/manifest.json",
+      "bytes": 1470,
+      "sha256": "64e6e803214c3e5992d83da2d96f990aba1ff61c13a39c2e14ba5c20bd7a8e61",
+      "github_blob": "c05000843c348b3b9c1f24d650e82a69fcff62c4",
+      "gitlab_blob": "c05000843c348b3b9c1f24d650e82a69fcff62c4",
+      "blob_match": true
+    },
+    {
+      "path": "scripts/validate_cross_forge_manifest.py",
+      "bytes": 1070,
+      "sha256": "c0e4e314e7f6b0468fbb4406a421dd2f2e453af6d8a368ad9063e187e39f7300",
+      "github_blob": "da86f9576233ff97962113d26074d2614e3a43c3",
+      "gitlab_blob": "da86f9576233ff97962113d26074d2614e3a43c3",
+      "blob_match": true
+    },
+    {
+      "path": "tests/test_cross_forge_manifest.py",
+      "bytes": 1014,
+      "sha256": "c3c496c03cc66eadd11bf4f94c67af35de83fc5a6020c827db73416a02d77cda",
+      "github_blob": "a57da01063619b45a1040a550eb44d8eebc47dc1",
+      "gitlab_blob": "a57da01063619b45a1040a550eb44d8eebc47dc1",
+      "blob_match": true
+    }
+  ],
+  "common_objects_verified": 5,
+  "common_objects_blob_match": 5,
+  "gitlab_ci": {
+    "state": "PLATFORM_IDENTITY_GATE_PENDING",
+    "failed_mr_pipeline": 2810245896,
+    "jobs_instantiated": 0,
+    "last_error": "Identity verification is required in order to run CI jobs",
+    "classification": "PLATFORM_ACCOUNT_GATE_NOT_CI_CONFIG_FAILURE"
+  },
+  "github_ci": {
+    "state": "PENDING_VALIDATION_AFTER_RECEIPT_PUSH"
+  },
+  "slsa_build_reproduced": false,
+  "semantic_validation_reproduced": false,
+  "merge": false,
+  "deploy": false,
+  "claim_promotion": false,
+  "source_object_substitution": false
+}

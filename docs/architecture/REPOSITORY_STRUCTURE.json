@@ -6,6 +6,7 @@
     ".github",
     "archive",
     "communication",
+    "cross_forge",
     "docs",
     "examples",
     "index",
@@ -33,6 +34,11 @@
     "communication": {
       "index": "communication/index/v1",
       "objects": "communication/objects/sha256"
+    },
+    "cross_forge_control": {
+      "root": "cross_forge",
+      "manifest": "cross_forge/manifest.json",
+      "receipts": "cross_forge/receipts"
     },
     "scientific_evidence": {
       "index": "index/v1",
@@ -76,6 +82,14 @@
     "raw_research_not_integration_authority": true,
     "producer_return_not_independent_validation": true,
     "cross_phase_infrastructure_exception": "research/pipeline"
+  },
+  "cross_forge_contract": {
+    "domain": "cross_forge",
+    "canonical_content_digest": "SHA256",
+    "provider_status_not_transitive": true,
+    "divergence_append_only": true,
+    "source_object_substitution_prohibited": true,
+    "force_push_for_reconciliation_prohibited": true
   },
   "shared_research_pipeline": {
     "path": "research/pipeline",
@@ -121,5 +135,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.2.0"
+  "version": "1.3.0"
 }
