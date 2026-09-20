@@ -1,0 +1,1130 @@
+Ja. **Zuerst Cursor. Keine Expertenrunde davor.** Ich habe den aktuellen Intake vor dem Handoff selbst byteweise gegengeprüft – und dabei genau den Befund gefunden, für den wir den Luftspalt brauchen.
+
+Der von GROK eingebettete Vorvalidierungs-Handshake behauptet für `NEXUS_(DT-EPN) - NETWORK.txt` **15.014 Bytes / `f0c7e027…`** und daraus einen Combined Hash `2f0f778b…`.  Die **hier tatsächlich vorliegende Datei** hat jedoch **18.326 Bytes / `846b550a…`**. Die anderen drei gebundenen Dateien stimmen bytegenau mit den angegebenen Einzelhashes überein. Damit ist der alte Combined Hash für den jetzigen Intake **nicht falsch im historischen Sinn, aber nicht auf diese aktuelle Vier-Dateien-Menge anwendbar**. Der aktuelle physische Combined Hash in derselben Reihenfolge ist:
+
+```text
+CURRENT_4_FILE_BYTES  = 84676
+CURRENT_COMBINED_SHA256 =
+66d6929178d0cd9c4ed2ef83a3f7dd33f08cbde726c41e7a470b929d5894402d
+```
+
+Das PDF behandle ich separat als **rendered/supplemental research mirror**, nicht als fünfte unabhängige Evidenzquelle; sein eigener physischer Hash lautet `a041eafc…`, 130.644 Bytes. Inhaltlich enthält das Material genau die gewünschte Forschungsrichtung – DTN, GNUnet-Modularität, Signed Receipts, optionales ZKP und Transport-Agnostik – enthält aber zugleich starke Formulierungen wie „nicht-korrumpierbar“ und verschiedene Architekturannahmen, die Cursor ausdrücklich **nicht erben**, sondern falsifizieren soll.  
+
+Damit ist dies der **kanonische Push an Cursor**:
+
+```text
+OBJECT =
+NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R5_DTEPN_FOUNDATION_INTAKE_REHASH_CROSSVALIDATION_AND_CANONICAL_BIND_ORDER_TO_CURSOR_20260920_R0
+
+STATE =
+AUTHORIZED_CURSOR_VERIFY_ONLY_CROSSVALIDATION_C1
+R5_EXECUTION_NOT_STARTED
+EXPERT_EXECUTION_NOT_AUTHORIZED
+
+AUTHORITY =
+OPERATOR_ALEXANDER_VIA_AXIOM
+
+CLAIM_CEILING =
+C1_DESCRIPTIVE_ONLY
+
+MODE =
+PHYSICAL_REHASH
++ SOURCE_BIND
++ SCIENTIFIC_CROSSVALIDATION
++ CANONICAL_FOUNDATION_ASSESSMENT
+
+IMPLEMENTATION =
+NO
+
+ACTIVATION =
+NO
+
+PROMOTION =
+NO
+
+PUBLIC_WRITE =
+NO
+
+GIT_PUSH =
+NO
+
+EXPERT_HANDOFF =
+NO
+```
+
+## 1. CANONICAL PREDECESSOR
+
+```text
+PREDECESSOR =
+NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R5_CANONICAL_CONTINUATION_PUSH_PREP_20260920_R0
+
+UPSTREAM =
+NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R4_CANONICAL_RESEARCH_EXECUTION_ORDER_20260920_R0
+
+R3 =
+SEALED_AND_UNCHANGED
+
+FUNDUS =
+R3
+
+R4_LOGICAL_TRACK =
+CROSSVALIDATED
+
+R4_CHAIN_FULL_BYTE_ADJUDICATION =
+PENDING
+
+R4_RESIDUAL_GATE =
+PRESERVE_EXACT
+
+R5 =
+FOUNDATION_INTAKE_UNDER_CROSSVALIDATION
+
+IX_AGENT_EXECUTION =
+NOT_STARTED
+
+ACTIVATION =
+NO
+
+PROMOTION =
+NO
+```
+
+**R5 darf R4s ausstehenden physischen Rehash nicht implizit schließen.**
+
+```text
+R4_RESIDUAL_GAP != R5_BLOCKER
+R4_RESIDUAL_GAP != R4_PASS
+R5_CONTINUATION != R4_PROMOTION
+```
+
+---
+
+# 2. R5 SCIENTIFIC IDENTITY
+
+Der neue Forschungsgegenstand wird vorläufig gebunden als:
+
+```text
+R5_PRIMARY_NAME =
+DELAY_TOLERANT_EPISTEMIC_PROVENANCE_NETWORK
+
+R5_SHORT =
+DT-EPN
+
+NOAM =
+CONCRETE_RESEARCH_USE_CASE_UNDER_DT_EPN
+
+NOAM_EXPANSION =
+NEXUS_OMEGA_ARTIFACT_MESH
+```
+
+Die Hierarchie ist:
+
+```text
+DT-EPN
+  = GENERAL_ARCHITECTURAL_RESEARCH_OBJECT
+
+NOAM
+  = ONE_CONCRETE_APPLICATION_AND_STRESS_CASE
+
+GNUNET
+DTN
+BRIAR
+TOR
+I2P
+MESHTASTIC
+IPFS
+ZKP
+SIGNED_RECEIPTS
+  = CANDIDATE_MODULES_OR_PRIMITIVES
+
+NONE_OF_THE_ABOVE =
+FOUNDATIONAL_TRUTH_OR_MANDATORY_SINGLE_DEPENDENCY
+```
+
+Der Zweck von R5 ist **nicht**, einen bestimmten Stack zu bestätigen.
+
+Der Zweck ist zu untersuchen, ob ein epistemisches Provenienznetz so modular formulierbar ist, dass Transport, Provenienz, Identität, Speicherung, Privacy und Validierung voneinander getrennt bleiben und der Verlust eines Moduls nicht automatisch den Verlust des epistemischen Kerns bedeutet.
+
+---
+
+# 3. AIRGAP CONSTITUTION
+
+Folgende Regel ist für R5 präregistriert und darf durch kein Ergebnis überschrieben werden:
+
+```text
+OBJECT =
+NEXUS_AIRGAP_NON_ABSOLUTISM_LAW
+
+NO_COMPONENT_IS_TRUTH_AUTHORITY
+
+NO_EVIDENCE_OBJECT_SELF_PROMOTES
+
+NO_CONSENSUS_EQUALS_TRUTH
+
+NO_REPUTATION_EQUALS_TRUTH
+
+NO_CRYPTOGRAPHIC_VALIDITY_EQUALS_SEMANTIC_TRUTH
+
+NO_REPLICATION_EQUALS_UNIVERSALITY
+
+NO_NETWORK_MAJORITY_EQUALS_EPISTEMIC_AUTHORITY
+
+EVERY_CLAIM_MUST_PRESERVE =
+SOURCE + UNCERTAINTY + STATUS
+
+CONTRADICTION =
+FIRST_CLASS_EVIDENCE
+
+UNKNOWN =
+VALID_STATE
+
+INCONCLUSIVE =
+VALID_STATE
+
+REFUSAL =
+POTENTIALLY_VALID_STATE
+
+CLAIM_CEILING =
+C1_DESCRIPTIVE_ONLY
+```
+
+Epistemische Trinität:
+
+```text
+SOURCE
++
+UNCERTAINTY
++
+STATUS
+```
+
+Cursor muss ausdrücklich prüfen, ob irgendein R5-Input diese Trennung verletzt.
+
+---
+
+# 4. PHYSICAL INTAKE — AXIOM REHASH
+
+## A. Canonical four-file research intake
+
+```text
+FILE_01 =
+NEXUS_~1.MD
+
+BYTES =
+5923
+
+SHA256 =
+7f82817b6425a8a0b5fd9d280069c178822b7583a1afb202fd1017d87a12a6ae
+```
+
+```text
+FILE_02 =
+NEXUS_Delay-Tolerant Epistemic Provenance Network (DT-EPN).txt
+
+BYTES =
+23644
+
+SHA256 =
+c72fb3ede7701b5f8cb4a2bd0cd92cfebbb75e3e3b430b19d4e8734873b8ff23
+```
+
+```text
+FILE_03 =
+NEXUS_(DT-EPN) - NETWORK.txt
+
+BYTES =
+18326
+
+SHA256 =
+846b550a9c1171d748a026b3cbb439e37959bb2de32143e4ba507f05f38f0dfd
+```
+
+```text
+FILE_04 =
+Kryptografische Sicherheit im Nexus Omega-Rahmenwerk.txt
+
+BYTES =
+36783
+
+SHA256 =
+73be4e84654a3975c90a8f6f71adbc8fd969f33e289aaffb33909a3b6ee58c74
+```
+
+Current concatenation order:
+
+```text
+01 NEXUS_~1.MD
+02 NEXUS_Delay-Tolerant Epistemic Provenance Network (DT-EPN).txt
+03 NEXUS_(DT-EPN) - NETWORK.txt
+04 Kryptografische Sicherheit im Nexus Omega-Rahmenwerk.txt
+```
+
+Current physical bind:
+
+```text
+CURRENT_TOTAL_BYTES =
+84676
+
+CURRENT_COMBINED_SHA256 =
+66d6929178d0cd9c4ed2ef83a3f7dd33f08cbde726c41e7a470b929d5894402d
+```
+
+## B. Supplemental rendered artifact
+
+```text
+FILE_05 =
+VONNEX~1.PDF
+
+CLASS =
+SUPPLEMENTAL_RENDERED_RESEARCH_MIRROR
+
+BYTES =
+130644
+
+SHA256 =
+a041eafc4df464945c8f3dd9c1f3ce3fddd1beefcbcd3c5566215f50446092ff
+
+SEMANTIC_INDEPENDENCE =
+NOT_ASSUMED
+```
+
+Cursor shall determine whether FILE_05 is merely a rendered representation of material already present in FILE_04 or contains independent semantic content.
+
+Do not count duplication as independent corroboration.
+
+---
+
+# 5. REQUIRED HANDSHAKE DISCREPANCY ADJUDICATION
+
+The embedded prevalidation claims:
+
+```text
+OLD_DECLARED_FILE_03_BYTES =
+15014
+
+OLD_DECLARED_FILE_03_SHA256 =
+f0c7e02781f14a16705542f966c15456fa5704436b63d528bbca099046cbca50
+
+OLD_DECLARED_TOTAL_BYTES =
+81364
+
+OLD_DECLARED_COMBINED_SHA256 =
+2f0f778ba8b40a751013e74d34dc96f99298969f0fd438ee09f600fe8b810693
+```
+
+AXIOM physical intake observes:
+
+```text
+CURRENT_FILE_03_BYTES =
+18326
+
+CURRENT_FILE_03_SHA256 =
+846b550a9c1171d748a026b3cbb439e37959bb2de32143e4ba507f05f38f0dfd
+
+CURRENT_TOTAL_BYTES =
+84676
+
+CURRENT_COMBINED_SHA256 =
+66d6929178d0cd9c4ed2ef83a3f7dd33f08cbde726c41e7a470b929d5894402d
+```
+
+Therefore Cursor must classify:
+
+```text
+FILES_01_02_04 =
+EXPECTED_REHASH_MATCH
+
+FILE_03 =
+VERSION_OR_BYTE_DIVERGENCE_REQUIRES_CAUSAL_EXPLANATION
+
+OLD_COMBINED_HASH =
+HISTORICAL_OR_DIFFERENT_VERSION_BIND
+NOT_CURRENT_PHYSICAL_BIND
+```
+
+Cursor must **not** call this corruption unless evidence establishes corruption.
+
+Allowed classifications include:
+
+```text
+EARLIER_VERSION
+LATER_APPENDED_VERSION
+TRANSPORT_TRANSFORMATION
+NAMED_FILE_COLLISION
+PREVALIDATION_STALE_BIND
+UNKNOWN
+```
+
+Preserve uncertainty.
+
+---
+
+# 6. CURSOR TASK A — INDEPENDENT PHYSICAL REHASH
+
+Cursor shall independently compute:
+
+```text
+BYTES
+SHA256
+OPTIONALLY_SHA512
+```
+
+for all five supplied files.
+
+Cursor shall independently recompute the four-file concatenation hash in the exact specified order.
+
+Required comparison:
+
+```text
+AXIOM_REHASH
+vs
+CURSOR_REHASH
+vs
+EMBEDDED_GROK_PREVALIDATION
+```
+
+Expected states:
+
+```text
+MATCH
+MISMATCH
+NOT_COMPARABLE
+VERSION_DIFFERENCE
+```
+
+No semantic analysis may heal a byte mismatch.
+
+---
+
+# 7. CURSOR TASK B — SEMANTIC INVENTORY
+
+Cursor shall inventory all substantive R5 claims into at least these classes:
+
+```text
+B1 =
+GOVERNANCE_AXIOMS
+
+B2 =
+CRYPTOGRAPHIC_PRIMITIVES
+
+B3 =
+TRANSPORT_AND_DTN_CLAIMS
+
+B4 =
+OVERLAY_AND_ANONYMITY_CLAIMS
+
+B5 =
+STORAGE_AND_REPLICATION_CLAIMS
+
+B6 =
+GNUNET_ARCHITECTURE_CLAIMS
+
+B7 =
+ZKP_EXPLORATORY_CLAIMS
+
+B8 =
+WHISTLEBLOWER_USE_CASE_ASSUMPTIONS
+
+B9 =
+TOKEN_PROOF_OF_INSIGHT_INCENTIVE_CLAIMS
+
+B10 =
+LEGAL_OR_REGULATORY_ASSERTIONS
+
+B11 =
+ABSOLUTIST_OR_OVERCLAIMED_LANGUAGE
+
+B12 =
+INTERNAL_NEXUS_DESIGN_ASSUMPTIONS
+```
+
+Every extracted claim must retain:
+
+```text
+SOURCE_FILE
+SOURCE_LOCATION
+CLAIM_TEXT_OR_NORMALIZED_CLAIM
+STATUS
+UNCERTAINTY
+EXTERNAL_SOURCE_IF_CHECKED
+```
+
+---
+
+# 8. CURSOR TASK C — PRIMARY-SOURCE CROSSVALIDATION
+
+Cursor shall independently verify factual external claims against current authoritative or primary sources wherever reasonably possible.
+
+Priority targets:
+
+```text
+GNUnet architecture
+GNUnet service/process isolation
+ARM
+R5N/DHT
+CADET
+GNS
+RFC 9498
+GNUnet transport modularity
+
+I2P architecture
+NTCP2
+SSU2
+I2CP
+NetDB
+garlic routing
+
+DTN / store-and-forward
+IETF Bundle Protocol where applicable
+
+Briar architecture and transport capabilities
+Meshtastic transport properties
+Tor onion services / metadata boundaries
+IPFS content addressing and persistence semantics
+
+Ed25519
+SHA-256 / SHA-512
+HPKE / X25519 claims
+
+ZKP frameworks and actual maturity
+```
+
+Preference order:
+
+```text
+STANDARD / RFC
+OFFICIAL PROJECT DOCUMENTATION
+PEER_REVIEWED_PRIMARY_RESEARCH
+AUTHORITATIVE REPOSITORY
+SECONDARY SOURCE
+```
+
+Do not use search-result repetition as corroboration.
+
+---
+
+# 9. CURSOR TASK D — REQUIRED FALSIFICATION MATRIX
+
+Cursor shall actively search for evidence against the R5 assumptions.
+
+Mandatory falsifiers include:
+
+```text
+F01 TRANSPORT_FAILURE
+F02 MODULE_REMOVAL
+F03 PARTITION
+F04 DELAY_AND_STORE_FORWARD_FAILURE
+F05 DUPLICATE_DELIVERY
+F06 REPLAY
+F07 MESSAGE_REORDERING
+F08 CLOCK_UNRELIABILITY
+F09 KEY_LOSS
+F10 KEY_COMPROMISE
+F11 SIGNER_COMPROMISE
+F12 MALICIOUS_RELAY
+F13 SYBIL
+F14 COLLUSION
+F15 ECLIPSE
+F16 ROUTING_MANIPULATION
+F17 TRAFFIC_CORRELATION
+F18 GLOBAL_PASSIVE_OBSERVER
+F19 ENDPOINT_COMPROMISE
+F20 METADATA_LEAKAGE
+F21 STORAGE_GARBAGE_COLLECTION
+F22 CONTENT_UNAVAILABILITY
+F23 CENSORSHIP_OR_DEPLATFORMING
+F24 DEPENDENCY_ABANDONMENT
+F25 SOFTWARE_SUPPLY_CHAIN_COMPROMISE
+F26 UNSAFE_MODULE_SUBSTITUTION
+F27 SCHEMA_DRIFT
+F28 CLAIM_PROMOTION_DRIFT
+F29 REPUTATION_REINTRODUCTION
+F30 CONSENSUS_AS_TRUTH
+F31 CRYPTO_VALIDITY_AS_TRUTH
+F32 REPLICATION_AS_TRUTH
+F33 VALIDATOR_CAPTURE
+F34 GOVERNANCE_CAPTURE
+F35 CONTRADICTION_SUPPRESSION
+F36 NEGATIVE_EVIDENCE_LOSS
+```
+
+Cursor may expand this matrix.
+
+---
+
+# 10. CURSOR TASK E — ABSOLUTISM SCRUB
+
+The intake contains language that must **not** enter the R5 Foundation unchecked.
+
+Search explicitly for statements equivalent to:
+
+```text
+UNCORRUPTIBLE
+UNCENSORABLE
+ANONYMOUS
+IMPOSSIBLE_TO_TRACE
+IMMUTABLE
+PERMANENT
+GUARANTEED
+IDEAL
+PERFECT
+TRUSTLESS
+NO_SINGLE_POINT_OF_FAILURE
+MATHEMATICALLY_PROVES_TRUTH
+```
+
+For every occurrence determine whether it can be narrowed to an observable property.
+
+Example transformations:
+
+```text
+"uncorruptible"
+→
+"TAMPERING_WITH_BOUND_BYTES_IS_DETECTABLE_UNDER_STATED_CRYPTO_ASSUMPTIONS"
+
+"anonymous"
+→
+"SPECIFIED_IDENTITY_OR_NETWORK_METADATA_IS_NOT_EXPOSED_TO_SPECIFIED_OBSERVER_CLASS"
+
+"immutable"
+→
+"CONTENT_HASH_CHANGES_IF_BYTES_CHANGE"
+
+"censorship resistant"
+→
+"RETAINS_SPECIFIED_DELIVERY_PATHS_UNDER_TESTED_FAILURE_MODEL"
+```
+
+Do **not** replace the source wording silently.
+
+Preserve original + corrected candidate separately.
+
+---
+
+# 11. CURSOR TASK F — EPISTEMIC TYPE SEPARATION
+
+Cursor shall verify that the architecture does not collapse these categories:
+
+```text
+BYTE_INTEGRITY
+!=
+SOURCE_AUTHENTICITY
+
+SOURCE_AUTHENTICITY
+!=
+CLAIM_TRUTH
+
+CLAIM_TRUTH
+!=
+CONSENSUS
+
+RECEIPT_EXISTENCE
+!=
+CONTENT_CORRECTNESS
+
+SIGNATURE_VALID
+!=
+SIGNER_BENEVOLENT
+
+REPLICATION
+!=
+INDEPENDENCE
+
+NODE_COUNT
+!=
+EVIDENCE_WEIGHT
+
+ROUTING_SUCCESS
+!=
+ANONYMITY
+
+ENCRYPTION
+!=
+METADATA_PRIVACY
+
+CONTENT_ADDRESSING
+!=
+PERSISTENCE
+
+APPEND_ONLY_MODEL
+!=
+PHYSICAL_IMMUTABILITY
+```
+
+Any input statement violating these distinctions must be marked.
+
+---
+
+# 12. CURSOR TASK G — MODULARITY TEST
+
+R5's central architectural hypothesis is:
+
+```text
+H_R5_MODULARITY =
+THE_EPISTEMIC_PROVENANCE_CORE_CAN_REMAIN_MEANINGFUL
+WHEN_INDIVIDUAL_TRANSPORT_PRIVACY_STORAGE_OR_VALIDATION_MODULES
+ARE_REPLACED_OR_UNAVAILABLE
+```
+
+This is **a hypothesis, not a conclusion**.
+
+Cursor shall derive a module graph with at least:
+
+```text
+M0 CLAIM_OBJECT
+M1 PROVENANCE_RECEIPT
+M2 IDENTITY_OR_PSEUDONYMITY
+M3 ENCRYPTION
+M4 TRANSPORT
+M5 ROUTING
+M6 DELAY_TOLERANCE
+M7 STORAGE
+M8 DISCOVERY
+M9 PRIVACY_OVERLAY
+M10 VALIDATION
+M11 CONTRADICTION_STORE
+M12 POLICY
+M13 OPTIONAL_ZKP
+M14 OBSERVABILITY_AUDIT
+```
+
+For each module determine:
+
+```text
+MANDATORY_FOR_EPISTEMIC_CORE?
+REPLACEABLE?
+REMOVABLE?
+FAIL_OPEN?
+FAIL_CLOSED?
+STATEFUL?
+IDENTITY_COUPLED?
+TRANSPORT_COUPLED?
+CRYPTO_COUPLED?
+```
+
+No technology name may be hard-coded as indispensable without evidence.
+
+---
+
+# 13. CURSOR TASK H — SIGNED RECEIPT CONTINUITY
+
+R4 retained the simple Signed Receipt pattern:
+
+```text
+HASH
++
+SIGNATURE
++
+PREVIOUS_LINK
+```
+
+R5 may inherit this **only as a bounded candidate primitive**.
+
+Cursor shall assess:
+
+```text
+WHAT_IT_PROVES
+WHAT_IT_DOES_NOT_PROVE
+KEY_CUSTODY_DEPENDENCE
+REPLAY_PROPERTIES
+CHAIN_FORK_PROPERTIES
+MULTI_WRITER_PROPERTIES
+MERGE_PROPERTIES
+OFFLINE_OPERATION
+PARTITION_RECONCILIATION
+KEY_ROTATION
+REVOCATION
+LOSS_RECOVERY
+```
+
+R4 physical residual gate remains explicitly separate.
+
+---
+
+# 14. CURSOR TASK I — ZKP QUARANTINE
+
+ZKP remains:
+
+```text
+OPTIONAL
+REMOVABLE
+EXPLORATORY
+NON_FOUNDATIONAL
+```
+
+Cursor shall test:
+
+```text
+DT_EPN_WITH_ZKP
+vs
+DT_EPN_WITHOUT_ZKP
+```
+
+Required invariant:
+
+```text
+REMOVE_ZKP
+→
+CORE_PROVENANCE_AND_TRANSPORT_ARCHITECTURE_MUST_REMAIN_SEMANTICALLY_COHERENT
+```
+
+If this fails, modularity claim receives a caveat.
+
+---
+
+# 15. CURSOR TASK J — TOKEN / PROOF-OF-INSIGHT QUARANTINE
+
+The supplied material contains a separate incentive hypothesis based on:
+
+```text
+PROOF_OF_INSIGHT
+PROOF_OF_CONTRIBUTION
+REPUTATION
+PEER_VALIDATION
+TOKEN
+```
+
+This is **not part of the R5 foundation** unless independently justified later.
+
+Bind now as:
+
+```text
+TOKEN_LANE =
+QUARANTINED_RESEARCH_HYPOTHESIS
+
+PROOF_OF_INSIGHT =
+UNVALIDATED
+
+REPUTATION_WEIGHTING =
+POTENTIAL_CONFLICT_WITH_NO_HIDDEN_SCORING
+
+CONSENSUS_WEIGHT =
+MUST_NOT_BECOME_TRUTH_AUTHORITY
+
+TOKEN_IMPLEMENTATION =
+PROHIBITED
+
+ECONOMIC_ACTIVATION =
+PROHIBITED
+```
+
+Required question:
+
+```text
+CAN_DT_EPN_FUNCTION_WITHOUT_ANY_TOKEN_OR_REPUTATION_MECHANISM?
+```
+
+If yes, incentive architecture remains detachable.
+
+If no, that dependency must be exposed as a fundamental architectural coupling.
+
+---
+
+# 16. CURSOR TASK K — PRIVACY THREAT MODEL
+
+Terms such as `anonymous`, `metadata-free`, and `plausible deniability` shall not be accepted categorically.
+
+Cursor shall define observer classes:
+
+```text
+LOCAL_RELAY
+MALICIOUS_PEER
+VALIDATOR
+STORAGE_NODE
+ISP
+TOR_ENTRY_OBSERVER
+TOR_EXIT_OR_SERVICE_OBSERVER
+LOCAL_RADIO_OBSERVER
+GLOBAL_PASSIVE_OBSERVER
+DEVICE_SEIZURE_ADVERSARY
+MALWARED_ENDPOINT
+COLLUDING_VALIDATORS
+```
+
+Then map for each:
+
+```text
+VISIBLE_CONTENT
+VISIBLE_METADATA
+TIMING_INFORMATION
+RADIO_FINGERPRINT
+IP_INFORMATION
+IDENTIFIER_INFORMATION
+LINKABILITY
+RETROACTIVE_EXPOSURE
+```
+
+Only scoped privacy claims are admissible.
+
+---
+
+# 17. CURSOR TASK L — WHISTLEBLOWER SAFETY BOUNDARY
+
+The whistleblower scenario is a **high-risk application case**, not evidence for the architecture.
+
+Cursor must distinguish:
+
+```text
+SYSTEM_PROPERTY
+vs
+USER_SAFETY_PROMISE
+```
+
+Prohibited:
+
+```text
+GUARANTEED_ANONYMITY
+GUARANTEED_LEGAL_SAFETY
+GUARANTEED_PLAUSIBLE_DENIABILITY
+GUARANTEED_NON_ATTRIBUTION
+```
+
+No legal conclusion may be promoted from technical architecture.
+
+Legal claims remain:
+
+```text
+OUT_OF_SCOPE_OR_REQUIRES_SEPARATE_JURISDICTIONAL_REVIEW
+```
+
+---
+
+# 18. REQUIRED CROSSVALIDATION OUTCOME CLASSES
+
+Each significant R5 proposition shall terminate as one of:
+
+```text
+SUPPORTED_PRIMARY_SOURCE
+SUPPORTED_WITH_CAVEATS
+PLAUSIBLE_UNVERIFIED
+RESEARCH_HYPOTHESIS
+CONTRADICTED
+SOURCE_GAP
+OVERCLAIM
+INTERNAL_GOVERNANCE_RULE
+QUARANTINED
+NOT_APPLICABLE
+```
+
+No binary `TRUE/FALSE` oracle.
+
+---
+
+# 19. FOUNDATION ADMISSION GATE
+
+Cursor may recommend admission into the R5 canonical foundation only when:
+
+```text
+PHYSICAL_BIND =
+PASS
+
+SOURCE_CHAIN =
+PASS_OR_EXPLICITLY_CAVEATED
+
+ABSOLUTISM_SCRUB =
+PASS
+
+TRINITY_PRESERVATION =
+PASS
+
+R4_BOUNDARY =
+PASS
+
+TOKEN_QUARANTINE =
+PASS
+
+ZKP_REMOVABILITY =
+ASSESSED
+
+CORE_MODULE_GRAPH =
+BOUND
+
+MAJOR_CONTRADICTIONS =
+PRESERVED
+
+CLAIM_CEILING =
+C1
+```
+
+Allowed return states:
+
+```text
+PASS_R5_FOUNDATION_CANDIDATE_C1
+
+PASS_WITH_CAVEATS_R5_FOUNDATION_CANDIDATE_C1
+
+HOLD_R5_FOUNDATION_SOURCE_OR_BYTE_GAP
+
+FAIL_R5_FOUNDATION_GOVERNANCE_OR_PROVENANCE
+```
+
+No result authorizes implementation.
+
+---
+
+# 20. REQUIRED CURSOR OUTPUTS
+
+Produce at minimum:
+
+```text
+01_R5_PHYSICAL_REHASH_RECEIPT.md
+
+02_R5_PREVALIDATION_HASH_DISCREPANCY_ADJUDICATION.md
+
+03_R5_SOURCE_AND_CLAIM_INVENTORY.md
+
+04_R5_PRIMARY_SOURCE_CROSSVALIDATION.md
+
+05_R5_FALSIFICATION_MATRIX.md
+
+06_R5_ABSOLUTISM_AND_AIRGAP_AUDIT.md
+
+07_R5_MODULE_DEPENDENCY_GRAPH.md
+
+08_R5_PRIVACY_THREAT_MODEL.md
+
+09_R5_TOKEN_AND_ZKP_QUARANTINE.md
+
+10_R5_CANONICAL_FOUNDATION_BIND_RETURN.md
+
+11_SHA256SUMS
+```
+
+Machine-readable companion preferred:
+
+```text
+R5_CANONICAL_FOUNDATION_BIND_RETURN.json
+```
+
+---
+
+# 21. RETURN PATH
+
+```text
+RETURN_PATH =
+[LOCAL_PATH_REDACTED]
+NEXUS_OMEGA_CURSOR_ASTRATIS_IX_R5_DTEPN_FOUNDATION_REHASH_CROSSVALIDATION_RETURN_20260920_R0\
+```
+
+No writes into sealed historical artifacts.
+
+No overwrite of R3 or R4 objects.
+
+---
+
+# 22. CURSOR EXECUTION AUTHORITY
+
+```text
+CURSOR_ACTION =
+EXECUTE_R5_FOUNDATION_REHASH_AND_CROSSVALIDATION
+
+CURSOR_MAY =
+READ
+HASH
+COMPARE
+RESEARCH_PRIMARY_SOURCES
+CROSSVALIDATE
+FALSIFY
+GENERATE_LOCAL_RETURN_ARTIFACTS
+
+CURSOR_MAY_NOT =
+IMPLEMENT_NETWORK
+START_R5_EXPERIMENT
+START_IX_AGENT
+ACTIVATE
+PROMOTE
+MERGE
+PUBLIC_PUBLISH
+CHANGE_FUNDUS
+CLOSE_R4_RESIDUAL_GATE_BY_INFERENCE
+HAND_OFF_TO_EXTERNAL_EXPERTS
+```
+
+---
+
+# 23. STATE WHILE CURSOR WORKS
+
+```text
+R3 =
+SEALED
+
+FUNDUS =
+R3
+
+R4 =
+PRESERVED_WITH_EXPLICIT_PHYSICAL_RESIDUAL_GATE
+
+R5 =
+FOUNDATION_UNDER_CURSOR_CROSSVALIDATION
+
+R5_EXECUTION =
+NOT_STARTED
+
+EXPERT_EXECUTION =
+NOT_AUTHORIZED
+
+IX_AGENT_EXECUTION =
+NOT_STARTED
+
+ACTIVATION =
+NO
+
+PROMOTION =
+NO
+
+PUBLICATION =
+NO
+```
+
+---
+
+# 24. TERMINAL HANDSHAKE
+
+```text
+OBJECT =
+NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R5_DTEPN_FOUNDATION_INTAKE_REHASH_CROSSVALIDATION_AND_CANONICAL_BIND_ORDER_TO_CURSOR_20260920_R0
+
+PRIMARY_RESEARCH_OBJECT =
+DT-EPN
+
+APPLICATION_CASE =
+NOAM
+
+CONSTITUTION =
+NEXUS_AIRGAP_NON_ABSOLUTISM_LAW
+
+EPISTEMIC_TRINITY =
+SOURCE + UNCERTAINTY + STATUS
+
+CURRENT_4_FILE_COMBINED_SHA256 =
+66d6929178d0cd9c4ed2ef83a3f7dd33f08cbde726c41e7a470b929d5894402d
+
+EMBEDDED_PREVALIDATION_COMBINED_SHA256 =
+2f0f778ba8b40a751013e74d34dc96f99298969f0fd438ee09f600fe8b810693
+
+HASH_RELATION =
+MISMATCH_DUE_TO_FILE_03_CURRENT_BYTE_DIVERGENCE
+CAUSAL_CLASSIFICATION_PENDING_CURSOR
+
+R5_FOUNDATION =
+NOT_YET_ACCEPTED
+
+R5_EXECUTION =
+NO
+
+EXPERT_HANDOFF =
+NO
+
+CURSOR_ACTION =
+REHASH_CROSSVALIDATE_FALSIFY_AND_RETURN
+
+NEXT =
+WAIT_CURSOR_PHYSICAL_RETURN
+→ AXIOM_REHASH_AND_ADJUDICATION
+→ ONLY_IF_ACCEPTED:
+  ISSUE_SEPARATE_EXPERT_RESEARCH_AND_FALSIFICATION_ORDER
+```
+
+Das ist die Reihenfolge, die ich jetzt festhalten würde:
+
+**Cursor bekommt zuerst ausschließlich den Fundament-, Rehash- und Kreuzvalidierungsauftrag.** Erst wenn sein physischer Return hier zurückliegt, rehashe und adjudiziere ich ihn. **Danach** erstellen wir auf dem tatsächlich bestätigten R5-Fundament den Auftrag für QWEN/GROK/MISTRAL bzw. unsere weiteren Experten – und nicht auf der jetzigen Vorannahme.

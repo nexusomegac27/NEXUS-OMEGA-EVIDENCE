@@ -1,0 +1,261 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_ASTRATIS_X_R2_CHAIN_RECONCILIATION_20260920_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "produced_at_utc": "2026-09-20T18:05:00Z",
+  "order_object": "NEXUS_OMEGA_AXIOM_TO_CURSOR_ASTRATIS_X_R2_REPOSITORY_PUSH_ORDER_20260920_R0",
+  "order_sha256": "da046c2396087dd516d29ddc1f300b82584e106065fc3139e2ce4709c634a275",
+  "order_bytes": 9020,
+  "final_package_seal": "NOT_GRANTED_HOLD_MATERIAL_PROVENANCE_GAPS",
+  "r7_closed_package_seal": "HOLD",
+  "false_closure_or_false_producer_attribution": "NONE",
+  "independent_cursor_rehash": {
+    "final_zip_archive": {
+      "path": "[LOCAL_PATH_REDACTED]",
+      "bytes": 183728,
+      "sha256": "e19f149c2446e9359453137806cb9123b43895726d6efb1c25ca08ad11304fd1",
+      "claimed_sha256": "e19f149c2446e9359453137806cb9123b43895726d6efb1c25ca08ad11304fd1",
+      "status": "MATCH"
+    },
+    "final_zip_worker_snapshot": {
+      "path": "[LOCAL_PATH_REDACTED]",
+      "bytes": 183728,
+      "sha256": "e19f149c2446e9359453137806cb9123b43895726d6efb1c25ca08ad11304fd1",
+      "status": "MATCH"
+    },
+    "zip_entries": 94,
+    "uncompressed_bytes": 372681,
+    "separate_r0_zip": {
+      "bytes": 87810,
+      "sha256": "f0490d4677c24c7cbf3aa55ddce9bcce1d873c2ff342ef41835980c4b0e7922a",
+      "status": "MATCH"
+    },
+    "dashboard_html": {
+      "bytes": 188505,
+      "sha256": "0a479cf7e8b82da9813dd18a3fa81ba355950cecfd5c98e45832225bb770e249",
+      "status": "MATCH",
+      "note": "DASHBOARD_HASH_DOMAIN_NOT_R6_EXPERT_RECEIPT"
+    },
+    "final_receipt_txt": {
+      "bytes": 2747,
+      "sha256": "74775667d3d9d20c71520554ed3c9523a79b663d9e4d4c2234fd23110a3c17b7",
+      "status": "MATCH"
+    },
+    "r5_r6_receipt_txt": {
+      "bytes": 2611,
+      "sha256": "c3adfe1371912e08813af5f59683b6bc592a728879fe2344f55be2b3f2cdd75f",
+      "status": "MATCH"
+    },
+    "r1_core_concat_01_to_04": {
+      "combined_bytes": 84676,
+      "combined_sha256": "66d6929178d0cd9c4ed2ef83a3f7dd33f08cbde726c41e7a470b929d5894402d",
+      "status": "MATCH"
+    },
+    "actual_cursor_return_11_sha256sums": {
+      "path": "[LOCAL_PATH_REDACTED]",
+      "matched": "12_OF_12",
+      "executive_sha256": "8de196bd1555d1f0c9ff8d7fb8aebf65ff9b0b066aed86de606e223d2cff0220",
+      "status": "MATCH"
+    },
+    "seven_r2_archive_inputs": "BYTE_MATCH_VS_R2_INPUT_MANIFEST"
+  },
+  "findings": [
+    {
+      "id": "F01_EMPTY_HISTORY_ZIPS",
+      "class": "SOURCE_GAP_PLACEHOLDER",
+      "severity": "CRITICAL_FOR_CLOSURE_CLAIM_NOT_FOR_TRANSPORT",
+      "observation": "Both embedded history/*.zip are empty placeholders (0 entries, 22 bytes each).",
+      "original_hashes": {
+        "history_r0_embedded": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "history_r1_embedded": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "separate_physical_r0": "f0490d4677c24c7cbf3aa55ddce9bcce1d873c2ff342ef41835980c4b0e7922a"
+      },
+      "external_bind": {
+        "separate_r0_path": "[LOCAL_PATH_REDACTED]",
+        "bytes": 87810,
+        "sha256": "f0490d4677c24c7cbf3aa55ddce9bcce1d873c2ff342ef41835980c4b0e7922a",
+        "relation": "EXTERNAL_PHYSICAL_R0_NOT_EQUAL_EMBEDDED_HISTORY_PLACEHOLDER"
+      },
+      "named_r1_predecessor": {
+        "name_in_package": "NEXUS_OMEGA_KAUSAL_KANONISCH_R5_R6_GESAMTPAKET_20260920_R1.zip",
+        "canonical_return_path_search": "SOURCE_GAP_NOT_FOUND",
+        "completeness_claim": "PROHIBITED"
+      },
+      "uncertainty_remaining": "Embedded history ZIPs are placeholders; physical R0 exists externally; named R1 predecessor archive not located in audited custody paths.",
+      "remediation_authorized": "DOCUMENT_ONLY_NO_SILENT_REZIP",
+      "status": "RECORDED_OPEN"
+    },
+    {
+      "id": "F02_TWELVE_DIVERGING_SAME_NAMED_RETURNS",
+      "class": "DERIVATIVE_UNKNOWN_TRANSFORMATION",
+      "severity": "CRITICAL_FOR_PRODUCER_ATTRIBUTION",
+      "observation": "All 12 same-named packaged return files diverge bytewise from the real Cursor R5 return. EXECUTIVE.md is absent from the final ZIP.",
+      "real_return_bind": {
+        "path": "[LOCAL_PATH_REDACTED]",
+        "file_count_bound": 13,
+        "checksums": "12_OF_12_MATCH",
+        "executive_sha256": "8de196bd1555d1f0c9ff8d7fb8aebf65ff9b0b066aed86de606e223d2cff0220"
+      },
+      "packaged_vs_local": [
+        {
+          "filename": "01_R5_PHYSICAL_REHASH_RECEIPT.md",
+          "local_sha256": "1a8e01b4cd0767490061887f5216050961f79b7557114cc94d2aae510454a8be",
+          "packaged_sha256": "c60005aa0c4fa4197659485fe41c442b7813c6d0482b77e2e1193c9d5b6364e9",
+          "byte_equal": false
+        },
+        {
+          "filename": "02_R5_PREVALIDATION_HASH_DISCREPANCY_ADJUDICATION.md",
+          "local_sha256": "054b8e1ef8c03d3602e620e43f2a4dea1ae8c824eb75ef62d52b32334c86f49b",
+          "packaged_sha256": "df31621dddd79785f3e53d6b2b2a13a45370c5211e1bc4ac8956069207b426eb",
+          "byte_equal": false
+        },
+        {
+          "filename": "03_R5_SOURCE_AND_CLAIM_INVENTORY.md",
+          "local_sha256": "a239e6b5277df2af923db19bb355c18a6a949192b8fd646d6fd740d37c7f0c88",
+          "packaged_sha256": "34ab05b6563084980c41670eb0e91c7e779fd088f142e7dc788954f94ebee9d5",
+          "byte_equal": false
+        },
+        {
+          "filename": "04_R5_PRIMARY_SOURCE_CROSSVALIDATION.md",
+          "local_sha256": "9a4de6b023154adab05d10c115661578f072681d4d897d27951a13e70b4af13e",
+          "packaged_sha256": "9ab9149d7bfe578af7cebd665140856619b517206d357dc439edeba7875727b6",
+          "byte_equal": false
+        },
+        {
+          "filename": "05_R5_FALSIFICATION_MATRIX.md",
+          "local_sha256": "1209a64bb03e3a6f4649da594f5023e80fea0537385b5c91b5f0600d9190fb52",
+          "packaged_sha256": "4cd541bfee4d2c3bb4116bf9936df7dbc716b0acba5d05b6b603a7fefa317e55",
+          "byte_equal": false
+        },
+        {
+          "filename": "06_R5_ABSOLUTISM_AND_AIRGAP_AUDIT.md",
+          "local_sha256": "771d5e74a147209f2b349ae7b29262cf530da427b25934174e39bfe522b78782",
+          "packaged_sha256": "9ba36aea1ab869b75b30a250f76c40f196fd2e513b4701eda57ede8162c9e87e",
+          "byte_equal": false
+        },
+        {
+          "filename": "07_R5_MODULE_DEPENDENCY_GRAPH.md",
+          "local_sha256": "2c8bd56ebc87426aa03c69ad8912871e0a7feee6e8c173552d68f517961eb6cd",
+          "packaged_sha256": "46bc0ef08638366de35ae06d613cdfde62420523c8425c8263e1f96b84af6f1b",
+          "byte_equal": false
+        },
+        {
+          "filename": "08_R5_PRIVACY_THREAT_MODEL.md",
+          "local_sha256": "75130a11523c3167868d464574751f72e75031da47a03ca4e1153f81a3730f77",
+          "packaged_sha256": "b2fa4de7f7a7d667f4b51db27a38facfe001ec36100ec73fbec494cbbebe9798",
+          "byte_equal": false
+        },
+        {
+          "filename": "09_R5_TOKEN_AND_ZKP_QUARANTINE.md",
+          "local_sha256": "682216fcef8249edddf64c90a785ec9055663a2ec21ef5594966238b650ba3a3",
+          "packaged_sha256": "ec938ce5f097883cc8fad1781f29603a64306972dd4eba2b5447a884b7d5e8f1",
+          "byte_equal": false
+        },
+        {
+          "filename": "10_R5_CANONICAL_FOUNDATION_BIND_RETURN.md",
+          "local_sha256": "6f1cdcac6aae91cdba5ffa9685cd8b37480b25936566b3c0762eb79313da170f",
+          "packaged_sha256": "90fa6f9c93956e2695c57255ebe3a1afb987ed50492a1d352ef91030d9c9bb98",
+          "byte_equal": false
+        },
+        {
+          "filename": "11_SHA256SUMS",
+          "local_sha256": "32b17c311191a17f0c56332a89e5f06e67d5661f2d700e8805be8ebab05b6ddc",
+          "packaged_sha256": "6e80b2e030ccd9decf103a681266cecf92211a2cd48b2c626472ca49e2ea9692",
+          "byte_equal": false
+        },
+        {
+          "filename": "R5_CANONICAL_FOUNDATION_BIND_RETURN.json",
+          "local_sha256": "e5ee87061403db8f26cf97d51f853ab9dde4f117dbf6f44d06fbbb9c349bce54",
+          "packaged_sha256": "6dd49985fe98ff1b4daf2e7d39b2d4982f589f47b1657cafbaf347e34f979921",
+          "byte_equal": false
+        },
+        {
+          "filename": "EXECUTIVE.md",
+          "local_sha256": "8de196bd1555d1f0c9ff8d7fb8aebf65ff9b0b066aed86de606e223d2cff0220",
+          "packaged_sha256": null,
+          "in_final_zip": false,
+          "byte_equal": null
+        }
+      ],
+      "prohibition": "NO_OVERWRITE_OF_SEALED_ZIP; NO_CLAIM_OF_BYTE_IDENTICAL_CURSOR_PROVENANCE_FOR_PACKAGED_COPIES",
+      "uncertainty_remaining": "Transformation path of packaged return derivatives not established by primary evidence.",
+      "status": "RECORDED_OPEN"
+    },
+    {
+      "id": "F03_STRIPPED_OBJECT_IDS",
+      "class": "IDENTITY_REDACTION_SOURCE_GAP",
+      "severity": "CRITICAL_FOR_R6_R7_OBJECT_BINDING",
+      "observation": "Seven ZIP entries contain [STRIPPED …] placeholders, including R6/R7 object fields.",
+      "stripped_files_count": 7,
+      "samples": [
+        "NEXUS_OMEGA_R6_EXPERT_RESEARCH_AND_FALSIFICATION_ORDER_20260920_R1/R6_ORDER.json :: object=[STRIPPED 83 bytes]",
+        "NEXUS_OMEGA_R6_EXPERT_RESEARCH_AND_FALSIFICATION_ORDER_20260920_R1/R6_ORDER_1.json :: object=[STRIPPED 86 bytes]",
+        "NEXUS_OMEGA_R7_IMPLEMENTATION_DRAFT_C1_NO_ACTIVATION_20260920_R2/* :: STRIPPED present"
+      ],
+      "prohibition": "DO_NOT_INVENT_UNSTRIPPED_NAMES",
+      "external_unstripped_bind": "NOT_FOUND_IN_AUDITED_CUSTODY_THIS_TURN",
+      "status": "RECORDED_OPEN"
+    },
+    {
+      "id": "F04_FILE_02_HASH_ERRATUM",
+      "class": "ERRATUM_REQUIRED",
+      "severity": "MATERIAL_DOCUMENTATION",
+      "observation": "Packaged 01_R5_PHYSICAL_REHASH_RECEIPT.md contains a 91-hex-character FILE_02 hash field (concatenated fragments), not a valid SHA-256.",
+      "correct_file_02": {
+        "name": "NEXUS_Delay-Tolerant Epistemic Provenance Network (DT-EPN).txt",
+        "bytes": 23644,
+        "sha256": "c72fb3ede7701b5f8cb4a2bd0cd92cfebbb75e3e3b430b19d4e8734873b8ff23"
+      },
+      "anomalous_field_sample_prefix": "c72fb3ede7701b5f8cb4a2bd0cd92cfebbb75e3e3b430b19d280069c178822b7583a1afb202fd1017d87a12a6ae",
+      "remediation": "NEW_ERRATUM_OBJECT_ONLY_NO_REWRITE_OF_FINAL_ZIP",
+      "status": "RECORDED_OPEN_ERRATUM_EMITTED_IN_RETURN"
+    },
+    {
+      "id": "F05_HASH_DOMAIN_SEPARATION",
+      "class": "DOMAIN_CLARIFICATION",
+      "severity": "MATERIAL_DOCUMENTATION",
+      "domains": {
+        "zip_bytes": "e19f149c2446e9359453137806cb9123b43895726d6efb1c25ca08ad11304fd1",
+        "separate_r0_zip_bytes": "f0490d4677c24c7cbf3aa55ddce9bcce1d873c2ff342ef41835980c4b0e7922a",
+        "r5_r6_receipt_text_bytes": "c3adfe1371912e08813af5f59683b6bc592a728879fe2344f55be2b3f2cdd75f",
+        "dashboard_html_bytes": "0a479cf7e8b82da9813dd18a3fa81ba355950cecfd5c98e45832225bb770e249"
+      },
+      "rule": "f0490d_IS_SEPARATE_R0_ZIP_NOT_RECEIPT_TEXT; 0a479c_IS_DASHBOARD_NOT_INDEPENDENT_R6_EXPERT_RECEIPT",
+      "status": "RECORDED_CLOSED_AS_CLARIFICATION"
+    },
+    {
+      "id": "F06_EXECUTION_CHAIN_NOT_INDEPENDENTLY_CLOSED",
+      "class": "SOURCE_REPORTED_NOT_INDEPENDENTLY_VERIFIED",
+      "severity": "CRITICAL_FOR_R7_SEAL",
+      "observation": "Package texts assert expert DONE / adjudication DONE / multi-agent PASS counts. Independent physical agent-run receipts and AXIOM terminal adjudication of those runs were not established this turn. R7 end checklist unmarked. Real local R5 return still held expert execution NOT_AUTHORIZED.",
+      "status": "RECORDED_OPEN"
+    },
+    {
+      "id": "F07_TIMESTAMPS",
+      "class": "TIMESTAMP_UNVERIFIED",
+      "severity": "NON_BLOCKING_FOR_TRANSPORT_DOCUMENTATION",
+      "observation": "Receipt timestamps 2026-09-20T18:34:00Z / 19:25:00Z preserved without chronological validation.",
+      "status": "RECORDED_OPEN_PRESERVED"
+    },
+    {
+      "id": "F08_TARGET_HANDSHAKE",
+      "class": "HOLD_TARGET_NOT_BOUND",
+      "severity": "BLOCKING_FOR_PUSH",
+      "observation": "Candidate repo nexusomegac27/NEXUS-OMEGA-EVIDENCE is reachable (ls-remote HEAD 273580577179caf4d88e9532e154611a619e2373). No R2-specific canonical target handshake exists that binds worker path, public research path, allowlist, and branch for Astratis X R2. Existing VIII/R3 checkout is a foreign lane (detached 771fa6ad…). Live research/ tree has fundus/ix/pipeline/r5/r6/r7/r8 — no bound X/R2 path. Inventing research/x/... would violate order (nicht raten).",
+      "status": "RECORDED_OPEN_BLOCKING"
+    }
+  ],
+  "push_gate_evaluation": {
+    "INDEPENDENT_CURSOR_REHASH": "MATCH",
+    "CHAIN_RECONCILIATION": "RECORDED_WITH_EXACT_SOURCES_AND_EXPLICIT_OPEN_GAPS",
+    "FALSE_CLOSURE_OR_FALSE_PRODUCER_ATTRIBUTION": "NONE",
+    "CURRENT_R2_TARGET_HANDSHAKE": "NOT_BOUND",
+    "WORKER": "NOT_CREATED_BECAUSE_TARGET_HOLD",
+    "REMOTE": "AUTHENTICATED_CANDIDATE_OBSERVED_NOT_R2_BOUND",
+    "CHANGED_PATHS": "NOT_APPLICABLE",
+    "REPOSITORY_REQUIRED_CHECKS": "NOT_EXECUTED",
+    "PUBLICATION_SCOPE_AND_CONTENT_CHECK": "NOT_EXECUTED",
+    "RUNTIME_FUNDUS_MERGE_DEPLOY_PROMOTION": "NO",
+    "terminal": "HOLD_TARGET_NOT_BOUND"
+  }
+}

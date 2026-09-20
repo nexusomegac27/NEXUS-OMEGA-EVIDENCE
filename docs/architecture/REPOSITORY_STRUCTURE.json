@@ -101,6 +101,10 @@
     "astratis-ix-open-agent-r4": {
       "path": "research/ix/open-agent-foundation-r4",
       "state": "CANONICAL_CONTINUATION_ORDER_AUTHORIZED_AGENT_EXECUTION_NOT_STARTED"
+    },
+    "astratis-x-r2-dtepn-meta": {
+      "path": "research/r5/astratis-x-r2-dtepn-meta",
+      "state": "C1_PUBLIC_DERIVATIVE_INTAKE_R7_CLOSURE_HOLD_NO_ACTIVATION"
     }
   },
   "research_lane_contract": {

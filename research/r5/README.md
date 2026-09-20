@@ -24,3 +24,5 @@ research/r5/axiom-platform-audit/
 `axiom-platform-audit/` contains public GitHub platform observations relevant to R5 and is not a substitute for QWEN return validation.
 
 When an R5 result becomes integration-grade, derive stable artifacts into the mirrored `docs/r5`, `schema/r5`, `scripts/r5`, `tests/r5`, `validation/r5`, and `examples/r5` layers as applicable. Preserve research provenance; do not silently replace the original return.
+
+- `astratis-x-r2-dtepn-meta/` — Astratis X/R2 DT-EPN and Meta package derivatives; explicit provenance gaps, R7 seal HOLD, no activation.

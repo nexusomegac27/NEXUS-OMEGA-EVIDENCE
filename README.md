@@ -235,3 +235,7 @@ Original documentation is offered under CC BY 4.0. Original validation/tooling c
 ## Security
 
 See `SECURITY.md`. Do not publish credentials, personal data, medical data, private conversations, non-public repository material or unredacted security logs.
+
+## Astratis X / R2 DT-EPN source intake
+
+`research/r5/astratis-x-r2-dtepn-meta/` contains public source derivatives and clarification receipts only; R7 closure remains HOLD. No runtime, Fundus change or promotion.
