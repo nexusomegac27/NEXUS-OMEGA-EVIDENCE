@@ -1,0 +1,60 @@
+{
+  "schema_id": "NEXUS_EARQV_V1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "global_score": null,
+  "leaderboard": "PROHIBITED",
+  "aggregation_pass_caveat_fail": "PROHIBITED",
+  "model_brand_as_weight": "PROHIBITED",
+  "ai_review_as_human_review": "PROHIBITED",
+  "dimensions": {
+    "Q1_SOURCE_FIDELITY": {
+      "status": "BOUND",
+      "evidence_pointer": "01_R3_PHYSICAL_INTAKE.json"
+    },
+    "Q2_CLAIM_BOUNDARY_DISCIPLINE": {
+      "status": "BOUND",
+      "evidence_pointer": "07_R3_VALIDATED_CHECKPOINTS.json"
+    },
+    "Q3_REPRODUCIBILITY": {
+      "status": "SIM01_NUMERIC_MATCH",
+      "evidence_pointer": "06_R3_DUAL_IMPLEMENTATION_COMPARISON.json"
+    },
+    "Q4_FALSIFICATION_PRODUCTIVITY": {
+      "status": "GT1PCT_RULE_REJECTED",
+      "evidence_pointer": "07_R3_VALIDATED_CHECKPOINTS.json"
+    },
+    "Q5_CORRECTION_RESPONSIVENESS": {
+      "status": "R7_1_2_FORMULA_CORRECTION_PRESERVED",
+      "evidence_pointer": "research/r7/radiometric-extension/"
+    },
+    "Q6_PROVENANCE_COMPLETENESS": {
+      "status": "PARTIAL_LATE_MANIFEST_10_OF_11",
+      "evidence_pointer": "03_R3_PROVENANCE_LEDGER.json"
+    },
+    "Q7_INDEPENDENCE_DISCLOSURE": {
+      "status": "DUAL_RNG_FAMILIES",
+      "evidence_pointer": "11_INDEPENDENCE_VECTOR_SCHEMA.json"
+    },
+    "Q8_NEW_EVIDENCE_YIELD": {
+      "status": "SIM01_REEXEC_NO_NEW_METHOD",
+      "evidence_pointer": "14_LOOP_FIXTURE_RESULTS.json"
+    },
+    "Q9_DISSENT_PRESERVATION": {
+      "status": "R3_NOT_33_OF_33",
+      "evidence_pointer": "27_ASTRATIS_VIII_FINAL_CLOSURE.md"
+    },
+    "Q10_LOOP_RESISTANCE": {
+      "status": "FIXTURE_LOOP_001_DETECTED",
+      "evidence_pointer": "14_LOOP_FIXTURE_RESULTS.json"
+    },
+    "Q11_TEMPORAL_ACCURACY": {
+      "status": "CHAIN_BOUND_20260919_20260920",
+      "evidence_pointer": "16_NEXUS_FUNDUS_HEAD.json"
+    },
+    "Q12_TOOL_AND_AUTHORITY_BOUNDARY": {
+      "status": "WWW_HOLD_HOSTINGER_NO",
+      "evidence_pointer": "24_PUBLICATION_RESULTS.json"
+    }
+  }
+}

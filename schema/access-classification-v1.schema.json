@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-omega.example/schema/access-classification-v1.schema.json",
+  "title": "NEXUS Access Classification v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "class",
+    "publicly_reviewable"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "NEXUS_ACCESS_CLASSIFICATION_V1"
+    },
+    "class": {
+      "enum": [
+        "PUBLIC_SAFE",
+        "PROTECTED_CAPSULE",
+        "OPERATOR_ONLY",
+        "SEALED_ARCHIVE"
+      ]
+    },
+    "publicly_reviewable": {
+      "type": "boolean"
+    },
+    "encryption": {
+      "enum": [
+        "NONE",
+        "HOLD_C1_NO_AUTHORIZED_KEY_PROFILE",
+        "AUTHORIZED_PROFILE"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

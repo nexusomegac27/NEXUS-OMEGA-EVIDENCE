@@ -1,0 +1,53 @@
+name: validate-r8-astratis-viii-closure-r3
+
+on:
+  pull_request:
+    paths:
+      - 'research/r8/astratis-viii-closure-r3/**'
+      - 'research/fundus/**'
+      - 'schema/earqv-v1.schema.json'
+      - 'schema/nexus-fundus-c1-index-v1.schema.json'
+      - '.github/workflows/validate-r8-astratis-viii-closure-r3.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/r8/astratis-viii-closure-r3/**'
+      - 'research/fundus/**'
+      - 'schema/earqv-v1.schema.json'
+      - 'schema/nexus-fundus-c1-index-v1.schema.json'
+      - '.github/workflows/validate-r8-astratis-viii-closure-r3.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SHA-256 manifests
+        run: |
+          sha256sum -c research/r8/astratis-viii-closure-r3/SHA256SUMS.txt
+          sha256sum -c research/fundus/SHA256SUMS.txt
+      - name: Loop fixture + SIM01 + fundus invariants
+        run: python research/r8/astratis-viii-closure-r3/test_loop_and_invariants.py
+      - name: Adjudication invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/r8/astratis-viii-closure-r3')
+          x=json.loads((root/'VALIDATION_REPORT_20260920_R0.json').read_text(encoding='utf-8'))
+          assert x['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert x['truth_authority']=='NONE'
+          assert x['empirical_ndvi']=='NOT_COMPUTED'
+          assert x['pixel_processing_performed'] is False
+          assert x['reana_execution']=='NOT_ESTABLISHED'
+          assert x['r3_full_atomic_closure']=='NO'
+          assert x['ix_execution']=='NOT_STARTED'
+          assert x['publication']['empirical_pixel_claims']=='NO'
+          s=json.loads((root/'SIM01_REEXECUTION_RECEIPT.json').read_text(encoding='utf-8'))
+          assert s['numeric_reproduction']=='MATCH'
+          assert s['gt1pct_bug_rule']=='REJECTED'
+          print('PASS')
+          PY

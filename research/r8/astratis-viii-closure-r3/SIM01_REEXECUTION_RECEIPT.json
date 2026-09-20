@@ -1,0 +1,51 @@
+{
+  "object": "SIM01_CURSOR_INDEPENDENT_REEXECUTION_20260920_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "empirical_ndvi": "NOT_COMPUTED",
+  "pixel_processing_performed": false,
+  "r3_full_atomic_closure": "NO",
+  "numeric_reproduction": "MATCH",
+  "serialization_reproduction": "SEPARATE_FROM_NUMERIC",
+  "byte_reproduction_json": "NOT_REQUIRED_IF_NUMPY_VERSION_FIELD_DIFFERS",
+  "source_json_numpy_version": "2.4.4",
+  "cursor_numpy_version": "2.2.3",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "python_implementation": "CPython",
+    "numpy": "2.2.3",
+    "os": "Windows",
+    "os_release": "11",
+    "arch": "AMD64",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "sampling_order": "RED_FIRST_BLOCK",
+  "n_per_seed": 100000,
+  "seeds_n": 20,
+  "taylor_ref": 0.09641435995156426,
+  "gt1pct_bug_rule": "REJECTED",
+  "A": {
+    "rng": "numpy.random.default_rng PCG64",
+    "method_sha256": "16066e89db5d955114b32c252b68cf8ab7d3caf3beca855fbf5d864bc074a3f6",
+    "mc_mean": 0.09787719903756917,
+    "between_seed_std": 0.00021099722641677873,
+    "mc_se": 4.718041413318316e-05,
+    "mc_vs_taylor_rel_diff_pct": 1.517241919917108,
+    "vs_axiom_abs": 0.0
+  },
+  "B": {
+    "rng": "stdlib random.gauss",
+    "method_sha256": "67a828f0647dfdf22c8a7043349d0ed8898297b95b2f62cdb443c15e63cf75a5",
+    "mc_mean": 0.0978613610004723,
+    "between_seed_std": 0.00024187427356259794,
+    "mc_se": 5.408473176943492e-05,
+    "mc_vs_taylor_rel_diff_pct": 1.5008148678630076,
+    "vs_axiom_abs": 0.0
+  },
+  "A_vs_B": {
+    "abs": 1.583803709687137e-05,
+    "rel_pct": 0.016181538961686167
+  },
+  "foundational_c1": true,
+  "publication_eligibility": "YES_C1_PUBLIC_SAFE"
+}
