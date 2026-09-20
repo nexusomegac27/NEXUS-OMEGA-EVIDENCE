@@ -1,0 +1,55 @@
+name: validate-ix-r1-open-agent-foundation
+
+on:
+  pull_request:
+    paths:
+      - 'research/ix/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r1-open-agent-foundation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/ix/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r1-open-agent-foundation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify IX R1 derivative manifest
+        working-directory: research/ix/open-agent-foundation-r1
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Verify Fundus manifest
+        working-directory: research/fundus
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Validate machine-readable IX invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('research/ix/open-agent-foundation-r1')
+          report = json.loads((root/'R1_VALIDATION_REPORT_20260920_R0.json').read_text(encoding='utf-8'))
+          inventory = json.loads((root/'SOURCE_PACKAGE_INVENTORY.json').read_text(encoding='utf-8'))
+          openness = json.loads((root/'OPENNESS_TAXONOMY.json').read_text(encoding='utf-8'))
+          fundus = json.loads(Path('research/fundus/NEXUS_FUNDUS_HEAD.json').read_text(encoding='utf-8'))
+
+          assert report['claim_ceiling'] == 'C1_DESCRIPTIVE_ONLY'
+          assert report['truth_authority'] == 'NONE'
+          assert report['ix_execution'] == 'NOT_STARTED'
+          assert report['activation'] == 'NO'
+          assert report['source_package']['sha256'] == 'd8eb542e704d979915fe7ff986ea26526baf856720ec033019ed0c926c2ce9c6'
+          assert report['order_bind']['sha256'] == '077b53700f9d60b7daf7b90807a6e119fea1df32c7697ea680b794e531b2672e'
+          assert inventory['package']['entries'] == 10
+          assert len(inventory['entries']) == 10
+          assert openness['selection_policy'] == 'No component is selected or activated by this taxonomy.'
+          assert fundus['head_id'] == 'NEXUS_FUNDUS_HEAD_20260920_R1'
+          ix = [e for e in fundus['entries'] if e['entry_id'] == 'IX_EXECUTION']
+          assert len(ix) == 1 and ix[0]['state'] == 'NOT_STARTED'
+          print('PASS')
+          PY
