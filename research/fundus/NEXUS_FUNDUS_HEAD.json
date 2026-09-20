@@ -5,7 +5,7 @@
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
   "hold_may_be_dropped": false,
   "negative_knowledge_first_class": true,
-  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R1",
+  "head_id": "NEXUS_FUNDUS_HEAD_20260920_R2",
   "one_canonical_core": true,
   "entries": [
     {
@@ -116,9 +116,9 @@
       "entry_id": "IX_EXECUTION",
       "kind": "HOLD",
       "state": "NOT_STARTED",
-      "pointer": "research/ix/open-agent-foundation-r1/README.md",
+      "pointer": "research/ix/open-agent-foundation-r2/README.md",
       "sha256": null,
-      "notes": "R1 foundation published; execution/activation remains explicitly NOT_STARTED"
+      "notes": "R2 research foundation published; activation/execution remains explicitly NOT_STARTED"
     },
     {
       "entry_id": "HTML_AS_HASH_RECEIPT",
@@ -175,6 +175,54 @@
       "pointer": "research/ix/open-agent-foundation-r1/BODYTWIN_CONTINUITY_BLUEPRINT.md",
       "sha256": "aab005edfe43b54500521298454fb7bc9b1543e583f5e9117b8954189d2903f2",
       "notes": "BodyTwin-derived substrate-replacement continuity pattern; no personhood/consciousness claim"
+    },
+    {
+      "entry_id": "IX_R2_INTEGRITY_BOUNDARY_FOUNDATION",
+      "kind": "CHECKPOINT",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_PUBLIC_SAFE_DERIVATIVE_READY",
+      "pointer": "research/ix/open-agent-foundation-r2/",
+      "sha256": "dd388118b379711db24019ab5a254b4e4d09e9be44b3015cb69c11364730ebd8",
+      "notes": "ZKP, authority-boundary, provenance and ternary research narrowed to validated C1 scope; no activation"
+    },
+    {
+      "entry_id": "IX_R2_ZKP_SCOPE",
+      "kind": "CORRECTION",
+      "state": "FORMAL_PREDICATE_PROOF_NOT_SCIENTIFIC_VALIDITY",
+      "pointer": "research/ix/open-agent-foundation-r2/ZKP_INTEGRITY_CORRECTIONS.md",
+      "sha256": "290b571e96014f41af3e4c4ec543d858dd788217448f4133a2a1707348e64519",
+      "notes": "Key possession != authorship; range proof != quality validation; no hidden global quality score"
+    },
+    {
+      "entry_id": "IX_R2_TERNARY_KLEENE_SCOPE",
+      "kind": "CORRECTION",
+      "state": "BALANCED_TERNARY_NOT_KLEENE_K3",
+      "pointer": "research/ix/open-agent-foundation-r2/TERNARY_KLEENE_CORRECTIONS.md",
+      "sha256": "1badb559bd63fe260df05e572949e3ff97cb18ea739dcab986909ab8ad7b0a97",
+      "notes": "Helix9 and SBTCVM established as numerical ternary artifacts; epistemic K3 equivalence rejected"
+    },
+    {
+      "entry_id": "IX_R2_AUTHORITY_BOUNDARY_CANDIDATES",
+      "kind": "CHECKPOINT",
+      "state": "PRIMARY_SOURCE_CHECKED_CANDIDATES_NOT_SELECTED",
+      "pointer": "research/ix/open-agent-foundation-r2/BOUNDARY_PROVENANCE_CANDIDATE_MATRIX.md",
+      "sha256": "4897eb4da7d940e0c1db49b30b8abe129a56da611bff50ee9798261d4756bbc8",
+      "notes": "CUSTODY/MAIW/Cedar/provenance candidates; control objective and enforcement implementation remain separate"
+    },
+    {
+      "entry_id": "IX_R2_FLAMEWALKER_SOURCE_GAP",
+      "kind": "NEGATIVE",
+      "state": "SOURCE_GAP",
+      "pointer": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
+      "sha256": "4513ab20d43f98a42dd479df8d41bfdc460376228dbe6bca38e9851be47871e6",
+      "notes": "Exact named public artifact not independently established"
+    },
+    {
+      "entry_id": "IX_R2_HE2_NET_SOURCE_GAP",
+      "kind": "NEGATIVE",
+      "state": "SOURCE_GAP",
+      "pointer": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
+      "sha256": "4513ab20d43f98a42dd479df8d41bfdc460376228dbe6bca38e9851be47871e6",
+      "notes": "Exact named system/module/axiom claims not independently established"
     }
   ]
 }
