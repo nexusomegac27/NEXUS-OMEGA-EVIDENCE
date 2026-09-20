@@ -1,0 +1,24 @@
+{
+  "object": "NEXUS_OMEGA_IX_R2_EVIDENCE_DELTA_20260920_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "baseline": "IX_R1_PUBLIC_MAIN_f4e33b770a81c49d73e15dcad219e29bbecb4881",
+  "new_physical_source_package": true,
+  "new_source_package_sha256": "fef0e2a41d94d8aba316560883c491baf0b86632d9d65cb0ffd518fde93dba81",
+  "new_physical_bytes": 374153,
+  "new_primary_source_checks": [
+    "EZKL","LURK","CEDAR","IPLD","CERAMIC","BULLETPROOFS",
+    "CUSTODY","NVIDIA_MAIW","PROV_AGENT","PORTABLE_AGENT_MEMORY","HELIX9","SBTCVM"
+  ],
+  "new_corrections": [
+    "ZKP_DOES_NOT_PROVE_GENERIC_SCIENTIFIC_VALIDITY",
+    "KEY_POSSESSION_DOES_NOT_PROVE_HUMAN_AUTHORSHIP",
+    "BALANCED_TERNARY_DOES_NOT_EQUAL_KLEENE_K3",
+    "CUSTODY_IS_CONTROL_FRAMEWORK_NOT_CONTAINER_IMPLEMENTATION",
+    "NVIDIA_MAIW_IS_PUBLIC_OPEN_REFERENCE_ARCHITECTURE",
+    "FLAMEWALKER_EXACT_SOURCE_NOT_ESTABLISHED",
+    "HE2_NET_EXACT_SOURCE_NOT_ESTABLISHED"
+  ],
+  "loop_state": "NO_LOOP_R2_HAS_MATERIAL_EVIDENCE_DELTA",
+  "canon_advance_eligible": true,
+  "activation_authority": false
+}
