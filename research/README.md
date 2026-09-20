@@ -35,3 +35,10 @@ research/pipeline/
 ```
 
 Research publication is not live implementation. Promotion into stable `docs/schema/scripts/tests/validation/examples` requires a separately governed integration path.
+
+## Current phase-IX foundation
+
+- `research/ix/open-agent-foundation-r1/` — provider-neutral Open-Agent research foundation; `IX_EXECUTION=NOT_STARTED`.
+- `research/fundus/` — cross-session C1 reference index; not a truth authority.
+
+These paths are research/checkpoint surfaces only. They do not imply production integration or activation.
