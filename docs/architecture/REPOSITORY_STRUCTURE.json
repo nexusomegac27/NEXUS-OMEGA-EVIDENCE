@@ -89,6 +89,10 @@
     "astratis-ix-open-agent-r1": {
       "path": "research/ix/open-agent-foundation-r1",
       "state": "FOUNDATION_PUBLISHED_EXECUTION_NOT_STARTED"
+    },
+    "astratis-ix-open-agent-r2": {
+      "path": "research/ix/open-agent-foundation-r2",
+      "state": "INTEGRITY_BOUNDARY_FOUNDATION_PUBLICATION_CANDIDATE_EXECUTION_NOT_STARTED"
     }
   },
   "research_lane_contract": {
@@ -144,5 +148,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.3.0"
+  "version": "1.4.0"
 }
