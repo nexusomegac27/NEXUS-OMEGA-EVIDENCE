@@ -97,6 +97,10 @@
     "astratis-ix-open-agent-r3": {
       "path": "research/ix/open-agent-foundation-r3",
       "state": "CONTROLLED_FALSIFICATION_VALIDATION_PUBLISHABLE_EXECUTION_NOT_STARTED"
+    },
+    "astratis-ix-open-agent-r4": {
+      "path": "research/ix/open-agent-foundation-r4",
+      "state": "CANONICAL_CONTINUATION_ORDER_AUTHORIZED_AGENT_EXECUTION_NOT_STARTED"
     }
   },
   "research_lane_contract": {
@@ -152,5 +156,5 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.5.0"
+  "version": "1.6.0"
 }

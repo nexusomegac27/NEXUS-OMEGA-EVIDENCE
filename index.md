@@ -32,5 +32,6 @@ This site is a discovery surface for public, content-addressed C1 evidence. It i
 - [Astratis IX R2 integrity / boundary foundation](research/ix/open-agent-foundation-r2/README.md)
 - [Astratis IX R2 boundary/provenance candidate matrix](research/ix/open-agent-foundation-r2/BOUNDARY_PROVENANCE_CANDIDATE_MATRIX.md)
 - [Astratis IX R3 controlled-falsification validation](research/ix/open-agent-foundation-r3/README.md)
+- [Astratis IX R4 canonical continuation order](research/ix/open-agent-foundation-r4/README.md)
 
 Every consumer must retrieve the referenced bytes, verify their SHA-256 and length, preserve all caveats, and independently validate any semantic claim.

@@ -1,0 +1,17 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R4_CANONICAL_CONTINUATION_ORDER_20260920_R0",
+  "state": "AUTHORIZED_TO_START_EXTERNAL_R4_RESEARCH_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "parent_public_main": "222b7c920fe3851a49f4a8a7ea72244a20fa5ef9",
+  "parent_fundus_head": "NEXUS_FUNDUS_HEAD_20260920_R3",
+  "parent_fundus_sha256": "a8287e5d2a35ee4a7783169d14d6762dca069ed2fa193316be2fe8e310978523",
+  "parent_r3_source_zip_sha256": "a61af408a88ff406f2d90aa221af210020f42d41f9c656155dbb09a808a74d38",
+  "parent_r3_validation_sha256": "04767e287c5c8b535d5fce43fc5143f0c6b2e98b5f74736af1cb707783122bdf",
+  "parent_r3_execution_receipt_sha256": "c9b4cebe56d50b3ea051452eda638323d9a95efe17d6133668128a1c354268fd",
+  "r4_research_execution": "AUTHORIZED_TO_START",
+  "ix_agent_execution": "NOT_STARTED",
+  "activation": "NO",
+  "fundus_promotion_from_order": "NO",
+  "next": "RETURN_ALL_R4_BYTES_TO_AXIOM"
+}

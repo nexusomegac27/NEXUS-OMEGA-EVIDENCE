@@ -1,0 +1,46 @@
+name: validate-ix-r4-order
+
+on:
+  pull_request:
+    paths:
+      - 'research/ix/open-agent-foundation-r4/**'
+      - '.github/workflows/validate-ix-r4-order.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/ix/open-agent-foundation-r4/**'
+      - '.github/workflows/validate-ix-r4-order.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify R4 order manifest
+        working-directory: research/ix/open-agent-foundation-r4
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Validate R4 order invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/ix/open-agent-foundation-r4')
+          state=json.loads((root/'R4_ORDER_STATE.json').read_text(encoding='utf-8'))
+          fundus=json.loads(Path('research/fundus/NEXUS_FUNDUS_HEAD.json').read_text(encoding='utf-8'))
+          assert state['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert state['truth_authority']=='NONE'
+          assert state['parent_public_main']=='222b7c920fe3851a49f4a8a7ea72244a20fa5ef9'
+          assert state['parent_fundus_head']=='NEXUS_FUNDUS_HEAD_20260920_R3'
+          assert state['parent_fundus_sha256']=='a8287e5d2a35ee4a7783169d14d6762dca069ed2fa193316be2fe8e310978523'
+          assert state['r4_research_execution']=='AUTHORIZED_TO_START'
+          assert state['ix_agent_execution']=='NOT_STARTED'
+          assert state['activation']=='NO'
+          assert state['fundus_promotion_from_order']=='NO'
+          assert fundus['head_id']=='NEXUS_FUNDUS_HEAD_20260920_R3'
+          ix=[e for e in fundus['entries'] if e['entry_id']=='IX_EXECUTION']
+          assert len(ix)==1 and ix[0]['state']=='NOT_STARTED'
+          print('PASS')
+          PY
