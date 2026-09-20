@@ -111,6 +111,10 @@ or proof of a trinary ontology.
 
 See [FIELD_LAB_AIRGAP_VALIDATION.md](FIELD_LAB_AIRGAP_VALIDATION.md).
 
+Additional upstream-checked framework/retrieval candidates for R2 are recorded in
+[R2_OPEN_SOURCE_DISCOVERY_QUEUE.md](R2_OPEN_SOURCE_DISCOVERY_QUEUE.md). They are research
+candidates only and are not selected or activated.
+
 ## Workspace independence finding
 
 The two bundled Grok workspace ZIPs are nearly the same snapshot, not two independent evidence
