@@ -1,0 +1,11 @@
+{
+  "note": "Use research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json for real returns. This example is non-authoritative.",
+  "protocol": "INBOX_VALIDATE_BIND_RELAY_ACK_V1",
+  "required_files": [
+    "handoff.json",
+    "Entry Receipt reference",
+    "Exit Receipt reference",
+    "File-Event Ledger reference",
+    "Workflow-Event Ledger reference"
+  ]
+}

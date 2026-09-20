@@ -1,0 +1,88 @@
+{
+  "object": "R3_H1_H4_CASE_BINDING",
+  "produced_at": "2026-09-02T19:19:25Z",
+  "bindings": {
+    "H1": {
+      "meaning": "Non-optimizable / binary constraints",
+      "strong_case_ids": [
+        "FS5"
+      ],
+      "weak_or_c0_only": [
+        "FS1",
+        "FS2",
+        "FS4"
+      ],
+      "none": [
+        "FS3",
+        "FS6",
+        "FS7",
+        "FS8"
+      ],
+      "adjunct": [
+        "ADJUNCT_GL_HANDBOOK:C-025"
+      ]
+    },
+    "H2": {
+      "meaning": "Human final authorization / ternary escalate",
+      "strong_case_ids": [
+        "FS5",
+        "FS6"
+      ],
+      "weak_or_c0_only": [
+        "FS1",
+        "FS2",
+        "FS7_V2_SUPERSEDING"
+      ],
+      "none": [
+        "FS3",
+        "FS4",
+        "FS8"
+      ],
+      "adjunct": [
+        "C-025",
+        "C-026"
+      ],
+      "held_invalid": [
+        "FS7_original:C-019..C-021"
+      ]
+    },
+    "H3": {
+      "meaning": "Measurement/decision as boundary event",
+      "strong_case_ids": [
+        "FS3",
+        "FS4"
+      ],
+      "weak_or_c0_only": [],
+      "none": [
+        "FS1",
+        "FS2",
+        "FS5",
+        "FS6",
+        "FS7",
+        "FS8"
+      ],
+      "lane_h_restriction": "CASE_STUDY_CORPUS_LANE_H_RESONANCE=WEAK"
+    },
+    "H4": {
+      "meaning": "Shield / outer framing",
+      "strong_case_ids": [],
+      "weak_or_c0_only": [
+        "FS8"
+      ],
+      "none": [
+        "FS1",
+        "FS2",
+        "FS3",
+        "FS4",
+        "FS5",
+        "FS6",
+        "FS7"
+      ],
+      "declaration": "keine starke Stützung im Fallstudienkorpus"
+    }
+  },
+  "case_study_corpus_lane_b_resonance": "UNDEVELOPED",
+  "case_study_corpus_lane_h_resonance": "WEAK",
+  "global_lane_b_status": "ACTIVE_DIRECT_ENGINEERING_LANE_WITH_R3_ANALOGICAL_DATA_GAP",
+  "global_lane_h_status": "ACTIVE_PROVENANCE_LANE_WITH_R3_CASE_STUDY_RESONANCE_GAP"
+}

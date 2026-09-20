@@ -25,6 +25,32 @@ RETURN_ANCHOR_LEVEL
 
 Chat content is never a substitute for externally retrieved bytes.
 
+## GitHub automated handoff
+
+For external-agent or Cursor returns that are meant to continue through GitHub
+without routine Operator mediation, submit a v1 handoff envelope under:
+
+```text
+research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json
+```
+
+The fixed stage order is:
+
+```text
+INBOX
+-> VALIDATE
+-> BIND
+-> RELAY
+-> ACK
+```
+
+The envelope must bind payload bytes, Entry Receipt, Exit Receipt, File-Event
+Ledger, Workflow-Event Ledger, token/continuation status and Authority-Gate
+status. GitHub automation may emit bind/relay/ack receipts as workflow
+artifacts or repository receipts, but it cannot merge, force-push, write main,
+promote claims, promote foundations or validate a producer's own scientific
+return.
+
 ## Failure
 
 Missing or divergent bytes are reported as `SOURCE_NOT_PRESENT`, `NOT_COMPUTABLE`, or `FAIL_CLOSED` as appropriate. Never reconstruct missing evidence from conversation order.

@@ -1,0 +1,10 @@
+{"id":"AHF01","mutation":{"claim_promotion":true},"expected_error":"HANDOFF_CLAIM_PROMOTION"}
+{"id":"AHF02","mutation":{"foundation_promotion":true},"expected_error":"HANDOFF_FOUNDATION_PROMOTION"}
+{"id":"AHF03","mutation":{"force_push":true},"expected_error":"HANDOFF_FORCE_PUSH"}
+{"id":"AHF04","mutation":{"main_write":true},"expected_error":"HANDOFF_MAIN_WRITE"}
+{"id":"AHF05","mutation":{"merge_authority":"GRANTED"},"expected_error":"HANDOFF_MERGE_AUTHORITY"}
+{"id":"AHF06","mutation":{"validator":{"agent_id":"CURSOR_PRAXIS_R3_COMPLETION"}},"expected_error":"HANDOFF_SELF_VALIDATION"}
+{"id":"AHF07","mutation":{"authority_gates":[{"gate":"MERGE","status":"OPEN","operator_confirmation_required":true}]},"expected_error":"HANDOFF_AUTHORITY_GATE_OPEN:MERGE"}
+{"id":"AHF08","mutation":{"token_continuation":{"continuation_required":true,"continuation_capsule_path":null}},"expected_error":"CONTINUATION_CAPSULE_MISSING"}
+{"id":"AHF09","mutation":{"payload_refs":[{"role":"R3_TERMINAL_RETURN","path":"research/r3/completion-symbiosis-20260902/terminal_return.md","bytes":1,"sha256":"38c075b9deff0da71a9a89833a07c9f490a31d7c83f5c3a90425512c0be3e1f2"}]},"expected_error":"PAYLOAD_BYTES_MISMATCH:research/r3/completion-symbiosis-20260902/terminal_return.md"}
+{"id":"AHF10","mutation":{"ledger_refs":{"file_event_target_hash_policy":"PRESERVE_ONLY_DECLARED_CAVEAT"},"caveats":[]},"expected_error":"LEDGER_PRESERVE_CAVEAT_MISSING"}

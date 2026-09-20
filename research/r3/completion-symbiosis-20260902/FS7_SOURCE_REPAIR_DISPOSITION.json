@@ -1,0 +1,40 @@
+{
+  "object": "FS7_SOURCE_REPAIR_DISPOSITION",
+  "path_selected": "B_APPEND_ONLY_SUPERSEDING_VERSION",
+  "path_a_exact_source_for_written_gitlab_claims_against_ref_231": "NOT_ESTABLISHED",
+  "path_a_note": "GitLab Handbook exists as separate EXTERNAL_COMPARATIVE; must not silently replace ref 231.",
+  "original_source_ref": "231",
+  "original_source_object": {
+    "title": "From Terminal to Turnaround",
+    "class": "OPENAI_FORUM_EVENT_NARRATIVE",
+    "about": "Sid Sijbrandij using ChatGPT in cancer research context",
+    "supports_written_gitlab_code_acceptance_claims": false
+  },
+  "held_claims": [
+    "C-019",
+    "C-020",
+    "C-021"
+  ],
+  "held_status": "HOLD_SOURCE_OBJECT_MISMATCH",
+  "superseding_case": {
+    "case_study_id": "FS7_V2_SUPERSEDING",
+    "title": "Menschliche Agentur im Dialog mit KI in medizinischer Selbstforschung (source-exact zu Ref 231)",
+    "evidence_domain": "PRODUCER_SELF_REPORT",
+    "resonance_quality": "LOW_TO_MEDIUM",
+    "h_support": [
+      "H2_C0_WEAK_ANALOGY_ONLY"
+    ]
+  },
+  "adjunct_external_comparative_not_fs7_repair": [
+    {
+      "url": "https://handbook.gitlab.com/handbook/engineering/ai/operating-principles/",
+      "evidence_domain": "EXTERNAL_COMPARATIVE",
+      "binds_to_ref_231": false,
+      "new_claim_ids": [
+        "C-025",
+        "C-026"
+      ]
+    }
+  ],
+  "original_bytes_policy": "PRESERVED_NO_SILENT_REWRITE"
+}

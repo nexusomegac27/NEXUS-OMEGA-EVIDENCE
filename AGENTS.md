@@ -10,8 +10,9 @@ Before substantive work in this repository, read in this order:
 2. `GOVERNANCE.md`
 3. `docs/AI_CONTEXT.md`
 4. `docs/agent-protocol.md`
-5. `docs/architecture/REPOSITORY_STRUCTURE.md`
-6. `index/v1/latest.json` when the task depends on current evidence state
+5. `docs/artifact-handoff-protocol.md` when receiving or relaying an agent return
+6. `docs/architecture/REPOSITORY_STRUCTURE.md`
+7. `index/v1/latest.json` when the task depends on current evidence state
 
 If any required object is missing or unreadable, report the gap explicitly and continue in independent lanes when reasonable.
 
@@ -70,6 +71,18 @@ AXIOM and Cursor/PRAXIS MUST treat repository order as an intake invariant. If a
 - Do not rewrite published evidence objects in place.
 - Preserve exact predecessor state in handoffs.
 - Commit/PR success is a transport and repository event, not scientific claim promotion.
+
+## Artifact handoff automation
+
+External agent and Cursor returns that should continue without routine Operator
+mediation use `research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json`.
+The canonical protocol is `INBOX -> VALIDATE -> BIND -> RELAY -> ACK` as
+defined in `docs/artifact-handoff-protocol.md`.
+
+Automated relay is limited to byte binding, receipt generation, ledger parsing
+and GitHub workflow artifacts. It must fail closed on missing bytes, hash
+mismatches, open Authority-Gates, producer/validator identity fusion,
+force-push, merge, main-write, claim promotion or foundation promotion.
 
 ## Security and privacy
 

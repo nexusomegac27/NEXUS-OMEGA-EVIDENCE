@@ -1,0 +1,249 @@
+{
+  "object": "R3_COMPLETION_INTAKE_REBIND_20260902_R0",
+  "produced_at": "2026-09-02T19:19:25Z",
+  "order_sha256": "bd8778b3d171a053853fac0fd22bbabd0e3f2d07350defeb084bb71cefa39520",
+  "autonomous_package_sha256": "29e2f5158ea07f14bff29946390896645fcea7f1ad76b4f3247aa2a694cc686e",
+  "r2_zip": {
+    "bytes": 12498,
+    "sha256": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91",
+    "internal_sums": {
+      "bom": true,
+      "checked": 9,
+      "matched": 9
+    },
+    "members": [
+      {
+        "path": "SHA256SUMS.txt",
+        "bytes": 959,
+        "sha256": "864c426c539fde3f622d81c693ffa54ebde3b75655f1f538e4be0ebaf0837f19"
+      },
+      {
+        "path": "NEXUS_OMEGA_CURSOR_R2_LAYER2_OPEN_RESEARCH_INTAKE_RETURN_20260902_R0.json",
+        "bytes": 1235,
+        "sha256": "5fb37d6de9f9f7b6b6bbe0d7285b3f4f2215aab545d3a821b36577bba5ed3e89"
+      },
+      {
+        "path": "NEXUS_OMEGA_CURSOR_R2_LAYER2_OPEN_RESEARCH_INTAKE_RETURN_20260902_R0.md",
+        "bytes": 2677,
+        "sha256": "2969811016181987a48cd66ffa0f17817e70f975625dfdeb2c3cffdc966331cb"
+      },
+      {
+        "path": "R2_AGENT_ENTRY_ACK_CURSOR_R2_LANE.json",
+        "bytes": 1162,
+        "sha256": "edac4550df703b3db32847bbd23d22a15a36285605fbe4affaed7bb581e6f650"
+      },
+      {
+        "path": "R2_FILE_EVENT_SCHEMA.json",
+        "bytes": 1041,
+        "sha256": "5d87f90efa08a803694f8eadcb935409605b1bf2973f882ec028c178475ff6b5"
+      },
+      {
+        "path": "R2_LAYER2_INTAKE_RECEIPT.json",
+        "bytes": 3343,
+        "sha256": "a5b2de2af238c19a36729e8e48885fcd54ac46d94c8a55c0480f559f0e260d87"
+      },
+      {
+        "path": "R2_SOURCE_CONFLICT_REGISTER.json",
+        "bytes": 3418,
+        "sha256": "b267828f319d0db39d59ab7cee07dd4615dee4f86486aa647ebdf3455d2f99eb"
+      },
+      {
+        "path": "R2_SOURCE_REGISTER.json",
+        "bytes": 3083,
+        "sha256": "da2e69a66424d05c16d4f3422cfd3f41a9e56b1aa0857479a49615af3855b592"
+      },
+      {
+        "path": "R2_WORKFLOW_EVENT_SCHEMA.json",
+        "bytes": 2170,
+        "sha256": "5f6a5379c21b446c93666605511b64a5210327b9706e8ad03908b249b7988738"
+      },
+      {
+        "path": "R2_WORKFLOW_EVENTS.jsonl",
+        "bytes": 5242,
+        "sha256": "83960b74dbc625fdf6594007759d945641af96e52b848e9646f5b5361302faa1"
+      }
+    ]
+  },
+  "r3_zip": {
+    "bytes": 461541,
+    "sha256": "eee6446cea5fea4a2086357f6acab822084feeb05a366c24fc952c682a8adb3c",
+    "internal_sha256sums": "ABSENT",
+    "members": [
+      {
+        "path": "GROK_FOLLOW_UP_ORDER_20260902.txt",
+        "bytes": 5892,
+        "sha256": "7db9319a36b9e8a32ac713b17a478bc1bf42015d84b44979fec643744368517c",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          11,
+          9,
+          52
+        ],
+        "compressed_size": 2643
+      },
+      {
+        "path": "NEXUS-OMEGA-Zwischen Struktur und Datenleerstand.txt",
+        "bytes": 32789,
+        "sha256": "1f398395b9d83aec2f18e70aab68322baf8b47bb51481a6fc4bb0fe28ab99b38",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          55,
+          2
+        ],
+        "compressed_size": 11642
+      },
+      {
+        "path": "Zwischen Struktur und Datenleerstand_ Die schwache Resonanz von Provenance (Lane H) und die undeveloped Logik von Admission (Lane B).pdf",
+        "bytes": 112280,
+        "sha256": "e36a2ff8d5503502e2250bd76fef706b300296629a1ff14d0eb66dae2461db0a",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          54,
+          34
+        ],
+        "compressed_size": 108255
+      },
+      {
+        "path": "Von der Binär-Grenze zur Trinären Entscheidung_ Acht deskriptive Fallstudien zur empirischen Sättigung einer strukturellen Dimensionalität.pdf",
+        "bytes": 187179,
+        "sha256": "8499280aa983db467a51337d89a1a8d611a00bfeb6b48e0f9fd3c2dd1f12a863",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          39,
+          26
+        ],
+        "compressed_size": 180332
+      },
+      {
+        "path": "NEXUS_Von der Binär-Grenze zur Trinären Entscheidung.txt",
+        "bytes": 65359,
+        "sha256": "a7e992026288ceea9a0d9c8d4ae17fa9fd34068f143c947c33cff82337a688a2",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          39,
+          16
+        ],
+        "compressed_size": 18188
+      },
+      {
+        "path": "Von der Strukturhypothese zur Fallstudienvalidierung_ Ein Steuerungsmodell für risikosensible Forschung.pdf",
+        "bytes": 60550,
+        "sha256": "ccf43f54b01c31265b8988ac64e43d8aaea59461f33df0fb9b8542d98c1d1d38",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          17,
+          36
+        ],
+        "compressed_size": 59171
+      },
+      {
+        "path": "NEXUS-OMEGA-Von der Strukturhypothese zur Fallstudienvalidierung.txt",
+        "bytes": 39878,
+        "sha256": "897e01da53d674e6c5bc5062f55c22f8c65ad52befed5b3547308cbc57d79e30",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          10,
+          17,
+          28
+        ],
+        "compressed_size": 12751
+      },
+      {
+        "path": "Von der Methode zum Objekt_ Eine strukturierte Analyse der NEXUS-OMEGA-Kette nach dem epistemologischen Mandat.pdf",
+        "bytes": 51681,
+        "sha256": "33b6fad2eed7ed222ed506317baf9723652e369b7d2b55e345b9da861135a4df",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          9,
+          25,
+          48
+        ],
+        "compressed_size": 50354
+      },
+      {
+        "path": "NEXUS-OMEGA-Kette nach dem epistemologischen Mandat.txt",
+        "bytes": 29505,
+        "sha256": "997116f62b3a3bba0b8eacd03a25b633c942d9cb865770e5bff7caf668326419",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          9,
+          25,
+          40
+        ],
+        "compressed_size": 10292
+      },
+      {
+        "path": "NEXUS_GROK - RESEARCH_ORDER_SHIELD_OF_HUMANITY_SYMBIOSTIC.txt",
+        "bytes": 12415,
+        "sha256": "f0dab50240d5b401ac3ab6817e1c32589488617e8e3ea8b3718fd218ddfbd5b5",
+        "zip_datetime": [
+          2026,
+          9,
+          2,
+          9,
+          12,
+          12
+        ],
+        "compressed_size": 4749
+      }
+    ]
+  },
+  "preserved_defects": [
+    {
+      "id": "R2-FAIL-01",
+      "label": "SHA256SUMS_UTF8_BOM_PORTABILITY_DEFECT",
+      "severity": "MINOR",
+      "bom_present": true
+    },
+    {
+      "id": "R3-FAIL-01",
+      "label": "QWEN_HISTORICAL_ENTRY_ACK_ABSENT"
+    },
+    {
+      "id": "R3-FAIL-02",
+      "label": "FS7_SOURCE_OBJECT_MISMATCH"
+    },
+    {
+      "id": "R3-FAIL-03",
+      "label": "INTERNAL_R3_SHA256SUMS_ABSENT"
+    },
+    {
+      "id": "R3-FAIL-04",
+      "label": "GROK_FOLLOW_UP_NOT_IN_SUPPLIED_STACK"
+    }
+  ],
+  "chronology": {
+    "r3_seed": "PREPARATORY_OVERLAP",
+    "chain_break": "NOT_ESTABLISHED",
+    "zip_timestamp_note": "ZIP_TIMESTAMP != CAUSAL_TRUTH"
+  },
+  "r2_local_head_resolution": {
+    "reported_short": "5a3e78f65",
+    "status": "NOT_ESTABLISHED_IN_EVIDENCE_CLONE",
+    "r2_remote_branch": "axiom/agent-authorization-admission-r2-open-research-20260902",
+    "r2_remote_status": "NOT_ESTABLISHED"
+  }
+}

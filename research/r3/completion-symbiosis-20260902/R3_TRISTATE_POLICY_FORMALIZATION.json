@@ -1,0 +1,35 @@
+{
+  "object": "R3_TRISTATE_POLICY_FORMALIZATION",
+  "decision_state": [
+    "ALLOW",
+    "DENY",
+    "ESCALATE_TO_HUMAN"
+  ],
+  "synonym_note": "ESCALATE_TO_OPERATOR (PR14) synonym research-candidate; chains separate until explicit integration.",
+  "WHEN_MACHINE_MAY_ALLOW": [
+    "Task within capability vector",
+    "Evidence domain compatible with claim ceiling",
+    "No non-delegable authority class",
+    "Routine lawful TYPE_A research"
+  ],
+  "WHEN_MACHINE_MUST_DENY": [
+    "Capability absent/expired",
+    "Claim/foundation promotion",
+    "Rewrite sealed evidence",
+    "Unauthorized merge/force-push",
+    "Protected invariant bypass"
+  ],
+  "WHEN_NON_DELEGABLE_HUMAN_AUTHORITY_IS_REQUIRED": [
+    "TYPE_B epistemic",
+    "TYPE_C physical/admin/private source",
+    "Secrets/production/device gates",
+    "Hard policy vs preference without resume token"
+  ],
+  "escalation_scope": "LANE_OR_ACTION_SCOPED_NOT_UNIVERSAL_STOP",
+  "protected_invariant_requirements": [
+    "ENFORCEMENT_MECHANISM",
+    "THREAT_MODEL",
+    "ASSUMPTIONS",
+    "BYPASS_TESTS"
+  ]
+}

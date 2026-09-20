@@ -1,0 +1,117 @@
+{
+  "caveats": [
+    "C0_C1_ONLY",
+    "NON_QWEN_R3_COMPLETION_CANDIDATE",
+    "QWEN_PROVIDER_EXECUTION_NOT_AVAILABLE",
+    "QWEN_HISTORICAL_ENTRY_ACK_NOT_PRESENT",
+    "NO_MERGE",
+    "NO_CLAIM_PROMOTION",
+    "NO_FOUNDATION_PROMOTION",
+    "NO_SELF_VALIDATION",
+    "R2_PR13_SEPARATION_PRESERVED",
+    "FILE_EVENT_TARGET_HASHES_PRESERVED_NOT_REASSERTED",
+    "R3_INTERNAL_SHA256SUMS_ABSENT",
+    "R2_BASE_SHA_NOT_ESTABLISHED_IN_EVIDENCE_CLONE"
+  ],
+  "claim_ceiling": "C0_EXPLORATORY_C1_DESCRIPTIVE",
+  "claim_promotion": false,
+  "decision": "BOUND_STRUCTURE_ONLY_C1",
+  "foundation_promotion": false,
+  "generated_at_utc": "2026-09-02T19:53:22Z",
+  "generation_context": "LOCAL_REPOSITORY_RECEIPT",
+  "github_context": {},
+  "handoff_id": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+  "integration_authority": "NONE",
+  "ledger_refs": {
+    "file_event_base_path": "research/r3/completion-symbiosis-20260902",
+    "file_event_ledger": {
+      "bytes": 4265,
+      "path": "research/r3/completion-symbiosis-20260902/R3_FILE_EVENTS.jsonl",
+      "role": "R3_FILE_EVENT_LEDGER",
+      "sha256": "28c13711fb8f223e731dd402d61dd5e8bcfa0b6ad4ab4d5ac86ca27274d02369"
+    },
+    "file_event_target_hash_policy": "PRESERVE_ONLY_DECLARED_CAVEAT",
+    "workflow_event_ledger": {
+      "bytes": 1378,
+      "path": "research/r3/completion-symbiosis-20260902/R3_WORKFLOW_EVENTS.jsonl",
+      "role": "R3_WORKFLOW_EVENT_LEDGER",
+      "sha256": "c979e9bfdc083dfe84b7e8dbcff122913ded800b824f0b3f509b318e8f4309fa"
+    }
+  },
+  "payload_refs": [
+    {
+      "bytes": 2322,
+      "path": "research/r3/completion-symbiosis-20260902/terminal_return.md",
+      "role": "R3_TERMINAL_RETURN",
+      "sha256": "38c075b9deff0da71a9a89833a07c9f490a31d7c83f5c3a90425512c0be3e1f2"
+    },
+    {
+      "bytes": 779,
+      "path": "research/r3/completion-symbiosis-20260902/R3_AGENT_ENTRY_ACK.json",
+      "role": "R3_ENTRY_RECEIPT",
+      "sha256": "cfa60e19e299ab9385b5dcc6350f93e34ef9b087fdebeb0317a466eae5874273"
+    },
+    {
+      "bytes": 4265,
+      "path": "research/r3/completion-symbiosis-20260902/R3_FILE_EVENTS.jsonl",
+      "role": "R3_FILE_EVENT_LEDGER",
+      "sha256": "28c13711fb8f223e731dd402d61dd5e8bcfa0b6ad4ab4d5ac86ca27274d02369"
+    },
+    {
+      "bytes": 1378,
+      "path": "research/r3/completion-symbiosis-20260902/R3_WORKFLOW_EVENTS.jsonl",
+      "role": "R3_WORKFLOW_EVENT_LEDGER",
+      "sha256": "c979e9bfdc083dfe84b7e8dbcff122913ded800b824f0b3f509b318e8f4309fa"
+    },
+    {
+      "bytes": 7270,
+      "path": "research/r3/completion-symbiosis-20260902/R3_COMPLETION_INTAKE_REBIND.json",
+      "role": "R3_COMPLETION_INTAKE_REBIND",
+      "sha256": "8c4f1de48539bc17a9a33033e45719b85bdf92745311fe5b336530022e63be87"
+    },
+    {
+      "bytes": 17766,
+      "path": "research/r3/completion-symbiosis-20260902/R3_CONSOLIDATED_CLAIM_REGISTER.json",
+      "role": "R3_CONSOLIDATED_CLAIM_REGISTER",
+      "sha256": "3e507fbd775f3872bdffec28f59a37be735ae9931cd55a2b6c92df25714d8119"
+    },
+    {
+      "bytes": 2765,
+      "path": "research/r3/completion-symbiosis-20260902/R3_SOURCE_EXACT_VALIDATION.json",
+      "role": "R3_SOURCE_EXACT_VALIDATION",
+      "sha256": "e18908bee6504d3ba43590f08a29b0b40588fb790f9fa816d3fa9b58bc155864"
+    },
+    {
+      "bytes": 742,
+      "path": "research/r3/completion-symbiosis-20260902/R3_INDEPENDENT_VALIDATOR.json",
+      "role": "R3_SELF_CHECK_DISCLOSED_NOT_EXTERNAL_VALIDATION",
+      "sha256": "8869083052fd7db7bb6278a9f821611a7ee8ef6af421233964f44c29beddfcd2"
+    },
+    {
+      "bytes": 2381,
+      "path": "research/r3/completion-symbiosis-20260902/SHA256SUMS.txt",
+      "role": "R3_SHA256SUMS_CHECKOUT_VIEW",
+      "sha256": "088915d4cc58ad9bf8385fc7f7eaf680a3c5bdde3750f4f6e2573fda4cc54dd1"
+    }
+  ],
+  "protocol": "INBOX_VALIDATE_BIND_RELAY_ACK_V1",
+  "receipt_refs": {
+    "entry_receipt": {
+      "bytes": 779,
+      "path": "research/r3/completion-symbiosis-20260902/R3_AGENT_ENTRY_ACK.json",
+      "role": "ENTRY_RECEIPT",
+      "sha256": "cfa60e19e299ab9385b5dcc6350f93e34ef9b087fdebeb0317a466eae5874273"
+    },
+    "exit_receipt": {
+      "bytes": 2322,
+      "path": "research/r3/completion-symbiosis-20260902/terminal_return.md",
+      "role": "EXIT_RECEIPT",
+      "sha256": "38c075b9deff0da71a9a89833a07c9f490a31d7c83f5c3a90425512c0be3e1f2"
+    }
+  },
+  "receipt_type": "BIND",
+  "schema_version": "1.0.0",
+  "source_envelope_sha256": "40951f2c8ebb88b93ba38b07db9dd41048e3bf97b8aa4448511e98b7460f9da9",
+  "source_return_id": "NEXUS_OMEGA_CURSOR_R3_COMPLETION_R1_R2_R3_SYMBIOSIS_RETURN_20260902_R0",
+  "source_return_path": "research/r3/completion-symbiosis-20260902/terminal_return.md"
+}

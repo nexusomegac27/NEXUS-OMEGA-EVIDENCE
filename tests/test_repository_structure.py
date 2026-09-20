@@ -35,6 +35,13 @@ class RepositoryStructureTests(unittest.TestCase):
             MODULE.validate_root_entries(names),
         )
 
+    def test_artifact_handoff_paths_are_part_of_structure_contract(self):
+        self.assertIn("scripts/artifact_handoff.py", MODULE.ARTIFACT_HANDOFF_PATHS)
+        self.assertIn(
+            "research/pipeline/handoff/README.md",
+            MODULE.ARTIFACT_HANDOFF_PATHS,
+        )
+
     def test_r5_lane_without_readme_fails(self):
         with tempfile.TemporaryDirectory() as td:
             r5_root = Path(td) / "research" / "r5"

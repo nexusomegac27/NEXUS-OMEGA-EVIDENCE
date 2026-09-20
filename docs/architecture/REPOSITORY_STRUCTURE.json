@@ -34,6 +34,14 @@
       "index": "communication/index/v1",
       "objects": "communication/objects/sha256"
     },
+    "artifact_handoff": {
+      "ack": "research/pipeline/handoff/ack",
+      "bound": "research/pipeline/handoff/bound",
+      "inbox": "research/pipeline/handoff/inbox",
+      "protocol": "INBOX_VALIDATE_BIND_RELAY_ACK_V1",
+      "relay": "research/pipeline/handoff/relay",
+      "root": "research/pipeline/handoff"
+    },
     "scientific_evidence": {
       "index": "index/v1",
       "objects": "objects/sha256"
@@ -82,6 +90,7 @@
     "owners": ["AXIOM", "CURSOR_PRAXIS"],
     "package_path_template": "research/pipeline/packages/YYYY/MM/<PACKAGE_ID>",
     "event_path_template": "research/pipeline/events/YYYY/MM/DD/<TIMESTAMP>_<EVENT_ID>.json",
+    "handoff_inbox_path_template": "research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json",
     "stable_package_paths": true,
     "event_sourced_lifecycle": true,
     "sealed_snapshots_immutable": true,
@@ -121,5 +130,28 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.2.0"
+  "artifact_handoff": {
+    "forbids": [
+      "self-validation",
+      "merge automation",
+      "force push",
+      "main write",
+      "claim promotion",
+      "foundation promotion"
+    ],
+    "path": "research/pipeline/handoff",
+    "protocol": "INBOX_VALIDATE_BIND_RELAY_ACK_V1",
+    "requires": [
+      "handoff envelope",
+      "entry receipt",
+      "exit receipt",
+      "file-event ledger",
+      "workflow-event ledger",
+      "token and continuation status",
+      "authority-gate status"
+    ],
+    "seed_handoff": "NEXUS_AH_20260902T192400Z_r3-completion-symbiosis_R0",
+    "stages": ["INBOX", "VALIDATE", "BIND", "RELAY", "ACK"]
+  },
+  "version": "1.3.0"
 }

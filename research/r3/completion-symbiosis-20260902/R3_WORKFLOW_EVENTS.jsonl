@@ -1,0 +1,11 @@
+{"event": "WORKFLOW", "type": "ORDER_ACCEPTED", "order_sha256": "bd8778b3d171a053853fac0fd22bbabd0e3f2d07350defeb084bb71cefa39520", "ts": "2026-09-02T19:19:25Z"}
+{"event": "WORKFLOW", "type": "INTAKE_REBIND_COMPLETE", "r2_sha": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91", "r3_sha": "eee6446cea5fea4a2086357f6acab822084feeb05a366c24fc952c682a8adb3c", "ts": "2026-09-02T19:19:25Z"}
+{"event": "WORKFLOW", "type": "EXTERNAL_FOLLOW_UP_BOUND", "repo": "NEXUS_GROK-QWEN", "ts": "2026-09-02T19:19:25Z"}
+{"event": "WORKFLOW", "type": "FS7_PATH_B_SUPERSEDING_EMITTED", "ts": "2026-09-02T19:19:25Z"}
+{"event": "WORKFLOW", "type": "CLAIM_REGISTER_CONSOLIDATED", "ts": "2026-09-02T19:19:25Z"}
+{"event": "WORKFLOW", "type": "TRISTATE_FORMALIZED", "ts": "2026-09-02T19:19:25Z"}
+{"event": "UNEXPECTED_FAIL", "id": "R2-FAIL-01", "detail": "SHA256SUMS UTF-8 BOM portability", "preserved": true}
+{"event": "UNEXPECTED_FAIL", "id": "R3-FAIL-01", "detail": "QWEN historical Entry ACK absent", "preserved": true}
+{"event": "UNEXPECTED_FAIL", "id": "R3-FAIL-02", "detail": "FS7 source-object mismatch", "disposition": "PATH_B"}
+{"event": "UNEXPECTED_FAIL", "id": "R3-FAIL-03", "detail": "R3 internal SHA256SUMS absent", "preserved": true}
+{"event": "UNEXPECTED_FAIL", "id": "R3-FAIL-04", "detail": "GROK follow-up not in supplied stack; NON_QWEN candidate", "preserved": true}

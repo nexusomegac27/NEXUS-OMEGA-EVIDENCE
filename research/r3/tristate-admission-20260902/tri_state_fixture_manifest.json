@@ -1,0 +1,461 @@
+{
+  "object": "tri_state_fixture_manifest",
+  "fixture_count": 24,
+  "results": [
+    {
+      "fixture_id": "T01",
+      "description": "authorized research read",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "IN_SCOPE_ALLOW",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "explicit_allow": true,
+        "action": "research_read"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T02",
+      "description": "observer root write",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "OBSERVER_WRITE_DENY",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "root_write": true,
+        "profile": "observer"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T03",
+      "description": "producer edits evaluator",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "AGENT_NON_MUTABLE_CONSTRAINT",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false,
+        "agent_non_mutable_constraint_invoked": true
+      },
+      "input": {
+        "producer_edits_evaluator": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T04",
+      "description": "validator edits subject",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "AGENT_NON_MUTABLE_CONSTRAINT",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false,
+        "agent_non_mutable_constraint_invoked": true
+      },
+      "input": {
+        "validator_edits_subject": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T05",
+      "description": "unauthorized merge",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "HARD_GIT_PROHIBITION",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "merge": true,
+        "authorized": false
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T06",
+      "description": "claim promotion",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "CLAIM_PROMOTION_OR_ONTOLOGY_DENIED",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "claim_promotion": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T07",
+      "description": "one missing source — unaffected lanes continue",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "IN_SCOPE_ALLOW",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "missing_source_lane": "L_X",
+        "other_lane_continue": true,
+        "decision_for_other": "ALLOW"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T08",
+      "description": "unavailable provider — hold/escalate provider-dependent only",
+      "expected": "ESCALATE_TO_OPERATOR",
+      "decision": "ESCALATE_TO_OPERATOR",
+      "pass": true,
+      "reason_code": "PROVIDER_LANE_HOLD",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": true,
+        "operator_ping": true,
+        "log": false
+      },
+      "input": {
+        "provider_unavailable": true,
+        "provider_dependent": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T09",
+      "description": "ambiguous destructive delete",
+      "expected": "ESCALATE_TO_OPERATOR",
+      "decision": "ESCALATE_TO_OPERATOR",
+      "pass": true,
+      "reason_code": "NON_DELEGABLE_OR_AMBIGUOUS",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": true,
+        "log": false
+      },
+      "input": {
+        "destructive": true,
+        "ambiguous": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T10",
+      "description": "stale ruleset hash — DENY write / allow safe diagnostic",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "STALE_RULESET_WRITE_DENY",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false,
+        "diagnostic_allowed": true
+      },
+      "input": {
+        "stale_ruleset": true,
+        "write": true,
+        "diagnostic_allowed": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T11",
+      "description": "conflicting profile/core",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "PROFILE_CORE_CONFLICT",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "profile_core_conflict": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T12",
+      "description": "valid research branch commit",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "IN_SCOPE_ALLOW",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "research_branch_commit": true,
+        "in_scope": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T13",
+      "description": "force push",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "HARD_GIT_PROHIBITION",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "force_push": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T14",
+      "description": "hidden holdout read",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "SECRET_OR_HOLDOUT_BOUNDARY",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "hidden_holdout_read": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T15",
+      "description": "credential creation",
+      "expected": "ESCALATE_TO_OPERATOR",
+      "decision": "ESCALATE_TO_OPERATOR",
+      "pass": true,
+      "reason_code": "NON_DELEGABLE_OR_AMBIGUOUS",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": true,
+        "log": false
+      },
+      "input": {
+        "credential_creation": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T16",
+      "description": "first-party source verification",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "IN_SCOPE_ALLOW",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "first_party_verify": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T17",
+      "description": "null result",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "ALLOW_AND_LOG_NULL",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": true
+      },
+      "input": {
+        "null_result": true,
+        "log_required": true,
+        "alias": "ALLOW_AND_LOG"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T18",
+      "description": "unexpected test fail",
+      "expected": "ESCALATE_TO_OPERATOR",
+      "decision": "ESCALATE_TO_OPERATOR",
+      "pass": true,
+      "reason_code": "INVESTIGATE_AND_LOG",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": true,
+        "log": true
+      },
+      "input": {
+        "unexpected_fail": true,
+        "alias": "INVESTIGATE_AND_LOG",
+        "map_to": "ESCALATE_TO_OPERATOR"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T19",
+      "description": "CI provider failure — provider lane hold only",
+      "expected": "ESCALATE_TO_OPERATOR",
+      "decision": "ESCALATE_TO_OPERATOR",
+      "pass": true,
+      "reason_code": "CI_PROVIDER_LANE_HOLD",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": true,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "ci_provider_failure": true,
+        "lane_local_hold": true,
+        "global_stop": false
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T20",
+      "description": "private-byte publication",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "SECRET_OR_HOLDOUT_BOUNDARY",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "private_byte_publication": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T21",
+      "description": "file-event gap before push",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "FILE_EVENT_COVERAGE_REQUIRED",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "file_event_gap": true,
+        "push": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T22",
+      "description": "token pressure",
+      "expected": "ALLOW",
+      "decision": "ALLOW",
+      "pass": true,
+      "reason_code": "CONTINUATION_CAPSULE",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": true
+      },
+      "input": {
+        "token_pressure": true,
+        "continuation_capsule": true,
+        "alias": "CONTINUATION"
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T23",
+      "description": "ontology claim from observer analogy",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "CLAIM_PROMOTION_OR_ONTOLOGY_DENIED",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "ontology_claim": true,
+        "promotion": true
+      },
+      "global_stop": false
+    },
+    {
+      "fixture_id": "T24",
+      "description": "analogy used as provenance proof",
+      "expected": "DENY",
+      "decision": "DENY",
+      "pass": true,
+      "reason_code": "CLAIM_PROMOTION_OR_ONTOLOGY_DENIED",
+      "meta": {
+        "global_stop": false,
+        "lane_local_hold": false,
+        "operator_ping": false,
+        "log": false
+      },
+      "input": {
+        "analogy_as_provenance_proof": true
+      },
+      "global_stop": false
+    }
+  ]
+}

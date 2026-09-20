@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexusomegac27.github.io/NEXUS-OMEGA-EVIDENCE/schema/artifact-handoff-envelope-v1.schema.json",
+  "title": "NEXUS OMEGA Artifact Handoff Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "handoff_id",
+    "stage",
+    "object_id",
+    "source_return_id",
+    "source_return_path",
+    "created_at_utc",
+    "received_at_utc",
+    "producer",
+    "validator",
+    "claim_ceiling",
+    "claim_promotion",
+    "foundation_promotion",
+    "integration_authority",
+    "merge_authority",
+    "force_push",
+    "main_write",
+    "self_validation",
+    "branch_policy",
+    "lane_separation",
+    "payload_refs",
+    "ledger_refs",
+    "receipt_refs",
+    "token_continuation",
+    "authority_gates",
+    "relay_targets",
+    "caveats"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "protocol": {"const": "INBOX_VALIDATE_BIND_RELAY_ACK_V1"},
+    "handoff_id": {"type": "string", "pattern": "^NEXUS_AH_[0-9]{8}T[0-9]{6}Z_[a-z0-9][a-z0-9_-]{0,79}_R[0-9]+$"},
+    "stage": {"const": "INBOX"},
+    "object_id": {"type": "string", "minLength": 1},
+    "source_return_id": {"type": "string", "minLength": 1},
+    "source_return_path": {"type": "string", "minLength": 1},
+    "created_at_utc": {"type": "string", "format": "date-time"},
+    "received_at_utc": {"type": "string", "format": "date-time"},
+    "producer": {"$ref": "#/$defs/agent"},
+    "validator": {"$ref": "#/$defs/agent"},
+    "claim_ceiling": {"enum": ["C0_EXPLORATORY", "C1_DESCRIPTIVE", "C0_EXPLORATORY_C1_DESCRIPTIVE", "C1"]},
+    "claim_promotion": {"const": false},
+    "foundation_promotion": {"const": false},
+    "integration_authority": {"const": "NONE"},
+    "merge_authority": {"const": "NONE"},
+    "force_push": {"const": false},
+    "main_write": {"const": false},
+    "self_validation": {"const": false},
+    "branch_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base_branch",
+        "source_branch",
+        "source_commit",
+        "target_pull_request",
+        "normal_push_only",
+        "no_force_push",
+        "no_merge_automation",
+        "no_claim_promotion_automation",
+        "no_foundation_promotion_automation"
+      ],
+      "properties": {
+        "base_branch": {"type": "string"},
+        "source_branch": {"type": "string"},
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "target_pull_request": {"type": "string"},
+        "normal_push_only": {"const": true},
+        "no_force_push": {"const": true},
+        "no_merge_automation": {"const": true},
+        "no_claim_promotion_automation": {"const": true},
+        "no_foundation_promotion_automation": {"const": true}
+      }
+    },
+    "lane_separation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["r2_branch", "pr13_branch", "keep_r2_pr13_separate"],
+      "properties": {
+        "r2_branch": {"type": "string"},
+        "pr13_branch": {"type": "string"},
+        "keep_r2_pr13_separate": {"const": true}
+      }
+    },
+    "payload_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/repo_ref"}},
+    "ledger_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_event_ledger",
+        "workflow_event_ledger",
+        "file_event_base_path",
+        "file_event_target_hash_policy"
+      ],
+      "properties": {
+        "file_event_ledger": {"$ref": "#/$defs/repo_ref"},
+        "workflow_event_ledger": {"$ref": "#/$defs/repo_ref"},
+        "file_event_base_path": {"type": "string"},
+        "file_event_target_hash_policy": {"enum": ["REQUIRE_MATCH", "PRESERVE_ONLY_DECLARED_CAVEAT"]}
+      }
+    },
+    "receipt_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entry_receipt", "exit_receipt"],
+      "properties": {
+        "entry_receipt": {"$ref": "#/$defs/repo_ref"},
+        "exit_receipt": {"$ref": "#/$defs/repo_ref"}
+      }
+    },
+    "token_continuation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested_token_class",
+        "token_class_used",
+        "token_telemetry",
+        "continuation_required_on_token_pressure",
+        "continuation_required",
+        "continuation_capsule_path"
+      ],
+      "properties": {
+        "requested_token_class": {"enum": ["T16", "T32", "T64", "T128", "T256", "UNSPECIFIED"]},
+        "token_class_used": {"type": "string"},
+        "token_telemetry": {"type": "string"},
+        "continuation_required_on_token_pressure": {"const": true},
+        "continuation_required": {"type": "boolean"},
+        "continuation_capsule_path": {"type": ["string", "null"]}
+      }
+    },
+    "authority_gates": {"type": "array", "items": {"$ref": "#/$defs/authority_gate"}},
+    "relay_targets": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/relay_target"}},
+    "caveats": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "$defs": {
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agent_id", "role", "provider", "model", "session_id"],
+      "properties": {
+        "agent_id": {"type": "string", "minLength": 1},
+        "role": {"enum": ["PRODUCER", "VALIDATOR", "OPERATOR", "RELAY"]},
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "session_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "repo_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "bytes", "sha256"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "authority_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate", "status", "operator_confirmation_required"],
+      "properties": {
+        "gate": {"enum": ["MERGE", "CLAIM_PROMOTION", "FOUNDATION_PROMOTION", "MAIN_WRITE", "FORCE_PUSH", "SECRET_ACCESS", "PUBLIC_RELEASE", "DEPLOYMENT", "INTEGRATION_AUTHORITY"]},
+        "status": {"enum": ["NONE", "OPEN", "CLOSED"]},
+        "operator_confirmation_required": {"type": "boolean"}
+      }
+    },
+    "relay_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "mode", "authority_required"],
+      "properties": {
+        "target": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["GITHUB_ACTIONS_ARTIFACT", "GITHUB_STEP_SUMMARY", "REPOSITORY_RECEIPT", "MANUAL_EXPORT"]},
+        "authority_required": {"const": false}
+      }
+    }
+  }
+}

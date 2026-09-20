@@ -123,3 +123,25 @@ BRANCH
 ```
 
 Do not interpret a merged PR as scientific promotion.
+
+## Artifact handoff inbox
+
+When a return should be processed autonomously through GitHub, use the
+repository inbox protocol instead of a free-form chat handoff:
+
+```text
+research/pipeline/handoff/inbox/<HANDOFF_ID>/handoff.json
+```
+
+The required order is:
+
+```text
+INBOX
+-> VALIDATE
+-> BIND
+-> RELAY
+-> ACK
+```
+
+`VALIDATE` is fail-closed and structure/byte-bound only. `BIND`, `RELAY` and
+`ACK` are receipt stages, not semantic validation or authority promotion.
