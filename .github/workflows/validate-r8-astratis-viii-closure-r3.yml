@@ -25,10 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify SHA-256 manifests
-        run: |
-          sha256sum -c research/r8/astratis-viii-closure-r3/SHA256SUMS.txt
-          sha256sum -c research/fundus/SHA256SUMS.txt
+      - name: Verify SHA-256 manifests (closure)
+        working-directory: research/r8/astratis-viii-closure-r3
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Verify SHA-256 manifests (fundus)
+        working-directory: research/fundus
+        run: sha256sum -c SHA256SUMS.txt
       - name: Loop fixture + SIM01 + fundus invariants
         run: python research/r8/astratis-viii-closure-r3/test_loop_and_invariants.py
       - name: Adjudication invariants
