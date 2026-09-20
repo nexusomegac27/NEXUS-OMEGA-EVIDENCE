@@ -1,0 +1,27 @@
+{
+  "package": {
+    "filename": "NEXUS_~2.zip",
+    "bytes": 374153,
+    "sha256": "fef0e2a41d94d8aba316560883c491baf0b86632d9d65cb0ffd518fde93dba81",
+    "entries": 15,
+    "zip_crc": "PASS"
+  },
+  "entries": [
+    {"name":"GROK_QWEN_RETURN_Wissenschaftliche Konsistenzpr#U00fcfung 1 abgeschlossen.txt","bytes":3175,"sha256":"43d77c2951598b2820581d638d4f2527f732a34d6033a0b49d36cae667e5ce73"},
+    {"name":"GROK_QWEN_RETURN_Wissenschaftliche Konsistenzpr#U00fcfung 2 abgeschlossen.txt","bytes":7215,"sha256":"ac0ce7846595dc3765f3bbf669f99d554a5d1a4ccc086e65f21e541bd698dd03"},
+    {"name":"META-FINAL-VALIDATION-GROK-FEYNMAN-MINDMAPPING-ZETTELKASTEN-R0.md","bytes":9818,"sha256":"b1564d2352d2e89a740d13915906e69816b8b5dffad56b82e9b23a570a58821a"},
+    {"name":"NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R1_OPEN_AGENT_FOUNDATION_CLOSURE_20260920_R0.txt","bytes":8655,"sha256":"4bc80c83fa5ec2f924dcbc887b0764334c314fc6466cd9e4eedbc7ee21c6a770"},
+    {"name":"NEXUS_OMEGA_COLLECTIVE_EQUILIBRIUM_GOVERNANCE_INTEGRITY_CONSTRAINT_RESEARCH_DIRECTION_20260920_R0.md","bytes":7339,"sha256":"f068fdd72d99af9ffbe76abc37e7a9706006c7c863126c35fb944388e44794d0"},
+    {"name":"NEXUS_OMEGA_COLLECTIVE_EQUILIBRIUM_ZKP_INTEGRITY_GROK_CROSSVALIDATION_20260920_R0.md","bytes":5872,"sha256":"3eaca888946bcff5ba3214a8a372091d2e1cba0a2d0d4ce5ddaa2087ac6bdd69"},
+    {"name":"NEXUS_OMEGA_COLLECTIVE_EQUILIBRIUM_ZKP_INTEGRITY_RESEARCH_R0.txt","bytes":12177,"sha256":"1107b1aab8648e565fad470dea329bf81949063c69b8721724db3bc04e6d5e73"},
+    {"name":"NEXUS_OMEGA_KLEENE_ZPD_SYMBIOSIS_FEYNMAN_SCIENTIFIC_CHECK_20260920_R0.md","bytes":9478,"sha256":"fbd9a191c5bf4839ef8ebb81a5f05b9a9a682f24c48a207f4c14afdc086b0023"},
+    {"name":"NEXUS_OMEGA_PRAGMATA_TRINITY_AIRGAP_METAPHOR_MAPPING_20260920_R0.txt","bytes":32411,"sha256":"93fcb682f1151e31ad8f8faf7329d343d90d06f6885298c389cb58093bfd8f48"},
+    {"name":"NEXUS_QWEN_Die Nexus-Omega-Trinit#U00e4t als C1-Rahmenwerk f#U00fcr die Mensch-KI-Symbiose.txt","bytes":28970,"sha256":"e0835fdcc670878ba5801e4b564b5375962816ab501ef041ba0d2731b706a237"},
+    {"name":"NEXUS_R2_FINAL VERIFICATION.txt","bytes":734,"sha256":"2a3ecb3faec730e4e01bb4f5dce32bd3edfacf86d625496711d40205d81ff061"},
+    {"name":"QWEN_Direkte Implementierungen trin#U00e4rer Logik und metastabiler Zust#U00e4nde.txt","bytes":54518,"sha256":"c409147ccde91269fc94a5d10daf93cd919cd5dea5d7f5311f0fdec5a4757771"},
+    {"name":"Verifiable Agent Ingress & Capability Boundary Framework.txt","bytes":924,"sha256":"ad2270dc78c949309378bf4831220e576227a698e09f262852ebe56a7cbdcea5"},
+    {"name":"Vom Luftspalt zum Gatekeeper_ Eine Architekturanalyse offener Quellcode-Artefakte f#U00fcr die Mensch-KI-Symbiose.pdf","bytes":107339,"sha256":"63dd0c9c1f1d9d6fba223ed3a87ee01940dfef723ba2899f5778f51b506095f8"},
+    {"name":"Von der Metapher zur Architektur_ Die Nexus-Omega-Trinit#U00e4t als C1-Rahmenwerk f#U00fcr die Mensch-KI-Symbiose.pdf","bytes":203128,"sha256":"3e16efda9aac62eeea7ff8ebfbbafd5b8dee940347f63a43d418cc4d3b60c076"}
+  ],
+  "reference_scope_note": "Referenced hashes whose target bytes are not present in this R2 archive are not classified as physically verified by this inventory."
+}

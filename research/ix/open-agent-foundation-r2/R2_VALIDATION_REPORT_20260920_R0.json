@@ -1,0 +1,58 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ASTRATIS_IX_R2_INTEGRITY_BOUNDARY_VALIDATION_20260920_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_PUBLIC_SAFE_DERIVATIVE_READY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "ix_execution": "NOT_STARTED",
+  "activation": "NO",
+  "source_package": {
+    "filename": "NEXUS_~2.zip",
+    "bytes": 374153,
+    "sha256": "fef0e2a41d94d8aba316560883c491baf0b86632d9d65cb0ffd518fde93dba81",
+    "entries": 15,
+    "zip_crc": "PASS",
+    "path_traversal": "NONE_FOUND",
+    "common_secret_pattern_scan": "NO_MATCH_FOUND_IN_TEXT_FILES"
+  },
+  "r1_closure_bind": {
+    "physical_file_sha256": "4bc80c83fa5ec2f924dcbc887b0764334c314fc6466cd9e4eedbc7ee21c6a770",
+    "status": "MATCH_PREVIOUS_CURSOR_REPORT"
+  },
+  "evidence_accounting": {
+    "external_agent_agreement_is_independent_proof": false,
+    "raw_pdf_is_empirical_observation": false,
+    "receipt_reference_without_target_bytes_is_physical_verification": false,
+    "referenced_hashes_absent_from_current_bundle_are_reconstructed": false
+  },
+  "zkp": {
+    "state": "CANDIDATE_ARCHITECTURE_WITH_MAJOR_SCOPE_CORRECTIONS",
+    "zkp_proves_scientific_validity": false,
+    "key_possession_proves_human_authorship": false,
+    "range_proof_proves_quality": false,
+    "global_hidden_quality_score_authorized": false,
+    "negative_knowledge_requires_zkp": false
+  },
+  "ternary": {
+    "helix9_public_project_established": true,
+    "sbtcvm_public_project_established": true,
+    "balanced_ternary_equals_kleene_k3": false,
+    "ternary_zero_equals_epistemic_unknown": false,
+    "kleene_zpd_mapping": "HEURISTIC_ONLY"
+  },
+  "boundary_research": {
+    "custody_framework": "PRIMARY_SOURCE_CHECKED_CONTROL_FRAMEWORK_CANDIDATE",
+    "nvidia_maiw": "PRIMARY_SOURCE_CHECKED_AUTHORITY_BOUNDARY_REFERENCE_CANDIDATE",
+    "prov_agent": "RESEARCH_CANDIDATE",
+    "portable_agent_memory": "RESEARCH_CANDIDATE_SOURCE_PIN_REQUIRED",
+    "flamewalker_agentic_protocol": "SOURCE_GAP",
+    "he2_net": "SOURCE_GAP"
+  },
+  "publication": {
+    "raw_source_bundle": "NO",
+    "raw_external_agent_transcripts": "NO",
+    "raw_pdfs": "NO",
+    "validated_public_safe_derivative": "YES_C1",
+    "component_selection": "NO",
+    "deployment": "NO"
+  }
+}

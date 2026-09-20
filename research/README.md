@@ -38,7 +38,9 @@ Research publication is not live implementation. Promotion into stable `docs/sch
 
 ## Current phase-IX foundation
 
-- `research/ix/open-agent-foundation-r1/` — provider-neutral Open-Agent research foundation; `IX_EXECUTION=NOT_STARTED`.
+- `research/ix/open-agent-foundation-r1/` — provider-neutral Open-Agent research foundation.
+- `research/ix/open-agent-foundation-r2/` — integrity/boundary/provenance research foundation.
+- IX remains `IX_EXECUTION=NOT_STARTED`.
 - `research/fundus/` — cross-session C1 reference index; not a truth authority.
 
 These paths are research/checkpoint surfaces only. They do not imply production integration or activation.

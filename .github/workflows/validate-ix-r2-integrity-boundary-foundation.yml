@@ -1,0 +1,57 @@
+name: validate-ix-r2-integrity-boundary-foundation
+
+on:
+  pull_request:
+    paths:
+      - 'research/ix/open-agent-foundation-r2/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r2-integrity-boundary-foundation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/ix/open-agent-foundation-r2/**'
+      - 'research/fundus/**'
+      - '.github/workflows/validate-ix-r2-integrity-boundary-foundation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify IX R2 derivative manifest
+        working-directory: research/ix/open-agent-foundation-r2
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Verify Fundus manifest
+        working-directory: research/fundus
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Validate R2 machine-readable invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('research/ix/open-agent-foundation-r2')
+          r=json.loads((root/'R2_VALIDATION_REPORT_20260920_R0.json').read_text())
+          d=json.loads((root/'EVIDENCE_DELTA.json').read_text())
+          inv=json.loads((root/'SOURCE_PACKAGE_INVENTORY.json').read_text())
+          f=json.loads(Path('research/fundus/NEXUS_FUNDUS_HEAD.json').read_text())
+          assert r['claim_ceiling']=='C1_DESCRIPTIVE_ONLY'
+          assert r['truth_authority']=='NONE'
+          assert r['ix_execution']=='NOT_STARTED'
+          assert r['activation']=='NO'
+          assert r['source_package']['sha256']=='fef0e2a41d94d8aba316560883c491baf0b86632d9d65cb0ffd518fde93dba81'
+          assert r['source_package']['entries']==15
+          assert r['zkp']['zkp_proves_scientific_validity'] is False
+          assert r['ternary']['balanced_ternary_equals_kleene_k3'] is False
+          assert r['boundary_research']['flamewalker_agentic_protocol']=='SOURCE_GAP'
+          assert r['boundary_research']['he2_net']=='SOURCE_GAP'
+          assert inv['package']['entries']==15 and len(inv['entries'])==15
+          assert d['loop_state']=='NO_LOOP_R2_HAS_MATERIAL_EVIDENCE_DELTA'
+          assert d['activation_authority'] is False
+          assert f['head_id']=='NEXUS_FUNDUS_HEAD_20260920_R2'
+          ix=[e for e in f['entries'] if e['entry_id']=='IX_EXECUTION']
+          assert len(ix)==1 and ix[0]['state']=='NOT_STARTED'
+          print('PASS')
+          PY
