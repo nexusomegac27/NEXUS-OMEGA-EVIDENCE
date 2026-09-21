@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nexus-mobile.de/schemas/stammzelle_impuls_v1.json",
+  "title": "StammzellenImpuls",
+  "description": "Expliziter, signierter Impuls zur Instanziierung einer neuen Stammzelle (Node) im Nexus-Kollektiv. Verhindert Autoritätslücken durch dezentrale, kostentragende Auslösung.",
+  "type": "object",
+  "required": ["template_hash", "trigger_node_id", "semantic_gap", "signature"],
+  "additionalProperties": false,
+  "properties": {
+    "template_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64,
+      "description": "SHA-256 Hash des Node-Templates. MUSS in der Whitelist vertrauenswürdiger Templates enthalten sein. Garantiert, dass neue Nodes nur aus sicheren Vorlagen instanziiert werden."
+    },
+    "trigger_node_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64,
+      "description": "SHA-256 Hash der ed25519 Public Key des auslösenden Nodes. Identifiziert, wer den Impuls gesendet hat."
+    },
+    "semantic_gap": {
+      "type": "object",
+      "required": ["uncertainty_threshold", "region_hash"],
+      "additionalProperties": false,
+      "properties": {
+        "uncertainty_threshold": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Lokal gemessene Unsicherheit in der betroffenen Graph-Region. MUSS überschritten sein, damit der Impuls gültig ist. Verhindert willkürliche Node-Erstellung."
+        },
+        "region_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "minLength": 64,
+          "maxLength": 64,
+          "description": "SHA-256 Hash der betroffenen Graph-Region. Identifiziert, wo die semantische Lücke entstanden ist."
+        },
+        "gap_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "missing_coverage": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Anteil der nicht abgedeckten semantischen Raum-Region"
+            },
+            "redundancy_factor": {
+              "type": "number",
+              "minimum": 0.0,
+              "description": "Aktueller Redundanzfaktor in der Region (niedrig = kritisch)"
+            }
+          },
+          "description": "Optionale Metriken zur Quantifizierung der Lücke"
+        }
+      },
+      "description": "Beschreibt die semantische Lücke, die durch den neuen Node geschlossen werden soll."
+    },
+    "signature": {
+      "type": "string",
+      "description": "ed25519 Signatur über alle anderen Felder dieses Impulses. Garantiert Authentizität und Integrität. MUSS mit dem Private Key des trigger_node_id erstellt werden."
+    },
+    "cost_proof": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64,
+      "description": "Nachweis der getragenen Kosten für die Stammzellen-Instanziierung. Kann sein: Proof-of-Work Hash, Token-Transaktionshash, oder andere Ressourcen-Nachweise. Verhindert Spam und Sybil-Angriffe."
+    },
+    "template_params": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Optionale Parameter für die Template-Instanziierung. MÜSSEN vom Template validiert werden.",
+      "properties": {
+        "initial_policy_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 Hash der initialen Policy des neuen Nodes"
+        },
+        "initial_state": {
+          "type": "string",
+          "enum": ["ACTIVE", "DEGRADED"],
+          "description": "Anfänglicher Zustand des neuen Nodes"
+        }
+      }
+    },
+    "expiration": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix Timestamp, bis zu dem der Impuls gültig ist. Verhindert Replay-Angriffe."
+    }
+  },
+  "examples": [
+    {
+      "template_hash": "a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef1234567890",
+      "trigger_node_id": "721c736831b9fca582a7bf137df3404a35ef9186e71a527c51909b5ff8d4b004",
+      "semantic_gap": {
+        "uncertainty_threshold": 0.85,
+        "region_hash": "62678d969475a5bfa453ab4c62775de20b225a4b19620a80214ae7ca8cb04a64",
+        "gap_metrics": {
+          "missing_coverage": 0.75,
+          "redundancy_factor": 1.2
+        }
+      },
+      "signature": "c3d4e5f6789012345678901234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "cost_proof": "8f4e2b9a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
+      "template_params": {
+        "initial_policy_hash": "72993b6cb83904d39a8c73bd0651aa6251288ede5dbc2c7bcbdc54cc5bbf5d77",
+        "initial_state": "ACTIVE"
+      },
+      "expiration": 1726977600
+    }
+  ]
+}

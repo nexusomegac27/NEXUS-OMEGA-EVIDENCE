@@ -26,3 +26,4 @@ research/r5/axiom-platform-audit/
 When an R5 result becomes integration-grade, derive stable artifacts into the mirrored `docs/r5`, `schema/r5`, `scripts/r5`, `tests/r5`, `validation/r5`, and `examples/r5` layers as applicable. Preserve research provenance; do not silently replace the original return.
 
 - `astratis-x-r2-dtepn-meta/` — Astratis X/R2 DT-EPN and Meta package derivatives; explicit provenance gaps, R7 seal HOLD, no activation.
+- `astratis-x-r3-synapse-protocol/` — Astratis X/R3 synapse-protocol prototype foundation; C1 only; crypto and token claims caveated; R4 not authorized; R7 seal HOLD.

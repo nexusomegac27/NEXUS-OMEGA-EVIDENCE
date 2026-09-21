@@ -1,0 +1,3 @@
+# Keep Astratis X R3 source bytes identical to the archive.
+# Root * text=auto eol=lf must not rewrite CRLF sources or binary members.
+sources/** -text
