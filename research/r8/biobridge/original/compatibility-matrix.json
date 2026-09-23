@@ -1,0 +1,134 @@
+{
+  "object": "20_COMPATIBILITY_MATRIX.json",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "runtime_state": "FROZEN_OFFLINE_TESTING",
+  "compatibility_kernel_K": {
+    "description": "Bit-identical across all compliant nodes. Any mutation = hard incompatibility.",
+    "members": [
+      {
+        "id": "K1_MICROTRIGGER_ALPHABET",
+        "bytes": "0x2E 0x2C 0x3F 0x21 0x3B",
+        "symbols": [
+          ".",
+          ",",
+          "?",
+          "!",
+          ";"
+        ],
+        "semantics": {
+          ".": "reference_transduction_commit",
+          ",": "reference_transduction_continuation",
+          "?": "HOLD_uncertainty_escalation",
+          "!": "FAIL_hard_rejection",
+          ";": "CHECKPOINT_resource_pressure_barrier"
+        },
+        "wire_spec": "Single-byte control frame outside payload stream, session-bound, requires ESC 0x1B or line-isolated framing to avoid F03 false positive"
+      },
+      {
+        "id": "K2_HASH_PRIMITIVE",
+        "primitive": "SHA-256",
+        "encoding": "hex lowercase or base64url, 32 bytes raw",
+        "rule": "CACHE != SOURCE, no silent auto-repair on mismatch (F09)"
+      },
+      {
+        "id": "K3_AUTHORITY_LIMIT_ENCODING",
+        "rule": "No AH escalation path inside K. AH0_ROOT claims outside trusted envelope → FAIL. Authority requires separate envelope.",
+        "encoding": "authority_level: 0..N, default 0, any >0 requires signed capability token, not self-asserted"
+      },
+      {
+        "id": "K4_NEGATIVE_EVIDENCE_PRESERVATION",
+        "rule": "Refusal, HOLD, FAIL are first-class claims. Must preserve source+uncertainty+status. No deletion under compaction without checkpoint."
+      },
+      {
+        "id": "K5_NON_SILENT_CONFLICT_ESCALATION",
+        "rule": "If compatible(X,K) && compatible(Y,K) && !compatible(X,Y) => HOLD (?) + INCOMPATIBILITY_LEDGER entry. Maps to Dobzhansky-Muller. No silent merge (F21)."
+      }
+    ]
+  },
+  "diversity_vector_D": {
+    "description": "Permitted variation, regulated by Ashby budget. No mutation in D may alter byte-identity of K.",
+    "members": [
+      {
+        "id": "D1_PAYLOAD_SERIALISATION",
+        "allowed": [
+          "json",
+          "cbor",
+          "msgpack"
+        ],
+        "default": "json",
+        "constraint": "Must preserve provenance and negative-evidence bits"
+      },
+      {
+        "id": "D2_SCHEMA_VERSION",
+        "allowed": "semver, concurrency_cap <=3 concurrent versions in flight",
+        "rule": "Each version must pass K5 compatibility check against K"
+      },
+      {
+        "id": "D3_TRANSPORT_ROUTING",
+        "allowed": [
+          "session-bound websocket",
+          "local IPC"
+        ],
+        "constraint": "Routing choice must not leak authority, must be session-bound"
+      },
+      {
+        "id": "D4_COMPRESSION_PROFILE",
+        "allowed": [
+          "none",
+          "gzip",
+          "zstd_lossless"
+        ],
+        "constraint": "Lossless only, no loss of provenance"
+      }
+    ]
+  },
+  "compatibility_matrix": [
+    {
+      "K_member": "K1",
+      "D1": "compatible",
+      "D2": "compatible",
+      "D3": "compatible",
+      "D4": "compatible",
+      "notes": "Payload must not contain unescaped microtrigger bytes in control channel"
+    },
+    {
+      "K_member": "K2",
+      "D1": "compatible",
+      "D2": "compatible",
+      "D3": "compatible",
+      "D4": "compatible if hash over uncompressed bytes",
+      "notes": "Hash must be over canonical bytes, not compressed"
+    },
+    {
+      "K_member": "K3",
+      "D1": "must_enforce",
+      "D2": "must_enforce",
+      "D3": "must_enforce_session_bound",
+      "D4": "compatible",
+      "notes": "No D element may introduce AH escalation"
+    },
+    {
+      "K_member": "K4",
+      "D1": "must_preserve",
+      "D2": "must_preserve",
+      "D3": "compatible",
+      "D4": "must_preserve_lossless",
+      "notes": "Negative evidence is first-class"
+    },
+    {
+      "K_member": "K5",
+      "D1": "friction_possible",
+      "D2": "friction_possible",
+      "D3": "compatible",
+      "D4": "compatible",
+      "notes": "Independent D mutations in X/Y may conflict → HOLD"
+    }
+  ],
+  "validation_rules": {
+    "no_mutation_in_D_may_alter_K_byte_identity": true,
+    "ashby_regulator_variety": "Regulator (K + ledger + microtriggers) must distinguish every permitted D state",
+    "fail_closed": "Any ambiguity in K/D boundary => HOLD (?) not PASS"
+  },
+  "hash_anchor": "to be computed in SHA256SUMS"
+}
