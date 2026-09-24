@@ -1,0 +1,703 @@
+{
+  "object": "NEXUS_OMEGA_TERNARY_AUTHORIZATION_REALTEST_RESULTS_20260902_R0",
+  "claim_ceiling": "C1",
+  "fixture_count": 32,
+  "control_binary_pass_rate": 0.96875,
+  "treatment_ternary_pass_rate": 0.90625,
+  "correct_defer_rate": 0.875,
+  "unauthorized_allow_rate_binary": 0.0,
+  "unauthorized_allow_rate_ternary": 0.0,
+  "self_validation_breach_rate": 0.0,
+  "missing_receipt_rate": 0.0625,
+  "verdict": "PASS_WITH_CAVEATS_R3_FULL_INTAKE_AND_TERNARY_AUTH_RESEARCH_C1",
+  "fixtures": [
+    {
+      "fixture_id": "T01",
+      "policy_input": {
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T02",
+      "policy_input": {
+        "explicit_deny": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T03",
+      "policy_input": {
+        "capability_absent": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T04",
+      "policy_input": {
+        "conflicting_policy": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T05",
+      "policy_input": {
+        "human_mandatory": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T06",
+      "policy_input": {
+        "human_unavailable_after_defer": true,
+        "human_mandatory": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "HOLD",
+        "pass": false
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T07",
+      "policy_input": {
+        "stale_admission": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T08",
+      "policy_input": {
+        "self_validation": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T09",
+      "policy_input": {
+        "validator_subject_mutation": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T10",
+      "policy_input": {
+        "ambiguous_path": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T11",
+      "policy_input": {
+        "prompt_escalation": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T12",
+      "policy_input": {
+        "human_mandatory": true,
+        "human_override_success": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T13",
+      "policy_input": {
+        "human_mandatory": true,
+        "human_override_denied": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T14",
+      "policy_input": {
+        "decision_receipt_missing": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": true
+      }
+    },
+    {
+      "fixture_id": "T15",
+      "policy_input": {
+        "provider_ci_green": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T16",
+      "policy_input": {
+        "file_event_missing": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": true,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T17",
+      "policy_input": {
+        "workflow_event_missing": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": true,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T18",
+      "policy_input": {
+        "provider_status_relabeling": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T19",
+      "policy_input": {
+        "conflicting_policy": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "DENY",
+        "pass": false
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T20",
+      "policy_input": {
+        "ambiguous_path": true,
+        "explicit_deny": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DEFER_TO_HUMAN",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T21",
+      "policy_input": {
+        "capability_absent": true,
+        "human_mandatory": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": false
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T22",
+      "policy_input": {
+        "stale_admission": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T23",
+      "policy_input": {
+        "self_validation": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T24",
+      "policy_input": {
+        "validator_subject_mutation": true,
+        "human_mandatory": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T25",
+      "policy_input": {
+        "human_unavailable_after_defer": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "HOLD",
+        "expected": "HOLD",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T26",
+      "policy_input": {
+        "prompt_escalation": true,
+        "human_mandatory": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DEFER_TO_HUMAN",
+        "pass": false
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T27",
+      "policy_input": {
+        "file_event_missing": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": true,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T28",
+      "policy_input": {
+        "workflow_event_missing": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": true,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T29",
+      "policy_input": {
+        "provider_ci_green": true,
+        "explicit_allow": true
+      },
+      "control_binary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "ALLOW",
+        "expected": "ALLOW",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T30",
+      "policy_input": {
+        "decision_receipt_missing": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": true
+      }
+    },
+    {
+      "fixture_id": "T31",
+      "policy_input": {
+        "conflicting_policy": true,
+        "stale_admission": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    },
+    {
+      "fixture_id": "T32",
+      "policy_input": {
+        "ambiguous_path": true,
+        "capability_absent": true
+      },
+      "control_binary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "treatment_ternary": {
+        "decision": "DENY",
+        "expected": "DENY",
+        "pass": true
+      },
+      "gate_fail_flags": {
+        "file_event_missing": false,
+        "workflow_event_missing": false,
+        "decision_receipt_missing": false
+      }
+    }
+  ]
+}

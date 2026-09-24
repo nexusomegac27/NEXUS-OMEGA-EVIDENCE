@@ -1,0 +1,25 @@
+{
+  "object": "NEXUS_OMEGA_R2_APPEND_ONLY_CORRECTION_RECEIPT_20260902_R0",
+  "claim_ceiling": "C1",
+  "original_r2_zip_sha256": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91",
+  "corrections": [
+    {
+      "id": "R2-CORR-01",
+      "issue": "UTF-8 BOM in SHA256SUMS.txt inside R2 zip",
+      "action": "BOM-free successor SHA256SUMS_R2_SUCCESSOR.txt created; original preserved",
+      "successor_path": "research/r3/ternary-authorization-20260902/R2_SHA256SUMS_BOMFREE_SUCCESSOR.txt"
+    },
+    {
+      "id": "R2-CORR-02",
+      "issue": "Missing TASK_TERMINAL and AGENT_EXIT in R2 workflow ledger",
+      "action": "BACKFILL_FROM_BOUND_TERMINAL_RETURN appended in R3_WORKFLOW_EVENTS.jsonl",
+      "label": "BACKFILL_FROM_BOUND_TERMINAL_RETURN"
+    },
+    {
+      "id": "R2-CORR-03",
+      "issue": "first_lane_active semantic ambiguity",
+      "action": "preserve original; canonical LANE_A=AUTHORIZED_NOT_STARTED stated in receipt",
+      "canonical_lane_a": "AUTHORIZED_NOT_STARTED"
+    }
+  ]
+}
