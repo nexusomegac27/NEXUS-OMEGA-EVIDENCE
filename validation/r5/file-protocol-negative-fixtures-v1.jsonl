@@ -1,0 +1,12 @@
+{"fixture_id":"FEP01","fault":"missing_actor_identity","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP02","fault":"missing_order_identity","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP03","fault":"old_hash_missing_on_modify","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP04","fault":"new_hash_missing_on_create","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP05","fault":"delete_without_before_hash","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP06","fault":"move_without_before_after_paths","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP07","fault":"git_sha_used_as_raw_sha256","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP08","fault":"agent_self_validation_claim","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP09","fault":"force_push_authority","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP10","fault":"claim_promotion_authority","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP11","fault":"unlogged_substantive_changed_path","expected":"FAIL_CLOSED"}
+{"fixture_id":"FEP12","fault":"rewrite_historical_event_object","expected":"FAIL_CLOSED"}
