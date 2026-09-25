@@ -1,0 +1,104 @@
+﻿{
+  "checks": {
+    "legacy_initialize": true,
+    "tools_list": true,
+    "resources_list": true,
+    "identity_fields": true,
+    "adapter_sha_not_absent": true,
+    "health": true,
+    "put_cas": true,
+    "dispatch": true,
+    "receipt_job_id_match": true,
+    "receipt_identity_match": true,
+    "replay": true,
+    "modern_discover": true
+  },
+  "errors": [],
+  "tool_count": 12,
+  "tool_names": [
+    "nexus_cancel",
+    "nexus_capabilities",
+    "nexus_dispatch",
+    "nexus_fetch_result",
+    "nexus_get_lineage",
+    "nexus_get_receipt",
+    "nexus_list_artifacts",
+    "nexus_open_validation_view",
+    "nexus_replay",
+    "nexus_request_validation",
+    "nexus_status",
+    "put_cas"
+  ],
+  "identity": {
+    "node_id": "urn:nexus-omega:node:bus:local:v1",
+    "node_role": "NODE_BUS_WORKER",
+    "worker_sha256": "c0c6f7b7f768f042d4fda5d5d8ab685b39abb9733961c365630be6e0839d17df",
+    "adapter_sha256": "58c27c6923b54d162ecdf532b66f378fce34101178e6e52c7a5b815479ee2cf2",
+    "capability_hash": "7e6e911d44a777538d68efbda6ed1a42a94f78e17113c397c62a1e27591e1a4e",
+    "protocol_version": [
+      "2025-03-26",
+      "2026-07-28"
+    ]
+  },
+  "health": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "execution_core": "JSONL_WORKER",
+    "node_identity": {
+      "adapter_sha256": "58c27c6923b54d162ecdf532b66f378fce34101178e6e52c7a5b815479ee2cf2",
+      "capability_hash": "7e6e911d44a777538d68efbda6ed1a42a94f78e17113c397c62a1e27591e1a4e",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "identity_uri": "nexus://node/identity",
+      "node_id": "urn:nexus-omega:node:bus:local:v1",
+      "node_role": "NODE_BUS_WORKER",
+      "protocol_version": [
+        "2025-03-26",
+        "2026-07-28"
+      ],
+      "worker_sha256": "c0c6f7b7f768f042d4fda5d5d8ab685b39abb9733961c365630be6e0839d17df"
+    },
+    "server": "nexus-node-bus",
+    "status": "OK",
+    "tools_count": 12,
+    "transport": "MCP_STDIO_ADAPTER"
+  },
+  "put_cas_body": {
+    "cas": "880c937248a743efe68db8a0805c1d1204faef13edead81fd136f7ff45f86140",
+    "payload_ref": "cas:880c937248a743efe68db8a0805c1d1204faef13edead81fd136f7ff45f86140",
+    "payload_hash": "880c937248a743efe68db8a0805c1d1204faef13edead81fd136f7ff45f86140"
+  },
+  "dispatch_body": {
+    "job_id": "eb3d9cca-f060-4d88-a7da-2dc4ee726fc3",
+    "status": "COMPLETED",
+    "receipt_hash": "4f889fe7274fa3b8383cfa6405e2b479887f42fb54829cedb5f41d555dba70f6",
+    "output_merkle_root": "2c5d39a20a053287bba9644e22e56c11824a4aa9f7eabbf438a4f945fd838ea3"
+  },
+  "job_id": "eb3d9cca-f060-4d88-a7da-2dc4ee726fc3",
+  "receipt_node_identity": {
+    "adapter_sha256": "58c27c6923b54d162ecdf532b66f378fce34101178e6e52c7a5b815479ee2cf2",
+    "capability_hash": "7e6e911d44a777538d68efbda6ed1a42a94f78e17113c397c62a1e27591e1a4e",
+    "node_id": "urn:nexus-omega:node:bus:local:v1",
+    "node_role": "NODE_BUS_WORKER",
+    "protocol_version": [
+      "2025-03-26",
+      "2026-07-28"
+    ],
+    "worker_sha256": "c0c6f7b7f768f042d4fda5d5d8ab685b39abb9733961c365630be6e0839d17df"
+  },
+  "replay_body": {
+    "job_id": "5d4c676c-5361-4ea2-b61a-f9df24211b6a",
+    "status": "COMPLETED",
+    "receipt_hash": "4c2e124c006de3eebd333c64bfeeda57b2efe472ad89a2646a65c0a514fb9d2d",
+    "output_merkle_root": "2c5d39a20a053287bba9644e22e56c11824a4aa9f7eabbf438a4f945fd838ea3",
+    "determinism": "MATCH",
+    "original_merkle_root": "2c5d39a20a053287bba9644e22e56c11824a4aa9f7eabbf438a4f945fd838ea3"
+  },
+  "discover_result_keys": [
+    "resultType",
+    "supportedVersions",
+    "capabilities",
+    "_meta",
+    "ttlMs",
+    "cacheScope"
+  ],
+  "all_pass": true
+}

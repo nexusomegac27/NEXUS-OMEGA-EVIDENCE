@@ -1,0 +1,83 @@
+{
+  "capabilities": {
+    "llm_hot_path": false,
+    "prohibited": [
+      "execute_arbitrary_shell",
+      "write_any_file",
+      "delete_any_file",
+      "spawn_subagent",
+      "promote_claim",
+      "write_canon",
+      "unfiltered_network"
+    ],
+    "tools": [
+      "nexus_capabilities",
+      "nexus_dispatch",
+      "nexus_status",
+      "nexus_fetch_result",
+      "nexus_list_artifacts",
+      "nexus_open_validation_view",
+      "nexus_request_validation",
+      "nexus_cancel",
+      "nexus_get_lineage",
+      "nexus_get_receipt",
+      "nexus_replay"
+    ],
+    "transport": "stdio"
+  },
+  "caveats": [
+    "NODE_IDENTITY_FIELD_ABSENT_IN_CAPABILITIES_AND_SERVER"
+  ],
+  "dispatch_1": {
+    "job_id": "864b28d0-1204-4fd5-b67c-1c7512c3e589",
+    "output_merkle_root": "b2ab6a58c3144385a6b0713ef029f34b0ed907b97efb1c30bbc625a3022d509e",
+    "receipt_hash": "c5f86fa6b1b3c6656d6f103d81f66c6012f856026bad43acb5aea70ace944208",
+    "status": "COMPLETED"
+  },
+  "dispatch_duplicate": {
+    "idempotent": true,
+    "job_id": "864b28d0-1204-4fd5-b67c-1c7512c3e589",
+    "status": "COMPLETED"
+  },
+  "errors": [],
+  "local_proofs_all_pass": true,
+  "negative_all_pass": true,
+  "negative_fixtures": {
+    "CLAIM_PROMOTION_FAIL_REASON": "CLAIM_PROMOTION_HARD_FAIL",
+    "FAIL_CLOSED_BAD_CLAIM_CEILING": true,
+    "FAIL_CLOSED_CLAIM_PROMOTION": true,
+    "FAIL_CLOSED_INVALID_JOB": true,
+    "FAIL_CLOSED_MISSING_SCHEMA": true,
+    "FAIL_CLOSED_PROHIBITED_TOOL": true
+  },
+  "proofs": {
+    "AUTHORITY_BOUNDARY_PROHIBITED_LIST": true,
+    "DUPLICATE_EVENT_NOOP": true,
+    "JOB_ID_PROPAGATES": true,
+    "LLM_HOT_PATH": true,
+    "LOCAL_NODE_DISPATCH": true,
+    "NODE_BUS_PRESENT": true,
+    "NODE_BUS_RESPONDS_LOCAL_JSONL": true,
+    "NODE_IDENTITY_BOUND": false,
+    "RECEIPT_RETURN_PATH_WORKS": true,
+    "REPLAY_IDEMPOTENCE_DETERMINISM": true,
+    "SCHEMA_FILE_PRESENT": true,
+    "TOOL_REGISTRY_RESOLVES_LOCAL": true
+  },
+  "receipt_hash": "c5f86fa6b1b3c6656d6f103d81f66c6012f856026bad43acb5aea70ace944208",
+  "receipt_job_id": "864b28d0-1204-4fd5-b67c-1c7512c3e589",
+  "receipt_path_note": "HASH_VALIDATED_RECEIPT; no raw blobs",
+  "replay": {
+    "determinism": "MATCH",
+    "job_id": "59806fe1-b055-405a-b63d-ad2c52d67f3e",
+    "original_merkle_root": "b2ab6a58c3144385a6b0713ef029f34b0ed907b97efb1c30bbc625a3022d509e",
+    "output_merkle_root": "b2ab6a58c3144385a6b0713ef029f34b0ed907b97efb1c30bbc625a3022d509e"
+  },
+  "schema_server_name": "nexus-node-bus",
+  "schema_tool_count": 11,
+  "status_1": {
+    "found": true,
+    "job_id": "864b28d0-1204-4fd5-b67c-1c7512c3e589",
+    "status": "COMPLETED"
+  }
+}
