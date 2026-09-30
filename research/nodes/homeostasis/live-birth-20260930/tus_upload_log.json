@@ -1,0 +1,96 @@
+{
+  "uploads": [
+    {
+      "rel": "homeostasis/birth-receipt.json",
+      "ok": true,
+      "bytes": 1260,
+      "sha256": "baa9e270d1a84a099776cf0f0b1c51775df315a068d069f3b5a3d45d0f298948",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "1260"
+    },
+    {
+      "rel": "homeostasis/genesis.txt",
+      "ok": true,
+      "bytes": 66,
+      "sha256": "c08a7f3d26ad1a83069a3c6cfb03fba8123a08d0ef8208fc44828244c45d4676",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "66"
+    },
+    {
+      "rel": "homeostasis/index.html",
+      "ok": true,
+      "bytes": 3995,
+      "sha256": "76e07f66be758ef98d1d098b167996aaf843ec0d01bf6c48916d04363f30b061",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "3995"
+    },
+    {
+      "rel": "homeostasis/life-receipt-000001.json",
+      "ok": true,
+      "bytes": 654,
+      "sha256": "526163331ba5a28ce5cdd40d12250a608ee6dada171ae34c5d3e73f179d9030d",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "654"
+    },
+    {
+      "rel": "homeostasis/state.json",
+      "ok": true,
+      "bytes": 1929,
+      "sha256": "8d9bc961a3989e2f3c629982bf423bab0e908c838143705f198781ec061c54a0",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "1929"
+    },
+    {
+      "rel": "index.html",
+      "ok": true,
+      "bytes": 2413,
+      "sha256": "16435e1d27dc21941bae6e39cc7dd553a56d60dff8bb1ef96b98ec3e38b791a2",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "2413"
+    },
+    {
+      "rel": "nodes.css",
+      "ok": true,
+      "bytes": 2264,
+      "sha256": "d3497a169e8d1e86470c308fec62d7bcd2694f988190a126c3e7b2ee6f7a5ea0",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "2264"
+    },
+    {
+      "rel": "registry/index.json",
+      "ok": true,
+      "bytes": 3251,
+      "sha256": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "3251"
+    },
+    {
+      "rel": "registry.json",
+      "ok": true,
+      "bytes": 3251,
+      "sha256": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "3251"
+    },
+    {
+      "rel": "SHA256SUMS.txt",
+      "ok": true,
+      "bytes": 796,
+      "sha256": "18aa57f970eedcc8c092694e51f4862e7502f8e8afb45993a2ede93c3d46723a",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "796"
+    }
+  ],
+  "ok_count": 10,
+  "fail_count": 0
+}
