@@ -1,0 +1,16 @@
+{
+  "negative_evidence": [
+    {
+      "id": "NEG_001",
+      "statement": "No independent AXIOM live witness of public /nodes/ at Cursor return time",
+      "class": "WITNESS_GAP"
+    }
+  ],
+  "open_caveats": [
+    "PUBLIC_DERIVATIVE != CANONICAL_SOURCE",
+    "CURSOR_HTTP_PASS != AXIOM_INDEPENDENT_LIVE_WITNESS",
+    "ELITE != SCIENTIFIC_RANK",
+    "BORN != BIOLOGICAL_LIFE",
+    "EVENT_DRIVEN_LIVE != ALWAYS_ON_DAEMON_CLAIM"
+  ]
+}
