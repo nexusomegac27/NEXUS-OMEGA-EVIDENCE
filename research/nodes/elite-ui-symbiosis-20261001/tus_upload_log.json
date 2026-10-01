@@ -1,0 +1,118 @@
+{
+  "scope": [
+    "nodes/*",
+    "index.html"
+  ],
+  "uploads": [
+    {
+      "remote_rel": "nodes/elite.js",
+      "ok": true,
+      "bytes": 5008,
+      "sha256": "b7636d03eec2786832a754aa172adede21e043a89357ce69ee3424fe2aab5204",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "5008"
+    },
+    {
+      "remote_rel": "nodes/homeostasis/birth-receipt.json",
+      "ok": true,
+      "bytes": 1260,
+      "sha256": "baa9e270d1a84a099776cf0f0b1c51775df315a068d069f3b5a3d45d0f298948",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "1260"
+    },
+    {
+      "remote_rel": "nodes/homeostasis/genesis.txt",
+      "ok": true,
+      "bytes": 66,
+      "sha256": "c08a7f3d26ad1a83069a3c6cfb03fba8123a08d0ef8208fc44828244c45d4676",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "66"
+    },
+    {
+      "remote_rel": "nodes/homeostasis/index.html",
+      "ok": true,
+      "bytes": 7594,
+      "sha256": "43ce49e8499404c41eeb0407cc7e1b27df4e062272e8631051126b3e79d6876c",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "7594"
+    },
+    {
+      "remote_rel": "nodes/homeostasis/life-receipt-000001.json",
+      "ok": true,
+      "bytes": 654,
+      "sha256": "526163331ba5a28ce5cdd40d12250a608ee6dada171ae34c5d3e73f179d9030d",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "654"
+    },
+    {
+      "remote_rel": "nodes/homeostasis/state.json",
+      "ok": true,
+      "bytes": 1929,
+      "sha256": "8d9bc961a3989e2f3c629982bf423bab0e908c838143705f198781ec061c54a0",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "1929"
+    },
+    {
+      "remote_rel": "nodes/index.html",
+      "ok": true,
+      "bytes": 4773,
+      "sha256": "d13575bde78f1c578c2b643b5ca8f31f9e1fc26f393a6c69d958393341c831c3",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "4773"
+    },
+    {
+      "remote_rel": "nodes/nodes.css",
+      "ok": true,
+      "bytes": 4634,
+      "sha256": "975feda1896c2f3ce1d3d9039b84d6dc0d9c1a519f389e7138f41e8f8dee85e6",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "4634"
+    },
+    {
+      "remote_rel": "nodes/registry/index.json",
+      "ok": true,
+      "bytes": 3251,
+      "sha256": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "3251"
+    },
+    {
+      "remote_rel": "nodes/registry.json",
+      "ok": true,
+      "bytes": 3251,
+      "sha256": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "3251"
+    },
+    {
+      "remote_rel": "nodes/SHA256SUMS.txt",
+      "ok": true,
+      "bytes": 862,
+      "sha256": "06c792f7235297d06795fe83316edf7e6e1b738833f71383ef652954eb68b9d2",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "862"
+    },
+    {
+      "remote_rel": "index.html",
+      "ok": true,
+      "bytes": 40898,
+      "sha256": "81ec92810bd31a475e81d4037e5947a4808beb5699498c1a67464c2c83d3f3df",
+      "post_status": 201,
+      "patch_status": 204,
+      "upload_offset": "40898"
+    }
+  ],
+  "ok_count": 12,
+  "fail_count": 0
+}
