@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "gate": "G0",
+      "status": "PASS",
+      "msg": "registry.json rehash MATCH e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84"
+    },
+    {
+      "gate": "G1",
+      "status": "PASS",
+      "msg": "STATIC DOM/SVG stack present; React Flow NOT used"
+    },
+    {
+      "gate": "G2",
+      "status": "PASS",
+      "msg": "registry schema keys present"
+    },
+    {
+      "gate": "G3",
+      "status": "PASS",
+      "msg": "elite.js loads registry; no manual facts invent path"
+    },
+    {
+      "gate": "G4",
+      "status": "PASS",
+      "msg": "homepage elite before footer (elite@26533 footer@35659)"
+    },
+    {
+      "gate": "G5",
+      "status": "PASS",
+      "msg": "C1 claim ceiling markers on homepage elite"
+    },
+    {
+      "gate": "G6",
+      "status": "PASS",
+      "msg": "secret scan clean on public payload"
+    },
+    {
+      "gate": "G7",
+      "status": "PASS",
+      "msg": "basic a11y structure PASS"
+    },
+    {
+      "gate": "G8",
+      "status": "PASS",
+      "msg": "prefers-reduced-motion present"
+    },
+    {
+      "gate": "G9",
+      "status": "PASS",
+      "msg": "JetBrains Mono bound"
+    },
+    {
+      "gate": "G10",
+      "status": "PASS",
+      "msg": "SVG + accessible fallback list"
+    },
+    {
+      "gate": "G11",
+      "status": "PASS",
+      "msg": "dedicated node page present"
+    },
+    {
+      "gate": "G12",
+      "status": "PASS",
+      "msg": "SHA256SUMS 10 files MATCH"
+    },
+    {
+      "gate": "G13",
+      "status": "PASS",
+      "msg": "React Flow NOT selected"
+    },
+    {
+      "gate": "G14",
+      "status": "PASS",
+      "msg": "quarantined libs absent"
+    },
+    {
+      "gate": "G15",
+      "status": "PASS",
+      "msg": "open_caveats length 5 preserved"
+    },
+    {
+      "gate": "G16",
+      "status": "PASS",
+      "msg": "genesis.txt present; no rewrite path in this worker"
+    },
+    {
+      "gate": "G17",
+      "status": "PASS",
+      "msg": "R12 registry identity preserved (no reopen mutation of birth facts)"
+    },
+    {
+      "gate": "G18",
+      "status": "PASS",
+      "msg": "homeostasis dry-run derive OK event=CANONICAL_BIRTH_B3_COMMIT"
+    },
+    {
+      "gate": "G19",
+      "status": "PASS",
+      "msg": "duplicate event -> noop (idempotent dry-run)"
+    },
+    {
+      "gate": "G20",
+      "status": "PASS",
+      "msg": "failed build dry-run: registry unchanged"
+    }
+  ],
+  "registry_sha256": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84"
+}
