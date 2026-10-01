@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Präzedenzkarte · R14 Validierungsgate</title>
+<meta name="description" content="Deskriptive Präzedenzkarte aus dem R14-Return, ohne neue Fit-Messung.">
+<link rel="stylesheet" href="assets/gate.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+<div class="top"><span class="brand">NEXUS//OMEGA</span><span class="tok">C1_DESCRIPTIVE_ONLY</span><span class="tok">TRUTH_AUTHORITY = NONE</span><span class="tok">PREVALIDATION_PASSED_WITH_KNOWN_GAPS_C1</span></div>
+<div class="wrap">
+<nav class="walk" aria-label="Gang durch das Validierungsgate"><a href="index.html">Tor</a> · <a href="precedent.html" aria-current="page">Präzedenz</a> · <a href="terminology.html">Terminologie</a> · <a href="gaps.html">Lücken</a> · <a href="tensions.html">Spannungen</a> · <a href="sources.html">Quellen</a> · <a href="bounds.html">Grenzen</a> · <a href="anchors.html">Anker</a> · <a href="manifest.json">manifest.json</a></nav>
+<main id="inhalt">
+<h1>Präzedenzkarte</h1>
+<p>Die erste Tabelle folgt der Executive-Karte im Return, Abschnitt 00. Die Fit-Wörter stehen dort auf Deutsch: DIREKT, PARTIELL, METAPHORISCH. Dieselbe Datei verwendet in der Terminologie-Matrix die englischen Wörter DIRECT, PARTIAL und METAPHORICAL. Diese Seite rechnet die beiden Schreibweisen nicht in eine neue Skala um.</p>
+<p>Die Grenze in der letzten Spalte ist nur dann gesetzt, wenn der Return sie in Abschnitt 54 oder in dem genannten Abschnitt selbst einträgt. Fehlt eine solche Zelle, steht UNKNOWN. Die Vorvalidierung wird danach als Lesart gezeigt, nicht als zweite Messung.</p>
+<h2 id="karte">Karte aus dem Return, Abschnitt 00</h2>
+<div class="scroll"><table><thead><tr><th scope="col">NEXUS-Bereich</th><th scope="col">Stärkster Rahmen im Return</th><th scope="col">Fit</th><th scope="col">Begründung, paraphrasiert</th><th scope="col">Grenze</th></tr></thead><tbody>
+<tr><td>Regelkreis / Homeostasis</td><td>MAPE-K, klassische Kontrolltheorie</td><td>DIREKT</td><td>Der Return nennt MAPE-K eine direkte Analogie für den Kernregelkreis und zugleich nur partiell für Authority-Gate und Receipts, weil MAPE-K keine eigene Autoritätsprüfung als Schritt kennt.</td><td>Abschnitt 54 nennt für Homeostasis Oszillation und Thrashing. Abschnitt 04: in den meisten Studien keine formale Validierung der MAPE-K-Schleife. Der Begriff selbst ist in Abschnitt 52 METAPHORICAL.</td></tr>
+<tr><td>Selbststabilisierung</td><td>Dijkstra 1974, Selbststabilisierungstheorie</td><td>DIREKT</td><td>Der Return beschreibt Konvergenz aus jedem Anfangszustand in einen legitimen Zustand in endlicher Zeit, ohne äußeren Eingriff.</td><td>Keine byzantinische Fehlertoleranz, keine Echtzeitkonvergenz, keine Garantie, dass der legitime Zustand inhaltlich korrekt ist. Ein legitimer Zustand gegen mehrere NEXUS-Zustände.</td></tr>
+<tr><td>Ereignisgetriebene Architektur</td><td>Event Sourcing, CQRS, Actor Model</td><td>DIREKT</td><td>Events sind im Return die Quelle, der Zustand ist eine abgeleitete Sicht.</td><td>Abschnitt 54 nennt für State die Schema-Evolution. Eine eigene Limitations-Zelle für CQRS oder das Actor Model in Abschnitt 54 fehlt: UNKNOWN.</td></tr>
+<tr><td>Persistente Identität</td><td>SWHID, ISO/IEC 19770-2 SWID</td><td>PARTIELL</td><td>Beide Modelle stehen in Abschnitt 10 als partiell. SWHID ist quellcodebezogen, SWID beschreibt extrinsische Lebenszyklus-Tags.</td><td>Die Synthese sagt: partiell, keine generische Theorie für Identität über Neustarts. Erlang-Pid ist dort nur für Supervision als direkt markiert, nicht als allgemeine Knotenidentität.</td></tr>
+<tr><td>Provenienz</td><td>W3C PROV, Transparency Logs</td><td>DIREKT</td><td>Receipts entsprechen im Return Provenienz-Einträgen im Sinn von W3C PROV, nicht mathematischen Beweisen.</td><td>Abschnitt 54: keine Wahrheitsgarantie. Hash-Übereinstimmung ist nicht Anspruchswahrheit.</td></tr>
+<tr><td>Authority Gate</td><td>Reference Monitor (Anderson 1972), CapBAC</td><td>DIREKT</td><td>Der Return ordnet das Gate einem Enforcement-Punkt zu, der einen Decision-Punkt fragt, und nennt vollständige Mediation, Isolation und Verifizierbarkeit.</td><td>Abschnitt 54: kein generisches Modell. Offene Frage dort: Multi-Controller.</td></tr>
+<tr><td>Reflex / Fast Path</td><td>Shielding, Runtime Assurance</td><td>PARTIELL</td><td>Der Return setzt den NEXUS-Reflex mit einem Fast Path gleich und stützt das auf Runtime Enforcement und Shielding, ohne ein einheitliches Referenzmodell zu behaupten.</td><td>Abschnitt 54: nur bei bekannten Spezifikationen. Der Begriff REFLEX ist in Abschnitt 52 METAPHORICAL.</td></tr>
+<tr><td>Adaption</td><td>Selbst-adaptive Software (Rainbow, Models@runtime)</td><td>PARTIELL</td><td>Rainbow trennt eine generische Anpassungsinfrastruktur von systemeigenem Wissen und gibt keine formalen Garantien. Models@runtime beschreibt Laufzeitmodelle.</td><td>Keine formale Validierung der Anpassungsentscheidung und keine Konvergenzgarantie, Abschnitt 18.</td></tr>
+<tr><td>Self-Observation</td><td>Models@runtime, Introspection</td><td>PARTIELL</td><td>Der Return nennt Models@runtime die präziseste wissenschaftliche Formulierung für diese Schleife und grenzt sie von Metakognition ab.</td><td>Abschnitt 54: keine Kausalgarantie.</td></tr>
+<tr><td>Watchdog / Supervision</td><td>Erlang/OTP Supervision Trees, Failure Detectors</td><td>DIREKT</td><td>Failure-Detector-Klassen nach Chandra und Toueg sowie Supervision Trees sind die genannten Anker.</td><td>Abschnitt 54: False Positives. Der Ledger vermerkt die Supervision-Quelle als nur Erlang und die Detector-Quelle als theoretisch.</td></tr>
+<tr><td>Recovery</td><td>Circuit Breaker, Retry, Saga</td><td>DIREKT</td><td>Abschnitt 22 führt Retry, Circuit Breaker, Checkpoint, Rollback und Last-Known-Good als direkt. Saga steht in der Executive-Karte und wird dort nicht weiter ausgeführt.</td><td>Abschnitt 54 für Recovery: keine byzantinische Toleranz. Eine eigene Grenze nur für Saga: UNKNOWN.</td></tr>
+<tr><td>Fault Containment</td><td>Bulkhead, Fault Domains</td><td>PARTIELL</td><td>Der Return stützt die Trennung einer blockierten Komponente vom Gesamtsystem auf Fault Domains und Bulkheads.</td><td>Keine eigene Limitations-Zelle in Abschnitt 54: UNKNOWN.</td></tr>
+<tr><td>Idempotence / Replay Safety</td><td>Transactional Outbox, Inbox Pattern</td><td>DIREKT</td><td>Der Return formuliert Exactly-once-Wirkung als mindestens einmal Zustellung plus idempotente Verarbeitung. Für doppelte Zustellung nennt er Idempotency Keys.</td><td>Exactly-once ohne Koordination in asynchronen Systemen nennt der Return unmöglich. Eine Limitations-Zelle in Abschnitt 54 fehlt: UNKNOWN.</td></tr>
+<tr><td>State Machines</td><td>FSM, Statecharts, TLA+</td><td>DIREKT</td><td>Die Executive-Karte setzt diese Zeile auf DIREKT. Abschnitt 27 unterscheidet feiner: Statecharts und TLA+ direkt, FSM, Petri-Netze und LTS partiell.</td><td>Die Ledger-Zeile zu Statecharts nennt fehlende Timing-Semantik. Die grobe Zeile und die feinere Tabelle werden nicht geglättet.</td></tr>
+<tr><td>Formal Methods</td><td>TLA+, LTL, Runtime Verification</td><td>DIREKT</td><td>Der Return nennt Authority-Gate, Zustandsübergänge, Idempotenz und eine angehängte Receipt-Kette als formalisierbar.</td><td>Empirisch bleiben nach Abschnitt 29 die Angemessenheit der Autoritätspolitik, die Bedienbarkeit und die Wirtschaftlichkeit.</td></tr>
+<tr><td>Assurance</td><td>GSN, Assurance Cases</td><td>PARTIELL</td><td>Die Karte setzt Assurance auf partiell. Der Ledger führt GSN über die Arbeit von Kelly.</td><td>Ledger-Grenze: kein formaler Beweis.</td></tr>
+<tr><td>Ressourcen / Backpressure</td><td>Flow Control, Admission Control</td><td>PARTIELL</td><td>Budgetierte Steuerung, Lastabwurf und Rückstau sind die genannten Muster. Die Entscheidung ACT, DEFER, DEGRADE oder ESCALATE wird als dadurch gestützt beschrieben, nicht als ausgewählte Architektur.</td><td>Die Limitations-Zelle in Abschnitt 54 für Resource Budget ist leer, ein Gedankenstrich, nicht eine gemessene Null.</td></tr>
+<tr><td>Multi-Controller</td><td>Controller Interference, Hierarchical Control</td><td>PARTIELL</td><td>Wenn zwei Knoten dasselbe Ziel reparieren, nennt der Return Priorität, Koordination, Idempotenz sowie Fencing oder Leases als partielle Mittel.</td><td>Keine generische Theorie. Der Return nennt das Problem ungelöst.</td></tr>
+<tr><td>Biologische Metaphern</td><td>Autopoiesis (Maturana/Varela), Cybernetics (Ashby)</td><td>METAPHORISCH</td><td>Der Return lässt Metaphern als Kommunikationshilfe zu und wertet mechanistische Lebens- oder Bewusstseinsaussagen als Kategorienfehler.</td><td>Autopoiesis und Antifragilität sollen nach dem Return nicht verwendet werden. Eine testbare Definition von Antifragilität für Software steht dort nicht.</td></tr>
+</tbody></table></div>
+<h2 id="begriff">Begriff und Mechanismus sind im Return nicht dieselbe Zeile</h2>
+<p>Homeostasis ist als Mechanismus in der Karte DIREKT an MAPE-K und Kontrolltheorie gebunden. Das Wort HOMEOSTASIS steht in der Terminologie-Matrix auf METAPHORICAL, mit dem Analog Setpoint Control oder Reconciliation Loop. Der Return nennt Setpoint Control oder Reconciliation Loop als den sauberen Begriff. Reflex ist als Fast-Path-Analog PARTIELL und als Wort METAPHORICAL. Diese Seite übernimmt beide Einträge und erklärt sie nicht zu einem einzigen Fit.</p>
+<h2 id="lesart">Lesart der Vorvalidierung, keine neue Messung</h2>
+<p>Die Vorvalidierung bündelt in Abschnitt 04 sechs direkte und vier partielle Zuordnungen. Sie bestätigt damit einen Teil der Karte und schneidet ihn anders zu. Wo eine Zeile nur dort steht, ist das eine Lesart des Vor-Checks, nicht eine zusätzliche Quelle.</p>
+<div class="scroll"><table><thead><tr><th scope="col">Bündel der Vorvalidierung</th><th scope="col">Fit in dieser Lesart</th><th scope="col">Verhältnis zum Return</th></tr></thead><tbody>
+<tr><td>Homeostasis-Schleife zu MAPE-K, Setpoint-Control und Feedback-Control</td><td>direkt bestätigt</td><td>Deckt sich mit der Karte und mit dem sauberen Begriff Setpoint Control. Das Wort bleibt metaphorisch.</td></tr>
+<tr><td>Authority-Gate zu Reference Monitor und der Trennung von Capability und Authority</td><td>direkt bestätigt</td><td>Deckt sich mit Abschnitt 14. Anderson 1972 wird im Spot-Check bestätigt.</td></tr>
+<tr><td>State und Receipts zu Event Sourcing und W3C PROV</td><td>direkt bestätigt</td><td>Die Karte führt Ereignisarchitektur und Provenienz als zwei Zeilen.</td></tr>
+<tr><td>Watchdog und Recovery zu Failure Detectors, Supervision Trees und Selbststabilisierung</td><td>direkt bestätigt</td><td>Die Karte trennt Watchdog, Recovery und Selbststabilisierung.</td></tr>
+<tr><td>Idempotenz und Replay-Sicherheit zu At-least-once, Idempotency-Keys und Outbox</td><td>direkt bestätigt</td><td>Outbox, Inbox und Idempotency Keys stehen im Return. Die Bündelung ist die Lesart.</td></tr>
+<tr><td>Deterministischer Kern und Reasoning-Shell zu Runtime Assurance, Simplex und Safety Kernel</td><td>direkt bestätigt in der Lesart</td><td>Abschnitt 45 spricht von starker Unterstützung. Eine Fit-Zelle in der Executive-Karte fehlt. Diese Seite trägt keinen Fit-Token nach. Die Karten-Zelle bleibt UNKNOWN.</td></tr>
+<tr><td>Multi-Loop: FOCALE gleich zwei Schleifen, nicht vier</td><td>partiell</td><td>Siehe Spannungen. Keine generische Koordinationstheorie für vier Schleifen.</td></tr>
+<tr><td>Reflex und Fast Path zu Shielding und Simplex-Fast-Path</td><td>partiell</td><td>Entspricht der Karte. Das Wort bleibt metaphorisch.</td></tr>
+<tr><td>Adaptation und Selbstbeobachtung zu Rainbow und Models@runtime, ohne Konvergenzgarantie</td><td>partiell</td><td>Entspricht Abschnitt 18.</td></tr>
+<tr><td>Persistente Knotenidentität über den Neustart</td><td>partiell</td><td>Entspricht der Karte und GAP-003. Kein generisches Modell.</td></tr>
+</tbody></table></div>
+
+<h2 id="kausal">Zweite Schneide: Komponententabelle der Kausalanalyse</h2>
+<p>Die Kausalanalyse führt eine eigene Komponententabelle. Text und PDF sind dieselbe Untersuchung, keine zusätzliche Quelle. Stärken stehen dort als Direkt oder Partiell. Abweichende Zellen werden gezeigt und nicht zum Sieger erklärt.</p>
+<div class="scroll"><table><thead><tr><th scope="col">Komponente in der Kausalanalyse</th><th scope="col">Präzedenzfall, wie dort genannt</th><th scope="col">Stärke dort</th><th scope="col">Hinweis</th></tr></thead><tbody>
+<tr><td>Sensor</td><td>Sensor, Sensorik</td><td>Direkt</td><td>Return-Zerlegung: L1_SENSOR, Fit DIREKT.</td></tr>
+<tr><td>Normalization</td><td>Daten-Normalisierung, Datenvorverarbeitung</td><td>Partiell</td><td>Return: kein etablierter Begriff. Fit der Afferenz-Schicht PARTIELL.</td></tr>
+<tr><td>State</td><td>Ereignisquellenspeicherung, Zustandsmaschine</td><td>Direkt</td><td>Deckt sich mit der Richtung der Karte.</td></tr>
+<tr><td>Policy</td><td>Zugriffskontrolle, Policy Decision Point</td><td>Partiell</td><td>Die Executive-Karte führt Policy nicht als eigene Zeile. Abschnitt 54 nennt Policy-Konflikte.</td></tr>
+<tr><td>Authority Gate</td><td>Referenz-Monitor, Capability-basierte Sicherheit</td><td>Direkt</td><td>Deckt sich in der Richtung.</td></tr>
+<tr><td>Homeostasis Loop</td><td>Regelkreis, MAPE-K, Kontrolltheorie</td><td>Direkt</td><td>Gemeint ist der Mechanismus. Das Wort bleibt metaphorisch.</td></tr>
+<tr><td>Reflex Loop</td><td>Schneller Pfad, Verschlingung, Runtime Assurance</td><td>Partiell</td><td>Die Zelle enthält das Wort Verschlingung. Die Prosa derselben Analyse sagt an anderer Stelle Shielding. Diese Seite korrigiert die Zelle nicht.</td></tr>
+<tr><td>Adaptation Loop</td><td>SAS, Rainbow, Models@runtime</td><td>Partiell</td><td>Keine formalen Konvergenzgarantien, so die Analyse.</td></tr>
+<tr><td>Self-Observation Loop</td><td>Models@runtime, Selbstbeobachtung, Introspection</td><td>Partiell</td><td>Deckt sich in der Richtung.</td></tr>
+<tr><td>Effectors</td><td>Aktoren, Aktuatoren</td><td>Direkt</td><td>Return: L5_EFFECTOR DIREKT.</td></tr>
+<tr><td>Receipts</td><td>W3C PROV, Audit Trail</td><td>Direkt</td><td>Keine Wahrheitsgarantie im Return.</td></tr>
+<tr><td>Recovery Structure</td><td>Selbststabilisierung, Supervision Trees, Resilienz-Muster</td><td>Direkt</td><td>Andere Bündelung als die Executive-Zeile Circuit Breaker, Retry, Saga.</td></tr>
+<tr><td>Watchdog</td><td>Fehlerdetektor, Failure Detector</td><td>Direkt</td><td>Deckt sich in der Richtung.</td></tr>
+<tr><td>Resource Budget</td><td>Admission Control, Backpressure, Queueing Theory</td><td>Partiell</td><td>Keine einheitliche Theorie, so die Analyse.</td></tr>
+</tbody></table></div>
+<p>Eine Zeile Adjustment Loop steht in der Schleifentabelle der Kausalanalyse bei FOCALE, nicht in der Executive-Karte des Returns. FOCALE ist in keiner der 34 Ledger-Zeilen eine eigene Quelle. Der Name Strassner steht in der Vorvalidierung, nicht im Ledger.</p>
+</main>
+<footer class="site"><p>Deskriptiv. Keine Validierung. Keine Architekturentscheidung. Kein Deployment.</p><p>Datum 2026-10-01. Geschwisterseite: <a href="https://www.nexus-mobile.de/ai/agent-border/">Agent Border</a> auf <a href="https://www.nexus-mobile.de/">nexus-mobile.de</a>.</p></footer>
+</div>
+</body>
+</html>

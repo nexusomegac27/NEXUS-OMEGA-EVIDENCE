@@ -1,0 +1,112 @@
+{
+  "object": "NEXUS_OMEGA_R14_VALIDATION_GATE_WEB_ARTIFACT_20261001_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "scientific_validation_of_nexus": "NO",
+  "status": "PREVALIDATION_PASSED_WITH_KNOWN_GAPS_C1",
+  "research_state": "RESEARCH_INCOMPLETE_SOURCE_GAPS_C1",
+  "primary_source_count": 34,
+  "primary_source_target": "50+",
+  "scientific_domain_count_declared": 18,
+  "scientific_domain_list": "UNKNOWN",
+  "site": "https://www.nexus-mobile.de",
+  "sibling_gate": "https://www.nexus-mobile.de/ai/agent-border/",
+  "deployment": "NO",
+  "intended_path": "/ai/r14-gate/",
+  "date": "2026-10-01",
+  "language": "de",
+  "next_allowed_step": "Kanonische wissenschaftliche Kreuzprüfung / AXIOM-Adjudikation der Gaps und Terminologie-Empfehlungen. Weiterhin C1. Keine Programmierung. Keine Stack-Auswahl.",
+  "inputs": [
+    {
+      "role": "order",
+      "path_basename": "cf75ec32000b0bac12076fabe3a52518e0d09179574a8c44b319682d7b21e561.txt",
+      "sha256": "cf75ec32000b0bac12076fabe3a52518e0d09179574a8c44b319682d7b21e561",
+      "object": "NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_ORDER_20261001_R0"
+    },
+    {
+      "role": "qwen_return",
+      "path_basename": "e79dfaddf2c03e0c429cb6eb3273da33f89d5a44ca6ca7b7912c5d52d7942855.txt",
+      "sha256": "e79dfaddf2c03e0c429cb6eb3273da33f89d5a44ca6ca7b7912c5d52d7942855",
+      "object": "NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_RETURN_20261001_R0"
+    },
+    {
+      "role": "causal_analysis_text",
+      "path_basename": "745a1e9c6d24cfc696e68f1b3cc2fe608b0a0156090a37dc5ac13e11adcec608.txt",
+      "sha256": "745a1e9c6d24cfc696e68f1b3cc2fe608b0a0156090a37dc5ac13e11adcec608",
+      "object": "Von der Analogie zur Invariante",
+      "same_document_as": "causal_analysis_pdf"
+    },
+    {
+      "role": "causal_analysis_pdf",
+      "path_basename": "7192ffa4ceb772ad9c3e5897736fedcfb0cf949c58200424b44cbf85a916e0f1.pdf",
+      "sha256": "7192ffa4ceb772ad9c3e5897736fedcfb0cf949c58200424b44cbf85a916e0f1",
+      "object": "Von der Analogie zur Invariante",
+      "same_document_as": "causal_analysis_text",
+      "note": "Dieselbe Analyse in einer anderen Form. Keine unabhängige Quelle."
+    },
+    {
+      "role": "computer_prevalidation",
+      "path_basename": "f0b671a299c43c553b5c4a4e20d961acedbb1cbd99f3040344d627748b521531.txt",
+      "sha256": "f0b671a299c43c553b5c4a4e20d961acedbb1cbd99f3040344d627748b521531",
+      "object": "NEXUS_OMEGA_GROK_R14_COMPUTER_PREVALIDATION_GENERIC_NODE_SCIENTIFIC_FOUNDATION_20261001_R0"
+    }
+  ],
+  "pages": [
+    {
+      "file": "index.html",
+      "anchor": "status",
+      "role": "gate_header"
+    },
+    {
+      "file": "precedent.html",
+      "anchor": "karte",
+      "role": "descriptive_map"
+    },
+    {
+      "file": "terminology.html",
+      "anchor": "diff",
+      "role": "terminology_gate"
+    },
+    {
+      "file": "gaps.html",
+      "anchor": "register",
+      "role": "open_gaps"
+    },
+    {
+      "file": "tensions.html",
+      "anchor": "t1",
+      "role": "tensions"
+    },
+    {
+      "file": "sources.html",
+      "anchor": "ledger",
+      "role": "source_ledger"
+    },
+    {
+      "file": "bounds.html",
+      "anchor": "noliste",
+      "role": "hard_bounds"
+    },
+    {
+      "file": "anchors.html",
+      "anchor": "hashes",
+      "role": "input_anchors"
+    },
+    {
+      "file": "manifest.json",
+      "anchor": null,
+      "role": "machine_manifest"
+    },
+    {
+      "file": "assets/gate.css",
+      "anchor": null,
+      "role": "local_style"
+    }
+  ],
+  "notes": [
+    "PDF und Text der Kausalanalyse sind zwei Hashes eines Dokuments.",
+    "SCIENTIFIC_DOMAIN_COUNT ist 18 deklariert. Eine Liste der 18 Domänen liegt nicht bei und ist UNKNOWN.",
+    "Gap-Register des Returns: GAP-001 bis GAP-010. GAP-011 nur in der Kausalanalyse.",
+    "Keine Messung, kein Deployment, keine Architekturentscheidung."
+  ]
+}

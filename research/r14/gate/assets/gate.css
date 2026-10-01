@@ -1,0 +1,128 @@
+/* NEXUS//OMEGA R14 Validierungsgate — lokale statische Fläche.
+   Palette angelehnt an /ai/agent-border/ (nahezu schwarz, Amber),
+   Fließtext warmes Off-White. Keine externen Schriften. */
+:root {
+  --bg: #0a0700;
+  --panel: #100b01;
+  --panel-2: #140e02;
+  --text: #e8e0d4;
+  --muted: #b5a790;
+  --dim: #8d7d66;
+  --amber: #c4923a;
+  --amber-bright: #e2c48a;
+  --line: rgba(196, 146, 58, 0.38);
+  --line-soft: rgba(196, 146, 58, 0.18);
+  --warn: #d4784a;
+  --calm: #9cba96;
+  --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --max: 72rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 16.5px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--amber-bright); text-underline-offset: 3px; }
+a:hover { color: var(--text); }
+a:focus-visible { outline: 2px solid var(--amber-bright); outline-offset: 3px; }
+.skip {
+  position: absolute; left: 0.5rem; top: -4rem;
+  background: var(--panel); color: var(--text); padding: 0.4rem 0.7rem;
+}
+.skip:focus { top: 0.4rem; z-index: 80; }
+.top {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; flex-wrap: wrap; gap: 0.4rem 0.8rem;
+  align-items: baseline; justify-content: space-between;
+  padding: 0.55rem 1rem;
+  background: rgba(10, 7, 0, 0.94);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.78rem; letter-spacing: 0.04em;
+}
+.top .brand { color: var(--amber-bright); white-space: nowrap; }
+.top .tok { color: var(--amber); }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1rem 3rem; }
+nav.walk {
+  display: flex; flex-wrap: wrap; gap: 0.45rem 0.9rem;
+  padding: 0.85rem 0 0.2rem;
+  font-size: 0.82rem;
+}
+nav.walk a[aria-current="page"] { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--amber); }
+h1, h2, h3 { font-weight: 500; line-height: 1.2; color: var(--amber-bright); }
+h1 { font-size: clamp(1.45rem, 2.4vw, 1.9rem); margin: 1.1rem 0 0.6rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; }
+h3 { font-size: 1rem; margin: 1.4rem 0 0.4rem; color: var(--amber); }
+p { max-width: 68ch; }
+.lead { color: var(--text); }
+.small, footer, .note { color: var(--muted); font-size: 0.86rem; }
+.stack { display: grid; gap: 0.35rem; margin: 1rem 0 1.2rem; }
+.row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 16rem) 1fr;
+  gap: 0.35rem 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.row .k { color: var(--dim); }
+.row .v { color: var(--amber-bright); overflow-wrap: anywhere; }
+.law {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 0.9rem 1rem;
+  white-space: pre-wrap;
+  color: var(--amber-bright);
+  margin: 1rem 0;
+}
+ol.steps { padding-left: 1.2rem; }
+ol.steps li { margin: 0.45rem 0; max-width: 68ch; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 0.86rem;
+}
+.scroll { overflow-x: auto; border: 1px solid var(--line-soft); }
+th, td {
+  text-align: left; vertical-align: top;
+  padding: 0.45rem 0.55rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+th { color: var(--amber); font-weight: 500; background: var(--panel); }
+tr:nth-child(even) td { background: rgba(20, 14, 2, 0.45); }
+code, .hash { font-family: var(--mono); color: var(--amber-bright); overflow-wrap: anywhere; }
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 0.05rem 0.35rem;
+  color: var(--amber-bright);
+  white-space: nowrap;
+}
+.tag.warn { border-color: var(--warn); color: var(--warn); }
+.tag.calm { border-color: var(--calm); color: var(--calm); }
+.callout {
+  border-left: 3px solid var(--warn);
+  background: var(--panel);
+  padding: 0.7rem 0.9rem;
+  margin: 1rem 0;
+}
+.callout p { margin: 0.3rem 0; }
+footer.site {
+  margin-top: 2.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+ul.clean { padding-left: 1.1rem; }
+ul.clean li { margin: 0.35rem 0; max-width: 70ch; }
+@media (max-width: 640px) {
+  .row { grid-template-columns: 1fr; gap: 0.1rem; }
+  body { font-size: 16px; }
+}
