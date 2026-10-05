@@ -1,0 +1,245 @@
+<section id="elite-nodes" class="pub-section elite-nodes-section" aria-labelledby="elite-nodes-title">
+  <style>
+    #elite-nodes.elite-nodes-section {
+      --en-ink: #0b1220;
+      --en-muted: #5b6577;
+      --en-line: #d7dde8;
+      --en-panel: #f7f9fc;
+      --en-accent: #1f4b99;
+      --en-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      margin: 0;
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+      border-top: 1px solid var(--en-line);
+      color: var(--en-ink);
+    }
+    #elite-nodes .en-wrap {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto;
+    }
+    #elite-nodes .pub-kicker {
+      font-family: var(--en-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--en-muted);
+      margin: 0 0 0.65rem;
+    }
+    #elite-nodes .pub-section-head h2 {
+      margin: 0 0 0.55rem;
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    #elite-nodes .en-lead {
+      margin: 0 0 1.4rem;
+      max-width: 42rem;
+      color: var(--en-muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    #elite-nodes .en-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media (max-width: 860px) {
+      #elite-nodes .en-grid { grid-template-columns: 1fr; }
+    }
+    #elite-nodes .en-stat,
+    #elite-nodes .en-card {
+      background: var(--en-panel);
+      border: 1px solid var(--en-line);
+      border-radius: 0;
+      padding: 1rem 1.05rem;
+    }
+    #elite-nodes .en-stat span {
+      display: block;
+      font-family: var(--en-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--en-muted);
+      margin-bottom: 0.35rem;
+    }
+    #elite-nodes .en-stat strong {
+      font-size: 1.35rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    #elite-nodes .en-card h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1.05rem;
+    }
+    #elite-nodes .en-meta {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+    }
+    #elite-nodes .en-meta li {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--en-line);
+      padding-top: 0.35rem;
+    }
+    #elite-nodes .en-meta li:first-child { border-top: 0; padding-top: 0; }
+    #elite-nodes .en-meta .k {
+      font-family: var(--en-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--en-muted);
+      min-width: 7.5rem;
+    }
+    #elite-nodes .en-actions {
+      margin-top: 1.15rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    #elite-nodes .en-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--en-ink);
+      color: var(--en-ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+      background: transparent;
+    }
+    #elite-nodes .en-actions a.primary {
+      background: var(--en-accent);
+      border-color: var(--en-accent);
+      color: #fff;
+    }
+    #elite-nodes .en-status {
+      margin-top: 0.85rem;
+      font-family: var(--en-mono);
+      font-size: 0.72rem;
+      color: var(--en-muted);
+    }
+    #elite-nodes .en-graph {
+      margin-top: 1rem;
+      border: 1px solid var(--en-line);
+      background: #fff;
+      min-height: 140px;
+    }
+    #elite-nodes .en-graph svg { display: block; width: 100%; height: auto; }
+    @media (prefers-reduced-motion: reduce) {
+      #elite-nodes * { transition: none !important; animation: none !important; }
+    }
+  </style>
+  <div class="en-wrap">
+    <header class="pub-section-head">
+      <p class="pub-kicker">Elite Node Symbiosis</p>
+      <h2 id="elite-nodes-title">Born Nodes</h2>
+      <p class="en-lead">
+        Live projection der public Node Registry. Die Darstellung definiert den Node nicht —
+        der Node pflegt die Darstellung.
+      </p>
+    </header>
+    <div class="en-grid" role="group" aria-label="Node registry summary">
+      <div class="en-stat"><span>Born</span><strong data-en="born">—</strong></div>
+      <div class="en-stat"><span>Live</span><strong data-en="live">—</strong></div>
+      <div class="en-stat"><span>Latest birth</span><strong data-en="latest">—</strong></div>
+    </div>
+    <div class="en-card" style="margin-top:1rem">
+      <h3 data-en="node-name">Loading node…</h3>
+      <ul class="en-meta">
+        <li><span class="k">Role</span><span data-en="role">—</span></li>
+        <li><span class="k">Lifecycle</span><span data-en="lifecycle">—</span></li>
+        <li><span class="k">Continuity</span><span data-en="continuity">—</span></li>
+        <li><span class="k">Status</span><span data-en="status">—</span></li>
+        <li><span class="k">Latest event</span><span data-en="event">—</span></li>
+      </ul>
+      <div class="en-graph" data-en="graph" aria-label="Elite node network"></div>
+      <div class="en-actions">
+        <a class="primary" data-en="node-link" href="/nodes/">Open node page</a>
+        <a href="/nodes/">Full registry</a>
+      </div>
+      <p class="en-status" data-en="load-status">Fetching /nodes/registry.json…</p>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var root = document.getElementById("elite-nodes");
+    if (!root) return;
+    function set(sel, v) {
+      var el = root.querySelector(sel);
+      if (el) el.textContent = v == null || v === "" ? "—" : String(v);
+    }
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+      });
+    }
+    function drawGraph(host, relations, center) {
+      if (!host) return;
+      var rels = Array.isArray(relations) ? relations : [];
+      var w = 640, h = 160;
+      var cx = 120, cy = 80;
+      var nodes = [{ id: center || "NODE", x: cx, y: cy, primary: true }];
+      var edges = [];
+      rels.slice(0, 5).forEach(function (r, i) {
+        var label = (r && (r.target || r.to || r.type)) || ("R" + (i + 1));
+        var prefix = (r && r.type) ? (String(r.type).slice(0, 10) + ":") : "";
+        var shown = (prefix + String(label)).slice(0, 32);
+        var ang = (-60 + i * 30) * Math.PI / 180;
+        var x = cx + 220 + Math.cos(ang) * 18;
+        var y = cy + Math.sin(ang) * 55;
+        nodes.push({ id: shown, x: x, y: y, primary: false });
+        edges.push([cx, cy, x, y]);
+      });
+      if (!rels.length) {
+        nodes.push({ id: "NO_RELATIONS", x: 420, y: 80, primary: false });
+        edges.push([cx, cy, 420, 80]);
+      }
+      var svg = ['<svg viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="Node relation graph">'];
+      edges.forEach(function (e) {
+        svg.push('<line x1="' + e[0] + '" y1="' + e[1] + '" x2="' + e[2] + '" y2="' + e[3] + '" stroke="#9aa7bd" stroke-width="1.5"/>');
+      });
+      nodes.forEach(function (n) {
+        svg.push('<circle cx="' + n.x + '" cy="' + n.y + '" r="' + (n.primary ? 10 : 7) + '" fill="' + (n.primary ? "#1f4b99" : "#0b1220") + '"/>');
+        svg.push('<text x="' + (n.x + 14) + '" y="' + (n.y + 4) + '" font-size="11" font-family="JetBrains Mono, monospace" fill="#5b6577">' + esc(n.id) + "</text>");
+      });
+      svg.push("</svg>");
+      host.innerHTML = svg.join("");
+    }
+    fetch("/nodes/registry.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (reg) {
+        var summary = (reg && reg.summary) || {};
+        var nodes = (reg && reg.nodes) || [];
+        var node = nodes[0] || {};
+        var latest = summary.latest_birth || node.node_name || "—";
+        var href = node.public_receipt_reference || "/nodes/";
+        set('[data-en="born"]', summary.total_born_nodes);
+        set('[data-en="live"]', summary.currently_live);
+        set('[data-en="latest"]', latest);
+        set('[data-en="node-name"]', node.node_name || latest);
+        set('[data-en="role"]', node.role || node.node_class || "—");
+        set('[data-en="lifecycle"]', node.lifecycle_state || "—");
+        set('[data-en="continuity"]', node.continuity_state || node.liveness_state || "—");
+        set('[data-en="status"]', summary.current_homeostasis_status || node.liveness_state || "—");
+        set('[data-en="event"]', node.last_validated_event || "—");
+        var link = root.querySelector('[data-en="node-link"]');
+        if (link) {
+          link.setAttribute("href", href);
+          link.textContent = "Open " + (node.node_name || "node");
+        }
+        drawGraph(root.querySelector('[data-en="graph"]'), node.relations || [], node.node_name || latest);
+        set('[data-en="load-status"]', "Registry bound · derivative only · C1");
+      })
+      .catch(function (err) {
+        set('[data-en="load-status"]', "Registry fetch failed: " + (err && err.message ? err.message : "unknown"));
+      });
+  })();
+  </script>
+</section>

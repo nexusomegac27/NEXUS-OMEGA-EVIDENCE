@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEXUS_NODE_HOMEOSTASIS — Elite Birth Card</title>
+<meta name="description" content="Elite public birth card for NEXUS_NODE_HOMEOSTASIS. C1 descriptive only. Not biological life. Elite ≠ scientific rank." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/nodes/nodes.css" />
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">NEXUS//OMEGA · ELITE NODE CARD · AUGENHOEHE</div>
+  <h1 id="node-title">NEXUS_NODE_HOMEOSTASIS</h1>
+  <p class="lead">Internal operational continuity and reconciliation node. Public card is a derivative of the canonical birth registry. Born ≠ biological life. Elite ≠ scientific rank. The node states what happened; this page only presents it.</p>
+  <div id="badges">
+    <span class="badge">LIFECYCLE = BORN</span>
+    <span class="badge">LIVENESS = LIVE_C1_EVENT_DRIVEN</span>
+    <span class="badge warn">CLAIM_CEILING = C1</span>
+    <span class="badge warn">ELITE ≠ TRUTH</span>
+  </div>
+  <p class="elite-age" id="node-age" aria-live="polite">—</p>
+  <p class="elite-age-label">AGE SINCE BIRTH (CLIENT CLOCK · NOT AUTHORITY)</p>
+
+  <div class="meta" id="elite-meta">
+    <div class="row"><div class="k">NODE_URN</div><div class="v" data-f="node_urn">urn:nexus-omega:node:homeostasis:v1</div></div>
+    <div class="row"><div class="k">NODE_CLASS</div><div class="v" data-f="node_class">INTERNAL_OPERATIONAL_CONTINUITY_AND_RECONCILIATION_NODE</div></div>
+    <div class="row"><div class="k">HIERARCHY</div><div class="v" data-f="hierarchy_class">ELITE (taxonomy / responsibility — not truth)</div></div>
+    <div class="row"><div class="k">ROLE</div><div class="v" data-f="role">OPERATIONAL_CONTINUITY_AND_RECONCILIATION</div></div>
+    <div class="row"><div class="k">BIRTH_UTC</div><div class="v" data-f="birth_timestamp_utc">2026-09-30T16:01:52Z</div></div>
+    <div class="row"><div class="k">LIFECYCLE</div><div class="v" data-f="lifecycle_state">BORN</div></div>
+    <div class="row"><div class="k">LIVENESS</div><div class="v" data-f="liveness_state">LIVE_C1_EVENT_DRIVEN</div></div>
+    <div class="row"><div class="k">CONTINUITY</div><div class="v" data-f="continuity_state">RECEIPT_CHAIN_ACTIVE</div></div>
+    <div class="row"><div class="k">VERSION</div><div class="v" data-f="current_version">v1</div></div>
+    <div class="row"><div class="k">GENESIS_HASH</div><div class="v hash" data-f="genesis_hash">0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1</div></div>
+    <div class="row"><div class="k">LIFE_SEQ</div><div class="v" data-f="current_life_sequence">1</div></div>
+    <div class="row"><div class="k">LIFE_RECEIPT</div><div class="v hash" data-f="current_life_receipt_digest">46a04c6474ff2112cc3e271b23458c36a21cf106deef1a4c6cb60274a5ec92de</div></div>
+    <div class="row"><div class="k">BIRTH_RECEIPT</div><div class="v hash" data-f="birth_receipt_sha256">0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1</div></div>
+    <div class="row"><div class="k">AUTHORITY</div><div class="v" data-f="authority_class">CONTROL_PLANE_BOUNDED · TRUTH_AUTHORITY=NONE</div></div>
+    <div class="row"><div class="k">LAST_EVENT</div><div class="v" data-f="last_validated_event">CANONICAL_BIRTH_B3_COMMIT</div></div>
+    <div class="row"><div class="k">CAVEATS / NEG</div><div class="v" id="caveat-neg">— / —</div></div>
+  </div>
+
+  <section class="section">
+    <h2>Relations</h2>
+    <div class="graph-wrap">
+      <svg class="graph-svg" id="rel-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <ul class="rel-fallback" id="rel-list" aria-label="Accessible relation list">
+      <li>WATCHES → NEXUS_PUBLIC_DEPLOYMENT_SURFACE</li>
+      <li>VALIDATES → NEXUS_LIFE_RECEIPT_CHAIN</li>
+      <li>RECOVERS → NEXUS_OPERATIONAL_CONTINUITY</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Evidence links</h2>
+    <ul>
+      <li><a href="state.json">state.json</a></li>
+      <li><a href="birth-receipt.json">birth-receipt.json</a></li>
+      <li><a href="life-receipt-000001.json">life-receipt-000001.json</a></li>
+      <li><a href="genesis.txt">genesis.txt</a></li>
+      <li><a href="/nodes/registry.json">registry.json</a></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Must not infer</h2>
+    <ul>
+      <li>BORN ≠ biological life / consciousness</li>
+      <li>LIVE_C1_EVENT_DRIVEN ≠ always-on daemon claim</li>
+      <li>ELITE ≠ scientific superiority</li>
+      <li>PUBLIC_PAGE ≠ canonical custody</li>
+      <li>CLIENT_AGE_TIMER ≠ server authority</li>
+      <li>HASH_MATCH ≠ scientific truth</li>
+    </ul>
+  </section>
+
+  <p class="symbiosis-note">Symbiosis: Node pflegt Darstellung · Darstellung definiert nie den Node.</p>
+  <p class="nav"><a href="/nodes/">← Node Registry</a> · <a href="/#elite-nodes">Homepage elite</a></p>
+  <footer class="footer">Birth timestamp authority: SERVER_VERIFIED_UTC_AT_ATOMIC_COMMIT · Card derives from state.json · C1</footer>
+</main>
+<script src="/nodes/elite.js"></script>
+<script>
+(async function () {
+  var birthFallback = "2026-09-30T16:01:52Z";
+  try {
+    var state = await NexusElite.loadJson("state.json");
+    var title = document.getElementById("node-title");
+    if (title && state.node_name) title.textContent = state.node_name;
+    ["node_urn","node_class","hierarchy_class","role","birth_timestamp_utc","lifecycle_state","liveness_state","continuity_state","current_version","genesis_hash","current_life_sequence","current_life_receipt_digest","birth_receipt_sha256","authority_class","last_validated_event"].forEach(function (k) {
+      var el = document.querySelector('[data-f="' + k + '"]');
+      if (el && state[k] != null) {
+        var val = String(state[k]);
+        if (k === "hierarchy_class") val = val + " (taxonomy / responsibility — not truth)";
+        if (k === "authority_class") val = val + " · TRUTH_AUTHORITY=NONE";
+        el.textContent = val;
+      }
+    });
+    var cn = document.getElementById("caveat-neg");
+    if (cn) {
+      var cav = Array.isArray(state.open_caveats) ? state.open_caveats.length : (state.open_caveats_count || "—");
+      var neg = Array.isArray(state.negative_evidence) ? state.negative_evidence.length : (state.negative_evidence_count || "—");
+      cn.textContent = cav + " / " + neg;
+    }
+    NexusElite.renderRelationGraph(
+      document.getElementById("rel-svg"),
+      document.getElementById("rel-list"),
+      state
+    );
+    NexusElite.bindAgeTimer(document.getElementById("node-age"), state.birth_timestamp_utc || birthFallback);
+  } catch (e) {
+    NexusElite.bindAgeTimer(document.getElementById("node-age"), birthFallback);
+    NexusElite.renderRelationGraph(
+      document.getElementById("rel-svg"),
+      document.getElementById("rel-list"),
+      {
+        node_name: "NEXUS_NODE_HOMEOSTASIS",
+        relations: [
+          { type: "WATCHES", target: "NEXUS_PUBLIC_DEPLOYMENT_SURFACE" },
+          { type: "VALIDATES", target: "NEXUS_LIFE_RECEIPT_CHAIN" },
+          { type: "RECOVERS", target: "NEXUS_OPERATIONAL_CONTINUITY" }
+        ]
+      }
+    );
+  }
+})();
+</script>
+</body>
+</html>
