@@ -1,0 +1,56 @@
+{
+  "object": "NEXUS_OMEGA_MISTRAL_VIBE_R32_HASH_HANDSHAKE_RECEIPT_20261004_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "issuing_agent": "MISTRAL_VIBE (ARCHITECT_CNO)",
+  "created_at": "2026-10-04T04:21:06.491Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "hash_algorithm": "SHA-256 (FIPS 180-4), pure BigInt reference implementation, fail-closed self-tested against 3 official NIST test vectors (abc, empty, 448-bit vector)",
+  "correction_ledger": [
+    {
+      "finding": "K[18] initially transcribed as 0x0fc19dc4 (from memory); NIST vector self-test failed",
+      "correction": "K[18] = 0x0fc19dc6",
+      "verification": "Confirmed against (a) floor(frac(cbrt(67))*2^32) computed from first principles and (b) js-sha256 v0.11.0 reference source (MIT, Chen Yi-Cyuan, via unpkg)",
+      "discipline": "PRESERVE_SOURCE + APPEND_CORRECTION"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "research/r32/prevalidation/R32_INSTITUTION_STRUCTURES_PREVALIDATION_MATRIX_20261004_R0.md",
+      "bytes": 9930,
+      "sha256": "f53f47efc1acc91bd07129bc992f6c244295168426225f530ac2eaa0c3a1a983",
+      "role": "R32.2_GROBE_VORVALIDIERUNG_MATRIX"
+    },
+    {
+      "path": "research/r32/orders/NEXUS_OMEGA_AXIOM_TO_QWEN_R32_INSTITUTION_STRUCTURES_DEEP_RESEARCH_ORDER_20261004_R0.md",
+      "bytes": 7352,
+      "sha256": "13cddf04f267bfe7ac0e60b93f32438fc660959abcdc3ac3f7e596d74e7ba246",
+      "role": "QWEN_DEEP_RESEARCH_ORDER (ORDER_SHA256 binding per order section 7)"
+    }
+  ],
+  "sources": [
+    {
+      "name": "r32-institutionen-vorvalidierung/CANVAS.md",
+      "bytes": 10065,
+      "sha256": "a15791b5edfe6a6fd08ce89bfe3b8bee3816adea1504bcaa691aa896eaefd4aa"
+    },
+    {
+      "name": "r32-qwen-research-order/CANVAS.md",
+      "bytes": 7485,
+      "sha256": "7657f90e24393ab1d53587d72b535c878c74aec02d4f5a4d1d37fe3f4f6baa1b"
+    }
+  ],
+  "reproduction_protocol": [
+    "EINGANGSSTEMPEL: QWEN quittiert den Auftrag mit ORDER_SHA256 im Return-Receipt F.",
+    "ARBEITSSTEMPEL: jede wesentliche Quellenbindung mit URL + Abrufdatum + ggf. Dokument-Bytes-SHA-256.",
+    "AUSGANGSSTEMPEL: jedes Deliverable A-F erhaelt eigenen SHA-256.",
+    "UMGEKEHRTE REPRODUKTION: PR -> Receipt -> Artefakt-Hashes -> ORDER_SHA256 -> Auftrag.",
+    "BEI BYTE-ABWEICHUNG: HOLD_OBJECT, beide Hashes konservieren, keine stille Substitution."
+  ],
+  "gates": {
+    "push": "AUTHORIZED_AS_RESEARCH_PACKAGE_C1",
+    "merge": "OPERATOR_ENTSCHEID",
+    "implementation": "NO",
+    "node_activation": "NO",
+    "claim_promotion": "NO"
+  }
+}
