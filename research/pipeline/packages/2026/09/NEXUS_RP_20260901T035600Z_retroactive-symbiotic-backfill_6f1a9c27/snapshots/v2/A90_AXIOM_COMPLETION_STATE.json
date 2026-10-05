@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_A90_SELF_LEARNING_SANDBOX_AXIOM_COMPLETION_STATE_20260901_R0",
+  "date": "2026-09-01",
+  "claim_ceiling": "C1",
+  "state": "PLAN_READY_PHYSICAL_SOURCE_BIND_PENDING_C1",
+  "source_upload": {
+    "reported_filename": "Nexus_Self_Learnig_Agent.zip",
+    "axiom_physical_read": "NOT_ESTABLISHED_RUNTIME_MOUNT_FAILURE",
+    "axiom_sha256": null,
+    "source_substitution": "PROHIBITED",
+    "grok_inventory_status": "SECONDARY_PROVISIONAL"
+  },
+  "grok_review": {
+    "decision": "FAIL_WITH_MAJOR_REVISIONS",
+    "axiom_disposition": "PLAUSIBLE_PENDING_PHYSICAL_BIND",
+    "reported_major_gaps": [
+      "checksums.sha256 missing",
+      "outputs/audit_report.json not populated",
+      "scripts/05_reproduce_all.py not demonstrably runnable in isolated package",
+      "collection zip rather than isolated A90-M1 completion package"
+    ]
+  },
+  "a90": {
+    "m1_completion": "NOT_ESTABLISHED",
+    "recommended_next_object": "A90_M1R1_ISOLATED_REPRODUCIBLE_SELF_LEARNING_SANDBOX_COMPLETION",
+    "independence_profile": "A90_IP01_PROVIDER_NEUTRAL_CANDIDATE_COMPILER",
+    "artifact_validation_state": "NOT_ACHIEVED",
+    "eligible_future_artifact_status": "C1.1_SELF_LEARNING_SANDBOX_ARTIFACT_VALIDATED_STRUCTURE_ONLY",
+    "c1_1_is_subtype_within_c1": true
+  },
+  "hard_boundaries": {
+    "self_authorization": false,
+    "final_path_enable": false,
+    "quarantine_bypass": false,
+    "canonical_memory_write_by_learner": false,
+    "auto_promotion": false,
+    "public_write_now": false,
+    "commit_now": false,
+    "push_now": false,
+    "merge_now": false
+  },
+  "independence_invariants": [
+    "LEARNER_OUTPUT_TO_QUARANTINE_CANDIDATE_ONLY",
+    "LEARNER_CANNOT_EDIT_EVALUATOR",
+    "LEARNER_CANNOT_EDIT_HOLDOUT",
+    "LEARNER_CANNOT_EDIT_ACCEPTANCE_THRESHOLDS",
+    "PRODUCER_NE_INDEPENDENT_VALIDATOR_NE_OPERATOR_AUTHORITY",
+    "PRE_COMMIT_CANDIDATE_GATE",
+    "IMMUTABLE_PARENT_LINEAGE",
+    "NO_SILENT_REUSE_OF_REJECTED_CANDIDATES",
+    "PROVIDER_NEUTRAL_CANDIDATE_AND_RECEIPT_SCHEMAS"
+  ],
+  "reproduction_requirements": {
+    "reproduce_all": "scripts/05_reproduce_all.py",
+    "clean_environment_runs_min": 2,
+    "negative_fixtures_min_recommended": 32,
+    "outputs_generated_only_by_bound_run": true,
+    "checksums_domain": "SHA256_RAW_BYTES_V1",
+    "checksums_self_excluded": true,
+    "checksum_file_bound_externally": true
+  },
+  "validation_sequence": [
+    "PHYSICAL_BIND_CURRENT_SOURCE",
+    "SAFE_RECURSIVE_INVENTORY",
+    "A90_M1R1_GAP_TRACEABILITY_MATRIX",
+    "QWEN_CODER_PRODUCER_COMPLETION",
+    "CURSOR_FRESH_VM_INDEPENDENT_REPLAY",
+    "AXIOM_BYTE_CLAIM_ADJUDICATION",
+    "RESEARCH_GITHUB_LANDING_AFTER_PASS",
+    "SEPARATE_OPERATOR_DECISION_FOR_A90_M2"
+  ],
+  "github_planning_baseline": {
+    "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "main": "7c93e73c0e39a6604b4c00996b5b04c3ef413b4e",
+    "tree": "d2d2b53eea95a747fb3a62ff63a4bb601849ff3a",
+    "parent": "93c306a8944ac0a0a10fc7803d8ea4ddfe01477d",
+    "signature": "VERIFIED_VALID",
+    "research_lane_candidate": "research/r5/a90-self-learning/"
+  },
+  "next_allowed_action": "PHYSICAL_BIND_THEN_SURGICAL_QWEN_CODER_A90_M1R1_COMPLETION"
+}

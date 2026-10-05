@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27",
+  "snapshot": "v2",
+  "generated_by": "AXIOM",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1",
+  "predecessor_snapshot": "v1",
+  "causal_trigger": "NEXUS_OMEGA_CURSOR_ACK_AXIOM_RESEARCH_LANES_AND_REPOSITORY_ORDER_LAW_20260901_R0",
+  "operator_instruction": "CURSOR wieder maximal Onboard; vollständige kanonische Übergabe; AXIOM↔Cursor communication increasingly via GitHub",
+  "live_github_anchor": {
+    "main": "7c93e73c0e39a6604b4c00996b5b04c3ef413b4e",
+    "tree": "d2d2b53eea95a747fb3a62ff63a4bb601849ff3a"
+  },
+  "research_anchor": {
+    "branch": "axiom/r5-formalization-research-20260831",
+    "head": "eaf6c3ad95c8bf021aeaf959752e56e77128ef0b",
+    "tree": "8be893f6744cb34aaeeaaa4781129de547abb1e9"
+  },
+  "rules": [
+    "SOURCE_OBJECT_SUBSTITUTION_PROHIBITED",
+    "CLAIM_CEILING_C1",
+    "BLOCKED_LANE_NOT_BLOCKED_SYSTEM",
+    "UNCERTAINTY_NOT_STOP_CONDITION",
+    "PR_COMMENT_NOT_CANONICAL_EVIDENCE",
+    "MATERIAL_STATE_TRANSITIONS_REQUIRE_PIPELINE_EVENT",
+    "PRODUCER_NOT_INDEPENDENT_VALIDATOR",
+    "NO_A90_FINAL_PATH_OR_QUARANTINE_BYPASS"
+  ]
+}
