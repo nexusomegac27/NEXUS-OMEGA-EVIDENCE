@@ -1,0 +1,57 @@
+{
+  "object": "NEXUS_OMEGA_MISTRAL_VIBE_R32_HAUPTRECHERCHE_ORDER_PUBLICATION_RECEIPT_20261004_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "issuing_agent": "MISTRAL_VIBE (ARCHITECT_CNO)",
+  "created_at": "2026-10-04T04:41:56.637Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "purpose": "Publication of the R32 main research order (Hauptrecherche) to QWEN incl. pre-research validation findings",
+  "order": {
+    "object": "NEXUS_OMEGA_AXIOM_TO_QWEN_R32_HAUPTRECHERCHE_ORDER_20261004_R0",
+    "path": "research/r32/orders/NEXUS_OMEGA_AXIOM_TO_QWEN_R32_HAUPTRECHERCHE_ORDER_20261004_R0.md",
+    "bytes": 11559,
+    "order2_sha256": "81fe32f01f28f6251cd2b37b7f90face9c7761909389c51ca3fff87b574fd1b8"
+  },
+  "prerecherche_validation": {
+    "status": "VORPRUEFUNG_ABGESCHLOSSEN_STARTGATE=OPERATOR_ENTSCHEID",
+    "confirmed": [
+      "ORDER_SHA256/MATRIX_SHA256 binding of QWEN Return Receipt F matches MISTRAL/VIBE stamps",
+      "K[18] correction ledger consistent with MISTRAL/VIBE computation",
+      "ECSS-M-ST-10-01C (2008-11-15) is the active standard, cancels and replaces ECSS-M-30-01A (1999-09-01) [ecss.nl]",
+      "ERC Work Programme 2024: max 44 proposals per panel at step 2 [erc.europa.eu]"
+    ],
+    "deficiencies_bound_as_work_packages": {
+      "V1": "F9 fields synthesized without primary-source binding -> HP2 (ARBEITSHYPOTHESE_VORRECHERCHE)",
+      "V2": "missing source register -> HP0 + Deliverable J",
+      "V3": "deliverable bytes A-E unpublished -> HP0 byte publication requirement",
+      "V4": "unsourced fields (esp. P4 NIST F1-F7) -> HP1 full-text re-coding",
+      "V5": "negative finding on substrate equivalence not adversarially documented -> HP3 with mandatory precedent classes (a)-(e), incl. NIST CAVP/ACVTS known-answer tests [csrc.nist.gov]"
+    }
+  },
+  "artifacts_bound": [
+    {
+      "name": "QWEN prerecherche transport copy (operator upload)",
+      "bytes": 17945,
+      "sha256": "fef40401cfd4ad42216bc80f8f23c36a58fe49f54a9c25ded5b888bc4af1a177"
+    },
+    {
+      "name": "r32-qwen-hauptrecherche-order/CANVAS.md",
+      "bytes": 11721,
+      "sha256": "35d2addaff4300a9bc497116c0531ad98f2dc19e0d2bd146b81f465a458b527f"
+    }
+  ],
+  "reproduction_protocol": [
+    "QWEN quittiert den Auftrag mit ORDER2_SHA256 im Return-Receipt L.",
+    "Jede Quellenbindung mit URL + Abrufdatum + ggf. Bytes-SHA-256 (Deliverable J).",
+    "Jedes Deliverable G-L mit eigenem SHA-256, Bytes publiziert.",
+    "UMGEKEHRTE REPRODUKTION: PR -> Receipt L -> Artefakt-Hashes -> ORDER2_SHA256 -> dieser Auftrag -> Receipt F -> Erstauftrag -> MATRIX.",
+    "BEI BYTE-ABWEICHUNG: HOLD_OBJECT, beide Hashes konservieren, keine stille Substitution."
+  ],
+  "gates": {
+    "push": "AUTHORIZED_AS_RESEARCH_PACKAGE_C1",
+    "start": "OPERATOR_ENTSCHEID",
+    "merge": "OPERATOR_ENTSCHEID",
+    "implementation": "NO",
+    "node_activation": "NO",
+    "claim_promotion": "NO"
+  }
+}
