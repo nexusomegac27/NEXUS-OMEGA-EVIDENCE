@@ -4,8 +4,9 @@ C1_DESCRIPTIVE_ONLY. Research/validation only; no production or claim promotion.
 """
 from __future__ import annotations
 from enum import Enum
+from copy import deepcopy
 from typing import Any, Mapping, Iterable
-import json
+import json, hashlib
 
 class S(str, Enum):
     VERIFIED='VERIFIED'; FALSIFIED='FALSIFIED'; AIR_GAP='AIR_GAP'
