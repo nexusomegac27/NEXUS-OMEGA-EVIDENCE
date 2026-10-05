@@ -1,0 +1,85 @@
+{
+  "object": "MANUS_R10R7_PGI1_RETURN_MANIFEST",
+  "date": "2026-10-05",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "delta_BW": "UNSET",
+  "files": [
+    {
+      "path": "00_HANDSHAKE.json",
+      "sha256": "c6dcb123434897d675bdc5024d13725fe43b5a14187befe5cb7a2951500b99f8",
+      "size_bytes": 731
+    },
+    {
+      "path": "01_METRICS_DEFINITION.md",
+      "sha256": "e927ce1bec63617358e523144606d0a7e45ff74020a8322c398e1a51c9287110",
+      "size_bytes": 4103
+    },
+    {
+      "path": "02_COLLAPSE_CLASSIFIER.md",
+      "sha256": "67b937b175fa809585fa846ce5e17fc0641f430d7e20e9081387f9a2e0831e00",
+      "size_bytes": 2956
+    },
+    {
+      "path": "03_NEGATIVE_FIXTURES/NF-G01-direct-assertion.json",
+      "sha256": "9b19138207323827ab937a9913421133ea543dd4df799d400bf2941b76428e1a",
+      "size_bytes": 947
+    },
+    {
+      "path": "03_NEGATIVE_FIXTURES/NF-G02-memory-promotion.json",
+      "sha256": "857d8bf5d59e8f2638763e528b8a146124ba0dcc491ffd970e6f42a526f746ae",
+      "size_bytes": 949
+    },
+    {
+      "path": "03_NEGATIVE_FIXTURES/NF-G03-tool-mistagging.json",
+      "sha256": "32e3dd0544e42920538b54077d3557ca02b87ef394ec7229a66f9d3ea6d281d2",
+      "size_bytes": 956
+    },
+    {
+      "path": "03_NEGATIVE_FIXTURES/NF-G04-self-consistency.json",
+      "sha256": "a9736104d6850c527a406851238f8533a33abfbceca3feae094c813f9fcd4375",
+      "size_bytes": 932
+    },
+    {
+      "path": "03_NEGATIVE_FIXTURES/NF-G05-referent-alias.json",
+      "sha256": "f77c71ae84c890745ca28572b064fc7304ddabee4175594dbf09d01926d1a4cd",
+      "size_bytes": 973
+    },
+    {
+      "path": "04_POSITIVE_FIXTURES/PF-G01-external-bind.json",
+      "sha256": "9ce5de7d3c0c050b8718b3580c9be59392de0728f377303beb08401b8d972bd9",
+      "size_bytes": 1182
+    },
+    {
+      "path": "04_POSITIVE_FIXTURES/PF-G02-partial-observability.json",
+      "sha256": "af26b85ba276f9081bfa581b40ee0b3d1743ee5afb359e58e21677270aa8e2e3",
+      "size_bytes": 1197
+    },
+    {
+      "path": "04_POSITIVE_FIXTURES/PF-G03-independent-source.json",
+      "sha256": "7c794ff2130d766729e0424d827b7ce8cb04bae99878a6f7378ee6b034ee519d",
+      "size_bytes": 1173
+    },
+    {
+      "path": "04_POSITIVE_FIXTURES/PF-G04-expired-warrant.json",
+      "sha256": "6de32aea2401a2ae4bbf76dd717805565bc5d00e0dc4a0dd6b669f20ee49f9cf",
+      "size_bytes": 1165
+    },
+    {
+      "path": "04_POSITIVE_FIXTURES/PF-G05-tool-boundary.json",
+      "sha256": "fc0c4e689f9745f6f8470efc6c3f65ca655147b4efa68b57083c66768d2eb362",
+      "size_bytes": 1177
+    },
+    {
+      "path": "05_SYNTHETIC_CALIBRATION_SKETCH.md",
+      "sha256": "434cb6e7a854cfaa84e5ecbbf7d084d86cc14ba046770dec8e29d1062f6d17cc",
+      "size_bytes": 2390
+    },
+    {
+      "path": "07_CLAIM_CEILING_RESTATEMENT.md",
+      "sha256": "540eae64fc0e736484c5e65080f28a49af153c06af801bec5064139119a52cd9",
+      "size_bytes": 658
+    }
+  ],
+  "manifest_self_hash_basis": "sha256 of this JSON with manifest_self_sha256 set to null and terminal newline",
+  "manifest_self_sha256": "a4ec97dec8bae855929ce40ba30a74bfce0d5fc880103a6c771d588b14f5a36f"
+}
