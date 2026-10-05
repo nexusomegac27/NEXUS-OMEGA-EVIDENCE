@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_BIOBRIDGE_SOURCE_BIND_20260923_R1",
+  "source_archive": {
+    "name": "NEXUS_~1.ZIP",
+    "sha256": "d29e9586f11c68b52863aed3e4cd914886de8c2d49625d8471a94291a4282802",
+    "bytes": 60375
+  },
+  "uploads": {
+    "NEXUS_1_TXT": {
+      "sha256": "c742186ebf3d1a3b2c6d1e7e6e86fe158d4d0fd06b7d9a81190b9771744cc098",
+      "bytes": 6263
+    },
+    "NEXUS_2_TXT": {
+      "sha256": "2ecaf10d18c420f1fa5fb8a0bd7c5454c5a0487575713422478ac3ef9702363e",
+      "bytes": 9770
+    },
+    "NEXUS_3_TXT": {
+      "sha256": "673452c73c6f2d906406f5ada8cd53b560222a82eac1adfdbecf802ae12c2b03",
+      "bytes": 9864
+    },
+    "GROK_HANDOVER_TXT": {
+      "sha256": "6222d8a327fa2e009cfabd6e338636f01ac3e43034c69ff3733972c7f76479ec",
+      "bytes": 6899
+    },
+    "QWEN_RETURN_TXT": {
+      "sha256": "eb491281dd8bdb4783adc875a7cd0b98f1ddcbb32b410b1d5b0bbaa629ece232",
+      "bytes": 5439
+    },
+    "CHAT_EXPORT_JSON": {
+      "sha256": "f7f59c637c16c674ce02573ec6ffa47b9e8e0d240363c8999b3ca2a0602c367e",
+      "bytes": 117462
+    }
+  },
+  "embedded_source_matches": {
+    "ORIGINAL_META_PACKAGE/00_SOURCE_INPUTS/NEXUS_1.TXT": "MATCH_UPLOAD_NEXUS_~1.TXT",
+    "ORIGINAL_META_PACKAGE/00_SOURCE_INPUTS/NEXUS_2.TXT": "MATCH_UPLOAD_NEXUS_~2.TXT",
+    "ORIGINAL_META_PACKAGE/00_SOURCE_INPUTS/NEXUS_3.TXT": "MATCH_UPLOAD_NEXUS_~3.TXT"
+  }
+}

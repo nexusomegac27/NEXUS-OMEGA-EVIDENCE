@@ -1,0 +1,77 @@
+{
+  "object": "CANONICAL_RETURN_META_R0.json",
+  "order_id": "NEXUS_OMEGA_META_CROSS_VALIDATION_AND_EVOLUTION_ORDER_20260923_R0",
+  "parent_validation": "NEXUS_OMEGA_BIOBRIDGE_STAGE1_GAP_CLOSURE_AND_SCIENTIFIC_CROSSVALIDATION_20260923_R0",
+  "node_identity": "META_PEER_NODE (Muse Spark 1.1)",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "runtime_state": "FROZEN_OFFLINE_TESTING",
+  "reference_anchor": "https://www.nexus-mobile.de/canonical-head.json",
+  "spec_hash_parent": "32235bddc8bd6c9f3f34312f2c35d2887a646920c3677671cc5650622a852827",
+  "stage1": {
+    "invariant_check": {
+      "1": "PASS",
+      "2": "PASS",
+      "3": "PASS",
+      "4": "PASS",
+      "5": "PASS",
+      "6": "PASS"
+    },
+    "fixtures": {
+      "F03": "PASS",
+      "F09": "PASS",
+      "F12": "PASS",
+      "F21": "PASS",
+      "F01_F02_F04_F08_F10_F11_F13_F20": "UNVERIFIED_PARTIAL_PLACEHOLDER",
+      "overall": "PARTIAL_PASS_4_OF_21_VERIFIED"
+    },
+    "efficiency_model": {
+      "formula": "C_t = B_control + B_references + B_dereferenced + B_incompatibility",
+      "verification": "MODEL_VERIFIED_FORMALLY",
+      "empirical_49_56_percent": "PROJECT_CLAIM_NOT_INDEPENDENTLY_REPRODUCED - discrepancy explicitly reported per GROK directive",
+      "measurement_protocol": "DEFINED in 21_VARIETY_REGULATOR_BUDGET.md",
+      "acceptance_bounds": ">=40% reduction with 100% provenance, 100% negative-evidence, full recoverability"
+    },
+    "gaps": {
+      "G1": "CLOSED_AT_SPEC_LEVEL via skeleton in 23_..., original corpus still required",
+      "G2": "CLOSED via explicit measurement protocol",
+      "G3": "CLOSED via formal K/D boundary in 20_...",
+      "G4": "CLOSED via explicit C1/offline headers in all deliverables"
+    },
+    "verdict": "PASS_WITH_CAVEATS_CLOSED_AT_SPEC_LEVEL"
+  },
+  "stage2": {
+    "20_COMPATIBILITY_MATRIX.json": "DELIVERED C1, K invariant, D bounded, Ashby compliant",
+    "21_VARIETY_REGULATOR_BUDGET.md": "DELIVERED C1, V(R) >= V(S) formalized",
+    "22_TERMINAL_OMEGA_SH_BIOBRIDGE_SPEC.md": "DELIVERED C1, commands micro,deref,compat,friction minimal sufficient",
+    "23_GOODHART_RESISTANCE_FIXTURES.json": "DELIVERED C1, F22-F25 deterministic fail-closed"
+  },
+  "prohibited_actions": {
+    "NO_PRODUCTION_DEPLOYMENT": "COMPLIED",
+    "NO_AUTHORITY_ESCALATION": "COMPLIED",
+    "NO_CUSTOM_CRYPTO": "COMPLIED - only SHA-256",
+    "NO_SILENT_MERGES": "COMPLIED - HOLD/? required"
+  },
+  "permitted_outputs": [
+    "00_META_CROSS_VALIDATION_REPORT.md",
+    "20_COMPATIBILITY_MATRIX.json",
+    "21_VARIETY_REGULATOR_BUDGET.md",
+    "22_TERMINAL_OMEGA_SH_BIOBRIDGE_SPEC.md",
+    "23_GOODHART_RESISTANCE_FIXTURES.json",
+    "CANONICAL_RETURN_META_R0.json",
+    "SHA256SUMS"
+  ],
+  "next": "QWEN EXECUTE STAGE 1 (WITH CLOSED GAPS) -> VERIFY META HASHES -> INTEGRATE STAGE-2 -> RETURN TO AXIOM",
+  "terminal_seal": {
+    "VALIDATION_OBJECT": "CANONICAL_RETURN_META_R0.json",
+    "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+    "TRUTH_AUTHORITY": "NONE",
+    "COMPATIBILITY_KERNEL": "INVARIANT (formalised)",
+    "DIVERSITY": "BOUNDED",
+    "INCOMPATIBILITY": "EXPLICIT_HOLD_OR_FAIL",
+    "RUNTIME": "FROZEN",
+    "PRODUCTION": "NONE",
+    "AUTHORITY_GROWTH": "NONE",
+    "META_VERDICT": "PASS_WITH_CAVEATS_CLOSED_AT_SPEC_LEVEL"
+  }
+}

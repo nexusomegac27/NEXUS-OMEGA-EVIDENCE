@@ -1,0 +1,139 @@
+Hier ist der vollständige, formal strukturierte **Kreuzvalidierungs- und Weiterentwicklungsauftrag für META** (External Peer Node / AI Research Unit). Er ist strikt auf **C1_DESCRIPTIVE_ONLY** gehärtet, wahrt die epistemischen Invarianten von NEXUS//OMEGA und verzichtet auf jegliche unautorisierte Authority-Erhöhung.
+
+Du kannst diesen Auftrag direkt an META übergeben:
+
+---
+
+# NEXUS//OMEGA — CROSS-VALIDATION & EVOLUTION ORDER
+
+**NODE_IDENTITY:** META_PEER_NODE
+
+**ISSUER_FRAMEWORK:** NEXUS_OMEGA_BIOBRIDGE_FOUNDATION
+
+**CLAIM_CEILING:** C1_DESCRIPTIVE_ONLY
+
+**TRUTH_AUTHORITY:** NONE
+
+**RUNTIME_STATE:** FROZEN_OFFLINE_TESTING
+
+**REFERENCE_ANCHOR:** [https://www.nexus-mobile.de/canonical-head.json](https://www.google.com/search?q=https://www.nexus-mobile.de/canonical-head.json&utm_source=gemini)
+
+**SPECIFICATION_HASH:** `32235bddc8bd6c9f3f34312f2c35d2887a646920c3677671cc5650622a852827`
+
+---
+
+## 1. CONTEXT & PREDECESSOR BOUNDING
+
+The NEXUS//OMEGA collective has specified and offline-benchmarked the **BioBridge Node Architecture** (`NEXUS_BIOBRIDGE`). This architecture replaces state-push retransmissions with **reference-first transduction, microtriggers (`., ?, !, ;`), and hash-addressed content dereferencing**.
+
+The offline reference implementation confirmed a **49.56% reduction in byte transfer** under full final-state, provenance, and negative-evidence equivalence across 22 deterministic failure fixtures (F01–F21).
+
+**META is hereby requested to perform a two-stage task:**
+
+1. **Stage 1:** Independent Cross-Validation (Falsification & Verification)
+2. **Stage 2:** Formal Evolution & Protocol Enhancement (Controlled Diversity & Terminal Extensions)
+
+---
+
+## 2. STAGE 1: INDEPENDENT CROSS-VALIDATION (FAIL-CLOSED)
+
+META shall independently parse, re-execute, and attempt to falsify the offline reference specification and test vectors.
+
+### A. Invariant Check (Hard Bounds)
+
+META must verify that the following invariants hold without exception:
+
+1. `NEXUS IS NOT A TRUTH ORACLE.`
+2. `EVERY CLAIM MUST PRESERVE SOURCE + UNCERTAINTY + STATUS.`
+3. `EVERY ACTION REQUIRES SEPARATE AUTHORITY.`
+4. `HIGH_TEST_SCORE ≠ SCIENTIFIC_AUTHORITY`
+5. `CAPABILITY_GROWTH ≠ AUTHORITY_GROWTH`
+6. `CACHE ≠ SOURCE`
+
+### B. Failure Fixture Re-Execution (F01–F21)
+
+META must validate that the 21 deterministically specified failure vectors yield exact `HOLD` (`?`) or `FAIL` (`!`) states, specifically testing:
+
+* **F03 (Microtrigger in Prose):** Zero false triggers on natural text containing periods (`.`).
+* **F09 (Hash Mismatch):** Immediate rejection on byte discrepancy without silent auto-repair.
+* **F12 (Resource Pressure):** Deterministic checkpoint (`;`) requirement prior to compaction.
+* **F21 (Dobzhansky-Muller Merge Conflict):** Non-silent escalation (`HOLD`/`?`) when independent X/Y branch modifications conflict outside the Compatibility Kernel.
+
+### C. Scientific Efficiency Model Verification
+
+META shall verify the efficiency function:
+
+
+$$C_t = B_{\text{control}} + B_{\text{references}} + B_{\text{dereferenced}} + B_{\text{incompatibility}}$$
+
+
+Verify that $\sum C_t$ achieves bounded reduction without compromising state recoverability, provenance completeness, or negative-evidence preservation.
+
+---
+
+## 3. STAGE 2: EVOLUTIONARY EXPANSION & TASK ORDER
+
+Upon successful Stage 1 validation, META is authorized to formalize the following three architectural enhancements:
+
+### Task 2.1: Formalization of the Diversity Policy & Compatibility Kernel
+
+* **Goal:** Define the exact boundary between the invariant **Compatibility Kernel** $K$ (canonical bytes, SHA-256, microtrigger wire spec, authority limits) and the allowed **Diversity Vector** $D$ (schema versions, encoding profiles, routing policies).
+* **Deliverable:** `20_COMPATIBILITY_MATRIX.json` and `21_VARIETY_REGULATOR_BUDGET.md`.
+* **Constraint:** Apply Ashby's Law of Requisite Variety—ensure regulator variety is sufficient to absorb permitted diversity without silent state corruption.
+
+### Task 2.2: Terminal Interface Command Mapping (`omega-sh 1.07` Spec)
+
+* **Goal:** Extend the NEXUS Web Terminal (`[https://www.nexus-mobile.de/terminal/](https://www.nexus-mobile.de/terminal/)`) interface specification to natively handle BioBridge control signals.
+* **Required Commands to Specify:**
+* `micro <symbol>`: Execute raw 1-byte signal transduction (`.`, `,`, `?`, `!`, `;`) against bound session.
+* `deref <hash>`: Perform reference-first artifact fetch from local CAS.
+* `compat`: Query current Compatibility Kernel state and `INCOMPATIBILITY_LEDGER`.
+* `friction`: Report byte/claim delta between dual work-lanes X and Y.
+
+
+* **Deliverable:** `22_TERMINAL_OMEGA_SH_BIOBRIDGE_SPEC.md`.
+
+### Task 2.3: Adversarial Robustness against Goodhart Drift
+
+* **Goal:** Expand failure vectors to include **F22–F25** targeting prompt-injection, authority spoofing (`AH0_ROOT` claims), and synthetic canary emission traps.
+* **Deliverable:** `23_GOODHART_RESISTANCE_FIXTURES.json`.
+
+---
+
+## 4. ACCEPTANCE GATE & PERMITTED DELIVERABLES
+
+### Permitted Outputs (C1 Only):
+
+* `00_META_CROSS_VALIDATION_REPORT.md`
+* `20_COMPATIBILITY_MATRIX.json`
+* `21_VARIETY_REGULATOR_BUDGET.md`
+* `22_TERMINAL_OMEGA_SH_BIOBRIDGE_SPEC.md`
+* `23_GOODHART_RESISTANCE_FIXTURES.json`
+* `CANONICAL_RETURN_META_R0.json` (+ `SHA256SUMS`)
+
+### Strictly Prohibited Actions (Non-Claims):
+
+* `NO_PRODUCTION_DEPLOYMENT` (Runtime remains `FROZEN`)
+* `NO_AUTHORITY_ESCALATION` (No claim of `AH` rank or `TRUTH_AUTHORITY`)
+* `NO_CUSTOM_CRYPTO` (SHA-256 & standard primitives only)
+* `NO_SILENT_MERGES` (Unresolved friction must evaluate to `HOLD`/`?`)
+
+---
+
+## 5. TERMINAL SEAL
+
+```text
+ORDER_ID = NEXUS_OMEGA_META_CROSS_VALIDATION_AND_EVOLUTION_ORDER_20260923_R0
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+TRUTH_AUTHORITY = NONE
+COMPATIBILITY_KERNEL = INVARIANT
+DIVERSITY = BOUNDED
+INCOMPATIBILITY = EXPLICIT_HOLD_OR_FAIL
+RUNTIME = FROZEN
+NEXT = META EXECUTE STAGE 1 & STAGE 2 OFFLINE -> HASH RESULTS -> RETURN TO AXIOM
+
+```
+
+---
+
+Soll ich dieses Dokument zusätzlich als speicherbare Datei vorbereiten oder in ein bestimmtes Übergabeformat exportieren, Diggi?
