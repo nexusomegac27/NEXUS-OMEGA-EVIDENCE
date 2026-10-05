@@ -1,0 +1,33 @@
+name: validate-file-event-protocol
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-file-event-protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python tests/r5/test_file_protocol.py
+      - name: Validate exact raw-byte audit coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='${{ github.event.pull_request.base.sha }}'
+          head='${{ github.event.pull_request.head.sha }}'
+          if [ -z "$base" ] || [ -z "$head" ]; then exit 0; fi
+          for c in $(git rev-list --reverse "$base..$head"); do
+            if git diff-tree --no-commit-id --name-only -r "$c" | grep -qv '^communication/file-events/'; then
+              python scripts/r5/file_protocol/verify_file_event_coverage.py "$c" --root .
+            fi
+          done

@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://nexus-omega.example/schema/r5/agent-governance/nexus-agent-entry-ack-v1.schema.json",
+  "title":"NEXUS Agent Entry ACK V1",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","admission_id","session_id","agent_provider","agent_model","assigned_rank","core_instruction_sha256_seen","capability_profile_sha256_seen","acknowledged_claim_ceiling","producer_self_validation_prohibited","status"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "admission_id":{"type":"string","minLength":1},
+    "session_id":{"type":"string","minLength":1},
+    "agent_provider":{"type":"string","minLength":1},
+    "agent_model":{"type":"string","minLength":1},
+    "assigned_rank":{"type":"string","minLength":1},
+    "core_instruction_sha256_seen":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "capability_profile_sha256_seen":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "acknowledged_claim_ceiling":{"const":"C1"},
+    "producer_self_validation_prohibited":{"const":true},
+    "missing_required_files":{"type":"array","items":{"type":"string"}},
+    "status":{"enum":["ACK_ACCEPTED","ACK_WITH_GAPS","ACK_REJECTED"]}
+  }
+}

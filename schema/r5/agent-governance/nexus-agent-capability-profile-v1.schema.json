@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://nexus-omega.example/schema/r5/agent-governance/nexus-agent-capability-profile-v1.schema.json",
+  "title":"NEXUS Agent Capability Profile V1",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","profile_id","rank_profile","claim_ceiling","read_scope","write_scope","execute_scope","network_scope","validation_role","subject_mutation","git","authority"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "profile_id":{"type":"string","minLength":1},
+    "rank_profile":{"enum":["RANG_0_OBSERVER","RANG_1_RESEARCHER","RANG_2_VALIDATOR","RANG_3_PRODUCER","CUSTOM"]},
+    "claim_ceiling":{"const":"C1"},
+    "read_scope":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "write_scope":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "execute_scope":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "network_scope":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "tool_scope":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "secret_scope":{"type":"array","items":{"type":"string"},"maxItems":0},
+    "validation_role":{"enum":["NONE","RESEARCH","INDEPENDENT_VALIDATOR","ADVERSARIAL_VALIDATOR","PRODUCER"]},
+    "subject_mutation":{"type":"boolean"},
+    "git":{"type":"object","additionalProperties":false,"required":["branch_create","commit","push","force_push","pr_create","approve","merge"],"properties":{"branch_create":{"type":"boolean"},"commit":{"type":"boolean"},"push":{"type":"boolean"},"force_push":{"const":false},"pr_create":{"type":"boolean"},"approve":{"type":"boolean"},"merge":{"type":"boolean"}}},
+    "authority":{"type":"object","additionalProperties":false,"required":["self_validation","canonical_memory_write","final_path_write","claim_promotion","foundation_promotion","deploy"],"properties":{"self_validation":{"const":false},"canonical_memory_write":{"type":"boolean"},"final_path_write":{"type":"boolean"},"claim_promotion":{"const":false},"foundation_promotion":{"const":false},"deploy":{"const":false}}}
+  }
+}
