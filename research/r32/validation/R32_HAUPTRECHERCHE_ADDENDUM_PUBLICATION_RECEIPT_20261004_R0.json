@@ -1,0 +1,42 @@
+{
+  "object": "NEXUS_OMEGA_MISTRAL_VIBE_R32_HAUPTRECHERCHE_ADDENDUM_PUBLICATION_RECEIPT_20261004_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "issuing_agent": "MISTRAL_VIBE (ARCHITECT_CNO)",
+  "created_at": "2026-10-04T04:45:26.064Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "purpose": "Publication of binding clarifications K1-K3 to QWEN's three pre-start questions on the R32 main research order",
+  "referenced_order": {
+    "object": "NEXUS_OMEGA_AXIOM_TO_QWEN_R32_HAUPTRECHERCHE_ORDER_20261004_R0",
+    "order2_sha256": "81fe32f01f28f6251cd2b37b7f90face9c7761909389c51ca3fff87b574fd1b8"
+  },
+  "clarifications": {
+    "K1_frage_1_hp3": "JA - verpflichtend. Neues Unterpaket HP3.1 Mechanismus-Robustheit: historische Fehlschlaege/Kontroversen innerhalb der 5 Pflichtklassen als primaere Negativ-Evidenz der Aequivalenzmechanismen selbst + Grenzfaellen-Tabelle je Klasse (Was prueft der Mechanismus / was nachweislich nicht). Gepruefte Startpunkte: (i) Dual_EC_DRBG-Entfernung aus NIST SP 800-90A Rev.1 [nist.gov 2014-04, csrc.nist.gov RBG-Archiv], (ii) Debian-OpenSSL-RNG DSA-1571-1 / CVE-2008-0166 [lists.debian.org, debian.org/security], (iii) CMVP Active/Historical/revoked-Statuslisten [csrc.nist.gov CMVP], (iv) W3C/WHATWG/IETF-Interoperabilitaetskonflikte. Startpunkte sind PRUEFAUFTRAEGE - Befund nur mit Primaerquelle.",
+    "K2_frage_2_hp1": "Ersatzanker-Standard (Praezisierung, keine Lockerung): STUFE 1 Strukturanker (Ueberschrift/Abschnitt + Absatz-Ordinal), STUFE 2 Satz-/Absatz-Ordinal + exakte Dokument-Instanzbindung (URL, Abrufdatum, Version, Bytes-SHA-256) + woertliches Zitat, STUFE 3 NOT_ESTABLISHED mit Suchprotokoll. Reproduzierbarkeitsregel: Ein unabhaengiger Pruefer muss die Passage aus derselben Instanz auffinden koennen; Fail-closed bei Mehrdeutigkeit.",
+    "K3_frage_3_hp5": "NEIN zu Gewichtung nach CNO-Naehe (Halo-Nachbarschaft, semantische Fuellung unter C1 verboten). Stattdessen deskriptive Annotation SUBSTRATKLASSE in {PHYSISCH_LABOR, ORGANISATORISCH, DIGITAL_SOFTWARE, HYBRID} mit Primaerquellenbeleg. Die Transferabilitaets-Gewichtung ist Architektur-/Operator-Entscheid der spaeteren Charta-Phase (CLAIM_PROMOTION = NO)."
+  },
+  "artifacts_bound": [
+    {
+      "name": "research/r32/orders/NEXUS_OMEGA_MISTRAL_VIBE_R32_HAUPTRECHERCHE_ADDENDUM_20261004_R0.md",
+      "bytes": 7348,
+      "sha256": "6357e3a7f590c470606fdf021f1ab740cdf661d8aa6b7da7f3e42b4fb7ce25fc"
+    },
+    {
+      "name": "r32-hauptrecherche-addendum/CANVAS.md",
+      "bytes": 7487,
+      "sha256": "1f1c2c2c69800aab7700665aff06620849d2e6eff45868c8d7a867dcec74431b"
+    }
+  ],
+  "reproduction_protocol": [
+    "QWEN quittiert ORDER2_SHA256 + ADDENDUM_SHA256 im Return-Receipt L.",
+    "UMGEKEHRTE REPRODUKTION: PR -> Receipt L -> G-L -> ORDER2_SHA256 -> Hauptauftrag -> ADDENDUM_SHA256 -> dieses Addendum -> Receipt F -> Erstauftrag -> MATRIX.",
+    "BEI BYTE-ABWEICHUNG: HOLD_OBJECT, beide Hashes konservieren, keine stille Substitution."
+  ],
+  "gates": {
+    "push": "AUTHORIZED_AS_RESEARCH_PACKAGE_C1",
+    "start": "OPERATOR_ENTSCHEID",
+    "merge": "OPERATOR_ENTSCHEID",
+    "implementation": "NO",
+    "node_activation": "NO",
+    "claim_promotion": "NO"
+  }
+}
