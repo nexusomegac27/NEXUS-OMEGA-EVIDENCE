@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:schema:real-handshake-receipt:v1",
+  "title": "NEXUS Real Handshake Receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_type", "object_id", "challenge_id", "manifest_digest",
+    "received_size", "computed_sha256", "manifest_match", "method",
+    "receiver_id", "timestamp_utc", "status"
+  ],
+  "properties": {
+    "receipt_type": {"const": "NEXUS_REAL_HANDSHAKE_V1_RECEIPT"},
+    "object_id": {"type": "string", "minLength": 1},
+    "challenge_id": {"type": "string", "minLength": 8},
+    "manifest_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "received_size": {"type": "integer", "minimum": 0},
+    "computed_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_match": {"type": "boolean"},
+    "method": {"type": "string", "minLength": 1},
+    "receiver_id": {"type": "string", "minLength": 1},
+    "timestamp_utc": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PASS", "FAIL", "HOLD"]}
+  }
+}
