@@ -1,0 +1,17 @@
+{
+  "object": "NEXUS_OMEGA_R41_MANUS_PARALLEL_VERIFICATION_20261004_R0",
+  "parent": ["R40_MISTRAL_VIBE_VERIFICATION_ORDER", "R39_DEV001_FIX_AND_TWO_STAGE_STANDARD_COMPLETE"],
+  "status": "R41_MANUS_VERIFICATION_BLOCKED_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "artifact_count": 12,
+  "execution_policy": {"implementation": false, "node_activation": false, "claim_promotion": false, "auto_follow_up": false, "synthetic_evidence": false},
+  "blocking_findings": ["TLC_UNAVAILABLE", "APALACHE_UNAVAILABLE", "CANDIDATE_A_SPEC_UNAVAILABLE", "CANDIDATE_B_SPEC_UNAVAILABLE", "R36_COUNTEREXAMPLE_UNAVAILABLE"],
+  "source_basis": [
+    "https://arxiv.org/html/2605.07935v1",
+    "https://github.com/ModelWisdom/ModelWisdom",
+    "https://github.com/apalache-mc/apalache",
+    "R39_COMPLETE_ZIP_STACK_20261004.zip",
+    "R38_META_COMPLETE_ZIP_STACK_20261004.zip"
+  ],
+  "note": "Manifest records evaluation outputs only; it does not constitute formal verification."
+}

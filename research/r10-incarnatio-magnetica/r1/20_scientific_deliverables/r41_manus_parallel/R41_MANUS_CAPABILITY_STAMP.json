@@ -1,0 +1,35 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_TO_MANUS_R41_PARALLEL_VERIFICATION",
+  "session_reference": "R41_PARALLEL_VERIFICATION",
+  "agent_id": "MANUS",
+  "platform": "Windows Desktop R1",
+  "model_if_known": "UNKNOWN",
+  "capability_status": "MEASURED",
+  "capabilities": {
+    "web_search": "MEASURED_AVAILABLE",
+    "direct_url_fetch": "MEASURED_AVAILABLE",
+    "primary_source_access": "MEASURED_AVAILABLE",
+    "github_read": "MEASURED_AVAILABLE",
+    "file_input": "MEASURED_AVAILABLE",
+    "file_byte_access": "MEASURED_AVAILABLE",
+    "byte_hashing": "MEASURED_AVAILABLE",
+    "code_execution": "MEASURED_AVAILABLE",
+    "python": "MEASURED_AVAILABLE: Python 3.12.10",
+    "java": "MEASURED_AVAILABLE: openjdk 21.0.10",
+    "node": "MEASURED_AVAILABLE: v24.13.1",
+    "uv": "MEASURED_AVAILABLE: 0.12.15",
+    "git": "MEASURED_AVAILABLE: 2.53.0.windows.1",
+    "pnpm": "MEASURED_UNAVAILABLE",
+    "tla_toolchain": "MEASURED_UNAVAILABLE",
+    "tlc_model_checker": "MEASURED_UNAVAILABLE",
+    "apalache_toolchain": "MEASURED_UNAVAILABLE",
+    "docker": "MEASURED_UNAVAILABLE",
+    "network_egress": "PARTIAL_WEB_TOOLS_ONLY"
+  },
+  "measurement_notes": [
+    "No tla2tools.jar, TLA_HOME, TLA2TOOLS_JAR, or APALACHE_HOME was present in the workspace/environment.",
+    "The R38/R39 archives contained no executable candidate A/B .tla specifications or R36 counterexample trace.",
+    "Apalache installation was not attempted because the order explicitly forbids installation without a separate operator authorization."
+  ],
+  "claim_boundary": "C1_DESCRIPTIVE_ONLY"
+}
