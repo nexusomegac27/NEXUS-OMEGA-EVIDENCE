@@ -1,0 +1,21 @@
+{
+  "object": "NEXUS_OMEGA_R3_AGENT_GOVERNANCE_GAP_REGISTER_20260902_R0",
+  "QWEN_R3_ENTRY_ACK": "NOT_ESTABLISHED",
+  "RETROACTIVE_ACK": "NO",
+  "FOLLOW_UP_ORDER": "PRESENT",
+  "FOLLOW_UP_EXECUTION": "NOT_PRESENT_IN_R3_STACK",
+  "QWEN_PROVIDER_EXECUTION": "NOT_AVAILABLE",
+  "PLATFORM_ACTOR": "nexusomegac27",
+  "SEMANTIC_AGENT": "GROK_REPORTED",
+  "MODEL_AUTHENTICATION_FROM_GITHUB": "NOT_ESTABLISHED",
+  "gaps": [
+    {
+      "gap_id": "R3-GAP-ENTRY-ACK",
+      "summary": "QWEN Entry ACK absent; GAP event emitted, no fake ACK"
+    },
+    {
+      "gap_id": "R3-GAP-FOLLOWUP",
+      "summary": "GROK follow-up order present but not executed in R3 stack"
+    }
+  ]
+}

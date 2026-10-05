@@ -1,0 +1,6 @@
+{"utc_approx": "2026-09-02T07:12:12Z", "event": "R3_SEED_PREPARED", "source": "Layer3.zip member mtime", "note": "before R2 terminal"}
+{"utc_approx": "2026-09-02T07:24:00Z", "event": "R2_INTAKE_TERMINALIZATION", "source": "R2 embedded receipt"}
+{"utc_approx": "2026-09-02T07:25:40Z", "event": "R3_SUBSTANTIVE_QWEN_OUTPUT", "source": "Layer3.zip member mtime"}
+{"utc_approx": "2026-09-02T07:29:34Z", "event": "R2_SHA256SUMS_STAND", "source": "R2 packaging"}
+{"event": "RELATION", "R3_CAUSAL_SUCCESSOR": "YES", "STRICT_TEMPORAL_SUCCESSION": "NOT_ESTABLISHED", "TEMPORAL_OVERLAP": "PRESERVED"}
+{"event": "PR13_SUCCESSOR_NOTE", "r3_adjudication_snapshot_head": "ee537bcb60294126be67882ff384daa3326dc6f8", "later_successor_head": "336a3d0c49e455ed41380829ae8c23e618b8e3f2", "relation": "APPEND_ONLY_SUCCESSOR_NOT_R3_REWRITE"}
