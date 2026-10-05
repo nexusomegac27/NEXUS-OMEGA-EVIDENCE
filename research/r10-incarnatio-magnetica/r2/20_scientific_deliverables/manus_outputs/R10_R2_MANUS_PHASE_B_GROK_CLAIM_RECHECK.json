@@ -1,0 +1,124 @@
+{
+  "artifact": "R10_R2_MANUS_PHASE_B_GROK_CLAIM_RECHECK",
+  "checked_on": "2026-10-04",
+  "claims": [
+    {
+      "claim_id": "G1",
+      "grok_statement": "CAAM draft EXPIRED",
+      "status": "BESTAETIGT_TEILWEISE",
+      "primary_sources": [
+        "https://datatracker.ietf.org/doc/draft-barney-caam/00/",
+        "https://datatracker.ietf.org/doc/draft-barney-caam/history/"
+      ],
+      "finding": "draft-barney-caam-00 is explicitly an expired individual Internet-Draft; latest revision 2026-02-25 and last updated/expiry state 2026-08-29. The precise claim is about version -00, not every possible future CAAM revision.",
+      "contradictions": []
+    },
+    {
+      "claim_id": "G2",
+      "grok_statement": "ITF primär Apalache",
+      "status": "BESTAETIGT_TEILWEISE",
+      "primary_sources": [
+        "https://apalache-mc.org/docs/adr/015adr-trace.html",
+        "https://docs.tlapl.us/using:tlc:start"
+      ],
+      "finding": "ITF is documented as produced by Apalache and Quint and is not bound to TLA+; TLC has its own dump formats. Therefore the Mistral statement that ITF is a TLC trace format is not supported by the cited primary documentation.",
+      "contradictions": [
+        "Mistral/Vibe TLC attribution conflicts with Apalache ADR-015 and TLC documentation."
+      ]
+    },
+    {
+      "claim_id": "G3",
+      "grok_statement": "Kein TLC-Counterexample-Standard existiert",
+      "status": "BESTAETIGT_TEILWEISE",
+      "primary_sources": [
+        "https://apalache-mc.org/docs/adr/015adr-trace.html",
+        "https://docs.tlapl.us/using:tlc:start"
+      ],
+      "finding": "The supplied primary sources show no TLC-specific published standard; ITF is an informal Apalache/Quint-oriented format, not a TLC standard. This is a bounded non-finding, not proof that no other community convention exists.",
+      "contradictions": []
+    },
+    {
+      "claim_id": "G4",
+      "grok_statement": "S02/S05 conditional, S04 blocked",
+      "status": "UNBELEGT",
+      "primary_sources": [],
+      "finding": "The labels S02, S04 and S05 are internal workflow identifiers. The supplied ZIP and public sources do not provide enough normative acceptance criteria to independently reproduce the exact conditional/blocked statuses.",
+      "contradictions": []
+    },
+    {
+      "claim_id": "G5",
+      "grok_statement": "Lacuna-Primärquelle bleibt SOURCE_GAP",
+      "status": "WIDERLEGT",
+      "primary_sources": [
+        "https://zenodo.org/records/22063353"
+      ],
+      "finding": "Zenodo record 22063353 is reachable and identifies Lacuna, published 2026-09-14, version 0.6. The record is a specification, not a standard, and exposes files under the versioned record 22751179. The prior source-gap finding has materially drifted.",
+      "contradictions": [
+        "GROK says not reachable; current primary record is reachable."
+      ]
+    },
+    {
+      "claim_id": "G6",
+      "grok_statement": "Boring first korrekt",
+      "status": "TEILWEISE_BESTAETIGT",
+      "primary_sources": [
+        "https://www.rfc-editor.org/rfc/rfc8493.html",
+        "https://w3id.org/ro/crate/1.3",
+        "https://www.w3.org/TR/prov-o/"
+      ],
+      "finding": "BagIt RFC 8493 is Informational (2018), RO-Crate 1.3 is a 2026 Recommendation, and PROV-O is a 2013 W3C Recommendation. This supports maturity relative to clearly experimental drafts, but the ZIP does not bind HDP/TIBET primary status strongly enough for a complete comparative ranking.",
+      "contradictions": []
+    },
+    {
+      "claim_id": "G7",
+      "grok_statement": "Failure-Schema tragfähig: in-toto custom predicate + DSSE + SCITT",
+      "status": "TEILWEISE_WIDERLEGT",
+      "primary_sources": [
+        "https://github.com/in-toto/attestation/blob/main/spec/v1/envelope.md",
+        "https://www.rfc-editor.org/rfc/rfc9943.html"
+      ],
+      "finding": "in-toto supports DSSE envelopes and custom predicate types. SCITT RFC 9943 requires COSE_Sign1 Signed Statements. A DSSE envelope is not directly a SCITT Signed Statement; a bridge or dual representation would need explicit design and interoperability evidence.",
+      "contradictions": [
+        "GROK treats DSSE and SCITT Signed Statement as directly compatible; RFC 9943 defines COSE_Sign1."
+      ]
+    },
+    {
+      "claim_id": "G8",
+      "grok_statement": "Komposition C01/C02 bestätigt",
+      "status": "UNBELEGT_TEILWEISE",
+      "primary_sources": [
+        "https://www.rfc-editor.org/rfc/rfc8493.html",
+        "https://w3id.org/ro/crate/1.3",
+        "https://www.w3.org/TR/prov-o/",
+        "https://www.rfc-editor.org/rfc/rfc9943.html",
+        "https://github.com/in-toto/attestation/blob/main/spec/v1/envelope.md"
+      ],
+      "finding": "The components have compatible abstraction boundaries and documented individual specifications, but the supplied evidence does not demonstrate an executed pairwise interoperability test or common conformance vector for C01/C02.",
+      "contradictions": []
+    },
+    {
+      "claim_id": "G9",
+      "grok_statement": "Kein materialer Drift",
+      "status": "WIDERLEGT",
+      "primary_sources": [
+        "https://slsa.dev/provenance/v1",
+        "https://theupdateframework.io/specification/latest/",
+        "https://w3id.org/ro/crate/1.3",
+        "https://zenodo.org/records/22063353"
+      ],
+      "finding": "Material drift exists: the SLSA v1 landing page states version 1.2 is current while the page status is Retired; TUF latest is 1.0.36 modified 2026-08-05; RO-Crate 1.3 was published 2026-06-22; Lacuna changed to reachable v0.6 in September 2026.",
+      "contradictions": [
+        "GROK online ledger marks all as NONE/STABLE and Lacuna as not reachable."
+      ]
+    },
+    {
+      "claim_id": "G10",
+      "grok_statement": "SHA256 dab75cff... MATCH",
+      "status": "UNBELEGT",
+      "primary_sources": [],
+      "finding": "The current GROK ZIP contains the declared dab75cff... string and per-file hashes for a referenced 12-file stack, but the referenced Mistral/Vibe ZIP bytes were not supplied as a separate accessible file. The dab75cff hash cannot be independently recomputed from bytes in this session.",
+      "contradictions": []
+    }
+  ],
+  "status": "COMPLETE_C1_WITH_UNVERIFIED_ITEMS"
+}

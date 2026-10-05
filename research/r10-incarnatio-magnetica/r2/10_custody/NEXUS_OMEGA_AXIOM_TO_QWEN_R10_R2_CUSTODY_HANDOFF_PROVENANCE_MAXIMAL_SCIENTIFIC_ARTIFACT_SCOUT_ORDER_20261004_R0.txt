@@ -1,0 +1,3178 @@
+Ja. **R10/R2 ist eröffnet.** Und DeepSeeks Kernintuition ist richtig: Der R41-Blocker war nicht primär ein Formal-Methods-Problem, sondern ein **Artefakt-/Custody-/Handoff-Problem**.
+
+Vor dem QWEN-Auftrag habe ich die wichtigsten Seeds gegen aktuelle Primärquellen kalibriert. Das Ergebnis ist wissenschaftlich sehr brauchbar, aber die Reifegrade unterscheiden sich stark: **HDP**, **UPIP** und **IPP** existieren tatsächlich, sind aber derzeit *Internet-Drafts / Work in Progress*, keine etablierten IETF-Standards. UPIP liegt inzwischen sogar als `-02` vom 23. September 2026 vor und umfasst neben Fork Tokens nun Task Capsules, Work Corridors und deterministische JSON-Kanonisierung. :chatgpt-content-reference{index="0"} **FCO/FCG v3** existiert als Zenodo-Preprint; bemerkenswert ist, dass der Autor selbst den Großteil der Custody-Mechanik als Prior Art bezeichnet und nur eine engere Regel als neu beansprucht. :chatgpt-content-reference{index="1"} **ZFT** existiert als Alpha-Pre-Release `0.2.0a1`; **OpenSharing** ist ein reales Linux-Foundation-Projekt; **MAK4I** ist Developer Preview mit noch nicht öffentlicher Referenzimplementierung; `agentic-transfer-verifier` ist ein reales MIT-lizenziertes Research-Toolkit, betont aber ausdrücklich, **kein Standard und kein Enforcement-System** zu sein. :chatgpt-content-reference{index="2"}
+
+Noch wichtiger: DeepSeeks Liste ist nur ein Ausschnitt. Es existiert bereits wesentlich reifere angrenzende Infrastruktur: **SCITT ist seit Juni 2026 RFC 9943**, W3C PROV ist eine stabile Recommendation, BagIt ist RFC 8493, RO-Crate steht inzwischen bei 1.3, in-toto besitzt eine stabile 1.0-Spezifikation und SLSA 1.2 ist aktuell. :chatgpt-content-reference{index="3"} Genau deshalb soll QWEN jetzt **nicht HDP/UPIP/FCO auswählen**, sondern die gesamte Artefaktlandschaft ausgraben.
+
+---
+
+# R10/R2 — QWEN MAXIMAL ARTIFACT TALENT SCOUT
+
+```text
+OBJECT =
+NEXUS_OMEGA_AXIOM_TO_QWEN_R10_R2_CUSTODY_HANDOFF_PROVENANCE_MAXIMAL_SCIENTIFIC_ARTIFACT_SCOUT_ORDER_20261004_R0
+
+PROGRAM =
+NEXUS_OMEGA
+
+MODULE =
+R10_NEXUS_OMEGA_INCARNATIO_MAGNETICA
+
+ROUND =
+R2
+
+PARENT =
+R10_R1_TERMINAL_C1
++
+R41_MANUS_BLOCKED_CAPABILITY_GAP
++
+R42_CUSTODY_INSIGHT_OPERATOR_DEEPSEEK_INPUT
+
+AUTHORITY =
+OPERATOR_ALEXANDER_VIA_AXIOM
+
+EXECUTOR =
+QWEN
+
+ROLE =
+SCIENTIFIC_ARTIFACT_TALENT_SCOUT
+
+METAPHORICAL_ROLE =
+TALENT_SCOUT_ONLY
+
+CLAIM_CEILING =
+C1_DESCRIPTIVE_ONLY
+
+RESEARCH_MODE =
+MAXIMAL_BREADTH
++
+PRIMARY_ARTIFACT_FIRST
++
+PRIOR_ART_BEFORE_INVENTION
++
+COMPOSITION_BEFORE_SELECTION
+```
+
+## 0. Mission
+
+Deine Aufgabe ist **ausschließlich wissenschaftliche Artefaktsuche**.
+
+Nicht:
+
+```text
+DESIGN_NEXUS
+IMPLEMENT_NEXUS
+VALIDATE_NEXUS
+CHOOSE_WINNER
+RUN_CODE
+RUN_PROTOCOL
+SIMULATE_EFFECTIVENESS
+DECLARE_ARCHITECTURE_VALID
+```
+
+Sondern:
+
+```text
+DISCOVER
+LOCATE
+IDENTIFY
+CLASSIFY
+TRACE
+COMPARE
+CONNECT
+CONTRADICT
+MAP
+PRESERVE
+```
+
+Du bist der **Talent-Scout**.
+
+Du findest Spieler.
+
+Du stellst nicht die Mannschaft auf.
+
+---
+
+# 1. Zentrale Forschungsfrage
+
+```text
+WHAT_REAL,
+EXISTING,
+OPEN,
+TRACEABLE,
+SCIENTIFIC_OR_ENGINEERING_ARTIFACTS
+
+CAN_CONTRIBUTE_PRIMITIVES_FOR
+
+PERSISTENT_CUSTODY,
+ARTIFACT_IDENTITY,
+PROVENANCE,
+PROCESS_HANDOFF,
+HUMAN_DELEGATION,
+INTENT_BINDING,
+AUTHORITY_BOUNDING,
+OFFLINE_VERIFICATION,
+REPRODUCIBILITY,
+TRANSPARENCY,
+ARCHIVAL_SURVIVAL,
+AND_MULTI_AGENT_CONTINUATION?
+```
+
+Der konkrete R41-Ausgangsfehler lautet:
+
+```text
+ARTIFACT_CREATED_IN_CONTEXT_A
++
+EXPECTED_IN_CONTEXT_B
++
+NO_EXPLICIT_TRANSFER_OBJECT
+=
+CAPABILITY_AND_CUSTODY_GAP
+```
+
+Suche nach existierender Technik, die **Teile** dieses Problems bereits löst.
+
+---
+
+# 2. Wichtigste epistemische Regel
+
+DeepSeeks Recherche ist **Seed Material**, keine Autorität.
+
+```text
+DEEPSEEK_FINDING
+=
+SEARCH_LEAD
+
+NOT =
+VERIFIED_FACT
+```
+
+Jeder dort genannte Kandidat muss individuell klassifiziert werden.
+
+Insbesondere:
+
+```text
+INTERNET_DRAFT
+!=
+RFC
+
+PREPRINT
+!=
+ESTABLISHED_STANDARD
+
+PYPI_PACKAGE
+!=
+SCIENTIFIC_VALIDATION
+
+GITHUB_REPOSITORY
+!=
+PROTOCOL_STANDARD
+
+LINUX_FOUNDATION_PROJECT
+!=
+PROVEN_CUSTODY_SOLUTION
+
+IMPLEMENTATION_EXISTS
+!=
+INTEROPERABILITY_ESTABLISHED
+```
+
+---
+
+# 3. Deine Live-Recherche-Grenze
+
+Du besitzt keine garantierte vollständige Echtzeit-Sicht auf das Internet.
+
+Daher gilt:
+
+```text
+SEARCH_HORIZON =
+BOUNDED_BY_QWEN_AVAILABLE_SOURCES
+
+ABSOLUTE_LIVE_COMPLETENESS =
+NO
+```
+
+Beginne deinen Return deshalb mit:
+
+```text
+SEARCH_DATE =
+KNOWLEDGE_HORIZON =
+LIVE_WEB_ACCESS =
+PRIMARY_SOURCE_ACCESS =
+GITHUB_ACCESS =
+PACKAGE_REGISTRY_ACCESS =
+ACADEMIC_INDEX_ACCESS =
+IETF_ACCESS =
+W3C_ACCESS =
+ZENODO_ACCESS =
+OTHER_REGISTRIES =
+```
+
+Und:
+
+```text
+NOT_FOUND
+!=
+DOES_NOT_EXIST
+```
+
+Jeder Nichtfund bekommt Suchgrenzen.
+
+---
+
+# 4. Was als „wissenschaftliches Artefakt“ gilt
+
+Gesucht werden **konkrete Objekte**, nicht bloße Ideen.
+
+Zulässig:
+
+```text
+RFC
+INTERNET_DRAFT
+W3C_RECOMMENDATION
+ISO/IEC_OR_OTHER_FORMAL_STANDARD_IF_ACCESSIBLE
+CNCF/LF_SPECIFICATION
+OPEN_PROTOCOL_SPECIFICATION
+SCHEMA
+ONTOLOGY
+REFERENCE_IMPLEMENTATION
+OPEN_SOURCE_LIBRARY
+RELEASED_PACKAGE
+TEST_SUITE
+REFERENCE_VECTOR
+INTEROPERABILITY_TEST
+FORMAL_MODEL
+REPRODUCIBILITY_FRAMEWORK
+RESEARCH_OBJECT_FORMAT
+ARCHIVAL_FORMAT
+PROVENANCE_FORMAT
+ATTESTATION_FORMAT
+TRANSPARENCY_LOG
+CONTENT_ADDRESSING_SCHEME
+PERSISTENT_IDENTIFIER_SCHEME
+PEER_REVIEWED_PAPER
+PREPRINT_WITH_PERSISTENT_IDENTIFIER
+DATASET
+CORPUS
+SECURITY_AUDIT
+THREAT_MODEL
+CONFORMANCE_SUITE
+```
+
+Nicht als primäres Ergebnis:
+
+```text
+BLOG_POST
+MARKETING_PAGE
+VENDOR_CLAIM
+GENERIC_AI_ARTICLE
+OPINION
+SUMMARY_PAGE
+SOCIAL_MEDIA
+```
+
+Solche Seiten dürfen höchstens **zu einem Primärartefakt führen**.
+
+---
+
+# 5. Artefakt statt Plattform
+
+Harte Scout-Regel:
+
+```text
+DO_NOT_ASK:
+SHOULD_NEXUS_ADOPT_PROJECT_X?
+
+ASK:
+WHAT_SMALLEST_REUSABLE_PRIMITIVE
+DOES_PROJECT_X_CONTAIN?
+```
+
+Beispiele:
+
+```text
+RO-CRATE
+→ metadata/package primitive
+
+W3C PROV
+→ provenance relation vocabulary
+
+BAGIT
+→ integrity-preserving transfer package
+
+IN-TOTO
+→ signed step/functionary evidence
+
+SCITT
+→ signed statement + transparency receipt pattern
+
+UPIP
+→ continuation/fork artifact candidate
+
+HDP
+→ delegation-chain candidate
+
+TUF
+→ threshold-authority + freshness/rollback model
+```
+
+Kein Komplett-Stack wird bevorzugt.
+
+---
+
+# 6. Seed-Liste A — DeepSeek-Funde
+
+Diese Kandidaten müssen zuerst auf **Existenz, Status, Version und Scope** geprüft werden:
+
+```text
+A01 HDP
+Human Delegation Provenance Protocol
+
+A02 UPIP
+Universal Process Integrity Protocol
+
+A03 IPP
+Intent Provenance Protocol
+
+A04 FCO
+Fractal Custody Objects
+
+A05 FCG
+Fractal Custody Graph
+
+A06 ZFT
+Zero-Friction Traceability
+
+A07 OpenSharing
+
+A08 MAK4I
+Memory, Artifacts & Knowledge for Intelligence
+
+A09 agentic-transfer-verifier
+```
+
+Für jeden Kandidaten prüfen:
+
+```text
+EXISTS?
+EXACT_NAME?
+CURRENT_VERSION?
+CURRENT_STATUS?
+AUTHOR/PUBLISHER?
+STANDARDIZATION_BODY?
+PERSISTENT_ID?
+PRIMARY_SOURCE?
+SOURCE_REPOSITORY?
+LICENSE?
+REFERENCE_IMPLEMENTATION?
+TESTS?
+INTEROP_EVIDENCE?
+SECURITY_ANALYSIS?
+KNOWN_LIMITATIONS?
+ABANDONED/SUPERSEDED?
+```
+
+---
+
+# 7. HDP / UPIP / IPP besonders adversarial untersuchen
+
+Internet-Drafts benötigen besondere Vorsicht.
+
+Suche:
+
+```text
+CURRENT_DRAFT_REVISION
+REVISION_HISTORY
+EXPIRY
+AUTHORS
+WORKING_GROUP_OR_INDIVIDUAL_SUBMISSION
+INTENDED_STATUS
+SECURITY_CONSIDERATIONS
+DEPENDENCIES
+CRYPTOGRAPHIC_ASSUMPTIONS
+CANONICALIZATION
+KEY_MANAGEMENT
+REVOCATION
+REPLAY_PROTECTION
+OFFLINE_VERIFY
+MULTI_ACTOR_HANDOFF
+FORK_SEMANTICS
+AUTHORITY_SEMANTICS
+REFERENCE_CODE
+INTEROPERABILITY_EVIDENCE
+INDEPENDENT_IMPLEMENTATION
+```
+
+Insbesondere:
+
+```text
+SPECIFICATION_WRITTEN
+!=
+PROTOCOL_DEPLOYED
+
+DRAFT_TEXT
+!=
+IETF_CONSENSUS
+```
+
+---
+
+# 8. Seed-Liste B — Standards und reifere Prior Art
+
+Mindestens adversarial untersuchen:
+
+```text
+W3C PROV / PROV-O / PROV-DM
+RO-Crate
+BagIt RFC 8493
+SCITT RFC 9943
+in-toto
+in-toto Attestation Framework
+SLSA
+The Update Framework (TUF)
+Sigstore
+Rekor
+Tessera
+DSSE
+C2PA
+SPDX
+CycloneDX
+OCI Image / Distribution / Artifact specifications
+ORAS
+Software Heritage / SWHID
+FAIR Digital Objects
+Research Objects
+OCFL
+DataLad
+git-annex
+Git object model
+Git bundle
+```
+
+Keine Annahme, dass diese besser sind.
+
+Sie sind **Prior-Art-Kontrollen**.
+
+---
+
+# 9. Lane A — Content Identity
+
+Suche Artefakte für:
+
+```text
+BYTE_IDENTITY
+CONTENT_ADDRESSING
+MULTIHASH
+MERKLE_ROOTS
+DIRECTORY_TREES
+COMPOSITE_OBJECT_IDENTITY
+VERSION_IDENTITY
+IMMUTABLE_REFERENCE
+```
+
+Kandidatenfamilien:
+
+```text
+Git objects
+SWHID
+OCI digests
+IPFS CID / multiformats
+Merkle DAGs
+CAS systems
+Nix store concepts
+Guix store concepts
+Trusty URIs
+nanopublication identifiers
+```
+
+Frage:
+
+```text
+CAN_THE_IDENTIFIER_BE_RECOMPUTED_OFFLINE
+FROM_THE_OBJECT?
+```
+
+---
+
+# 10. Lane B — Canonical Serialization
+
+R32 hat bereits gezeigt:
+
+```text
+SEMANTICALLY_IDENTICAL_TEXT
+CAN_HAVE_DIFFERENT_RAW_HASHES
+```
+
+Suche:
+
+```text
+JSON Canonicalization Scheme RFC 8785
+deterministic CBOR
+canonical JSON profiles
+RDF Dataset Canonicalization
+JSON-LD canonicalization
+Unicode normalization
+newline normalization
+archive reproducibility
+reproducible tar/zip
+```
+
+Kernfragen:
+
+```text
+WHAT_EXACTLY_IS_HASHED?
+RAW_BYTES?
+CANONICAL_FORM?
+SEMANTIC_GRAPH?
+CONTAINER?
+PAYLOAD?
+```
+
+und:
+
+```text
+DOES_CANONICALIZATION_DESTROY
+FORENSIC_RAW_BYTE_IDENTITY?
+```
+
+---
+
+# 11. Lane C — Packaging
+
+Suche minimale portable Hüllen:
+
+```text
+BagIt
+RO-Crate
+OCFL
+OCI artifact
+ORAS artifact
+WARC
+Research Object Bundle
+Data Package
+Git bundle
+```
+
+Prüfen:
+
+```text
+PAYLOAD
+METADATA
+MANIFEST
+HASHES
+REMOTE_CONTENT
+NESTING
+STREAMING
+LARGE_FILE_SUPPORT
+OFFLINE_VALIDATION
+PARTIAL_EXTRACTION
+ARCHIVAL_LONGEVITY
+```
+
+---
+
+# 12. Lane D — Provenance Semantics
+
+Suche nach Beziehungen wie:
+
+```text
+WAS_DERIVED_FROM
+WAS_GENERATED_BY
+USED
+WAS_ASSOCIATED_WITH
+ACTED_ON_BEHALF_OF
+INVALIDATED
+SUPERSEDED
+CORRECTED
+FORKED_FROM
+REACTIVATED_FROM
+```
+
+Pflichtfamilien:
+
+```text
+W3C PROV
+RO-Crate provenance
+CWLProv
+Workflow Run RO-Crate
+OpenLineage
+DataCite relations
+Software Heritage graph
+nanopublications
+```
+
+Frage:
+
+```text
+WHICH_RELATIONS_ALREADY_EXIST
+SO_NEXUS_DOES_NOT_INVENT_NEW_ONES?
+```
+
+---
+
+# 13. Lane E — Process Provenance
+
+Gesucht:
+
+```text
+INPUT
+DEPENDENCIES
+EXECUTION
+OUTPUT
+VERIFICATION
+ENVIRONMENT
+EXECUTOR
+TIMESTAMPS
+FAILURES
+SIDE_EFFECTS
+```
+
+Kandidaten:
+
+```text
+UPIP
+in-toto
+SLSA
+CWLProv
+OpenLineage
+ReproZip
+workflow engines with provenance
+```
+
+Vergleiche **Datenmodell**, nicht Prestige.
+
+---
+
+# 14. Lane F — Handoff / Continuation
+
+Das ist R41s Kernproblem.
+
+Suche Artefakte mit explizitem:
+
+```text
+HANDOFF_OBJECT
+CONTINUATION_TOKEN
+PARENT_REFERENCE
+CHECKPOINT
+CAPABILITY_REQUIREMENT
+RECEIVER_ACK
+RECEIVER_REHASH
+REPLAY_PROTECTION
+FORK
+JOIN
+ABORT
+EXPIRY
+```
+
+Kandidaten:
+
+```text
+UPIP Fork Tokens
+agentic-transfer-verifier
+MAK4I
+OpenSharing
+A2A artifacts/task state
+workflow checkpoint formats
+distributed transaction handoff patterns
+job continuation formats
+```
+
+Suche unbedingt **außerhalb der AI-Welt**.
+
+---
+
+# 15. Lane G — Human Delegation
+
+Gesucht:
+
+```text
+WHO_AUTHORIZED_WHOM
+FOR_WHAT
+FOR_HOW_LONG
+WITH_WHAT_SCOPE
+CAN_SCOPE_BE_REDUCED
+CAN_AUTHORITY_BE_DELEGATED_AGAIN
+CAN_IT_BE_REVOKED
+```
+
+Seeds:
+
+```text
+HDP
+IPP
+OAuth 2.0 Token Exchange RFC 8693
+JWT / JWS
+OAuth Rich Authorization Requests
+GNAP
+Macaroons
+object-capability systems
+UCAN
+zcap-LD
+SPIFFE/SPIRE identities
+DID/VC ecosystems
+KERI
+```
+
+Nicht alles ist Custody.
+
+Mappe nur den wiederverwendbaren Primitive.
+
+---
+
+# 16. Lane H — Intent
+
+Harte Frage:
+
+```text
+AUTHORIZATION
+!=
+INTENT
+```
+
+Suche Artefakte, die unterscheiden zwischen:
+
+```text
+WHO_MAY_ACT
+WHAT_ACTION_WAS_REQUESTED
+WHY_ACTION_WAS_REQUESTED
+WHAT_CONSTRAINTS_APPLY
+WHAT_OUTPUT_WAS_EXPECTED
+```
+
+IPP ist nur ein Seed.
+
+Suche Alternativen aus:
+
+```text
+workflow specifications
+policy languages
+authorization contracts
+transaction signing
+human approval workflows
+clinical consent provenance
+legal electronic signatures
+```
+
+---
+
+# 17. Lane I — Attestations
+
+Gesucht:
+
+```text
+SIGNED_STATEMENT
+SUBJECT_DIGEST
+PREDICATE
+ISSUER
+SIGNATURE
+VERIFIER
+POLICY
+```
+
+Pflicht:
+
+```text
+in-toto Attestation
+SLSA Provenance
+DSSE
+SCITT Statements
+Sigstore bundles
+C2PA manifests
+SPDX attestations if applicable
+CycloneDX attestations if applicable
+```
+
+Trenne:
+
+```text
+ATTESTATION =
+CLAIM_BY_ISSUER
+
+NOT =
+TRUTH
+```
+
+---
+
+# 18. Lane J — Transparency / External Witness
+
+Suche:
+
+```text
+APPEND_ONLY_LOG
+CONSISTENCY_PROOF
+INCLUSION_PROOF
+RECEIPT
+CHECKPOINT
+GOSSIP
+WITNESS
+```
+
+Seeds:
+
+```text
+SCITT
+Certificate Transparency
+Rekor
+Tessera
+Trillian
+Sigstore transparency
+software transparency systems
+```
+
+Frage:
+
+```text
+CAN_THIS_PROVE
+THAT_A_STATEMENT_EXISTED
+WITHOUT_PROVING_THE_STATEMENT_TRUE?
+```
+
+---
+
+# 19. Lane K — Trust Rotation, Revocation, Supersession
+
+Viele Custody-Systeme können schreiben, aber schlecht zurückziehen.
+
+Suche:
+
+```text
+KEY_ROTATION
+REVOCATION
+EXPIRY
+SUPERSESSION
+ROLLBACK_PROTECTION
+FREEZE_PROTECTION
+COMPROMISE_RECOVERY
+```
+
+Pflicht:
+
+```text
+TUF
+Sigstore
+SCITT
+KERI
+DID key rotation
+package repository metadata
+```
+
+R29/R31-Grundsatz:
+
+```text
+SUPERSEDED
+!=
+DELETED
+```
+
+---
+
+# 20. Lane L — Reproducible Execution
+
+R41 verlangte nicht nur Dateien, sondern die richtige Toolchain.
+
+Suche:
+
+```text
+ENVIRONMENT_CAPTURE
+DEPENDENCY_LOCK
+TOOLCHAIN_VERSION
+OS/ARCH
+CONTAINER_IMAGE
+BUILD_REPRODUCIBILITY
+```
+
+Kandidaten:
+
+```text
+Nix
+Guix
+ReproZip
+OCI images
+Docker/Podman manifests
+Conda lock
+Python lock standards
+CWL
+WDL
+Nextflow
+Snakemake
+Reproducible Builds project
+```
+
+Frage:
+
+```text
+WHAT_IS_MINIMUM_INFORMATION
+REQUIRED_FOR_EXECUTOR_B
+TO_REPRODUCE_EXECUTOR_A?
+```
+
+---
+
+# 21. Lane M — Workflow Research Objects
+
+Suche:
+
+```text
+Workflow Run RO-Crate
+CWLProv
+Research Object
+Galaxy workflow provenance
+Common Workflow Language provenance
+Nextflow provenance
+Snakemake reports/provenance
+```
+
+Hier kann der fehlende R36→R41-Transfer bereits als bekannte Forschungsdomäne existieren.
+
+---
+
+# 22. Lane N — Archival Survival
+
+Custody ist wertlos, wenn Bytes später verschwinden.
+
+Suche:
+
+```text
+OCFL
+BagIt
+LOCKSS
+Software Heritage
+Zenodo
+DataCite
+ARK
+DOI
+WARC
+institutional repositories
+digital preservation packages
+```
+
+Fragen:
+
+```text
+WHAT_SURVIVES_PROVIDER_LOSS?
+
+WHAT_SURVIVES_REPOSITORY_DELETION?
+
+WHAT_SURVIVES_FORMAT_OBSOLESCENCE?
+
+WHAT_IS_LOCATABLE_20_YEARS_LATER?
+```
+
+---
+
+# 23. Lane O — Research Object Identity
+
+Suche Schnittstellen zwischen:
+
+```text
+OBJECT
+VERSION
+MANIFEST
+PROVENANCE
+AUTHORS
+LICENSE
+CITATION
+DEPENDENCIES
+EXECUTION
+```
+
+Pflicht:
+
+```text
+RO-Crate
+FAIR Digital Objects
+DataCite
+Research Objects
+CodeMeta
+CITATION.cff
+SPDX
+```
+
+---
+
+# 24. Lane P — Scientific Chain of Custody
+
+Verlasse Software bewusst.
+
+Suche Artefakte aus:
+
+```text
+FORENSIC_EVIDENCE
+CLINICAL_SAMPLES
+LABORATORY_SAMPLES
+BIOSPECIMENS
+PHARMACEUTICAL_BATCH_RELEASE
+METROLOGY
+LEGAL_EVIDENCE
+AVIATION_MAINTENANCE
+SPACE_MISSION_ASSURANCE
+ARCHIVES
+MUSEUM_COLLECTIONS
+```
+
+Nicht bloß Analogien sammeln.
+
+Gesucht werden:
+
+```text
+ACTUAL_FORMS
+STANDARDS
+IDENTIFIERS
+TRANSFER_RECEIPTS
+SIGNATURE_REQUIREMENTS
+CUSTODY_LOGS
+BREAK_IN_CUSTODY_RULES
+```
+
+---
+
+# 25. Lane Q — Formal Methods Artifact Custody
+
+R41 war TLA+/TLC-bezogen.
+
+Suche speziell:
+
+```text
+HOW_A_FORMAL_MODEL
+IS_PACKAGED,
+VERSIONED,
+HANDED_OFF,
+AND_REPRODUCED
+```
+
+Artefaktfamilien:
+
+```text
+TLA+ modules
+TLC configs
+TLC traces
+Apalache configs
+counterexample traces
+PlusCal sources
+Alloy models
+SMT-LIB
+Lean projects
+Coq projects
+Isabelle sessions
+model-checking benchmark suites
+```
+
+Fragen:
+
+```text
+IS_THERE_A_STANDARD_REPRODUCIBILITY_PACKAGE?
+
+HOW_ARE_MODEL
+CONFIG
+TOOL_VERSION
+TRACE
+AND_RESULT
+BOUND_TOGETHER?
+```
+
+Ein **Nichtfund wäre wichtig**.
+
+---
+
+# 26. Lane R — Failure Artifacts
+
+Suche nach existierenden Formaten für:
+
+```text
+FAILED_RUN
+COUNTEREXAMPLE
+CRASH
+PARTIAL_RESULT
+BLOCKED_CAPABILITY
+UNSUPPORTED_TOOL
+MISSING_INPUT
+INVALID_CONFIGURATION
+```
+
+R41 muss später nicht bloß als Text „BLOCKED“ existieren.
+
+Vielleicht gibt es bessere Failure-Artifact-Patterns.
+
+---
+
+# 27. Lane S — Capability Negotiation
+
+R27-Grundsatz:
+
+```text
+NEVER_ASK_AN_AGENT_TO_PROVE_SOMETHING
+BEFORE_PROVING_IT_HAS_THE_TOOLS
+```
+
+Suche:
+
+```text
+CAPABILITY_DESCRIPTOR
+CAPABILITY_NEGOTIATION
+TOOL_DISCOVERY
+EXECUTION_REQUIREMENTS
+RESOURCE_REQUIREMENTS
+```
+
+Seeds:
+
+```text
+A2A Agent Cards
+MCP capability negotiation
+job schedulers
+Kubernetes resource declarations
+workflow runtime requirements
+WASI component capabilities
+SPIFFE identity/capability patterns
+```
+
+Nur konkrete Artefakte.
+
+---
+
+# 28. Lane T — Transfer Receipts
+
+Ein vollständiger Übergang braucht möglicherweise:
+
+```text
+SENDER_RECEIPT
+RECEIVER_RECEIPT
+REHASH
+ACCEPT/REJECT
+TIMESTAMP
+OBJECT_ID
+SCOPE
+```
+
+Suche:
+
+```text
+SCITT receipts
+OCI registry responses
+TUF metadata
+signed delivery receipts
+AS2/AS4 messaging receipts
+digital evidence transfer forms
+supply-chain EDI receipts
+```
+
+Überraschungsfunde ausdrücklich erwünscht.
+
+---
+
+# 29. Lane U — Offline Verification
+
+Hohe Priorität.
+
+Für jeden Kandidaten:
+
+```text
+CAN_VERIFY_WITHOUT_VENDOR?
+CAN_VERIFY_WITHOUT_NETWORK?
+CAN_VERIFY_AFTER_PROVIDER_DEATH?
+CAN_VERIFY_WITH_OPEN_SPEC?
+CAN_VERIFY_FROM_BYTES_ONLY?
+```
+
+Das ist eine der zentralen NEXUS-Anforderungen.
+
+---
+
+# 30. Lane V — Provider Neutrality
+
+Suche:
+
+```text
+OPEN_FORMAT
+OPEN_SPEC
+MULTIPLE_IMPLEMENTATIONS
+EXPORTABLE_STATE
+PORTABLE_IDENTIFIERS
+```
+
+Negativ markieren:
+
+```text
+CLOUD_ACCOUNT_IS_IDENTITY_ROOT
+PRIVATE_API_REQUIRED
+PROPRIETARY_DATABASE_REQUIRED
+NON_EXPORTABLE_RECEIPTS
+```
+
+---
+
+# 31. Lane W — Security Boundary
+
+Suche Artefakte gegen:
+
+```text
+REPLAY
+ROLLBACK
+FORK
+EQUIVOCATION
+SIGNATURE_STRIPPING
+HASH_SUBSTITUTION
+ALGORITHM_DOWNGRADE
+PATH_TRAVERSAL
+ARCHIVE_BOMB
+MIME_CONFUSION
+CAPABILITY_LAUNDERING
+AUTHORITY_LAUNDERING
+APPROVAL_LAUNDERING
+PROMPT_INJECTION_IN_HANDOFF
+```
+
+Insbesondere bei AI-Handoff-Protokollen.
+
+---
+
+# 32. Lane X — Privacy
+
+Custody kann zu Überprotokollierung führen.
+
+Suche Primitive für:
+
+```text
+DATA_MINIMIZATION
+SELECTIVE_DISCLOSURE
+REDACTABLE_METADATA
+PSEUDONYMOUS_ACTOR_ID
+PRIVATE_PAYLOAD_PUBLIC_HASH
+ENCRYPTED_ENVELOPE
+DISCLOSURE_POLICY
+```
+
+Fragestellung:
+
+```text
+HOW_CAN_CHAIN_OF_CUSTODY
+SURVIVE
+WITHOUT_PUBLICLY_EXPOSING
+EVERYTHING?
+```
+
+---
+
+# 33. Lane Y — Cryptographic Agility
+
+Kein Custody-Layer darf auf:
+
+```text
+SHA256_FOREVER
+ED25519_FOREVER
+```
+
+beruhen.
+
+Suche:
+
+```text
+ALGORITHM_IDENTIFIER
+MULTIHASH
+MULTISIGNATURE
+HASH_MIGRATION
+DUAL_DIGEST
+KEY_ROTATION
+POST_QUANTUM_MIGRATION
+```
+
+Nur Artefakte und Standards.
+
+---
+
+# 34. Lane Z — Branch / Fork / Merge Semantics
+
+NEXUS arbeitet bewusst mit:
+
+```text
+PARALLEL_RESEARCH
+FORKED_AGENTS
+INDEPENDENT_VALIDATION
+CONTRADICTIONS
+```
+
+Suche Systeme, die:
+
+```text
+FORK
+PARALLEL_CHILDREN
+JOIN
+PARTIAL_JOIN
+CONFLICT
+ABORTED_BRANCH
+```
+
+explizit repräsentieren.
+
+UPIP ist ein Seed.
+
+Git DAG ist ein Kontrollfall.
+
+---
+
+# 35. Lane AA — Authority ≠ Data
+
+Suche bestehende Artefakte, die hart trennen:
+
+```text
+DATA
+AUTHORITY
+CAPABILITY
+INSTRUCTION
+IDENTITY
+```
+
+`agentic-transfer-verifier` ist hierfür ein Seed.
+
+Gesucht werden weitere Systeme aus:
+
+```text
+zero trust
+object capabilities
+secure messaging
+workflow authorization
+supply-chain attestations
+```
+
+---
+
+# 36. Lane AB — Public Statement ≠ Private Payload
+
+Suche:
+
+```text
+PUBLIC_RECEIPT
++
+PRIVATE_ARTIFACT
+```
+
+Patterns aus:
+
+```text
+SCITT
+transparency logs
+commitment schemes
+Merkle proofs
+encrypted object stores
+notarization
+```
+
+Relevant für öffentliche NEXUS-Evidenz ohne Rohdaten-Leak.
+
+---
+
+# 37. Lane AC — Artifact Graph
+
+Für jeden Kandidaten prüfen:
+
+```text
+CAN_OBJECTS_FORM_A_GRAPH?
+
+CAN_GRAPH_EDGES_BE_HASH_BOUND?
+
+CAN_RELATIONSHIPS_BE_TYPED?
+
+CAN_A_GRAPH_BE_PARTIALLY_RETRIEVED?
+
+CAN_A_SUBGRAPH_BE_VERIFIED?
+
+CAN_HISTORY_BE_APPEND_ONLY_WITH_CORRECTIONS?
+```
+
+---
+
+# 38. Lane AD — Minimal Trusted Kernel
+
+Suche, welche Custody-Architekturen mit kleinem Trusted Computing Base arbeiten.
+
+Frage:
+
+```text
+WHAT_MUST_BE_TRUSTED
+FOR_THE_RECEIPT_TO_MEAN_ANYTHING?
+```
+
+Beispielsweise:
+
+```text
+SIGNER
+HASH_FUNCTION
+CANONICALIZER
+CLOCK
+LOG
+IDENTITY_PROVIDER
+BUILD_PLATFORM
+```
+
+Der Scout soll versteckte Trust Roots markieren.
+
+---
+
+# 39. Lane AE — Time
+
+Zeit ist schwieriger als Hash.
+
+Suche:
+
+```text
+TRUSTED_TIMESTAMP
+ROUGH_TIME
+RFC3161
+transparency-log checkpoint time
+secure time sources
+logical clocks
+Lamport clocks
+vector clocks
+```
+
+Frage:
+
+```text
+DO_WE_NEED
+"WHEN"
+OR_ONLY
+"BEFORE/AFTER"?
+```
+
+---
+
+# 40. Lane AF — Immutable vs Append-only
+
+Suche Unterschiede zwischen:
+
+```text
+IMMUTABLE_OBJECT
+APPEND_ONLY_LOG
+VERSIONED_OBJECT
+SUPERSEDED_OBJECT
+RETRACTED_OBJECT
+TOMBSTONED_OBJECT
+```
+
+Diese dürfen nicht semantisch vermischt werden.
+
+---
+
+# 41. Lane AG — Correction Provenance
+
+NEXUS nutzt:
+
+```text
+PRESERVE_SOURCE
++
+APPEND_CORRECTION
+```
+
+Suche Standards/Artefakte für:
+
+```text
+ERRATA
+CORRECTIONS
+RETRACTIONS
+SUPERSESSION
+AMENDMENT
+```
+
+Quellen:
+
+```text
+RFC errata
+scientific publishing
+DataCite
+Crossmark
+package registries
+security advisories
+```
+
+---
+
+# 42. Lane AH — Scientific Citation ↔ Byte Identity
+
+Suche Lösungen für:
+
+```text
+HUMAN_CITATION
++
+MACHINE_BYTE_REFERENCE
+```
+
+Beispiele:
+
+```text
+DOI + file checksum
+SWHID
+DataCite metadata
+Zenodo version DOI
+RO-Crate
+Software Heritage
+```
+
+---
+
+# 43. Lane AI — Multi-file Object Identity
+
+Ein ZIP-Hash allein reicht nicht immer.
+
+Suche:
+
+```text
+TREE_HASH
+MANIFEST
+MERKLE_ROOT
+DIRECTORY_CID
+BAG_MANIFEST
+OCI_MANIFEST
+GIT_TREE
+```
+
+Frage:
+
+```text
+CAN_ONE_FILE_CHANGE
+WITHOUT_INVALIDATING
+UNRELATED_CONTENT?
+```
+
+---
+
+# 44. Lane AJ — Partial Transfer
+
+Große Artefakte benötigen ggf.:
+
+```text
+CHUNKING
+RESUMABLE_UPLOAD
+PARTIAL_FETCH
+RANGE_VERIFY
+CONTENT_DEFINED_CHUNKING
+```
+
+Suche:
+
+```text
+TUS
+CAS systems
+IPFS
+OCI blobs
+rsync
+OSTree
+git pack
+```
+
+---
+
+# 45. Lane AK — Multi-party Signing
+
+NEXUS könnte Vier-Augen-Prinzip benötigen.
+
+Suche:
+
+```text
+THRESHOLD_SIGNATURE
+MULTI_SIGNATURE
+MULTIPLE_ATTESTATIONS
+QUORUM
+ROLE_SEPARATION
+```
+
+Seeds:
+
+```text
+TUF threshold roles
+in-toto functionaries
+Sigstore
+SCITT policy
+threshold cryptography
+```
+
+Keine Empfehlung.
+
+---
+
+# 46. Lane AL — Independent Verification
+
+Gesucht:
+
+```text
+SECOND_IMPLEMENTATION
+INTEROPERABILITY_SUITE
+REFERENCE_TEST_VECTOR
+CONFORMANCE_TEST
+CROSS_VENDOR_TEST
+```
+
+Für jeden Kandidaten:
+
+```text
+INDEPENDENT_IMPLEMENTATIONS_COUNT =
+KNOWN / UNKNOWN
+
+INTEROP_EVENT =
+YES / NO / UNKNOWN
+
+TEST_CORPUS =
+...
+```
+
+---
+
+# 47. Lane AM — Known Failures
+
+Für jeden ernsthaften Kandidaten aktiv suchen:
+
+```text
+CVE
+SECURITY_AUDIT
+DESIGN_CRITIQUE
+BROKEN_INTEROP
+ABANDONMENT
+SPEC_AMBIGUITY
+KEY_COMPROMISE
+ROLLBACK_FAILURE
+REPRODUCIBILITY_FAILURE
+```
+
+Talent-Scout bedeutet auch:
+
+> gute Technik mit bekanntem Knöchelproblem erkennen.
+
+---
+
+# 48. Lane AN — Historical Prior Art
+
+Nicht nur 2026 suchen.
+
+Mindestens zurückgehen zu:
+
+```text
+digital preservation
+secure update frameworks
+distributed version control
+electronic signatures
+scientific workflow provenance
+forensic custody
+archival packages
+reproducible builds
+```
+
+Ein alter, langweiliger RFC darf für NEXUS wertvoller sein als ein neues AI-Protokoll.
+
+---
+
+# 49. DeepSeek-Drei-Schichten-Modell adversarial prüfen
+
+DeepSeek schlägt vor:
+
+```text
+STRUCTURAL_IDENTITY
++
+PROCESS_INTEGRITY
++
+DELEGATION_PROVENANCE
+```
+
+QWEN darf dieses Modell **nicht voraussetzen**.
+
+Prüfe mindestens Gegenmodelle:
+
+```text
+H1 =
+THREE_LAYERS_ARE_SUFFICIENT
+
+H2 =
+A_FOURTH_LAYER_FOR_PERSISTENCE_IS_REQUIRED
+
+H3 =
+IDENTITY_AND_PACKAGING_MUST_BE_SEPARATE
+
+H4 =
+AUTHORIZATION_AND_INTENT_MUST_BE_SEPARATE
+
+H5 =
+TRANSPARENCY_IS_A_DISTINCT_LAYER
+
+H6 =
+REPRODUCIBILITY_IS_A_DISTINCT_LAYER
+
+H7 =
+NO_LAYER_MODEL_IS_NEEDED;
+COMPOSABLE_PRIMITIVES_ARE_ENOUGH
+```
+
+Kein Sieger.
+
+---
+
+# 50. Insbesondere DeepSeeks FCO + UPIP + HDP-Kombination nicht übernehmen
+
+Behandle:
+
+```text
+FCO + UPIP + HDP
+```
+
+nur als:
+
+```text
+COMPOSITION_CANDIDATE_01
+```
+
+Gegenkandidaten z. B.:
+
+```text
+C02 =
+RO-Crate + W3C PROV + in-toto
+
+C03 =
+BagIt + SWHID + SCITT
+
+C04 =
+OCI/ORAS + SLSA + Sigstore
+
+C05 =
+Git/SWHID + PROV + TUF
+
+C06 =
+FCO + SCITT + IPP
+
+C07 =
+MINIMAL_MANIFEST + CAS + RECEIPT
+
+C08 =
+unexpected composition discovered by QWEN
+```
+
+Nur Kompatibilität kartieren.
+
+---
+
+# 51. Keine theoretische Systemvalidierung
+
+Verboten:
+
+```text
+"this solves R41"
+
+"this validates the NEXUS custody architecture"
+
+"this protocol is secure"
+
+"this stack guarantees provenance"
+
+"this is the optimal solution"
+```
+
+Erlaubt:
+
+```text
+"provides primitive X"
+
+"specifies mechanism Y"
+
+"claims Z"
+
+"has implementation A"
+
+"has test suite B"
+
+"requires trust assumption C"
+
+"has no independent interoperability evidence found"
+
+"candidate for later empirical evaluation"
+```
+
+---
+
+# 52. Reifegrad nicht mit Wahrheit verwechseln
+
+Verwende **Statusklassen**, keine Qualitätspunkte:
+
+```text
+RFC_STANDARD_TRACK
+RFC_INFORMATIONAL
+W3C_RECOMMENDATION
+FORMAL_SPEC_STABLE
+IETF_INTERNET_DRAFT_WIP
+PREPRINT
+PEER_REVIEWED
+REFERENCE_IMPLEMENTATION
+ALPHA_PACKAGE
+BETA
+DEVELOPER_PREVIEW
+ABANDONED
+UNKNOWN
+```
+
+Ein RFC kann falsch angewendet werden.
+
+Ein Alpha-Projekt kann einen ausgezeichneten Primitive enthalten.
+
+---
+
+# 53. Artifact Card — Pflichtschema
+
+Für **jeden** ernsthaften Fund:
+
+```text
+ARTIFACT_ID =
+CANONICAL_NAME =
+ALIASES =
+
+ARTIFACT_TYPE =
+STATUS =
+VERSION =
+VERSION_DATE =
+
+PUBLISHER =
+AUTHOR_OR_MAINTAINER =
+STANDARD_BODY =
+
+PRIMARY_SOURCE =
+PERSISTENT_IDENTIFIER =
+SOURCE_REPOSITORY =
+
+LICENSE =
+PATENT/IPR_STATUS =
+
+PROBLEM_SOLVED =
+MINIMUM_REUSABLE_PRIMITIVE =
+
+OBJECT_IDENTITY_MODEL =
+PROVENANCE_MODEL =
+AUTHORITY_MODEL =
+INTENT_MODEL =
+HANDOFF_MODEL =
+RECEIPT_MODEL =
+FORK_MODEL =
+REVOCATION_MODEL =
+CANONICALIZATION_MODEL =
+ARCHIVAL_MODEL =
+
+CRYPTOGRAPHY =
+KEY_MANAGEMENT =
+OFFLINE_VERIFY =
+NETWORK_REQUIRED =
+
+REFERENCE_IMPLEMENTATION =
+TEST_SUITE =
+TEST_VECTORS =
+INTEROPERABILITY_EVIDENCE =
+INDEPENDENT_IMPLEMENTATIONS =
+
+SECURITY_CONSIDERATIONS =
+KNOWN_FAILURES =
+KNOWN_CRITIQUES =
+
+DEPENDENCIES =
+TRUST_ROOTS =
+PROVIDER_DEPENDENCIES =
+
+NEXUS_R41_RELEVANCE =
+POTENTIAL_COMPOSITION_EDGES =
+
+WHAT_IT_DOES_NOT_SOLVE =
+UNCERTAINTY =
+SEARCH_LIMITS =
+```
+
+---
+
+# 54. Artifact Family Card
+
+Zusätzlich jedes Objekt einer Familie zuordnen:
+
+```text
+IDENTITY
+PACKAGING
+PROVENANCE
+PROCESS
+DELEGATION
+INTENT
+ATTESTATION
+TRANSPARENCY
+AUTHORIZATION
+REPRODUCIBILITY
+ARCHIVAL
+TRANSFER
+CAPABILITY
+FAILURE_EVIDENCE
+FORMAL_METHODS
+PRIVACY
+SECURITY
+```
+
+Mehrfachzuordnung erlaubt.
+
+---
+
+# 55. Interoperability Edge
+
+Für jedes plausible Paar:
+
+```text
+A =
+B =
+
+RELATION =
+COMPLEMENTARY
+OVERLAPS
+CONFLICTS
+WRAPS
+EMBEDS
+REFERENCES
+REPLACES
+UNKNOWN
+
+SHARED_PRIMITIVE =
+SERIALIZATION_COMPATIBILITY =
+IDENTITY_COMPATIBILITY =
+TRUST_MODEL_COMPATIBILITY =
+LICENSE_COMPATIBILITY =
+EMPIRICAL_INTEGRATION_EVIDENCE =
+```
+
+Keine imaginierte Integration als Fakt.
+
+---
+
+# 56. Talent Vector
+
+Keine Gesamtnote.
+
+Für Scout-Priorisierung darf ein Vektor verwendet werden:
+
+```text
+TALENT_VECTOR = {
+  SPEC_CLARITY,
+  PORTABILITY,
+  OFFLINE_VERIFIABILITY,
+  CONTENT_ADDRESSABILITY,
+  OPENNESS,
+  MULTI_IMPLEMENTATION_EVIDENCE,
+  SECURITY_DOCUMENTATION,
+  TESTABILITY,
+  COMPOSABILITY,
+  ARCHIVAL_LONGEVITY,
+  LOW_TRUST_BASE,
+  LOW_PROVIDER_DEPENDENCE
+}
+```
+
+Werte:
+
+```text
+STRONG
+MODERATE
+WEAK
+UNKNOWN
+NOT_APPLICABLE
+```
+
+Keine numerische Gesamtsumme.
+
+---
+
+# 57. „Hidden Gem“-Suche
+
+Pflicht.
+
+Suche mindestens 10 Artefakte, die **nicht** in DeepSeeks ursprünglicher Liste stehen und potenziell einen besseren oder kleineren Primitive liefern.
+
+```text
+HIDDEN_GEM_COUNT_TARGET >= 10
+```
+
+Kein erzwungener Fund.
+
+Wenn weniger:
+
+```text
+FOUND = N
+SEARCH_LIMIT = ...
+```
+
+---
+
+# 58. „Boring Technology“-Suche
+
+Ebenfalls Pflicht.
+
+Suche mindestens:
+
+```text
+RFC8493 BagIt
+Git
+TUF
+W3C PROV
+RFC8785 JCS
+RFC3161 timestamping
+Certificate Transparency
+```
+
+und vergleichbare ältere Artefakte.
+
+Frage:
+
+```text
+IS_THE_BORING_OLD_PRIMITIVE
+ACTUALLY_BETTER_DEFINED
+THAN_THE_NEW_AI_PROTOCOL?
+```
+
+---
+
+# 59. No AI Exceptionalism
+
+Harte Regel:
+
+```text
+AGENT_HANDOFF_PROBLEM
+MAY_ALREADY_BE_A
+DISTRIBUTED_SYSTEMS_PROBLEM
+ARCHIVAL_PROBLEM
+SUPPLY_CHAIN_PROBLEM
+FORENSICS_PROBLEM
+WORKFLOW_PROBLEM
+```
+
+Suche zuerst funktional.
+
+Nicht nur nach Begriffen wie „agent“.
+
+---
+
+# 60. Source Hierarchy
+
+Bevorzugung:
+
+```text
+RFC / FORMAL_STANDARD
+>
+OFFICIAL_SPEC
+>
+OFFICIAL_REFERENCE_IMPLEMENTATION
+>
+RELEASED_PACKAGE_METADATA
+>
+SECURITY_AUDIT
+>
+PEER_REVIEWED_PRIMARY_RESEARCH
+>
+PREPRINT
+>
+PROJECT_DOCUMENTATION
+>
+BLOG / PRESS
+```
+
+Aber der Status ist **Metadatum**, kein Wahrheitsranking.
+
+---
+
+# 61. Current-version discipline
+
+Für jedes lebende Artefakt:
+
+```text
+FIRST_VERSION_FOUND =
+CURRENT_VERSION_FOUND =
+SUPERSEDED_VERSIONS =
+CURRENT_AS_OF_SEARCH =
+```
+
+Besonders wichtig für:
+
+```text
+UPIP
+HDP
+IPP
+RO-Crate
+SLSA
+SCITT
+Sigstore
+C2PA
+```
+
+---
+
+# 62. Search aliases
+
+Viele Artefakte verstecken sich unter anderen Begriffen.
+
+Suche Synonyme:
+
+```text
+chain of custody
+provenance
+lineage
+attestation
+handoff
+transfer
+continuation
+checkpoint
+capsule
+bundle
+crate
+bag
+manifest
+receipt
+notarization
+transparency
+delegation
+intent
+authority
+capability
+evidence package
+reproducibility package
+research object
+workflow provenance
+artifact exchange
+content addressing
+persistent identifier
+```
+
+---
+
+# 63. Negative Evidence
+
+Ein Artefakt kann interessant sein, weil es **nicht** etwas löst.
+
+Beispiel:
+
+```text
+BAGIT =
+GOOD_FILE_INTEGRITY_AND_TRANSFER
+BUT
+NOT_ACTIVE_ATTACK_SECURITY
+```
+
+Solche Grenzen sind zentrale Ergebnisse, nicht Fußnoten.
+
+---
+
+# 64. Contradiction Ledger
+
+Wenn zwei Quellen widersprechen:
+
+```text
+CONTRADICTION_ID
+ARTIFACT
+SOURCE_A
+SOURCE_B
+CLAIM_A
+CLAIM_B
+LIKELY_REASON
+RESOLUTION =
+UNRESOLVED / SUPERSEDED / VERSION_DIFFERENCE
+```
+
+Kein stilles Glätten.
+
+---
+
+# 65. Non-Finding Certificate
+
+Für bedeutende Nichtfunde:
+
+```text
+QUESTION =
+SEARCH_TERMS =
+ALIASES =
+SOURCES_SEARCHED =
+DATE =
+RESULT =
+BLIND_SPOTS =
+CONCLUSION =
+NOT_FOUND_WITHIN_SEARCH_SCOPE
+```
+
+Nie:
+
+```text
+DOES_NOT_EXIST
+```
+
+---
+
+# 66. Lizenz- und IPR-Ledger
+
+Für spätere Komposition zwingend:
+
+```text
+LICENSE
+SPDX_ID_IF_AVAILABLE
+PATENT/IPR_DECLARATIONS
+COPYLEFT
+NETWORK_COPYLEFT
+SPEC_LICENSE
+CODE_LICENSE
+DATA_LICENSE
+UNKNOWN_FIELDS
+```
+
+Spec und Code können unterschiedliche Lizenzen besitzen.
+
+---
+
+# 67. Maintenance Ledger
+
+```text
+LAST_RELEASE
+LAST_COMMIT_IF_VISIBLE
+ACTIVE_MAINTAINERS
+RELEASE_HISTORY
+ARCHIVED?
+DEPRECATED?
+SUPERSEDED?
+SECURITY_POLICY?
+```
+
+Kein Popularitätsranking.
+
+---
+
+# 68. Trust-root ledger
+
+Für jeden Kandidaten:
+
+```text
+WHAT_MUST_THE_VERIFIER_TRUST?
+```
+
+Beispiele:
+
+```text
+PUBLIC_KEY
+CERTIFICATE_AUTHORITY
+TRANSPARENCY_LOG
+REGISTRY
+CLOCK
+HOSTING_PROVIDER
+CANONICALIZER
+BUILD_SERVICE
+HUMAN_OPERATOR
+```
+
+Das ist ein Pflichtfeld.
+
+---
+
+# 69. R41-specific fit matrix
+
+Bewerte nur funktional:
+
+| R41 Problem | Artifact primitive |
+|---|---|
+| `.tla` nicht vorhanden | ? |
+| `.cfg`/Tool config nicht vorhanden | ? |
+| TLC-Version unbekannt | ? |
+| Trace nicht übertragen | ? |
+| Executor hat Tool nicht | ? |
+| Sender weiß Receiver-Capability nicht | ? |
+| Receiver kann Bytes nicht rehashen | ? |
+| Handoff nicht quittiert | ? |
+| Failure bleibt nur Chattext | ? |
+| nächste Runde erwartet unsichtbare Dateien | ? |
+
+Nicht „Lösung auswählen“.
+
+Nur Kandidaten zuordnen.
+
+---
+
+# 70. Failure-first scouting
+
+Frage für jeden Kandidaten:
+
+```text
+HOW_CAN_THIS_FAIL
+WHILE_APPEARING_TO_SUCCEED?
+```
+
+Beispiele:
+
+```text
+VALID_SIGNATURE + WRONG_SEMANTICS
+VALID_HASH + WRONG_OBJECT
+COMPLETE_BAG + WRONG_PAYLOAD
+VALID_ATTESTATION + DISHONEST_ISSUER
+VALID_RECEIPT + MALICIOUS_LOG
+VALID_HANDOFF + INCAPABLE_RECEIVER
+```
+
+---
+
+# 71. Separation laws
+
+Pflichtprüfung:
+
+```text
+HASH_MATCH
+!=
+CLAIM_TRUTH
+
+SIGNATURE
+!=
+TRUTH
+
+PROVENANCE
+!=
+CORRECTNESS
+
+CUSTODY
+!=
+SCIENTIFIC_VALIDITY
+
+AUTHORIZATION
+!=
+INTENT
+
+INTENT
+!=
+CORRECT_EXECUTION
+
+HANDOFF
+!=
+ACCEPTANCE
+
+ACCEPTANCE
+!=
+CAPABILITY
+
+REPRODUCIBILITY
+!=
+UNIVERSALITY
+```
+
+Artefakte, die diese Ebenen implizit vermischen, markieren.
+
+---
+
+# 72. Composition search
+
+Der Endzustand soll **kein Sieger**, sondern ein Baukasten sein:
+
+```text
+OBJECT_IDENTITY_PRIMITIVES[]
+PACKAGING_PRIMITIVES[]
+PROVENANCE_PRIMITIVES[]
+PROCESS_PRIMITIVES[]
+DELEGATION_PRIMITIVES[]
+INTENT_PRIMITIVES[]
+ATTESTATION_PRIMITIVES[]
+TRANSPARENCY_PRIMITIVES[]
+PERSISTENCE_PRIMITIVES[]
+REPRODUCIBILITY_PRIMITIVES[]
+SECURITY_PRIMITIVES[]
+```
+
+---
+
+# 73. Minimum Viable Custody Primitive
+
+Nur als Forschungsfrage:
+
+```text
+WHAT_IS_THE_SMALLEST_SET_OF_PRIMITIVES
+THAT_CAN_PRESERVE_A_HANDOFF
+WITHOUT_REQUIRING_A_MONOLITHIC_PLATFORM?
+```
+
+QWEN darf mehrere Kandidaten formulieren.
+
+Nicht auswählen.
+
+---
+
+# 74. Maximal Custody Model
+
+Gegenpol:
+
+```text
+WHAT_INFORMATION
+COULD_A_MAXIMALLY_COMPLETE
+CUSTODY_OBJECT_CONTAIN?
+```
+
+Dann:
+
+```text
+WHICH_FIELDS_ARE_ACTUALLY_ESSENTIAL?
+```
+
+Damit vermeiden wir sowohl Unter- als auch Überengineering.
+
+---
+
+# 75. Research-artifact-only rule
+
+Am Ende **keine Architekturzeichnung für NEXUS**.
+
+Kein:
+
+```text
+NEXUS SHOULD IMPLEMENT X
+```
+
+Sondern:
+
+```text
+ARTIFACT X OFFERS PRIMITIVE Y
+WHICH MAY LATER BE TESTED FOR NEXUS FUNCTION Z
+```
+
+---
+
+# 76. Keine Ausführung
+
+```text
+NO_PIP_INSTALL
+
+NO_GIT_CLONE_REQUIRED
+
+NO_TEST_EXECUTION
+
+NO_CONTAINER_RUN
+
+NO_SIGNATURE_GENERATION
+
+NO_KEY_GENERATION
+
+NO_MODEL_CHECKING
+
+NO_NETWORK_SERVICE_DEPLOYMENT
+
+NO_GITHUB_WRITE
+
+NO_HOSTINGER_WRITE
+```
+
+Recherche und Denken בלבד.
+
+---
+
+# 77. Keine theoretische Validierung
+
+Auch wenn Spezifikation elegant erscheint:
+
+```text
+ELEGANT
+!=
+VALIDATED
+
+FORMALLY_SPECIFIED
+!=
+SECURE
+
+STANDARDIZED
+!=
+CORRECT_FOR_NEXUS
+```
+
+---
+
+# 78. Mandatory primary-source link
+
+Jeder Scout-Kandidat braucht mindestens:
+
+```text
+PRIMARY_SOURCE_URL
+```
+
+oder:
+
+```text
+PRIMARY_SOURCE_NOT_ACCESSIBLE
+```
+
+Keine sekundär belegten Kandidaten im Top-Pool.
+
+---
+
+# 79. Persistent identifier preferred
+
+Bevorzugt erfassen:
+
+```text
+RFC_NUMBER
+DOI
+URN
+W3ID
+SWHID
+COMMIT
+RELEASE_TAG
+PACKAGE_VERSION
+```
+
+---
+
+# 80. Top-Talent-Pool
+
+Am Ende höchstens **25 besonders interessante Artefakte**.
+
+Aber nicht als Rangliste.
+
+Gruppiert nach Funktion.
+
+Jeder Eintrag:
+
+```text
+WHY_INTERESTING
+MINIMAL_PRIMITIVE
+MATURITY_STATUS
+PRIMARY_SOURCE
+MAIN_LIMIT
+NEXT_EMPIRICAL_QUESTION
+```
+
+---
+
+# 81. Dark-horse pool
+
+Zusätzlich:
+
+```text
+DARK_HORSE_ARTIFACTS
+```
+
+Artefakte, die unerwartet relevant sind, aber:
+
+```text
+IMMATURE
+OBSCURE
+FROM_ANOTHER_DOMAIN
+OR
+POORLY_DOCUMENTED
+```
+
+Mindestens 5 versuchen.
+
+---
+
+# 82. Reject pool
+
+Kandidaten ausdrücklich aussortieren aus **weiterer Suche**, wenn:
+
+```text
+NO_PRIMARY_ARTIFACT
+NAME_COLLISION
+MARKETING_ONLY
+ABANDONED_WITHOUT_REUSABLE_SPEC
+PROPRIETARY_WITH_NO_OPEN_FORMAT
+FALSE_SOURCE_BIND
+```
+
+Aber Fund konservieren.
+
+---
+
+# 83. DeepSeek Seed Audit Output
+
+Pflichtbericht speziell über:
+
+```text
+HDP
+UPIP
+IPP
+FCO
+FCG
+ZFT
+OpenSharing
+MAK4I
+agentic-transfer-verifier
+```
+
+mit:
+
+```text
+DEEPSEEK_CLAIM
+PRIMARY_SOURCE_FOUND
+CORRECT
+PARTIAL
+INCORRECT
+OUTDATED
+STATUS_CHANGE
+IMPORTANT_CAVEAT
+```
+
+---
+
+# 84. Prior-art attack on novelty
+
+Für FCO, UPIP, HDP, IPP, ZFT und andere neue Systeme:
+
+```text
+WHICH_PART_IS_ACTUALLY_NEW?
+
+WHICH_PART_IS_PRIOR_ART?
+
+WHICH_EXISTING_STANDARD
+ALREADY_PROVIDES_THE_SAME_PRIMITIVE?
+```
+
+Kein Patent-/Neuheitsurteil.
+
+Nur technische Prior-Art-Kartierung.
+
+---
+
+# 85. Search organizations
+
+Mindestens soweit zugänglich:
+
+```text
+IETF / RFC Editor
+W3C
+NIST
+CNCF
+Linux Foundation
+OpenSSF
+Sigstore
+SLSA
+in-toto
+OCI
+ORAS
+Research Object community
+RDA
+FAIR Digital Objects Forum
+DataCite
+Software Heritage
+Library of Congress
+Zenodo
+GitHub
+PyPI
+arXiv
+ACM
+IEEE
+USENIX
+NDSS
+reproducible-builds.org
+digital preservation communities
+```
+
+---
+
+# 86. Cross-domain organizations
+
+Außerdem:
+
+```text
+SWGDE
+NIST forensic publications
+FDA/EMA/OMCL custody procedures
+ISO laboratory chain-of-custody literature
+NASA/ESA configuration management
+aviation maintenance records
+archives/library preservation standards
+```
+
+Nur konkrete Artefakte zurückbringen.
+
+---
+
+# 87. Time horizon
+
+Nicht nur „neueste“.
+
+```text
+SEARCH_RANGE =
+FOUNDATIONAL_PRIOR_ART
+TO
+LATEST_ACCESSIBLE_2026_MATERIAL
+```
+
+Ein System von 1995 kann wichtiger sein als eines von September 2026.
+
+---
+
+# 88. Version collisions
+
+Wenn gleiche Bezeichnung mehrere Versionen hat:
+
+```text
+DO_NOT_MERGE_SEMANTICS
+```
+
+Beispiel:
+
+```text
+UPIP-00
+UPIP-01
+UPIP-02
+```
+
+als getrennte Versionen behandeln.
+
+---
+
+# 89. Internet-Draft rule
+
+Jeder IETF-Draft erhält sichtbar:
+
+```text
+WORK_IN_PROGRESS = YES
+MAY_CHANGE_OR_EXPIRE = YES
+RFC_STATUS = NO
+```
+
+bis tatsächlich RFC.
+
+---
+
+# 90. Preprint rule
+
+Jeder Preprint:
+
+```text
+PEER_REVIEW_STATUS =
+ESTABLISHED / NOT_ESTABLISHED
+```
+
+Zenodo-Hosting ist **kein Peer Review**.
+
+---
+
+# 91. Package rule
+
+PyPI/npm/crates package:
+
+```text
+PACKAGE_EXISTS
+!=
+RESEARCH_VALIDATED
+```
+
+Erfassen:
+
+```text
+TRUSTED_PUBLISHING
+PACKAGE_HASH
+MAINTAINER_COUNT
+SOURCE_LINK
+LICENSE
+ALPHA/BETA/STABLE
+```
+
+wenn verfügbar.
+
+---
+
+# 92. Reference implementation rule
+
+```text
+SPEC_EXISTS
++
+ONE_IMPLEMENTATION
+```
+
+ist schwächer als:
+
+```text
+SPEC
++
+MULTIPLE_INDEPENDENT_IMPLEMENTATIONS
++
+INTEROPERABILITY_TEST
+```
+
+Nur dokumentieren.
+
+---
+
+# 93. Exact-source quotations minimal
+
+Keine langen Zitate.
+
+Für jeden Artefaktfund genügen:
+
+```text
+CLAIM_PARAPHRASE
++
+PRECISE_SECTION_REFERENCE
+```
+
+wo möglich.
+
+---
+
+# 94. Evidence graph
+
+Erstelle einen Graph:
+
+```text
+ARTIFACT
+→ SPEC
+→ VERSION
+→ IMPLEMENTATION
+→ TEST_SUITE
+→ SECURITY_ANALYSIS
+→ DEPENDENCY
+→ SUPERSEDES
+```
+
+Nicht nur eine flache Tabelle.
+
+---
+
+# 95. Function graph
+
+Zweiter Graph:
+
+```text
+R41_NEED
+→ PRIMITIVE
+→ CANDIDATE_ARTIFACTS
+```
+
+Dadurch sieht AXIOM später, wo Redundanz oder Lücken liegen.
+
+---
+
+# 96. Gap graph
+
+Dritter Graph:
+
+```text
+R41_NEED
+→ NO_ARTIFACT_FOUND
+```
+
+Diese Lücken sind potenziell wertvoller als die Funde.
+
+---
+
+# 97. Artifact composition matrix
+
+Mindestens:
+
+```text
+IDENTITY × PACKAGING
+PACKAGING × PROVENANCE
+PROVENANCE × PROCESS
+PROCESS × DELEGATION
+DELEGATION × INTENT
+ATTESTATION × TRANSPARENCY
+PERSISTENCE × ALL
+```
+
+Einfach:
+
+```text
+KNOWN_COMPATIBLE
+PLAUSIBLY_COMPATIBLE
+CONFLICT
+DUPLICATE
+UNKNOWN
+```
+
+Nur `KNOWN_COMPATIBLE`, wenn Quelle dafür existiert.
+
+---
+
+# 98. Frontier questions
+
+Am Ende mindestens 20 **offene wissenschaftliche Fragen**.
+
+Beispiele:
+
+```text
+CAN_A_TRANSFER_OBJECT
+BE_BOTH_CONTENT_ADDRESSED
+AND_SELECTIVELY_REDACTABLE?
+
+HOW_DOES_A_RECEIVER_PROVE
+CAPABILITY_BEFORE_HANDOFF
+WITHOUT_EXECUTING_THE_TASK?
+
+HOW_IS_A_FAILED_FORMAL_RUN
+REPRESENTED_AS_A_FIRST_CLASS_ARTIFACT?
+
+HOW_DOES_A_FORKED_AGENT
+RETURN_PARTIAL_RESULTS
+WITHOUT_AUTHORITY_LAUNDERING?
+```
+
+---
+
+# 99. Pflichtoutputs
+
+Erstelle, soweit dein Interface getrennte Artefakte erlaubt:
+
+```text
+A  R10_R2_QWEN_CAPABILITY_AND_SEARCH_HORIZON.json
+B  R10_R2_DEEPSEEK_SEED_AUDIT.md
+C  R10_R2_MASTER_ARTIFACT_LEDGER.json
+D  R10_R2_STANDARDS_AND_SPECS_LEDGER.json
+E  R10_R2_RESEARCH_OBJECT_AND_PACKAGING_LEDGER.json
+F  R10_R2_CONTENT_IDENTITY_LEDGER.json
+G  R10_R2_CANONICALIZATION_LEDGER.json
+H  R10_R2_PROVENANCE_LEDGER.json
+I  R10_R2_PROCESS_INTEGRITY_LEDGER.json
+J  R10_R2_HANDOFF_CONTINUATION_LEDGER.json
+K  R10_R2_DELEGATION_AND_INTENT_LEDGER.json
+L  R10_R2_ATTESTATION_LEDGER.json
+M  R10_R2_TRANSPARENCY_AND_RECEIPT_LEDGER.json
+N  R10_R2_REPRODUCIBILITY_ENVIRONMENT_LEDGER.json
+O  R10_R2_ARCHIVAL_PERSISTENCE_LEDGER.json
+P  R10_R2_FORMAL_METHODS_CUSTODY_LEDGER.json
+Q  R10_R2_CAPABILITY_NEGOTIATION_LEDGER.json
+R  R10_R2_SECURITY_THREAT_LEDGER.json
+S  R10_R2_PRIVACY_AND_DISCLOSURE_LEDGER.json
+T  R10_R2_CRYPTO_AGILITY_LEDGER.json
+U  R10_R2_FAILURE_ARTIFACT_LEDGER.json
+V  R10_R2_LICENSE_AND_IPR_LEDGER.json
+W  R10_R2_KNOWN_FAILURES_AND_CRITIQUES.md
+X  R10_R2_NON_FINDING_CERTIFICATES.json
+Y  R10_R2_CONTRADICTION_LEDGER.json
+Z  R10_R2_HIDDEN_GEMS.md
+
+AA R10_R2_DARK_HORSE_POOL.md
+AB R10_R2_TOP_TALENT_POOL.md
+AC R10_R2_REJECT_POOL.md
+AD R10_R2_ARTIFACT_COMPATIBILITY_MATRIX.json
+AE R10_R2_R41_FUNCTION_FIT_MATRIX.json
+AF R10_R2_ARTIFACT_EVIDENCE_GRAPH.json
+AG R10_R2_FUNCTION_GRAPH.json
+AH R10_R2_GAP_GRAPH.json
+AI R10_R2_COMPOSITION_CANDIDATE_FAMILIES.md
+AJ R10_R2_MINIMUM_REUSABLE_PRIMITIVES.md
+AK R10_R2_OPEN_RESEARCH_FRONTIER.md
+AL R10_R2_SOURCE_LEDGER.json
+AM R10_R2_RESEARCH_MANIFEST.json
+AN R10_R2_TERMINAL_RETURN.json
+```
+
+Wenn keine echte Dateierstellung möglich ist:
+
+```text
+RETURN_EACH_OBJECT_AS_SEPARATE_LABELED_SECTION
+```
+
+Nicht behaupten, Dateien geschrieben zu haben.
+
+---
+
+# 100. Terminalfragen
+
+QWEN beantwortet am Ende ausschließlich auf Artefakte gestützt:
+
+```text
+1.
+WHICH_REAL_ARTIFACTS_ALREADY_SOLVE
+BYTE_IDENTITY?
+
+2.
+WHICH_SOLVE_PORTABLE_PACKAGING?
+
+3.
+WHICH_SOLVE_PROVENANCE_RELATIONSHIPS?
+
+4.
+WHICH_SOLVE_PROCESS_CAPTURE?
+
+5.
+WHICH_SOLVE_MULTI_ACTOR_HANDOFF?
+
+6.
+WHICH_SOLVE_HUMAN_DELEGATION?
+
+7.
+WHICH_SOLVE_INTENT_BINDING?
+
+8.
+WHICH_SOLVE_TRANSPARENT_RECEIPTS?
+
+9.
+WHICH_SOLVE_LONG_TERM_PERSISTENCE?
+
+10.
+WHICH_SOLVE_REPRODUCIBLE_ENVIRONMENT_CAPTURE?
+
+11.
+WHICH_SOLVE_FORMAL_MODEL_CUSTODY?
+
+12.
+WHICH_CAN_BE_VERIFIED_OFFLINE?
+
+13.
+WHICH_REQUIRE_A_CENTRAL_PROVIDER?
+
+14.
+WHICH_HAVE_MULTIPLE_INDEPENDENT_IMPLEMENTATIONS?
+
+15.
+WHICH_HAVE_REAL_INTEROPERABILITY_TESTS?
+
+16.
+WHICH_HAVE_SECURITY_ANALYSES?
+
+17.
+WHICH_ARE_ONLY_DRAFTS_OR_PREPRINTS?
+
+18.
+WHICH_DEEPSEEK_SEEDS_WERE_OVERSOLD?
+
+19.
+WHICH_DEEPSEEK_SEEDS_WERE_UNDERSOLD?
+
+20.
+WHICH_OLDER_PRIOR_ART_MAKES_A_NEW_AI_PROTOCOL_REDUNDANT?
+
+21.
+WHICH_MINIMAL_PRIMITIVES_CAN_BE_COMPOSED
+WITHOUT_ADOPTING_THEIR_PARENT_PLATFORM?
+
+22.
+WHICH_COMBINATIONS_HAVE_ACTUAL_DOCUMENTED_INTEROPERABILITY?
+
+23.
+WHICH_COMBINATIONS_ARE_ONLY_OUR_HYPOTHESIS?
+
+24.
+WHAT_CRITICAL_CUSTODY_FUNCTION
+HAS_NO_GOOD_ARTIFACT_CANDIDATE?
+
+25.
+WHAT_IS_THE_MOST_SURPRISING_HIDDEN_GEM?
+
+26.
+WHAT_IS_THE_MOST_MATURE_BORING_PRIMITIVE?
+
+27.
+WHAT_IS_THE_MOST_PROMISING_BUT_IMMATURE_ARTIFACT?
+
+28.
+WHAT_ARTIFACT_HAS_THE_SMALLEST_TRUST_BASE?
+
+29.
+WHAT_ARTIFACT_SURVIVES_PROVIDER_DEATH_BEST?
+
+30.
+WHAT_EMPIRICAL_TESTS_WOULD_LATER_BE_NEEDED
+BEFORE_NEXUS_ADOPTS_ANY_OF_THESE?
+```
+
+---
+
+# Terminal status
+
+Nur wenn der Artefaktscout substantiell durchgeführt wurde:
+
+```text
+OBJECT =
+NEXUS_OMEGA_QWEN_R10_R2_MAXIMAL_SCIENTIFIC_ARTIFACT_SCOUT_RETURN_20261004_R0
+
+STATE =
+COMPLETE_C1
+OR
+INCOMPLETE_C1
+
+ROLE =
+TALENT_SCOUT_ONLY
+
+ARCHITECTURE_SELECTED =
+NO
+
+PROTOCOL_ADOPTED =
+NO
+
+IMPLEMENTATION =
+NO
+
+EMPIRICAL_VALIDATION =
+NO
+
+FORMAL_VALIDATION =
+NO
+
+CLAIM_PROMOTION =
+NO
+
+CANON_WRITE =
+NO
+
+NODE_ACTIVATION =
+NO
+
+LIVE_COMPLETENESS_CLAIM =
+NO
+
+CLAIM_CEILING =
+C1_DESCRIPTIVE_ONLY
+
+NEXT =
+AXIOM_ARTIFACT_ADJUDICATION
+→
+COMPOSITION_ANALYSIS
+→
+INDEPENDENT_CROSSCHECK
+→
+EMPIRICAL_SIEVE
+→
+ONLY_THEN_ARCHITECTURE_DECISION
+```
+
+Und QWEN bekommt als Schlussanker:
+
+```text
+YOU ARE NOT HERE
+TO DESIGN THE CUSTODY LAYER.
+
+YOU ARE HERE
+TO FIND ITS POSSIBLE ORGANS.
+
+SEARCH OLD TECHNOLOGY.
+SEARCH NEW TECHNOLOGY.
+SEARCH OTHER SCIENCES.
+SEARCH FAILED SYSTEMS.
+SEARCH BORING STANDARDS.
+SEARCH OBSCURE PROTOCOLS.
+
+A NEW AI PROTOCOL
+HAS NO PRIVILEGE
+OVER AN OLD RFC.
+
+A STANDARD
+HAS NO PRIVILEGE
+OVER EVIDENCE.
+
+A BEAUTIFUL SPECIFICATION
+HAS NO PRIVILEGE
+OVER A SMALLER,
+BETTER-TESTED PRIMITIVE.
+
+DO NOT BRING BACK
+ONE ANSWER.
+
+BRING BACK
+A TALENT POOL.
+
+PRESERVE EACH PLAYER'S
+ORIGIN,
+STATUS,
+STRENGTH,
+WEAKNESS,
+AND LIMITS.
+
+WHEN YOUR SEARCH HORIZON ENDS,
+DO NOT WRITE
+"NOTHING ELSE EXISTS."
+
+WRITE:
+
+"NOT FOUND
+WITHIN THIS SEARCH SURFACE."
+
+THE SCOUT DISCOVERS.
+
+THE EVIDENCE TESTS.
+
+THE ARCHITECT COMPOSES.
+
+THE OPERATOR AUTHORIZES.
+```
+
+**Damit ist R10/R2 sauber geöffnet.** Der wesentliche Unterschied zu DeepSeeks Ausgangsidee: Wir suchen jetzt nicht nach „dem Custody-Protokoll“, sondern nach den **kleinsten realen Organen eines Custody-Systems**. Erst danach darf AXIOM versuchen, aus dem Talent-Pool eine Kompositionsfamilie zu bilden.

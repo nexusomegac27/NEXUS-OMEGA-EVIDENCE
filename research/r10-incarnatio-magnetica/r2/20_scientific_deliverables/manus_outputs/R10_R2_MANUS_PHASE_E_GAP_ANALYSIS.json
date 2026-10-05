@@ -1,0 +1,60 @@
+{
+  "artifact": "R10_R2_MANUS_PHASE_E_GAP_ANALYSIS",
+  "gaps": [
+    {
+      "gap_id": "GAP_1",
+      "description": "Full byte sizes of all 12 Mistral/Vibe files",
+      "closable": true,
+      "recommendation": "Provide the original 12-file ZIP or exact extracted files; current GROK ZIP only contains claims/hashes."
+    },
+    {
+      "gap_id": "GAP_2",
+      "description": "Full byte sizes of all GROK files",
+      "closable": true,
+      "recommendation": "Phase-A receipt now records 23 ZIP entries and compressed/uncompressed sizes."
+    },
+    {
+      "gap_id": "GAP_3",
+      "description": "Recompute all 12 Mistral/Vibe file hashes",
+      "closable": true,
+      "recommendation": "Re-run against the original 12-file ZIP bytes; not possible from the current reference alone."
+    },
+    {
+      "gap_id": "GAP_4",
+      "description": "Unexamined GROK claims",
+      "closable": true,
+      "recommendation": "Claims G1-G10 were enumerated; internal Sieve labels remain underdetermined."
+    },
+    {
+      "gap_id": "GAP_5",
+      "description": "Unexamined Mistral/Vibe claims",
+      "closable": true,
+      "recommendation": "Bind each claim to extracted source file and primary URL."
+    },
+    {
+      "gap_id": "GAP_6",
+      "description": "Unexamined META.AI claims",
+      "closable": false,
+      "recommendation": "No META.AI source artifact was supplied; preserve gap."
+    },
+    {
+      "gap_id": "GAP_7",
+      "description": "Unexamined QWEN claims",
+      "closable": false,
+      "recommendation": "No QWEN source artifact was supplied; preserve gap."
+    },
+    {
+      "gap_id": "GAP_8",
+      "description": "Open questions: C01/C02 conformance vectors, DSSE-to-SCITT bridge, TLC artifact format",
+      "closable": true,
+      "recommendation": "Create operator-approved test vectors only under a new order; no implementation in this audit."
+    },
+    {
+      "gap_id": "GAP_9",
+      "description": "Lacuna source-gap assertion is stale",
+      "closable": true,
+      "recommendation": "Replace with reachable Zenodo v0.6 record and preserve the non-standard status."
+    }
+  ],
+  "status": "GAPS_PRESERVED"
+}
