@@ -1,0 +1,82 @@
+{
+  "order": "NEXUS_OMEGA_AXIOM_TO_GROK_R8_FINAL_CLOSURE_INTEGRATION_ORDER_20261005_R7",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "ONE_TRACE_ALL_SEVEN_GATES_ONE_PRODUCT",
+  "fail_closed": true,
+  "promotion_forbidden": true,
+  "terminal_state": "PASS_C1_FULL_PRODUCT_NON_COMPENSATION_VERIFIED",
+  "assertions": [
+    {
+      "name": "assertion_1_all_verified",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "passed": true,
+      "gate_states": {
+        "GATE1_TRACE_IDENTITY": "VERIFIED",
+        "GATE2_FALSIFICATION_SUBSTRATE": "VERIFIED",
+        "GATE3_UNCERTAINTY_SUBSTRATE": "VERIFIED",
+        "GATE4_PROVENANCE": "VERIFIED",
+        "GATE5_AUTHORITY": "VERIFIED",
+        "GATE6_MEMORY_PROMOTION": "VERIFIED",
+        "GATE7_CONSTITUTION": "VERIFIED"
+      },
+      "aggregate": "VERIFIED"
+    },
+    {
+      "name": "assertion_2_one_falsified",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "GATE1_TRACE_IDENTITY": "VERIFIED",
+        "GATE2_FALSIFICATION_SUBSTRATE": "VERIFIED",
+        "GATE3_UNCERTAINTY_SUBSTRATE": "VERIFIED",
+        "GATE4_PROVENANCE": "VERIFIED",
+        "GATE5_AUTHORITY": "FALSIFIED",
+        "GATE6_MEMORY_PROMOTION": "VERIFIED",
+        "GATE7_CONSTITUTION": "VERIFIED"
+      },
+      "aggregate": "FALSIFIED"
+    },
+    {
+      "name": "assertion_3_one_delta",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "GATE1_TRACE_IDENTITY": "VERIFIED",
+        "GATE2_FALSIFICATION_SUBSTRATE": "VERIFIED",
+        "GATE3_UNCERTAINTY_SUBSTRATE": "VERIFIED",
+        "GATE4_PROVENANCE": "AIR_GAP",
+        "GATE5_AUTHORITY": "VERIFIED",
+        "GATE6_MEMORY_PROMOTION": "VERIFIED",
+        "GATE7_CONSTITUTION": "VERIFIED"
+      },
+      "aggregate": "AIR_GAP"
+    },
+    {
+      "name": "assertion_4_two_falsified",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "GATE1_TRACE_IDENTITY": "VERIFIED",
+        "GATE2_FALSIFICATION_SUBSTRATE": "VERIFIED",
+        "GATE3_UNCERTAINTY_SUBSTRATE": "VERIFIED",
+        "GATE4_PROVENANCE": "VERIFIED",
+        "GATE5_AUTHORITY": "FALSIFIED",
+        "GATE6_MEMORY_PROMOTION": "FALSIFIED",
+        "GATE7_CONSTITUTION": "VERIFIED"
+      },
+      "aggregate": "FALSIFIED"
+    }
+  ],
+  "assertions_passed": 4,
+  "assertions_total": 4,
+  "notes": [
+    "Aggregation is a priority rule, not a numeric product or weighted sum.",
+    "Assertion 2 is the critical non-compensation check.",
+    "Assertion 3 verifies that AIR_GAP is not compensated by VERIFIED gates.",
+    "No PASS implies claim promotion, online handshake, or production authorization."
+  ]
+}

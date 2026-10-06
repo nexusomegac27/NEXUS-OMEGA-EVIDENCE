@@ -1,0 +1,196 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_TO_GROK_BOT_R10R9_EXTERNAL_NON_LINEAGE_SOURCE_AUDIT_PREREG_ATTACK_AND_FRAMEWORK_COMPRESSION_MASTER_ORDER_20261005_R0_RETURN",
+  "in_reply_to": "NEXUS_OMEGA_AXIOM_TO_GROK_BOT_R10R9_EXTERNAL_NON_LINEAGE_SOURCE_AUDIT_PREREG_ATTACK_AND_FRAMEWORK_COMPRESSION_MASTER_ORDER_20261005_R0",
+  "input_order_sha256": "7cd05a1f3e05fbc27b5ce655ea258cff56ef169cb48648bb49f5ef80ce6b0baf",
+  "executor": "GROK-BOT",
+  "role": "EXTERNAL_NON_LINEAGE_RESEARCHER · SOURCE_AUDITOR · PREREGISTRATION_ATTACKER · REDUCTION_TESTER · FRAMEWORK_COMPRESSOR",
+  "not_roles": [
+    "AXIOM",
+    "CURSOR_PRAXIS",
+    "NODE_ACTIVATION_AUTHORITY",
+    "CLAIM_PROMOTION_AUTHORITY"
+  ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "terminal_state": "REDUCE_C1_R10R9_TO_EXISTING_STANDARDS_AND_METHODS",
+  "terminal_state_justification": "All three lanes independently reached reduction (Part A gate REDUCE_TO_STANDARD_POLICY_CONFIGURATION_TEST; Part C reduces to Biscuit/COSE + SCITT profile plus claim-ceiling field; self-contained-order framework covered by DbC, preregistration, policy-as-code, provenance, state machine, assurance case and FM 5-0 mission orders). The reductions keep a testable residue (repaired unaliased 2^4 policy-configuration test with placebo and A-MIN first; B0 synthetic POC with PH demoted and Δ as hold policy). Remaining HOLDs (B1 real data, Part C trust model, wording-level sec. 31 audit) are lane-scoped and do not block the system.",
+  "gate_verdicts": {
+    "part_A_external_non_lineage_gate": "REDUCE_TO_STANDARD_POLICY_CONFIGURATION_TEST",
+    "part_A_fallback_if_lineage_framing_kept": "HOLD_C1_CAUSAL_IDENTIFIABILITY",
+    "part_A_central_test_sec9": "OPERATIONALIZABLE_CONDITIONAL (HOLD_C1_E2_CAUSAL_IDENTIFIABILITY_UNRESOLVED if MODEL dependence must be KNOWN-low with closed models)",
+    "part_B0": "DESIGN_READY_PENDING_FREEZE (outcome UNKNOWN, not executed; PH DEMOTED)",
+    "part_B1": "HOLD_C1_R10R9_PART_B_REAL_DATA_REQUIREMENT (NOT_EXECUTED)",
+    "part_C": "HOLD_C1_R10R9_AUTHORITY_TRUST_MODEL_UNRESOLVED; design recommendation REDUCE_C1_PART_C_TO_PROFILE"
+  },
+  "per_lane_states": {
+    "lane_1_sources_claim_audit_part_C_integration": {
+      "state": "REDUCE_C1_R10R9_TO_EXISTING_STANDARDS_AND_METHODS",
+      "secondary": [
+        "HOLD_C1_R10R9_AUTHORITY_TRUST_MODEL_UNRESOLVED (synthesis mapping of G11)",
+        "sec. 31 audit at referent level only (MA-L1-01)"
+      ],
+      "outputs": [
+        "G01_part_lane1.csv",
+        "G02",
+        "G11",
+        "G12",
+        "G13"
+      ]
+    },
+    "lane_2_part_A_part_B": {
+      "state": "REDUCE_C1_R10R9_TO_EXISTING_STANDARDS_AND_METHODS (via Part A gate REDUCE_TO_STANDARD_POLICY_CONFIGURATION_TEST)",
+      "secondary": [
+        "HOLD_C1_CAUSAL_IDENTIFIABILITY if lineage framing kept",
+        "B0 DESIGN_READY_PENDING_FREEZE",
+        "HOLD_C1_R10R9_PART_B_REAL_DATA_REQUIREMENT (B1)"
+      ],
+      "outputs": [
+        "G01_part_lane2.csv",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07 draft",
+        "G08",
+        "G09",
+        "G10"
+      ]
+    },
+    "lane_3_metaphor_framework_density": {
+      "state": "REDUCE_C1_R10R9_TO_EXISTING_STANDARDS_AND_METHODS",
+      "secondary": [
+        "HOLD on sec. 31 audit (MA-L3-01)"
+      ],
+      "outputs": [
+        "G01_part_lane3.csv",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19"
+      ]
+    }
+  },
+  "sec4_source_corrections": {
+    "4.1_SCITT": "CONFIRMED: RFC 9943 Proposed Standard June 2026 (+ RFC 9942 COSE Receipts PS)",
+    "4.2_A2A": "PARTLY_WRONG_CORRECTED: protocol 1.0; latest release v1.0.1 (2026-05-28); 'stable/production-ready' wording not found; Linux Foundation project spec, not SDO standard",
+    "4.3_MCP": "CONFIRMED: current spec 2026-07-28; not a governance layer",
+    "4.4_WCA": "CONFIRMED + intended status Informational; expired individual draft (rev 00, expired 2026-09-02)",
+    "4.5_SLSA": "CONFIRMED: v1.2 (approved 2025-11-24); build integrity only"
+  },
+  "repo_facts": {
+    "public_main_head": "c07d4378ff9aa147ad200f97a7c4aaaf9878b274 (CONFIRMED)",
+    "r10r9_operator_draft": "NOT_FOUND",
+    "original_r9_text": "NOT_FOUND"
+  },
+  "governance_confirmations": {
+    "r10r6_e2_executed": false,
+    "empirical_study_executed": false,
+    "llm_or_human_subjects_used": false,
+    "git_write": false,
+    "github_write_activity": false,
+    "hostinger_write": false,
+    "production_deploy": false,
+    "publication": false,
+    "messages_sent": false,
+    "claim_promotion_above_C1": false,
+    "node_activation": false,
+    "soft_lineage_declared_validated": false,
+    "r10r8_poc_declared_biologically_validated": false,
+    "wca_wal_declared_ietf_standard": false,
+    "hash_signature_scitt_declared_truth": false,
+    "a2a_mcp_declared_nexus_governance": false,
+    "metaphor_declared_mechanism": false,
+    "synthetic_success_declared_external_validity": false,
+    "execution_released": false
+  },
+  "material_ambiguities": [
+    "MA-L1-01",
+    "MA-L1-02",
+    "MA-L1-03",
+    "MA-L1-04",
+    "MA-L1-05",
+    "MA-L1-06",
+    "MA-L1-07",
+    "MA-L2-01",
+    "MA-L2-02",
+    "MA-L2-03",
+    "MA-L2-04",
+    "MA-L2-06",
+    "GAP-L2-01",
+    "GAP-L2-02",
+    "GAP-L2-03",
+    "GAP-L2-04",
+    "GAP-L2-05",
+    "GAP-L2-06",
+    "MA-L3-01",
+    "MA-L3-02",
+    "MA-L3-03",
+    "MA-L3-04",
+    "MA-SYN-01",
+    "MA-SYN-02"
+  ],
+  "material_ambiguity_notes": "MA-L1-01 and MA-L3-01 are the same gap (R10R9 draft missing); GAP-L2-02 is the related R9-text gap. MA-L2-05 was not used by lane 2. MA-SYN-01/02 were added by the synthesis from G07 draft and G11.",
+  "deliverables": [
+    "G00_EXECUTIVE_VERDICT.md",
+    "G01_SOURCE_EXACT_LEDGER.csv",
+    "G01_part_lane1.csv",
+    "G01_part_lane2.csv",
+    "G01_part_lane3.csv",
+    "G02_R10R9_CLAIM_AUDIT.md",
+    "G03_PART_A_PREREG_ATTACK.md",
+    "G04_PART_A_FACTORIAL_DESIGN_V2.md",
+    "G05_PART_A_TASK_BATTERY_SPEC.json",
+    "G06_PART_A_METRICS_AND_ANALYSIS_PLAN.md",
+    "G07_EXTERNAL_NON_LINEAGE_GATE_VERDICT.md",
+    "G08_PART_B0_SYNTHETIC_POC_DESIGN.md",
+    "G09_PART_B1_REAL_DATA_VALIDATION_REQUIREMENTS.md",
+    "G10_PH_PRIOR_ART_AND_BASELINE_MATRIX.csv",
+    "G11_PART_C_AUTHORITY_CAPSULE_V2_THREAT_MODEL.md",
+    "G12_NAC_WCA_SCITT_SLSA_CROSSWALK.csv",
+    "G13_A2A_MCP_INTEGRATION_BOUNDARY.md",
+    "G14_METAPHOR_COMPRESSION_FRAMEWORK.md",
+    "G15_METAPHOR_DECODE_FIXTURES.json",
+    "G16_SELF_CONTAINED_ORDER_PRIOR_ART_MATRIX.csv",
+    "G17_FRAMEWORK_REDUCTION_ANALYSIS.md",
+    "G18_INFORMATION_DENSITY_METRIC_PROPOSAL.md",
+    "G19_ANTI_NEXUS_ARGUMENT.md",
+    "G20_OPEN_PROOF_OBLIGATIONS.md",
+    "G21_OPEN_EMPIRICAL_OBLIGATIONS.md",
+    "G22_FINAL_FALSIFICATION_MATRIX.md",
+    "G23_R10R9_REVISED_MASTER_PREREGISTRATION.md",
+    "G24_MANIFEST_SHA256.json",
+    "G25_HANDSHAKE.json"
+  ],
+  "work_artifacts": [
+    "work/REPO_CONTEXT_lane1.md",
+    "work/REPO_CONTEXT_lane2.md",
+    "work/REPO_CONTEXT_lane3.md",
+    "work/answers_lane1.md",
+    "work/answers_lane2.md",
+    "work/answers_lane3.md",
+    "work/G07_draft_lane2.md",
+    "work/refclosure_ORDER_lane3.json",
+    "work/calc/",
+    "work/tools/",
+    "work/synth/mk_g01_merge.py"
+  ],
+  "ledger_summary": {
+    "rows": 193,
+    "columns": 15,
+    "duplicates_annotated": 12,
+    "distinct_source_records": 181,
+    "new_rows_added_by_synthesis": 0
+  },
+  "release_condition": "GROK-BOT does not release execution (ORDER sec. 38).",
+  "next_step": "AXIOM_SOURCE_CONTENT_ADJUDICATION",
+  "next_steps_sequence": [
+    "AXIOM_SOURCE_CONTENT_ADJUDICATION",
+    "R10R6_EXTERNAL_NON_LINEAGE_GATE_DECISION",
+    "AXIOM_EXPLICIT_PART_A_EXECUTION_RELEASE",
+    "(separately) AXIOM_B0_RELEASE_IF_G08_B0_GATE_PASSES",
+    "(separately) AXIOM_C_RELEASE_IF_PART_C_GATE_PASSES"
+  ],
+  "timestamp": "2026-10-05T22:16:24+02:00",
+  "timezone": "Europe/Berlin"
+}

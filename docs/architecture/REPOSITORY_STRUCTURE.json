@@ -101,6 +101,13 @@
     "astratis-ix-open-agent-r4": {
       "path": "research/ix/open-agent-foundation-r4",
       "state": "CANONICAL_CONTINUATION_ORDER_AUTHORIZED_AGENT_EXECUTION_NOT_STARTED"
+    },
+    "r10r9-mistral-clean-room": {
+      "path": "research/r9/mistral-clean-room-20261006",
+      "state": "REVIEW_ORDER_ISSUED_REVIEWER_EXECUTION_NOT_ESTABLISHED",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "merge": false,
+      "promotion": false
     }
   },
   "research_lane_contract": {

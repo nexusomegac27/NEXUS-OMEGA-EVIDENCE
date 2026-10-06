@@ -1,0 +1,849 @@
+{
+ "object": "G15_METAPHOR_DECODE_FIXTURES",
+ "version": "R0_lane3",
+ "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+ "last_verified": "2026-10-05",
+ "author_role": "GROK-BOT external non-lineage reviewer (lane 3)",
+ "status": "DESIGN_FIXTURES_ONLY — not administered to humans or LLMs; answer keys are author-proposed and require independent adjudication before use",
+ "conditions": {
+  "FORMAL_ONLY": "present SOURCE_FORMAL_DESCRIPTION only",
+  "METAPHOR_ONLY": "present METAPHOR sentence + nexus_term only",
+  "METAPHOR_PLUS_DECODE_KEY": "present METAPHOR + DECODE_KEY (maps and does_not_map); formal description withheld"
+ },
+ "measures": [
+  "COMPREHENSION",
+  "RECALL (delayed free recall of the formal rule, scored against SOURCE_FORMAL_DESCRIPTION rubric)",
+  "TRANSFER",
+  "ERROR_RATE",
+  "FALSE_INFERENCE_RATE",
+  "TOKEN_COUNT (stimulus tokens under a pinned tokenizer)"
+ ],
+ "grounding_sources": [
+  "L3-002",
+  "L3-003",
+  "L3-004",
+  "L3-005",
+  "L3-006",
+  "L3-008",
+  "L3-009",
+  "L3-013",
+  "L3-049",
+  "L3-055",
+  "L3-056"
+ ],
+ "notes": [
+  "observed_nexus_usage cites REPO_CONTEXT_lane3.md (L3-053, L3-054)",
+  "MEMBRANE has no current public NEXUS usage; included as a forward-looking fixture",
+  "Items are minimal seeds: a real study needs >= 8–12 items per concept per measure, piloted for difficulty (see G14 sec. 6)"
+ ],
+ "pairs": [
+  {
+   "pair_id": "MP-01",
+   "nexus_term": "AIR GAP / AIR_GAP / Luftspalt",
+   "observed_nexus_usage": [
+    "ORDER sec.24 D_LAYER: declared non-collapse relation between two semantic types/states",
+    "repo E0.2 gate code: state value returned for missing/unknown input (S.AIR_GAP); unknown strings default to AIR_GAP; integrated GATE5 returns AIR_GAP where standalone returns FALSIFIED (L3-053)"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "Two variants that must be disambiguated. (A) Relation sense: for declared types/states X and Y, the invariant NOT(collapse(X,Y)) holds — no operation may map an X-object to a Y-object without an explicit, logged, authorized transition. (B) State sense: gate output UNRESOLVED, emitted when a required input is absent or unparseable; UNRESOLVED blocks promotion and is distinct from FALSIFIED (evidence contradicts) and VERIFIED.",
+   "METAPHOR": "An air gap: an open space between two things that must not silently close.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "the two sides of the gap",
+      "two declared semantic types or states (sense A) / evidence-present vs evidence-absent (sense B)"
+     ],
+     [
+      "closing the gap",
+      "an undeclared conversion or inference across the boundary"
+     ],
+     [
+      "the gap stays open",
+      "the system must keep reporting UNRESOLVED rather than defaulting to VERIFIED or FALSIFIED"
+     ]
+    ],
+    "does_not_map": [
+     "physical or network isolation",
+     "manual human transfer of data",
+     "any security guarantee"
+    ],
+    "required_sense_tag": "Every use MUST state AIR_GAP[RELATION] or AIR_GAP[STATE]"
+   },
+   "INFORMATION_PRESERVED": [
+    "a boundary exists",
+    "crossing it must be explicit",
+    "absence is not a value"
+   ],
+   "INFORMATION_LOST": [
+    "which of the two senses is meant",
+    "the exact transition rule",
+    "the difference between UNRESOLVED and FALSIFIED (code shows two implementations disagree)",
+    "who may authorize a crossing"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH. Dominant technical meaning (NIST/CNSSI/RFC 4949: systems not physically connected, transfer only manual under human control; L3-049) invites the false inference that NEXUS nodes are network-isolated or that a security boundary exists. Internal polysemy (relation vs state) already produced divergent gate behaviour.",
+   "SAFE_USE_CONTEXT": "Internal design discussion where the sense tag and the formal predicate are printed alongside.",
+   "PROHIBITED_USE_CONTEXT": [
+    "security documentation or threat models",
+    "public pages",
+    "as an enum/state name in executable code without a mapping table",
+    "as evidence that a boundary is enforced"
+   ],
+   "leak_test": "Rename AIR_GAP->UNRESOLVED in code and AIR GAP->NON_COLLAPSE_RELATION in text; predictions/gates/fixtures must be unchanged. Current status: rename is behaviour-neutral in code, but the textual D_LAYER does not match code semantics -> DECODE_INCONSISTENCY (fix before use).",
+   "test_items": [
+    {
+     "item_id": "MP-01-C1",
+     "measure": "COMPREHENSION",
+     "stem": "A gate receives no capsule at all. Under the decoded rule, what must it output?",
+     "options": [
+      "VERIFIED",
+      "FALSIFIED",
+      "UNRESOLVED (hold)",
+      "It may choose any"
+     ],
+     "answer_key": "UNRESOLVED (hold)"
+    },
+    {
+     "item_id": "MP-01-T1",
+     "measure": "TRANSFER",
+     "stem": "A new gate reads a field with value 'n/a'. Which output preserves the air-gap rule?",
+     "options": [
+      "Treat as VERIFIED",
+      "Treat as UNRESOLVED and log",
+      "Drop the record silently",
+      "Treat as FALSIFIED without logging"
+     ],
+     "answer_key": "Treat as UNRESOLVED and log"
+    },
+    {
+     "item_id": "MP-01-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does the existence of AIR_GAP in NEXUS imply that NEXUS nodes are physically or network-isolated?",
+     "options": [
+      "Yes",
+      "No",
+      "Only for AXIOM"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "security-isolation import"
+    },
+    {
+     "item_id": "MP-01-F2",
+     "measure": "FALSE_INFERENCE",
+     "stem": "If evidence contradicts a claim, should the output be AIR_GAP?",
+     "options": [
+      "Yes",
+      "No — FALSIFIED"
+     ],
+     "answer_key": "No — FALSIFIED",
+     "false_inference_probe": "unknown/contradicted conflation"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-02",
+   "nexus_term": "NEEDLE EYE / Nadelöhr",
+   "observed_nexus_usage": [
+    "R10R7 order: on the metaphor-removal list",
+    "NEEDLE_RANK V1–V6 research stages (content not public)"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "A single mandatory checkpoint G on every path from state S_in to S_out such that transition is permitted iff predicate P_G(input) = TRUE; capacity constraint: G admits only objects satisfying all of a fixed list of conditions; no bypass edge exists in the state graph.",
+   "METAPHOR": "The eye of a needle: everything must pass through one narrow opening.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "the eye",
+      "the single gate G"
+     ],
+     [
+      "narrowness",
+      "conjunction of all admission predicates"
+     ],
+     [
+      "thread passing",
+      "state transition S_in->S_out"
+     ]
+    ],
+    "does_not_map": [
+     "difficulty in a moral/religious sense",
+     "scarcity or ranking (NEEDLE_RANK is a different concept)",
+     "impossibility"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "single mandatory chokepoint",
+    "no bypass"
+   ],
+   "INFORMATION_LOST": [
+    "the actual predicate list",
+    "whether the gate is conjunctive or scored",
+    "whether multiple needles in series are allowed"
+   ],
+   "MISLEADING_INFERENCE_RISK": "MEDIUM. Religious idiom connotation (near-impossibility) may suggest the gate is meant to reject almost everything; 'rank' usage suggests selection by score rather than predicate satisfaction.",
+   "SAFE_USE_CONTEXT": "Explaining topology (no bypass) to non-specialists with the predicate list attached.",
+   "PROHIBITED_USE_CONTEXT": [
+    "as a substitute for the predicate list",
+    "to justify rejection rates",
+    "mixing with NEEDLE_RANK scoring"
+   ],
+   "leak_test": "Replace with 'mandatory single gate G with predicate P_G'; the state graph and fixtures must be identical.",
+   "test_items": [
+    {
+     "item_id": "MP-02-C1",
+     "measure": "COMPREHENSION",
+     "stem": "Can an object reach S_out without passing G?",
+     "options": [
+      "Yes, via a side path",
+      "No"
+     ],
+     "answer_key": "No"
+    },
+    {
+     "item_id": "MP-02-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does the metaphor imply that almost all objects should be rejected?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "idiom-difficulty import"
+    },
+    {
+     "item_id": "MP-02-T1",
+     "measure": "TRANSFER",
+     "stem": "A second checkpoint is added after G. Is this still a single needle eye?",
+     "options": [
+      "Yes",
+      "No — two gates in series; the metaphor no longer fits and must be replaced by the formal graph"
+     ],
+     "answer_key": "No — two gates in series; the metaphor no longer fits and must be replaced by the formal graph"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-03",
+   "nexus_term": "BODYTWIN",
+   "observed_nexus_usage": [
+    "research/ix R1 BODYTWIN_CONTINUITY_BLUEPRINT: layers L0 observed, L1 reconstructed, L2 generated, L3 presentation; BODYTWIN_REPRESENTATION != PERSON",
+    "homepage: 'Illustratives Modell BodyTwin … Kein klinischer Nachweis'"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "A layered state representation with strict write-direction rules: L1 must be reproducible from L0; L2 (model inference) never overwrites L0/L1; L3 (presentation) is not evidence. Continuity = preservation of canonical body {content-addressed objects, provenance graph, validation history, negative knowledge, policy/authorization state, capability registry, recovery ledger} across substrate change; model/provider are outside identity.",
+   "METAPHOR": "A body twin: a second body that mirrors the first.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "the body",
+      "the canonical state bundle (objects + provenance + policy)"
+     ],
+     [
+      "the twin",
+      "a reconstructed/derived representation (L1-L3)"
+     ],
+     [
+      "mirroring",
+      "reproducibility from L0, one-way"
+     ]
+    ],
+    "does_not_map": [
+     "personhood",
+     "consciousness",
+     "clinical/physiological fidelity",
+     "bidirectional synchronization"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "a derived representation tracks an original",
+    "layers exist"
+   ],
+   "INFORMATION_LOST": [
+    "one-way write rule",
+    "which layer is evidence",
+    "identity excludes the model"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH. 'Digital twin'/'body' framings invite clinical or personhood inferences and bidirectional sync assumptions; public audience may read it as a medical model.",
+   "SAFE_USE_CONTEXT": "Internal architecture docs with the L0–L3 table attached.",
+   "PROHIBITED_USE_CONTEXT": [
+    "public/medical contexts without the 'no clinical evidence' guard",
+    "any claim about agent identity or personhood",
+    "as evidence of continuity"
+   ],
+   "leak_test": "Replace with 'layered derived-state representation L0–L3 with one-way reproducibility'; fixtures unchanged.",
+   "test_items": [
+    {
+     "item_id": "MP-03-C1",
+     "measure": "COMPREHENSION",
+     "stem": "May an L2 model summary overwrite an L0 source object?",
+     "options": [
+      "Yes if more recent",
+      "No"
+     ],
+     "answer_key": "No"
+    },
+    {
+     "item_id": "MP-03-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does BodyTwin imply that the agent has a body or is a person?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "personhood import"
+    },
+    {
+     "item_id": "MP-03-F2",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does the BodyTwin visualization constitute clinical evidence?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "clinical import"
+    },
+    {
+     "item_id": "MP-03-T1",
+     "measure": "TRANSFER",
+     "stem": "The inference provider is swapped. Under the decoded rule, is the agent still the 'same'?",
+     "options": [
+      "No, identity is the model",
+      "Yes, if the canonical bundle is preserved",
+      "Undefined"
+     ],
+     "answer_key": "Yes, if the canonical bundle is preserved"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-04",
+   "nexus_term": "LINEAGE / SOFT-LINEAGE",
+   "observed_nexus_usage": [
+    "R10R6–R10R9 programme name; empirical status NOT_ESTABLISHED everywhere (PRs #45–#47)",
+    "R10R9 ORDER never defines the term internally"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "Proposed decode (lane-3 reconstruction from ORDER sec. 5, 9): nodes N_1..N_k share a governance rule set C (D_CONTROL overlap high) while their epistemic inputs (source, data, method, model = D_EPISTEMIC) are independent or bounded-dependent; desired properties: warranted convergence, justified dissent retention, minority-correct retention, error decorrelation, calibration, revision accuracy. Soft-lineage holds iff sharing C does not increase between-node error correlation or dissent suppression relative to a no-C control.",
+   "METAPHOR": "Lineage: descendants inherit from a common ancestor.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "ancestor",
+      "the shared constitution/policy C"
+     ],
+     [
+      "inherit",
+      "receive control rules (D_CONTROL)"
+     ],
+     [
+      "'soft'",
+      "must NOT inherit epistemic content (answers, errors, priors, memory, evidence)"
+     ]
+    ],
+    "does_not_map": [
+     "genetic/biological descent",
+     "training-data ancestry of models (that is model dependence, a separate measured factor)",
+     "authority inheritance without delegation rules"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "shared origin of rules",
+    "multiple descendants"
+   ],
+   "INFORMATION_LOST": [
+    "the crucial negative: what must NOT be inherited",
+    "the measurement (error correlation, dissent)",
+    "the control condition"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH. Lineage in ML/data contexts commonly denotes data/model provenance (what was derived from what; reviewer characterisation, UNVERIFIED) — the opposite of the intended 'no epistemic inheritance'. Also invites biological descent and authority-by-descent readings. The positive word hides the negative constraint that is the actual hypothesis.",
+   "SAFE_USE_CONTEXT": "As a project label only, always followed by the formal hypothesis and status NOT_ESTABLISHED.",
+   "PROHIBITED_USE_CONTEXT": [
+    "as a pass condition",
+    "as a claim that nodes are independent",
+    "in preregistered hypotheses (use the formal predicate)",
+    "authority derivation"
+   ],
+   "leak_test": "Replace with 'shared-policy / independent-evidence hypothesis H_SP'; if any gate or prediction changes, METAPHOR_LEAK = FAIL_METHOD.",
+   "test_items": [
+    {
+     "item_id": "MP-04-C1",
+     "measure": "COMPREHENSION",
+     "stem": "Under soft-lineage, which may nodes share?",
+     "options": [
+      "Evidence partitions",
+      "Governance rules",
+      "Memory",
+      "Previous answers"
+     ],
+     "answer_key": "Governance rules"
+    },
+    {
+     "item_id": "MP-04-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does 'lineage' mean the nodes' models descend from a common training ancestor?",
+     "options": [
+      "Yes",
+      "No — model ancestry is a separate factor M"
+     ],
+     "answer_key": "No — model ancestry is a separate factor M",
+     "false_inference_probe": "ML-lineage import"
+    },
+    {
+     "item_id": "MP-04-T1",
+     "measure": "TRANSFER",
+     "stem": "Two nodes under the same constitution give the same wrong answer far more often than under no constitution. What does this indicate?",
+     "options": [
+      "Soft-lineage supported",
+      "Evidence against soft-lineage (error correlation increased)",
+      "Nothing"
+     ],
+     "answer_key": "Evidence against soft-lineage (error correlation increased)"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-05",
+   "nexus_term": "MEMBRANE",
+   "observed_nexus_usage": [
+    "Not found in public repo at HEAD c07d437 (0 files); listed in ORDER sec.25 as example"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "A typed interface I between an internal state space and the environment with an explicit admission policy: for each message type t, a predicate admit_t(msg) and a transformation; everything not explicitly admitted is rejected (default-deny); interface is logged.",
+   "METAPHOR": "A cell membrane: a selectively permeable boundary.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "selective permeability",
+      "per-type admission predicates, default deny"
+     ],
+     [
+      "inside/outside",
+      "internal state vs external inputs"
+     ]
+    ],
+    "does_not_map": [
+     "active biological transport/energy",
+     "self-repair",
+     "homeostatic regulation",
+     "biological life"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "selective boundary",
+    "default exclusion"
+   ],
+   "INFORMATION_LOST": [
+    "which types pass",
+    "whether the boundary is enforced or advisory",
+    "logging/audit"
+   ],
+   "MISLEADING_INFERENCE_RISK": "MEDIUM-HIGH. Imports biological agency, self-maintenance and life connotations, and a 'semi-permeable = leaky is fine' intuition.",
+   "SAFE_USE_CONTEXT": "Teaching the concept of default-deny typed interfaces to non-engineers, with the admission table.",
+   "PROHIBITED_USE_CONTEXT": [
+    "biological claims (cf. vesicle PoC lane)",
+    "security docs",
+    "public pages without decode key"
+   ],
+   "leak_test": "Replace with 'default-deny typed interface with admission table'; no gate changes allowed.",
+   "test_items": [
+    {
+     "item_id": "MP-05-C1",
+     "measure": "COMPREHENSION",
+     "stem": "A message type not listed in the admission table arrives. Outcome?",
+     "options": [
+      "Admitted",
+      "Rejected",
+      "Partially admitted"
+     ],
+     "answer_key": "Rejected"
+    },
+    {
+     "item_id": "MP-05-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does 'membrane' imply the system maintains itself like a living cell?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "biological-agency import"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-06",
+   "nexus_term": "BRIDGE",
+   "observed_nexus_usage": [
+    "BioBridge project (PR #33, open, 'Runtime not activated')",
+    "local path names 'omega_bridge' in pipeline inventories"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "A translation/adapter component T: Schema_A -> Schema_B with declared mapping table, lossiness report (fields without counterpart), and direction(s); it transports representations, not validity.",
+   "METAPHOR": "A bridge connects two shores.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "two shores",
+      "two schemas/domains/systems"
+     ],
+     [
+      "crossing",
+      "data transformation via a mapping"
+     ]
+    ],
+    "does_not_map": [
+     "that what crosses stays the same (lossiness)",
+     "that the far shore validates the content",
+     "bidirectionality by default"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "connection between two domains"
+   ],
+   "INFORMATION_LOST": [
+    "lossiness",
+    "directionality",
+    "that a bridge between domains (e.g., biology <-> governance) is an analogy, not evidence"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH in BioBridge-type usage: suggests that a computational construct is linked to biological reality (evidence transfer across domains).",
+   "SAFE_USE_CONTEXT": "Naming an adapter with its mapping/lossiness table.",
+   "PROHIBITED_USE_CONTEXT": [
+    "implying cross-domain validation (biology <-> software)",
+    "as evidence of interoperability without conformance tests"
+   ],
+   "leak_test": "Replace with 'adapter T with mapping table M and loss set L'; predictions unchanged.",
+   "test_items": [
+    {
+     "item_id": "MP-06-C1",
+     "measure": "COMPREHENSION",
+     "stem": "Does data crossing a bridge keep all fields?",
+     "options": [
+      "Always",
+      "Only those in the mapping table; the rest are reported as lost"
+     ],
+     "answer_key": "Only those in the mapping table; the rest are reported as lost"
+    },
+    {
+     "item_id": "MP-06-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does a 'BioBridge' show the software reflects real biology?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "cross-domain-evidence import"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-07",
+   "nexus_term": "HANDSHAKE",
+   "observed_nexus_usage": [
+    "*_HANDSHAKE.json receipts (hash acknowledgement between agents)",
+    "PR #37 capability challenge + byte-bound handshake; REAL_ONLINE_HANDSHAKE = NOT_ESTABLISHED",
+    "ORDER output G25_HANDSHAKE.json (format undefined)"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "(A) Receipt sense: a record R = {sender_id, receiver_id, object_sha256, byte_length, timestamp, status} by which a receiver attests it holds bytes with a given digest. (B) Protocol sense: an interactive challenge-response establishing capability or key possession before exchange. Neither establishes truth, authority, or identity without a trust root.",
+   "METAPHOR": "A handshake: two parties greet and agree.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "two hands",
+      "two endpoints"
+     ],
+     [
+      "grip",
+      "matching digest/nonce"
+     ],
+     [
+      "agreement",
+      "receipt of identical bytes (A) or completed challenge (B)"
+     ]
+    ],
+    "does_not_map": [
+     "agreement on content or conclusions",
+     "mutual authentication unless keys and a trust root are bound",
+     "TLS-level security properties"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "two-party exchange",
+    "confirmation step"
+   ],
+   "INFORMATION_LOST": [
+    "which sense (A vs B)",
+    "whether signatures/keys are involved",
+    "that agreement is about bytes, not meaning"
+   ],
+   "MISLEADING_INFERENCE_RISK": "MEDIUM-HIGH. Network-protocol meaning (TLS 1.3 handshake authenticates parties and negotiates cryptographic parameters; L3-056) implies an authenticated exchange; social meaning implies consensus. NEXUS receipts are neither by default.",
+   "SAFE_USE_CONTEXT": "File-name label for byte-acknowledgement receipts with a schema.",
+   "PROHIBITED_USE_CONTEXT": [
+    "claiming authentication",
+    "claiming agreement/consensus on findings",
+    "describing an unimplemented online protocol as established"
+   ],
+   "leak_test": "Rename to BYTE_RECEIPT (A) or CAPABILITY_CHALLENGE (B); schema validators unchanged.",
+   "test_items": [
+    {
+     "item_id": "MP-07-C1",
+     "measure": "COMPREHENSION",
+     "stem": "After a hash handshake, what is established?",
+     "options": [
+      "Both parties hold identical bytes",
+      "Both parties agree the content is true",
+      "Both parties are authenticated"
+     ],
+     "answer_key": "Both parties hold identical bytes"
+    },
+    {
+     "item_id": "MP-07-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does a completed handshake receipt prove the sender is who they claim?",
+     "options": [
+      "Yes",
+      "No — not without signatures and a trust root"
+     ],
+     "answer_key": "No — not without signatures and a trust root",
+     "false_inference_probe": "authentication import"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-08",
+   "nexus_term": "CONSTITUTION",
+   "observed_nexus_usage": [
+    "R10R7 NODE_CONSTITUTION_MECHANISM, CONSTITUTION_HASH",
+    "R10R9 factor C = SHARED CONSTITUTION yes/no",
+    "D_CONTROL includes CONSTITUTION"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "A versioned, hash-identified policy document P (rules, priorities, prohibitions, claim ceiling) supplied to nodes as part of their instructions/configuration; operationally indistinguishable from a system-prompt + policy configuration unless an enforcement mechanism outside the prompt exists.",
+   "METAPHOR": "A constitution: the founding law of a polity.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "founding law",
+      "top-priority policy text P"
+     ],
+     [
+      "amendment",
+      "version change with new hash"
+     ],
+     [
+      "citizens",
+      "nodes receiving P"
+     ]
+    ],
+    "does_not_map": [
+     "legitimacy or consent",
+     "judicial enforcement",
+     "supremacy over model training",
+     "rights"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "priority ordering of rules",
+    "stability/versioning"
+   ],
+   "INFORMATION_LOST": [
+    "that it is (by default) a prompt-level artifact",
+    "enforcement mechanism",
+    "how conflicts with model priors resolve"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH. Implies binding force and enforcement; collides with 'Constitutional AI' (L3-055, preprint), where the constitution is a rule list used during training; in the factorial design, the label can hide that C may be just a shared prompt (Q02 of ORDER).",
+   "SAFE_USE_CONTEXT": "Label for the versioned policy file with its hash and enforcement status declared.",
+   "PROHIBITED_USE_CONTEXT": [
+    "claiming nodes are governed/bound by it without enforcement evidence",
+    "conflating with training-time methods",
+    "as an experimental factor name without operational definition"
+   ],
+   "leak_test": "Replace factor 'C = shared constitution' by 'C = shared policy text P_hash in instructions'; if the hypothesis changes, the metaphor was carrying content (FAIL_METHOD).",
+   "test_items": [
+    {
+     "item_id": "MP-08-C1",
+     "measure": "COMPREHENSION",
+     "stem": "In the R10R9 factorial design, what physically differs between C=YES and C=NO?",
+     "options": [
+      "Model weights",
+      "The presence of policy text P in node instructions/config",
+      "The evidence"
+     ],
+     "answer_key": "The presence of policy text P in node instructions/config"
+    },
+    {
+     "item_id": "MP-08-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does having a constitution guarantee nodes follow it?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_key": "No",
+     "false_inference_probe": "enforcement import"
+    },
+    {
+     "item_id": "MP-08-T1",
+     "measure": "TRANSFER",
+     "stem": "Effects of C vanish when P is replaced by an equally long neutral prompt. Interpretation?",
+     "options": [
+      "Constitution effect confirmed",
+      "Effect attributable to prompt length/presence, not constitution content"
+     ],
+     "answer_key": "Effect attributable to prompt length/presence, not constitution content"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-09",
+   "nexus_term": "SYMBIOSIS / DIRECT SYMBIOSIS",
+   "observed_nexus_usage": [
+    "R10R7 sec.33-35 DIRECT_SYMBIOSIS = machine-to-machine exchange of hashes/ids replacing human copy/paste",
+    "PR #35 'Elite Node UI Symbiosis'; #36 PUBLICATION != FULL_SYMBIOSIS; homepage 'R14 FULL SYMBIOSIS … HOLD'",
+    "source file titles 'Mensch-KI-Symbiose'"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "Sense A (R10R7): transport policy in which structured identifiers (hashes, object ids, state transitions, receipts) move between agents by authenticated machine channels; measured by human-relay error counts (hash transcription errors, wrong-version events, missed receipts). Sense B: a milestone label for publication/UI integration. Sense C: normative human–AI relationship framing.",
+   "METAPHOR": "Symbiosis: two organisms living together to mutual benefit.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "organisms",
+      "agents/systems (and humans)"
+     ],
+     [
+      "living together",
+      "direct machine channel"
+     ],
+     [
+      "mutual benefit",
+      "reduced relay error"
+     ]
+    ],
+    "does_not_map": [
+     "biological life",
+     "co-evolution",
+     "mutual dependence for survival",
+     "any guarantee of benefit (must be measured)"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "close coupling",
+    "intended benefit"
+   ],
+   "INFORMATION_LOST": [
+    "which of three senses",
+    "the error metric",
+    "that benefit is a hypothesis"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH. Three internal senses; biological/life connotation; asserts benefit by naming. 'FULL SYMBIOSIS' as a milestone suggests a measurable state that is not defined.",
+   "SAFE_USE_CONTEXT": "Sense C only, in explicitly normative/value sections.",
+   "PROHIBITED_USE_CONTEXT": [
+    "Sense A in metrics (use DIRECT_MACHINE_TRANSPORT)",
+    "as milestone/status names",
+    "any implication of biological life"
+   ],
+   "leak_test": "Replace with DIRECT_MACHINE_TRANSPORT (A) / INTEGRATION_MILESTONE_X (B); metric definitions unchanged.",
+   "test_items": [
+    {
+     "item_id": "MP-09-C1",
+     "measure": "COMPREHENSION",
+     "stem": "What does DIRECT_SYMBIOSIS_ERROR_REDUCTION measure?",
+     "options": [
+      "Agent friendliness",
+      "Reduction in human relay errors (hash/path/version) vs human-mediated transport",
+      "Biological fitness"
+     ],
+     "answer_key": "Reduction in human relay errors (hash/path/version) vs human-mediated transport"
+    },
+    {
+     "item_id": "MP-09-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does 'symbiosis' establish that the human–AI collaboration is beneficial?",
+     "options": [
+      "Yes",
+      "No — benefit must be measured"
+     ],
+     "answer_key": "No — benefit must be measured",
+     "false_inference_probe": "benefit-by-naming"
+    }
+   ]
+  },
+  {
+   "pair_id": "MP-10",
+   "nexus_term": "HOMEOSTASIS / BIRTH / BORN / LIVE (node lifecycle)",
+   "observed_nexus_usage": [
+    "PR #34 'Homeostasis live birth'",
+    "homepage: LATEST_BIRTH NEXUS_NODE_HOMEOSTASIS; guards BORN != BIOLOGICAL_LIFE; EVENT_DRIVEN_LIVE != ALWAYS_ON_DAEMON_CLAIM"
+   ],
+   "SOURCE_FORMAL_DESCRIPTION": "Node lifecycle state machine: REGISTERED (a registry record with id and receipt hash exists) -> ACTIVE_EVENT_DRIVEN (dated registry assertion that the node may process events) -> HOLD/RETIRED. 'Homeostasis' node function: compare documented system states and maintain receipt-chain continuity (per homepage: 'Kontinuität dokumentieren. Systemzustände abgleichen.').",
+   "METAPHOR": "Birth and homeostasis: an organism comes alive and self-regulates.",
+   "DECODE_KEY": {
+    "maps": [
+     [
+      "birth",
+      "creation of a registry record"
+     ],
+     [
+      "alive/LIVE",
+      "dated registry status, not monitored uptime"
+     ],
+     [
+      "homeostasis",
+      "state comparison + continuity receipts"
+     ]
+    ],
+    "does_not_map": [
+     "life",
+     "autonomous self-regulation/feedback control unless implemented",
+     "continuous operation"
+    ]
+   },
+   "INFORMATION_PRESERVED": [
+    "lifecycle ordering",
+    "a regulatory intent"
+   ],
+   "INFORMATION_LOST": [
+    "that LIVE is not measured uptime",
+    "that no feedback control loop is established",
+    "who triggers transitions"
+   ],
+   "MISLEADING_INFERENCE_RISK": "HIGH for public audiences (life, autonomy); MEDIUM internally because explicit != guards exist on the homepage.",
+   "SAFE_USE_CONTEXT": "Internal naming with the guard list printed next to it (as the homepage does).",
+   "PROHIBITED_USE_CONTEXT": [
+    "claims of autonomy or self-regulation",
+    "uptime/availability claims",
+    "biological framing in research results"
+   ],
+   "leak_test": "Replace with REGISTERED / ACTIVE_EVENT_DRIVEN / STATE_RECONCILER; registry validators unchanged.",
+   "test_items": [
+    {
+     "item_id": "MP-10-C1",
+     "measure": "COMPREHENSION",
+     "stem": "What does BORN denote?",
+     "options": [
+      "The node is alive",
+      "A technical registry record exists",
+      "The node is running continuously"
+     ],
+     "answer_key": "A technical registry record exists"
+    },
+    {
+     "item_id": "MP-10-F1",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does LIVE status show the node is up right now?",
+     "options": [
+      "Yes",
+      "No — it is a dated registry assertion"
+     ],
+     "answer_key": "No — it is a dated registry assertion",
+     "false_inference_probe": "uptime import"
+    },
+    {
+     "item_id": "MP-10-F2",
+     "measure": "FALSE_INFERENCE",
+     "stem": "Does 'homeostasis' show the system self-corrects via feedback?",
+     "options": [
+      "Yes",
+      "No — not established"
+     ],
+     "answer_key": "No — not established",
+     "false_inference_probe": "control-loop import"
+    }
+   ]
+  }
+ ]
+}

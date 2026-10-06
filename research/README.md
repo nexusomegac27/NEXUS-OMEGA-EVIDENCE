@@ -46,3 +46,7 @@ Research publication is not live implementation. Promotion into stable `docs/sch
 - `research/fundus/` — cross-session C1 reference index; not a truth authority.
 
 These paths are research/checkpoint surfaces only. They do not imply production integration or activation.
+
+## R9 review lane
+
+- [r9/mistral-clean-room-20261006/](r9/mistral-clean-room-20261006/README.md): independent read-only R10R9 review order, not a reviewer return or execution release.

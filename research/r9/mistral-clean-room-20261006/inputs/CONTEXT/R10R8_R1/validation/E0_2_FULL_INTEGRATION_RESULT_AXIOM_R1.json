@@ -1,0 +1,161 @@
+{
+  "object": "E0_2_FULL_INTEGRATION_AXIOM_R1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "SYNTHETIC_FAIL_CLOSED_REGRESSION_ONLY",
+  "terminal_state": "PASS_C1_AXIOM_R1_FAIL_CLOSED_REGRESSION",
+  "cases": [
+    {
+      "name": "all_verified",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "authority_scope_mismatch",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "FALSIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "missing_provenance_parent",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "AIR_GAP",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "missing_gate2_state",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "AIR_GAP",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "missing_gate3_state",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "AIR_GAP",
+        "G4": "VERIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "missing_authority_capsule",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "FALSIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "missing_defeat_condition",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "AIR_GAP"
+      }
+    },
+    {
+      "name": "claim_above_ceiling_even_with_release",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "VERIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "FALSIFIED"
+      }
+    },
+    {
+      "name": "provenance_cycle",
+      "expected": "FALSIFIED",
+      "actual": "FALSIFIED",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "FALSIFIED",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    },
+    {
+      "name": "broken_parent_without_root_marker",
+      "expected": "AIR_GAP",
+      "actual": "AIR_GAP",
+      "passed": true,
+      "gate_states": {
+        "G1": "VERIFIED",
+        "G2": "VERIFIED",
+        "G3": "VERIFIED",
+        "G4": "AIR_GAP",
+        "G5": "VERIFIED",
+        "G6": "VERIFIED",
+        "G7": "VERIFIED"
+      }
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "caveat": "Passing synthetic fixtures does not establish production readiness, semantic truth, external validity, cryptographic authority, or empirical Soft-Lineage validation."
+}
