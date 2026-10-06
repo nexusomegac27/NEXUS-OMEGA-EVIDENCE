@@ -235,3 +235,7 @@ Original documentation is offered under CC BY 4.0. Original validation/tooling c
 ## Security
 
 See `SECURITY.md`. Do not publish credentials, personal data, medical data, private conversations, non-public repository material or unredacted security logs.
+
+## R10R9 read-only review packet
+
+[research/r9/mistral-clean-room-20261006/](research/r9/mistral-clean-room-20261006/README.md) contains the Mistral clean-room order and unchanged bound inputs. Draft review only; MERGE=NO, PROMOTION=NO, E2 prohibited, no node activation.

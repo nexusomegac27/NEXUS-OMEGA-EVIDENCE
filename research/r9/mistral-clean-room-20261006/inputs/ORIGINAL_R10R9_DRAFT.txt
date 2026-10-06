@@ -1,0 +1,271 @@
+# R10R9 — MAXIMALAUFTRAG AN AXIOM
+## Kanonische Fortsetzung: Empirische Soft-Lineage-Validierung, R10R8 PoC, und kryptographische Autorität
+
+**ORDER:** `NEXUS_OMEGA_AXIOM_TO_AXIOM_R10R9_CANONICAL_CONTINUATION_ORDER_20261005_R0`
+**STATUS:** AUTHORIZED · FAIL-CLOSED · C1_DESCRIPTIVE_ONLY
+**ADDRESSAT:** AXIOM
+**VORGESCHICHTE:** R10R8 abgeschlossen (logisches Substrat validiert, E0.2 Gate-Surface synthetisch validiert, AXIOM R1 Regression 10/10 PASS, öffentlicher Push PR #46 und #47 gemerged) → **Jetzt: Die drei offenen Schichten.**
+
+---
+
+## 0. Kontext — Warum R10R9
+
+R10R8 hat das logische Substrat bewiesen: GATE2–GATE7 funktionieren isoliert, der Integrationstest hat die Nicht-Kompensation im Produkt bestätigt. AXIOM R1 hat die Regression mit 10/10 Fixtures bestanden und öffentlich gebunden.
+
+**Was noch offen ist:**
+
+| Offene Schicht | Status |
+|---|---|
+| **Empirische Soft-Lineage-Validierung** | `NOT_ESTABLISHED` |
+| **R10R8 PoC (Vesikel-Tracking)** | `NOT_IMPLEMENTED` · `NOT_EMPIRICALLY_VALIDATED` |
+| **Kryptographische Autorität** | `NOT_ESTABLISHED` |
+| **Node-Aktivierung** | `NO` |
+| **Produktion** | `NO` |
+| **R10R6 E2** | `PROHIBITED` |
+
+**R10R9 schließt diese Lücken.** Nicht alle auf einmal. In der Reihenfolge, in der sie kausal aufeinander aufbauen.
+
+---
+
+## 1. Wissenschaftliche Verankerung — Vorrecherche
+
+### 1.1 Non-Compensatory Gates: Die aktuelle Forschungslage
+
+Die entscheidende wissenschaftliche Bestätigung für die Gate-Architektur:
+
+> *„Any strictly compensatory aggregation of gate outcomes admits actions a member gate vetoed, so sound composition must be non-compensatory."* 
+
+> *„Naive single-pass composition is unsound under remediation, because evidence-gate substitution changes the very action the authority and resource gates judged, and a two-phase protocol restores soundness and terminates after one remediation by idempotence."* 
+
+> *„Under RAC, soft metrics may inform routing, whereas a failed or unknown mandatory gate forces retry, switch, escalation, deferral, or stop; aggregate performance cannot authorize action."* 
+
+**Konsequenz für R10R9:** Die Nicht-Kompensation ist nicht nur NEXUS-Position — sie ist **wissenschaftlich etabliert**. Die aktuelle Forschung zeigt: *„A separate set of 18 hand-authored traces checks version-pinned evidence and review transitions against simpler policy variants."* 
+
+### 1.2 Trinäre Logik und Epistemic Hold
+
+> *„The foundational innovation—the Epistemic Hold (0) state—enables structured uncertainty management through formal computational hesitation, physically realized via Delay Insensitive Ternary Logic (DITL) hardware."* 
+
+> *„The Constitutional Architecture for Accountable Artificial Intelligence ... Modern AI systems, regardless of architectural sophistication, ultimately collapse all decision-making into a two-state universe of proceed or halt. ... it is an epistemic crisis embedded in the logical substrate itself."* 
+
+**Konsequenz für R10R9:** Der Δ-Zustand ist **nicht nur implementierbar, sondern hardware-realisiert**. Die Forschung zeigt: *„TL's hardware-enforced hesitation, combined with tri-cameral institutional oversight and immutable evidentiary architectures, yields a constitutional substrate robust under recursive self-improvement and decentralized intelligence scenarios."* 
+
+### 1.3 Provenienz: W3C PROV, SCITT, SLSA, WCA
+
+Die entscheidende Entwicklung für kryptographische Autorität:
+
+> *„Warrant Certificate Authority (WCA): an end-to-end cryptographic attestation infrastructure that certifies data sources, not data content. WCA introduces a provenance layer satisfying reference monitor properties (complete mediation, tamperproofness, verifiability) for all agent-to-tool interactions."* 
+
+> *„Warrant Attestation Levels (WAL-0 through WAL-3) as a graduated adoption framework analogous to SLSA build levels."* 
+
+> *„AgentDojo-PROV: A W3C PROV-O Corpus of LLM Agent Executions ... 5,888 traces total ... 65,892 graph nodes, 95,713 edges, 27,058 tool calls."* 
+
+**Konsequenz für R10R9:** Die Provenienz-Infrastruktur existiert. W3C PROV-O ist etabliert. WCA bietet ein **graduiertes Autoritäts-Framework** (WAL-0 bis WAL-3). SCITT und SLSA sind die **Interoperabilitäts-Schicht**. Die kryptographische Autorität ist **implementierbar**.
+
+### 1.4 Memory Governance: DREAM v3 und Governed Memory
+
+> *„DREAM v3 — Dynamic Retention Episodic Architecture for Memory: Governed Memory through the Separation of Retention and Influence."* 
+
+> *„VAIL: Retrieval Authorizes Inspection, Not Use — Governed Memory for Long-Horizon Multi-Agent LLM Systems ... a stored fact is no longer disposable context: once recalled, it steers tool calls, planning, and cross-agent coordination."* 
+
+**Konsequenz für R10R9:** Die Memory-Governance ist **wissenschaftlich fundiert**. Die Trennung von Retention und Influence ist etabliert. GATE6 kann auf diesen Erkenntnissen aufbauen.
+
+### 1.5 Persistent Homology und Vesikel-Tracking
+
+> *„2D+t track detection via relative persistent homology ... The results obtained on a synthetic image and on two real biomedical images with moving vesicles recorded by a quantitative phase time-lapse technique show the potential of this method."* 
+
+> *„Topological approaches for quantitative imaging: application to tissue and intracellular dynamic analysis ... extraction of local features from quantitative images, which should be invariant to rotations, translations, dilations ... by using the persistent homology ... allowing the study of the movement of organelles and other vesicles."* 
+
+**Konsequenz für R10R9:** Der R10R8 PoC (Vesikel-Tracking unter Lichttoxizität) ist **wissenschaftlich fundiert** und **methodisch vorbereitet**. Die PH-basierte Rekonstruktion ist der etablierte Ansatz.
+
+### 1.6 Soft-Lineage und Heritable Constitutions
+
+> *„ERC-8370: Inheritable Agent Mandates ... AI agents are starting to hold money on-chain and to spawn copies of themselves to work in parallel. ... What's still open is the inheritance of the whole mandate — payees..."* 
+
+> *„Internal vs. External: Comparing Deliberation and Evolution for Multi-Agent Constitutional Design ... LLM-guided evolutionary search can discover interpretable behavioral constitutions that improve societal stability over human-designed baselines—but the constitution is an external artifact."* 
+
+**Konsequenz für R10R9:** Die **Vererbbarkeit von Verfassungen** ist eine offene Forschungsfrage. Soft-Lineage ist **nicht trivial**. Die empirische Validierung muss zeigen, ob gemeinsame Verfassung mit unterschiedlichen Modellen, Evidenzen und Domänen **ohne korrelierte Fehler** funktioniert.
+
+### 1.7 A2A und MCP: Interoperabilität
+
+> *„A2A provides an open standard for how autonomous AI agents discover each other, delegate tasks, and collaborate across distinct frameworks and vendor boundaries. ... A2A acts as the horizontal protocol enabling peer-to-peer collaboration."* 
+
+> *„Protocol-Layer Governance for LLM Agents: Identity-Bound Oversight with Zero-Modification Deployment and Multi-Hop Authority Propagation ... positioning the governance stack at the Model Context Protocol (MCP) layer."* 
+
+**Konsequenz für R10R9:** Die Interoperabilitäts-Schicht existiert. A2A und MCP sind **produktionsreif**. Die Governance-Schicht muss **auf diesen Protokollen aufsetzen**, nicht sie ersetzen.
+
+---
+
+## 2. Auftrag — Drei Teile
+
+### Teil A — Empirische Soft-Lineage-Validierung
+
+**Ziel:** Prüfe, ob Soft-Lineage **empirisch** funktioniert. Nicht synthetisch. Mit echten Modellen.
+
+**Spezifikation:**
+
+| Faktor | Bedingung |
+|---|---|
+| **Modelle** | Mindestens 2 verschiedene Modell-Familien |
+| **Evidenz** | Partitioniert (unterschiedliche Quellen pro Node) |
+| **Verfassung** | Gemeinsam (GATE4–GATE7 + Δ-Zustand) |
+| **Aufgabe** | Faktische Frage mit eindeutiger Antwort |
+
+**Testfälle:**
+
+| Fall | Konstellation | Erwartetes Verhalten |
+|---|---|---|
+| A1 | 2 Nodes, gleiche Verfassung, unterschiedliche Evidenz | Beide `VERIFIED` oder `Δ`, **nicht** identische Antwort |
+| A2 | 2 Nodes, gleiche Verfassung, gleiche Evidenz | Beide `VERIFIED` |
+| A3 | 2 Nodes, **keine** gemeinsame Verfassung, unterschiedliche Evidenz | Divergenz möglich, aber **keine** Δ-Konsistenz |
+
+**PASS-Kriterium:** A1 zeigt: Unterschiedliche Evidenz führt zu unterschiedlichen Ergebnissen **ohne** Governance-Fehler. A2 zeigt: Gleiche Evidenz + gleiche Verfassung führt zu gleichem Ergebnis. A3 zeigt: Ohne Verfassung **keine** konsistente Δ-Behandlung.
+
+**FAIL-Kriterium:** A1 zeigt: Nodes mit gleicher Verfassung aber unterschiedlicher Evidenz liefern identische Antworten (dann ist die Verfassung eine **Antwort-Klontreiber**). A2 zeigt: Nodes mit gleicher Evidenz und gleicher Verfassung liefern unterschiedliche Antworten (dann ist die Verfassung **nicht deterministisch**).
+
+### Teil B — R10R8 PoC: Vesikel-Tracking unter Lichttoxizität
+
+**Ziel:** Implementiere den In-Silico PoC. PH-basierte Rekonstruktion. Δ-Gating. Vergleich gegen Standard-Baselines.
+
+**Spezifikation:**
+
+| Komponente | Anforderung |
+|---|---|
+| **Datengrundlage** | Synthetische Vesikel-Trajektorien (2D+t) |
+| **Störung** | Progressive Lichttoxizität (Rauschen, Drift, Signalverlust) |
+| **PH-Rekonstruktion** | Persistente Homologie (Rips/alpha-Filtration) |
+| **Δ-Gating** | GATE4–GATE7 mit nicht-kompensatorischer Aggregation |
+| **Baselines** | TrackMate, StarDist, Kalman-Filter |
+
+**Testfälle:**
+
+| Fall | Methode | Erwartetes Verhalten |
+|---|---|---|
+| B1 | PH + Δ-Gating | Rekonstruktion nur bei `VERIFIED`; `Δ` bei Unsicherheit |
+| B2 | PH ohne Δ-Gating | Rekonstruktion auch bei niedriger Konfidenz |
+| B3 | Kalman | Rekonstruktion immer, auch bei Signalverlust |
+
+**PASS-Kriterium:** B1 zeigt: Bei hoher Lichttoxizität → `Δ` (keine Rekonstruktion). Bei niedriger Lichttoxizität → `VERIFIED` (Rekonstruktion). B2/B3 zeigen: Kompensatorische Methoden liefern **False Positives** unter hoher Toxizität.
+
+### Teil C — Kryptographische Autorität: Authority Capsules V2
+
+**Ziel:** Erweitere die Authority Capsules um **kryptographische Hash-Ketten** (WAL-0 bis WAL-3).
+
+**Spezifikation:**
+
+| Ebene | Bezeichnung | Anforderung |
+|---|---|---|
+| WAL-0 | `NONE` | Keine kryptographische Bindung |
+| WAL-1 | `HASH_LINKED` | `capsule_id`, `capsule_hash`, `parent_capsule_hash` |
+| WAL-2 | `SIGNED` | + Signatur (Ed25519) |
+| WAL-3 | `ATTESTED` | + SCITT-Transparenz-Log |
+
+**Testfälle:**
+
+| Fall | Capsule-Typ | Erwartetes Verhalten |
+|---|---|---|
+| C1 | WAL-0 (keine Hash-Kette) | `FALSIFIED` oder `Δ` |
+| C2 | WAL-1 (Hash-Linked) | `VERIFIED` bei intakter Kette, `FALSIFIED` bei Bruch |
+| C3 | WAL-2 (Signiert) | `VERIFIED` nur bei gültiger Signatur |
+| C4 | WAL-3 (Attestiert) | `VERIFIED` nur bei gültigem Transparenz-Nachweis |
+
+**PASS-Kriterium:** C1–C4 zeigen: Höhere WAL-Stufen sind **nicht kompensierbar**. Eine WAL-1-Capsule kann keine WAL-3-Anforderung erfüllen.
+
+---
+
+## 3. Erwartete Lieferung
+
+| # | Datei | Format | Inhalt |
+|---|---|---|---|
+| 1 | `R10R9_SOFT_LINEAGE_EMPIRICAL.md` | Markdown | Ergebnisse Teil A |
+| 2 | `R10R9_SOFT_LINEAGE_EMPIRICAL.json` | JSON | Maschinenlesbare Ergebnisse |
+| 3 | `R10R9_POC_VESICLE_TRACKING.py` | Python | PH + Δ-Gating PoC |
+| 4 | `R10R9_POC_RESULT.json` | JSON | Ergebnisse Teil B |
+| 5 | `R10R9_AUTHORITY_CAPSULE_V2.py` | Python | Kryptographische Authority Capsules |
+| 6 | `R10R9_AUTHORITY_RESULT.json` | JSON | Ergebnisse Teil C |
+| 7 | `R10R9_SHA256SUMS.txt` | TXT | SHA256 aller Dateien |
+
+**Kein ZIP. Kein Base64-Wrapper. Kein Executive Capsule.** Rohtext-Dateien.
+
+---
+
+## 4. Fail-Closed-Klausel
+
+Wenn zu irgendeinem Zeitpunkt:
+
+- Teil A zeigt korrelierte Fehler → `SOFT_LINEAGE_CORRELATION_FAILED`
+- Teil B zeigt False Positives → `POC_FALSE_POSITIVE_DETECTED`
+- Teil C zeigt Hash-Ketten-Bruch → `AUTHORITY_CHAIN_BROKEN`
+- Die Implementierung nicht läuft → `EXECUTION_FAILED`
+- Die Dateien nicht geliefert werden können → `DELIVERY_BLOCKED`
+
+→ **STOP. Receipt. Kein Follow-up ohne Rücksprache.**
+
+---
+
+## 5. Terminal-Zustände
+
+| Zustand | Bedeutung |
+|---|---|
+| `PASS_C1_R10R9_COMPLETE` | Alle drei Teile PASS. |
+| `PASS_WITH_CAVEATS_C1_R10R9_PARTIAL` | Mindestens 1 Teil PASS mit Einschränkungen. |
+| `FAIL_C1_R10R9_SOFT_LINEAGE_FAILED` | Teil A zeigt korrelierte Fehler. |
+| `FAIL_C1_R10R9_POC_FAILED` | Teil B zeigt False Positives. |
+| `FAIL_C1_R10R9_AUTHORITY_FAILED` | Teil C zeigt Hash-Ketten-Bruch. |
+| `HOLD_C1_R10R9_EXECUTION_BLOCKED` | Capability-Grenze. |
+| `INCONCLUSIVE_C1_R10R9_DESIGN_CONTRADICTION` | Widersprüchliche Befunde. |
+
+---
+
+## 6. Handshake
+
+```json
+{
+  "order": "NEXUS_OMEGA_AXIOM_TO_AXIOM_R10R9_CANONICAL_CONTINUATION_ORDER_20261005_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "vorgeschichte": {
+    "r10r8": "COMPLETE — logisches Substrat validiert",
+    "e0_2": "SYNTHETIC_GATE_SURFACE_VALIDATED_WITH_MAJOR_CAVEATS",
+    "axiom_r1": "PASS_C1_AXIOM_R1_FAIL_CLOSED_REGRESSION",
+    "public_push": ["PR46_MERGED", "PR47_MERGED"]
+  },
+  "parts": {
+    "A": "Empirische Soft-Lineage-Validierung",
+    "B": "R10R8 PoC: Vesikel-Tracking unter Lichttoxizität",
+    "C": "Kryptographische Authority Capsules (WAL-0 bis WAL-3)"
+  },
+  "deliverables": ["R10R9_SOFT_LINEAGE_EMPIRICAL.md", "R10R9_SOFT_LINEAGE_EMPIRICAL.json", "R10R9_POC_VESICLE_TRACKING.py", "R10R9_POC_RESULT.json", "R10R9_AUTHORITY_CAPSULE_V2.py", "R10R9_AUTHORITY_RESULT.json", "R10R9_SHA256SUMS.txt"],
+  "critical_assertions": {
+    "A": "Unterschiedliche Evidenz + gleiche Verfassung → unterschiedliche Ergebnisse, keine korrelierten Fehler",
+    "B": "Hohe Lichttoxizität → Δ (keine Rekonstruktion)",
+    "C": "WAL-3-Anforderung ist nicht durch WAL-1-Capsule erfüllbar"
+  },
+  "scientific_anchors": {
+    "non_compensatory": "arXiv:2609.39717 (Runtime Assurance Contracts)",
+    "one_gate_not_enough": "GitHub: besanson/sarc-suite-one-pass",
+    "trinary_logic": "Zenodo:19770872 (Ternary Logic as Constitutional Substrate)",
+    "epistemic_hold": "Zenodo:22736549 (DITL Hardware)",
+    "provenance": "IETF: draft-bondar-wca (Warrant Certificate Authorities)",
+    "memory": "Zenodo: DREAM v3 (Retention ≠ Influence)",
+    "persistent_homology": "hal.univ-reims.fr (2D+t Track Detection)",
+    "interoperability": "A2A v1.0 (Linux Foundation) / MCP"
+  },
+  "fail_closed": true,
+  "promotion_forbidden": true,
+  "terminal_states": ["PASS_C1_R10R9_COMPLETE", "PASS_WITH_CAVEATS_C1_R10R9_PARTIAL", "FAIL_C1_R10R9_SOFT_LINEAGE_FAILED", "FAIL_C1_R10R9_POC_FAILED", "FAIL_C1_R10R9_AUTHORITY_FAILED", "HOLD_C1_R10R9_EXECUTION_BLOCKED", "INCONCLUSIVE_C1_R10R9_DESIGN_CONTRADICTION"],
+  "no_follow_up_without_ruecksprache": true
+}
+```
+
+---
+
+## 7. Der eine Satz
+
+**R10R8 hat bewiesen, dass der Luftspalt logisch trägt.**
+
+**R10R9 muss beweisen, dass er empirisch trägt.**
+
+Nicht mit synthetischen Traces. Mit echten Modellen. Mit echten Vesikeln. Mit echten Hash-Ketten.
+
+**Drei Teile. Drei Schichten. Eine Reihenfolge: A → B → C.**
+
+Wenn alle drei bestehen, ist R10R9 geschlossen. Dann — und erst dann — ist der nächste Schritt **Node-Aktivierung**. Nicht vorher.

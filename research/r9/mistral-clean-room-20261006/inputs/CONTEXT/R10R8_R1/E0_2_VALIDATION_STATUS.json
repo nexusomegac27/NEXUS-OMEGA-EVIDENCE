@@ -1,0 +1,31 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10R8_E0_2_VALIDATION_STATUS_20261005_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_R10R8_E0_2_SYNTHETIC_GATE_SURFACE_PUSHABLE_NOT_PRODUCTION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "outer_stack": {
+    "bytes": 211032,
+    "sha256": "7d18b9e53f24d0f7c76c3c2b7e11036b8ca65866cce7de994d6b383da1f7130f",
+    "zip_integrity": "PASS",
+    "entries": 82
+  },
+  "independently_rerun": {
+    "gate2": "PASS",
+    "gate3": "PASS",
+    "gate4": "PASS_FIXTURE",
+    "gate5": "PASS_FIXTURE",
+    "gate6": "PASS_FIXTURE",
+    "gate7": "PASS_FIXTURE",
+    "grok_full_integration": "SEMANTIC_4_OF_4_REPRODUCED_WITH_METHOD_CAVEATS",
+    "axiom_r1_fail_closed_regression": "10_OF_10_PASS"
+  },
+  "axiom_r1": {
+    "source_sha256": "50fa60258f92d84df82bbd1a9d5fb3f0f6233a8a11b8efdb16809579847199f1",
+    "result_sha256": "5d9e23d37b5593120e8dcb12e01da5e4d86538a6d6bf22224836605a539c87ae"
+  },
+  "empirical_soft_lineage_validation": "NOT_ESTABLISHED",
+  "r10r8_poc": "NOT_IMPLEMENTED_NOT_EMPIRICALLY_VALIDATED",
+  "cryptographic_authority": "NOT_ESTABLISHED",
+  "node_activation": "NO",
+  "r10r6_e2_execution": "PROHIBITED",
+  "production": "NO"
+}

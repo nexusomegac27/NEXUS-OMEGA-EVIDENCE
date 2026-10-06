@@ -1,0 +1,23 @@
+{
+  "object": "R10R9_MISTRAL_PACKAGE_INTAKE_20261006_R0",
+  "date": "2026-10-06",
+  "timezone": "Europe/Berlin",
+  "scope": "input integrity and review transport only",
+  "core_objects_exact_match": 4,
+  "zip_crc": "PASS",
+  "zip_entries": 29,
+  "g24_matches": 28,
+  "g00_g25_separate_attachments": "exact match to ZIP members",
+  "ledger_rows": 193,
+  "ledger_columns": 15,
+  "ledger_distinct_source_count": "181 reported by producer; not independently semantically adjudicated",
+  "r10r8_original_source_result": "both match public receipt digests",
+  "r10r8_r1_source_result": "both match public receipt digests",
+  "baseline_main": "c07d4378ff9aa147ad200f97a7c4aaaf9878b274",
+  "pr45_head": "73b8596a93afc04ca445f96420e4293a0b83c87f",
+  "pr45_state": "OPEN_UNMERGED observed via GitHub API",
+  "reviewer_executed": false,
+  "research_programs_executed": false,
+  "claim_promotion": false,
+  "no_silent_repairs": true
+}

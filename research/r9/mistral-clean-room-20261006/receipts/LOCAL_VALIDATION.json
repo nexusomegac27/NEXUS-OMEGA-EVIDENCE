@@ -1,0 +1,21 @@
+{
+  "object": "R10R9_REVIEW_PACKAGE_LOCAL_VALIDATION_20261006_R0",
+  "scope": "package integrity and repository placement; not Mistral review",
+  "core_hash_matches": 4,
+  "g24_hash_matches": 28,
+  "package_verifier": "PASS_BYTE_INTEGRITY_ONLY",
+  "repository_structure": "PASS",
+  "repository_structure_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "diff_check_authored_files": "PASS",
+  "diff_check_historical_inputs": "whitespace/CRLF warnings preserved deliberately to retain exact original hashes; no raw repair",
+  "empirical_programs_executed": false,
+  "r10r6_e2_executed": false,
+  "gate_programs_executed": false,
+  "hosted_ci": "NOT_YET_OBSERVED_AT_SEAL",
+  "remote_verification": "recorded after transport in external delivery receipt",
+  "reviewer_execution": "NOT_ESTABLISHED",
+  "promotion": false
+}

@@ -1,0 +1,25 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10R9_FINAL_CLOSURE_HANDSHAKE_20261006_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "terminal_state": "PASS_WITH_MAJOR_CAVEATS_C1_R10R9_RESEARCH_CYCLE_CLOSED",
+  "source_branch": "review/r10r9-final-closure-20261006",
+  "parent_pr": 48,
+  "parent_head": "a9bfddf6f9abe6af27d4b76a8a3a3859adedd777",
+  "external_streams": {
+    "grok_bot": "BOUND",
+    "vibe": "HISTORICAL_SUBSTITUTE_REPORTED",
+    "autoclaw": "BOUND_STREAM_3"
+  },
+  "autoclaw_package_sha256": "c658aedc9d7288a6bdbfa9b05133f5e0980c241352759c5de22f17dcc30b49f7",
+  "autoclaw_sha256sums_sha256": "def8a8f68bf2b28b20342ccf9a5ab9bfd46f98a0b01f2f4dada9a7e7851d9d30",
+  "empirical_execution_released": false,
+  "e2_executed": false,
+  "b0_executed": false,
+  "b1_executed": false,
+  "part_c_executed": false,
+  "node_activation": false,
+  "production": false,
+  "claim_promotion": false,
+  "merge_authorized": false,
+  "r10_state": "IDEA_ONLY_NOT_BOUND_IN_THIS_PUSH"
+}

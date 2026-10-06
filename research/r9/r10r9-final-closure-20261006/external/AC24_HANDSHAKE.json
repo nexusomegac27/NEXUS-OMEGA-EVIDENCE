@@ -1,0 +1,28 @@
+{
+  "object": "AC24_HANDSHAKE",
+  "executor": "AUTOCLAW",
+  "actual_executor": "AUTOCLAW",
+  "historical_substitute": "VIBE",
+  "vibe_is_not_autoclaw": true,
+  "input_pr": 48,
+  "input_head": "a9bfddf6f9abe6af27d4b76a8a3a3859adedd777",
+  "git_write": false,
+  "hostinger_write": false,
+  "e2_executed": false,
+  "b0_executed": false,
+  "b1_executed": false,
+  "part_c_executed": false,
+  "node_activation": false,
+  "claim_promotion": false,
+  "execution_release": false,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "terminal_state": "REVISE_C1_GROK_VIBE_AXIS_WITH_MATERIAL_CORRECTIONS",
+  "ac00_sha256": "0f6a988a44c6d1d414b6c998ac0452a7bb47c8a96c592bef2041c1a7af31b544",
+  "manifest_sha256": "308f2479c34f5b355db4585320d8b1755aa3f2d231d552c9e9b36f06515074f9",
+  "timestamp_utc": "2026-10-06T04:49:29.318187+00:00",
+  "notes": [
+    "Unknowns remain as documented in AC20/AC21/AC22.",
+    "No release; AXIOM adjudication is the next step.",
+    "VIBE denotes the historical substitute stream; AUTOCLAW is the new stream 3."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_R10R9_FINAL_STATUS_20261006_R0",
+  "state": "PASS_WITH_MAJOR_CAVEATS_C1_R10R9_RESEARCH_CYCLE_CLOSED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_review_pr": 48,
+  "parent_review_head": "a9bfddf6f9abe6af27d4b76a8a3a3859adedd777",
+  "grok_bot_terminal": "REDUCE_C1_R10R9_TO_EXISTING_STANDARDS_AND_METHODS",
+  "autoclaw_terminal": "REVISE_C1_GROK_VIBE_AXIS_WITH_MATERIAL_CORRECTIONS",
+  "autoclaw_package": {
+    "bytes": 93259,
+    "sha256": "c658aedc9d7288a6bdbfa9b05133f5e0980c241352759c5de22f17dcc30b49f7",
+    "zip_integrity": "PASS",
+    "sha256sums_sha256": "def8a8f68bf2b28b20342ccf9a5ab9bfd46f98a0b01f2f4dada9a7e7851d9d30",
+    "listed_objects_verified": "25_OF_25_MATCH"
+  },
+  "lanes": {
+    "part_a_arch_a1": "REDUCE_TO_STANDARD_POLICY_CONFIGURATION_TEST",
+    "part_a_arch_a2": "SPECIFIED_NOT_IMPLEMENTED",
+    "part_b0": "DESIGN_READY_PENDING_FREEZE_NOT_EXECUTED",
+    "part_b1": "HOLD_REAL_DATA_NOT_EXECUTED",
+    "part_c": "HOLD_TRUST_MODEL_PROFILE_REDUCTION_SUPPORTED_NOT_EXECUTED",
+    "claim_ceiling_enforcement": "SYNTHETIC_FIXTURE_SUPPORTED_ONLY",
+    "watch_residual": "DESIGN_CANDIDATE_NOT_IMPLEMENTED"
+  },
+  "semantic_negative_knowledge": [
+    "FAIL_CLOSED_EQUIVALENCE != SEMANTIC_EQUIVALENCE",
+    "HASH_MATCH != REFERENT_MATCH",
+    "VALID_ARTIFACT != CORRECT_CAUSAL_POSITION",
+    "HANDOFF != EXECUTION",
+    "SIGNED != AUTHORIZED",
+    "REGISTERED != TRUE"
+  ],
+  "r10r6_e2": "PROHIBITED",
+  "empirical_soft_lineage_validation": "NOT_ESTABLISHED",
+  "cryptographic_authority": "NOT_ESTABLISHED",
+  "node_activation": "NO",
+  "production": "NO",
+  "r10": "IDEA_ONLY_NOT_BOUND_IN_THIS_PUSH"
+}
