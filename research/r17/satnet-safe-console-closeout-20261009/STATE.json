@@ -1,0 +1,27 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R17_SATNET_SAFE_SOURCE_IMPLEMENTATION_AND_PUSH_RETURN_20261009_R0",
+  "state": "PASS_WITH_CAVEATS_C1_BRANCH_PUSH_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "promotion": false,
+  "hostinger_write": false,
+  "rf_tx": false,
+  "map_sandbox": "HOLD",
+  "g4_real_24h": "NOT_RUN",
+  "twelve_mandatory_returns": "ABSENT",
+  "merge_to_main": false,
+  "tests": {
+    "file": "scripts/astra-relay-policy.test.mjs",
+    "pass": 11,
+    "fail": 0,
+    "suites": 8
+  },
+  "handoff_zip": {
+    "bytes": 2450236,
+    "sha256": "8e963377f93f8fd0de7e8a2a42e986d529ce118733b9171808c587538ece479d",
+    "entries": 13,
+    "match": true
+  },
+  "branch": "codex/r17-satnet-safe-console-closeout-20261009",
+  "namespace": "R17_SATNET_SAFE_CONSOLE_CLOSEOUT",
+  "r18_scope": "NOT_EXECUTED"
+}
