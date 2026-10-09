@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus.omega/schema/c1_receipt_r14.json",
+  "title": "NEXUS_OMEGA_C1_RECEIPT_SCHEMA_R14",
+  "description": "Manipulationsnachweisbarer C1 Receipt for REAL_SATELLITE_SIGNAL → LOCAL_DECODE. PREPARE_ONLY specification; no instance generated under R14.",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "capture_sha256",
+    "capture_start_utc",
+    "clock_uncertainty",
+    "receiver_identity",
+    "decoder_version",
+    "decoder_config_sha256",
+    "decoded_payload_sha256",
+    "signal_source_classification",
+    "validation_status",
+    "parent_receipt_sha256",
+    "execution_environment",
+    "evidence_level"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "description": "Unique opaque identifier for this receipt (UUID or equivalent).",
+      "minLength": 8
+    },
+    "capture_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 of the raw I/Q (or equivalent) capture file."
+    },
+    "capture_start_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of the first sample of the capture."
+    },
+    "clock_uncertainty": {
+      "type": "string",
+      "description": "Maximum estimated absolute time error, e.g. '±50ms_NTP' or '±1us_GPSDO'."
+    },
+    "receiver_identity": {
+      "type": "object",
+      "required": ["hardware_model", "software_stack"],
+      "properties": {
+        "hardware_model": { "type": "string" },
+        "serial_or_id": { "type": ["string", "null"] },
+        "antenna": { "type": "string" },
+        "lna_or_preamp": { "type": ["string", "null"] },
+        "software_stack": { "type": "string", "description": "GNU Radio + gr-satellites + Soapy versions" }
+      }
+    },
+    "decoder_version": {
+      "type": "string",
+      "description": "Exact version string of gr-satellites (or equivalent) used."
+    },
+    "decoder_config_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 of the exact command line, SatYAML, or .grc configuration used."
+    },
+    "decoded_payload_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 of the final decoded frames / KISS / telemetry output."
+    },
+    "signal_source_classification": {
+      "type": "string",
+      "enum": [
+        "REAL_SATELLITE_OVER_THE_AIR",
+        "PUBLIC_REFERENCE_RECORDING",
+        "SYNTHETIC_OR_SIMULATED",
+        "FIXTURE_ONLY",
+        "UNKNOWN_OR_UNVERIFIED"
+      ],
+      "description": "Explicit classification; SHA-256 alone never proves satellite origin."
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": [
+        "QUALIFIED_C1_CANDIDATE",
+        "INCOMPLETE",
+        "FAILED_POSITIVE_CONTROL",
+        "FAILED_NEGATIVE_CONTROL",
+        "HOLD",
+        "NOT_RUN"
+      ]
+    },
+    "parent_receipt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 of the immediate parent receipt or of the R13 consolidated C1 when this is the first empirical receipt."
+    },
+    "execution_environment": {
+      "type": "object",
+      "properties": {
+        "hostname_or_id": { "type": "string" },
+        "os": { "type": "string" },
+        "cpu_arch": { "type": "string" },
+        "container_or_vm": { "type": ["string", "null"] },
+        "git_commit_or_image_hash": { "type": ["string", "null"] }
+      }
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": ["C0_ASSERTION", "C1_DESCRIPTIVE", "C2_REPRODUCIBLE", "C3_INDEPENDENTLY_VERIFIED"],
+      "description": "Scientific claim ceiling of this receipt. R14 remains C1."
+    },
+    "satellite_identity": {
+      "type": "object",
+      "description": "Optional but strongly recommended for QUALIFIED status.",
+      "properties": {
+        "norad_id": { "type": "integer" },
+        "name": { "type": "string" },
+        "tle_epoch": { "type": "string" },
+        "tle_set_sha256": { "type": ["string", "null"] }
+      }
+    },
+    "integrity_notes": {
+      "type": "string",
+      "description": "Free-text notes on any remaining uncertainty, missing fields, or adversarial checks performed."
+    },
+    "created_utc": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "receipt_id": "example-only-not-issued",
+      "capture_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "capture_start_utc": "2026-10-09T00:00:00Z",
+      "clock_uncertainty": "±50ms_NTP",
+      "receiver_identity": {
+        "hardware_model": "RTL-SDR Blog V3",
+        "serial_or_id": null,
+        "antenna": "VHF/UHF dual-band vertical",
+        "lna_or_preamp": null,
+        "software_stack": "GNU Radio 3.10.x / gr-satellites 5.x"
+      },
+      "decoder_version": "gr-satellites 5.9.0",
+      "decoder_config_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "decoded_payload_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "signal_source_classification": "UNKNOWN_OR_UNVERIFIED",
+      "validation_status": "NOT_RUN",
+      "parent_receipt_sha256": "905edf392236270bcf58e78e7673b5832bf3e1eefffec40b911c435c7b26369e",
+      "execution_environment": {
+        "hostname_or_id": "prepare-only-sandbox",
+        "os": "linux",
+        "cpu_arch": "x86_64",
+        "container_or_vm": null,
+        "git_commit_or_image_hash": null
+      },
+      "evidence_level": "C1_DESCRIPTIVE",
+      "integrity_notes": "Schema definition only. No empirical receipt issued under R14 PREPARE_ONLY."
+    }
+  ]
+}
