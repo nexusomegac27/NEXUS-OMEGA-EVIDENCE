@@ -1,0 +1,31 @@
+name: Validate R21 ASTRA-NAV source and photo zoom foundations
+
+on:
+  pull_request:
+    paths:
+      - 'docs/r21/**'
+      - 'research/r21/**'
+      - 'examples/r21/**'
+      - 'tests/r21/**'
+      - '.github/workflows/validate-r21-astra-nav.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  zoom-provenance-and-offline-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check zoom adapter syntax
+        run: node --check examples/r21/orbis-astra-nav-photo-lod.mjs
+      - name: Run reference negative fixtures
+        run: node --test tests/r21/orbis-astra-nav-photo-lod.test.mjs
+      - name: Check machine-readable source register
+        run: |
+          node --input-type=module -e "import fs from 'node:fs'; const x=JSON.parse(fs.readFileSync('research/r21/orbis-astra-nav-primary-source-register.json','utf8'));if(!Array.isArray(x.candidates)||x.candidates.length<10)process.exit(1);if(x.candidates.some(c=>!c.documentation||!c.license_reference||c.vendor_ingested!==false))process.exit(2)"
