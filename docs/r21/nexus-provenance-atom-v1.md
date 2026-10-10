@@ -43,7 +43,7 @@ Damit werden Denker und Quellen nicht geloescht, sondern als bleibende Herkunfts
 }
 ```
 
-Maschinenlesbares Schema: `schemas/r21/nexus-provenance-atom-v1.schema.json`
+Maschinenlesbares Schema (kanonische Domain `schema`, siehe REPOSITORY_PATH_RULES): `schema/r21/nexus-provenance-atom-v1.schema.json`
 Referenz-Validator: `examples/r21/nexus-provenance-atom.mjs`
 
 ## Feldregeln (fail-closed)

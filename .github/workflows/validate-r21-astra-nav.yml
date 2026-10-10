@@ -7,7 +7,7 @@ on:
       - 'research/r21/**'
       - 'examples/r21/**'
       - 'tests/r21/**'
-      - 'schemas/r21/**'
+      - 'schema/r21/**'
       - '.github/workflows/validate-r21-astra-nav.yml'
   workflow_dispatch:
 
@@ -36,7 +36,7 @@ jobs:
       - name: Run R21.1 provenance atom fail-closed fixtures
         run: node --test tests/r21/nexus-provenance-atom.test.mjs
       - name: Check provenance atom JSON schema parses
-        run: node --input-type=module -e "import fs from 'node:fs'; JSON.parse(fs.readFileSync('schemas/r21/nexus-provenance-atom-v1.schema.json','utf8'));"
+        run: node --input-type=module -e "import fs from 'node:fs'; JSON.parse(fs.readFileSync('schema/r21/nexus-provenance-atom-v1.schema.json','utf8'));"
       - name: Check machine-readable source register
         run: |
           node --input-type=module -e "import fs from 'node:fs'; const x=JSON.parse(fs.readFileSync('research/r21/orbis-astra-nav-primary-source-register.json','utf8'));if(!Array.isArray(x.candidates)||x.candidates.length<10)process.exit(1);if(x.candidates.some(c=>!c.documentation||!c.license_reference||c.vendor_ingested!==false))process.exit(2)"
