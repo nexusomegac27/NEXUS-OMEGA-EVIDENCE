@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:r21r1:nexus-nav-fix:v1",
+  "title": "NEXUS OMEGA R21R1 WP-G2 native GNSS-only navigation fix contract",
+  "description": "C1 descriptive-only. Structural contract only; the fail-closed reference validator is examples/r21/r21r1/nexus-nav-fix.mjs. A GNSS-only claim additionally requires a witnessed network-disabled hardware test; a structurally valid fix is never more than SOURCE_REPORTED_GNSS.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "claim_ceiling",
+    "provider",
+    "permission_state",
+    "device_local_private",
+    "location",
+    "gnss_status",
+    "assistance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "nexus-nav-fix/v1"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "nexus_link_verified": {
+      "const": false
+    },
+    "provider": {
+      "const": "GPS_PROVIDER"
+    },
+    "permission_state": {
+      "const": "GRANTED"
+    },
+    "device_local_private": {
+      "const": true
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "latitude",
+        "longitude",
+        "horizontal_accuracy_m",
+        "utc",
+        "elapsed_realtime_nanos",
+        "is_mock"
+      ],
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "altitude_m": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "horizontal_accuracy_m": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 500
+        },
+        "utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "elapsed_realtime_nanos": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "is_mock": {
+          "const": false
+        }
+      }
+    },
+    "gnss_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "satellites_visible",
+        "satellites_used_in_fix"
+      ],
+      "properties": {
+        "satellites_visible": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "satellites_used_in_fix": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "assistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class"
+      ],
+      "properties": {
+        "class": {
+          "enum": [
+            "ASSISTANCE_UNKNOWN",
+            "OFFLINE_NETWORK_DISABLED_TEST_VERIFIED"
+          ]
+        },
+        "witness": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "airplane_mode_on",
+            "wifi_enabled",
+            "cell_data_enabled",
+            "network_connected",
+            "observed_utc"
+          ],
+          "properties": {
+            "airplane_mode_on": {
+              "const": true
+            },
+            "wifi_enabled": {
+              "const": false
+            },
+            "cell_data_enabled": {
+              "const": false
+            },
+            "network_connected": {
+              "const": false
+            },
+            "observed_utc": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    }
+  }
+}

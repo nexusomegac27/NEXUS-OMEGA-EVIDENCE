@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:r21r1:nexus-nav-event:v1",
+  "title": "NEXUS OMEGA R21R1 WP-G6 node navigation event contract",
+  "description": "C1 descriptive-only. Synthetic producer/consumer contract for the node symbiosis interface. A SOFTWARE_ONLY node can never claim a hardware GNSS fix; no HOMEOSTASIS life receipts are altered and no Elite births are implied.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "claim_ceiling",
+    "event_id",
+    "event_kind",
+    "source_utc",
+    "node",
+    "location_evidence_class",
+    "privacy_class"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "nexus-nav-event/v1"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "event_kind": {
+      "enum": [
+        "POSITION_OBSERVED",
+        "MAP_VIEW",
+        "ROUTE_COMPUTED",
+        "PACK_PUBLISHED"
+      ]
+    },
+    "source_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node_id",
+        "capability_class"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "capability_class": {
+          "enum": [
+            "SOFTWARE_ONLY",
+            "GNSS_HARDWARE_BOUND",
+            "OFFLINE_PACK_PRODUCER"
+          ]
+        }
+      }
+    },
+    "location_evidence_class": {
+      "enum": [
+        "NONE",
+        "MAP_CAMERA_ONLY",
+        "NAV_FIX_V1"
+      ]
+    },
+    "nav_fix_ref": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "fix_sha256"
+      ],
+      "properties": {
+        "fix_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "fix_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "map_pack_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance_atom_ref": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "atom_sha256"
+      ],
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+([-_.][a-z0-9]+)*$"
+        },
+        "atom_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "privacy_class": {
+      "const": "DEVICE_LOCAL_PRIVATE"
+    },
+    "receipt": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "receipt_id",
+        "receipt_sha256"
+      ],
+      "properties": {
+        "receipt_id": {
+          "type": "string",
+          "minLength": 8
+        },
+        "receipt_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "nexus-r21r1-production-fileset-manifest/v1",
+  "object_id": "NEXUS_OMEGA_R21R1_ASTRA_NAV_P0_PRODUCTION_FILESET_MANIFEST_20261010_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "ADDITIVE_ORBIS_ASTRA_NAV_ONLY",
+  "source_commit": "d73d0965f0e11488b1d84836a63146c4bfa4bb76",
+  "generated_utc": "2026-10-10T08:42:43Z",
+  "note": "Fileset-Proof aus der Source-Lane (CI-verifiziert). Kein Hostinger-Write, kein oeffentlicher Readback, kein Deploy-Nachweis.",
+  "files": [
+    {
+      "route_relative_path": "/orbis/astra-nav/index.html",
+      "source_repo_path": "examples/r21/astra-nav-p0/index.html",
+      "sha256": "83a6fec4d6f57072e91623ed58c389da334ccc7523cf89fa0c89bcd77566ee1c",
+      "bytes": 3000,
+      "byte_verification_witness": {
+        "method": "GIT_BLOB_SHA1_RECONSTRUCTION",
+        "git_blob_sha1": "19a170be0f81d5a44483e3d66f1b15bf444fbfb3",
+        "verified_against_parent_main": "3f45b4aae681c1b2e4e7dd2d8c25ffbba736b146"
+      }
+    },
+    {
+      "route_relative_path": "/orbis/astra-nav/app.mjs",
+      "source_repo_path": "examples/r21/astra-nav-p0/app.mjs",
+      "sha256": "6b631a0a3081c1c50e690764db477f875f1bf81cea6330a8c5905ff098ddd861",
+      "bytes": 4184,
+      "byte_verification_witness": {
+        "method": "GIT_BLOB_SHA1_RECONSTRUCTION",
+        "git_blob_sha1": "a3984fd606556ff239ccf08de781ff2a9e6da648",
+        "verified_against_parent_main": "3f45b4aae681c1b2e4e7dd2d8c25ffbba736b146"
+      }
+    },
+    {
+      "route_relative_path": "/orbis/astra-nav/ui-model.mjs",
+      "source_repo_path": "examples/r21/astra-nav-p0/ui-model.mjs",
+      "sha256": "985f3d950a335df8163759d3bd7370f3001ddbd0584f65abe48305ffcd443a30",
+      "bytes": 4313,
+      "byte_verification_witness": {
+        "method": "GIT_BLOB_SHA1_RECONSTRUCTION",
+        "git_blob_sha1": "20b259a653950c43258e45f578ff6223c91634ef",
+        "verified_against_parent_main": "3f45b4aae681c1b2e4e7dd2d8c25ffbba736b146"
+      }
+    },
+    {
+      "route_relative_path": "/orbis/astra-nav/style.css",
+      "source_repo_path": "examples/r21/astra-nav-p0/style.css",
+      "sha256": "1330a0e28433f2031ce5f40d384216876634d7e4db1e3bf90abcffb733d9cb0e",
+      "bytes": 2796,
+      "byte_verification_witness": {
+        "method": "GIT_BLOB_SHA1_RECONSTRUCTION",
+        "git_blob_sha1": "d5a3bbaaf1a10766a91f74fc4aaf408ed320fb5f",
+        "verified_against_parent_main": "3f45b4aae681c1b2e4e7dd2d8c25ffbba736b146"
+      }
+    }
+  ]
+}

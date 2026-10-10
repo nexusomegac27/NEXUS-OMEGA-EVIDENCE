@@ -1,0 +1,66 @@
+{
+  "schema_version": "nexus-r21r1-www-closeout/v1",
+  "object_id": "NEXUS_OMEGA_R21R1_WWW_CLOSEOUT_RECEIPT_ASTRA_NAV_P0_PENDING_20261010_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "nexus_link_verified": false,
+  "terminal_state": "NOT_LIVE_VERIFIED",
+  "production_fileset": {
+    "state": "PASS",
+    "source_commit": "d73d0965f0e11488b1d84836a63146c4bfa4bb76",
+    "files": [
+      {
+        "route_relative_path": "/orbis/astra-nav/index.html",
+        "expected_sha256": "83a6fec4d6f57072e91623ed58c389da334ccc7523cf89fa0c89bcd77566ee1c",
+        "bytes": 3000
+      },
+      {
+        "route_relative_path": "/orbis/astra-nav/app.mjs",
+        "expected_sha256": "6b631a0a3081c1c50e690764db477f875f1bf81cea6330a8c5905ff098ddd861",
+        "bytes": 4184
+      },
+      {
+        "route_relative_path": "/orbis/astra-nav/ui-model.mjs",
+        "expected_sha256": "985f3d950a335df8163759d3bd7370f3001ddbd0584f65abe48305ffcd443a30",
+        "bytes": 4313
+      },
+      {
+        "route_relative_path": "/orbis/astra-nav/style.css",
+        "expected_sha256": "1330a0e28433f2031ce5f40d384216876634d7e4db1e3bf90abcffb733d9cb0e",
+        "bytes": 2796
+      }
+    ],
+    "scope_class": "ADDITIVE_ORBIS_ASTRA_NAV_ONLY",
+    "rollback_witness": null,
+    "observed_utc": null
+  },
+  "hostinger_scoped_write": {
+    "state": "PENDING",
+    "source_commit": null,
+    "writer_role": null,
+    "write_receipt_id": null,
+    "file_hashes_match": null,
+    "observed_utc": null
+  },
+  "independent_public_readback": {
+    "state": "PENDING",
+    "url": "https://www.nexus-mobile.de/orbis/astra-nav/",
+    "independent_reviewer": null,
+    "observed_utc": null,
+    "http_body_sha256": null,
+    "browser_map_tiles_visible": null,
+    "attribution_visible": null,
+    "desktop_mobile_pass": null,
+    "r19_regression_pass": null,
+    "asset_sha256_receipt": null
+  },
+  "material_caveats": [
+    "Fileset-Proof beruht auf CI-Verifikation der Source-Lane; kein Hostinger-Write erfolgt.",
+    "Kein unabhaengiger Browser-/HTTP-Readback beobachtet.",
+    "G2 GNNS-Referenz ist STATIC_OR_BUILD_VALIDATED_NOT_HARDWARE_TESTED (kein Geraetetest).",
+    "R21 als Gesamtplattform bleibt offen."
+  ],
+  "source_lineage": [
+    "PARENT_MAIN = 3f45b4aae681c1b2e4e7dd2d8c25ffbba736b146 (PR #59, AXIOM R21R1-Auftrag)",
+    "AXIOM R21R1 CAUSAL EXECUTION MAXI ORDER 2026-10-10 R0"
+  ]
+}

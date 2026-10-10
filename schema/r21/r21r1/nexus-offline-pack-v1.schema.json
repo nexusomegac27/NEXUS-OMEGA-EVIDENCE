@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:r21r1:nexus-offline-pack:v1",
+  "title": "NEXUS OMEGA R21R1 WP-G3 disconnected map and routing pack contract",
+  "description": "C1 descriptive-only. Fail-closed rule: NO_PACK_NO_ROUTE. A pack without a routing graph never yields a routing claim; a GNSS fix is independent of route availability. The reference validator is examples/r21/r21r1/offline-pack.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "claim_ceiling",
+    "pack_id",
+    "pack_kind",
+    "pack_revision",
+    "region",
+    "produced_utc",
+    "producer",
+    "data_license_id",
+    "archives",
+    "min_client_version",
+    "provenance_atom_ref",
+    "update_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "nexus-offline-pack/v1"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "pack_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "pack_kind": {
+      "enum": [
+        "VECTOR_MAP",
+        "DEM",
+        "ROUTING_GRAPH",
+        "ORTHOPHOTO"
+      ]
+    },
+    "pack_revision": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "bbox_wsen"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bbox_wsen": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "produced_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_license_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "file_name",
+          "sha256",
+          "bytes"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "map_tiles",
+              "routing_graph",
+              "dem",
+              "orthophoto",
+              "attribution_manifest"
+            ]
+          },
+          "file_name": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "min_client_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "routing": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "engine",
+        "engine_version",
+        "profile"
+      ],
+      "properties": {
+        "engine": {
+          "enum": [
+            "valhalla",
+            "brouter",
+            "graphhopper"
+          ]
+        },
+        "engine_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "companion_pack_revisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "provenance_atom_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "atom_sha256"
+      ],
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+([-_.][a-z0-9]+)*$"
+        },
+        "atom_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "inline_provenance_atom": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Required for ORTHOPHOTO packs; must additionally pass the R21.1 provenance atom validator."
+    },
+    "valid_until_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "update_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rollback_supported"
+      ],
+      "properties": {
+        "rollback_supported": {
+          "const": true
+        },
+        "supersedes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        }
+      }
+    }
+  }
+}
