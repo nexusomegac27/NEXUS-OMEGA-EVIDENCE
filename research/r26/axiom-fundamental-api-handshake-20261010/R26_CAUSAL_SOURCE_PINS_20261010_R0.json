@@ -1,0 +1,80 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_CAUSAL_SOURCE_PINS_20261010_R0",
+  "created_date": "2026-10-10",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "main_parent_commit": "2da6ea1b22516cd3ea4f1cd0f722659aafe3baeb",
+  "phase_parents": [
+    {
+      "pr": 66,
+      "phase": "R24",
+      "state": "MERGED_OPERATOR_CLOSED_ADMINISTRATIVE",
+      "sha": "2da6ea1b22516cd3ea4f1cd0f722659aafe3baeb"
+    },
+    {
+      "pr": 67,
+      "phase": "R25_ARCHIVE",
+      "state": "OPEN_UNMERGED_PRIVACY_HISTORY_HOLD",
+      "sha": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    },
+    {
+      "pr": 65,
+      "phase": "NA1",
+      "state": "OPEN_UNMERGED_SCIENCE_HOLD",
+      "sha": "17e0a3275ad9749458e251b1ec4eb07348b2c5ee"
+    }
+  ],
+  "cursor_existing_bind": "56ca8ca2-1d92-4c63-927f-87f32b7f2ed1",
+  "cursor_terminal": "PENDING_RECEIPT",
+  "r25_five_originals": [
+    {
+      "path": "research/r25/external-expert-archive-20261010/R25-00_EXECUTIVE_ADJUDICATION_BRIEF.md",
+      "bytes": 5297,
+      "sha256": "38c2efcc6a5edda5021198d9e81ba9b58422fd6d546cbb03da3254c63dc92b2a",
+      "git_blob_sha1": "96555803000fefeecca21a6e44f42bc0a5854740",
+      "verified_from_head": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    },
+    {
+      "path": "research/r25/external-expert-archive-20261010/R25-03_RING_AND_ORBIT_ERROR_MODEL.md",
+      "bytes": 4811,
+      "sha256": "e7eabdf30eff378ea54766f1220fa7aa9b6f6ec634c72b9b10ccb411e8058b1b",
+      "git_blob_sha1": "de61f399f825e9e4a09d93c62edf3647d960550b",
+      "verified_from_head": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    },
+    {
+      "path": "research/r25/external-expert-archive-20261010/R25-05_E1_E2_CAUSAL_AUDIT.md",
+      "bytes": 4084,
+      "sha256": "f627e23875eaff52795c550a46cc6a9cd876d9b32cd3abceca472ecafd72880f",
+      "git_blob_sha1": "6c34052b67f0d29127076bb6c503d545041d09ae",
+      "verified_from_head": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    },
+    {
+      "path": "research/r25/external-expert-archive-20261010/R25-07_ADVERSARIAL_REVIEW.md",
+      "bytes": 4134,
+      "sha256": "ca2fa0cbf00cbd02150ccbd962faee7a4c43ebd978696b1afdb19b0aec9c959a",
+      "git_blob_sha1": "94f756cdc35a2b99dc4e55ad0e1bedd591fb29b9",
+      "verified_from_head": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    },
+    {
+      "path": "research/r25/external-expert-archive-20261010/R25-09_RETURN_MANIFEST.json",
+      "bytes": 3103,
+      "sha256": "33bbf4b101b42888fdb60f40a22384b4780936a60b640112e1de80db248c21a4",
+      "git_blob_sha1": "d1c1eb6f4c5e9185d5b917b6796312019ad6c01f",
+      "verified_from_head": "1fcda32defea8e43f15380346b2c115527f47f9b"
+    }
+  ],
+  "epistemic_limits": [
+    "FIVE_OF_FIVE_PHYSICAL_BYTES_PRESENT",
+    "FULL_R25_MAXI_DELIVERABLE_COMPLETENESS_NOT_ESTABLISHED",
+    "NO_R25_EXPERIMENTS_EXECUTED",
+    "R25_PREREG_R2_DRAFT_NOT_FROZEN",
+    "R25_SUM_INHIBITION_NE_NA1_MAX_INHIBITION",
+    "PR67_OLD_PRIVATE_CHAT_LOG_IN_GIT_HISTORY_IS_NOT_ALLOWED_AS_R26_PARENT",
+    "PR65_NOT_AUTHORIZED_FOR_MERGE"
+  ],
+  "new_order_transport": "GITHUB_CONNECTOR_API_ONLY",
+  "research_scope": "INDEPENDENT_PRIMARY_SOURCES_AND_REPRODUCIBLE_DESIGN",
+  "write_rights": "ONLY_EXPLICITLY_AUTHORIZED_BRANCH",
+  "production_rights": "NONE",
+  "new_cursor_worker": false
+}

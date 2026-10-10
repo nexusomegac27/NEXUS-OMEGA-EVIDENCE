@@ -1,0 +1,63 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_API_ASSET_MANIFEST_20261010_R0",
+  "generated_date": "2026-10-10",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-fundamental-maxi-api-handshake-20261010",
+  "parent_main_commit": "2da6ea1b22516cd3ea4f1cd0f722659aafe3baeb",
+  "phase": "R26_ORDER_OPENING",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": "AXIOM_OPERATOR_AUTHORIZED_RESEARCH_ORDER",
+  "evidence": "GITHUB_CONNECTOR_API_READBACK_SHA256",
+  "source_exact_count": 5,
+  "assets": [
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/README.md",
+      "utf8_bytes": 2955,
+      "sha256": "aed9e448379d0a666b6d14e7c96230e9970b688a3ce13992215c61d0b4c61573",
+      "git_blob_sha1": "d4ebe41fda270f702eb676f86d27bdd4a28490b8",
+      "transport": "GITHUB_API_READBACK",
+      "verified": true
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/NEXUS_OMEGA_AXIOM_R26_FUNDAMENTAL_MAXI_RESEARCH_ORDER_20261010_R0.md",
+      "utf8_bytes": 35117,
+      "sha256": "4fc40bdc1898ab308617e736b6e9d0aa7eff33ff64e8964e6edc5b2b601d64d9",
+      "git_blob_sha1": "4253e84c08954ed7b832b29d1f14bb2c9a2c144c",
+      "transport": "GITHUB_API_READBACK",
+      "verified": true
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_GITHUB_API_HANDSHAKE_PROTOCOL_20261010_R0.md",
+      "utf8_bytes": 8213,
+      "sha256": "251e605cd55fefc12d1a9331bde2629575974e939463c942c1319a63c8058a3b",
+      "git_blob_sha1": "10c732429c118bfe0d3de179954417474a1ceceb",
+      "transport": "GITHUB_API_READBACK",
+      "verified": true
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_RETURN_AND_ACK_CONTRACT_20261010_R0.json",
+      "utf8_bytes": 7157,
+      "sha256": "976882c6750f65f3219a82a91e6b6d2cddf16d1a0f03d0f457de2ce187ca7f0c",
+      "git_blob_sha1": "ded014c7b6f07861222c39c01020c32022d649a1",
+      "transport": "GITHUB_API_READBACK",
+      "verified": true
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_CAUSAL_SOURCE_PINS_20261010_R0.json",
+      "utf8_bytes": 3281,
+      "sha256": "db617c88953c52f1ee49d48518eeff417838d9e8927ed3d54feeca959d187579",
+      "git_blob_sha1": "b2b37b694ac2aea1ce0bfcd939e63e8ad5e87710",
+      "transport": "GITHUB_API_READBACK",
+      "verified": true
+    }
+  ],
+  "self_hash_policy": "DETACHED_SELF_MANIFEST_SHA256_RECORDED_IN_PR_COMMENT_NOT_INSIDE_THIS_FILE",
+  "no_pr65_merge": true,
+  "no_pr67_merge": true,
+  "new_cursor_worker": false,
+  "runtime_execution": false,
+  "production_write": false,
+  "experiment_executed": false,
+  "r25_cursor_terminal": "PENDING_INDEPENDENT_CURSOR_RECEIPT",
+  "provenance_note": "Research order + API protocol + contract. A successful hash check is transport identity, not independent scientific confirmation."
+}

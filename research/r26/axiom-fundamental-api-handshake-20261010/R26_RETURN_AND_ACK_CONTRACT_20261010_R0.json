@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "NEXUS_OMEGA_R26_RETURN_AND_ACK_CONTRACT_20261010_R0",
+  "title": "R26 GitHub-native research return and independent receive ACK",
+  "description": "Design contract. Does not authorize any write, runtime or science promotion. Require exact API-readback SHA-256/size and source-scoped epistemic classes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object",
+    "message_type",
+    "from",
+    "to",
+    "parent_order_object",
+    "parent_order_sha256",
+    "repository",
+    "source_commit",
+    "claim_ceiling",
+    "state",
+    "assets",
+    "execution_class",
+    "pr65_status",
+    "pr67_status",
+    "cursor_continuity",
+    "authority",
+    "negative_evidence",
+    "science_verdict"
+  ],
+  "properties": {
+    "object": {
+      "type": "string",
+      "minLength": 16
+    },
+    "message_type": {
+      "enum": [
+        "EXTERNAL_RESEARCH_RETURN",
+        "API_SEND_RECEIPT",
+        "API_RECEIVE_ACK",
+        "AXIOM_ADJUDICATION",
+        "SCOPED_HOLD",
+        "SUPERSEDING_CORRECTION"
+      ]
+    },
+    "from": {
+      "type": "string",
+      "minLength": 2
+    },
+    "to": {
+      "type": "string",
+      "minLength": 2
+    },
+    "parent_order_object": {
+      "const": "NEXUS_OMEGA_AXIOM_R26_FUNDAMENTAL_MAXI_RESEARCH_ORDER_20261010_R0"
+    },
+    "parent_order_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "repository": {
+      "const": "nexusomegac27/NEXUS-OMEGA-EVIDENCE"
+    },
+    "source_commit": {
+      "$ref": "#/$defs/gitsha"
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pr_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https://github\\.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/[0-9]+$"
+    },
+    "manifest_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manifest_sha256": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/sha256"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "previous_receipt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "idempotency_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "state": {
+      "enum": [
+        "PREPARED",
+        "COMMITTED",
+        "SEND_VERIFIED",
+        "RECEIVE_VERIFIED",
+        "PASS_WITH_CAVEATS_C1",
+        "HOLD_SCOPED",
+        "FAIL",
+        "PENDING_AXIOM",
+        "SUPERSEDED",
+        "CAPABILITY_GAP_NO_GITHUB_WRITE"
+      ]
+    },
+    "assets": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    },
+    "execution_class": {
+      "enum": [
+        "NOT_EXECUTED",
+        "DESIGN_ONLY",
+        "EXPLORATORY_SYNTHETIC_WITH_LOGS",
+        "CONFIRMATORY_WITH_PRIOR_FREEZE_AND_AUTHORIZATION"
+      ]
+    },
+    "pr65_status": {
+      "const": "OPEN_HOLD_SCOPED_UNMERGED"
+    },
+    "pr67_status": {
+      "const": "OPEN_HOLD_PRIVACY_HISTORY_UNMERGED"
+    },
+    "cursor_continuity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bind",
+        "terminal"
+      ],
+      "properties": {
+        "bind": {
+          "const": "56ca8ca2-1d92-4c63-927f-87f32b7f2ed1"
+        },
+        "terminal": {
+          "enum": [
+            "PENDING_RECEIPT",
+            "SOURCE_VERIFIED_TERMINAL",
+            "REPORTED_ONLY"
+          ]
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope",
+        "production_write",
+        "new_cursor_worker",
+        "runtime_ship",
+        "merge_authorized"
+      ],
+      "properties": {
+        "scope": {
+          "type": "string"
+        },
+        "production_write": {
+          "const": false
+        },
+        "new_cursor_worker": {
+          "const": false
+        },
+        "runtime_ship": {
+          "const": false
+        },
+        "merge_authorized": {
+          "const": false
+        }
+      }
+    },
+    "negative_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "science_verdict": {
+      "enum": [
+        "PENDING_AXIOM",
+        "PASS_WITH_CAVEATS_C1_BY_AXIOM",
+        "HOLD_SCOPED_BY_AXIOM",
+        "FAIL_BY_AXIOM"
+      ]
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ack_comment_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https://github\\.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/(pull|issues)/[0-9]+#issuecomment-[0-9]+$"
+    },
+    "replay_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "gitsha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "bytes",
+        "sha256",
+        "git_blob_sha1",
+        "source_scope",
+        "status",
+        "independently_read_back"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^research/r26/"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "git_blob_sha1": {
+          "$ref": "#/$defs/gitsha"
+        },
+        "source_scope": {
+          "enum": [
+            "EXTERNAL_PRIMARY",
+            "EXTERNAL_REPORT",
+            "GITHUB_EXACT_SOURCE",
+            "EXPLORATORY_SYNTHETIC",
+            "DESIGN_ONLY",
+            "NEGATIVE_EVIDENCE",
+            "OPINION_OR_HYPOTHESIS",
+            "NOT_DIRECTLY_READ"
+          ]
+        },
+        "status": {
+          "enum": [
+            "SOURCE_EXACT_VERIFIED",
+            "REPORT_ONLY",
+            "DESIGN_ONLY_NOT_EXECUTED",
+            "EXPLORATORY_LOGGED",
+            "NOT_EXECUTED",
+            "UNVERIFIED",
+            "SCOPED_FAIL"
+          ]
+        },
+        "independently_read_back": {
+          "type": "boolean"
+        },
+        "source_commit": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/gitsha"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "x_invariants": [
+    "JSON duplicate keys must be rejected before schema validation",
+    "Manifest contains hash of children but never its own hash",
+    "The ACK must not be self-issued by the producing expert",
+    "Source documents must be fetched from immutable GitHub commit by connector API",
+    "A valid transport is not scientific validation",
+    "Open PR is valid handoff but not merged release",
+    "PR65 and PR67 must not be merged by this R26 order",
+    "No private conversation transcript, password, API key or sensitive operational log in public branch"
+  ]
+}
