@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.nexus-mobile.de/schema/r19/orbis-satellites-manifest-v1.json",
+  "title": "NEXUS ORBIS satellite public snapshot candidate v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_utc",
+    "slot_ledger_revision",
+    "claim_ceiling",
+    "nexus_link_verified",
+    "satellites"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "nexus-orbis-satellites/1"
+    },
+    "generated_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "slot_ledger_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "nexus_link_verified": {
+      "const": false
+    },
+    "satellites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "norad_cat_id",
+          "admission",
+          "orbital_elements",
+          "position",
+          "observations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 96
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "norad_cat_id": {
+            "type": "string",
+            "pattern": "^[0-9]{1,9}$"
+          },
+          "cospar_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "admission": {
+            "const": "ADMITTED_C1"
+          },
+          "identity_source_url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://"
+          },
+          "operational_status": {
+            "enum": [
+              "SOURCE_VERIFIED_OPERATIONAL",
+              "SOURCE_VERIFIED_RESERVE",
+              "SOURCE_VERIFIED_INACTIVE",
+              "UNKNOWN"
+            ]
+          },
+          "operational_status_source_url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://"
+          },
+          "orbital_elements": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "data_class",
+              "format",
+              "source_url",
+              "epoch_utc",
+              "fetched_utc",
+              "sha256"
+            ],
+            "properties": {
+              "data_class": {
+                "const": "ORBIT_ELEMENTS_EXTERNAL"
+              },
+              "format": {
+                "enum": [
+                  "OMM_JSON",
+                  "OMM_CSV",
+                  "OMM_XML",
+                  "TLE_LEGACY"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://"
+              },
+              "epoch_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "fetched_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          },
+          "position": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "data_class",
+              "lat_deg",
+              "lng_deg",
+              "alt_km",
+              "element_epoch_utc",
+              "target_utc",
+              "calculated_utc",
+              "model",
+              "source_sha256"
+            ],
+            "properties": {
+              "data_class": {
+                "const": "ORBIT_PREDICTED"
+              },
+              "lat_deg": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              "lng_deg": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              "alt_km": {
+                "type": "number",
+                "minimum": 0
+              },
+              "element_epoch_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "target_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "calculated_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "model_version": {
+                "type": "string"
+              }
+            }
+          },
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "data_class",
+                "source_provider",
+                "source_url",
+                "source_norad_cat_id",
+                "instrument_id",
+                "metric",
+                "unit",
+                "observed_utc",
+                "fetched_utc",
+                "quality_flag",
+                "value"
+              ],
+              "properties": {
+                "data_class": {
+                  "const": "LIVE_MEASURED_EXTERNAL"
+                },
+                "source_provider": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "source_norad_cat_id": {
+                  "type": "string",
+                  "pattern": "^[0-9]{1,9}$"
+                },
+                "instrument_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "metric": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observed_utc": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "fetched_utc": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "quality_flag": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "number"
+                },
+                "provider_quality_legend_url": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "uri"
+                },
+                "source_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              }
+            },
+            "maxItems": 500
+          },
+          "stale": {
+            "type": "boolean"
+          },
+          "last_source_checked_utc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "source_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}
