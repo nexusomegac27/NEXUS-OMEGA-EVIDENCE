@@ -1,0 +1,52 @@
+{
+  "object": "NEXUS_OMEGA_EXTERNAL_EXPERT_R26_FUNDAMENTAL_MAXI_RETURN_MANIFEST_20261010_R2",
+  "maxi_mapping": "R26-14 (successor R2, precision-annotation delta)",
+  "supersedes": "R26-14_R26_RETURN_MANIFEST_R1.json (R1, sha256 a0b9b49f6ffa7adbcfa8cb6ed8d67de21127c95dc0af3370c19111d77361684d, git blob 2d47fff1269ce26b3b4bc954b4f71ff8a7bf6a96, 5287 B)",
+  "generated_by": "MISTRAL/VIBE (External Expert R26 execution track)",
+  "generated_utc": "2026-10-10",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "correction_trigger": "AXIOM R1 adjudication, PR #72 merged, main b11bd1becaa47a256fe2aa8da628acd278b532e4, adjudication sha256 5bad43e76f80be29e25c4cb21d194b8f272bec6db9d63aba7a4b921264b980cc; required successor annotation encoding branch/float-precision/EB1-prime limits before any D1/D3 prereg freezing (adjudication section 5.2: small R2 delta, no MAXI restart)",
+  "prior_assets_status": "All R0 and R1 assets remain byte-identical. This manifest covers the R2 precision-annotation delta only (non-destructive; annotates R1, supersedes nothing scientific).",
+  "self_hash_policy": "This manifest contains no SHA-256 of itself; its hash is recorded in R26-15_R26_SEND_RECEIPT_R2.md and the PR #70 R2 send-receipt comment.",
+  "assets": [
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-03_PERIODIC_RING_KERNEL_AND_STABILITY_AUDIT_R2.md",
+      "bytes": 5284,
+      "sha256": "7f400b9f885247395b036b9d809d35f83bba8770d2c7f1e463aff4909908b941",
+      "git_blob_sha1": "a79d4f0c159b2cbb3d92155106a3d8a6047fa3e4",
+      "source_commit": "7832668d6fc0c719a359864d1108ec5a8b2959c1",
+      "annotates": {
+        "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-03_PERIODIC_RING_KERNEL_AND_STABILITY_AUDIT_R1.md",
+        "sha256": "809921233654b29bf383ecceee222da57b4dc59f2ef55b324ffae8c7b8798b83"
+      },
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-04_RING_ORBIT_SOURCE_ERROR_BUDGET_R2.md",
+      "bytes": 4448,
+      "sha256": "e149433ad92aea7bcb74c12487065b1dfe930286a6d0b1c793e048d0116d238b",
+      "git_blob_sha1": "3818cd840bd26f0e6c50e721d47308a3be13b388",
+      "source_commit": "7832668d6fc0c719a359864d1108ec5a8b2959c1",
+      "annotates": {
+        "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-04_RING_ORBIT_SOURCE_ERROR_BUDGET_R1.md",
+        "sha256": "2b2fe0845fe88459894c25712213ed7874761ce367393a9aeeca153859fda275"
+      },
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    }
+  ],
+  "asset_count": 2,
+  "annotation_scope": [
+    "IEEE rational-branch guard: pow(negative, non-integer) = NaN; real branch sign(x)^a*|x|^(a/b) == K_wrap semantics (verified, max dev 0.0)",
+    "Domain restriction p > 0 (poles at the antipode for p < 0, witnessed)",
+    "Antipode float-precision fixture: wrap-first mandatory; form-A cancellation witnessed (up to total precision loss at Delta = pi - 1e-9)",
+    "EB1-prime formal limits: necessary screen (reverse-triangle bound), dominance illustration ||r|| > 2B, covariance-envelope declaration requirements, joint-component non-identifiability witness"
+  ],
+  "verification_note": "SHA-256 and git blob SHA-1 recomputed independently (self-tested pure-TS implementations) and cross-checked against connector-reported blob identities (MATCH).",
+  "open_points": [
+    "Separate-source adversarial re-review of R1 math and EB1-prime remains REQUIRED before PR70 merge (adjudication section 5.1; AGENTS.md rule 7)",
+    "D1_KERNEL_FREEZE / D2_INHIBITION_ARMS / D3 attribution freeze remain AXIOM decisions; NF-05/NF-06 remain DESIGN_ONLY",
+    "GROK strategy PDF binary transport gap (PR71) remains open"
+  ]
+}
