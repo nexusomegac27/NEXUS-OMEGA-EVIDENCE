@@ -26,3 +26,7 @@ jobs:
         run: node --check examples/r19/orbis-satellite-directory.mjs
       - name: Validate JS regression tests
         run: node --test tests/r19/orbis-satellite-directory.test.mjs
+      - name: Check source-exact SGP4 adapter syntax
+        run: node --check examples/r19/orbis-sgp4-public-contract-bridge.mjs
+      - name: Run R19 SGP4 adapter adversarial fixtures
+        run: node --test tests/r19/orbis-sgp4-public-contract-bridge.test.mjs
