@@ -1,0 +1,195 @@
+{
+  "object": "NEXUS_OMEGA_R26_MISTRAL_VIBE_NF05_NF06_D1_D6_NE1_NE8_MATRIX_20261010_R0",
+  "maxi_mapping": "R26-06",
+  "field_status": "DESIGN_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "execution_authorized": false,
+  "freeze_authority": "AXIOM_ONLY",
+  "matrix": [
+    {
+      "id": "D-1",
+      "na1_mapping": "D-1_PERSISTENCE",
+      "input": "I_ext=0 over T_out; converged bump",
+      "metric": "bump_amplitude_ratio",
+      "expected_pass": ">= 0.5 after T_out",
+      "fail_closed_outcome": "PERSISTENCE_FAIL -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "D-2",
+      "na1_mapping": "D-2_UNIQUENESS",
+      "input": "all timepoints of every D-run",
+      "metric": "independent peak count per frozen NF-05 rule",
+      "expected_pass": "exactly 1 peak at every snapshot",
+      "fail_closed_outcome": "MULTI_PEAK or ZERO_VALID_BUMP -> reject",
+      "model_arms": "BOTH (outcome variant-specific per R26-03 §6)",
+      "threshold_tag": "SOURCE_EXACT (rule PROPOSED)",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "D-3",
+      "na1_mapping": "D-3_INTERNAL_DRIFT_120S",
+      "input": "I_ext=0, synthetic truth, 120 s cell, >=100 seeds (PROPOSED >=1000)",
+      "metric": "circular mean drift; p99 with binomial CI",
+      "expected_pass": "mean <= 1 bin AND p99 <= 3 bins (2*pi/N)",
+      "fail_closed_outcome": "DRIFT_EXCEEDED -> reject + STALE mandatory",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT thresholds; estimator PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "D-4",
+      "na1_mapping": "D-4_BASELINE",
+      "input": "identical noise/source/window/seed settings",
+      "metric": "circular metrics vs persistence baseline and von-Mises (K-A) filter",
+      "expected_pass": "ring not worse than baselines",
+      "fail_closed_outcome": "BASELINE_DOMINATES_RING -> negative evidence, preserved",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT (baseline class); K-A identity PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "D-5",
+      "na1_mapping": "D-5_PROVENANCE_FROZEN",
+      "input": "I_ext=0 window",
+      "metric": "last_external_witness immutability",
+      "expected_pass": "unchanged",
+      "fail_closed_outcome": "WITNESS_MUTATED -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "D-6",
+      "na1_mapping": "D-6_SOURCE_ATTRIBUTION",
+      "input": "SGP4/OMM source-epoch study with independent reference and documented source uncertainty",
+      "metric": "term bounds vs composite residual per R26-EB1..EB4",
+      "expected_pass": "all non-filter terms bounded below |r| with margins",
+      "fail_closed_outcome": "UNIDENTIFIABLE_WITH_CURRENT_DATA (defined outcome, not a silent pass)",
+      "model_arms": "n/a (filter-independent)",
+      "threshold_tag": "PROPOSED rules",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-1",
+      "na1_mapping": "NF-05_MULTYPEAK_INJECTION",
+      "input": "two peaks injected per R26-05 NF-05 fields; snapshots {100,300,1000}",
+      "metric": "frozen peak-counting rule incl. prominence/plateau/null guard",
+      "expected_pass": "collapse to exactly one peak",
+      "fail_closed_outcome": "MULTI_PEAK -> PR65 HOLD trigger; ZERO_VALID_BUMP -> misclassification reject",
+      "model_arms": "BOTH (registered analytic prediction: MODEL_MAX two-peak basins strictly larger)",
+      "threshold_tag": "SOURCE_EXACT fail; fixtures PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-2",
+      "na1_mapping": "OSCILLATION_NEW",
+      "input": "alternating conflicting witnesses",
+      "metric": "bump trajectory spectral content",
+      "expected_pass": "no limit cycle / persistent oscillation",
+      "fail_closed_outcome": "OSCILLATION -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-3",
+      "na1_mapping": "WRONG_NORAD_EPOCH_SHA",
+      "input": "injected wrong epoch/source SHA",
+      "metric": "provenance flags",
+      "expected_pass": "fail-closed flag, no healing",
+      "fail_closed_outcome": "HEALED_PROVENANCE -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-4",
+      "na1_mapping": "NO_INPUT_120S_DRIFT",
+      "input": "replay with real OMM gaps >= 120 s",
+      "metric": "measured drift vs documented bound",
+      "expected_pass": "within bound",
+      "fail_closed_outcome": "DRIFT_EXCEEDED -> reject + STALE",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-5",
+      "na1_mapping": "PHASE_WRAP_ANTIMERIDIAN",
+      "input": "wrap edge cases incl. 0<->2pi seam of frozen kernel",
+      "metric": "circular metric continuity",
+      "expected_pass": "no metric jumps; kernel seam continuous (R26-03 §3)",
+      "fail_closed_outcome": "SEAM_JUMP -> reject (bare kernel with non-admissible p fails deterministically)",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT fail; seam fixture PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-6",
+      "na1_mapping": "GAIN_MAP",
+      "input": "gain sweep (g_inhib, w_exc, k)",
+      "metric": "regime map: no-bump / single-bump / multi-bump per arm",
+      "expected_pass": "single-bump region mapped and bounded",
+      "fail_closed_outcome": "unmapped bistable region -> reject; ALSO tests R26-03 §6 MAX-vs-SUM prediction",
+      "model_arms": "BOTH (differential outcome is the point)",
+      "threshold_tag": "SOURCE_EXACT obligation; sweep grid PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-7",
+      "na1_mapping": "UNCERTAINTY_COVERAGE",
+      "input": "std scaling across T_out grid",
+      "metric": "std vs sqrt(t) / subdiffusive exponent",
+      "expected_pass": "documented scaling consistent",
+      "fail_closed_outcome": "undocumented deviation -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NE-8",
+      "na1_mapping": "FILTER_STALENESS",
+      "input": "deliberate above-bound detector input (separate runs)",
+      "metric": "STALE flag trigger",
+      "expected_pass": "STALE raised",
+      "fail_closed_outcome": "NO_STALE_ON_BREACH -> reject",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NF-05",
+      "na1_mapping": "NE-1 formaliert",
+      "input": "see NE-1 + R26-05 nf05 block",
+      "metric": "see NE-1",
+      "expected_pass": "per NE-1",
+      "fail_closed_outcome": "per NE-1 + AMBIGUOUS_PLATEAU",
+      "model_arms": "BOTH",
+      "threshold_tag": "PROPOSED fill of R2 unresolved fields",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    },
+    {
+      "id": "NF-06",
+      "na1_mapping": "NE-4 + NE-8 + D-3 + D-6",
+      "input": "see D-3, NE-4, NE-8; D-6 separate",
+      "metric": "see cells",
+      "expected_pass": "per cells",
+      "fail_closed_outcome": "per cells; no aggregate rule across T_out",
+      "model_arms": "BOTH",
+      "threshold_tag": "SOURCE_EXACT text; BOUND_traj + estimator PROPOSED",
+      "status": "DESIGN_ONLY_NOT_EXECUTED"
+    }
+  ],
+  "registered_analytic_predictions": [
+    "R26-03 §6: at equal gains, MODEL_MAX admits stable multi-peak states over a strictly larger parameter region than MODEL_SUM (falsifiable via NE-6).",
+    "R26-03 §7 W2: bump existence fails for (k=4, w_exc=1.0, g_eff=0.3, theta-h=0.5) under the Amari idealisation (falsifiable analytically or by frozen simulation)."
+  ],
+  "self_declaration": {
+    "execution": "NOT_STARTED",
+    "no_runs_logs_outputs_claimed": true,
+    "prereg_status": "DRAFT"
+  }
+}
