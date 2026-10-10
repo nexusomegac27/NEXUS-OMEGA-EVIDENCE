@@ -40,3 +40,9 @@ jobs:
       - name: Check machine-readable source register
         run: |
           node --input-type=module -e "import fs from 'node:fs'; const x=JSON.parse(fs.readFileSync('research/r21/orbis-astra-nav-primary-source-register.json','utf8'));if(!Array.isArray(x.candidates)||x.candidates.length<10)process.exit(1);if(x.candidates.some(c=>!c.documentation||!c.license_reference||c.vendor_ingested!==false))process.exit(2)"
+      - name: Check R21 P0 browser map and data model syntax
+        run: |
+          node --check examples/r21/astra-nav-p0/app.mjs
+          node --check examples/r21/astra-nav-p0/ui-model.mjs
+      - name: Run R21 P0 map and satellite guard tests
+        run: node --test tests/r21/orbis-astra-nav-p0-surface.test.mjs

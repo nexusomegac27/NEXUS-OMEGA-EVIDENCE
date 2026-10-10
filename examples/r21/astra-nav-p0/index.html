@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ORBIS ASTRA-NAV: NEXUS-eigene quellengebundene Vektorkarte, nur C1; keine GNSS- oder Offline-Navigation im P0.">
+<title>NEXUS OMEGA · ORBIS ASTRA-NAV P0</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@6.13.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="eyebrow">NEXUS OMEGA · R21 · C1_DESCRIPTIVE_ONLY</p>
+    <h1>ORBIS ASTRA-NAV</h1>
+    <p class="lead">Eine Karte mit sichtbarer Herkunft. Keine erfundenen Satellitenpositionen oder Fotodetails.</p>
+  </div>
+  <nav aria-label="ORBIS-Navigation"><a href="/orbis/">ORBIS FIDELIS</a><a href="/orbis/satellites/">Satelliten</a></nav>
+</header>
+<main>
+  <section class="map-layout" aria-label="NEXUS ASTRA-NAV P0">
+    <div class="map-wrap">
+      <div id="map" role="application" aria-label="Interaktive Landkarte; Maus, Touch oder Pfeiltasten zum Bewegen" tabindex="0"></div>
+      <div id="camera-info" class="camera-info" aria-live="off">Karte wird vorbereitet…</div>
+      <div class="zoom-info" aria-live="polite" id="zoom-truth">Vektorkarte · fotografische Detailauflösung nicht verfügbar</div>
+    </div>
+    <aside class="sidepanel" aria-label="Quellen- und Navigationsstatus">
+      <h2>Navigation / Quellen</h2>
+      <p class="tag">P0 ONLINE-VISUALISIERUNG</p>
+      <dl>
+        <dt>Aktuelle Position</dt><dd>NICHT ERFASST</dd>
+        <dt>GNSS-only Navigation</dt><dd>NICHT IMPLEMENTIERT</dd>
+        <dt>Offline-Routing</dt><dd>NICHT IMPLEMENTIERT</dd>
+        <dt>Fotografische Orthofotos</dt><dd>KEINE FREIGEGEBENEN DATENPAKETE</dd>
+        <dt>Satellitenlink zu NEXUS</dt><dd>NICHT VERIFIZIERT</dd>
+      </dl>
+      <h3>R19-Satellitenregister</h3>
+      <p id="slot-status" role="status">Quellenregister wird abgerufen …</p>
+      <ul id="slot-list" class="slot-list" aria-label="Öffentlich zugelassene Satelliten"></ul>
+      <p class="note">Nur geprüfte ORBIT_PREDICTED-Positionen erscheinen auf der Karte. Ohne solche Daten bleibt die Karte ehrlich frei von Satellitenmarkern.</p>
+      <h3>Wissenschaftliche Grenze</h3>
+      <p class="note">Karte ≠ GNSS-Fix. Karte ≠ Satellitenbild. Eine stärkere Vergrößerung erzeugt keine neuen fotografischen Informationen.</p>
+      <p id="error-note" role="alert" class="error" hidden></p>
+    </aside>
+  </section>
+</main>
+<footer class="provenance-bar" id="provenance-bar" role="contentinfo">
+  <span><strong>Herkunft</strong>: OpenFreeMap · OpenMapTiles · © OpenStreetMap contributors</span>
+  <span><strong>Quelle</strong>: öffentliches Vektor-Tile-Style</span>
+  <span><strong>GSD</strong>: keine fotografische Auflösung · <strong>GNSS</strong>: unbestätigt</span>
+  <span><strong>Claim</strong>: C1</span>
+</footer>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>
