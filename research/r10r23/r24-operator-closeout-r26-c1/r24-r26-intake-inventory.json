@@ -1,0 +1,97 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R24_R26_NINE_FILE_SOURCE_EXACT_INVENTORY_20261010_R0",
+  "date": "2026-10-10",
+  "parent_pr": 64,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "all_uploaded_files_sha256_verified": 9,
+  "raw_public_safe_originals_archived": 5,
+  "r24_state": "CLOSED_BY_OPERATOR_ADMINISTRATIVE",
+  "r24_original_sandbox_bytes_present": false,
+  "cursor_r24_order_bind": "56ca8ca2-1d92-4c63-927f-87f32b7f2ed1",
+  "cursor_r24_order_bind_provenance": "OPERATOR_REPORTED_NOT_INDEPENDENT_TERMINAL_PROOF",
+  "pr65_merge": "OPEN_HOLD",
+  "scientific_correction": "REUTERS_CASE_CO_OCCURRING_RISK_SIGNALS_NOT_CAUSAL_PROOF_OF_MISSING_LEDGER; 60_PERCENT_ABLATION_NOT_EXECUTED",
+  "source_files": [
+    {
+      "upload_name": "NE723C~1.MD",
+      "bytes": 7912,
+      "sha256": "6efb534506903cf407fef5fb4498129d0a8d55c26d899a169c9548ebf589a705",
+      "source_class": "R25_R26_GROK_SCIENCE_SYNTHESIS",
+      "publication": "EXACT_HISTORICAL_IN_SOURCES",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~3(2).MD",
+      "bytes": 5052,
+      "sha256": "309aedf59ae6b4df218f9d8b47cc5500ab91ad4e6bdee2b3910df04093b7e341",
+      "source_class": "GROK_COMPUTER_RECEIPT_CAVEATED",
+      "publication": "EXACT_HISTORICAL_IN_SOURCES",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~2(8).TXT",
+      "bytes": 5596,
+      "sha256": "b7793f3847ff00db6ddcd108dabd904d39fd27d84d82f87582933d7c959c3e08",
+      "source_class": "AXIOM_CHAT_RENDER",
+      "publication": "HASH_ONLY_CHAT_RENDER",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~1(20261010-164404).TXT",
+      "bytes": 29152,
+      "sha256": "0bf0a0dcfb4ebcb2f50daed340d6dc88c43acbd3457f263e54b9ae0092cc618f",
+      "source_class": "COMPOSITE_AGENT_CONVERSATION",
+      "publication": "HASH_ONLY_PRIVATE_CHAT_TRANSCRIPT",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~2(5).MD",
+      "bytes": 7154,
+      "sha256": "a3ad98ab754f1f39a5507ecfbd70eb8d7a6006ee0f02ff2cd56c5115d41cdef2",
+      "source_class": "GROK_FINAL_CROSSVALIDATION",
+      "publication": "EXACT_HISTORICAL_IN_SOURCES",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "R26--P~1(1).MD",
+      "bytes": 17682,
+      "sha256": "734d5e6e20856b211d63ba306ecf84e20a1877928e1ad1685135105e89dc3969",
+      "source_class": "MISTRAL_VIBE_INDEPENDENT_REVIEW",
+      "publication": "EXACT_HISTORICAL_IN_SOURCES",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~1(20261010-164409).MD",
+      "bytes": 7558,
+      "sha256": "bfffc94b08775c139f0d944234bfedee0032383f9abc7bbd0c61bb2ada47c378",
+      "source_class": "GROK_INITIAL_R26_CAUSAL_OVERCLAIM",
+      "publication": "EXACT_HISTORICAL_IN_SOURCES_NOT_ADMITTED",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~3(4).TXT",
+      "bytes": 2095,
+      "sha256": "f7d0141bd20b3ad2323356f5a844509eab2bf78b03e39e8e9d924ac5e9349993",
+      "source_class": "GROK_FILE3_CHAT_EXCERPT",
+      "publication": "HASH_ONLY_CHAT_EXCERPT",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    },
+    {
+      "upload_name": "NEXUS_~4(1).MD",
+      "bytes": 4349,
+      "sha256": "d478199ba1be3d96ee11371f14c60e6456f2a59a481a6493ccb2c53b95e2b7a5",
+      "source_class": "PERPLEXITY_BYTE_REVERIFICATION",
+      "publication": "HASH_ONLY_PRIVACY_ATTRIBUTION",
+      "byte_validation": "PASS",
+      "semantic_promotion": false
+    }
+  ]
+}
