@@ -38,9 +38,9 @@ test('position absent epoch/hash source rejected',()=>{
 });
 test('valid synthetic model position gets safe encoded route; stale positions stay hidden',()=>{
  const sha='a'.repeat(64);
- const source={data_class:'ORBIT_ELEMENTS_EXTERNAL',epoch_utc:'2026-10-10T00:00:00Z',sha256:sha};
+ const source={data_class:'ORBIT_ELEMENTS_EXTERNAL',format:'OMM_JSON',source_url:'https://example.org/orbit',epoch_utc:'2026-10-10T00:00:00Z',fetched_utc:'2026-10-10T00:01:00Z',sha256:sha};
  const position={data_class:'ORBIT_PREDICTED',lat_deg:53,lng_deg:10,alt_km:400,
-  target_utc:'2026-10-10T00:01:00Z',element_epoch_utc:source.epoch_utc,source_sha256:sha};
+  target_utc:'2026-10-10T00:01:00Z',calculated_utc:'2026-10-10T00:01:02Z',model:'SGP4_SYNTHETIC_FIXTURE_ONLY',element_epoch_utc:source.epoch_utc,source_sha256:sha};
  const m=manifest();m.satellites=[sat({orbital_elements:source,position})];
  const marks=visibleMarkers(m);assert.equal(marks.length,1);
  assert.equal(marks[0].detail_href,'/orbis/satellites/?id=synthetic-sat');
@@ -56,4 +56,25 @@ test('pure visual camera never becomes actual GNSS fix or photographic detail',(
  assert.equal(r.position_source,'MAP_CAMERA_ONLY_GNSS_UNVERIFIED');
  assert.equal(r.photographic_native_gsd_m,null);
  assert.throws(()=>mapReadout(NaN,{lng:10,lat:53}),/INVALID_MAP_CAMERA/);
+});
+test('model position requires calculation time and model identity',()=>{
+ const sha='a'.repeat(64);
+ const orbit={data_class:'ORBIT_ELEMENTS_EXTERNAL',epoch_utc:'2026-10-10T00:00:00Z',fetched_utc:'2026-10-10T00:00:10Z',sha256:sha};
+ const position={data_class:'ORBIT_PREDICTED',lat_deg:53,lng_deg:10,alt_km:400,
+ target_utc:'2026-10-10T00:01:00Z',element_epoch_utc:orbit.epoch_utc,source_sha256:sha};
+ const m=manifest();m.satellites=[sat({orbital_elements:orbit,position})];
+ e(m,/INVALID_ORBIT_POSITION/);
+ m.satellites[0].position.model='SGP4_SYNTHETIC_TEST';
+ m.satellites[0].position.calculated_utc='2026-10-10T00:01:01Z';
+ assert.equal(visibleMarkers(m).length,1);
+});
+test('cross-satellite measurement identity fails before map even if coordinate exists',()=>{
+ const m=manifest();m.satellites=[sat({observations:[{
+  data_class:'LIVE_MEASURED_EXTERNAL',source_norad_cat_id:'999999',instrument_id:'TEST',
+  value:1,observed_utc:'2026-10-10T00:00:00Z',fetched_utc:'2026-10-10T00:00:01Z'
+ }]})];
+ e(m,/CROSS_SATELLITE/);
+});
+test('root contract rejects extra unversioned fields',()=>{
+ const m=manifest();m.claim_promotion=false;e(m,/INVALID_R19_CONTRACT/);
 });
