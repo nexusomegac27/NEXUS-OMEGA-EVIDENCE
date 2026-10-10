@@ -7,6 +7,7 @@ on:
       - 'research/r21/**'
       - 'examples/r21/**'
       - 'tests/r21/**'
+      - 'schemas/r21/**'
       - '.github/workflows/validate-r21-astra-nav.yml'
   workflow_dispatch:
 
@@ -24,8 +25,18 @@ jobs:
           node-version: '22'
       - name: Check zoom adapter syntax
         run: node --check examples/r21/orbis-astra-nav-photo-lod.mjs
+      - name: Check R21.2 GSD truth UI reference syntax
+        run: node --check examples/r21/orbis-gsd-truth-ui.mjs
+      - name: Check R21.1 provenance atom validator syntax
+        run: node --check examples/r21/nexus-provenance-atom.mjs
       - name: Run reference negative fixtures
         run: node --test tests/r21/orbis-astra-nav-photo-lod.test.mjs
+      - name: Run R21.2 GSD truth UI fixtures
+        run: node --test tests/r21/orbis-gsd-truth-ui.test.mjs
+      - name: Run R21.1 provenance atom fail-closed fixtures
+        run: node --test tests/r21/nexus-provenance-atom.test.mjs
+      - name: Check provenance atom JSON schema parses
+        run: node --input-type=module -e "import fs from 'node:fs'; JSON.parse(fs.readFileSync('schemas/r21/nexus-provenance-atom-v1.schema.json','utf8'));"
       - name: Check machine-readable source register
         run: |
           node --input-type=module -e "import fs from 'node:fs'; const x=JSON.parse(fs.readFileSync('research/r21/orbis-astra-nav-primary-source-register.json','utf8'));if(!Array.isArray(x.candidates)||x.candidates.length<10)process.exit(1);if(x.candidates.some(c=>!c.documentation||!c.license_reference||c.vendor_ingested!==false))process.exit(2)"
