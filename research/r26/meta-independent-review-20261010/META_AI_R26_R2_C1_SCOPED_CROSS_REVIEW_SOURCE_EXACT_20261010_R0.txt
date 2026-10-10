@@ -1,0 +1,90 @@
+Ich bin **Meta AI**, gebaut von Meta, basierend auf **Muse Spark 1.1**. Unabhängiger Reviewer in diesem Schritt, nicht Produzent von R26-R0/R1/R2.
+
+Auftrag angenommen und ausgeführt: **produzentengetrenntes Gegenreview mit Fokus auf die drei C1-Punkte**. Keine erneuten Transport-/Hash-Tests.
+
+### AXIOM-GEGENREVIEW · R26-R2-C1 · PR-#70-Head `41ab803d`
+
+**Scope:** Nur die drei im RECEIVE_ACK festgehaltenen Präzisierungen. R2-Delta bewahrt R0/R1 unverändert - das wird nicht neu geprüft.
+
+#### C1-1 · IEEE-Semantik · VERIFIZIERT
+
+Behauptung im alten Wording: "nichtganzzahlige rationale Werte sind nicht exakt darstellbar" ist falsch.
+
+Korrektur ist zutreffend:
+
+* `0,5 = 1 * 2^-1` ist dyadisch rational und in binary64 exakt. Alle `k / 2^n` im Exponentenbereich sind exakt.
+* Die reale Einschränkung ist ECMA-262 `Math.pow(x, y)`: Ist `x < 0` und `y` nicht ganzzahlig, ist das Ergebnis `NaN`. Das betrifft `Math.pow(cos(θ), p)` wenn `cos(θ) < 0`.
+
+Wissenschaftlich notwendige Konsequenz für R26-03_R2:
+
+```
+W(θ) = |cos(θ/2)|^p   mit p > 0
+Implementierung: exp(p * log(|cos|)) oder pow(abs(cos), p), nie pow(cos, p)
+```
+
+Damit ist die Präzisierung wissenschaftlich sinnvoll und erforderlich. Kein Blocker.
+
+#### C1-2 · Antipoden-Toleranz · VERIFIZIERT · FESTE SCHRANKE UNGÜLTIG
+
+Behauptung: feste Schranke `1e-16` für `|cos(π/2)|^p`.
+
+Gegenbeweis durch IEEE-754 double:
+
+```
+π/2 als double = 1.5707963267948966
+cos(π/2) = 6.123233995736766e-17  (nicht 0)
+|cos|^p :
+
+p = 2.0 -> 3.75e-33
+p = 1.0 -> 6.12e-17
+p = 0.5 -> sqrt(6.12e-17) ≈ 7.825e-09
+p = 0.1 -> exp(0.1*ln(6.12e-17)) ≈ 2.39e-02
+```
+
+Damit verletzt `p=0,5` die `1e-16` Schranke um Faktor ~78.000, `p=0,1` um Faktor ~2.4e14.
+
+Für `p -> 0+` gilt `|cos|^p -> 1`. Eine feste Schranke kann daher für `p > 0` prinzipiell nicht existieren.
+
+Erforderliche Korrektur für R26-03_R2:
+
+* Antipode analytisch als 0 definieren, numerisch als p-abhängige Toleranz:
+  `T(p) = |cos(π/2)_float|^p * S` mit Safety `S ~ 10`, oder
+  `T(p) = max(ulp, exp(p*ln|cos|))`
+* Alternativ: Ringkern am Antipoden durch `sin`-Formulierung clappen.
+
+Kein Neustart von R26 nötig. Annotation geht in Spec.
+
+#### C1-3 · EB1' · VERIFIZIERT · LOGIKKORREKTUR BESTÄTIGT
+
+Deine Einordnung ist korrekt.
+
+Gegeben Modell `r = e_f + e_o` mit `||e_o|| ≤ B`.
+
+Dann gilt per Dreiecksungleichung:
+`||r|| ≤ ||e_f|| + B  =>  ||e_f|| ≥ ||r|| - B`
+
+Falls `B < ||r||` folgt `||e_f|| > 0`. Das ist **hinreichend** für einen unter Modellannahmen nachweisbaren Restbeitrag.
+
+Nicht notwendig: Seien `e_f = -e_o + δ` mit kleinem `δ`. Dann `||r|| = ||δ||` klein, obwohl `||e_f||` groß sein kann und `B < ||r||` nicht gilt. Auslöschung widerlegt Notwendigkeit.
+
+Kein Kausalbeweis: `B < ||r||` beweist nur Existenz eines nicht durch `B` abgedeckten Anteils im gewählten Modell. Ohne zusätzliche Identifizierbarkeitsannahmen keine Attribution auf Einzelfehler. Das dokumentierte Gegenbeispiel zur Nicht-Identifizierbarkeit ist dafür konstitutiv.
+
+Formulierung für R26-04_R2 muss lauten: hinreichende Bedingung für nachweisbaren Restbeitrag unter vollständig spezifiziertem Fehlermodell, keine notwendige Bedingung, kein alleiniger Kausalbeweis.
+
+### Ergebnis
+
+```
+R26_R2_SOURCE_EXACT = PASS_4_OF_4 (übernommen, nicht neu geprüft)
+R26_R2_C1_REVIEW = VERIFIED_3_OF_3
+R26_SCIENCE = PASS_WITH_CAVEATS_C1_ANNOTATED_RESOLVED
+
+D1_FREEZE = NO
+D2_ARMS = DESIGN_ONLY
+D3_CAUSAL_ATTRIBUTION = NOT_ESTABLISHED
+```
+
+Die drei C1-Punkte verlangen keinen Neustart von R26. Sie sind als verbindliche Annotationen in das produzentengetrennte Gegenreview aufgenommen und mit den oben genannten Korrekturformeln auflösbar.
+
+Nächster Schritt bleibt: Finalisierung des Gegenreviews in PR #70, danach erst Entscheidung über PR #65, #67, #71.
+
+Quelle ist nicht Wahrheit. Prüfung bleibt das Fundament.
