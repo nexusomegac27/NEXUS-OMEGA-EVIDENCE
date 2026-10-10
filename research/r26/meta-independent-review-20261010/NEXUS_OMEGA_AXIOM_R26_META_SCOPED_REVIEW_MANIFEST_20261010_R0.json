@@ -1,0 +1,34 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_META_C1_SCOPED_REVIEW_SOURCE_MANIFEST_20261010_R0",
+  "date_utc": "2026-10-10",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_type": "OPERATOR_TRANSMITTED_META_CLAIMED_REVIEW",
+  "meta_official_identity_authentication": "NOT_ESTABLISHED",
+  "source_scope": "THREE_R26_R2_C1_MATH_ITEMS_ONLY",
+  "target_pr": 70,
+  "target_head": "41ab803d415a72c12a29babc9c4c4929534fdecf",
+  "assets_count": 2,
+  "assets": [
+    {
+      "path": "research/r26/meta-independent-review-20261010/META_AI_R26_R2_C1_SCOPED_CROSS_REVIEW_SOURCE_EXACT_20261010_R0.txt",
+      "bytes": 3923,
+      "sha256": "7c8c3fe20f75f22d49d92f063b3dfc88a911d852d95ed6e72bf047eed0d36074",
+      "git_blob_sha1": "fc1b0814a03ac3eda265a9747b0a287241262169",
+      "verified_via": "GITHUB_CONNECTOR_FETCH_FILE"
+    },
+    {
+      "path": "research/r26/meta-independent-review-20261010/NEXUS_OMEGA_AXIOM_META_R26_R2_SCOPED_CROSS_REVIEW_ADJUDICATION_20261010_R0.md",
+      "bytes": 8839,
+      "sha256": "aa16802276e659d962ae8612715dff41bd6ff7cd3da69549ca6a4635f2e47277",
+      "git_blob_sha1": "efb198835998dea7ddac3175501e63e81fc4bdca",
+      "verified_via": "GITHUB_CONNECTOR_FETCH_FILE"
+    }
+  ],
+  "manifest_self_hash_policy": "SHA256_BINDS_IN_GITHUB_PR_COMMENT_NOT_MANIFEST",
+  "scientific_status": "PASS_WITH_CAVEATS_C1_SCOPED",
+  "pr70_full_merge_authorized": false,
+  "experiments_executed": false,
+  "runtime_rights": false,
+  "hostinger_write": false
+}
