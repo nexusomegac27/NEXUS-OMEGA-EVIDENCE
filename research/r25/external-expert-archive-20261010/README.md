@@ -21,6 +21,16 @@ PR #65 bleibt OPEN_HOLD_SCOPED; PR #67 wird nicht gemergt; NF-05/NF-06 sind desi
 | R25_THREE_DECISION_CANDIDATES_COMPUTER_VALIDATION_20261010_R0.md | 5749 | `14a1c77a97839b99e6458952adb90cf5e9a0350f649131a87a96b66427f2da57` |
 | R25_THREE_DECISION_CANDIDATES_NEGATIVE_FIXTURES_DASHBOARD_20261010_R0.htm | 9995 | `9e116524763a0f3e0e537c9337de174570d36bd3d10ffa879bf215555bef3dd7` |
 
+| R25-00_EXECUTIVE_ADJUDICATION_BRIEF.md | 5297 | `38c2efcc6a5edda5021198d9e81ba9b58422fd6d546cbb03da3254c63dc92b2a` |
+| R25-03_RING_AND_ORBIT_ERROR_MODEL.md | 4811 | `e7eabdf30eff378ea54766f1220fa7aa9b6f6ec634c72b9b10ccb411e8058b1b` |
+| R25-05_E1_E2_CAUSAL_AUDIT.md | 4084 | `f627e23875eaff52795c550a46cc6a9cd876d9b32cd3abceca472ecafd72880f` |
+| R25-07_ADVERSARIAL_REVIEW.md | 4134 | `ca2fa0cbf00cbd02150ccbd962faee7a4c43ebd978696b1afdb19b0aec9c959a` |
+| R25-09_RETURN_MANIFEST.json | 3103 | `33bbf4b101b42888fdb60f40a22384b4780936a60b640112e1de80db248c21a4` |
+
+## AXIOM source-exact five-file follow-up (2026-10-10)
+
+The five GROK component originals above were independently rehashed by AXIOM from operator-provided physical upload bytes and GitHub blob readback: **5/5 SHA-256 and Git-blob-identity MATCH**. Their arrival closes the specific previous `SOURCE_NOT_PRESENT` transport gap for `R25-00/03/05/07/09`, **not** all required R25 MAXI order deliverables. The files remain expert-authored research candidates under `C1_DESCRIPTIVE_ONLY`: no simulation, live run, runtime claim, production write, PR65 lift or terminal scientific validation is implied. The privacy/history issue described below still blocks merging this PR, even after current-branch byte identity is repaired. Original records and earlier manifests remain in Git history, not silently substituted.
+
 ## Diskrepanzen (bewusst offengelegt)
 
 - Der GitHub-Blob des GROK-Return (3196 B Original) wurde beim ersten Commit durch Git-CRLF-Normalisierung auf 3139 B geändert; das Original-Byte wurde wiederhergestellt.
