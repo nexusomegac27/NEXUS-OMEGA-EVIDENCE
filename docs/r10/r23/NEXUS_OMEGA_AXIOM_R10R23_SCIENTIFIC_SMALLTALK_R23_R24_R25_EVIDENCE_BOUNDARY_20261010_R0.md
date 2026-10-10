@@ -22,7 +22,7 @@ NEXUS_LINK_VERIFIED = false
 | Operator upload | Bytes | SHA-256 | Evidence grade |
 |---|---:|---|---|
 | R23_NE~1.TXT | 47192 | `587eef03f7cdf2da10bf7fedbfe75081e1e435ad3e8aed50ea9c3733094bfaeb` | Historical multi-agent discussion R23 plus R24/R25 narrative, not original scientific methods |
-| IMAGE_~1.JPG | 178000 (confirm precise size from physical receipt) | `519f9d88558470f9ce4e87e270f2768122f89da2f70903d4382fc99d7d702305` | Stylized diagram/illustration; not microscopy, cell-lineage or sequencing original data |
+| IMAGE_~1.JPG | 177490 | `519f9d88558470f9ce4e87e270f2768122f89da2f70903d4382fc99d7d702305` | Stylized diagram/illustration; not microscopy, cell-lineage or sequencing original data |
 | NEXUS-~1.HTM | 189918 | `db036fedacd18649d00f61159c463a4d9b8b23e29ea75fc3a22bc0e3e4dd60d6` | Bundled React HTML demo with embedded JS; model visualization not independent experimental validation |
 | R25-VI~1.MD | 16521 | `650030f74d0bd83f4463172ef56774838e6c9358d2134165384269c93b17a8c8` | Fourth-lane research synthesis, claims and reference list need first-party audit |
 
