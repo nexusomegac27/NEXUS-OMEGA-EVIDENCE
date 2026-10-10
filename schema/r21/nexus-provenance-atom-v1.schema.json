@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nexus-provenance-atom-v1.schema.json",
+  "title": "NEXUS Provenance Atom v1 (R21.1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "upstream_contributors",
+    "source_url",
+    "license_id",
+    "native_gsd_m",
+    "acquired_utc",
+    "asset_sha256",
+    "rights_status",
+    "attribution",
+    "nexus_transformation",
+    "symbiose_links",
+    "is_living_artifact"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+([-_.][a-z0-9]+)*$"
+    },
+    "upstream_contributors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https:"
+    },
+    "license_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "native_gsd_m": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "acquired_utc": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?Z$"
+    },
+    "asset_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rights_status": {
+      "enum": [
+        "RESEARCH_ONLY_UNTIL_CLEARANCE",
+        "APPROVED_FOR_THIS_USE",
+        "DENIED"
+      ]
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "first_class",
+        "visible_label",
+        "expiry_check_required"
+      ],
+      "properties": {
+        "first_class": {
+          "const": true
+        },
+        "visible_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expiry_check_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "nexus_transformation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declared_output_gsd_m": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "symbiose_links": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "is_living_artifact": {
+      "const": true
+    }
+  }
+}
