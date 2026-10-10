@@ -1,0 +1,28 @@
+name: Validate R19 ORBIS satellite directory reference
+
+on:
+  pull_request:
+    paths:
+      - 'docs/r19/**'
+      - 'schema/r19/**'
+      - 'examples/r19/**'
+      - 'tests/r19/**'
+      - '.github/workflows/validate-r19-orbis.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-bound-negative-fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JS syntax
+        run: node --check examples/r19/orbis-satellite-directory.mjs
+      - name: Validate JS regression tests
+        run: node --test tests/r19/orbis-satellite-directory.test.mjs

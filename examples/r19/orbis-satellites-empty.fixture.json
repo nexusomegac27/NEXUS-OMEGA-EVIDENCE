@@ -1,0 +1,8 @@
+{
+  "schema_version": "nexus-orbis-satellites/1",
+  "generated_utc": "2026-10-10T00:00:00Z",
+  "slot_ledger_revision": "FIXTURE_EMPTY_NOT_LIVE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "nexus_link_verified": false,
+  "satellites": []
+}
