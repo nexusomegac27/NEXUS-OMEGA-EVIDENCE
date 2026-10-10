@@ -23,6 +23,9 @@ This directory mirrors the archived R25 external-expert package (9 files + this 
 | `NEXUS_OMEGA_R25_AXIOM_DECISION_TEMPLATE_20261010_R0.md` | 7086 | `818c3303a9536e8084abb1ce189ed6cc517df870d7b4d1e64ae5d13f2c25ea8e` |
 | `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.md` | 9750 | `75223eb8eaa58035ac9d51c0e2f8ca3f7b7d48c14d5756af80ad799cafca3e13` |
 | `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.json` | 4486 | `854a7a876f4a2051b8d8ea7dbb5e6e84db171eb9452a8a1ddd929c391d625571` |
+| `NEXUS_OMEGA_R25_AXIOM_DECISION_TEMPLATE_20261010_R1.md` | 7478 | `b529c017c03598a7adeedbfa373c0c4d34c7df96dc3785168091a576255f908a` |
+| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R1.md` | 10341 | `81110d99179a5fb7825f060d8199324e613447ddc896c0a73bd2ccb0c67de9ec` |
+| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R1.json` | 4751 | `087a4b2b1f5090903051962cb53a255ebf71ced3a140fac8f6b052596784f59a` |
 
 The session research/conversation log (`NEXUS_OMEGA_R25_SESSION_RESEARCH_AND_CONVERSATION_LOG_20261010_R0.md`) was initially committed in error and removed in a follow-up commit; it is intentionally **excluded** from this public mirror (operator conversation export is not authorized for external publication) and remains only in the Perplexity project repository. The removal commit does not erase the earlier published history of that file.
 
@@ -30,7 +33,7 @@ The session research/conversation log (`NEXUS_OMEGA_R25_SESSION_RESEARCH_AND_CON
 
 1. The five underlying R25 return artifacts (`R25-00/-03/-05/-07/-09`) referenced by the GROK summary are `SOURCE_NOT_PRESENT` — their bytes were not available in the archiving environment and were not reconstructed from the summary.
 2. The historical GROK modules contain a causality overclaim; the canonical statement remains the corrected AXIOM adjudication in PR #66. Historical originals are preserved unchanged as provenance.
-3. NF-05 and NF-06 are `PREREGISTRATION_DRAFT_WITH_UNRESOLVED_FIELDS` — design-only, not executed, no thresholds frozen. The NA-1 model-order Markdown (equations, integrator, timestep, noise process, seed scheme) has not been retrieved; those fields are explicitly unresolved.
+3. NF-05 and NF-06 are `PREREGISTRATION_DRAFT_WITH_UNRESOLVED_FIELDS` — design-only, not executed, no thresholds frozen. The NA-1 model-order Markdown (equations, integrator, timestep, noise process, seed scheme) has not been retrieved; those fields are explicitly unresolved. R1 versions supersede R0 with completed unresolved-field lists (D3 120s-only scope, per-trajectory detector thresholds, injection type, plateau handling, statistical estimators).
 4. PR #65 remains `OPEN_HOLD_SCOPED`; this mirror does not touch it and does not authorize any merge.
 
 NEXUS OMEGA — Quelle ist nicht Wahrheit. Prüfung bleibt das Fundament.
