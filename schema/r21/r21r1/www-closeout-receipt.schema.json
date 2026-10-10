@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:r21r1:www-closeout-receipt:v1",
+  "title": "NEXUS OMEGA R21R1 source-bound 3-proof WWW readback receipt",
+  "description": "C1 descriptive-only; validates completeness, not physical truth of claimed receipts. A separate source-exact checker must verify matching origin/content hashes and independent reviewers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "object_id",
+    "claim_ceiling",
+    "nexus_link_verified",
+    "terminal_state",
+    "production_fileset",
+    "hostinger_scoped_write",
+    "independent_public_readback"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "nexus-r21r1-www-closeout/v1"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 10
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "nexus_link_verified": {
+      "const": false
+    },
+    "terminal_state": {
+      "enum": [
+        "NOT_LIVE_VERIFIED",
+        "WWW_LIVE_VERIFIED"
+      ]
+    },
+    "production_fileset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "source_commit",
+        "files",
+        "scope_class",
+        "rollback_witness"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PENDING",
+            "FAIL"
+          ]
+        },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "route_relative_path",
+              "expected_sha256",
+              "bytes"
+            ],
+            "properties": {
+              "route_relative_path": {
+                "type": "string",
+                "pattern": "^/orbis/astra-nav/[a-z0-9._-]+$"
+              },
+              "expected_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "scope_class": {
+          "const": "ADDITIVE_ORBIS_ASTRA_NAV_ONLY"
+        },
+        "rollback_witness": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "hostinger_scoped_write": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "source_commit",
+        "writer_role",
+        "write_receipt_id",
+        "file_hashes_match",
+        "observed_utc"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PENDING",
+            "FAIL"
+          ]
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "writer_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "write_receipt_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "file_hashes_match": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "observed_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "independent_public_readback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "url",
+        "independent_reviewer",
+        "observed_utc",
+        "http_body_sha256",
+        "browser_map_tiles_visible",
+        "attribution_visible",
+        "desktop_mobile_pass",
+        "r19_regression_pass"
+      ],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PENDING",
+            "FAIL"
+          ]
+        },
+        "url": {
+          "const": "https://www.nexus-mobile.de/orbis/astra-nav/"
+        },
+        "independent_reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "http_body_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "browser_map_tiles_visible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "attribution_visible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "desktop_mobile_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "r19_regression_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "asset_sha256_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "material_caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_lineage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "terminal_state": {
+        "const": "WWW_LIVE_VERIFIED"
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "production_fileset": {
+        "properties": {
+          "state": {
+            "const": "PASS"
+          },
+          "files": {
+            "minItems": 4
+          },
+          "rollback_witness": {
+            "type": "string",
+            "minLength": 8
+          }
+        },
+        "required": [
+          "observed_utc"
+        ]
+      },
+      "hostinger_scoped_write": {
+        "properties": {
+          "state": {
+            "const": "PASS"
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "writer_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "write_receipt_id": {
+            "type": "string",
+            "minLength": 8
+          },
+          "file_hashes_match": {
+            "const": true
+          },
+          "observed_utc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "independent_public_readback": {
+        "properties": {
+          "state": {
+            "const": "PASS"
+          },
+          "independent_reviewer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_utc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "http_body_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "browser_map_tiles_visible": {
+            "const": true
+          },
+          "attribution_visible": {
+            "const": true
+          },
+          "desktop_mobile_pass": {
+            "const": true
+          },
+          "r19_regression_pass": {
+            "const": true
+          },
+          "asset_sha256_receipt": {
+            "type": "string",
+            "minLength": 8
+          }
+        }
+      }
+    }
+  }
+}
