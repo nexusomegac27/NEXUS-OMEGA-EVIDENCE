@@ -1,6 +1,6 @@
 # R25 External Expert Archive — 2026-10-10
 
-This directory mirrors the archived R25 external-expert package (10 files) from the NEXUS-OMEGA Perplexity Project file repository into the public evidence repository.
+This directory mirrors the archived R25 external-expert package (9 files + this README) from the NEXUS-OMEGA Perplexity Project file repository into the public evidence repository.
 
 ## Provenance
 
@@ -10,26 +10,27 @@ This directory mirrors the archived R25 external-expert package (10 files) from 
 - Claim ceiling: `C1_DESCRIPTIVE_ONLY`
 - No runtime rights, no production write, no merge authorization by this mirror
 
-## Contents
+## Contents — byte-exact manifest (SHA-256 recomputed from committed blobs)
 
-| File | Role | SHA-256 |
+| File | Bytes | SHA-256 |
 |---|---|---|
-| `NEXUS_OMEGA_AXIOM_R25_NEUTRAL_EXTERNAL_EXPERT_MAXI_RESEARCH_ORDER_20261010_R0.md` | MAXI research order (expert-neutral) | `a4ba606496ad4dedea1e9a6099ad7f285c40ba6915bc809d3f7e2e5fd3b9a50d` |
-| `NEXUS_OMEGA_EXTERNAL_EXPERT_R25_INDEPENDENT_MAXI_RESEARCH_RETURN_20261010_R0.md` | External-expert return (GROK summary) | `654bb2a5c9fd828779cd4ebf8be38e72d093e21cc21cc2b9451eab8313b48c64` |
-| `R25_THREE_DECISION_CANDIDATES_COMPUTER_VALIDATION_20261010_R0.md` | Three-candidate validation | `14a1c77a97839b99e6458952adb90cf5e9a0350f649131a87a96b66427f2da57` |
-| `R25_CAUSALITY_AND_NEGATIVE_FIXTURES_ANALYSIS_20261010_R0.md` | Causality + negative-fixtures analysis | `9574a984cb6997c4784f516cdce846394a1f93d9f086dcd60e1f401aecea9920` |
-| `R25_THREE_DECISION_CANDIDATES_NEGATIVE_FIXTURES_DASHBOARD_20261010_R0.htm` | HTML dashboard (not executed) | `9e116524763a0f3e0e537c9337de174570d36bd3d10ffa879bf215555bef3dd7` |
-| `NEXUS_OMEGA_R25_CONTINUATION_INTAKE_AND_ARCHIVE_RECEIPT_PERPLEXITY_COMPUTER_20261010_R0.md` | Intake + archive receipt | see file |
-| `NEXUS_OMEGA_R25_AXIOM_DECISION_TEMPLATE_20261010_R0.md` | AXIOM decision template (new) | see file |
-| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.md` | NF-05/NF-06 preregistration draft (design-only) | see file |
-| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.json` | Same, machine-readable | see file |
-| `NEXUS_OMEGA_R25_SESSION_RESEARCH_AND_CONVERSATION_LOG_20261010_R0.md` | Session research log | see file |
+| `NEXUS_OMEGA_AXIOM_R25_NEUTRAL_EXTERNAL_EXPERT_MAXI_RESEARCH_ORDER_20261010_R0.md` | 25425 | `a4ba606496ad4dedea1e9a6099ad7f285c40ba6915bc809d3f7e2e5fd3b9a50d` |
+| `NEXUS_OMEGA_EXTERNAL_EXPERT_R25_INDEPENDENT_MAXI_RESEARCH_RETURN_20261010_R0.md` | 3196 | `654bb2a5c9fd828779cd4ebf8be38e72d093e21cc21cc2b9451eab8313b48c64` |
+| `R25_THREE_DECISION_CANDIDATES_COMPUTER_VALIDATION_20261010_R0.md` | 5749 | `14a1c77a97839b99e6458952adb90cf5e9a0350f649131a87a96b66427f2da57` |
+| `R25_CAUSALITY_AND_NEGATIVE_FIXTURES_ANALYSIS_20261010_R0.md` | 6699 | `9574a984cb6997c4784f516cdce846394a1f93d9f086dcd60e1f401aecea9920` |
+| `R25_THREE_DECISION_CANDIDATES_NEGATIVE_FIXTURES_DASHBOARD_20261010_R0.htm` | 9995 | `9e116524763a0f3e0e537c9337de174570d36bd3d10ffa879bf215555bef3dd7` |
+| `NEXUS_OMEGA_R25_CONTINUATION_INTAKE_AND_ARCHIVE_RECEIPT_PERPLEXITY_COMPUTER_20261010_R0.md` | 5343 | `9c6591ea2f6caec8b2cf119f5690a4245d3519bc2cb93d256094f66d221d290b` |
+| `NEXUS_OMEGA_R25_AXIOM_DECISION_TEMPLATE_20261010_R0.md` | 7086 | `818c3303a9536e8084abb1ce189ed6cc517df870d7b4d1e64ae5d13f2c25ea8e` |
+| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.md` | 9750 | `75223eb8eaa58035ac9d51c0e2f8ca3f7b7d48c14d5756af80ad799cafca3e13` |
+| `NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R0.json` | 4486 | `854a7a876f4a2051b8d8ea7dbb5e6e84db171eb9452a8a1ddd929c391d625571` |
+
+The session research/conversation log (`NEXUS_OMEGA_R25_SESSION_RESEARCH_AND_CONVERSATION_LOG_20261010_R0.md`) was initially committed in error and removed in a follow-up commit; it is intentionally **excluded** from this public mirror (operator conversation export is not authorized for external publication) and remains only in the Perplexity project repository. The removal commit does not erase the earlier published history of that file.
 
 ## Scientific caveats
 
 1. The five underlying R25 return artifacts (`R25-00/-03/-05/-07/-09`) referenced by the GROK summary are `SOURCE_NOT_PRESENT` — their bytes were not available in the archiving environment and were not reconstructed from the summary.
 2. The historical GROK modules contain a causality overclaim; the canonical statement remains the corrected AXIOM adjudication in PR #66. Historical originals are preserved unchanged as provenance.
-3. NF-05 and NF-06 are `PREREGISTRATION_DRAFT_WITH_UNRESOLVED_FIELDS` — design-only, not executed, no thresholds frozen.
+3. NF-05 and NF-06 are `PREREGISTRATION_DRAFT_WITH_UNRESOLVED_FIELDS` — design-only, not executed, no thresholds frozen. The NA-1 model-order Markdown (equations, integrator, timestep, noise process, seed scheme) has not been retrieved; those fields are explicitly unresolved.
 4. PR #65 remains `OPEN_HOLD_SCOPED`; this mirror does not touch it and does not authorize any merge.
 
 NEXUS OMEGA — Quelle ist nicht Wahrheit. Prüfung bleibt das Fundament.
