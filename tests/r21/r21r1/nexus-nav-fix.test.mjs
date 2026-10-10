@@ -6,7 +6,7 @@ import {
   isMonotonicPerBoot,
   NAV_FIX_SCHEMA_VERSION,
   MIN_SATELLITES_USED_FOR_TRUSTED_FIX
-} from '../../examples/r21/r21r1/nexus-nav-fix.mjs';
+} from '../../../examples/r21/r21r1/nexus-nav-fix.mjs';
 
 const EVAL = '2026-10-10T12:00:05Z';
 const nanos = (s) => s * 1e9;

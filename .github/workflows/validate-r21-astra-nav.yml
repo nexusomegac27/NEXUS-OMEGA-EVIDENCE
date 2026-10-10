@@ -59,14 +59,82 @@ jobs:
         run: |
           node --input-type=module -e "import fs from 'node:fs'; for (const p of ['schema/r21/r21r1/nexus-nav-fix-v1.schema.json','schema/r21/r21r1/nexus-offline-pack-v1.schema.json','schema/r21/r21r1/nexus-nav-event-v1.schema.json']) JSON.parse(fs.readFileSync(p,'utf8'));"
       - name: Run R21R1 GNSS provenance fail-closed fixtures
-        run: node --test tests/r21/r21r1/nexus-nav-fix.test.mjs
+        continue-on-error: true
+        run: |
+          set +e
+          out=$(node --test tests/r21/r21r1/nexus-nav-fix.test.mjs 2>&1)
+          status=$?
+          printf '%s
+' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=R21R1 GNSS fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
+            touch /tmp/r21r1-gate-failed
+          fi
+          exit "$status"
       - name: Run R21R1 offline pack gate fixtures
-        run: node --test tests/r21/r21r1/offline-pack.test.mjs
+        continue-on-error: true
+        run: |
+          set +e
+          out=$(node --test tests/r21/r21r1/offline-pack.test.mjs 2>&1)
+          status=$?
+          printf '%s
+' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=R21R1 offline pack fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
+            touch /tmp/r21r1-gate-failed
+          fi
+          exit "$status"
       - name: Run R21R1 photo tile provenance gate fixtures
-        run: node --test tests/r21/r21r1/photo-tile-provenance.test.mjs
+        continue-on-error: true
+        run: |
+          set +e
+          out=$(node --test tests/r21/r21r1/photo-tile-provenance.test.mjs 2>&1)
+          status=$?
+          printf '%s
+' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=R21R1 photo tile provenance fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
+            touch /tmp/r21r1-gate-failed
+          fi
+          exit "$status"
       - name: Run R21R1 node navigation event contract fixtures
-        run: node --test tests/r21/r21r1/nexus-nav-event.test.mjs
+        continue-on-error: true
+        run: |
+          set +e
+          out=$(node --test tests/r21/r21r1/nexus-nav-event.test.mjs 2>&1)
+          status=$?
+          printf '%s\n' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=R21R1 nav event fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
+            touch /tmp/r21r1-gate-failed
+          fi
+          exit "$status"
       - name: Run R21R1 WWW closeout receipt fixtures
-        run: node --test tests/r21/r21r1/www-closeout-receipt.test.mjs
+        continue-on-error: true
+        run: |
+          set +e
+          out=$(node --test tests/r21/r21r1/www-closeout-receipt.test.mjs 2>&1)
+          status=$?
+          printf '%s\n' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=R21R1 WWW closeout receipt fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
+            touch /tmp/r21r1-gate-failed
+          fi
+          exit "$status"
       - name: Verify ASTRA-NAV P0 production fileset manifest hashes (WP-G1)
-        run: node scripts/r21r1/verify-production-fileset-manifest.mjs
+        run: |
+          set +e
+          out=$(node scripts/r21r1/verify-production-fileset-manifest.mjs 2>&1)
+          status=$?
+          printf '%s\n' "$out"
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=Production fileset manifest verification failed::$(printf '%s' "$out" | tail -n 5 | tr '\n' ' ' | cut -c1-600)"
+            exit 1
+          fi
+      - name: Enforce R21R1 fail-closed gate aggregation
+        if: always()
+        run: |
+          if [ -f /tmp/r21r1-gate-failed ]; then
+            echo 'Mindestens ein R21R1-Test-Gate ist fehlgeschlagen (siehe Annotationen).'
+            exit 1
+          fi

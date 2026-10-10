@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateOfflinePack, routeAvailability, OFFLINE_PACK_SCHEMA_VERSION } from '../../examples/r21/r21r1/offline-pack.mjs';
+import { validateOfflinePack, routeAvailability, OFFLINE_PACK_SCHEMA_VERSION } from '../../../examples/r21/r21r1/offline-pack.mjs';
 
 const EVAL = '2026-10-10T12:00:00Z';
 const REQUEST_POINT = [10.0037, 53.5511];

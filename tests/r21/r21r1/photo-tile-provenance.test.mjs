@@ -6,8 +6,8 @@ import {
   zoomTruth,
   selectProductionLayer,
   visibleTruthLine
-} from '../../examples/r21/r21r1/photo-tile-provenance.mjs';
-import { mapMetersPerCssPixel } from '../../examples/r21/orbis-astra-nav-photo-lod.mjs';
+} from '../../../examples/r21/r21r1/photo-tile-provenance.mjs';
+import { mapMetersPerCssPixel } from '../../../examples/r21/orbis-astra-nav-photo-lod.mjs';
 
 function atom(extra = {}) {
   return {

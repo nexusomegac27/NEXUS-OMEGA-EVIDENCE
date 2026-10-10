@@ -5,7 +5,7 @@ import {
   validateCloseoutReceipt,
   isLiveVerifiedEligible,
   CLOSEOUT_SCHEMA_VERSION
-} from '../../examples/r21/r21r1/www-closeout-receipt.mjs';
+} from '../../../examples/r21/r21r1/www-closeout-receipt.mjs';
 
 const READBACK_URL = 'https://www.nexus-mobile.de/orbis/astra-nav/';
 const SOURCE_COMMIT = 'b09dedca1e078c6fc327bf86e32eaf9a98094ea5';

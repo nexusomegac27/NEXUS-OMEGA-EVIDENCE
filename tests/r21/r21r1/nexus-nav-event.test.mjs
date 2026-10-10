@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateNavEvent, NAV_EVENT_SCHEMA_VERSION } from '../../examples/r21/r21r1/nexus-nav-event.mjs';
+import { validateNavEvent, NAV_EVENT_SCHEMA_VERSION } from '../../../examples/r21/r21r1/nexus-nav-event.mjs';
 
 const FIX_SHA = 'a'.repeat(64);
 const ATOM_REF = { asset_id: 'osm-germany-extract-2026-10', atom_sha256: 'b'.repeat(64) };
