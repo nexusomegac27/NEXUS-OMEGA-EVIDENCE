@@ -1,0 +1,89 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R21R1_GROK_POSTMODULE_SOURCE_INTAKE_RECEIPT_20261010_R0",
+  "date_utc": "2026-10-10",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "status": "ORIGINAL_UPLOAD_BYTES_REHASHED_LOCALLY_NOT_HOSTINGER_PRIVATE_ARCHIVED",
+  "chain_base": {
+    "r19_pr54_merge": "a6ae27953bdf7904e68de7fefd3769445079db58",
+    "r21r1_pr60_merge": "2e4169cc6393db766a0107464c32bc65ab72e4aa"
+  },
+  "original_uploads": [
+    {
+      "file": "NEXUS_~1(20261010-124026).TXT",
+      "bytes": 22512,
+      "sha256": "4c8cc947de5dfdeff1c05583df0713c4826b657a73527a843a07d9e1c2e65503",
+      "class": "R19_NARRATIVE_HISTORY",
+      "status": "HASH_VERIFIED_CONTENT_CLAIMS_NEED_REVIEW"
+    },
+    {
+      "file": "NEXUS_~2(3).ZIP",
+      "bytes": 8152,
+      "sha256": "89ce11741a79ad28973185072b58746b35a40264064b21d5ca6bdc7a895a0514",
+      "class": "R19_SGP4_SOURCE_ARCHIVE",
+      "zip_crc": "PASS",
+      "contents": "7_OF_7_MANIFEST_SHA256_MATCH",
+      "manifest_file_sha256": "a903917e6c5e03969d73ed85348148b8f108555797c7d0d145c8e851fb94b11f",
+      "package_root": "MATCH"
+    },
+    {
+      "file": "PROTOK~1(1).MD",
+      "bytes": 5935,
+      "sha256": "98a714d4705b7f8de32b44bfa80bce864d20f0f814619ad55faf91de591eeced",
+      "class": "R19_SYMBIOSE_LAB_REPORTED_SOURCE_ANALYSIS",
+      "tests_25_of_25": "SOURCE_REPORTED_NOT_REPRODUCED"
+    },
+    {
+      "file": "NEXUS_~1(6).ZIP",
+      "bytes": 24426,
+      "sha256": "0086701b2b9392dfd2d0c0f7dc7959edb6cac358b5bb2e4af390bc7541f0e6b1",
+      "class": "R19_SLOT_LEDGER_SOURCE_ARCHIVE",
+      "zip_crc": "PASS",
+      "contents": "9_OF_9_MANIFEST_SHA256_MATCH",
+      "manifest_file_sha256": "816d51d936bd5ddee2f3ed9383f358a16db30c10744972261ff1b339ef4f7910",
+      "package_root": "MATCH"
+    },
+    {
+      "file": "NEXUS_~2(6).TXT",
+      "bytes": 9161,
+      "sha256": "32083a841df85790cec96a063af191c31fd6b1956449c3d34dfebb21eddd6466",
+      "class": "R10R22_NARRATIVE_PHASE_PROPOSAL",
+      "status": "NOT_AN_AXIOM_TERMINAL_ADJUDICATION"
+    }
+  ],
+  "source_reconciliations": [
+    {
+      "id": "F01",
+      "finding": "Legacy manuscript asserts satellites.json unavailable (HTTP 404); latest independent public observation retrieves versioned empty manifest with nexus_link_verified=false and satellites=[]",
+      "verdict": "STALE_CLAIM_SUPERSEDED"
+    },
+    {
+      "id": "F02",
+      "finding": "Legacy manuscript asserts R19/SGP4 live fully bound; no actual admitted satellites/SGP4 mapped positions verified",
+      "verdict": "SOURCE_DESCRIBES_DESIGN_NOT_RUNTIME"
+    },
+    {
+      "id": "F03",
+      "finding": "SGP4 producer uses height_km and epoch_utc, while R19 official schema requires alt_km, element_epoch_utc and calculated_utc; source array identity/hash and epoch UTC precision must be challenged",
+      "verdict": "CROSS_CONTRACT_DEFECT"
+    },
+    {
+      "id": "F04",
+      "finding": "Old Symbiose Lab report says 6 of 9 grouped providers success, 3 holds; module bytes for the separate Symbiose-Lab extension ZIP absent from current uploads",
+      "verdict": "RAW_REPRODUCTION_GAP"
+    },
+    {
+      "id": "F05",
+      "finding": "NEXUS ASTRA-NAV P0 now publicly retrievable as text from an independent crawler; pixel/browser interactions and actual Hostinger write remain unverified",
+      "verdict": "PUBLIC_TEXT_PRESENT_NOT_TERMINAL"
+    },
+    {
+      "id": "F06",
+      "finding": "R19 orbital element tracking is separate from phone GNSS-only navigation, offline maps and photo-terrain rights",
+      "verdict": "PHYSICS_AND_RIGHTS_BOUNDARY"
+    }
+  ],
+  "publication_safety": "HASH_ONLY_NO_ORIGINAL_USER_ARCHIVE_BYTES_IN_PUBLIC_GITHUB",
+  "hostinger_private_archive": "NOT_INDEPENDENTLY_OBSERVED",
+  "real_nav_satellite_rf": "NOT_VERIFIED",
+  "nexus_link_verified": false
+}
