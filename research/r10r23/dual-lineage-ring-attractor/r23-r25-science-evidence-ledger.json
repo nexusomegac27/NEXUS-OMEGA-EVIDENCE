@@ -1,0 +1,126 @@
+{
+  "object": "NEXUS_OMEGA_R10R23_SCIENTIFIC_SMALLTALK_SOURCE_AND_CLAIM_LEDGER_20261010_R0",
+  "date_utc": "2026-10-10",
+  "parent_git_merge": "3b6bd53e4720649573e760c2bb006902801df51d",
+  "state": "RESEARCH_SEED_C1_WITH_MATERIAL_CORRECTIONS",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_originals": [
+    {
+      "filename": "R23_NE~1.TXT",
+      "bytes": 47192,
+      "sha256": "587eef03f7cdf2da10bf7fedbfe75081e1e435ad3e8aed50ea9c3733094bfaeb",
+      "class": "MULTI_AGENT_TRANSCRIPT",
+      "release": "HASH_METADATA_ONLY"
+    },
+    {
+      "filename": "IMAGE_~1.JPG",
+      "bytes": 177490,
+      "sha256": "519f9d88558470f9ce4e87e270f2768122f89da2f70903d4382fc99d7d702305",
+      "class": "OPERATOR_EDUCATIONAL_ILLUSTRATION",
+      "release": "HASH_METADATA_ONLY"
+    },
+    {
+      "filename": "NEXUS-~1.HTM",
+      "bytes": 189918,
+      "sha256": "db036fedacd18649d00f61159c463a4d9b8b23e29ea75fc3a22bc0e3e4dd60d6",
+      "class": "BUNDLED_INTERACTIVE_DEMO_NOT_EXECUTED_IN_BROWSER",
+      "release": "HASH_METADATA_ONLY"
+    },
+    {
+      "filename": "R25-VI~1.MD",
+      "bytes": 16521,
+      "sha256": "650030f74d0bd83f4463172ef56774838e6c9358d2134165384269c93b17a8c8",
+      "class": "RESEARCH_SYNTHESIS_FOURTH_LANE",
+      "release": "HASH_METADATA_ONLY"
+    }
+  ],
+  "independently_checked_primary_sources": [
+    {
+      "id": "JOKHAI_2026",
+      "url": "https://www.nature.com/articles/s41593-026-02433-7",
+      "finding": "Two parallel lineage-restricted neural ectoderm progenitors; composite brain organ; experimental and evolutionary hedge",
+      "grade": "ABSTRACT_AND_PUBLISHER_CHECKED"
+    },
+    {
+      "id": "SEELIG_JAYARAMAN_2015",
+      "url": "https://www.nature.com/articles/nature14446",
+      "finding": "Heading ring-like persistence with drift and visual landmark correction",
+      "grade": "PUBLISHER_AND_PMC_CHECKED"
+    },
+    {
+      "id": "FLYWIRE_DORKENWALD_2024",
+      "url": "https://www.nature.com/articles/s41586-024-07558-y",
+      "finding": "Adult fly connectome 139255 neurons, 54.5 million synapses",
+      "grade": "PRIMARY_PUBLICATION_CHECKED"
+    },
+    {
+      "id": "NEUROMECHFLY2_WANG_CHEN_2024",
+      "url": "https://www.nature.com/articles/s41592-024-02497-y",
+      "finding": "Simulated embodied sensorimotor behaviors, not proof of NEXUS runtime or physical navigation",
+      "grade": "PRIMARY_PUBLICATION_CHECKED"
+    }
+  ],
+  "evaluations": [
+    {
+      "claim": "DUAL_NEURAL_PROGENITORS",
+      "grade": "SCIENTIFIC_BIOLOGICAL_SUPPORT_IN_STUDIED_CONDITIONS",
+      "qualification": "Does not prove two independent adult brains or specific NEXUS lane assignment"
+    },
+    {
+      "claim": "ABSOLUTE_NO_CELL_FATE_CONVERSION_POSSIBLE",
+      "grade": "OVERCLAIM_NOT_SUPPORTED",
+      "qualification": "Tested in-vitro constraints and study scope do not establish all possible intervention outcomes"
+    },
+    {
+      "claim": "CHROMATIN_POSTERIOR_GLOBALLY_REPRESSED",
+      "grade": "ILLUSTRATION_OVERSIMPLIFICATION",
+      "qualification": "Differential chromatin landscape not universal posterior gene silencing"
+    },
+    {
+      "claim": "RING_ATTRACTOR_HEADING_PERSISTENCE",
+      "grade": "BIOLOGICAL_SUPPORT",
+      "qualification": "Drift is documented; persistence is not physical accuracy"
+    },
+    {
+      "claim": "R24_DRIFT_FREE_ORBIT_FOR_120S",
+      "grade": "REJECTED_NOT_DEMONSTRATED",
+      "qualification": "No externally grounded orbital error distribution/forecast bound"
+    },
+    {
+      "claim": "NOAA_XRS_FLUX_CORRECTS_SGP4_ORBIT_ANGLE",
+      "grade": "REJECTED_MEASUREMENT_TYPE_ERROR",
+      "qualification": "X-ray flux not spacecraft ephemeris or GNSS position; instrument source mapping is not orbital measurement"
+    },
+    {
+      "claim": "FLYWIRE_NEUROMECHFLY_IMPLY_NEXUS_EXPONENTIAL_GROWTH",
+      "grade": "UNTESTED_HYPOTHESIS",
+      "qualification": "No empirical NEXUS quantitative baseline or independent repetition"
+    },
+    {
+      "claim": "HTML_SANDBOX_COMPUTATIONAL_VERIFICATION",
+      "grade": "SOURCE_PRESENT_NO_INDEPENDENT_RUNTIME_REPLAY",
+      "qualification": "Bundled React HTML alone cannot witness filter drift, 3-proof WWW or instrument data"
+    },
+    {
+      "claim": "R21R1_CURSOR_TERMINAL",
+      "grade": "SOURCE_REPORTED_WORKER_CONTINUES",
+      "qualification": "No worker duplication/Hostinger writes from R23 research lane"
+    }
+  ],
+  "falsification_requirements": [
+    "NO_INPUT_120S_DRIFT",
+    "WRONG_NORAD_EPOCH_SHA",
+    "NOAA_FLUX_AS_ORBIT_CORRECTION_REJECT",
+    "PHASE_WRAP_AND_ANTIMERIDIAN",
+    "MULTIPEAK_INJECTION",
+    "GROUND_TRUTH_COMPARISON_VS_SGP4_ONLY",
+    "HOLD_LAST_BASELINE",
+    "UNCERTAINTY_COVERAGE",
+    "FILTER_STALENESS",
+    "SOURCE_CREDIT_PROVENANCE"
+  ],
+  "no_new_execution_rights": true,
+  "runtime_ship": false,
+  "nexus_link_verified": false,
+  "elite_node_births": 0
+}
