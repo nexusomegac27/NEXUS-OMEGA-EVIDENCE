@@ -1,0 +1,44 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_BROAD_PARTIAL_REVIEW_DETACHED_MANIFEST_20261011_R0",
+  "created_utc_date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "source_state": "PARTIAL_ADVERSARIAL_RESEARCH",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "api_readback": true,
+  "children_count": 3,
+  "assets": [
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_R26_BROAD_ADVERSARIAL_REVIEW_RING_MAX_SUM_20261011_R1.md",
+      "bytes": 21604,
+      "sha256": "d81d3c6b6401aa5a3ba0136e479c9c022adc7640d14948845b18956796e6f32d",
+      "git_blob_sha1": "c4d33ce3bc946609d75f04e3ad5c50047c7dc231",
+      "source_type": "OPERATOR_UPLOADED_PARTIAL_REPORT",
+      "git_api_readback": true
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_R26_BROAD_ADVERSARIAL_REVIEW_INDEPENDENT_SYNTHESIS_20261011_R1.md",
+      "bytes": 12311,
+      "sha256": "a5b713b376bea0b8cae069b6486104f149a5d2fb0f0185847f069b149dcb9f52",
+      "git_blob_sha1": "396d2016e06634e9e0e954b0d357f374c9bebe06",
+      "source_type": "OPERATOR_UPLOADED_PARTIAL_REPORT",
+      "git_api_readback": true
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_AXIOM_R26_BROAD_RING_REVIEW_ADJUDICATION_20261011_R0.md",
+      "bytes": 6511,
+      "sha256": "001898b795562ff97005dc80239a9ad4c229a979078531bf38784aac01cb0980",
+      "git_blob_sha1": "1ce26e9c4f84f30dd0e2372043bfdfb174e9e8a3",
+      "source_type": "AXIOM_ADJUDICATION",
+      "git_api_readback": true
+    }
+  ],
+  "manifest_self_sha256": "DETACHED_IN_PR_COMMENT",
+  "full_R26_terminal": false,
+  "experiments_executed": false,
+  "runtime_rights": false,
+  "hostinger_write": false,
+  "cursor_new_worker": false,
+  "pr70_merge": false,
+  "pr65_merge": false,
+  "pr67_merge": false
+}
