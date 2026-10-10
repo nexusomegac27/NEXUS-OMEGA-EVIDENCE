@@ -64,8 +64,7 @@ jobs:
           set +e
           out=$(node --test tests/r21/r21r1/nexus-nav-fix.test.mjs 2>&1)
           status=$?
-          printf '%s
-' "$out"
+          printf '%s\n' "$out"
           if [ "$status" -ne 0 ]; then
             echo "::error title=R21R1 GNSS fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
             touch /tmp/r21r1-gate-failed
@@ -77,8 +76,7 @@ jobs:
           set +e
           out=$(node --test tests/r21/r21r1/offline-pack.test.mjs 2>&1)
           status=$?
-          printf '%s
-' "$out"
+          printf '%s\n' "$out"
           if [ "$status" -ne 0 ]; then
             echo "::error title=R21R1 offline pack fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
             touch /tmp/r21r1-gate-failed
@@ -90,8 +88,7 @@ jobs:
           set +e
           out=$(node --test tests/r21/r21r1/photo-tile-provenance.test.mjs 2>&1)
           status=$?
-          printf '%s
-' "$out"
+          printf '%s\n' "$out"
           if [ "$status" -ne 0 ]; then
             echo "::error title=R21R1 photo tile provenance fixtures failed::$(printf '%s' "$out" | grep -E 'not ok|SyntaxError|Cannot find|ERR_|AssertionError' | head -n 25 | tr '\n' ' ' | cut -c1-900)"
             touch /tmp/r21r1-gate-failed
