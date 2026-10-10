@@ -42,7 +42,8 @@
           "admission",
           "orbital_elements",
           "position",
-          "observations"
+          "observations",
+          "identity_source_url"
         ],
         "properties": {
           "id": {
@@ -79,7 +80,8 @@
               "SOURCE_VERIFIED_RESERVE",
               "SOURCE_VERIFIED_INACTIVE",
               "UNKNOWN"
-            ]
+            ],
+            "description": "Independent source-bound spacecraft status; not inferred from ACTIVE CelesTrak group."
           },
           "operational_status_source_url": {
             "type": "string",
@@ -189,7 +191,8 @@
               "model_version": {
                 "type": "string"
               }
-            }
+            },
+            "description": "Present only after independent source-bound propagation; NEVER use a default coordinate."
           },
           "observations": {
             "type": "array",
@@ -266,7 +269,8 @@
                 }
               }
             },
-            "maxItems": 500
+            "maxItems": 500,
+            "description": "Actual external instrument measurements explicitly associated with this NORAD ID; do not invent PASS quality."
           },
           "stale": {
             "type": "boolean"
@@ -276,7 +280,8 @@
             "format": "date-time"
           }
         }
-      }
+      },
+      "description": "The public list includes only individually admitted C1 slots; absent data must not generate fake positions."
     },
     "source_manifest_sha256": {
       "type": "string",
