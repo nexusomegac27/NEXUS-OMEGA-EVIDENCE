@@ -73,3 +73,7 @@ python -m unittest tests.test_repository_structure
 ```
 
 A structure change is incomplete until both the human-readable and machine-readable structure contracts agree.
+
+## R27-E external agent canonical slot restriction (additive, 2026-10-11)
+
+The NEXUS Operator alone preallocates new external-agent assignments under an existing `research/<phase>/<topic>/returns/` path and records their exact permitted filenames and verified contributor principals in `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json`. Externals never invent paths; create-only is the default, and new revisions require another NEXUS-provisioned slot. The `scripts/validate_external_agent_pr.py` / trusted-base GitHub check rejects non-owner uncontrolled tree mutations and validates complete manifests, but required checks/code-owner review must be separately enforced with GitHub branch rules. Historical path-bound evidence is never moved to satisfy cosmetic reorganization. GitHub and Hostinger are evidence/summary layers, not unsorted agent output dumps. This restriction extends rather than replaces the REPOSITORY_ORDER_LAW_V1.
