@@ -107,6 +107,14 @@
       "state": "OWNER_ISSUED_ORDERS_NOT_EXTERNAL_WRITE_AUTHORITY",
       "source_commit": "c88da5873b5897585ac34e4066dcaabd963fdb03",
       "inbox_issue": 93
+    },
+    "r28-nf05-nf06-prereg-remediation": {
+      "path": "research/r28/r10r28-nf05-nf06-prereg-remediation-20261011",
+      "state": "OWNER_ISSUED_CURSOR_ORDER_ONLY_PHASE_C_REVISIONS_REQUIRED",
+      "source": "R26_P26_PR92_AND_OPERATOR_R10R28_UPLOADS",
+      "task_anchor_json": "LOCAL_VALIDATED_GITHUB_UPLOAD_BLOCKED",
+      "scientific_experiment": "NOT_EXECUTED",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -162,7 +170,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.2",
+  "version": "1.7.3",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
