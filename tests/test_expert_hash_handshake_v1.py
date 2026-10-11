@@ -13,7 +13,7 @@ class TestExpertHashHandshake(unittest.TestCase):
         self.prefix="research/r26/owner-approved-return-slot"
         self.path=self.prefix+"/evidence.md"
         d=self.root/self.path;d.parent.mkdir(parents=True)
-        d.write_bytes(b"original evidence\\n")
+        d.write_bytes(b"original evidence"+bytes([10]))
         b=d.read_bytes()
         self.m={"schema_version":"1.0.0","object":"EXPERT_TEST_OBJECT","recipient":"NEXUS_OPERATOR_AXIOM",
             "order_object":"EXPERT_ORDER_OBJECT","order_sha256":S,"order_bytes":13150,
@@ -22,7 +22,7 @@ class TestExpertHashHandshake(unittest.TestCase):
             "claim_ceiling":"C1_DESCRIPTIVE_ONLY","runtime":"NOT_AUTHORIZED",
             "receiver_ack":"PENDING_AXIOM_INDEPENDENT_REHASH",
             "children":[{"path":self.path,"bytes":len(b),"sha256":hashlib.sha256(b).hexdigest(),
-                         "git_blob_sha1":hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\x00"+b).hexdigest()}]}
+                         "git_blob_sha1":hashlib.sha1(b"blob "+str(len(b)).encode()+bytes([0])+b).hexdigest()}]}
     def check(self):
         return v.verify(json.dumps(self.m).encode(),self.root,self.prefix,S)
     def assertRejected(self):
