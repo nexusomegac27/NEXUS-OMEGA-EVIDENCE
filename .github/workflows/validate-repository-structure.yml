@@ -17,4 +17,4 @@ jobs:
       - name: Validate repository-order contract
         run: python scripts/validate_repository_structure.py --root .
       - name: Run repository-structure tests
-        run: python -m unittest tests.test_repository_structure
+        run: python -m unittest tests.test_repository_structure tests.test_external_agent_pr
