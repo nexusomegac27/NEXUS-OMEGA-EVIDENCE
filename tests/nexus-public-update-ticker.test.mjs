@@ -139,6 +139,18 @@ test("T16 protocol remains read-only: public GET+GitHub GET, never POST", async 
     x.opts.credentials === "omit"));
   assert.ok(seen.every(x => !/token|secret|auth/i.test(JSON.stringify(x.opts))));
 });
+test("T18 actual response byte SHA-256 has fingerprint semantics, not authenticity", async () => {
+  const p = await readSources(async url =>
+    fakeResponse(url.startsWith("/") ? feed() : commits()), NOW);
+  if (globalThis.crypto?.subtle) {
+    assert.match(p.public.sha256, /^[a-f0-9]{64}$/);
+    assert.match(p.github.sha256, /^[a-f0-9]{64}$/);
+    assert.notEqual(p.public.sha256, p.github.sha256);
+  } else {
+    assert.equal(p.public.sha256, null);
+  }
+  assert.equal(p.github.events[0].level, "TRANSPORT_ONLY_NOT_RUNTIME_AUTHORITY");
+});
 test("T17 no paid LLM, tracking or internal callbacks in source endpoints", () => {
   assert.equal(TICKER.pollMs, 900000);
   assert.equal(TICKER.publicFeed, "/status/public-event-registry.json");
