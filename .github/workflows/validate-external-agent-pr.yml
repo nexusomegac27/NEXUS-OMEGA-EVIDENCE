@@ -24,3 +24,28 @@ jobs:
         run: python scripts/validate_external_agent_pr.py --event "$GITHUB_EVENT_PATH"
       - name: Run structural firewall negative tests on BASE policy
         run: python -m unittest tests.test_external_agent_pr
+
+  nexus-preentry-lab:
+    name: nexus-preentry-lab
+    needs: [r27e-external-structural-firewall]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Require separate R27-E trusted-base structural intake
+        env:
+          UPSTREAM_RESULT: ${{ needs.r27e-external-structural-firewall.result }}
+        run: |
+          test "$UPSTREAM_RESULT" = "success" || {
+            echo "DENY: R27-E structural intake did not pass"
+            exit 1
+          }
+      - name: Checkout trusted base only; no pull request code or persistent credential
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+      - name: Run bounded offline negative fixtures and R19 source conformance
+        run: python scripts/nexus_preentry_lab.py
