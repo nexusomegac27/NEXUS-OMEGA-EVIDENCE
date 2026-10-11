@@ -1,0 +1,121 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R27E_EXTERNAL_AGENT_STRUCTURAL_FIREWALL_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r27e-external-agent-structure-firewall-maxi-20261011",
+  "parent_main": "4ac4e6bdf4eeba631c16995ff195a5a701006374",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "publication_scope": "PUBLIC_SAFE_STRUCTURE_POLICY_ORDER_CI_ONLY",
+  "live_www": false,
+  "untrusted_public_node_execution": false,
+  "external_github_actors_registered": 0,
+  "branch_ruleset_required_check": "NOT_ENFORCED_OR_NOT_OBSERVED",
+  "original_deepseek_paste_appropriated_as_idea_only": true,
+  "maxi_order_sha256": "10e6ccf0516359ab0bc9590631da46697d1e5f0bd8331bb893ca9bf7fa75e776",
+  "files_count": 17,
+  "children": [
+    {
+      "path": "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json",
+      "bytes": 2178,
+      "sha256": "d257be3faef8336e30f688d440758b051d93dd2a29ece693882af4ed8e463e7c",
+      "git_blob_sha1": "1fabcab7f556e83621a3676ddfb3d11cdd964b55"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/returns/README.md",
+      "bytes": 1598,
+      "sha256": "63274dccc4d2ab11c24bb0f668a1de661bbec180196affe4de4bfe51f6773856",
+      "git_blob_sha1": "2f2890ed1d34486cfa2e465f2cf4137da119adde"
+    },
+    {
+      "path": "scripts/validate_external_agent_pr.py",
+      "bytes": 11293,
+      "sha256": "8b7fc50fefeb598297bb62ea9512bc9f3648af267d565e65a614c0dcbc3ef6c3",
+      "git_blob_sha1": "f4d5d9af99c550142feb9f0676ba244d1386173b"
+    },
+    {
+      "path": "tests/test_external_agent_pr.py",
+      "bytes": 4364,
+      "sha256": "71d60054d458581911d91675d295307023fda28823240975bf6fb09e6397f092",
+      "git_blob_sha1": "ee20f9394925d9cb706bae0dc15262ec2fd81733"
+    },
+    {
+      "path": ".github/workflows/validate-external-agent-pr.yml",
+      "bytes": 889,
+      "sha256": "017ab4db39cec6831a1a90a30e5686f0e815b9a457ee71bbe92b51e56db76fd1",
+      "git_blob_sha1": "545cdc494f8423a403d2ca4f9b8dfb424cb8a521"
+    },
+    {
+      "path": "schema/external-agent-return-r27e-v1.schema.json",
+      "bytes": 1761,
+      "sha256": "f000a03ff45a1948eb3e5560f5faf42bbcd45944aca44b8c9a7fa8d8ce80364c",
+      "git_blob_sha1": "39520121e8396af66b659b0a6dfc9ec6a81afe96"
+    },
+    {
+      "path": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
+      "bytes": 10121,
+      "sha256": "67403dbcb9486b868df1b44605b4cd8c644a7924c4945378bf19c413eb1e014d",
+      "git_blob_sha1": "f659048d53972eac3ab10d65a73cf7d3eb63111f"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXTERNAL_AGENTS_R27E_MAX_ADVERSARIAL_STRUCTURAL_GOVERNANCE_ORDER_20261011_R0.md",
+      "bytes": 21469,
+      "sha256": "10e6ccf0516359ab0bc9590631da46697d1e5f0bd8331bb893ca9bf7fa75e776",
+      "git_blob_sha1": "33470b3f71a29ff3077a794a04cf27c7b7ee5795"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10811,
+      "sha256": "b6f9c0c0981b7504aa1d9ec57eec72211e49b187aeae297e9acd605731341f61",
+      "git_blob_sha1": "61834128d6f1f61dca5001880807cce3548c44cf"
+    },
+    {
+      "path": "research/README.md",
+      "bytes": 2533,
+      "sha256": "26153843349b12329016c7d0794a7db0470d7452ac5695f617acfea607548cc1",
+      "git_blob_sha1": "17b852b677472415fdcb294eb791bce82685248c"
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_STRUCTURE.md",
+      "bytes": 5392,
+      "sha256": "e5a471b2da44e78594204aaaedf03db80105733b62e1d51c81ab7e6187589f0f",
+      "git_blob_sha1": "a2a99c2744ef62bea86baf7d3c4c0f09aff2b061"
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_STRUCTURE.json",
+      "bytes": 5563,
+      "sha256": "79b4a4bdc5ac2c5c5fc6b68e4affb1e8890755582ebb403ff3e6ec921b3a7107",
+      "git_blob_sha1": "182c92af4375ac1115564bc0fc5fd5af5cb920c1"
+    },
+    {
+      "path": "scripts/validate_repository_structure.py",
+      "bytes": 6566,
+      "sha256": "e8feb96fd8ad7f7893541f24772e6012573655414788c08d8f84bcd0cdd77dfd",
+      "git_blob_sha1": "58381d96546b5e892a9cea6a1337d3af432b3239"
+    },
+    {
+      "path": ".github/workflows/validate-repository-structure.yml",
+      "bytes": 526,
+      "sha256": "316a066c728a766ab2f7e3d63d1db3cc21792000dd640bbf482be71173753a37",
+      "git_blob_sha1": "c3f33c1533b0ef2181a4497c61069a75b9e45010"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 5654,
+      "sha256": "bbca2ae821c7cd0ae25b8821a7ba5bbca3e3fe0175a4dd48000aa9845824ed16",
+      "git_blob_sha1": "eec7b32c05716f76e5759fc94165fdf29c48b8dc"
+    },
+    {
+      "path": "docs/agent-protocol.md",
+      "bytes": 2134,
+      "sha256": "4c84228c3137f584c28d127e129b9f67d8007829b9bef8c57373ece2d2e831ab",
+      "git_blob_sha1": "5f206e46bdbc021790d417dd7d42ef6e5fcd9a2c"
+    },
+    {
+      "path": "docs/governance/REPOSITORY_ORDER_POLICY.md",
+      "bytes": 3681,
+      "sha256": "8c5829ceca1521216f6966a2857bf77545991bba13a7b4d1e61cac27796b8f32",
+      "git_blob_sha1": "f20f930a4d95036d98b3b3beb6de9f21e0bd8c64"
+    }
+  ],
+  "manifest_selfhash": "DETACHED_RECORDED_IN_GITHUB_RECEIPT_NOT_INSIDE_SELF"
+}
