@@ -81,7 +81,7 @@
       "classification": "prereg_draft_not_executed",
       "title": "NF05/NF06 Vorregistrierung",
       "summary": "Entwurf: 16 Arm-Zellen, 5376 Kombinationen, 0 ausgeführte konfirmatorische Trials.",
-      "limits": "Kernel/PRNG/Noise/Plateaus/STAL​​E/Outcome-Freeze offen.",
+      "limits": "Kernel/PRNG/Noise/Plateaus/STALE/Outcome-Freeze offen.",
       "source_urls": [
         "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/89"
       ],
