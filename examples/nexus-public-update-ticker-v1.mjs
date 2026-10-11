@@ -158,6 +158,10 @@ function renderSection(doc, parent, heading, source, error) {
   if (source?.updated) {
     section.append(element(doc, "small", "Quellenzeit: " + dateLabel(source.updated)));
   }
+  if (source?.sha256) {
+    section.append(element(doc, "small", "SHA-256 der Abrufbytes: " + source.sha256 +
+      " · Fingerabdruck, keine unabhängige Autorität"));
+  }
   const list = element(doc, "ol");
   if (!source?.events.length) {
     list.append(element(doc, "li", error ? "Kein neuer Beleg verfügbar." : "Keine Einträge."));
@@ -184,6 +188,15 @@ function renderSection(doc, parent, heading, source, error) {
   parent.append(section);
 }
 
+async function digestText(text) {
+  // This is a byte identity witness, not a provider signature or truth test.
+  if (!globalThis.crypto?.subtle || typeof TextEncoder === "undefined") return null;
+  const bytes = new TextEncoder().encode(text);
+  const digest = await globalThis.crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest),
+    n => n.toString(16).padStart(2, "0")).join("");
+}
+
 async function boundedJSON(fetchFn, url) {
   const r = await fetchFn(url, {method: "GET", mode: "cors", credentials: "omit",
     cache: "default", headers: {Accept: "application/json"}});
@@ -192,13 +205,16 @@ async function boundedJSON(fetchFn, url) {
   if (declared > 180000) throw new Error("OVERSIZE");
   const txt = await r.text();
   if (txt.length > 180000) throw new Error("OVERSIZE");
-  return JSON.parse(txt);
+  const document = JSON.parse(txt);
+  return {document, sha256: await digestText(txt)};
 }
 
 export async function readSources(fetchFn, now = Date.now()) {
   const [feed, gh] = await Promise.allSettled([
-    boundedJSON(fetchFn, TICKER.publicFeed).then(x => parsePublicFeed(x, now)),
-    boundedJSON(fetchFn, TICKER.githubAPI).then(x => parseGitHubCommits(x, now))
+    boundedJSON(fetchFn, TICKER.publicFeed).then(x =>
+      ({...parsePublicFeed(x.document, now), sha256: x.sha256})),
+    boundedJSON(fetchFn, TICKER.githubAPI).then(x =>
+      ({...parseGitHubCommits(x.document, now), sha256: x.sha256}))
   ]);
   return {
     public: feed.status === "fulfilled" ? feed.value : null,
