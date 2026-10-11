@@ -1,0 +1,49 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R27_WWW_WAKE_SECURITY_BOUNDARY_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r27-www-extern-wake-isolation-security-repair-20261011",
+  "parent_main": "d49f8e959b3aac61f9b7ef0621d7293908b2791e",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "release_scope": "PUBLIC_SAFE_SECURITY_FINDING_AND_CURSOR_FULL_BODY_ONLY",
+  "attachments_from_user": "LOCAL_PRIVATE_ZIP_NOT_GITHUB_COMMITTED",
+  "G2_tests_original": "13_OF_13_PASS",
+  "G2_security": "3_OF_3_SPOOF_ACCEPTANCES_CONFIRMED",
+  "R27_live_runtime": "HOLD_SPECIFIC_SECURITY_FINDING",
+  "cursor_actual_ack": "PENDING",
+  "cursor_continuity_id": "4339f9b3-ad3c-45b4-8494-2a5558a8f9cc",
+  "folder_x_write": false,
+  "site_www_deploy": false,
+  "child_count": 4,
+  "children": [
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_R27_WWW_EXTERN_FREE_WAKE_STRICT_BOUNDARY_AND_VALIDATION_20261011_R0.md",
+      "bytes": 14376,
+      "sha256": "bb1cebd380528ff843f40fd36eec63bc4df6a862ef6a61c8d60032cd501ba03d",
+      "git_blob_sha1": "04d1c88f245da062a39baa2e0adece3c614a0476",
+      "readback": "GITHUB_API"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXISTING_CURSOR_R27_WWW_WAKE_AND_AUTHN_HARD_REMEDIATION_MAXI_ORDER_20261011_R0.md",
+      "bytes": 10588,
+      "sha256": "619f4463a865b801d652cd38dbecfeaa4178d8a559cb73d314893ef34f3310f1",
+      "git_blob_sha1": "3223182e8e8381edc54effe509f77b4cff7d6e53",
+      "readback": "GITHUB_API"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/R27_WWW_WAKE_SECURITY_REPRODUCTION_AND_NEGATIVE_FIXTURES_20261011_R0.json",
+      "bytes": 4664,
+      "sha256": "a35fcf0288e390169801b11caadf6c8ba65843de3b1d6607700a5d938585977f",
+      "git_blob_sha1": "50166ade1016733adb24f2fc58e29010ecce281e",
+      "readback": "GITHUB_API"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/README.md",
+      "bytes": 2557,
+      "sha256": "0ed1757f96adf7bbdd2e4d1ba2a508f679c9b28718459784f4302e1b59601e76",
+      "git_blob_sha1": "5c967be206c748236a85eb8d484b9158f69190bf",
+      "readback": "GITHUB_API"
+    }
+  ],
+  "manifest_self_hash": "DETACHED_IN_GITHUB_PR_SEND_RECEIPT"
+}
