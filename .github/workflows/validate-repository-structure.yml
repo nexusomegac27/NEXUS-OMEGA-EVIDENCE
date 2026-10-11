@@ -20,6 +20,8 @@ jobs:
         run: python -m unittest tests.test_repository_structure tests.test_external_agent_pr tests.test_preentry_lab
       - name: Verify AXIOM expert detached SHA256 and Git blob handshake (12 fail-closed tests)
         run: python -m unittest tests.test_expert_hash_handshake_v1
+      - name: Verify NEXUS Task Anchor V1 and fail-closed drift reset (22 unit tests)
+        run: python -m unittest tests.test_task_anchor_norm_v1
       - name: Verify public C1 ticker using native Node unit tests (no network)
         run: node --test tests/nexus-public-update-ticker.test.mjs
 
