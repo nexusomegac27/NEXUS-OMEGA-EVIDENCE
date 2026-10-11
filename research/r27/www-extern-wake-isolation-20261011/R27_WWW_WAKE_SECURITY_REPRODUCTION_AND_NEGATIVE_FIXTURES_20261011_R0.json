@@ -1,0 +1,141 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R27_WWW_EXTERN_INTERNAL_ISOLATION_SECURITY_NEGATIVES_20261011_R0",
+  "date": "2026-10-11",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "artifact_type": "SOURCE_ANALYSIS_AND_DESIGN_NOT_DEPLOYED",
+  "source_original": "OPERATOR_PROVIDED_LOCAL_ZIP_PRIVATE_NOT_PUBLISHED",
+  "source_archive_bytes_observed": 64055,
+  "local_runtime": "Node.js v22.16.0",
+  "tests": {
+    "original_functional": {
+      "count": 13,
+      "passed": 13,
+      "failed": 0,
+      "execution": "ACTUALLY_RAN_LOCALLY",
+      "scope": "8 ingress / 5 node coordinator",
+      "meaning": "AUTHOR_INTENT_FUNCTIONAL_ONLY"
+    },
+    "adversarial_executed": [
+      {
+        "id": "R27-AUTH-001",
+        "target": "broker.ingestInternal",
+        "untrusted_call": "SPOOFED_INTERNAL_CLAIM_WITH_VALID_PAYLOAD_SHA",
+        "expected": "REJECT_UNAUTHENTICATED",
+        "observed": "ACCEPTED_INTERNAL_ONLY",
+        "security_verdict": "FAIL",
+        "requires_fix": "VERIFIED_AUTHENTICATED_INTERNAL_ADAPTER_NOT_CALLER_EVENT_FIELDS"
+      },
+      {
+        "id": "R27-AUTH-002",
+        "target": "coordinator.registerNode",
+        "untrusted_call": "SPOOFED_NODE_WITH_INTERNAL_TRUST_LABELS",
+        "expected": "REJECT_UNAUTHENTICATED",
+        "observed": "ACCEPTED_NODE_REGISTRATION",
+        "security_verdict": "FAIL",
+        "requires_fix": "VERIFIED_NODE_REGISTRAR_CONTROL_PLANE"
+      },
+      {
+        "id": "R27-AUTH-003",
+        "target": "coordinator.approveProposal",
+        "untrusted_call": "SPOOFED_INTERNAL_REVIEWER_LABEL",
+        "expected": "REJECT_UNAUTHENTICATED",
+        "observed": "ACCEPTED_INTERNAL_ASSIGNMENT",
+        "security_verdict": "FAIL",
+        "requires_fix": "VERIFIED_REVIEWER_PRINCIPAL_ACTION_NONCE_SCOPE"
+      }
+    ],
+    "next_release_regressions": [
+      {
+        "id": "R27-E0-001",
+        "expect": "ONE_PASSIVE_REQUEST_INCREMENTS_ONLY_BOUNDED_COARSE_COUNTER_NO_AGENT_RUN"
+      },
+      {
+        "id": "R27-E0-002",
+        "expect": "TEN_THOUSAND_PASSIVE_REQUESTS_NO_LLM_OR_EXTERNAL_AGENT_CALLS"
+      },
+      {
+        "id": "R27-E0-003",
+        "expect": "BROWSER_NEVER_RECEIVES_HMAC_SECRET"
+      },
+      {
+        "id": "R27-E0-004",
+        "expect": "PASSIVE_OBSERVATION_NEVER_CREATES_INTERNAL_LEASE"
+      },
+      {
+        "id": "R27-E1-001",
+        "expect": "UNTRUSTED_RESEARCH_SUBMISSION_CAN_ONLY_ENTER_EXTERNAL_QUARANTINE"
+      },
+      {
+        "id": "R27-E2-001",
+        "expect": "GITHUB_WEBHOOK_VERIFIED_AGAINST_RAW_BODY_AND_GITHUB_APP_INSTALLATION"
+      },
+      {
+        "id": "R27-AUTH-001-REPAIRED",
+        "expect": "REJECT_UNAUTHENTICATED"
+      },
+      {
+        "id": "R27-AUTH-002-REPAIRED",
+        "expect": "REJECT_UNAUTHENTICATED"
+      },
+      {
+        "id": "R27-AUTH-003-REPAIRED",
+        "expect": "REJECT_UNAUTHENTICATED"
+      },
+      {
+        "id": "R27-DURABLE-001",
+        "expect": "NO_UNRECEIPTED_LOSS_ON_PROCESS_RESTART"
+      },
+      {
+        "id": "R27-FAILOVER-001",
+        "expect": "NO_DUPLICATE_SIDE_EFFECT_WITH_DUAL_ROUTE"
+      },
+      {
+        "id": "R27-REPLAY-001",
+        "expect": "EXPIRED_OPERATOR_NONCE_REJECTED"
+      }
+    ]
+  },
+  "event_classes": [
+    {
+      "type": "WWW_PASSIVE_WAKE",
+      "origin": "WWW_Extern",
+      "cost_policy": "NO_PAID_AI_PER_OBSERVATION",
+      "evidence": "COARSE_BUCKET_ONLY",
+      "internal_authority": false,
+      "requires_browser_hmac": false,
+      "trigger_effect": "OBSERVATION_NOT_TASK"
+    },
+    {
+      "type": "WWW_EXPLICIT_SUBMISSION",
+      "origin": "WWW_Extern",
+      "evidence": "CONSENTED_E1_SANITIZED_TICKET",
+      "internal_authority": false,
+      "trigger_effect": "PUBLIC_RESEARCH_PROPOSAL_ONLY"
+    },
+    {
+      "type": "GITHUB_VERIFIED_WEBHOOK",
+      "origin": "EXTERNAL_SIGNED",
+      "evidence": "GITHUB_INSTALLATION_REPO_COMMIT_RAW_BODY_HMAC",
+      "internal_authority": false,
+      "trigger_effect": "SOURCE_AUDIT_PROPOSAL_ONLY"
+    },
+    {
+      "type": "INTERNAL_REVIEW_GRANTED",
+      "origin": "Nexus_Intern",
+      "evidence": "OUT_OF_BAND_VERIFIED_PRINCIPAL_SCOPED_NONCE",
+      "internal_authority": true,
+      "trigger_effect": "LEASE_IF_POLICY_AND_SEPARATION_PASS"
+    }
+  ],
+  "hard_gates": {
+    "research_docs_publish": "AFTER_CI_AND_PRIVACY_PASS",
+    "vulnerable_prototype_public_deploy": "DENY",
+    "github_evidence_post": "ALLOWED_C1_ONLY",
+    "new_cursor_worker": "DENY",
+    "folder_x_write": "DENY",
+    "www_live": "B2_PLUS_B3_REQUIRED",
+    "scientific_promotion": "DENY"
+  },
+  "observed_status": "G2_ORIGINAL_13_PASS_WITH_3_AUTHN_FAILS",
+  "manifest_state": "SOURCE_ONLY_NONE_OF_THE_NEW_NEXT_RELEASE_TESTS_EXECUTED"
+}
