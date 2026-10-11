@@ -1,0 +1,57 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_LIVING_NODE_TRIGGER_FABRIC_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-living-node-trigger-fabric-v1-publicsafe-20261011",
+  "predecessor_main": "8c37445c709986a39191fd46af8efe70d1150b9c",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "release_scope": "C1_PUBLIC_SAFE_ARCHITECTURE_ONLY",
+  "execution_status": "NOT_DEPLOYED",
+  "webhook_status": "NOT_CONFIGURED",
+  "hostinger_b2_b3": "NOT_VERIFIED",
+  "new_cursor_worker": false,
+  "private_conversation_material": "EXCLUDED",
+  "checked": {
+    "source_bytes_sha256_git_blobs": true,
+    "contract_structural_parse": true,
+    "security_fixture_count": 28
+  },
+  "children": [
+    {
+      "file": "research/r26/living-node-trigger-fabric-v1-20261011/NEXUS_OMEGA_AXIOM_GITHUB_WWW_LIVING_NODE_TRIGGER_FABRIC_BLUEPRINT_20261011_R0.md",
+      "bytes": 19576,
+      "sha256": "6d03606a1d29c734102d9eac7a02d268293b9fa461d209f5d0080cd5f5e8eb04",
+      "git_blob_sha1": "03eda5b519f6e7b0eb12f5d287df90aec6d5257d",
+      "readback": "GITHUB_API_EXACT_HEAD"
+    },
+    {
+      "file": "research/r26/living-node-trigger-fabric-v1-20261011/EVENT_ENVELOPE_V1.schema.json",
+      "bytes": 6420,
+      "sha256": "a70cc5717765f9a7fcb037eb8bf1c6afb5e06a9a86540ffbcee51bf0d14b7991",
+      "git_blob_sha1": "28654bbe29fafc3b3cfe9421bbedd7f224065d2e",
+      "readback": "GITHUB_API_EXACT_HEAD"
+    },
+    {
+      "file": "research/r26/living-node-trigger-fabric-v1-20261011/FABRIC_POLICY_AND_NEGATIVE_FIXTURES_V1.json",
+      "bytes": 7073,
+      "sha256": "868907b86a4680dcafb03efe09d58455210bd5f252c87186fdae8f51729f4fcb",
+      "git_blob_sha1": "82c9a29db156f3c0844089b3a14eb0f79a1846fc",
+      "readback": "GITHUB_API_EXACT_HEAD"
+    },
+    {
+      "file": "research/r26/living-node-trigger-fabric-v1-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_GITHUB_WWW_LIVING_NODE_FABRIC_MAXI_IMPLEMENTATION_ORDER_20261011_R0.md",
+      "bytes": 12691,
+      "sha256": "023651f415eb8151b60c5ef76a881a4dc8ecc85ecc854a48f04e6b523b1360a3",
+      "git_blob_sha1": "502eacca9d578e8314b70806f142e1d661ed29e9",
+      "readback": "GITHUB_API_EXACT_HEAD"
+    },
+    {
+      "file": "research/r26/living-node-trigger-fabric-v1-20261011/README.md",
+      "bytes": 2978,
+      "sha256": "7d24a99a50d9ec80e39f05f1d627128e6e101a1f8c962c3bcb918b15a6629384",
+      "git_blob_sha1": "e49b4064dc32199abd279d41fc4d13f373f19e69",
+      "readback": "GITHUB_API_EXACT_HEAD"
+    }
+  ],
+  "manifest_self_hash": "DETACHED_IN_PR_SEND_RECEIPT_NOT_INSIDE_SELF"
+}
