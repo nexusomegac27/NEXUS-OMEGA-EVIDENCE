@@ -1,0 +1,70 @@
+python 3.14.3 numpy 2.5.3
+
+[1] AXIOM point N=32 k=8 L=5
+MAX: g=1.980728046143 residual=2.22e-16 inactive_margin=0.317959 peak_gap=0.185480 radial=1.000000000000 lam_nonradial=1.0377893000 parity=even
+SUM: g=0.605006814481 residual=5.55e-17 inactive_margin=0.097120 peak_gap=0.056654 radial=1.000000000000 lam_nonradial=0.9792479015 parity=odd
+
+[2] Time discretisation: Euler r += dt(-r+F(r)) -> mu = 1+dt(lam-1); continuous: Re(lam)-1
+MAX real eigenvalue: True | continuous Re(lam)-1 = +0.037789 | dt=1:|mu|=1.037789 dt=0.5:|mu|=1.018895 dt=0.1:|mu|=1.003779 dt=0.01:|mu|=1.000378
+SUM real eigenvalue: True | continuous Re(lam)-1 = -0.020752 | dt=1:|mu|=0.979248 dt=0.5:|mu|=0.989624 dt=0.1:|mu|=0.997925 dt=0.01:|mu|=0.999792
+
+[3]+[4] Sweep N in {32,64}, k in {2,4,8,16}, contiguous odd arcs L=3..15 (consistent & strict inactive margin only)
+N=32 k= 2 L= 7 MAX g=3.59022 lam=1.54217 parity=even -> UNSTABLE
+N=32 k= 2 L= 7 SUM g=0.74359 lam=0.86740 parity=odd -> shape-stable
+N=32 k= 4 L= 7 MAX g=2.63006 lam=1.99067 parity=even -> UNSTABLE
+N=32 k= 4 L= 7 SUM g=0.68079 lam=1.37578 parity=odd -> UNSTABLE
+N=32 k= 8 L= 5 MAX g=1.98073 lam=1.03779 parity=even -> UNSTABLE
+N=32 k= 8 L= 5 SUM g=0.60501 lam=0.97925 parity=odd -> shape-stable
+N=32 k=16 L= 5 MAX g=1.34925 lam=1.34536 parity=odd -> UNSTABLE
+N=32 k=16 L= 5 SUM g=0.51067 lam=1.34536 parity=odd -> UNSTABLE
+N=64 k= 2 L=11 MAX g=6.23871 lam=2.83982 parity=even -> UNSTABLE
+N=64 k= 2 L=11 SUM g=0.83618 lam=0.92138 parity=odd -> shape-stable
+N=64 k= 4 L= 9 MAX g=4.79308 lam=2.25999 parity=even -> UNSTABLE
+N=64 k= 4 L= 9 SUM g=0.79533 lam=0.94664 parity=odd -> shape-stable
+N=64 k= 8 L= 7 MAX g=3.62354 lam=1.53079 parity=even -> UNSTABLE
+N=64 k= 8 L= 7 SUM g=0.74485 lam=0.84523 parity=odd -> shape-stable
+N=64 k=16 L= 7 MAX g=2.65551 lam=1.98956 parity=even -> UNSTABLE
+N=64 k=16 L= 7 SUM g=0.68168 lam=1.35040 parity=odd -> UNSTABLE
+summary unstable/consistent: {'MAX': '8/8', 'SUM': '3/8'}
+
+[5] Two-peak replay N=32 k=8, own g per arm, 3000 steps; amplitude renormalised per step for measurement only (exact by homogeneity)
+MAX single exact bump: WTA_ONE_BUMP mean_log_amp/step=-0.0000 | +1e-6 at centre: COLLAPSE(step 269)
+  MAX delta            1.0/1.0 sep=16: COLLAPSE(step 0)
+  MAX delta            1.0/1.0 sep= 8: COLLAPSE(step 0)
+  MAX delta            1.0/0.8 sep=16: COLLAPSE(step 0)
+  MAX delta            1.0/0.8 sep= 8: COLLAPSE(step 0)
+  MAX delta            1.0/0.5 sep=16: COLLAPSE(step 0)
+  MAX delta            1.0/0.5 sep= 8: COLLAPSE(step 0)
+  MAX fixedpoint_shape 1.0/1.0 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0338
+  MAX fixedpoint_shape 1.0/1.0 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.0407
+  MAX fixedpoint_shape 1.0/0.8 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0328
+  MAX fixedpoint_shape 1.0/0.8 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.4686
+  MAX fixedpoint_shape 1.0/0.5 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0326
+  MAX fixedpoint_shape 1.0/0.5 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.0375
+  MAX gauss_sigma2     1.0/1.0 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0389
+  MAX gauss_sigma2     1.0/1.0 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.0412
+  MAX gauss_sigma2     1.0/0.8 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0389
+  MAX gauss_sigma2     1.0/0.8 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.4709
+  MAX gauss_sigma2     1.0/0.5 sep=16: WTA_ONE_BUMP mean_log_amp/step=+0.0389
+  MAX gauss_sigma2     1.0/0.5 sep= 8: WTA_ONE_BUMP mean_log_amp/step=+0.4697
+SUM single exact bump: WTA_ONE_BUMP mean_log_amp/step=+0.0000 | +1e-6 at centre: WTA_ONE_BUMP mean_log_amp/step=+0.0000
+  SUM delta            1.0/1.0 sep=16: COLLAPSE(step 0)
+  SUM delta            1.0/1.0 sep= 8: COLLAPSE(step 0)
+  SUM delta            1.0/0.8 sep=16: COLLAPSE(step 0)
+  SUM delta            1.0/0.8 sep= 8: COLLAPSE(step 0)
+  SUM delta            1.0/0.5 sep=16: WTA_ONE_BUMP mean_log_amp/step=-0.0010
+  SUM delta            1.0/0.5 sep= 8: WTA_ONE_BUMP mean_log_amp/step=-0.0010
+  SUM fixedpoint_shape 1.0/1.0 sep=16: COLLAPSE(step 0)
+  SUM fixedpoint_shape 1.0/1.0 sep= 8: COLLAPSE(step 0)
+  SUM fixedpoint_shape 1.0/0.8 sep=16: COLLAPSE(step 0)
+  SUM fixedpoint_shape 1.0/0.8 sep= 8: COLLAPSE(step 0)
+  SUM fixedpoint_shape 1.0/0.5 sep=16: WTA_ONE_BUMP mean_log_amp/step=-0.0019
+  SUM fixedpoint_shape 1.0/0.5 sep= 8: WTA_ONE_BUMP mean_log_amp/step=-0.0015
+  SUM gauss_sigma2     1.0/1.0 sep=16: COLLAPSE(step 0)
+  SUM gauss_sigma2     1.0/1.0 sep= 8: COLLAPSE(step 0)
+  SUM gauss_sigma2     1.0/0.8 sep=16: COLLAPSE(step 0)
+  SUM gauss_sigma2     1.0/0.8 sep= 8: COLLAPSE(step 0)
+  SUM gauss_sigma2     1.0/0.5 sep=16: COLLAPSE(step 0)
+  SUM gauss_sigma2     1.0/0.5 sep= 8: COLLAPSE(step 0)
+
+LIMIT: MISTRAL/VIBE producer injection shape unknown; outcome classes depend on it (see [5]).

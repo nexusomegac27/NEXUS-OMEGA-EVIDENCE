@@ -1,0 +1,30 @@
+{
+  "object": "NEXUS_OMEGA_PERPLEXITY_R26_RETURN_MANIFEST_20261011_R0",
+  "base_main": "e56691928427ba17705f2e15ea1688743bf2d03a",
+  "referenced_inputs": {
+    "mistral_return_sha256": "4e7193c7d7b30524bbffce84603b292a7fe46379adca82d50b8b0465062f73b4",
+    "mistral_return_bytes": 28368
+  },
+  "files": [
+    {
+      "path": "NEXUS_OMEGA_PERPLEXITY_R26_RECEIVE_ACK_AND_INDEPENDENT_VERIFICATION_RETURN_20261011_R0.md",
+      "bytes": 8718,
+      "sha256": "9cb8d63a5b74ee61b54b79abde4c6a9f37da161a8925df07c73afdf1fa8130e5",
+      "git_blob_sha1": "ddb6495fb57fbe4fbafc3b0b969c4e1675f04ca2"
+    },
+    {
+      "path": "PERPLEXITY_R26_INDEPENDENT_VERIFICATION_20261011_R0.py",
+      "bytes": 4648,
+      "sha256": "f8ee219f50e1263a9bd50fab90f0cc56e6856712c404442336a77d0b0e5cc6e7",
+      "git_blob_sha1": "5262443955ca9fe29f895995e41a4849f7035099"
+    },
+    {
+      "path": "PERPLEXITY_R26_INDEPENDENT_VERIFICATION_RAWLOG_20261011_R0.txt",
+      "bytes": 4770,
+      "sha256": "b9ca261fedbda15a5f00f05bbb05a51ce18cd65a1a273b4d3cdcc1f4fee29993",
+      "git_blob_sha1": "d61111e935949cc28b50984b0b54f489d315518c"
+    }
+  ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "merge_by_perplexity": false
+}
