@@ -34,9 +34,9 @@
     },
     {
       "path": "tests/test_external_agent_pr.py",
-      "bytes": 4364,
-      "sha256": "71d60054d458581911d91675d295307023fda28823240975bf6fb09e6397f092",
-      "git_blob_sha1": "ee20f9394925d9cb706bae0dc15262ec2fd81733"
+      "bytes": 4383,
+      "sha256": "fa8ec8c9b2caf83e7b72329ab1237ccd8e17cc52bc7e721fe80629892385dd9a",
+      "git_blob_sha1": "5c221c2893eee5f45b14fad0b8800e6e7740eac0"
     },
     {
       "path": ".github/workflows/validate-external-agent-pr.yml",
