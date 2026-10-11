@@ -20,3 +20,6 @@ jobs:
         run: python -m unittest tests.test_repository_structure tests.test_external_agent_pr tests.test_preentry_lab
       - name: Verify public C1 ticker using native Node unit tests (no network)
         run: node --test tests/nexus-public-update-ticker.test.mjs
+
+      - name: Verify NEXUS ICEBERG C1 homepage source (offline)
+        run: node --test tests/nexus-omega-iceberg-homepage.test.mjs

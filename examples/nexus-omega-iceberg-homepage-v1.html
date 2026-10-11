@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEXUS OMEGA — Wissen braucht Herkunft.</title>
+<meta name="description" content="NEXUS OMEGA: öffentliche Forschung, prüfbare Quellen und Mensch-KI-Symbiose. C1 – deskriptiv, keine Wahrheitsautorität." />
+<meta name="theme-color" content="#f6f6f2" />
+<style>/* NEXUS OMEGA / ICEBERG V1 — original design language inspired by editorial restraint.
+   Scope every selector to .nxo-home to avoid altering the running Next.js site. */
+.nxo-home { --nxo-ink:#171a19; --nxo-muted:#646966; --nxo-muted2:#8b908c; --nxo-paper:#f6f6f2; --nxo-white:#fdfdfa; --nxo-line:#d8dcd8; --nxo-accent:#4b6359; color:var(--nxo-ink); background:var(--nxo-paper); font-family:Inter,"Helvetica Neue",Arial,sans-serif; font-weight:400; font-synthesis:none; line-height:1.52; letter-spacing:-.01em; min-height:100vh; }
+.nxo-home * { box-sizing:border-box; }
+.nxo-home a { color:inherit; text-decoration:none; }
+.nxo-home a:focus-visible,.nxo-home summary:focus-visible { outline:2px solid #235c9b; outline-offset:5px; }
+.nxo-home .nxo-wrap { width:min(1240px,calc(100% - 80px)); margin-inline:auto; }
+.nxo-home .nxo-skip { position:absolute; transform:translateY(-200%); background:#fff; padding:8px 14px; left:16px; z-index:12; }
+.nxo-home .nxo-skip:focus { transform:translateY(8px); }
+.nxo-home .nxo-head { border-bottom:1px solid var(--nxo-line); }
+.nxo-home .nxo-head-inner { min-height:69px; display:flex; align-items:center; gap:24px; justify-content:space-between; }
+.nxo-home .nxo-brand { display:flex; align-items:center; gap:11px; font-size:15px; font-weight:650; letter-spacing:.115em; white-space:nowrap; }
+.nxo-home .nxo-sigil { font-family:Georgia,serif; font-size:24px; line-height:1; font-weight:400; }
+.nxo-home .nxo-nav { display:flex; gap:27px; align-items:center; color:#444c47; font-size:13px; }
+.nxo-home .nxo-nav a:hover,.nxo-home .nxo-footer a:hover { text-decoration:underline; text-underline-offset:5px; }
+.nxo-home .nxo-nav .nxo-nav-contact { border:1px solid var(--nxo-ink); padding:9px 13px; }
+.nxo-home .nxo-mobile { display:none; }
+.nxo-home .nxo-hero { padding:clamp(74px,11vw,168px) 0 clamp(74px,9vw,135px); min-height: min(590px,82vh); display:flex; align-items:center; }
+.nxo-home .nxo-kicker { font-size:11px; line-height:1.3; text-transform:uppercase; letter-spacing:.16em; color:var(--nxo-muted); font-weight:600; }
+.nxo-home .nxo-hero h1 { max-width:910px; font-size:clamp(46px,7.5vw,106px); line-height:1.035; letter-spacing:-.069em; font-weight:450; margin:25px 0 26px; }
+.nxo-home .nxo-hero .nxo-lead { font-size:clamp(16px,1.6vw,20px); max-width:620px; color:#464d48; line-height:1.55; letter-spacing:-.02em; margin:0 0 35px; }
+.nxo-home .nxo-hero-links { display:flex; flex-wrap:wrap; gap:26px; font-size:13px; font-weight:550; }
+.nxo-home .nxo-hero-links a { border-bottom:1px solid var(--nxo-ink); padding-bottom:7px; }
+.nxo-home .nxo-hero-links a:hover { color:var(--nxo-accent); border-color:var(--nxo-accent); }
+.nxo-home .nxo-hero-foot { margin-top:clamp(60px,9vw,124px); display:flex; gap:12px; align-items:center; color:var(--nxo-muted); font-size:11px; letter-spacing:.11em; text-transform:uppercase; }
+.nxo-home .nxo-hero-foot::before { content:""; width:30px; border-top:1px solid var(--nxo-muted2); }
+.nxo-home .nxo-section { border-top:1px solid var(--nxo-line); padding:clamp(68px,8vw,116px) 0; }
+.nxo-home .nxo-section-head { display:grid; grid-template-columns:240px minmax(0,1fr); gap:40px; margin-bottom:54px; }
+.nxo-home h2 { font-size:clamp(34px,4.3vw,65px); font-weight:450; line-height:1.095; letter-spacing:-.054em; margin:0; max-width:750px; }
+.nxo-home .nxo-section-copy { color:#5b615c; font-size:16px; max-width:560px; line-height:1.65; margin:24px 0 0; }
+.nxo-home .nxo-index { border-top:1px solid var(--nxo-line); }
+.nxo-home .nxo-index a { display:grid; grid-template-columns:95px minmax(0,1fr) 170px 20px; gap:20px; padding:29px 0; align-items:start; border-bottom:1px solid var(--nxo-line); transition:padding-left .2s ease; }
+.nxo-home .nxo-index a:hover { padding-left:10px; }
+.nxo-home .nxo-index-num { font-size:11px; color:var(--nxo-muted); letter-spacing:.13em; padding-top:11px; }
+.nxo-home .nxo-index-title { font-size:clamp(24px,3vw,38px); font-weight:450; line-height:1.25; letter-spacing:-.04em; }
+.nxo-home .nxo-index-tag { font-size:12px; padding-top:11px; color:var(--nxo-muted); }
+.nxo-home .nxo-index-arrow { font-size:22px; font-weight:300; }
+.nxo-home .nxo-feature { background:#202725; color:#f4f5ef; }
+.nxo-home .nxo-feature .nxo-kicker,.nxo-home .nxo-feature .nxo-section-copy { color:#afb9b2; }
+.nxo-home .nxo-feature-grid { display:grid; grid-template-columns:1.15fr 1fr; min-height:375px; gap:7vw; align-items:center; }
+.nxo-home .nxo-feature h2 { max-width:760px; }
+.nxo-home .nxo-feature .nxo-section-copy { margin-top:25px; }
+.nxo-home .nxo-feature .nxo-feature-link { display:inline-block; border-bottom:1px solid #cdd6ce; font-size:13px; padding-bottom:6px; margin-top:29px; }
+.nxo-home .nxo-orbit { position:relative; aspect-ratio:1.55; overflow:hidden; border:1px solid #45514b; background:radial-gradient(circle at 54% 48%,#34413a 0%,#26312d 40%,#202725 80%); }
+.nxo-home .nxo-orbit::before,.nxo-home .nxo-orbit::after { content:""; position:absolute; width:65%; height:65%; border:1px solid #76877c; border-radius:50%; left:16%; top:16%; transform:rotate(-26deg) skew(22deg); opacity:.52; }
+.nxo-home .nxo-orbit::after { width:42%; height:42%; left:28%; top:28%; transform:rotate(35deg) skew(-15deg); opacity:.35; }
+.nxo-home .nxo-orbit-center { position:absolute; top:48%; left:49%; transform:translate(-50%,-50%); font-size:12px; letter-spacing:.26em; color:#d4dcd5; }
+.nxo-home .nxo-orbit-label { position:absolute; bottom:20px; left:22px; font-size:10px; letter-spacing:.12em; color:#afb9b2; text-transform:uppercase; }
+.nxo-home .nxo-evidence { display:grid; grid-template-columns:1fr 1fr; gap:12vw; align-items:start; }
+.nxo-home .nxo-evidence h2 { margin-top:24px; }
+.nxo-home .nxo-evidence p { max-width:560px; color:#505a52; line-height:1.7; margin-top:28px; }
+.nxo-home .nxo-evidence-list { border-top:1px solid var(--nxo-line); }
+.nxo-home .nxo-evidence-list a { display:flex; justify-content:space-between; gap:20px; padding:20px 0; border-bottom:1px solid var(--nxo-line); font-size:14px; }
+.nxo-home .nxo-evidence-list a:hover { padding-right:7px; }
+.nxo-home .nxo-small { font-size:12px; color:var(--nxo-muted); }
+.nxo-home .nxo-foot { background:#e9ece7; border-top:1px solid var(--nxo-line); padding:38px 0 52px; }
+.nxo-home .nxo-foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:25px; font-size:12px; color:#545b55; }
+.nxo-home .nxo-foot-nav { display:flex; gap:22px; flex-wrap:wrap; }
+@media(max-width:850px) { .nxo-home .nxo-wrap {width:min(100% - 44px,1240px)} .nxo-home .nxo-nav {display:none} .nxo-home .nxo-mobile {display:block;position:relative} .nxo-home .nxo-mobile summary {display:block;list-style:none;cursor:pointer;font-size:12px;border:1px solid var(--nxo-ink);padding:9px 12px} .nxo-home .nxo-mobile summary::-webkit-details-marker {display:none} .nxo-home .nxo-mobile[open] .nxo-mobile-links {display:flex; flex-direction:column; position:absolute;right:0;top:43px;background:var(--nxo-paper);z-index:10;min-width:205px;border:1px solid var(--nxo-line);padding:18px;gap:14px;font-size:13px} .nxo-home .nxo-hero { min-height:unset } .nxo-home .nxo-section-head {grid-template-columns:1fr;gap:23px;} .nxo-home .nxo-feature-grid {grid-template-columns:1fr;gap:36px} .nxo-home .nxo-index a {grid-template-columns:32px 1fr 22px;gap:15px} .nxo-home .nxo-index-tag {display:none} .nxo-home .nxo-evidence {grid-template-columns:1fr;gap:36px} }
+@media(max-width:520px) { .nxo-home .nxo-wrap {width:calc(100% - 34px)} .nxo-home .nxo-brand {font-size:13px} .nxo-home .nxo-hero {padding:83px 0 71px} .nxo-home .nxo-hero h1 {font-size:clamp(43px,10.5vw,62px);letter-spacing:-.06em} .nxo-home .nxo-section {padding:66px 0} .nxo-home .nxo-index a {padding:24px 0} .nxo-home .nxo-feature-grid {min-height:unset} .nxo-home .nxo-foot-inner {display:grid} }
+@media(prefers-reduced-motion:reduce) { .nxo-home *, .nxo-home *::before,.nxo-home *::after {transition:none!important;animation:none!important;scroll-behavior:auto!important} }
+</style>
+</head>
+<body style="margin:0">
+<div class="nxo-home" data-nxo-iceberg-version="1">
+<a class="nxo-skip" href="#hauptinhalt">Zum Inhalt springen</a>
+<header class="nxo-head">
+  <div class="nxo-wrap nxo-head-inner">
+    <a class="nxo-brand" href="https://www.nexus-mobile.de/" aria-label="NEXUS OMEGA Startseite"><span class="nxo-sigil" aria-hidden="true">Ω</span><span>NEXUS OMEGA</span></a>
+    <nav class="nxo-nav" aria-label="Hauptnavigation"><a href="https://www.nexus-mobile.de/research/">Forschung</a><a href="https://www.nexus-mobile.de/orbis/">ORBIS</a><a href="https://www.nexus-mobile.de/forum/">Forum</a><a href="#nachweise">Nachweise</a><a class="nxo-nav-contact" href="#kollektiv">Das Kollektiv ↗</a></nav>
+    <details class="nxo-mobile"><summary>Menü <span aria-hidden="true">＋</span></summary><nav class="nxo-mobile-links" aria-label="Mobile Hauptnavigation"><a href="https://www.nexus-mobile.de/research/">Forschung</a><a href="https://www.nexus-mobile.de/orbis/">ORBIS</a><a href="https://www.nexus-mobile.de/forum/">Forum</a><a href="#nachweise">Nachweise</a><a href="#kollektiv">Das Kollektiv</a></nav></details>
+  </div>
+</header>
+<main id="hauptinhalt">
+  <section class="nxo-hero" aria-labelledby="nxo-main-headline"><div class="nxo-wrap">
+    <div class="nxo-kicker">NEXUS OMEGA / Offene Forschung / C1</div>
+    <h1 id="nxo-main-headline">Wissen braucht<br />Herkunft.</h1>
+    <p class="nxo-lead">Menschliche Forschung und KI-Systeme. Verbunden durch Quellen, überprüfbare Methoden und offen benannte Grenzen.</p>
+    <div class="nxo-hero-links"><a href="https://www.nexus-mobile.de/research/">Forschung erkunden ↗</a><a href="https://www.nexus-mobile.de/orbis/">ORBIS öffnen ↗</a></div>
+    <div class="nxo-hero-foot">Scrollen, um tiefer zu sehen <span aria-hidden="true">↓</span></div>
+  </div></section>
+  <section class="nxo-section" id="kollektiv" aria-labelledby="nxo-work-title"><div class="nxo-wrap">
+    <div class="nxo-section-head"><p class="nxo-kicker">01 / Arbeitsfelder</p><div><h2 id="nxo-work-title">Ein System.<br/>Verschiedene Perspektiven.</h2><p class="nxo-section-copy">Die Oberfläche bleibt ruhig. Dahinter liegen Forschungsakten, technische Visualisierung und ein öffentlicher Raum für Austausch.</p></div></div>
+    <div class="nxo-index" aria-label="Arbeitsfelder">
+      <a href="https://www.nexus-mobile.de/research/"><span class="nxo-index-num">01.1</span><span class="nxo-index-title">Forschung &amp; Methoden</span><span class="nxo-index-tag">Publizierte C1-Akten</span><span class="nxo-index-arrow" aria-hidden="true">↗</span></a>
+      <a href="https://www.nexus-mobile.de/orbis/"><span class="nxo-index-num">01.2</span><span class="nxo-index-title">ORBIS</span><span class="nxo-index-tag">Wissenschaftliche Visualisierung</span><span class="nxo-index-arrow" aria-hidden="true">↗</span></a>
+      <a href="https://www.nexus-mobile.de/forum/"><span class="nxo-index-num">01.3</span><span class="nxo-index-title">Forum</span><span class="nxo-index-tag">Dialog &amp; Widerspruch</span><span class="nxo-index-arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div></section>
+  <section class="nxo-section nxo-feature" aria-labelledby="nxo-orbis-title"><div class="nxo-wrap nxo-feature-grid"><div><p class="nxo-kicker">02 / ORBIS</p><h2 id="nxo-orbis-title">Sehen. Prüfen.<br/>Unterscheiden.</h2><p class="nxo-section-copy">Eine Oberfläche für räumliche und wissenschaftliche Modelle. Illustrative Ebenen sind als solche gekennzeichnet; echte Satellitendaten erfordern eigene Quellen- und Qualitätsbelege.</p><a class="nxo-feature-link" href="https://www.nexus-mobile.de/orbis/">ORBIS öffnen ↗</a></div><div class="nxo-orbit" role="img" aria-label="Abstrakte, illustrative Kreisbahnen; keine realen Satellitenpositionen"><span class="nxo-orbit-center">ORBIS</span><span class="nxo-orbit-label">Illustratives Gestaltungselement · Keine Messdaten</span></div></div></section>
+  <section class="nxo-section" id="nachweise" aria-labelledby="nxo-evidence-title"><div class="nxo-wrap nxo-evidence"><div><p class="nxo-kicker">03 / Öffentliches Wissen</p><h2 id="nxo-evidence-title">Nicht behaupten.<br/>Belegen.</h2><p>Unsere veröffentlichten C1-Seiten beschreiben ihren überprüfbaren Quellenstand und dessen Grenzen. Ein publiziertes Dokument oder ein GitHub-Commit begründet keine höhere Wahrheitsautorität.</p><p class="nxo-small">C1_DESCRIPTIVE_ONLY · Datenstand und Claims sind auf den jeweiligen Quellseiten zu prüfen.</p></div><div class="nxo-evidence-list" aria-label="Öffentliche Belege"><a href="https://www.nexus-mobile.de/research/"><span>Forschungsregister</span><span aria-hidden="true">↗</span></a><a href="https://www.nexus-mobile.de/ai/r14-gate/"><span>R14 · öffentliches Validierungsgate</span><span aria-hidden="true">↗</span></a><a href="https://www.nexus-mobile.de/status/public-event-registry.json"><span>Öffentliches Ereignisregister</span><span aria-hidden="true">↗</span></a><a href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE"><span>GitHub · Quellen und Evidenz</span><span aria-hidden="true">↗</span></a><a href="https://www.nexus-mobile.de/#live-feed"><span>Live Feed · datierter Quellenstand</span><span aria-hidden="true">↗</span></a></div></div></section>
+</main>
+<footer class="nxo-foot"><div class="nxo-wrap nxo-foot-inner"><span>© NEXUS OMEGA · Forschung mit überprüfbarer Herkunft.</span><nav class="nxo-foot-nav" aria-label="Fußnavigation"><a href="https://www.nexus-mobile.de/research/">Forschung</a><a href="https://www.nexus-mobile.de/orbis/">ORBIS</a><a href="https://www.nexus-mobile.de/forum/">Forum</a><a href="https://www.nexus-mobile.de/status/public-event-registry.json">Quellenstatus</a></nav><span>C1_DESCRIPTIVE_ONLY</span></div></footer>
+</div>
+</body>
+</html>
