@@ -261,3 +261,7 @@ Owner-issued R29 research lane: [`research/r29/r10r29-open-mind-cross-domain-202
 
 Six open research questions and G0–G9 include information loss, time/unit/calibration discipline, synthetic model federation, stochastic geometry, falsifier-led alternative models, and negative-validation contracts. L3-A/B/C remain **not selected and not executed**; NF05/NF06 remains `REVISIONS_REQUIRED`; no privileged runtime, external agent permissions, new worker, repository history rewriting, Hostinger publishing or promotion > C1. Source metadata and public-safe exact-order hashes are kept within the R29 topic; no raw private archives are mirrored.
 
+
+## R10R29 · Computer + Perplexity C1 source validation · 2026-10-11
+
+Owner-operated, append-only [R10R29 cross-validation intake](research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/README.md) against **PR #97** exact original order. Independent verification covers source/ZIP integrity (**12/12** ZIP SHA256SUMS), Perplexity text receipt, source-level caveats and full 5-file hash ledger. **Binary originals (two PDFs and 512,536-byte ZIP) are inventory-bound, not GitHub-published in this PR.** R29 G1–G9 research remains unexecuted/not proven; no L3 selection, NF05/06 freeze, external direct writer grant, NODE_RESET or Hostinger deployment. C1_DESCRIPTIVE_ONLY.
