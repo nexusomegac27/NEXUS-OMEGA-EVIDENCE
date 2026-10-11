@@ -1,0 +1,54 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10R29_SOURCE_INTAKE_LEDGER_20261011_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "mode": "MIXED_GITHUB_PINNED_AND_OPERATOR_LOCAL",
+  "input_count": 4,
+  "sources": [
+    {
+      "bytes": 20819,
+      "sha256": "8e621693a4556587d213504b1c3efb883dedaebdfaca73238e28763afa36a867",
+      "id": "R28_ORDER",
+      "basename": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R28_NF05_NF06_PREREG_REMEDIATION_MAXI_ORDER_20261011_R0.md",
+      "provenance_status": "GITHUB_SOURCE_VERIFIED_FOR_BRANCH",
+      "public_original_bytes_published": false
+    },
+    {
+      "bytes": 12738,
+      "sha256": "46c87e00330ed4e6a433e7498f864433001a4cd25f05e043218c291edee68142",
+      "id": "BTMA_SOURCE_TEXT",
+      "basename": "Eingefügter Text(4).txt",
+      "provenance_status": "OPERATOR_SUPPLIED_PHYSICAL_BYTES_IN_AXIOM_SESSION",
+      "public_original_bytes_published": false
+    },
+    {
+      "bytes": 8622,
+      "sha256": "42092fd3cc5a5c3439cf7b36ee6c21d35038d9bc842872e7b7a8f6ac030a4b6d",
+      "id": "BTMA_AXIOM_ADJUDICATION",
+      "basename": "NEXUS_OMEGA_AXIOM_BTCD_BTMA_SOURCE_CROSSVALIDATION_20261011_R0.md",
+      "provenance_status": "OPERATOR_SUPPLIED_PHYSICAL_BYTES_IN_AXIOM_SESSION",
+      "public_original_bytes_published": false
+    },
+    {
+      "bytes": 7636,
+      "sha256": "fe317c94a96e20ca46e0664fd490ec1ffbaada960b0aeb3e1017112e4ef09606",
+      "id": "BTMA_SEARCH_FIRST_INDEX",
+      "basename": "NEXUS_OMEGA_AXIOM_BTCD_BTMA_SEARCH_FIRST_C1_INDEX_20261011_R0.json",
+      "provenance_status": "OPERATOR_SUPPLIED_PHYSICAL_BYTES_IN_AXIOM_SESSION",
+      "public_original_bytes_published": false
+    }
+  ],
+  "historical": {
+    "BTCD04": "5a7df51dad782c1b12245f96d396e3b5db803312bc5ce62d67eaec1befc65d72",
+    "BTCD05": "606da0121d4f60283446a00a6c0042895027ffe1b66311e897f32f1730860797",
+    "BTMA01": "a4d91b70abd5a8f0fbb7fcf5e5e5b2b5597638a867185694539cafb418a6a7b0",
+    "BTMA02": "f71f290db4cff2ec141c0a4dab094bfaba5ca75477e479b0ee57447e0b0fded5",
+    "BTMA03": "842766cf731219aaf6bc081bda76fb05a5cd99afb18b8f0452d2c294369c6e20",
+    "BTMA_EP01": "746730ac678bea8ac54c0518f20e972693b9be654f43116e41f44dcc22bb7aef"
+  },
+  "historical_original_bytes_rehashed": false,
+  "l3_selected": false,
+  "l3_executed": false,
+  "nf05_nf06_prereg_status": "REVISIONS_REQUIRED",
+  "r28_execution_receipt": "NOT_RECEIVED",
+  "cross_domain_evidence_transfer": false
+}
