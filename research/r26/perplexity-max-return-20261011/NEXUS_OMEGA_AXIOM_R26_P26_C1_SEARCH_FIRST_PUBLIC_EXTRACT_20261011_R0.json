@@ -1,0 +1,211 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_P26_C1_SEARCH_FIRST_PUBLIC_EXTRACT_20261011_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "status": "C1_PUBLIC_SAFE_SEARCH_INDEX_CANDIDATE",
+  "source_archive_sha256": "0f13441a4dba93cc1282f14bb2944fca50b8a638b4f0c5ddce902fbbb5e113fc",
+  "phase_identity": "R26/P26; physical R27 directory is not proof of a separate R27 experiment",
+  "www_deployed": false,
+  "claim_promotion": false,
+  "entries": [
+    {
+      "id": "R26-MATH-16CELL",
+      "classification": "exploratory_reproduced",
+      "title": "16 Arm-Zellen MAX/SUM",
+      "summary": "MAX 8/8 und SUM 3/8 lokal instabil im dokumentierten symmetrischen Bogenraster.",
+      "limits": "Deterministische spektrale Reproduktion; kein allgemeiner MAX/SUM-Sieger.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/77",
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/88"
+      ],
+      "featured_candidate": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-MATH-PARITY",
+      "classification": "analytic_conditional",
+      "title": "Odd-Parität beider Arme",
+      "summary": "Odd-Eigenwerte der symmetrisch-kontiguierlichen aktiven Bögen sind armunabhängig.",
+      "limits": "Außerhalb dieser Symmetrieklasse nicht behauptet.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/88",
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/89"
+      ],
+      "featured_candidate": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-MATH-HOMOGENEITY",
+      "classification": "analytic_conditional",
+      "title": "Positive Homogenität beider Arme",
+      "summary": "Beide nackten ReLU-Arme haben eine freie Amplitudenrichtung und Fixpunktstrahlen.",
+      "limits": "Bias, Noise, Input und Sättigung verändern den Geltungsbereich.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/70",
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/88"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-TWOPEAK-RETRACTION",
+      "classification": "retraction",
+      "title": "Widerruf Zwei-Peak-Persistenz",
+      "summary": "Früherer Zweitpeak bei i=31 war Ringumbruch-Schulter; korrekt WTA_ONE_BUMP mit instabiler Amplitude.",
+      "limits": "Kein allgemeines Einzigkeitstheorem.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/76",
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/88"
+      ],
+      "featured_candidate": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-PEAK-COUNT",
+      "classification": "metric_convention_fixed",
+      "title": "Kollapszählung",
+      "summary": "Fragilitätslauf T=270 und κ16 T=14 bei strengem A_t<1e-12.",
+      "limits": "Schritte sind ohne dt-Fixierung keine Sekunden.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/88"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-NF05-NF06",
+      "classification": "prereg_draft_not_executed",
+      "title": "NF05/NF06 Vorregistrierung",
+      "summary": "Entwurf: 16 Arm-Zellen, 5376 Kombinationen, 0 ausgeführte konfirmatorische Trials.",
+      "limits": "Kernel/PRNG/Noise/Plateaus/STALE/Outcome-Freeze offen.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/89"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-NOORMAN",
+      "classification": "primary_source_review",
+      "title": "Noorman 2024 vollständiger Text",
+      "summary": "Symmetrische Kosinus-Kopplung und gewichtete Summation statt populationsweiter MAX-Inhibition.",
+      "limits": "MODEL_MAX bleibt eigenständige NEXUS-Hypothese, keine biologische Gleichsetzung.",
+      "source_urls": [
+        "https://doi.org/10.1038/s41593-024-01766-5"
+      ],
+      "featured_candidate": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-ORDER-GAP",
+      "classification": "provenance_gap",
+      "title": "H01–H12 Quellengap",
+      "summary": "Gepinnte R26-Order verlangt mindestens 24 Fälle, enthält aber keine H01–H12-Kennungen.",
+      "limits": "Herkunft der Nummerierung in anderer Kommunikation offen.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/75"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-QUEUE-GRAPHILE",
+      "classification": "docs_verified_not_runtime",
+      "title": "Graphile Worker Cron Backfill",
+      "summary": "fill=t erlaubt Backfill vorher bekannter Cron-Tasks im Fenster.",
+      "limits": "Keine geprüfte Hostinger- oder reale 48/48-Slot-Runtime.",
+      "source_urls": [
+        "https://worker.graphile.org/docs/cron"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-QUEUE-PGBOSS",
+      "classification": "docs_verified_not_runtime",
+      "title": "pg-boss Missed-Slots",
+      "summary": "missed=skip bzw. once sind kein lückenloser Re-Run sämtlicher Slots.",
+      "limits": "Scheduler-Implementierung auf Hostinger nicht beobachtet.",
+      "source_urls": [
+        "https://pgboss.io/api/scheduling"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-CRYPTO-ED25519",
+      "classification": "sandbox_reproduced",
+      "title": "Ed25519 Sandbox",
+      "summary": "64-Byte-Signatur, Manipulationsabwehr, createSign fail-closed, WebCrypto; AXIOM Node22 Re-Run PASS.",
+      "limits": "Keine operativen Signatur-/TSA-Schlüssel eingebunden.",
+      "source_urls": [
+        "https://nodejs.org/api/crypto.html"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-CLOCK-HLC",
+      "classification": "sandbox_reproduced",
+      "title": "HLC kausale Ordnung",
+      "summary": "(l,c)-Uhr hält getestete Ordnung und Clock-Rollback aus.",
+      "limits": "Timestamp-Reihenfolge beweist nicht die Konverse von happens-before.",
+      "source_urls": [
+        "https://cse.buffalo.edu/tech-reports/2014-04.pdf"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-SIGSTORE-TSA",
+      "classification": "docs_partial_not_runtime",
+      "title": "RFC3161/TSA und Sigstore",
+      "summary": "TSA-Semantik und Verifikationsanforderungen, ohne Live-TSA-Test.",
+      "limits": "Security-Erratum: GHSA-xgjw-pm74-86q4 nennt @sigstore/verify genau 3.1.0 betroffen, 3.1.1 gepatcht.",
+      "source_urls": [
+        "https://github.com/sigstore/sigstore-js/security/advisories/GHSA-xgjw-pm74-86q4"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-EB1-SGP4",
+      "classification": "non_identifiability",
+      "title": "EB1′ und SGP4 Grenzen",
+      "summary": "Gemeinsames Fehlerbudget ist Screen, keine Attribution; SGP4-Katalogwerte keine Objekt-Ground-Truth.",
+      "limits": "Objektspezifische D6-Genauigkeit weiterhin offen.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/70",
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/72"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    },
+    {
+      "id": "R26-OPS-SLO",
+      "classification": "design_only_not_runtime",
+      "title": "Phase12 SLOs",
+      "summary": "SLO-Entwürfe für 48/48 Slots, RFC3161, HLC, Signatur-Fixtures und Drift.",
+      "limits": "G1–G11 operativ nicht nachgewiesen.",
+      "source_urls": [
+        "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/74"
+      ],
+      "featured_candidate": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "scientific_terminal": false
+    }
+  ]
+}
