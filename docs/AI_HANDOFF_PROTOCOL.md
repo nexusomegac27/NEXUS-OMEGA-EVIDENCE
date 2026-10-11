@@ -123,3 +123,39 @@ BRANCH
 ```
 
 Do not interpret a merged PR as scientific promotion.
+
+## Expert-return hash handshake extension (standing requirement)
+
+For each external scientific handoff addressed to `NEXUS_OPERATOR_AXIOM`, include these machine-recoverable fields in the sender's detached manifest and the passive GitHub intake notice:
+
+```text
+ORDER_OBJECT = <exact stable parent expert order>
+ORDER_SHA256 = <64 lowercase hex over exact source bytes>
+ORDER_BYTES = <actual integer>
+SOURCE_REPO = nexusomegac27/NEXUS-OMEGA-EVIDENCE
+SOURCE_COMMIT = <full 40-character immutable commit SHA>
+EXPERT_ROLE = <GROK|PERPLEXITY|MISTRAL_VIBE|QWEN|GEMINI|MANUS|DEEPSEEK|other operator-approved>
+GITHUB_ACTOR = <verified separately or NOT_ESTABLISHED>
+TRANSPORT_CLASS = REGISTERED_ACTOR_PR | OPERATOR_TO_AXIOM_BRIDGE
+RECEIVER = NEXUS_OPERATOR_AXIOM
+RECEIVER_INBOX = https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93
+PR_URL = <canonical actual GitHub PR or NOT_ESTABLISHED>
+RETURN_HEAD_SHA = <actual full SHA or NOT_ESTABLISHED>
+RETURN_MANIFEST_PATH = <exact path>
+RETURN_MANIFEST_BYTES = <physical byte count>
+RETURN_MANIFEST_SHA256 = <receiver-computed separately, detached>
+CHILDREN = <exact relative paths, bytes, SHA256, Git blob SHA1>
+PREDECESSOR_OBJECT = <exact parent id>
+WORK_EXECUTED = <reproducible operations + evidence>
+WORK_NOT_EXECUTED = <explicit>
+NEGATIVE_EVIDENCE = <evidence inventory and counterclaims>
+COPYRIGHT_PRIVACY = <public-safe status and source licenses>
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+RECEIVER_ACK = PENDING_AXIOM_INDEPENDENT_REHASH
+```
+
+In a direct expert PR, the **Operator must first** allocate the exact paths and verify the GitHub actor according to the current structural firewall. A role name does not confer GitHub authorization. The owner-controlled CI may validate byte structure, yet a passing check does not automatically enforce branch protection, identify an external model, or authorize any runtime.
+
+The sender must retain its own original return; AXIOM independently fetches all pinned bytes, verifies bytes + SHA256 + Git blob, checks actual role/permissions and scientific evidence, then writes a separate receiver verdict `MATCH | MISMATCH | SOURCE_NOT_PRESENT | SECURITY_HOLD` (and separate scientific adjudication). Do not overwrite historical returns or producer messages; corrections are append-only. No absolute private paths, private chats, secrets, raw device data or copyright-uncleared fulltext on a public issue. No authentication implied by bare hashes/HLC/TSA docs.
+
+The standby issue is passive storage. The separate `AXIOM Experteneingang` monitor checks it hourly when enabled and accessible; automated notification does not substitute scientific adjudication or provide instant process execution.
