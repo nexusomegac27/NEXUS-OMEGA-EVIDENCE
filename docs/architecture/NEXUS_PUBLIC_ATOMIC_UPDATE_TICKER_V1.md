@@ -75,6 +75,8 @@ The module shows strict source age >24 h as \`STALE_SOURCE\`.
 on the next bounded poll only. Two independent error paths: Github offline leaves the
 public historical register visible; public feed offline leaves GitHub transport visible.
 Both offline => \`UNKNOWN\`, not a fabricated green status or repeated pending retry.
+The browser computes SHA-256 of the **exact fetched response text encoded as UTF-8** via WebCrypto when available; the view displays that fingerprint for independent byte comparison. This is a computed byte digest, **not** a digitally signed provenance proof or independent scientific adjudication. When WebCrypto is unavailable the fingerprint is omitted; the source is still labeled merely C1. A new JSON SHA does not by itself authorize a node or assert the public registry has become canonical.
+
 No untrusted text inserted via \`innerHTML\`: all text is written via DOM \`textContent\`.
 Only fixed github.com SHA URLs and sanitized local page links are clickable.
 
@@ -141,7 +143,7 @@ Do not feed public text to an internal shell or bypass R27 AUTH001–003.
 
 \`G0\` source paths and existing WWW event registry independently read;
 \`G1\` source JS and tests pass offline;
-\`G2\` 18 explicit negative/contract tests in existing structure CI + existing
+\`G2\` 19 explicit negative/contract tests in existing structure CI + existing
 mandatory workflow PASS, Semgrep success for new code;
 \`G3\` GitHub source/executable module published, immutable SHA API readback;
 \`G4\` Cursor existing Hostinger lane installs **only** into existing 03 LIVE FEED,
