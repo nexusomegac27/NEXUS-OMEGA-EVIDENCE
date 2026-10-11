@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_OPEN_MIND_CROSS_DOMAIN_FALSIFICATION_MAXI_ORDER_20261011_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R28_NF05_NF06_PREREG_REMEDIATION_MAXI_ORDER_20261011_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "ae543022dce52b45e85b64a48bc1c93357b7522f",
+    "predecessor_path": "research/r28/r10r28-nf05-nf06-prereg-remediation-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R28_NF05_NF06_PREREG_REMEDIATION_MAXI_ORDER_20261011_R0.md",
+    "predecessor_bytes": 20819,
+    "predecessor_sha256": "8e621693a4556587d213504b1c3efb883dedaebdfaca73238e28763afa36a867"
+  },
+  "delegation": {
+    "scope": "R10R29_OPEN_MIND_OFFLINE_C1_METHOD_RESEARCH_AND_LOCAL_SANDBOX_ONLY",
+    "allowed_actions": [
+      "READ_PINNED_SOURCES",
+      "INDEPENDENT_FALSIFICATION",
+      "OFFLINE_SYNTHETIC_METHOD_DEVELOPMENT",
+      "REPORT_NEGATIVE_EVIDENCE",
+      "AUTHOR_C1_DESIGN_CANDIDATE",
+      "OPERATOR_BRIDGE_RETURN"
+    ],
+    "prohibited_actions": [
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "GITHUB_UNAUTHORIZED_WRITE",
+      "RUNTIME_EXECUTION",
+      "CLAIM_PROMOTION",
+      "HOSTINGER_DEPLOY",
+      "NEW_WORKER",
+      "L3_PILOT_EXECUTION",
+      "NF05_NF06_CONFIRMATORY_EXECUTION",
+      "MEDICAL_OR_PERSON_IDENTITY_CLAIMS"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Create an open-minded, independent, falsification-first R10R29 cross-domain research program and bounded synthetic methodology, without silently executing L3 or NF05/NF06.",
+    "deliverables": [
+      "R29_SOURCE_EXACT_INPUT_LEDGER",
+      "R29_HYPOTHESIS_MATRIX_18_SUBSTANTIVE",
+      "R29_THREE_UNSELECTED_L3_DESIGNS",
+      "R29_OFFLINE_METHOD_PROTOTYPES_OR_NOT_EXECUTED",
+      "R29_24_ONE_DEFECT_NEGATIVE_FIXTURES_OR_GAP",
+      "R29_EXPERT_DOCUMENTATION_AND_SHA_MANIFEST",
+      "R29_AXIOM_HANDSHAKE_PENDING"
+    ],
+    "falsifiers": [
+      "NON_COMPENSATION_VIOLATION",
+      "CLOCK_UNIT_CONSENT_FALSE_ACCEPT",
+      "LOSSY_MAPPING_UNDETECTED",
+      "INCOMPATIBLE_MODEL_FEDERATION_PASSES",
+      "SOURCE_CHAIN_SUBSTITUTION",
+      "FALSE_EXTERNAL_EXPERT_INDEPENDENCE"
+    ],
+    "acceptance_tests": [
+      "SOURCE_REHASH_REQUIRED",
+      "NO_CLINICAL_OR_SUBJECTIVE_PROMOTION",
+      "REPO_ORDER_POLICY",
+      "SCOPED_READONLY_AND_OFFLINE",
+      "INDEPENDENT_AXIOM_RECEIVE_ACK_ONLY",
+      "NO_L3_SELECTION_AND_EXECUTION"
+    ],
+    "pause_conditions": [
+      "SOURCE_BYTE_MISMATCH",
+      "PRIVILEGED_OPERATION_REQUIRED",
+      "LICENSE_OR_PRIVACY_UNRESOLVED",
+      "IRREVERSIBLE_MUTATION",
+      "NEW_WORKER_OR_WWW_INTENT"
+    ],
+    "not_executed": [
+      "L3_A_B_C_PILOTS",
+      "NF05_NF06_CONFIRMATORY",
+      "HOSTINGER_RUNTIME",
+      "NODE_RESET",
+      "UNREGISTERED_AGENT_WRITES"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_OPEN_MIND_CROSS_DOMAIN_FALSIFICATION_MAXI_ORDER_20261011_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "SOURCE_HASH_DRIFT",
+      "CLAIM_PROMOTION",
+      "AUTHORITY_ESCALATION",
+      "REPOSITORY_NAMESPACE_DRIFT",
+      "EXPERIMENT_SELECTION_SUBSTITUTION"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "ae543022dce52b45e85b64a48bc1c93357b7522f",
+        "path": "research/r28/r10r28-nf05-nf06-prereg-remediation-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R28_NF05_NF06_PREREG_REMEDIATION_MAXI_ORDER_20261011_R0.md",
+        "bytes": 20819,
+        "sha256": "8e621693a4556587d213504b1c3efb883dedaebdfaca73238e28763afa36a867",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_NO_UNLICENSED_FULLTEXT_NO_PRIVATE_SENSOR_MEDICAL_OR_PERSONAL_DATA",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "ALL_SOURCE_GATES_HAVE_COMMAND_AND_EXPECTED_OUTCOME",
+      "L3_DESIGN_HAS_SEPARATE_EXPLICIT_AUTHORIZATION_GATE"
+    ],
+    "robustness_stability": [
+      "DRIFT_RESET_NEVER_NODE_RESET",
+      "METHOD_PROTO_NOT_NF05_OR_L3",
+      "FALSE_POSITIVE_FALSIFIER_PRESENT"
+    ],
+    "traceability_comprehensibility": [
+      "FULL_SHA256_BYTE_CATALOG",
+      "R28_SOURCE_UNMERGED_STATUS_PRESERVED",
+      "BTMA_REPORTED_VS_REPRODUCED_SPLIT",
+      "APPEND_ONLY_NEGATIVE_EVIDENCE"
+    ]
+  }
+}
