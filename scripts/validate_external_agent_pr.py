@@ -227,8 +227,18 @@ def main():
     token = os.environ["GITHUB_TOKEN"]
     files = get_changed_files(event["repository"]["full_name"], int(pr["number"]), token)
     errors = validate_paths(files, actor, registry)
-    if not errors and actor != registry["owner_github_login"]:
-        errors.extend(validate_return_contents(files, event, registry, token))
+    # Even an owner-side AXIOM bridge cannot use an incomplete/tampered return.
+    # An owner policy/README PR has no registered return-asset modifications.
+    known = slot_map(registry)
+    return_files = [f for f in files if f.get("filename") in known]
+    if return_files:
+        slot = known[return_files[0]["filename"]]
+        expected = {slot["returns_path"] + n for n in slot["filenames"]}
+        received = {f.get("filename") for f in files}
+        if received != expected or any(f.get("status") != "added" for f in files):
+            errors.append("INCOMPLETE_OR_MIXED_RETURN_PR")
+        if not errors:
+            errors.extend(validate_return_contents(files, event, registry, token))
     print(json.dumps({"object": "NEXUS_R27E_EXTERNAL_PR_FIREWALL_V1",
         "status": "PASS" if not errors else "FAIL", "actor": actor,
         "changed_files": len(files), "errors": errors}, sort_keys=True))
