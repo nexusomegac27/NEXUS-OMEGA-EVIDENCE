@@ -1,0 +1,276 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_LIVING_NODE_FABRIC_POLICY_TABLE_V1",
+  "status": "DESIGN_ONLY_NOT_DEPLOYED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "default_decision": "DENY",
+  "authority": "OPERATOR_BOUND_POLICY_ONLY",
+  "github_repo_allowlist": [
+    "nexusomegac27/NEXUS-OMEGA-EVIDENCE"
+  ],
+  "domain_binding": {
+    "www.nexus-mobile.de": "PUBLIC_RESEARCH_PRIMARY",
+    "nexus-online.de": "COORDINATION_ONLY"
+  },
+  "max_event_bytes": 32768,
+  "maximum_clock_skew_seconds": 300,
+  "auth_requirements": {
+    "GITHUB_WEBHOOK": "VALID_X_HUB_SIGNATURE_256_AND_REPO_INSTALL_ALLOWLIST",
+    "WWW_PUBLIC": "CONSENT_CSRF_CAPTCHA_RATE_LIMIT_PUBLIC_ONLY",
+    "AUTHORIZED_AGENT": "SHORT_LIVED_TOKEN_WITH_NODE_AUDIENCE_AND_SCOPE",
+    "OPERATOR_CONTROL": "OPERATOR_SESSION_MFA_AND_ACTION_BOUND_NONCE"
+  },
+  "capabilities": [
+    {
+      "name": "research.source_intake",
+      "risk": "L2_RESEARCH",
+      "allowed_event_types": [
+        "GITHUB_RETURN_SUBMITTED",
+        "SCIENTIFIC_CLAIM_RETRACTED"
+      ],
+      "handler": "internal.source_intake",
+      "effect": "DURABLE_EVIDENCE_CANDIDATE_ONLY",
+      "may_spawn_worker": false,
+      "needs_operator_approval": false
+    },
+    {
+      "name": "research.external_request",
+      "risk": "L2_RESEARCH",
+      "allowed_event_types": [
+        "REVIEW_ADJUDICATION_READY"
+      ],
+      "handler": "authorized.external_dispatch",
+      "effect": "SCOPED_RESEARCH_REQUEST",
+      "may_spawn_worker": false,
+      "needs_operator_approval": true
+    },
+    {
+      "name": "public.intent_ticket",
+      "risk": "L1_PUBLIC_SUBMIT",
+      "allowed_event_types": [
+        "PUBLIC_RESEARCH_INTENT_SUBMITTED"
+      ],
+      "handler": "private.consented_ticket",
+      "effect": "NO_EXTERNAL_EXECUTION",
+      "may_spawn_worker": false,
+      "needs_operator_approval": false
+    },
+    {
+      "name": "www.publish_c1",
+      "risk": "L3_REVERSIBLE_C1_PUBLISH",
+      "allowed_event_types": [
+        "PUBLICATION_READY_C1"
+      ],
+      "handler": "existing.cursor.continuity_only",
+      "effect": "REQUIRES_VERIFIED_B2_B3_RECEIPTS",
+      "may_spawn_worker": false,
+      "needs_operator_approval": true
+    },
+    {
+      "name": "operator.override",
+      "risk": "L4_PRIVILEGED_WRITE",
+      "allowed_event_types": [
+        "OPERATOR_APPROVAL_ISSUED"
+      ],
+      "handler": "private.operator_control",
+      "effect": "SCOPED_REVIEW_ONLY_NO_DIRECT_EXEC",
+      "may_spawn_worker": false,
+      "needs_operator_approval": true
+    }
+  ],
+  "forbidden": [
+    "L5_RESTRICTED_AUTO_EXEC",
+    "WEB_PAGE_REQUEST_DIRECT_NODE_EXECUTION",
+    "GITHUB_COMMENT_SHELL_EXEC",
+    "PR_METADATA_AS_OPERATOR_APPROVAL",
+    "AUTO_MERGE_PR65_PR67_PR70_PR71",
+    "AUTO_DNS_REPOINT",
+    "AUTO_SECRET_ROTATION_WITHOUT_OPERATOR",
+    "SELF_PROMOTE_CLAIMS",
+    "START_DUPLICATE_CURSOR_CONTINUITY"
+  ],
+  "dedup": {
+    "unique_transport_key": [
+      "origin",
+      "delivery_id"
+    ],
+    "unique_side_effect_key": [
+      "action_id"
+    ],
+    "delivery_semantics": "AT_LEAST_ONCE_WITH_IDEMPOTENT_EFFECT",
+    "leader_lease": "FENCING_TOKEN_REQUIRED"
+  },
+  "optimizer": {
+    "mode": "BOUNDED_TRANSPORT_ONLY",
+    "candidate_retry_seconds": [
+      2,
+      5,
+      10,
+      30,
+      60,
+      120
+    ],
+    "max_attempts": 5,
+    "max_batch": 25,
+    "max_concurrency_low_risk": 4,
+    "allowed_changes": [
+      "BACKOFF",
+      "BATCH_SIZE",
+      "READ_ONLY_POLL_INTERVAL",
+      "CIRCUIT_BREAKER_CLOSING_THRESHOLD"
+    ],
+    "requires_canary": true,
+    "forbidden_changes": [
+      "POLICY_RULES",
+      "ROLE_GRANTS",
+      "RISK_TIER",
+      "REPO_ALLOWLIST",
+      "SECRETS",
+      "DNS",
+      "KILL_SWITCH",
+      "REVIEWER_INDEPENDENCE",
+      "CLAIM_CEILING"
+    ]
+  },
+  "test_fixtures": [
+    {
+      "id": "F01",
+      "case": "missing HMAC",
+      "expected": "REJECTED_AUTH"
+    },
+    {
+      "id": "F02",
+      "case": "invalid HMAC",
+      "expected": "REJECTED_AUTH"
+    },
+    {
+      "id": "F03",
+      "case": "cross-repository webhook",
+      "expected": "QUARANTINED"
+    },
+    {
+      "id": "F04",
+      "case": "duplicate delivery GUID",
+      "expected": "DUPLICATE_ACK_NO_EFFECT"
+    },
+    {
+      "id": "F05",
+      "case": "same action from push and pull",
+      "expected": "SINGLE_EFFECT_FENCED"
+    },
+    {
+      "id": "F06",
+      "case": "content hash divergence",
+      "expected": "SOURCE_HASH_MISMATCH"
+    },
+    {
+      "id": "F07",
+      "case": "expired actor token",
+      "expected": "REJECTED_AUTH"
+    },
+    {
+      "id": "F08",
+      "case": "operator approval replay",
+      "expected": "DENY_NONCE_REUSED"
+    },
+    {
+      "id": "F09",
+      "case": "external-agent asks for merge",
+      "expected": "DENY_INTEGRATION_AUTHORITY"
+    },
+    {
+      "id": "F10",
+      "case": "WWW public click requests Cursor shell",
+      "expected": "DENY_CAPABILITY"
+    },
+    {
+      "id": "F11",
+      "case": "public source URL SSRF",
+      "expected": "DENY_SOURCE_NOT_ALLOWLISTED"
+    },
+    {
+      "id": "F12",
+      "case": "out-of-order webhook",
+      "expected": "HOLD_SOURCE_PIN_DEPENDENCY"
+    },
+    {
+      "id": "F13",
+      "case": "old lease executes after failover",
+      "expected": "DENY_OLD_FENCE"
+    },
+    {
+      "id": "F14",
+      "case": "queue retries exhausted",
+      "expected": "DLQ_RECEIPTED"
+    },
+    {
+      "id": "F15",
+      "case": "kill switch ON",
+      "expected": "NO_EXECUTION"
+    },
+    {
+      "id": "F16",
+      "case": "untrusted prompt in GitHub PR text",
+      "expected": "DATA_ONLY_QUARANTINED"
+    },
+    {
+      "id": "F17",
+      "case": "PII in public payload",
+      "expected": "PRIVATE_QUARANTINE_NO_PUBLIC_LEDGER"
+    },
+    {
+      "id": "F18",
+      "case": "GitHub merge no Hostinger B2",
+      "expected": "WWW_LIVE_NOT_VERIFIED"
+    },
+    {
+      "id": "F19",
+      "case": "B2 available, B3 missing",
+      "expected": "WWW_LIVE_NOT_VERIFIED"
+    },
+    {
+      "id": "F20",
+      "case": "source retraction after success",
+      "expected": "APPEND_ONLY_SUPERSEDES"
+    },
+    {
+      "id": "F21",
+      "case": "semantically false but hash-consistent source",
+      "expected": "NO_CLAIM_PROMOTION"
+    },
+    {
+      "id": "F22",
+      "case": "self-optimization widens privileges",
+      "expected": "DENY_OPTIMIZER_SCOPE"
+    },
+    {
+      "id": "F23",
+      "case": "Cursor continuity already running",
+      "expected": "NO_DUPLICATE_WORKER"
+    },
+    {
+      "id": "F24",
+      "case": "standby provider offline",
+      "expected": "FALLBACK_NOT_ACTIVE"
+    },
+    {
+      "id": "F25",
+      "case": "tied MAX peak detector under float rounding",
+      "expected": "CLAIM_RETRACTION_CANDIDATE_ONLY"
+    },
+    {
+      "id": "F26",
+      "case": "web visit without explicit submission",
+      "expected": "NO_EVENT_TRIGGER"
+    },
+    {
+      "id": "F27",
+      "case": "schema duplicate JSON keys",
+      "expected": "REJECT_OR_AMBIGUITY_QUARANTINE"
+    },
+    {
+      "id": "F28",
+      "case": "GH issue comment impersonates AXIOM",
+      "expected": "DENY_ROLE_AUTHORITY"
+    }
+  ]
+}
