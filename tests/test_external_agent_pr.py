@@ -64,5 +64,54 @@ class ExternalAgentFirewallTests(unittest.TestCase):
     def test_continuitiy_cannot_grant_authority(self):
         self.assertTrue(M.validate_paths([{"filename":SLOT+"internal-authorized.md","status":"added"}],"verified-github-agent",REG))
 
+    def test_legacy_r27e_manifest_resolution_stays_exact(self):
+        assignment = REG["assignments"][0]
+        self.assertEqual(M.manifest_path_for_assignment(assignment),
+                         SLOT + "R27-05_RETURN_MANIFEST_R0.json")
+
+    def test_future_r27f_manifest_resolution_without_new_folder(self):
+        from copy import deepcopy
+        assignment = deepcopy(REG["assignments"][0])
+        assignment["assignment_id"] = "R27-F-20261011"
+        assignment["filenames"] = [
+            n.replace("R27-", "R27F-") for n in assignment["filenames"]
+        ]
+        assignment["manifest_filename"] = "R27F-05_RETURN_MANIFEST_R0.json"
+        self.assertEqual(M.manifest_path_for_assignment(assignment),
+                         SLOT + "R27F-05_RETURN_MANIFEST_R0.json")
+        self.assertNotIn("R27F-00_CAPABILITY_AND_TRUST_INVENTORY_R0.md",
+                         REG["assignments"][0]["filenames"])
+
+    def test_reject_manifest_conflict_or_absence(self):
+        from copy import deepcopy
+        assignment = deepcopy(REG["assignments"][0])
+        assignment["manifest_filename"] = "OTHER_MANIFEST.json"
+        with self.assertRaisesRegex(ValueError, "ASSIGNMENT_MANIFEST_CONFLICT"):
+            M.manifest_path_for_assignment(assignment)
+        assignment.pop("manifest_filename")
+        assignment["filenames"] = [n for n in assignment["filenames"]
+                                   if "_RETURN_MANIFEST_R0.json" not in n]
+        with self.assertRaisesRegex(ValueError, "ASSIGNMENT_MUST_HAVE_ONE_MANIFEST"):
+            M.manifest_path_for_assignment(assignment)
+
+    def test_reject_two_manifests_and_duplicate_allowed_path(self):
+        from copy import deepcopy
+        assignment = deepcopy(REG["assignments"][0])
+        assignment["filenames"].append("R27F-05_RETURN_MANIFEST_R0.json")
+        with self.assertRaisesRegex(ValueError, "ASSIGNMENT_MUST_HAVE_ONE_MANIFEST"):
+            M.manifest_path_for_assignment(assignment)
+        duplicate = deepcopy(REG)
+        duplicate["assignments"].append(deepcopy(REG["assignments"][0]))
+        with self.assertRaisesRegex(ValueError, "DUPLICATE_SLOT"):
+            M.slot_map(duplicate)
+
+    def test_meta_r27f_return_stays_unregistered_and_denied(self):
+        """Future code compatibility MUST NOT activate currently unlisted names."""
+        candidate = [{"filename": SLOT + "R27F-00_CAPABILITY_AND_TRUST_INVENTORY_R0.md",
+                      "status": "added"}]
+        verdict = M.validate_paths(candidate, "verified-github-agent", REG)
+        self.assertTrue(any("EXTERNAL_OUTSIDE_PREALLOCATED_SLOT" in x for x in verdict))
+
+
 if __name__ == "__main__":
     unittest.main()
