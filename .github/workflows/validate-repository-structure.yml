@@ -17,6 +17,6 @@ jobs:
       - name: Validate repository-order contract
         run: python scripts/validate_repository_structure.py --root .
       - name: Run repository-structure tests
-        run: python -m unittest tests.test_repository_structure tests.test_external_agent_pr
+        run: python -m unittest tests.test_repository_structure tests.test_external_agent_pr tests.test_preentry_lab
       - name: Verify public C1 ticker using native Node unit tests (no network)
         run: node --test tests/nexus-public-update-ticker.test.mjs
