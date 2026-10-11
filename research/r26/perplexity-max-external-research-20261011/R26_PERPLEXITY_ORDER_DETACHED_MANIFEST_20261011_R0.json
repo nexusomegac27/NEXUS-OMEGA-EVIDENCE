@@ -1,0 +1,34 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_TO_PERPLEXITY_R26_MAX_EXTERNAL_RESEARCH_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-axiom-perplexity-max-independent-falsification-20261011",
+  "parent_R26_main": "6dd070f10e58d8885c1d9eaccf22a6f71a272d42",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_type": "AXIOM_ISSUED_ORDER_NOT_PERPLEXITY_RETURN",
+  "receiver_assigned": false,
+  "receiver_ack": "PENDING",
+  "github_api_source_exact": true,
+  "child_count": 2,
+  "children": [
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011/NEXUS_OMEGA_AXIOM_TO_PERPLEXITY_R26_MAX_INDEPENDENT_FALSIFICATION_SOURCE_AUDIT_AND_PREREG_PREPARATION_20261011_R0.md",
+      "bytes": 30180,
+      "sha256": "72f088cd2fa22e71eef2e1c020af8409fd3327acdd2aec9b9177b60790811039",
+      "git_blob_sha1": "733e401e105ac8d63be9af8164dd2ad9b7691c87",
+      "verification": "INDEPENDENT_API_FILE_READBACK_SHA256"
+    },
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011/README.md",
+      "bytes": 2492,
+      "sha256": "fb73924d2dcbe1d181469de6c05c16f4692704d65cb0aca3ff098669711083de",
+      "git_blob_sha1": "a4acc582c9798e1e767797d1171d2903cad02df5",
+      "verification": "INDEPENDENT_API_FILE_READBACK_SHA256"
+    }
+  ],
+  "manifest_self_hash_policy": "EXCLUDED_DETACHED_SHA256_IN_PR_RECEIPT",
+  "runtime_authority": false,
+  "new_cursor_worker": false,
+  "confirmatory_experiment_authority": false,
+  "www_deploy": false
+}
