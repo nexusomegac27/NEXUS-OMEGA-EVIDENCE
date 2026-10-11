@@ -91,3 +91,9 @@ A structural change must update in one change set:
 ## Trigger
 
 AXIOM and Cursor/PRAXIS treat this contract as a permanent pre-ingest check. Every future agent order involving repository artifacts should preserve the intended target path or explicitly classify the output as external/unintegrated.
+
+## R27-E governed external-agent slots (additive contract, 2026-10-11)
+
+This extension preserves the **existing top-level tree** and historical path bindings. Under the canonical research domain the Operator alone may preprovision an exact `research/<phase>/<topic>/returns/` directory with its own README and explicit file list in `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json`. External agents are restricted to create-only files at those exact paths; no additions under `.github/`, `docs/`, `schema/`, `scripts/`, `tests/` or any new research path. Default permission is DENY for unregistered GitHub actors. See `docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md`, schema `schema/external-agent-return-r27e-v1.schema.json`, trusted-base validator `scripts/validate_external_agent_pr.py` and the dedicated GitHub workflow.
+
+This code enforces PR policy **when run**; only actual GitHub owner-side branch rules and permissions can make it a mandatory merge barrier. CODEOWNERS alone does not prove required approval. The WWW wake path is exclusively untrusted observation, not a write credential.
