@@ -1,0 +1,26 @@
+name: R27-E External Agent Structural Firewall
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  r27e-external-structural-firewall:
+    name: r27e-external-structural-firewall
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out TRUSTED BASE only (never external PR head)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+      - name: Verify PR actor, canonical slot and actual asset SHA256
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/validate_external_agent_pr.py --event "$GITHUB_EVENT_PATH"
+      - name: Run structural firewall negative tests on BASE policy
+        run: python -m unittest tests.test_external_agent_pr

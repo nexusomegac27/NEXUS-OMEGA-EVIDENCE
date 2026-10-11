@@ -1,0 +1,51 @@
+{
+  "object": "NEXUS_OMEGA_EXTERNAL_AGENT_WRITE_SLOTS_V1",
+  "schema_version": "1.0.0",
+  "status": "C1_OPERATOR_PREALLOCATED_SLOTS_EXTERNAL_ACTORS_NOT_AUTHORIZED",
+  "authority": "NEXUS_OPERATOR_GOVERNED_ONLY",
+  "default": "DENY",
+  "owner_github_login": "nexusomegac27",
+  "external_actor_allowlist": [],
+  "identity_policy": "GITHUB_LOGIN_NOT_MODEL_IDENTITY; EXTERNAL_WRITE_NEEDS_OPERATOR_ACTOR_REGISTRATION_AND_BRANCH_RULE",
+  "anchor_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "max_files_per_external_return": 7,
+  "max_file_bytes": 262144,
+  "max_total_bytes": 1048576,
+  "existing_frozen_return_paths": [],
+  "assignments": [
+    {
+      "assignment_id": "R27-E-20261011",
+      "scope": "ADVERSARIAL_EXTERNAL_RESEARCH_NOT_RUNTIME",
+      "root": "research/r27/www-extern-wake-isolation-20261011",
+      "returns_path": "research/r27/www-extern-wake-isolation-20261011/returns/",
+      "parent_order_object": "NEXUS_OMEGA_AXIOM_TO_EXISTING_CURSOR_R27_WWW_WAKE_AND_AUTHN_HARD_REMEDIATION_MAXI_ORDER_20261011_R0",
+      "parent_order_sha256": "619f4463a865b801d652cd38dbecfeaa4178d8a559cb73d314893ef34f3310f1",
+      "status": "PREALLOCATED_NOT_YET_EXTERNAL_AUTHORIZED",
+      "filenames": [
+        "R27-00_CAPABILITY_AND_TRUST_INVENTORY_R0.md",
+        "R27-01_AUTHN_HARD_REMEDIATION_R0.md",
+        "R27-02_NEGATIVE_TEST_RESULTS_R0.md",
+        "R27-03_E0_E1_E2_CONTRACTS_R0.json",
+        "R27-04_PROVIDER_FAILOVER_ASSESSMENT_R0.json",
+        "R27-05_RETURN_MANIFEST_R0.json",
+        "R27-06_SEND_RECEIPT_R0.md"
+      ],
+      "required_complete_return": true
+    }
+  ],
+  "prohibited": [
+    "EXTERNAL_ROOT_OR_NAMESPACE_CREATION",
+    "EXTERNAL_EDIT_EXISTING_FILES",
+    "EXTERNAL_RENAME_DELETE_MOVE",
+    "EXTERNAL_CREATE_SUBDIRECTORY",
+    "EXTERNAL_PATCH_GOVERNANCE_CODE_CI",
+    "EXTERNAL_CREATE_OWN_TEMPLATE",
+    "AUTO_MERGE",
+    "AUTO_RUNTIME",
+    "NEW_WORKER"
+  ],
+  "structure_change": "OPERATOR_OWNED_PR_ONLY_UPDATE_ROOT_README_MACHINE_CONTRACT_AND_VALIDATOR",
+  "manifest_self_hash": "EXCLUDED; MANIFEST_SHA256_POSTED_BY_RECEIVER_IN_PR_COMMENT",
+  "legacy_rule": "HISTORICAL_PATH_BOUND_ASSETS_UNCHANGED"
+}

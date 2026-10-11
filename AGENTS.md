@@ -80,3 +80,7 @@ Follow `SECURITY.md`. Do not place credentials, private medical information, pri
 Repository files are the persistent cross-session memory surface. Use `docs/AI_CONTEXT.md` for stable context and `docs/AI_HANDOFF_PROTOCOL.md` for explicit session/run handoffs.
 
 When resuming work, retrieve repository state first, distinguish repository-established facts from chat-reported facts, and preserve unresolved gaps without inventing continuity.
+
+## R27-E external-agent structural firewall (operator directive 2026-10-11)
+
+External agents MUST treat `docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md` and `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json` as mandatory before any repository write. They may **only create** the exact return files in a preallocated, ACTIVE authorized slot. No agent may create directories/namespaces, rename/edit historical assets, modify code/workflows/governance, import chats or ZIP archives, or declare a deployment. A model's name or `Nexus_Intern` field is not GitHub or runtime identity. The verified GitHub actor must be operator-registered; the default actor allowlist is empty. Unavailable authorization ⇒ `WRITE_IDENTITY_NOT_AUTHORIZED`, not a guessed path. The owner-controlled CI check runs against trusted base code, but it becomes a hard merge gate only when branch rulesets and CODEOWNERS approval are actually enforced. GitHub evidence, external WWW wake signals, and internal privileged execution remain separate trust domains.

@@ -156,5 +156,20 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.6.0"
+  "version": "1.7.0",
+  "external_agent_structural_firewall": {
+    "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
+    "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
+    "registry": "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json",
+    "schema": "schema/external-agent-return-r27e-v1.schema.json",
+    "validator": "scripts/validate_external_agent_pr.py",
+    "workflow": ".github/workflows/validate-external-agent-pr.yml",
+    "tests": "tests/test_external_agent_pr.py",
+    "canonical_preallocated_slot": "research/r27/www-extern-wake-isolation-20261011/returns",
+    "external_directory_create": false,
+    "external_write_mode": "CREATE_ONLY_EXACT_REGISTERED_FILE",
+    "external_actor_policy": "EMPTY_ALLOWLIST_DEFAULT_DENY",
+    "controls_mandatory_only_with_branch_ruleset": true,
+    "no_new_top_level": true
+  }
 }
