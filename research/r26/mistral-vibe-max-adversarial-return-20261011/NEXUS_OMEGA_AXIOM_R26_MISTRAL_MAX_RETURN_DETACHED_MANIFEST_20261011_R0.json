@@ -1,0 +1,45 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_MISTRAL_VIBE_MAX_RETURN_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-mistral-max-exploratory-return-adjudication-20261011",
+  "parent_main": "d2995b789b47037539700d1f6d13e5b007fdbaf2",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_git_transport": "OPERATOR_TO_AXIOM_API_INTAKE_NOT_PRODUCER_SEND",
+  "perplexity_receive_ack": "PENDING",
+  "science_status": "PASS_WITH_MATERIAL_CAVEATS_C1_EXPLORATORY",
+  "children_count": 3,
+  "children": [
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/NEXUS_OMEGA_MISTRAL_VIBE_R26_MAX_INDEPENDENT_FALSIFICATION_RETURN_20261011_R0.md",
+      "sha256": "4e7193c7d7b30524bbffce84603b292a7fe46379adca82d50b8b0465062f73b4",
+      "bytes": 28368,
+      "git_blob_sha1": "a38a3842ae69bd29f3b672884bd350a502d6167d",
+      "scope": "MISTRAL_ORIGINAL_OPERATOR_TRANSMITTED",
+      "github_api_readback": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/AXIOM_R26_INDEPENDENT_MINIMAL_FIXPOINT_REPRODUCTION_20261011_R0.py",
+      "sha256": "0c35e4e579e27ff01506b1f6a17f4a368733953167351a80fac059a0810efc3e",
+      "bytes": 2644,
+      "git_blob_sha1": "4b980effaaf3de96dcca334c4b3686bf195a2ba0",
+      "scope": "AXIOM_INDEPENDENT_REPRO_SCRIPT",
+      "github_api_readback": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/NEXUS_OMEGA_AXIOM_R26_MISTRAL_VIBE_MAX_RETURN_ADJUDICATION_20261011_R0.md",
+      "sha256": "6f90ca59a290262600a78eedb2f572016a91b5c23fa6f1b94151e728f774ae02",
+      "bytes": 9739,
+      "git_blob_sha1": "bc5372e3432ec6d2795a03a2c252086c610e28a6",
+      "scope": "AXIOM_ADJUDICATION",
+      "github_api_readback": true
+    }
+  ],
+  "privacy": "SECOND_UPLOAD_IS_CONVERSATION_TRANSCRIPT_NOT_PUBLIC_REPO",
+  "manifest_self_sha256": "DETACHED_IN_GITHUB_PR_RECEIPT",
+  "no_new_cursor_worker": true,
+  "pr70_merged": false,
+  "nf05_executed": false,
+  "nf06_executed": false,
+  "www_deployed": false
+}
