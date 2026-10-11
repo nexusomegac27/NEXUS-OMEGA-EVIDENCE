@@ -96,3 +96,25 @@ An order is **incomplete** unless it binds: exact `OBJECT` and prior `PREDECESSO
 Existing R27-E `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json` remains decisive for permissions. Its external actor allowlist is empty; **no direct expert PR write** without operator-issued exact slot, registered real GitHub/App actor, and independently enforced rules. Otherwise require honestly labeled operator-mediated bridge. An issue comment alone is neither a GitHub sender identity nor an always-on ChatGPT trigger. Private/sensitive inputs use approved private transport, never public issue text.
 
 Future experts must carry this policy in every scoped research order, independent of model identity or prior conversation memory. **Receiver rehash and scientific adjudication remain separate gates; no producer-issued AXIOM ACK.**
+
+## TASK ANCHOR NORM V1 — binding non-destructive DRIFT_RESET task-format trigger (operator 2026-10-11)
+
+For each **new substantial** AXIOM, Cursor/PRAXIS or external-expert order, apply `docs/governance/NEXUS_OMEGA_TASK_ANCHOR_NORM_V1.md`. The order MUST bind its originating authority, exact predecessor bytes/path/immutable commit, delegated role and scope, allowed/prohibited actions, negative evidence and falsifiers, receiver hash handshake and append-only continuity. The machine-readable `TASK_ORDER_ANCHOR` envelope follows `schema/task-anchor-norm-v1.schema.json`; the offline check is `scripts/validate_task_anchor_norm_v1.py`; the exemplar is `examples/task-anchor-v1.example.json`.
+
+```text
+TASK_FORMAT = NEXUS_OMEGA_TASK_ANCHOR_NORM_V1
+STATUS = NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION
+DIN = DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED
+ANCHOR = TASK_ORIGIN_ROLE_AUTHORITY_CONTINUITY_NOT_PERSONHOOD
+DRIFT_RESET = RELOAD_VERIFIED_ANCHOR_AND_APPEND_DIFFERENCE_WITNESS
+DRIFT_RESET_IS_NODE_RESET = FALSE
+PRESERVE = ORIGINAL_EVIDENCE + HISTORY + NEGATIVE_RESULTS + CHECKPOINTS + NODE_STATE
+PREDECESSOR_SOURCE_GAP = HOLD_SCOPED_NO_CHAT_RECONSTRUCTION
+SCIENTIFIC_SUCCESSOR = APPEND_ONLY_NOT_AUTOMATIC_DRIFT
+AUTHORITY_ESCALATION = DENY
+NEW_CURSOR_OR_NODE_RUNTIME_AUTHORITY = NONE
+EXTERNAL_GITHUB_ACTOR_POLICY = EXISTING_DEFAULT_DENY_UNCHANGED
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+```
+
+This trigger is **prospective**, does not reformat old source-bound orders, and does not mean the ChatGPT platform has persistent agent memory or privileged pre-inference injection. DIN-like internal format discipline is not DIN accreditation or certification. A valid schema/CI check means structural conformity only; every source rehash, actor authentication, scientific adjudication and execution authorization is a separate gate. When a new assignment's source is missing, preserve a scoped HOLD instead of replacing it with chat order. No non-owner external writer may alter this norm or invent return slots.
