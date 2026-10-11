@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10R29_PUBLIC_SAFE_TEXT_DETACHED_MANIFEST_20261011_R0",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "transport": "OPERATOR_TO_AXIOM_BRIDGE",
+  "owner_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "root": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/",
+  "parent_main": "990298a07dba30d8c1cae6eecec2017f35b41d14",
+  "parent_order_sha256": "235c67636ce7611c74ed762152c022e5033b6f3ca0921ffdbfdfb9a6a7809807",
+  "children": [
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_PERPLEXITY_COMPUTER_R10R29_CROSS_VALIDATION_RECEIPT_20261011_R0.md",
+      "bytes": 5792,
+      "sha256": "b695a5e876465a292b5ba4d9500e8fd69a3d30e53915c1e127c4a5edfbff069b",
+      "git_blob_sha1": "fdc96e8057e3077dc45c080d377dbd32b7629cc9"
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_AXIOM_R10R29_EXTERNAL_CROSSVALIDATION_ADJUDICATION_20261011_R0.md",
+      "bytes": 4331,
+      "sha256": "86560a31439780b8e8cba92889192cbe483643cd74e0b4ec7b074e54bc386eb8",
+      "git_blob_sha1": "2a44dd80bc1c07084003afb634465751103f895a"
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_AXIOM_R10R29_CROSSVALIDATION_SOURCE_LEDGER_20261011_R0.json",
+      "bytes": 2206,
+      "sha256": "1949f1a9ef9b9cb0eb2a7a8901cc8b56798a684a6315bc3bef17a6434d3dac1d",
+      "git_blob_sha1": "599a3b631d1864bd4eb72180e6ff6c78da136ff0"
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/README.md",
+      "bytes": 922,
+      "sha256": "78cf30f77fa89d8326321b34b7ccfbc5be3d7bbc27402e504b860abec0d3cf0b",
+      "git_blob_sha1": "2e7ee672095f105c3ae1335cfd4daf79e96aca14"
+    }
+  ],
+  "original_pdf_zip_published": false,
+  "manifest_self_hash": "EXCLUDED_DETACHED",
+  "cursor_r29_executed": false
+}
