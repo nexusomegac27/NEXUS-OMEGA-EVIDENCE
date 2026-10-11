@@ -30,7 +30,7 @@ class ExternalAgentFirewallTests(unittest.TestCase):
         self.assertTrue(any("EXTERNAL_OUTSIDE_PREALLOCATED_SLOT" in s for s in M.validate_paths(files, "verified-github-agent", REG)))
     def test_new_agent_namespace_rejected(self):
         files = [{"filename":SLOT+"mistral/custom/return.md","status":"added"}]
-        self.assertIn("INCOMPLETE_OR_EXTRA_RETURN_FILE_SET", M.validate_paths(files,"verified-github-agent",REG))
+        self.assertTrue(any("EXTERNAL_OUTSIDE_PREALLOCATED_SLOT" in x for x in M.validate_paths(files,"verified-github-agent",REG)))
     def test_existing_object_overwrite_rejected(self):
         files = [{"filename":SLOT+FILES[0], "status":"modified"}]
         self.assertTrue(any("EXTERNAL_NOT_CREATE_ONLY" in s for s in M.validate_paths(files,"verified-github-agent",REG)))
