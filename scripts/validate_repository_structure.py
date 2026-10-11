@@ -31,6 +31,13 @@ REQUIRED_CONTRACTS = {
     "docs/architecture/REPOSITORY_STRUCTURE.json",
     "docs/governance/REPOSITORY_ORDER_POLICY.md",
     "docs/governance/REPOSITORY_PATH_RULES.json",
+    "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
+    "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json",
+    "schema/external-agent-return-r27e-v1.schema.json",
+    "scripts/validate_external_agent_pr.py",
+    "tests/test_external_agent_pr.py",
+    ".github/workflows/validate-external-agent-pr.yml",
+    "research/r27/www-extern-wake-isolation-20261011/returns/README.md",
 }
 HISTORICAL_PATHS = {
     "requirements-a83-test.txt",
@@ -93,6 +100,29 @@ def validate(root: Path) -> list[str]:
         errors.append("STRUCTURE_CONTRACT_ROOT_DIRS_MISMATCH")
     if contract.get("order_law") != "REPOSITORY_ORDER_LAW_V1":
         errors.append("STRUCTURE_CONTRACT_ORDER_LAW_MISMATCH")
+
+    # R27-E: preallocated return slots must be inside the canonical research tree.
+    registry_file = root / "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json"
+    try:
+        registry = json.loads(registry_file.read_text(encoding="utf-8"))
+        if registry.get("default") != "DENY" or not isinstance(registry.get("assignments"), list):
+            errors.append("EXTERNAL_AGENT_REGISTRY_NOT_FAIL_CLOSED")
+        slot_paths = set()
+        for entry in registry.get("assignments", []):
+            r = entry.get("root", "")
+            p = entry.get("returns_path", "")
+            if not r.startswith("research/") or p != r + "/returns/" or p in slot_paths:
+                errors.append("EXTERNAL_AGENT_SLOT_PATH_INVALID:" + str(p))
+            slot_paths.add(p)
+            if not (root / p / "README.md").is_file():
+                errors.append("EXTERNAL_AGENT_SLOT_README_MISSING:" + str(p))
+            filenames = entry.get("filenames", [])
+            if len(filenames) != len(set(filenames)) or len(filenames) != 7 or any(
+                "/" in n or "\\" in n or not n.startswith("R27-") for n in filenames
+            ):
+                errors.append("EXTERNAL_AGENT_SLOT_FILENAMES_INVALID:" + str(p))
+    except (OSError, ValueError, json.JSONDecodeError, TypeError):
+        errors.append("EXTERNAL_AGENT_REGISTRY_UNREADABLE")
 
     errors.extend(validate_r5_lane_readmes(root / "research" / "r5"))
 
