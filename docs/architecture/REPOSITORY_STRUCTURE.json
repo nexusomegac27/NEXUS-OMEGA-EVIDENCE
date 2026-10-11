@@ -121,6 +121,15 @@
       "receiver": "NEXUS_OPERATOR_AXIOM",
       "inbox_issue": 93,
       "external_write_authority": false
+    },
+    "r10r29-crossvalidation-20261011": {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011",
+      "state": "C1_PUBLIC_SAFE_SOURCE_RECEIPT_NOT_CURSOR_SCIENCE_RETURN",
+      "original_repo_main": "990298a07dba30d8c1cae6eecec2017f35b41d14",
+      "parent_order_sha256": "235c67636ce7611c74ed762152c022e5033b6f3ca0921ffdbfdfb9a6a7809807",
+      "intake_class": "NEXUS_OPERATOR_AXIOM_OWNER_BRIDGE",
+      "original_binaries_on_github": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -176,7 +185,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.3",
+  "version": "1.7.4",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
