@@ -14,7 +14,7 @@ CANONICAL_REPO = nexusomegac27/NEXUS-OMEGA-EVIDENCE
 CANONICAL_REPOSITORY_ORDER = REPOSITORY_ORDER_LAW_V1
 AUTHORITATIVE_SLOT_REGISTRY = docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json
 R27F_RETURN_ROOT = research/r27/www-extern-wake-isolation-20261011/returns/
-RETURN_SLOT = PREALLOCATED_BY_NEXUS_IN_THIS_ORDER_NOT_ACTIVE_FOR_EXTERNAL_WRITE
+RETURN_SLOT = PROPOSED_NOT_REGISTERED_IN_CURRENT_WRITE_SLOTS_V1
 NONOWNER_GITHUB_AUTHORITY = DENY_UNTIL_DISTINCT_VERIFIED_PRINCIPAL_AND_RULESET
 NO_NEW_FOLDER = YES
 NO_NEW_CURSOR_WORKER = YES
@@ -110,7 +110,7 @@ Keine unendlichen Agenten-Ordner, parallele Summary-Dashboards, Rohgesprächsdum
 
 ## 10 · Exakte Output-Regeln — R27-F in vorhandener Research-Wurzel
 
-Vor jeder Schreibaktion **aktuelle** `EXTERNAL_AGENT_WRITE_SLOTS_V1.json` lesen. R27-F wird von NEXUS gesondert **vorab angelegt** (nicht durch Grok autonom) und umfasst sieben vorgegebene Dateien **unter dem bereits existierenden Ordner**:
+Vor jeder Schreibaktion **aktuelle** `EXTERNAL_AGENT_WRITE_SLOTS_V1.json` lesen. R27-F schlägt sieben weitere Dateinamen **im bereits existierenden Ordner** vor. **Sie sind derzeit weder in der Besitzer-Registry registriert noch zum Schreiben freigegeben**. Die NEXUS-Instanz muss diese exakt bezeichneten Namen zuerst durch einen separat genehmigten Registry-/Validator-Änderungsschritt aktivieren; bis dahin nur wissenschaftliche Übergabe per AXIOM-Bridge:
 
 ```text
 research/r27/www-extern-wake-isolation-20261011/returns/
@@ -127,7 +127,7 @@ research/r27/www-extern-wake-isolation-20261011/returns/
 
 Jedes Markdown im ersten Abschnitt: `OBJECT`, `PARENT`, `CLAIM_CEILING=C1_DESCRIPTIVE_ONLY`, `RUNTIME=NOT_AUTHORIZED`, `NEW_WORKER=NO`. Das `parent_order_sha256` des **R27-F-Manifestvertrags** verweist auf die tatsächliche SHA-256 **dieses R27-F-Auftrags**, die nach GitHub-Source-Readback in die NEXUS-kontrollierte Registry eingetragen wird. Der historische R27-E-Slot behält unverändert seinen bisherigen Cursor-R27-Parent. Die R27-F-Rückgabe bindet auch den R27-E-Vorgängerhash gesondert. Keine Selbsthash-Zirkularität.
 
-**DIREKTES GITHUB-WRITE = DENY** solange kein verifizierter Agenten-Principal registriert und das R27F-Assignment `ACTIVE_AUTHORIZED` ist; heutiger Status `PREALLOCATED_NOT_YET_EXTERNAL_AUTHORIZED`. Dann Outputs ausschließlich als Dateien an den Operator/AXIOM zur ausdrücklich als Bridge benannten API-Übergabe; keine Selbstbehauptung `AGENT_SEND=PASS`. Keine sieben unregistrierten lokalen Dateien als kanonischen GitHub-Return behaupten, kein freier neuer Unterordner, keine Überschreibung eines bisherigen R27-E-Returns.
+**DIREKTES GITHUB-WRITE = DENY** solange kein verifizierter Agenten-Principal registriert und das R27F-Assignment `ACTIVE_AUTHORIZED` ist; heutiger R27-F-Status `PROPOSED_NOT_REGISTERED`; der R27-E-Slot bleibt `PREALLOCATED_NOT_YET_EXTERNAL_AUTHORIZED`. Dann Outputs ausschließlich als Dateien an den Operator/AXIOM zur ausdrücklich als Bridge benannten API-Übergabe; keine Selbstbehauptung `AGENT_SEND=PASS`. Keine sieben unregistrierten lokalen Dateien als kanonischen GitHub-Return behaupten, kein freier neuer Unterordner, keine Überschreibung eines bisherigen R27-E-Returns.
 
 ## 11 · Unabhängige wissenschaftliche Bewertung und Stop-Law
 
