@@ -1,0 +1,33 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_DETACHED_MANIFEST_20261011_R0",
+  "schema_version": "1.0.0",
+  "source_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "self_hash_excluded": true,
+  "children": [
+    {
+      "filename": "NEXUS_OMEGA_AXIOM_R10R29_SOURCE_INTAKE_LEDGER_20261011_R0.json",
+      "bytes": 2391,
+      "sha256": "8b14c48a336df50bc6025761a8b122ba10149057c35ba4bf7e57deaa44905561",
+      "git_blob_sha1": "bc9a340efb7a740bba3bdae95873b1e2348aff63"
+    },
+    {
+      "filename": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_OPEN_MIND_CROSS_DOMAIN_FALSIFICATION_MAXI_ORDER_20261011_R0.md",
+      "bytes": 18205,
+      "sha256": "235c67636ce7611c74ed762152c022e5033b6f3ca0921ffdbfdfb9a6a7809807",
+      "git_blob_sha1": "671456fe630ed5c894945c6771d6ecd327691553"
+    },
+    {
+      "filename": "NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_TASK_ANCHOR_20261011_R0.json",
+      "bytes": 5740,
+      "sha256": "a8156c0e1d786ae8f1ba72993df0cc9ad5c4d60de546f8bb71cf7cb628e5ca70",
+      "git_blob_sha1": "faed2d3fbddc1e603592478469dd302968b59440"
+    },
+    {
+      "filename": "README.md",
+      "bytes": 1539,
+      "sha256": "72a8fc69d92016fbf24aa01852b2c1d90658926ab5b24f9a7c2a95a74bed2ac2",
+      "git_blob_sha1": "48168a38887c7a9559a6bd38438f3c844f405f74"
+    }
+  ]
+}
