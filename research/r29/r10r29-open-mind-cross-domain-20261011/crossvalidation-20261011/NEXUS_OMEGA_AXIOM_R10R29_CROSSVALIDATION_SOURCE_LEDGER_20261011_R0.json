@@ -1,0 +1,67 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10R29_CROSSVALIDATION_SOURCE_LEDGER_20261011_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "transport": "OPERATOR_TO_AXIOM_BRIDGE",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "parent_main": "990298a07dba30d8c1cae6eecec2017f35b41d14",
+  "parent_order_sha256": "235c67636ce7611c74ed762152c022e5033b6f3ca0921ffdbfdfb9a6a7809807",
+  "file_inventory": [
+    {
+      "name": "R10R29~1.PDF",
+      "bytes": 6434,
+      "sha256": "a70b3f7ccb519d1bfa47d7e2843cec1da34e5e8f73f5b00c40c6d98c8818cc8a",
+      "storage_status": "BINARY_NOT_GITHUB_PUBLISHED"
+    },
+    {
+      "name": "R10R29~1.MD",
+      "bytes": 5792,
+      "sha256": "b695a5e876465a292b5ba4d9500e8fd69a3d30e53915c1e127c4a5edfbff069b",
+      "storage_status": "EXACT_TEXT_GITHUB_PUBLISHED"
+    },
+    {
+      "name": "NEXUS_~1.PDF",
+      "bytes": 4350,
+      "sha256": "c410a14e6c75971209c8822108ddd1e9681bb55d3a3b36a70648d99d2bd8ff71",
+      "storage_status": "BINARY_NOT_GITHUB_PUBLISHED"
+    },
+    {
+      "name": "NEXUS_~1(20261011-214911).TXT",
+      "bytes": 5559,
+      "sha256": "106e8f980a261caeec8e436eb507f73610f9f42a558fd124b3ae14affd83e92f",
+      "storage_status": "BINARY_NOT_GITHUB_PUBLISHED_TEXT_ONLY_DERIVATIVE"
+    },
+    {
+      "name": "R10R29~1.ZIP",
+      "bytes": 512536,
+      "sha256": "c1b1c62e1735ea2e6b2ba229d15b9dc9588cab19491852e993e8ad1181bdc4b4",
+      "storage_status": "BINARY_NOT_GITHUB_PUBLISHED"
+    }
+  ],
+  "archive": {
+    "entries": 14,
+    "manifest_entries": 12,
+    "independent_sha256_matches": 12,
+    "zip_crc": "PASS",
+    "paths": "NO_DUPLICATE_OR_TRAVERSAL",
+    "pdf_identity": "BYTE_MATCH",
+    "text_identity": "BYTE_MATCH"
+  },
+  "findings": [
+    "F1_EXPONENTIAL_QUALITY_ONLY_HYPOTHESIS",
+    "F2_ANCHOR_FORMAT_ONLY",
+    "F3_TIMEZONE_PROVENANCE_AMBIGUITY",
+    "F4_FITZ_ACTUAL_PDFPLUMBER_PLANNED",
+    "F5_GITHUB_PAGES_NOT_HOSTINGER",
+    "F6_AUTHOR_CHAIN_MISSING",
+    "F7_UNREGISTERED_EXTERNAL_ACTOR"
+  ],
+  "flags": {
+    "cursor_execution_confirmed": false,
+    "l3_selected": false,
+    "l3_executed": false,
+    "nf05_nf06": "REVISIONS_REQUIRED",
+    "node_reset": false,
+    "hostinger_write": false,
+    "scientific_promotion": false
+  }
+}
