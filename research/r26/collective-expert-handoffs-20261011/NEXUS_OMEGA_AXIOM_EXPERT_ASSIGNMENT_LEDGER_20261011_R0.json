@@ -1,0 +1,162 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_EXPERT_ASSIGNMENT_LEDGER_20261011_R0",
+  "schema_version": "1.0.0",
+  "date_utc": "2026-10-11",
+  "owner": "NEXUS_OPERATOR_AXIOM",
+  "source_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "source_main_commit": "c88da5873b5897585ac34e4066dcaabd963fdb03",
+  "source_pr92": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/92",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "new_runtime_authority": false,
+  "git_direct_external_authorized": false,
+  "current_external_actor_allowlist_empty": true,
+  "master_order": {
+    "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_MAXI_ORDER_20261011_R0.md",
+    "bytes": 13150,
+    "sha256": "4a4a2770622ee46dc394d84f32d693a05531896efb4213e7d01c8fc3873d82c5",
+    "git_blob_sha1": "35ce20538a768dd43fc8593660cf9767230a8058"
+  },
+  "inbox_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+  "assignments": [
+    {
+      "assignment_id": "R26-P26-20261011-GROK",
+      "expert_id": "GROK",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_GROK_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 5798,
+        "sha256": "54d272906cd5f1695fbfc023d0ad45f0b0f561b40c1e158d366615a31f4d8a33",
+        "git_blob_sha1": "32203e3a7a1ea5248d3c40f5c8eca8784a501ae0"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-PERPLEXITY",
+      "expert_id": "PERPLEXITY",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_PERPLEXITY_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 6099,
+        "sha256": "91d0c075b190a2f178e69492856c716c1f0c2c051511767df5da958cb9c3bd41",
+        "git_blob_sha1": "53e29740ac7faa646b318dd6eadeb6c32384d4ef"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-MISTRAL_VIBE",
+      "expert_id": "MISTRAL_VIBE",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_MISTRAL_VIBE_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 6058,
+        "sha256": "e345aa7e97499b02a1a062a5835c0b3c69c87ac0d022ef5833a941f1d489a8a9",
+        "git_blob_sha1": "49b1ed8594ee57eeb256a7fcf2295bc7c1372759"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-QWEN",
+      "expert_id": "QWEN",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_QWEN_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 6124,
+        "sha256": "8a200f38814639dc318b929e45e3018ea2fbe6553345a4ab462555f1aaeaa6fc",
+        "git_blob_sha1": "9c041b5e4fae807c251f5ea41169b212c6b36702"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-GEMINI",
+      "expert_id": "GEMINI",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_GEMINI_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 5831,
+        "sha256": "86a8ccd01e1f54dad20727dc13a7a2549f7bb51dadb896c850400203063231b1",
+        "git_blob_sha1": "5561516123a53cc2fb193183b75cbaa02d9f0b17"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-MANUS",
+      "expert_id": "MANUS",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_MANUS_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 6077,
+        "sha256": "17c5f1905357dccbe0b03bdac465d0935321bf2bf0c97f8e0a9b559c97884e98",
+        "git_blob_sha1": "17eede2d88a9287d498f827fea1c3c6b93ff3bfd"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    },
+    {
+      "assignment_id": "R26-P26-20261011-DEEPSEEK",
+      "expert_id": "DEEPSEEK",
+      "order": {
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_DEEPSEEK_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 5938,
+        "sha256": "6154ec442cb2c7c1e82be876a4f524414abca98bb9d60d8b4123dba3ee05b8c5",
+        "git_blob_sha1": "2f82482dcb284ae06e108458c53f2538372e1038"
+      },
+      "return_status": "NOT_RECEIVED",
+      "external_write_slot": "NOT_ALLOCATED",
+      "external_github_actor": "NOT_REGISTERED",
+      "permitted_transport": [
+        "REGISTERED_ACTOR_PR_ONLY_AFTER_NEXUS_AUTHORIZATION",
+        "OPERATOR_TO_AXIOM_BRIDGE"
+      ],
+      "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+      "axiom_receive_ack": "PENDING"
+    }
+  ],
+  "limitations": [
+    "Directory R27 is archive intake of R26/P26 not independent R27 execution.",
+    "Order publication is not proof of delivery or agent launch.",
+    "This ledger is owner-created order metadata, never an external write-slot authorization.",
+    "Separate R27E seven-file slot must not be reused.",
+    "Unkeyed hashes do not authenticate experts."
+  ]
+}
