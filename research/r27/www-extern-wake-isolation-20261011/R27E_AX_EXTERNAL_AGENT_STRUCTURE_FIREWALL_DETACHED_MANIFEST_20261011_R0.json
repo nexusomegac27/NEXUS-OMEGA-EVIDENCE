@@ -11,7 +11,7 @@
   "external_github_actors_registered": 0,
   "branch_ruleset_required_check": "NOT_ENFORCED_OR_NOT_OBSERVED",
   "original_deepseek_paste_appropriated_as_idea_only": true,
-  "maxi_order_sha256": "10e6ccf0516359ab0bc9590631da46697d1e5f0bd8331bb893ca9bf7fa75e776",
+  "maxi_order_sha256": "86bae5b6e00d640a5c579ca1912410a2b8699b540add52aba741dd71c0e9a221",
   "files_count": 17,
   "children": [
     {
@@ -52,15 +52,15 @@
     },
     {
       "path": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
-      "bytes": 10121,
-      "sha256": "67403dbcb9486b868df1b44605b4cd8c644a7924c4945378bf19c413eb1e014d",
-      "git_blob_sha1": "f659048d53972eac3ab10d65a73cf7d3eb63111f"
+      "bytes": 10418,
+      "sha256": "8107d97e3c779fd03d8634393e75765b1795318c7efb8aad203e1fbc0d55f10e",
+      "git_blob_sha1": "5af1bada7771d7021e95c1865dc33e378e6a39ac"
     },
     {
       "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXTERNAL_AGENTS_R27E_MAX_ADVERSARIAL_STRUCTURAL_GOVERNANCE_ORDER_20261011_R0.md",
-      "bytes": 21469,
-      "sha256": "10e6ccf0516359ab0bc9590631da46697d1e5f0bd8331bb893ca9bf7fa75e776",
-      "git_blob_sha1": "33470b3f71a29ff3077a794a04cf27c7b7ee5795"
+      "bytes": 21471,
+      "sha256": "86bae5b6e00d640a5c579ca1912410a2b8699b540add52aba741dd71c0e9a221",
+      "git_blob_sha1": "8879ae199bc35903a913db52f57a7bc0019c804a"
     },
     {
       "path": "README.md",
@@ -76,9 +76,9 @@
     },
     {
       "path": "docs/architecture/REPOSITORY_STRUCTURE.md",
-      "bytes": 5392,
-      "sha256": "e5a471b2da44e78594204aaaedf03db80105733b62e1d51c81ab7e6187589f0f",
-      "git_blob_sha1": "a2a99c2744ef62bea86baf7d3c4c0f09aff2b061"
+      "bytes": 5562,
+      "sha256": "c717ade1c28197bac68d5ff9213612d0651a8d82804c215420ac6ab3c1281a22",
+      "git_blob_sha1": "c6337a11c91c34e8155ff2d8d0f20ba269172809"
     },
     {
       "path": "docs/architecture/REPOSITORY_STRUCTURE.json",
@@ -117,5 +117,6 @@
       "git_blob_sha1": "f20f930a4d95036d98b3b3beb6de9f21e0bd8c64"
     }
   ],
-  "manifest_selfhash": "DETACHED_RECORDED_IN_GITHUB_RECEIPT_NOT_INSIDE_SELF"
+  "manifest_selfhash": "DETACHED_RECORDED_IN_GITHUB_RECEIPT_NOT_INSIDE_SELF",
+  "branch_ruleset_status": "ACTIVE_21252293_VALIDATE_REQUIRED_CODEOWNER_REVIEW_FALSE_R27E_FIREWALL_NOT_REQUIRED"
 }
