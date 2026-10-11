@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS Omega R27E external agent detached return manifest V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "agent_id",
+    "github_actor",
+    "parent_order_sha256",
+    "claim_ceiling",
+    "runtime",
+    "new_worker",
+    "axiom_ack",
+    "children"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "agent_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]{2,64}$"
+    },
+    "github_actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_order_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "runtime": {
+      "const": "NOT_AUTHORIZED"
+    },
+    "new_worker": {
+      "const": "NO"
+    },
+    "axiom_ack": {
+      "const": "PENDING"
+    },
+    "children": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "filename",
+          "bytes",
+          "sha256",
+          "git_blob_sha1"
+        ],
+        "properties": {
+          "filename": {
+            "type": "string",
+            "pattern": "^R27-0[0-46]_.*_R0\\.(md|json)$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 262144
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "git_blob_sha1": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          }
+        }
+      }
+    }
+  }
+}
