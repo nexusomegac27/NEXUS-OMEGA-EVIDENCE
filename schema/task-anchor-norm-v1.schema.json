@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS OMEGA Task Anchor Norm V1 internal contract",
+  "description": "Operator-owned internal normative task envelope; no DIN certification, runtime/actor authority or persistent model identity asserted",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "object", "norm_id", "norm_class", "din_status", "claim_ceiling", "origin", "delegation", "mission", "continuity", "provenance", "return_contract", "quality_gates"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "object": {"type": "string", "pattern": "^NEXUS_OMEGA_[A-Z0-9_]{5,200}$"},
+    "norm_id": {"const": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1"},
+    "norm_class": {"const": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION"},
+    "din_status": {"const": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED"},
+    "claim_ceiling": {"const": "C1_DESCRIPTIVE_ONLY"},
+    "origin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["operator_authority", "issuer_role", "recipient_role", "verified_github_actor", "predecessor_object", "predecessor_repository", "predecessor_commit", "predecessor_path", "predecessor_bytes", "predecessor_sha256"],
+      "properties": {
+        "operator_authority": {"const": "OPERATOR_GOVERNED_ONLY"},
+        "issuer_role": {"type": "string", "minLength": 2},
+        "recipient_role": {"type": "string", "minLength": 2},
+        "verified_github_actor": {"type": "string", "minLength": 2},
+        "predecessor_object": {"type": "string", "minLength": 8},
+        "predecessor_repository": {"const": "nexusomegac27/NEXUS-OMEGA-EVIDENCE"},
+        "predecessor_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "predecessor_path": {"type": "string", "pattern": "^[A-Za-z0-9_./-]+$", "minLength": 8},
+        "predecessor_bytes": {"type": "integer", "minimum": 1},
+        "predecessor_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "delegation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scope", "allowed_actions", "prohibited_actions", "write_slot", "runtime_authorized", "node_reset_authorized", "claim_promotion_authorized"],
+      "properties": {
+        "scope": {"type": "string", "minLength": 5},
+        "allowed_actions": {"$ref": "#/$defs/strings"},
+        "prohibited_actions": {"$ref": "#/$defs/strings"},
+        "write_slot": {"const": "NOT_ALLOCATED"},
+        "runtime_authorized": {"const": false},
+        "node_reset_authorized": {"const": false},
+        "claim_promotion_authorized": {"const": false}
+      }
+    },
+    "mission": {
+      "type": "object", "additionalProperties": false,
+      "required": ["question", "deliverables", "falsifiers", "acceptance_tests", "pause_conditions", "not_executed"],
+      "properties": {
+        "question": {"type": "string", "minLength": 10},
+        "deliverables": {"$ref": "#/$defs/strings"},
+        "falsifiers": {"$ref": "#/$defs/strings"},
+        "acceptance_tests": {"$ref": "#/$defs/strings"},
+        "pause_conditions": {"$ref": "#/$defs/strings"},
+        "not_executed": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "continuity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["anchor_id", "rebind_mode", "node_reset_prohibited", "history_preserved", "source_bytes_preserved", "observations_preserved", "checkpoints_preserved", "runtime_state_preserved", "drift_triggers", "rebind_procedure", "correction_policy"],
+      "properties": {
+        "anchor_id": {"type": "string", "minLength": 8},
+        "rebind_mode": {"const": "DRIFT_RESET_ONLY"},
+        "node_reset_prohibited": {"const": true},
+        "history_preserved": {"const": true},
+        "source_bytes_preserved": {"const": true},
+        "observations_preserved": {"const": true},
+        "checkpoints_preserved": {"const": true},
+        "runtime_state_preserved": {"const": true},
+        "drift_triggers": {"$ref": "#/$defs/strings"},
+        "rebind_procedure": {"const": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION"},
+        "correction_policy": {"const": "APPEND_ONLY_SUCCESSOR"}
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sources", "missing_source_policy", "copyright_privacy", "independent_rehash_required"],
+      "properties": {
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "missing_source_policy": {"const": "HOLD_SCOPED_NOT_RECONSTRUCT"},
+        "copyright_privacy": {"type": "string", "minLength": 8},
+        "independent_rehash_required": {"const": true}
+      }
+    },
+    "return_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["recipient", "inbox_issue_url", "transport_class", "manifest_schema", "receiver_ack", "scientific_adjudication_separate"],
+      "properties": {
+        "recipient": {"const": "NEXUS_OPERATOR_AXIOM"},
+        "inbox_issue_url": {"const": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93"},
+        "transport_class": {"const": "OPERATOR_TO_AXIOM_BRIDGE"},
+        "manifest_schema": {"const": "schema/expert-hash-handshake-v1.schema.json"},
+        "receiver_ack": {"const": "PENDING_AXIOM_INDEPENDENT_REHASH"},
+        "scientific_adjudication_separate": {"const": true}
+      }
+    },
+    "quality_gates": {
+      "type": "object", "additionalProperties": false,
+      "required": ["functionality_performance", "robustness_stability", "traceability_comprehensibility"],
+      "properties": {
+        "functionality_performance": {"$ref": "#/$defs/strings"},
+        "robustness_stability": {"$ref": "#/$defs/strings"},
+        "traceability_comprehensibility": {"$ref": "#/$defs/strings"}
+      }
+    }
+  },
+  "$defs": {
+    "strings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 3}},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit", "path", "bytes", "sha256", "source_status"],
+      "properties": {
+        "repository": {"const": "nexusomegac27/NEXUS-OMEGA-EVIDENCE"},
+        "commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "path": {"type": "string", "minLength": 8},
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_status": {"enum": ["OPERATOR_REPORTED", "GITHUB_SOURCE_VERIFIED", "AXIOM_BYTES_MATCH"]}
+      }
+    }
+  }
+}
