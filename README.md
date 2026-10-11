@@ -235,3 +235,9 @@ Original documentation is offered under CC BY 4.0. Original validation/tooling c
 ## Security
 
 See `SECURITY.md`. Do not publish credentials, personal data, medical data, private conversations, non-public repository material or unredacted security logs.
+
+## R27-E · External Agent Structural Firewall (C1)
+
+The NEXUS-owned external-agent contract is defined in [docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md](docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md). Only NEXUS provisions return slots; the first preallocated slot is [research/r27/www-extern-wake-isolation-20261011/returns/](research/r27/www-extern-wake-isolation-20261011/returns/). Valid external contributions are **create-only**, limited to exact preapproved filenames and a detached SHA-256 manifest. No external agent may create top-level folders, namespaces, workflows, source-code directories, ZIP dumps or Hostinger mirrors. Machine policy: `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json`; schema: `schema/external-agent-return-r27e-v1.schema.json`; check: `scripts/validate_external_agent_pr.py`, `.github/workflows/validate-external-agent-pr.yml`. Unregistered GitHub identities are denied until approved.
+
+The workflow runs base-branch code only; **a passing workflow is not itself an enforced branch rule**. Required status checks, CODEOWNERS approval and repository write/merge restrictions must be confirmed in GitHub ruleset settings by the Operator. This does not authorize a live WWW broker, privileged internal node, new Cursor worker or scientific promotion.
