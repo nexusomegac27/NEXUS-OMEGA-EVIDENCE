@@ -98,6 +98,22 @@ def slot_map(registry: dict) -> dict:
     return allowed
 
 
+def manifest_path_for_assignment(assignment: dict) -> str:
+    """Select exactly one NEXUS-owned manifest name; never trust a PR-supplied path.
+
+    Allows future owner-preallocated assignments to share an existing returns/
+    directory without weakening R27-E's immutable original manifest contract.
+    """
+    filenames = assignment["filenames"]
+    manifests = [n for n in filenames if n.endswith("_RETURN_MANIFEST_R0.json")]
+    if len(manifests) != 1:
+        raise ValueError("ASSIGNMENT_MUST_HAVE_ONE_MANIFEST")
+    named = assignment.get("manifest_filename", manifests[0])
+    if named != manifests[0]:
+        raise ValueError("ASSIGNMENT_MANIFEST_CONFLICT")
+    return assignment["returns_path"] + named
+
+
 def validate_paths(files: list, actor: str, registry: dict) -> list[str]:
     errors = []
     owner = registry["owner_github_login"]
@@ -172,7 +188,7 @@ def validate_return_contents(files: list, event: dict, registry: dict, token: st
         errors.append("TOTAL_RETURN_BYTES_EXCEEDED")
     assignment = slot_map(registry)[files[0]["filename"]]
     prefix = assignment["returns_path"]
-    manifest_path = prefix + "R27-05_RETURN_MANIFEST_R0.json"
+    manifest_path = manifest_path_for_assignment(assignment)
     manifest = strict_json(path_to_data[manifest_path])
     required = {"schema_version", "agent_id", "github_actor", "parent_order_sha256",
                 "claim_ceiling", "runtime", "new_worker", "axiom_ack", "children"}
