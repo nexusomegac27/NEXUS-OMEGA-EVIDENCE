@@ -107,6 +107,20 @@
       "state": "OWNER_ISSUED_ORDERS_NOT_EXTERNAL_WRITE_AUTHORITY",
       "source_commit": "c88da5873b5897585ac34e4066dcaabd963fdb03",
       "inbox_issue": 93
+    },
+    "r10r29-open-mind-cross-domain-20261011": {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011",
+      "state": "OWNER_TASK_ORDER_C1_PUBLICATION_NOT_CURSOR_EXECUTION",
+      "source_predecessor_commit": "ae543022dce52b45e85b64a48bc1c93357b7522f",
+      "predecessor_merged": false,
+      "method_donor_evidence": "BTCD_BTMA_REPORT_LEVEL_ONLY",
+      "task_anchor": "schema/task-anchor-norm-v1.schema.json",
+      "l3_pilot_selected": false,
+      "l3_pilot_executed": false,
+      "prereg_nf05_nf06": "REVISIONS_REQUIRED",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93,
+      "external_write_authority": false
     }
   },
   "research_lane_contract": {
@@ -162,7 +176,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.2",
+  "version": "1.7.3",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
