@@ -162,7 +162,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.1",
+  "version": "1.7.2",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
@@ -190,5 +190,23 @@
     "source_order_dir": "research/r26/collective-expert-handoffs-20261011",
     "science_ceiling": "C1_DESCRIPTIVE_ONLY",
     "scope": "ORDER_AND_BYTE_ONLY_NOT_RUNTIME_OR_SCIENCE_APPROVAL"
+  },
+  "task_anchor_norm_v1": {
+    "name": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+    "status": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION_NOT_DIN_CERTIFIED",
+    "policy": "docs/governance/NEXUS_OMEGA_TASK_ANCHOR_NORM_V1.md",
+    "source_adjudication": "docs/governance/NEXUS_OMEGA_DEEPSEEK_TASK_ANCHOR_ADJUDICATION_20261011_R0.md",
+    "schema": "schema/task-anchor-norm-v1.schema.json",
+    "validator": "scripts/validate_task_anchor_norm_v1.py",
+    "tests": "tests/test_task_anchor_norm_v1.py",
+    "example": "examples/task-anchor-v1.example.json",
+    "semantics": "DRIFT_RESET_ONLY_NONDESTRUCTIVE",
+    "node_reset_authorized": false,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "scope": "NEW_SUBSTANTIAL_ORDERS_ONLY_PROSPECTIVE",
+    "external_agent_registry": "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json",
+    "external_actor_policy": "DENY_UNTIL_REGISTERED",
+    "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "authority": "OPERATOR_GOVERNED_ONLY"
   }
 }
