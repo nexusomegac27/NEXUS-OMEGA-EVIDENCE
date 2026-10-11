@@ -1,7 +1,7 @@
 {
   "object": "NEXUS_OMEGA_EXTERNAL_AGENT_WRITE_SLOTS_V1",
   "schema_version": "1.0.0",
-  "status": "C1_STRUCTURE_CONTRACT_PROPOSED_FOR_MERGE",
+  "status": "C1_OPERATOR_PREALLOCATED_SLOTS_EXTERNAL_ACTORS_NOT_AUTHORIZED",
   "authority": "NEXUS_OPERATOR_GOVERNED_ONLY",
   "default": "DENY",
   "owner_github_login": "nexusomegac27",
