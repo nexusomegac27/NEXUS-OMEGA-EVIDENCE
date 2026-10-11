@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/main/research/r26/living-node-trigger-fabric-v1-20261011/EVENT_ENVELOPE_V1.schema.json",
+  "title": "NEXUS OMEGA Fabric Event Envelope V1 - DESIGN ONLY",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "expires_at",
+    "origin",
+    "actor",
+    "trust_level",
+    "risk_tier",
+    "requested_capability",
+    "source",
+    "idempotency_key",
+    "correlation_id",
+    "policy_version",
+    "payload_ref",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "event_type": {
+      "enum": [
+        "PUBLIC_RESEARCH_INTENT_SUBMITTED",
+        "GITHUB_RETURN_SUBMITTED",
+        "REVIEW_ADJUDICATION_READY",
+        "SCIENTIFIC_CLAIM_RETRACTED",
+        "OPERATOR_APPROVAL_ISSUED",
+        "PUBLICATION_READY_C1",
+        "NODE_HEALTH_CHANGED",
+        "NODE_EXECUTION_RECEIPT",
+        "PUBLICATION_B2_PROVED",
+        "PUBLICATION_B3_PROVED"
+      ]
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "origin": {
+      "enum": [
+        "WWW_PUBLIC",
+        "GITHUB_WEBHOOK",
+        "AUTHORIZED_AGENT",
+        "OPERATOR_CONTROL",
+        "INTERNAL_NODE"
+      ]
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "principal_id",
+        "principal_kind"
+      ],
+      "properties": {
+        "principal_id": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "principal_kind": {
+          "enum": [
+            "ANONYMOUS_PUBLIC",
+            "AUTHENTICATED_USER",
+            "GITHUB_APP_INSTALLATION",
+            "EXTERNAL_AGENT",
+            "INTERNAL_NODE",
+            "OPERATOR"
+          ]
+        },
+        "credential_ref": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Server-side opaque identifier, NEVER a bearer token"
+        }
+      }
+    },
+    "trust_level": {
+      "enum": [
+        "PUBLIC_UNTRUSTED",
+        "SIGNED_TRANSPORT",
+        "AUTHENTICATED_SCOPED",
+        "OPERATOR_AUTHENTICATED"
+      ]
+    },
+    "risk_tier": {
+      "enum": [
+        "L0_READ",
+        "L1_PUBLIC_SUBMIT",
+        "L2_RESEARCH",
+        "L3_REVERSIBLE_C1_PUBLISH",
+        "L4_PRIVILEGED_WRITE",
+        "L5_RESTRICTED"
+      ]
+    },
+    "requested_capability": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{1,79}$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_kind"
+      ],
+      "properties": {
+        "source_kind": {
+          "enum": [
+            "PUBLIC_INTENT",
+            "GITHUB_IMMUTABLE",
+            "OPERATOR_APPROVED",
+            "INTERNAL_TELEMETRY"
+          ]
+        },
+        "repo": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "path": {
+          "type": "string",
+          "maxLength": 400,
+          "pattern": "^(?!/)(?!.*\\.\\.)(?!.*\\\\).+$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "github_delivery_id": {
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 160
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128
+    },
+    "causation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "payload_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "ref"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "IMMUTABLE_SOURCE",
+            "PRIVATE_INBOX_RECORD",
+            "NO_PAYLOAD"
+          ]
+        },
+        "ref": {
+          "type": "string",
+          "maxLength": 400,
+          "description": "A reference, NOT executable instructions or raw confidential text"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "approval_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "action_id": {
+      "type": "string",
+      "maxLength": 160,
+      "description": "Idempotency key for an authorized side effect; generated by broker"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      },
+      "maxProperties": 12
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "origin": {
+            "const": "GITHUB_WEBHOOK"
+          }
+        },
+        "required": [
+          "origin"
+        ]
+      },
+      "then": {
+        "properties": {
+          "source": {
+            "required": [
+              "source_kind",
+              "repo",
+              "commit_sha",
+              "path",
+              "content_sha256",
+              "github_delivery_id"
+            ],
+            "properties": {
+              "source_kind": {
+                "const": "GITHUB_IMMUTABLE"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "risk_tier": {
+            "enum": [
+              "L4_PRIVILEGED_WRITE",
+              "L5_RESTRICTED"
+            ]
+          }
+        },
+        "required": [
+          "risk_tier"
+        ]
+      },
+      "then": {
+        "required": [
+          "approval_ref"
+        ]
+      }
+    }
+  ],
+  "description": "Structure only; JSON Schema is NOT transport authentication, permission approval, or successful execution. Signature verification and PDP MUST be separate."
+}
