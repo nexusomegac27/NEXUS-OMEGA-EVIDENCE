@@ -67,7 +67,7 @@ def verify(manifest_bytes,root,approved_prefix,expected_order_sha):
         if root not in resolved.parents: raise ValueError("ESCAPED_ROOT")
         b=resolved.read_bytes()
         if len(b)!=n or hashlib.sha256(b).hexdigest()!=child["sha256"]: raise ValueError("BYTES_SHA256_MISMATCH:"+child["path"])
-        blob=hashlib.sha1(b"blob "+str(len(b)).encode("ascii")+b"\\x00"+b).hexdigest()
+        blob=hashlib.sha1(b"blob "+str(len(b)).encode("ascii")+bytes([0])+b).hexdigest()
         if blob!=child["git_blob_sha1"]: raise ValueError("GIT_BLOB_MISMATCH:"+child["path"])
         total+=n
         if total>MAX_TOTAL: raise ValueError("PACKAGE_TOO_LARGE")
