@@ -1,0 +1,43 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_NODE_C1_CONTINUOUS_ADAPTATION_20261012_R0",
+  "format": "DETACHED_MANIFEST_V1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "children": [
+    {
+      "path": "ALPHA_NODE_C1_CONTINUOUS_SELF_MODIFICATION_R0.md",
+      "bytes": 11207,
+      "sha256": "91cfcc7b0de363f82ecd94d3258c1e32a025a4954890ef1ae6df8bc7a2a1a015",
+      "git_blob_sha1": "f8adcf6df22bba526c17dbff72b7ad494b42c63e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1742,
+      "sha256": "cc1936cc10457508aff37c0246d001042ee7e79eb7e33622b902675848c7826a",
+      "git_blob_sha1": "8fb01441ab3f3880bb31f6ba534e3fef4744fb81"
+    },
+    {
+      "path": "alpha_c1_evidence_reducer.py",
+      "bytes": 3463,
+      "sha256": "0c9c354e1dc671e84e881fa4a4759fa53cc38845b0817ed638f7fdcf25aa6eec",
+      "git_blob_sha1": "13f2a0e74473a16156c659f2d176f8a921ade565"
+    },
+    {
+      "path": "example_material.json",
+      "bytes": 215,
+      "sha256": "f45206f7643c8c2c7eefb2110a84a003b8fda97acfb3e80ee4a741513b80ecec",
+      "git_blob_sha1": "3f73993945b5c67166256d557f4bbda37efaadfb"
+    },
+    {
+      "path": "example_material.txt",
+      "bytes": 19,
+      "sha256": "f431d7bc1454d3d5987d290c40e3ad36c3f67714342e6c7c653319689466b4d8",
+      "git_blob_sha1": "fc3d813cbac42de6d132607dfc698f6f60b58242"
+    },
+    {
+      "path": "test_alpha_c1_evidence_reducer.py",
+      "bytes": 2975,
+      "sha256": "7626de65764d34999178ef32adb039bd1c6c899fb4e7b6166b985e104040d2dd",
+      "git_blob_sha1": "124a9fd159bed6173c9e801d9c877790b614681d"
+    }
+  ]
+}
