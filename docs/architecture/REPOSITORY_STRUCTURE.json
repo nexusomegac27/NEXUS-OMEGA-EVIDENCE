@@ -191,6 +191,18 @@
       "original_sky_homepage_overwritten": false,
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
       "mount": "research/website/research-catalog-clarity-20261012/SITE_EXISTING_RESEARCH_CATALOG_MOUNT.txt"
+    },
+    "gotham-oss-node-prevalidation-20261012": {
+      "path": "research/architecture/gotham-open-components-c1-prevalidation-20261012",
+      "state": "PASS_WITH_CAVEATS_C1_RESEARCH_PREVALIDATION_ONLY",
+      "candidate_registry": "NEXUS_OMEGA_GOTHAM_OSS_NODE_CANDIDATE_REGISTRY_20261012_R0.json",
+      "component_count": 14,
+      "source_license_provenance": "PRIMARY_VENDOR_URL_LEVEL_NOT_REHASHED_LIBRARY_BYTES",
+      "node_installations": 0,
+      "gotham_product_integration": false,
+      "privacy_person_identity_resolution": false,
+      "r19_changes": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -246,7 +258,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.10",
+  "version": "1.7.11",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
