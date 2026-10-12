@@ -1,5 +1,5 @@
 # NEXUS OMEGA · GitHub↔NEXUS Security & Science Interface Gate V1
-2026-10-12 · SPDX-License-Identifier: MIT
+2026-10-12 · SPDX-License-Identifier: Apache-2.0
 
 ```text
 OBJECT = NEXUS_OMEGA_GITHUB_NEXUS_INTERFACE_GATE_C1_20261012_R0
