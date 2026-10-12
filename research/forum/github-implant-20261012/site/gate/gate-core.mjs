@@ -1,4 +1,4 @@
-/* NEXUS OMEGA · GitHub↔WWW Security + Science Gate · SPDX-License-Identifier: MIT */
+/* NEXUS OMEGA · GitHub↔WWW Security + Science Gate · SPDX-License-Identifier: Apache-2.0 */
 export const CONTRACT = Object.freeze({
   repository:"nexusomegac27/NEXUS-OMEGA-EVIDENCE",
   sourceRoot:"research/forum/github-implant-20261012/site/",
