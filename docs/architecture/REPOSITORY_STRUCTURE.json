@@ -203,6 +203,20 @@
       "privacy_person_identity_resolution": false,
       "r19_changes": false,
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "nscf-r32-r18-seed-r33-legal-independent-intake-20261012": {
+      "path": "research/communication/nscf-r32-r18-seed-r33-legal-20261012",
+      "state": "PASS_WITH_MAJOR_CAVEATS_C1_INDEPENDENT_REPLAY_AND_SOURCE_SCOPED_HOLD",
+      "source_count": 12,
+      "independent_tests": "R32_20_OF_20_R33_R1_9_OF_9_R33_V2_27_PASS_1_SKIP_OF_28",
+      "r18_seed": "STOP_SCOPED_F01_SOURCE_HASH_MISMATCH_AND_MISSING_CHILDREN_DOSSIER_REPORTED",
+      "r32_semantic_fidelity": "NOT_MEASURED",
+      "r33_real_legal_compliance": "NOT_ESTABLISHED",
+      "current_r18_clean_room_lane_overwritten": false,
+      "raw_source_archives_publicly_published": false,
+      "github_www_parity_verified": false,
+      "cursor_new_action": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -258,7 +272,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.11",
+  "version": "1.7.12",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
