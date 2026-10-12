@@ -166,6 +166,18 @@
       "public_raw_archive": false,
       "scoped_replay": "4_OF_4_PASS",
       "module_r17_terminal": false
+    },
+    "forum-github-implant-live-20261012": {
+      "path": "research/forum/github-implant-20261012",
+      "state": "C1_WEB_MODULE_SOURCE_IMPLEMENTED_GITHUB_HOSTINGER_DEPLOY_NOT_ESTABLISHED",
+      "site_target": "https://www.nexus-mobile.de/forum/github-implant/",
+      "interface": "OFFICIAL_GITHUB_REST_READONLY",
+      "www_deploy": "NOT_EXECUTED_CAPABILITY_GAP",
+      "public_safe_mirror": "OFFLINE_BUILDER_SOURCE_ONLY_NOT_HOST_DEPLOYED",
+      "source_file_count": 3,
+      "source_license": "MIT_ORIGINAL_FIRST_PARTY",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "governance": "docs/governance/NEXUS_OMEGA_GITHUB_WWW_PARITY_RULE_V1_20261012_R0.md"
     }
   },
   "research_lane_contract": {
@@ -221,7 +233,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.8",
+  "version": "1.7.9",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
