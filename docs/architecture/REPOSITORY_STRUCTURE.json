@@ -130,6 +130,14 @@
       "intake_class": "NEXUS_OPERATOR_AXIOM_OWNER_BRIDGE",
       "original_binaries_on_github": false,
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r18-clean-room-provenance-20261012": {
+      "path": "research/r18/clean-room-provenance-20261012",
+      "state": "C1_SOURCE_BOUND_RESEARCH_ADJUDICATION_PUBLIC_NOT_RUNTIME",
+      "operator_direct_push": true,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "original_report_sha256": "a174f09dc4814ef713be4aef32368fde9421d1037b58ce2a7f937dbc70f4c401",
+      "source_binary_attachments_public_in_repo": false
     }
   },
   "research_lane_contract": {
@@ -185,7 +193,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.4",
+  "version": "1.7.5",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
