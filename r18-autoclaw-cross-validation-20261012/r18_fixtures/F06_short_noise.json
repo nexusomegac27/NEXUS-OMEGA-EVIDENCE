@@ -1,0 +1,15 @@
+{
+  "id": "F06",
+  "length_bin": "≤100",
+  "original": "hey can u remind me to buy milk later thx",
+  "gold_intents": [
+    "set_reminder"
+  ],
+  "domain": "personal",
+  "adversarial": false,
+  "multi_intent": false,
+  "char_len": 41,
+  "word_len": 10,
+  "approx_tokens_cl100k": 10,
+  "sha256": "7be50fb4a6c3b13623a64a41d83b9118f32a51f75a70859623d0a9f1b58790f0"
+}

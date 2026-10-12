@@ -1,0 +1,16 @@
+{
+  "id": "F01",
+  "length_bin": "≤100",
+  "original": "Please schedule a meeting with the design team for next Tuesday at 14:00 to discuss the new dashboard mockups. Confirm availability.",
+  "gold_intents": [
+    "schedule_meeting",
+    "confirm_availability"
+  ],
+  "domain": "calendar",
+  "adversarial": false,
+  "multi_intent": true,
+  "char_len": 132,
+  "word_len": 20,
+  "approx_tokens_cl100k": 33,
+  "sha256": "664808927e91bbb0ab62ee331cff593f0a7e6acc17f3aa694d5c2647e5802d96"
+}
