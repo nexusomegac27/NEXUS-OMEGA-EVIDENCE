@@ -58,7 +58,7 @@
     const ctrl = new AbortController();
     const timeout = setTimeout(() => ctrl.abort(), 11000);
     try {
-      const headers = {Accept:"application/vnd.github+json", "X-GitHub-Api-Version":"2022-11-28"};
+      const headers = {Accept:"application/vnd.github+json"}; // Avoid CORS preflight on version header
       if (previous && previous.etag) headers["If-None-Match"] = previous.etag;
       const r = await fetch(ORIGIN + path, {headers, signal:ctrl.signal, credentials:"omit", referrerPolicy:"no-referrer", cache:"no-store"});
       if (r.status === 304 && previous) {
