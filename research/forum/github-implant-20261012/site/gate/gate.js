@@ -1,4 +1,4 @@
-/* NEXUS GATE · Browser-only Security+Science transport monitor · SPDX-License-Identifier: MIT */
+/* NEXUS GATE · Browser-only Security+Science transport monitor · SPDX-License-Identifier: Apache-2.0 */
 import {CONTRACT,parseGitHubContent,digest,classify,isC1Marked} from "./gate-core.mjs";
 const ROOT="https://api.github.com/repos/"+CONTRACT.repository;
 const INTERVAL=30*60*1000,CLICK_COOLDOWN=60000,MAX_BYTES=600000;
