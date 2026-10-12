@@ -269,3 +269,7 @@ Owner-operated, append-only [R10R29 cross-validation intake](research/r29/r10r29
 ## Direct C1 research publication (Operator, 2026-10-12)
 
 The Operator authorized AXIOM to publish public-safe, independently source-checked C1 research directly without serial approval paperwork. See [the direct research publication rule](docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md). Existing branch protections, scientific and privacy limits remain. R18 source-bound research: [clean-room-provenance-20261012](research/r18/clean-room-provenance-20261012/README.md). A publication receipt does not establish runtime deployment or scientific truth.
+
+## R16 and R17 original research deposits (Operator direct C1 publication)
+
+The full [R16 AXIOM software-foundation report](research/r16/axiom-software-foundation-20261012/README.md) and [R17/R16 intake adjudication](research/r17/axiom-mind-module-20261012/README.md) are preserved as source-exact research text, not as claims of completed runtime deployment. The original ZIP binaries and external source files are not implicitly uploaded.
