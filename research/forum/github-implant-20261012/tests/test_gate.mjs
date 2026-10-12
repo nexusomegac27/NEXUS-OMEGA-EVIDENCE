@@ -1,4 +1,4 @@
-/* Node.js 22 built-in test runner · SPDX-License-Identifier: MIT */
+/* Node.js 22 built-in test runner · SPDX-License-Identifier: Apache-2.0 */
 import test from "node:test";
 import assert from "node:assert/strict";
 import { CONTRACT, classify, digest, isC1Marked, parseGitHubContent, safeGitHubUrl } from "../site/gate/gate-core.mjs";
