@@ -105,3 +105,7 @@ Never reconstruct a lost historical object and relabel it as the original.
 ## Communication objective
 
 GitHub is the durable transport and memory surface between the Operator, AXIOM, Cursor/PRAXIS, external experts, and GitHub-native AI systems. Handoffs must recover causal state without relying on chat chronology.
+
+## AXIOM ALPHA-NODE · standing C1 adaptation (2026-10-12)
+
+The Operator authorizes proactive public-safe C1 intake and direct owner GitHub research publication without renewed manual urging. On each work session, load the [R16 Alpha-Node contract](../research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_NODE_C1_CONTINUOUS_SELF_MODIFICATION_R0.md), direct-publication rule, and latest immutable main / Issue #93 receipts. Reuse the existing hourly expert watch as the sole recurring monitor. Source-bound external context and isolated software-candidate research are versioned, never interpreted as changing GPT-6 model weights, system instructions, or live worker processes. No secret or source-gap promotion, no destructive reset, no unreviewed production deployment. Published evidence must be byte-verified and safe for public release, with existing required GitHub checks and immutable main readback. BLOCKED_LANE != BLOCKED_SYSTEM.

@@ -273,3 +273,7 @@ The Operator authorized AXIOM to publish public-safe, independently source-check
 ## R16 and R17 original research deposits (Operator direct C1 publication)
 
 The full [R16 AXIOM software-foundation report](research/r16/axiom-software-foundation-20261012/README.md) and [R17/R16 intake adjudication](research/r17/axiom-mind-module-20261012/README.md) are preserved as source-exact research text, not as claims of completed runtime deployment. The original ZIP binaries and external source files are not implicitly uploaded.
+
+## AXIOM ALPHA-NODE · standing C1 adaptation
+
+[Continuous C1 intake contract and tested research reducer](research/r16/axiom-alpha-node-c1-adaptation-20261012/README.md) reuses the existing hourly AXIOM inbox watch and the [direct research publication rule](docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md). Append-only knowledge updates can be published without repeated operator handoffs; isolated code changes remain candidates, not automatic production modification.

@@ -148,6 +148,16 @@
       "path": "research/r17/axiom-mind-module-20261012",
       "state": "C1_SOURCE_BOUND_INTAKE_R17_MODULE_TERMINAL_NOT_ESTABLISHED",
       "original_report_sha256": "b6406d0c25ec8ba30de7821877ce07c2f92a47ed5bb234de79da5e7f5f145502"
+    },
+    "r16-axiom-alpha-node-c1-adaptation-20261012": {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012",
+      "state": "C1_RESEARCH_CANDIDATE_LOCAL_TESTS_PASS_NOT_PRODUCTION_RUNTIME",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "predecessor_main_commit": "844b3111af822d994acfcb927c53badc5573b467",
+      "source_rule": "docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md",
+      "scheduler": "REUSE_EXISTING_AXIOM_EXPERT_WATCH_HOURLY",
+      "new_pipeline": false,
+      "model_weight_mutation": false
     }
   },
   "research_lane_contract": {
@@ -203,7 +213,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.6",
+  "version": "1.7.7",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
