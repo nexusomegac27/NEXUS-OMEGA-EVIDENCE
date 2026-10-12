@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07121a">
+  <meta name="description" content="NEXUS OMEGA GitHub Implant: ein quelloffenes, transparentes C1-Forschungsfenster mit direkt lesbaren GitHub-Daten.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
+  <title>GitHub Implant · NEXUS OMEGA Forum</title>
+  <link rel="stylesheet" href="./assets/github-implant.css">
+  <script src="./assets/github-implant.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+  <header class="global">
+    <a class="brand" href="/" aria-label="NEXUS OMEGA Startseite"><span class="brand-symbol" aria-hidden="true">N<span class="point">·</span>Ω</span><span class="brand-words"><strong>NEXUS</strong><small>OMEGA / ÖFFENTLICHE FORSCHUNG</small></span></a>
+    <nav class="global-nav" aria-label="Hauptnavigation">
+      <a href="/">Start</a><a href="/forum/">Forum</a><a class="nav-current" href="./" aria-current="page">GitHub Implant</a>
+    </nav>
+    <a class="github-link" href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" class="shell">
+    <div class="eyebrow"><span class="trace-mark" aria-hidden="true"></span> FORUM / FORSCHUNG / TRANSPARENZ</div>
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <div class="overtitle">NEXUS TRANSPARENCY LAYER <span class="index-number">/ 01</span></div>
+        <h1 id="title">GitHub<span class="gradient-text">_Implant</span><span class="title-period">.</span></h1>
+        <p class="lead">Das öffentliche Gedächtnis unserer Forschung. Commits, Pull Requests und Artefakte — direkt aus dem kanonischen GitHub-Repository, überprüfbar bis zur Quelle.</p>
+        <div class="hero-actions">
+          <button class="primary" type="button" id="refresh"><span class="refresh-glyph" aria-hidden="true">↻</span> Jetzt synchronisieren</button>
+          <a class="secondary" href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/tree/main" target="_blank" rel="noopener noreferrer">Original auf GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-ornament" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb-center">Ω</div><div class="orbit-label orbit-one">SOURCE</div><div class="orbit-label orbit-two">C1</div><div class="orbit-label orbit-three">PROVENANCE</div></div>
+    </section>
+    <div class="status-strip" role="status" aria-live="polite">
+      <span class="status-left"><span class="status-dot" id="live-dot"></span><strong id="live-label">QUELLE WIRD GEPRÜFT</strong><span class="divider-mini"></span><span id="live-message">GitHub-Abfrage ausstehend</span></span>
+      <span class="status-right" id="last-sync">Kein verifizierter Live-Abruf</span>
+    </div>
+    <section class="metrics" aria-label="Repository-Zustand">
+      <article class="metric"><span class="metric-label">REPOSITORY</span><strong class="metric-large metric-name">NEXUS-OMEGA-EVIDENCE</strong><span class="metric-meta">C1 / PUBLIC EVIDENCE</span></article>
+      <article class="metric"><span class="metric-label">MAIN / NEUSTER COMMIT</span><strong class="metric-large mono" id="head-short">—</strong><span class="metric-meta" id="head-date">Noch nicht abgerufen</span></article>
+      <article class="metric"><span class="metric-label">NEUSTE ÄNDERUNGEN</span><strong class="metric-large mono" id="commit-count">—</strong><span class="metric-meta">Letzte 15 Main-Commits</span></article>
+      <article class="metric"><span class="metric-label">CLAIM CEILING</span><strong class="metric-large claim">C1</strong><span class="metric-meta">DESCRIPTIVE ONLY</span></article>
+    </section>
+    <section class="workspace" aria-label="GitHub Forschungsfenster">
+      <div class="workspace-head"><div><div class="section-kicker">ÖFFENTLICHE QUELLEN</div><h2>Repository Explorer</h2><p>Eine Lesekonsole. Keine eigenständige Wahrheitsinstanz.</p></div><span class="readonly"><span aria-hidden="true">◌</span> READ ONLY</span></div>
+      <div class="tabs" role="tablist" aria-label="GitHub-Inhalte">
+        <button id="tab-commits" role="tab" aria-selected="true" aria-controls="panel-commits" data-tab="commits" tabindex="0">Chronik <span class="tab-index">01</span></button>
+        <button id="tab-files" role="tab" aria-selected="false" aria-controls="panel-files" data-tab="files" tabindex="-1">Artefakte <span class="tab-index">02</span></button>
+        <button id="tab-prs" role="tab" aria-selected="false" aria-controls="panel-prs" data-tab="prs" tabindex="-1">Pull Requests <span class="tab-index">03</span></button>
+        <button id="tab-about" role="tab" aria-selected="false" aria-controls="panel-about" data-tab="about" tabindex="-1">Methodik <span class="tab-index">04</span></button>
+      </div>
+      <section id="panel-commits" role="tabpanel" aria-labelledby="tab-commits"><div class="panel-intro"><h3>Aktivität auf <code>main</code></h3><p>Die letzten beobachteten Commit-Ereignisse, mit direkter Rückverfolgung zu GitHub.</p></div><div class="feed" id="commit-feed"><p class="loading">GitHub-Daten werden geladen …</p></div></section>
+      <section id="panel-files" role="tabpanel" aria-labelledby="tab-files" hidden>
+        <div class="panel-intro"><h3>Öffentliche Artefakte</h3><p>Durchsuche die tatsächliche Repository-Struktur. Dateien werden auf Anfrage als reine Textansicht geladen.</p></div>
+        <div class="explorer-toolbar"><nav id="breadcrumbs" aria-label="Ordnerpfad"></nav><button class="small-btn" type="button" id="up-folder">Eine Ebene höher ↑</button></div>
+        <label class="search-label" for="file-search">In diesem Ordner filtern</label><input id="file-search" type="search" autocomplete="off" placeholder="Dateiname suchen …" spellcheck="false">
+        <div id="file-list" class="file-list"><p class="loading">Ordner wird beim ersten Öffnen geladen.</p></div>
+        <section id="file-preview" class="file-preview" hidden><div class="preview-head"><strong id="preview-name"></strong><a id="preview-original" target="_blank" rel="noopener noreferrer">Original ↗</a></div><p class="preview-note">Darstellung aus GitHub-API-Bytes · reiner Text, kein ausführbarer HTML-Inhalt</p><pre id="preview-content" tabindex="0"></pre></section>
+      </section>
+      <section id="panel-prs" role="tabpanel" aria-labelledby="tab-prs" hidden><div class="panel-intro"><h3>Entscheidungen & Integration</h3><p>Offene und abgeschlossene Pull Requests. „Merged“ bedeutet Versionierung, nicht wissenschaftliche Wahrheit.</p></div><div id="pr-feed" class="feed"><p class="loading">Pull Requests werden beim Öffnen geladen.</p></div></section>
+      <section id="panel-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+        <div class="panel-intro"><h3>Quelle ist nicht Wahrheit.</h3><p>Worauf sich dieses Fenster bezieht — und worauf nicht.</p></div>
+        <div class="method-grid">
+          <article><span class="method-number">01</span><h4>Unveränderte Quelle</h4><p>Alle angezeigten Daten stammen aus der offiziellen GitHub-REST-API des öffentlichen NEXUS-Evidence-Repositories. Der Link zum Original bleibt erhalten.</p></article>
+          <article><span class="method-number">02</span><h4>Kein Authentizitäts-Sprung</h4><p>Ein Commit-Hash und ein veröffentlichter Text beweisen Herkunftsbindung innerhalb des Repositories, nicht automatisch die Richtigkeit wissenschaftlicher Aussagen.</p></article>
+          <article><span class="method-number">03</span><h4>Sichtbare Aktualität</h4><p>Automatische Aktualisierung frühestens alle fünf Minuten. Bei Netzfehlern, Rate-Limits oder veralteten Daten wird der Zustand sichtbar ausgewiesen.</p></article>
+          <article><span class="method-number">04</span><h4>Spiegelstatus</h4><p>Dies ist ein dynamischer Read-only-Viewer, keine unabhängige, lokal archivierte Kopie aller GitHub-Originalbytes. Ein vollständiger Originalspiegel benötigt einen gesondert nachweisbaren Hostinger-Dateideploy.</p></article>
+        </div>
+      </section>
+      <div class="workspace-footer"><span>DATA SOURCE · GITHUB REST API</span><span>NO TOKEN · NO TRACKING · C1_DESCRIPTIVE_ONLY</span></div>
+    </section>
+    <section class="closing"><div><span class="section-kicker">NEXUS PRINCIPLE</span><h2>Vom Besitz zur Symbiose.<br><span>Vom Ego zur Herkunft.</span></h2><p>Jede Version trägt ihre Herkunft. Jeder Befund bleibt prüfbar. Eine Veröffentlichung wird nicht zur Wahrheit, nur weil sie öffentlich ist.</p></div><a href="/forum/">Zurück zum Forum <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="foot"><div><strong>NEXUS Ω</strong><span>SYMBIOTIC SCIENCE · OPEN PROVENANCE</span></div><div>Eigenständige NEXUS-Darstellung · kein offizielles GitHub-Produkt</div><div><a href="/forum/">Forum</a><a href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+</body>
+</html>
