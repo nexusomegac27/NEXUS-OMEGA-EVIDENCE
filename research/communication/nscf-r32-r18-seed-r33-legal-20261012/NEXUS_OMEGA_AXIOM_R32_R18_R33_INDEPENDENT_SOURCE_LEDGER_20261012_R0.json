@@ -1,0 +1,143 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R32_R18_R33_INDEPENDENT_SOURCE_LEDGER_20261012_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "audit_date": "2026-10-12",
+  "data_class": "PUBLIC_SAFE_DERIVATION_RAW_ZIPS_NOT_PUBLISHED",
+  "source_originals": [
+    {
+      "label": "grok_r18_replay_report_md",
+      "bytes": 6153,
+      "sha256": "04fcd0f886afa8575df3ce4b77cd4f26e7a33d8a7798f3e1f70a7ae684c74e8b"
+    },
+    {
+      "label": "perplexity_r32_report_md",
+      "bytes": 25394,
+      "sha256": "98895a096fde22bea339751ab88748f851002628d65162f8ed5945193b97efcb"
+    },
+    {
+      "label": "perplexity_r32_source_zip",
+      "bytes": 33840,
+      "sha256": "9aa837ae0a8ba97149e75a129d708146a01d8f0ff4fb8992e0e341342e2ebcda",
+      "manifest_match": "8/8"
+    },
+    {
+      "label": "r18_dev_prompt_txt",
+      "bytes": 8844,
+      "sha256": "010f338245e3c6b9ba817cbae9ec802956028bfa18644c53a9d35b0c36957f0e"
+    },
+    {
+      "label": "grok_single_fixture_benchmark_zip",
+      "bytes": 6639,
+      "sha256": "e5b1641182591b4b50000567d52259a4c6c2b22cb8fdb2f6f1b128ecab49d2b5"
+    },
+    {
+      "label": "r32_order_txt",
+      "bytes": 10892,
+      "sha256": "86f7ba21acb2ccd06dcda4d5ed16624eb7cf572ae774eb24c2958890cbbd0219"
+    },
+    {
+      "label": "prior_r17_r16_intake_zip",
+      "bytes": 11670,
+      "sha256": "c3d1706495de629741601553c428297771fb8940946181f54af640a978d2358a",
+      "manifest_match": "6/6"
+    },
+    {
+      "label": "r32_r18_stop_dossier_zip",
+      "bytes": 465934,
+      "sha256": "398d25fa4ffb725b6e380bedb8bf5b272727591426ab872e08fc28cd9bc5d0b0",
+      "manifest_match": "19/19",
+      "hash_named_sources_match": "8/8"
+    },
+    {
+      "label": "r33_original_legal_order_txt",
+      "bytes": 26943,
+      "sha256": "c469739d32eedeb83844b470b7207ef6058b896723e8f678c290e3c9a702a678"
+    },
+    {
+      "label": "r33_r1_zip",
+      "bytes": 57202,
+      "sha256": "d5cc4d621b90a4af35f0cf565027b3b9763f8b7906e75b1cd67d8b672af4842a",
+      "manifest_match": "48/48"
+    },
+    {
+      "label": "r33_v2_zip",
+      "bytes": 70296,
+      "sha256": "b201d2f573f600eaf52643efd5870b50ef9f3c6002b00fe1939c3e3ba8615299",
+      "manifest_match": "66/66"
+    },
+    {
+      "label": "diagram_uploaded_png",
+      "bytes": 290692,
+      "sha256": "e6dcf8ab51b72765e75a82127f8c7862a480a26d93903f98b0392356dda2013a",
+      "scope": "ARCHITECTURAL_ILLUSTRATION_NOT_SCIENTIFIC_MEASUREMENT"
+    }
+  ],
+  "independent_replays": [
+    {
+      "component": "NSCF_R32_REFERENCE_SUITE",
+      "tests_collected": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "environment": "ISOLATED_LINUX_TEMP_COPY",
+      "changes_to_original": "NONE_TEMP_COPY_ABSOLUTE_IMPORT_PATH_PATCH",
+      "source_code_original_sha256": "6c302272d50cae649be0498108f3c4a9a098ea7b29d69fe98aefa09966cbaf5e"
+    },
+    {
+      "component": "R33_R1_STRUCTURAL_UNIT_TESTS",
+      "tests_collected": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "SYNTHETIC_STRUCTURE_ONLY"
+    },
+    {
+      "component": "R33_V2_UNIT_TESTS",
+      "tests_collected": 28,
+      "passed": 27,
+      "failed": 0,
+      "skipped": 1,
+      "skip_reason": "TEST_JPLAG_EXTERNAL_JAVA_JAR_NOT_AVAILABLE",
+      "scope": "SYNTHETIC_SCHEMA_SIGNATURE_DSSE_SIMILARITY",
+      "openssl_crosscheck": "EXECUTED_PASS"
+    }
+  ],
+  "r18_branch_dossier_claim": {
+    "at_commit": "38ade1937c7e4b028218f1859ec8084282f2ee08",
+    "declared_files": 9,
+    "reported_present_files": 2,
+    "independent_full_branch_tree_readback": "NOT_PERFORMED",
+    "source_snapshot_f01_sha256": "dacb92e1afc1d53b62ff689c4eeacbcbda110d03bccf7a204cb16cfee619b091",
+    "declared_f01_sha256": "e151fec20d18dbf690c955a118a57b78cd69655e0775688d39a8b55df3af6fd1",
+    "one_field_patch": "word_len 20 to 21",
+    "patch_yields_declared_sha256": true,
+    "source_modified": false
+  },
+  "r32_measurement_scope": {
+    "full_perplexity_12_message_harness": "NOT_INDEPENDENTLY_RERUN",
+    "tiktoken": "NOT_AVAILABLE_AT_AXIOM_SEAT",
+    "embedding_cosine": "NOT_MEASURED",
+    "bidirectional_nli": "NOT_MEASURED",
+    "nl_to_frame_encoder": "NOT_BUILT",
+    "source_specific_grok_seven_fixture_runner": "NOT_PROVIDED",
+    "global_token_savings_claim": "NOT_SUPPORTED"
+  },
+  "r33_legal_scope": {
+    "r1_positive_fixture_full_schema": "REJECTED_MISSING_REQUIRED_STATEMENT_DATE",
+    "v2_synthetic_schema": "PASS_IN_REPLAY",
+    "real_clean_room": "NOT_ESTABLISHED",
+    "external_signer_identity": "NOT_ESTABLISHED",
+    "qualified_legal_opinion": "NOT_PERFORMED",
+    "legal_advice": false
+  },
+  "claims": {
+    "r18": "STOP_SCOPED",
+    "r32": "PASS_WITH_CAVEATS_REFERENCE_CODEC_ONLY",
+    "r33": "PASS_WITH_CAVEATS_SYNTHETIC_TECH_ONLY",
+    "scientific_terminal": false,
+    "production_activation": false
+  },
+  "github_to_www_parity": "NOT_VERIFIED",
+  "cursor_action": "NONE",
+  "r19_modified": false
+}
