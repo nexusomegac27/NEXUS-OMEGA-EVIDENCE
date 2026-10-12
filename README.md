@@ -281,3 +281,7 @@ The full [R16 AXIOM software-foundation report](research/r16/axiom-software-foun
 ## R16 delayed AutoClaw R3 research (2026-10-12)
 
 The [sanitized, independently replayed AutoClaw R3 intake](research/r16/autoclaw-r3-cross-platform-20261012/README.md) records a C1 scoped Linux reproduction, Windows producer reports and an explicit privacy-based original-archive publication gap. Append-only scientific delta; original ZIP is not committed and R17 terminal remains not established.
+
+## R17 one-shot C1 closeout finding (2026-10-12)
+
+A [new scoped R17 source-gap finding](research/r17/axiom-mind-module-20261012/NEXUS_OMEGA_AXIOM_R17_ONE_SHOT_C1_SCOPED_HOLD_20261012_R1.md) follows the earlier source-bound R17/R16 intake. Cursor reports no standalone R17 original; the one-shot audit itself has finished, but R17 science remains HOLD_SCOPED. This report-level finding is published without any new pipeline or productive runtime change.
