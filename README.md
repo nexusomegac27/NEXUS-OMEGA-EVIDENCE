@@ -277,3 +277,7 @@ The full [R16 AXIOM software-foundation report](research/r16/axiom-software-foun
 ## AXIOM ALPHA-NODE · standing C1 adaptation
 
 [Continuous C1 intake contract and tested research reducer](research/r16/axiom-alpha-node-c1-adaptation-20261012/README.md) reuses the existing hourly AXIOM inbox watch and the [direct research publication rule](docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md). Append-only knowledge updates can be published without repeated operator handoffs; isolated code changes remain candidates, not automatic production modification.
+
+## R16 delayed AutoClaw R3 research (2026-10-12)
+
+The [sanitized, independently replayed AutoClaw R3 intake](research/r16/autoclaw-r3-cross-platform-20261012/README.md) records a C1 scoped Linux reproduction, Windows producer reports and an explicit privacy-based original-archive publication gap. Append-only scientific delta; original ZIP is not committed and R17 terminal remains not established.
