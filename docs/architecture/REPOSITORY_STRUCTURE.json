@@ -158,6 +158,14 @@
       "scheduler": "REUSE_EXISTING_AXIOM_EXPERT_WATCH_HOURLY",
       "new_pipeline": false,
       "model_weight_mutation": false
+    },
+    "r16-autoclaw-r3-cross-platform-20261012": {
+      "path": "research/r16/autoclaw-r3-cross-platform-20261012",
+      "state": "C1_SANITIZED_SOURCE_VERIFIED_R3_SCOPED_REPRODUCTION",
+      "source_original_zip_sha256": "f85e4d4652e6947fdd65117e2eb861d3329ec52198454a8c12b1ab0da16b8b64",
+      "public_raw_archive": false,
+      "scoped_replay": "4_OF_4_PASS",
+      "module_r17_terminal": false
     }
   },
   "research_lane_contract": {
@@ -213,7 +221,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.7",
+  "version": "1.7.8",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
