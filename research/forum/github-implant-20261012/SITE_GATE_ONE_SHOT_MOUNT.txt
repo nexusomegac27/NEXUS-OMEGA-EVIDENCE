@@ -1,0 +1,14 @@
+NEXUS OMEGA · GITHUB_NEXUS_INTERFACE_GATE · MOUNT ON EXISTING SITE
+
+OBJECT = NEXUS_OMEGA_GITHUB_NEXUS_INTERFACE_GATE_C1_20261012_R0
+SITE_TARGET = https://www.nexus-mobile.de/forum/github-implant/gate/
+SOURCE = github:nexusomegac27/NEXUS-OMEGA-EVIDENCE/research/forum/github-implant-20261012/site/
+AUTHORITY = OPERATOR_EXISTING_FORUM_LEAF_DEPLOYMENT_SCOPE
+C1 = DESCRIPTIVE_ONLY
+
+1. Use the SAME authorized Hostinger hPanel File Manager that delivered GitHub_Implant; no new credential, domain, pipeline or external agent write slot.
+2. Back up the current live /forum/github-implant/index.html and measure SHA-256 (source baseline at PR #104 was b1d4ddf12be0f40626ccc86564c5a7a4fc14e06eb3891c698fc2e4362f78edeb; new revision differs because of one nav link).
+3. Upload exactly site/gate/index.html, gate.css, gate.js, gate-core.mjs to existing /forum/github-implant/gate/ and the UPDATED site/index.html to existing /forum/github-implant/index.html. Do not touch /forum/index.html or /index.html, and do not replace site CSS/JS.
+4. Verify 200 + correct content-type of HTML/CSS/JS/MJS, no missing asset, acceptable mobile + desktop, focus + native PiP fallback, no injection, live GitHub/WWW 3/3 SHA comparison. A WWW code-deploy without matching public GitHub main original yields DIVERGENCE (legitimate warning).
+5. Re-fetch /, /forum/, /forum/github-implant/ before/after, and report SHA-256/HTTP/time + rollback point. Hostinger site bytes before and after have to be actually observed, not assumed.
+6. Return ONE concise source-exact C1 receipt. No new Cursor R16/R17/R19 research or duplicate CI gate.
