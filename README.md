@@ -265,3 +265,7 @@ Six open research questions and G0–G9 include information loss, time/unit/cali
 ## R10R29 · Computer + Perplexity C1 source validation · 2026-10-11
 
 Owner-operated, append-only [R10R29 cross-validation intake](research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/README.md) against **PR #97** exact original order. Independent verification covers source/ZIP integrity (**12/12** ZIP SHA256SUMS), Perplexity text receipt, source-level caveats and full 5-file hash ledger. **Binary originals (two PDFs and 512,536-byte ZIP) are inventory-bound, not GitHub-published in this PR.** R29 G1–G9 research remains unexecuted/not proven; no L3 selection, NF05/06 freeze, external direct writer grant, NODE_RESET or Hostinger deployment. C1_DESCRIPTIVE_ONLY.
+
+## Direct C1 research publication (Operator, 2026-10-12)
+
+The Operator authorized AXIOM to publish public-safe, independently source-checked C1 research directly without serial approval paperwork. See [the direct research publication rule](docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md). Existing branch protections, scientific and privacy limits remain. R18 source-bound research: [clean-room-provenance-20261012](research/r18/clean-room-provenance-20261012/README.md). A publication receipt does not establish runtime deployment or scientific truth.
