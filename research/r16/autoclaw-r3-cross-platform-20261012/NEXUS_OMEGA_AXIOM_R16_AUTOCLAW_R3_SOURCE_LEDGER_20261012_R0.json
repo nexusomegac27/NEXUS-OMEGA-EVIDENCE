@@ -1,0 +1,15 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R16_AUTOCLAW_R3_INDEPENDENT_SOURCE_INTAKE_20261012_R0",
+  "source_object": "NEXUS_OMEGA_AUTOCLAW_R16_R3_RETURN_20261012_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "transport": "OPERATOR_TO_AXIOM_BRIDGE",
+  "archive": {"name": "NEXUS_~2(5).ZIP", "bytes": 123544, "sha256": "f85e4d4652e6947fdd65117e2eb861d3329ec52198454a8c12b1ab0da16b8b64", "public_bytes_uploaded": false},
+  "detached_manifest": {"path_in_archive": "r16-autoclaw-return-r3/06_DETACHED_MANIFEST.json", "bytes": 7014, "sha256": "f79ac2f01592f558560a2875457efd7a422d2860d07332bb92e39cd861e6c728", "children_checked": 39, "children_pass": 39, "children_fail": 0},
+  "report": {"bytes": 103102, "sha256": "2f51775b99007277f7135e0aaf9489403ef05e2242b7e6669010c970d6b1b365"},
+  "core": {"bytes": 17890, "sha256": "0a107b9c1520117faf81e4186eab5c206f3b82a7b5b85dddf3438a999172506b"},
+  "new_test_suite": {"bytes": 6055, "sha256": "60c60689c6f0623d9018828779ba6bff0cdccb08b1b06e73b74fe35361582491", "executed_later_independently": true, "observed_tests": 4, "observed_pass": 4, "environment": "AXIOM_ISOLATED_LINUX_PYTHON", "reported_windows_versions": 173, "independent_linux_versions": 1804},
+  "sensitive_archive_contents": ["local_windows_user_paths", "personal_contact_emails"],
+  "scope": ["KNOWLEDGE_APPEND", "NEGATIVE_EVIDENCE_APPEND", "PATCH_CANDIDATE_RESEARCH_ONLY"],
+  "runtime_activated": false,
+  "r17_terminal": "NOT_ESTABLISHED"
+}
