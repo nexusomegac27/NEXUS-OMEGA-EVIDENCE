@@ -1,0 +1,28 @@
+NEXUS OMEGA · FORUM GITHUB_IMPLANT · SINGLE SITE MOUNT CONTRACT
+
+OBJECT = NEXUS_OMEGA_FORUM_GITHUB_IMPLANT_HOSTINGER_MOUNT_20261012_R0
+OWNER = OPERATOR_ALEXANDER
+SITE = https://www.nexus-mobile.de/forum/github-implant/
+SOURCE = nexusomegac27/NEXUS-OMEGA-EVIDENCE (main)
+GITHUB_RESEARCH_PATH = research/forum/github-implant-20261012/site/
+SOURCE_CEILING = C1_DESCRIPTIVE_ONLY
+
+ACTION (Cursor / established website deployment authority):
+  (a) Discover the actual existing /forum/ site implementation and its current main.
+  (b) Add exactly one subtab labeled GitHub Implant, linking to /forum/github-implant/.
+  (c) Deploy site/index.html and its two relative assets under that route using the existing Hostinger site process.
+  (d) Verify 200 status of all three URLs; mobile+desktop, keyboard tabs, live API calls and C1 boundaries.
+  (e) Publish one source+deployment receipt: exact source Git main commit, 3 file SHA-256,
+      Website HTTPS status, live URL, timestamp, WWW-to-source lag, and rollback point.
+  (f) Use the existing site-sync process to stage public-safe host-resident mirrors if it supports
+      clean Git readback plus lawfully publishable exact-byte files. Never claim a complete mirror
+      without remote bytes/hashes; expose excluded-sources manifest.
+
+FORBIDDEN:
+  - Overwrite homepage or replace forum root.
+  - Invent another host, DNS, account, pipeline, agent authorization or claimed production pass.
+  - Expose credentials or private emails/paths via public raw ZIP dumps.
+  - Claim a GitHub commit/CI pass is scientific truth.
+  - Re-run unrelated R16/R17 research or modify R19.
+
+NEXT = VERIFY_WWW_ROUTE_AND_REPORT_ONE_RECEIPT
