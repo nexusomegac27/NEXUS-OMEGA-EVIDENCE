@@ -138,6 +138,16 @@
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
       "original_report_sha256": "a174f09dc4814ef713be4aef32368fde9421d1037b58ce2a7f937dbc70f4c401",
       "source_binary_attachments_public_in_repo": false
+    },
+    "r16-software-foundation-20261012": {
+      "path": "research/r16/axiom-software-foundation-20261012",
+      "state": "C1_SOURCE_BOUND_RESEARCH_PUBLISHED_RUNTIME_NOT_ESTABLISHED",
+      "original_report_sha256": "446ed6cad42567526e51dbeb0a897d8f50812a0ee2f83c85c71721c42ba0ade2"
+    },
+    "r17-source-bound-intake-20261012": {
+      "path": "research/r17/axiom-mind-module-20261012",
+      "state": "C1_SOURCE_BOUND_INTAKE_R17_MODULE_TERMINAL_NOT_ESTABLISHED",
+      "original_report_sha256": "b6406d0c25ec8ba30de7821877ce07c2f92a47ed5bb234de79da5e7f5f145502"
     }
   },
   "research_lane_contract": {
@@ -193,7 +203,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.5",
+  "version": "1.7.6",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
