@@ -1,0 +1,98 @@
+{
+  "schema_version": "nexus-public-science-catalog/1",
+  "object": "NEXUS_OMEGA_CONTROLLED_PUBLIC_SCIENCE_CATALOG_20260922_R1",
+  "snapshot_class": "HISTORICAL_NON_CANONICAL_FALLBACK",
+  "snapshot_from": "NEXUS_WEBSITE_MOBILE_MIRROR uploaded 2026-10-12",
+  "source_canonical_url": "https://www.nexus-mobile.de/research/catalog.json",
+  "source_file_bytes": 6041,
+  "source_file_sha256": "3a9523de0de020b95aca597e6d2191ff6dcae65efc31063585f5be4d45508670",
+  "generated_at": "2026-09-22T12:00:00Z",
+  "publication_version": "cockpit-integration-20260922-r0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "record_count": 9,
+  "withheld_count": 7,
+  "records": [
+    {
+      "PUBLIC_ID": "pub-grok-cockpit-integration-20260922-r0",
+      "TITLE": "Grok Cockpit: symbiotic public integration (C1)",
+      "DATE": "2026-09-22",
+      "PUBLICATION_CLASS": "ENGINEERING_RESULT",
+      "EVIDENCE_STATE": "INTEGRATED_C1_EXTERNAL_AGENT_CONTRIBUTION",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-grok-cockpit-integration-20260922-r0/"
+    },
+    {
+      "PUBLIC_ID": "pub-pipeline-congestion-audit-20260922-r0",
+      "TITLE": "Pipeline-Stau und AXIOM-Overhead: Audit (C1)",
+      "DATE": "2026-09-22",
+      "PUBLICATION_CLASS": "ENGINEERING_RESULT",
+      "EVIDENCE_STATE": "OBSERVED_LOCAL_MEASUREMENT_WITH_SPEC_ESTIMATE_SEPARATED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-pipeline-congestion-audit-20260922-r0/"
+    },
+    {
+      "PUBLIC_ID": "pub-zero-relay",
+      "TITLE": "Eine Übergabe ohne manuelles Kopieren",
+      "DATE": "2026-09-10",
+      "PUBLICATION_CLASS": "SCIENTIFIC_RESULT",
+      "EVIDENCE_STATE": "OBSERVED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-zero-relay/"
+    },
+    {
+      "PUBLIC_ID": "pub-continuity-identity",
+      "TITLE": "Die Quelle ist identifiziert",
+      "DATE": "2026-09-10",
+      "PUBLICATION_CLASS": "SCIENTIFIC_RESULT",
+      "EVIDENCE_STATE": "OBSERVED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-continuity-identity/"
+    },
+    {
+      "PUBLIC_ID": "pub-avc-pilot",
+      "TITLE": "Ein Prüfablauf ist dokumentiert",
+      "DATE": "2026-09-10",
+      "PUBLICATION_CLASS": "SCIENTIFIC_RESULT",
+      "EVIDENCE_STATE": "SUPPORTED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-avc-pilot/"
+    },
+    {
+      "PUBLIC_ID": "pub-eban-r4",
+      "TITLE": "Isolation und unabhängige Prüfung bleiben offen",
+      "DATE": "2026-09-10",
+      "PUBLICATION_CLASS": "OPEN_STATUS",
+      "EVIDENCE_STATE": "OPEN",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-eban-r4/"
+    },
+    {
+      "PUBLIC_ID": "pub-bodytwin-848",
+      "TITLE": "BodyTwin: ein synthetisches Körpermodell",
+      "DATE": "2026-09-14",
+      "PUBLICATION_CLASS": "SCIENTIFIC_RESULT",
+      "EVIDENCE_STATE": "SUPPORTED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-bodytwin-848/"
+    },
+    {
+      "PUBLIC_ID": "pub-hsv-process-gap-preserved-20260918",
+      "TITLE": "HARD/SOFT/VISUAL: Process-Gap erhalten (keine THREE_ROUND)",
+      "DATE": "2026-09-18",
+      "PUBLICATION_CLASS": "NEGATIVE_RESULT",
+      "EVIDENCE_STATE": "PROCESS_GAP_PRESERVED",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-hsv-process-gap-preserved-20260918/"
+    },
+    {
+      "PUBLIC_ID": "pub-living-memory-negatives-index",
+      "TITLE": "Living Memory: Negative Ergebnisse (Index)",
+      "DATE": "2026-09-05",
+      "PUBLICATION_CLASS": "NEGATIVE_RESULT",
+      "EVIDENCE_STATE": "INDEXED_PUBLIC_PROJECTION",
+      "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+      "href": "/research/record/pub-living-memory-negatives-index/"
+    }
+  ]
+}

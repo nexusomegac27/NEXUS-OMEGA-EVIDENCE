@@ -178,6 +178,19 @@
       "source_license": "MIT_ORIGINAL_FIRST_PARTY",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
       "governance": "docs/governance/NEXUS_OMEGA_GITHUB_WWW_PARITY_RULE_V1_20261012_R0.md"
+    },
+    "website-research-catalog-clarity-20261012": {
+      "path": "research/website/research-catalog-clarity-20261012",
+      "state": "PUBLIC_SAFE_C1_WEBSITE_SOURCE_READY_HOSTINGER_LIVE_NOT_ESTABLISHED",
+      "target_existing_www_route": "https://www.nexus-mobile.de/research/catalog/",
+      "canonical_live_data_path": "/research/catalog.json",
+      "archived_public_records": 9,
+      "archived_withheld_count": 7,
+      "archive_source_sha256": "3a9523de0de020b95aca597e6d2191ff6dcae65efc31063585f5be4d45508670",
+      "nexus_sky_demo_nodes_imported": false,
+      "original_sky_homepage_overwritten": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "mount": "research/website/research-catalog-clarity-20261012/SITE_EXISTING_RESEARCH_CATALOG_MOUNT.txt"
     }
   },
   "research_lane_contract": {
@@ -233,7 +246,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.9",
+  "version": "1.7.10",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",

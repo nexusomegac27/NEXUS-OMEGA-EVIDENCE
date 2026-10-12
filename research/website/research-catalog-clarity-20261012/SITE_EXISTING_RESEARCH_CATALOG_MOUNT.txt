@@ -1,0 +1,15 @@
+NEXUS OMEGA · EXISTING RESEARCH CATALOG — ONE-SHOT DESIGN MOUNT
+
+OBJECT = NEXUS_OMEGA_PUBLIC_RESEARCH_CATALOG_CLARITY_C1_20261012_R0
+TARGET = https://www.nexus-mobile.de/research/catalog/
+SOURCE = nexusomegac27/NEXUS-OMEGA-EVIDENCE/research/website/research-catalog-clarity-20261012/site/
+AUTHORITY = OPERATOR_PUBLIC_SAFE_REVERSIBLE_WWW_DESIGN_INTEGRATION
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+EXECUTOR = EXISTING_AUTHORIZED_GROK_HPANEL_OR_CURSOR_HOSTINGER_SITE_CHANNEL
+
+DISCOVER: Inspect the existing production /research/catalog/index.html, index dependencies and /research/catalog.json, confirm exact public_html target; no new site.
+BACKUP: Save existing catalog index and its physical SHA256; capture baseline /, /research/, /research/catalog/, /forum/ statuses.
+MOUNT: Place only four assets: site/index.html -> existing /research/catalog/index.html; site/catalog.css; site/catalog.js; site/catalog-snapshot.json -> existing /research/catalog/ path. Never touch /research/catalog.json.
+VALIDATE: Exact source bytes SHA256 via HTTPS readback, HTTP 200 for all four, same-origin live JSON fetch, nine PUBLIC_ID targets with observed source, withheld count, mobile 390 and desktop 1440, keyboard access, no-JS fallback, visible archive-state on source failure and clean CSP. Check homepage, sky, forum, orbis and old public records unchanged.
+RETURN: One C1 receipt with UTC timestamp, original index hash and backup path (sanitized), new 4 source+WWW hashes and exact URLs, actual status and rollback pointer. Do not report live until proven.
+FORBIDDEN: Entire offline site mirror upload, compiled Next.js bundle overwrite, 300 synthetic demo nodes in production, external javascript/font injection, R19 edits, new research truth index, wholesale redesign of homepage.
