@@ -76,6 +76,12 @@ class StewardTests(unittest.TestCase):
         self.assertIn("LEGACY_DIRECTORY_NAMING_REVIEW", review)
         self.assertEqual(faults, [])
 
+    def test_unsafe_traversal_never_reads_files(self):
+        entry = ("research/../private.txt", "100644", "blob", "a" * 40, 5)
+        report = self.report([entry])
+        self.assertIn("INVALID_PATH_COMPONENT", [f["code"] for f in report["findings"]])
+        self.assertIsNone(report["files"][0]["observed_sha256"])
+
     def test_case_collision_is_integrity_fault(self):
         original = self.entries()[0]
         duplicate = ("research/r5/alpha/readme.md", *original[1:])
