@@ -260,7 +260,25 @@
       "BLOCKED",
       "SUPERSEDED",
       "REOPENED"
-    ]
+    ],
+    "continuity_guard": {
+      "state": "READONLY_DETERMINISTIC_FRESHNESS_AND_DISCOVERY_CHECK",
+      "script": "scripts/archive_continuity_guard.py",
+      "tests": "tests/test_archive_continuity_guard.py",
+      "existing_workflow": ".github/workflows/validate-research-pipeline.yml",
+      "schedule_utc": "05:17_DAILY_GITHUB_ACTIONS_BEST_EFFORT",
+      "source_contract": "research/pipeline/CONTINUITY_GUARD_V1_20261013.md",
+      "thresholds": {
+        "open_package_age_review_days": 30,
+        "derived_index_age_review_days": 30
+      },
+      "age_warning_blocks_unrelated_research": false,
+      "integrity_failure_policy": "FAIL_SCOPED",
+      "local_windows_archives": "NOT_OBSERVED_IN_GITHUB_RUNNER",
+      "node_bus_mcp_runtime": "NOT_VERIFIED",
+      "external_llm_validation_calls": "ZERO_BY_CODE_NO_MODEL_INFERENCE",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    }
   },
   "historical_path_constraints": [
     "docs/phase2",
@@ -286,7 +304,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.13",
+  "version": "1.7.14",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
