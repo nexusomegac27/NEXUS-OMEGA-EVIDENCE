@@ -21,6 +21,8 @@ This is the first technical seedling, **not** a newly provisioned or verified NE
 
 ## Full-tree inventory contract
 
+Pinned source baseline: [NEXUS_OMEGA_REPOSITORY_TREE_BASELINE_20261013_R0.json](NEXUS_OMEGA_REPOSITORY_TREE_BASELINE_20261013_R0.json) enumerates exactly **496 tracked files and 151 tracked directories** as Git blob/tree identifiers and byte counts at parent commit `437804b9a6eddee5afcf47cc1ca193f3ddcaac80` (tree `8e94a28aa34fea4c94ebdfc2bd46c8b43819193f`). It is a frozen reference, not an automatically updated index. Subsequent Steward runs use the actual current HEAD and may report different counts. Git SHA-1 in the baseline does not substitute for independent SHA-256 verification.
+
 On checkout HEAD, `scripts/nexus_repository_steward.py` scans **every tracked Git blob** through `git ls-tree -r -l -z HEAD`; it does not use a potentially stale navigation index. It records for every tracked file: path, owning domain, Git blob SHA-1 (explicitly not a SHA-256), original checkout SHA-256, byte count, Git mode, registered research lane, integrity faults and non-blocking naming advisories. Every parent directory is enumerated from tracked paths. Commit SHA and register version anchor the snapshot. Machine-readable JSONL may be emitted outside the tracked repository. GitHub Actions job summaries show counts; ephemeral runner outputs are not canonical stored objects.
 
 No private Windows archive, TRANSFER custody, current MCP tool list or Website bytes are in scope. Git history cannot establish creation time of the scientific object and is not a substitute for immutable event time. Source SHA-256 proves byte identity only; it does not prove scientific meaning, license ownership or publication readiness.
