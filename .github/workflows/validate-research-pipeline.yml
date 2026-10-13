@@ -1,11 +1,17 @@
 name: Validate research pipeline
 
 on:
+  schedule:
+    - cron: '17 5 * * *'  # daily UTC, no external LLM or write credentials
+  workflow_dispatch:
   push:
     paths:
       - 'research/pipeline/**'
       - 'schema/research-pipeline-*.schema.json'
       - 'scripts/research_pipeline.py'
+      - 'scripts/archive_continuity_guard.py'
+      - 'tests/test_archive_continuity_guard.py'
+      - 'docs/architecture/REPOSITORY_STRUCTURE.json'
       - 'tests/test_research_pipeline.py'
       - '.github/workflows/validate-research-pipeline.yml'
   pull_request:
@@ -13,6 +19,9 @@ on:
       - 'research/pipeline/**'
       - 'schema/research-pipeline-*.schema.json'
       - 'scripts/research_pipeline.py'
+      - 'scripts/archive_continuity_guard.py'
+      - 'tests/test_archive_continuity_guard.py'
+      - 'docs/architecture/REPOSITORY_STRUCTURE.json'
       - 'tests/test_research_pipeline.py'
       - '.github/workflows/validate-research-pipeline.yml'
 
@@ -31,3 +40,9 @@ jobs:
         run: python scripts/research_pipeline.py --root . validate
       - name: Run pipeline unit tests
         run: python -m unittest tests.test_research_pipeline
+      - name: Validate continuity and report bounded aging
+        run: |
+          python scripts/archive_continuity_guard.py --root . --max-age-days 30 --fail-on-integrity > "$RUNNER_TEMP/nexus-continuity.json"
+          python -c 'import json,os; d=json.load(open(os.environ["RUNNER_TEMP"]+"/nexus-continuity.json")); print("## NEXUS Research Continuity"); print("Registered lanes:", d["registered_lane_count"]); print("Physical events:", d["observed_event_count"]); print("Integrity errors:", d["findings_by_severity"]["INTEGRITY"]); print("Review-only aging/freshness observations:", d["findings_by_severity"]["REVIEW_ONLY"]); print("Derived index age (days):", d["derived_index"]["age_days"]); print("Source scope:",d["source_completeness"])' >> "$GITHUB_STEP_SUMMARY"
+      - name: Run continuity negative fixtures
+        run: python -m unittest tests.test_archive_continuity_guard -v
