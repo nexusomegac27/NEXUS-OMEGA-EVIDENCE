@@ -20,3 +20,7 @@ The Operator now authorizes one read-only full cross-lane Cursor VM audit by **e
 Do not create a second bus/pipeline, mutate original event/snapshot histories, post private receipts to GitHub, change Hostinger WWW, claim a runtime PASS based on checks, or reopen completed unrelated Cursor binds. Real Cursor results go through the existing `NEXUS_OMEGA_TRANSFER/10_TO_AXIOM` receipt route, and AXIOM subsequently audits sanitized original-byte evidence against GitHub main.
 
 GitHub↔WWW publication parity remains a scoped outstanding website issue; this research source publication is **not** a Hostinger live update.
+
+## Continuity follow-on to existing local audit, not a second Cursor order
+
+The operator's 2026-10-13 recognition of forgotten six-week-old organization artifacts prompted a concrete [existing research-pipeline Continuity Guard](../../pipeline/CONTINUITY_GUARD_V1_20261013.md). It does not supersede the Node Bus all-lane G00–G10 order. Cursor's single existing return should include local original-source last-seen timestamps, provenance and successor links where authorized. The GitHub-only guard observes 23 registered lanes but cannot physically see the archived Windows roots; do not call it the complete all-lane runtime proof.
