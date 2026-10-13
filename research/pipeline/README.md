@@ -119,3 +119,7 @@ PROCESSED != CLAIM_PROMOTED
 ```
 
 Package/archive metadata may improve provenance and efficiency. It cannot promote scientific claims.
+
+## Archive Continuity Guard V1 · 2026-10-13
+
+[Read-only source and temporal continuity auditor](CONTINUITY_GUARD_V1_20261013.md) extends the **existing** pipeline, not a second queue or registry. `scripts/archive_continuity_guard.py` checks registered research lane presence/README, package/event integrity and review-only age of open packages / derived indexes. Existing `.github/workflows/validate-research-pipeline.yml` runs it daily at 05:17 UTC, with **10 deterministic negative tests** and a human-readable job summary. An aging warning is not a scientific failure or automatic global HOLD. The GitHub runner cannot inventory private Windows archival roots or prove live MCP bus capability.
