@@ -217,6 +217,20 @@
       "github_www_parity_verified": false,
       "cursor_new_action": false,
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "node-bus-crosslane-tokenneutral-20261013": {
+      "path": "research/architecture/node-bus-crosslane-tokenneutral-20261013",
+      "state": "OPERATOR_SCOPED_CURSOR_READONLY_ALL_LANE_AUDIT_ORDER_SOURCE_PUBLISHED_EXECUTION_NOT_ESTABLISHED",
+      "prior_registered_lane_count": 22,
+      "node_bus_runtime": "NOT_INDEPENDENTLY_VERIFIED",
+      "local_worker_r11": "JSONL_PASSED_REPORTED_20260925",
+      "cursor_mcp_namespace": "NOT_ESTABLISHED_AS_OF_R11_RETEST_REQUESTED",
+      "historical_pipeline_unit_tests": "4_OF_4_PASS_ISOLATED_SNAPSHOT_MATCHING_MAIN_SOURCE_BLOB",
+      "historical_pipeline_snapshot_sha256": "7_OF_7_MATCH_20260901",
+      "tokenneutral_validation_calls": "ZERO_TARGET_NOT_CURRENT_MEASUREMENT",
+      "new_runner_pipeline_created": false,
+      "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -272,7 +286,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.12",
+  "version": "1.7.13",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
