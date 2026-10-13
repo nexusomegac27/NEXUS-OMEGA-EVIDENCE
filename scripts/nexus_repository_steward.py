@@ -91,14 +91,14 @@ def audit(root: Path, entries: list[tuple], structure: dict, commit: str) -> dic
             reviews.append("NON_REGULAR_GIT_ENTRY_REVIEW")
         actual = root.joinpath(*parts)
         content = None
-        if typ == "blob" and mode != "120000" and actual.is_file() and not actual.is_symlink():
+        if not faults and typ == "blob" and mode != "120000" and actual.is_file() and not actual.is_symlink():
             content = actual.read_bytes()
             if len(content) != declared_bytes:
                 faults.append("GIT_TREE_BYTE_COUNT_MISMATCH")
             computed_oid = hashlib.sha1(b"blob " + str(len(content)).encode("ascii") + b"\0" + content).hexdigest()
             if computed_oid != oid:
                 faults.append("WORKTREE_GIT_BLOB_MISMATCH")
-        elif typ == "blob" and mode != "120000":
+        elif not faults and typ == "blob" and mode != "120000":
             faults.append("TRACKED_FILE_NOT_PRESENT")
         lane = next((k for p, k in lanes.items() if path.startswith(p + "/")), None)
         if owner == "research" and lane is None and path != "research/README.md":
