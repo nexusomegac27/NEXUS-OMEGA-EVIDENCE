@@ -1,0 +1,3623 @@
+{
+  "object": "NEXUS_OMEGA_REPOSITORY_TREE_BASELINE_20261013_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "FULL_PUBLIC_GIT_TREE_ONLY",
+  "source_commit_sha1": "437804b9a6eddee5afcf47cc1ca193f3ddcaac80",
+  "source_git_tree_sha1": "8e94a28aa34fea4c94ebdfc2bd46c8b43819193f",
+  "source_truncated": false,
+  "source_physical_windows_archive": "NOT_INCLUDED",
+  "source_mcp_runtime": "NOT_ASSESSED",
+  "source_git_sha1_is_not_content_sha256": true,
+  "mutation": "NO",
+  "tracked_file_count": 496,
+  "tracked_directory_count": 151,
+  "files_by_root": {
+    "_config.yml": 1,
+    ".gitattributes": 1,
+    ".github": 19,
+    ".gitignore": 1,
+    "AGENTS.md": 1,
+    "archive": 1,
+    "CITATION.cff": 1,
+    "communication": 4,
+    "docs": 45,
+    "examples": 23,
+    "GOVERNANCE.md": 1,
+    "index.md": 1,
+    "index": 4,
+    "LICENSE": 1,
+    "objects": 3,
+    "README.md": 1,
+    "requirements-a83-test.txt": 1,
+    "research": 307,
+    "schema": 22,
+    "scripts": 20,
+    "SECURITY.md": 1,
+    "tests": 26,
+    "validation": 11
+  },
+  "directories": [
+    {
+      "path": ".github",
+      "git_tree_sha1": "9abcb22eca21f3a81f4ccb6778d8d520629b9166"
+    },
+    {
+      "path": ".github/workflows",
+      "git_tree_sha1": "cc955bb07ae0465607bcb77c218f1ca38c2a7eeb"
+    },
+    {
+      "path": "archive",
+      "git_tree_sha1": "7efbe75b17d636e15477e7b675dcc997d02ffd15"
+    },
+    {
+      "path": "communication",
+      "git_tree_sha1": "b71fd9ea79732d1f5f4509739e7474946fa8c582"
+    },
+    {
+      "path": "communication/index",
+      "git_tree_sha1": "36008dff18f644e53ab957d1415611c6fb63e98c"
+    },
+    {
+      "path": "communication/index/v1",
+      "git_tree_sha1": "35c69381f51b06ffec25b5fc14dfb0be481d12b4"
+    },
+    {
+      "path": "communication/objects",
+      "git_tree_sha1": "bcf473f279a50127c2bd32db5a54f912e215d631"
+    },
+    {
+      "path": "communication/objects/sha256",
+      "git_tree_sha1": "aef3bb85ef8ffb8bb075b3b45ebfca6c4d7abb07"
+    },
+    {
+      "path": "communication/objects/sha256/1c",
+      "git_tree_sha1": "6ff4a73a61b84ca41655c4a73fa7520ef2ecd7fc"
+    },
+    {
+      "path": "communication/objects/sha256/1c/df",
+      "git_tree_sha1": "26193b9314a185d1501975b544648a59ebe8b9e9"
+    },
+    {
+      "path": "communication/objects/sha256/1c/df/1cdfcc74319f6f8500d969e8345ce5b6e1e6298482e03b6c96881cbbbd99dece",
+      "git_tree_sha1": "3419c31ea0729bb4e8992b3d29a9a9dc15e86e4d"
+    },
+    {
+      "path": "docs",
+      "git_tree_sha1": "778e200b341f09c49fbc143eaeb1ba10e039ccfd"
+    },
+    {
+      "path": "docs/architecture",
+      "git_tree_sha1": "c6318675c980bae09ae8d4716d73c76be73dc370"
+    },
+    {
+      "path": "docs/governance",
+      "git_tree_sha1": "f295252d1fcb021f639507b744bc1182b10f245c"
+    },
+    {
+      "path": "docs/phase2",
+      "git_tree_sha1": "8e7ec0b0162e9477e0133aef4603e9a28d8f7bc2"
+    },
+    {
+      "path": "docs/r10",
+      "git_tree_sha1": "455303fa0d205a5a1bdab070062797db1f5b341d"
+    },
+    {
+      "path": "docs/r10/r23",
+      "git_tree_sha1": "10386a838158697f6169ccf55c18731c545e3f7b"
+    },
+    {
+      "path": "docs/r19",
+      "git_tree_sha1": "19f1fcfe071115dd504ddeb5f8181bc1128eb683"
+    },
+    {
+      "path": "docs/r21",
+      "git_tree_sha1": "f3e728065d4753ae9436966dcc59005f05573095"
+    },
+    {
+      "path": "docs/r21/r21r1",
+      "git_tree_sha1": "e8839bdea34a09d595488428f2933ea2d8b2b120"
+    },
+    {
+      "path": "docs/r5",
+      "git_tree_sha1": "13401c9d3711012650f6308fc79f6f1d2dc974f1"
+    },
+    {
+      "path": "examples",
+      "git_tree_sha1": "992f5177327c70dbf84367254adac7d36ca57fde"
+    },
+    {
+      "path": "examples/a83",
+      "git_tree_sha1": "f4403e6a7fe7aac7be58e13b889adbcd1758aa1a"
+    },
+    {
+      "path": "examples/r19",
+      "git_tree_sha1": "30114de94094a9e32cf5d4340971aacfca6f04e4"
+    },
+    {
+      "path": "examples/r21",
+      "git_tree_sha1": "6ab94b74e32ccd2ca99acbae738e0eb0f1daac13"
+    },
+    {
+      "path": "examples/r21/astra-nav-p0",
+      "git_tree_sha1": "123a5c24c03a7fac4d9f890b2130fa5d07e2e874"
+    },
+    {
+      "path": "examples/r21/r21r1",
+      "git_tree_sha1": "613d4bdaa905b804aef62e370824af8a721ecc89"
+    },
+    {
+      "path": "examples/r21/r21r1/android-gnss-companion",
+      "git_tree_sha1": "718a8e4ba2c3047d038ed80c0d0f2e3c86c535f3"
+    },
+    {
+      "path": "examples/r5",
+      "git_tree_sha1": "8e70984421667e7ea2c97e1c7dbd3be6414d7280"
+    },
+    {
+      "path": "examples/scientific-communication",
+      "git_tree_sha1": "317ff07b7b01aca0f7f5431c5e846b218108c749"
+    },
+    {
+      "path": "index",
+      "git_tree_sha1": "72c08b234540dee5c87675a5e280df36aa8d0ec7"
+    },
+    {
+      "path": "index/v1",
+      "git_tree_sha1": "62da7623b383961c909a709b58740fb110983870"
+    },
+    {
+      "path": "index/v1/lanes",
+      "git_tree_sha1": "4e9a0f6223850aa5ef2bfb8990200a23bb484b85"
+    },
+    {
+      "path": "objects",
+      "git_tree_sha1": "335141ef90fc791cce20b5edb67fb56c73a9dd84"
+    },
+    {
+      "path": "objects/sha256",
+      "git_tree_sha1": "d174dad87c5a22f5fb46ac7154c9f5f15a88f6d7"
+    },
+    {
+      "path": "objects/sha256/9f",
+      "git_tree_sha1": "1a80237106f89ffa1b885e0a6750ab49eb670097"
+    },
+    {
+      "path": "objects/sha256/9f/dd",
+      "git_tree_sha1": "3fb88f2a154372c32ea36d7fd9223882ea27a79b"
+    },
+    {
+      "path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145",
+      "git_tree_sha1": "db8b50684f455ca179e4b7ab342e61b624318620"
+    },
+    {
+      "path": "research",
+      "git_tree_sha1": "a716c57dac5bdb23578fb12887177c5bd700c09e"
+    },
+    {
+      "path": "research/architecture",
+      "git_tree_sha1": "e6805fc5a85102f0bd48b3d4725818f64bea1e28"
+    },
+    {
+      "path": "research/architecture/gotham-open-components-c1-prevalidation-20261012",
+      "git_tree_sha1": "1eaf9e12563a935a5e99ae19393e0733048f60a6"
+    },
+    {
+      "path": "research/architecture/node-bus-crosslane-tokenneutral-20261013",
+      "git_tree_sha1": "1267043ef03acaaa466a44d19802071874fb9043"
+    },
+    {
+      "path": "research/communication",
+      "git_tree_sha1": "0468f1a0c488ee42b96806832bc82bf293abead6"
+    },
+    {
+      "path": "research/communication/nscf-r32-r18-seed-r33-legal-20261012",
+      "git_tree_sha1": "b343972b5ac111eeb14f07318bbf537b049dd01d"
+    },
+    {
+      "path": "research/forum",
+      "git_tree_sha1": "8ebd7c6e7dd6bcb1ada4e154a50ef2fc260f4925"
+    },
+    {
+      "path": "research/forum/github-implant-20261012",
+      "git_tree_sha1": "25d9222efa1be745d8ce912e4b41b4eb11435020"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site",
+      "git_tree_sha1": "751b459e9ee81b08ce489ba1ffab9cccd1691a1c"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/assets",
+      "git_tree_sha1": "1e42b10d1be83462a918ae5febe6e6443ab90b9f"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate",
+      "git_tree_sha1": "04c4118831e870c593fadfa0f7e645f61ca69945"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tests",
+      "git_tree_sha1": "5d8547f9df0c917230f52df419ae35a4b774682d"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tools",
+      "git_tree_sha1": "807d6bd910f5c43805c500fcefade499de988d82"
+    },
+    {
+      "path": "research/fundus",
+      "git_tree_sha1": "5e33c091c3e437a2b0061f01a8382e25b7d93cb8"
+    },
+    {
+      "path": "research/fundus/heads",
+      "git_tree_sha1": "ba29d1592cffeb56d858fcf3848a5ab068ddd1c8"
+    },
+    {
+      "path": "research/ix",
+      "git_tree_sha1": "b014a0ad44432f9b150b96606fca6d9437fa0680"
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1",
+      "git_tree_sha1": "d9641587d22fff47e1b66b7fe4fa613ec8268681"
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2",
+      "git_tree_sha1": "58c9c469511f61f8e1ca6a50e80ff22f8c4e3648"
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3",
+      "git_tree_sha1": "a14aa1b2ff1f88a3c52a4c2613b4015a971f0969"
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4",
+      "git_tree_sha1": "5ae2c42548f76f3d87b01cd362600a507b550568"
+    },
+    {
+      "path": "research/pipeline",
+      "git_tree_sha1": "5096f95568e628a2b2e1a8fa0f1d5837b2a588ed"
+    },
+    {
+      "path": "research/pipeline/events",
+      "git_tree_sha1": "ac13a8d385cc5f3c46cb3ec4ac37eed1c64fce29"
+    },
+    {
+      "path": "research/pipeline/events/2026",
+      "git_tree_sha1": "c7e321cb06479661d46da433fbff6570d8b2d489"
+    },
+    {
+      "path": "research/pipeline/events/2026/09",
+      "git_tree_sha1": "f0e5e725b81760dcbe50e6412ba4e7e8da366a64"
+    },
+    {
+      "path": "research/pipeline/events/2026/09/01",
+      "git_tree_sha1": "8cb6730d5b0fd0afdb2dd14e5390f01ddfc2b190"
+    },
+    {
+      "path": "research/pipeline/index",
+      "git_tree_sha1": "b1f22288f7c4aa0eca0e8d42ffcd92151f957913"
+    },
+    {
+      "path": "research/pipeline/packages",
+      "git_tree_sha1": "cda276541a2c8e7ba3d8d60fed3bccec63b110e2"
+    },
+    {
+      "path": "research/pipeline/packages/2026",
+      "git_tree_sha1": "c24cb84235633c03d8ff4a4257e81b986ddb24f3"
+    },
+    {
+      "path": "research/pipeline/packages/2026/09",
+      "git_tree_sha1": "31d35b1d622c2be84385c360a36f34a131a0d03f"
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27",
+      "git_tree_sha1": "5bf2fc5edb39b0aeab6b9b9ccba975205eac96c5"
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots",
+      "git_tree_sha1": "937a1ccfea43082011cf389ed2fdddf3444e7554"
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1",
+      "git_tree_sha1": "875bab483de798c70f7d5e93502b0a6a2935f46f"
+    },
+    {
+      "path": "research/pipeline/templates",
+      "git_tree_sha1": "5e55a6784049e579e7e48bae6d97d3cc6c0a4065"
+    },
+    {
+      "path": "research/r10r23",
+      "git_tree_sha1": "997926d4ab40786cc775718656db66f1f07b679a"
+    },
+    {
+      "path": "research/r10r23/dual-lineage-ring-attractor",
+      "git_tree_sha1": "57100be1c7975ec950b6f0bf3c1c1624becd6980"
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1",
+      "git_tree_sha1": "203c4bcf4617a5a1b79de5df79e2528ed4979f2a"
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources",
+      "git_tree_sha1": "0d60985798a4e1f76a9c844228ca479cbcf38613"
+    },
+    {
+      "path": "research/r16",
+      "git_tree_sha1": "a42d4f13cfea413c674713fc035649412a629754"
+    },
+    {
+      "path": "research/r16/autoclaw-r3-cross-platform-20261012",
+      "git_tree_sha1": "580d3c76fc1d221148d726edec44a74ebfc984a6"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012",
+      "git_tree_sha1": "c29ed14c2921534791901fb05502e78a0a445618"
+    },
+    {
+      "path": "research/r16/axiom-software-foundation-20261012",
+      "git_tree_sha1": "6b44212e563275f0b3adc407c62fce18e6011c07"
+    },
+    {
+      "path": "research/r17",
+      "git_tree_sha1": "ee7a8634210a87c153a6a71d7bcd0f3b431f956a"
+    },
+    {
+      "path": "research/r17/axiom-mind-module-20261012",
+      "git_tree_sha1": "3acf9e08096bbdaa2fbc3cb2067e5b93fe7ea706"
+    },
+    {
+      "path": "research/r18",
+      "git_tree_sha1": "442159f468ddb4aba9e46afd094e5dbc1758412a"
+    },
+    {
+      "path": "research/r18/clean-room-provenance-20261012",
+      "git_tree_sha1": "712b25955d80a04f4fe5e3e00613411d37c13b0c"
+    },
+    {
+      "path": "research/r21",
+      "git_tree_sha1": "3bd9c19ac193e0b75a37512ddfb8fe4c80a3b620"
+    },
+    {
+      "path": "research/r25",
+      "git_tree_sha1": "e0e078e58b91a8caed069279d7deef81e178c71e"
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2",
+      "git_tree_sha1": "4b22e30414a51faa8ce8cd1fd8386ce4cd628e41"
+    },
+    {
+      "path": "research/r26",
+      "git_tree_sha1": "81466a728fbac8b9a5bbad69decf5b625ebda1fb"
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010",
+      "git_tree_sha1": "5958a4a6199c668d4cad6ab1aab2a6974a7ed61e"
+    },
+    {
+      "path": "research/r26/axiom-r1-adjudication-20261010",
+      "git_tree_sha1": "18b0061a231499cb9bd3bfad2161aa10f1c9a398"
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011",
+      "git_tree_sha1": "ee037ba4613650999cf69583ca0eb8da5a06a6a2"
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011",
+      "git_tree_sha1": "0a9559681df567c7852c7aecc5b738d22929de9c"
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011",
+      "git_tree_sha1": "c8e67309db1e15865cf86f48cdb096d2edf6af43"
+    },
+    {
+      "path": "research/r26/meta-independent-review-20261010",
+      "git_tree_sha1": "7bf826edbc3b43eb331587ca8e7aa57f102ce08d"
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011",
+      "git_tree_sha1": "4965e895e283e5da691a0dc42afeb65da0311b6a"
+    },
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011",
+      "git_tree_sha1": "7326433b1d9fd5a825cc1a81f61e6fca6c426367"
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011",
+      "git_tree_sha1": "4ad5b1e3f42be6851b642158994a87171d078213"
+    },
+    {
+      "path": "research/r27",
+      "git_tree_sha1": "78b7e006ac7b56bf5109436218abd4af3e82752b"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011",
+      "git_tree_sha1": "5fe7a068cfdcf4757964e5a00e48ec5ae121f279"
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/returns",
+      "git_tree_sha1": "847d52dca0e4eec315336e7c3034602470ba43de"
+    },
+    {
+      "path": "research/r29",
+      "git_tree_sha1": "880540439f37f6b62cf95cb9bf5d307a7de61770"
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011",
+      "git_tree_sha1": "18ef8e3a33874f21be75771b42941e88cbb96c40"
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011",
+      "git_tree_sha1": "7920ba14f65f723bc4eb0f4463f7d2f6f972c94f"
+    },
+    {
+      "path": "research/r5",
+      "git_tree_sha1": "d859280c1ebca8a49d4940b0ea37c5006d69a784"
+    },
+    {
+      "path": "research/r5/axiom-platform-audit",
+      "git_tree_sha1": "4a74bf036acaee0707d66409f2c782ea248aa697"
+    },
+    {
+      "path": "research/r5/qwen-coder",
+      "git_tree_sha1": "26c8fe1b11f0d78ecc8928d125c257b1c6da2ac4"
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native",
+      "git_tree_sha1": "50ab64d79a4143cebcb871ef9d9642fa5df69d34"
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/provenance",
+      "git_tree_sha1": "88852219b4f32d057dfa0c0378a4abe07ace02b5"
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery",
+      "git_tree_sha1": "f6ad130d514c6384b0bf32fe8083bd03f642a186"
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport",
+      "git_tree_sha1": "c14d5646c4dab37c9df6f05299e616c4d8258644"
+    },
+    {
+      "path": "research/r5/qwen-coder/original-local-bindings",
+      "git_tree_sha1": "f5516d786f4bd498f636ab198fe2293251e6ce62"
+    },
+    {
+      "path": "research/r5/qwen-coder/receipts",
+      "git_tree_sha1": "560f0cac98f30f95e9e84702e5beedb9efe5550d"
+    },
+    {
+      "path": "research/r5/qwen-coder/returns",
+      "git_tree_sha1": "f30dfbfbb7d3d4c979cbb8d3f3a8cf7e66248f41"
+    },
+    {
+      "path": "research/r6",
+      "git_tree_sha1": "e469a2ea270cdedb17e6312021b0d244378bc73f"
+    },
+    {
+      "path": "research/r6/livecount",
+      "git_tree_sha1": "07926968ba5ddf93fdc8a33c16ffe910febc6f3f"
+    },
+    {
+      "path": "research/r6/livecount/events",
+      "git_tree_sha1": "213ad592d71ce5e67624fd048e5435208e008c25"
+    },
+    {
+      "path": "research/r6/livecount/observations",
+      "git_tree_sha1": "201213b44a3a4f61bb251a7caca6f6a52ea4464c"
+    },
+    {
+      "path": "research/r7",
+      "git_tree_sha1": "27bc9b943b8b8566b515f3442ce4b05c0596ddf6"
+    },
+    {
+      "path": "research/r7/radiometric-extension",
+      "git_tree_sha1": "2833f680bc43a1a8d5851d2a6abf3006f1d8aef3"
+    },
+    {
+      "path": "research/r7/radiometric-extension/corrected",
+      "git_tree_sha1": "bae9dbc46993cc9ccae2d2b4c4568afb432d563b"
+    },
+    {
+      "path": "research/r7/radiometric-extension/tests",
+      "git_tree_sha1": "84a14dece7208381140a61d7aeaedf81cb5475ed"
+    },
+    {
+      "path": "research/r7/soft-lineage-nci",
+      "git_tree_sha1": "93b1ea393b4bada4597d93602cd6bac38657ccd4"
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/MANUS_PGI1_RETURN",
+      "git_tree_sha1": "8839f6f3028ba74361c88a1a9e6dc8b9a92066bf"
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/ORDER",
+      "git_tree_sha1": "db1ccbb839b1ccfab522c46b29ec00e5f8acf83e"
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS",
+      "git_tree_sha1": "0828f8e82aeb3d45f7102a9c7f7f6fa1891f6964"
+    },
+    {
+      "path": "research/r8",
+      "git_tree_sha1": "8ca98b032452f9cf40a9e6e2a637b8a2910f939b"
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3",
+      "git_tree_sha1": "43cd3cfe4299e18660f57f580e2f0f01fc7d8a86"
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/method",
+      "git_tree_sha1": "dac08c28e506a200f62b98e79ee3a63ae1f8a9eb"
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation",
+      "git_tree_sha1": "ed31ed62b20f1205e1a464a0c5bb3288625a3ca9"
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation",
+      "git_tree_sha1": "86c3bd1daef3fa8330242b042a4b199b2a86c0d2"
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2",
+      "git_tree_sha1": "08ad4ce91bb5d2d48c47c8c1d89fcdc3f7dd6cc9"
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/validation",
+      "git_tree_sha1": "9b233959c8f72925f271e409225073783f6652ab"
+    },
+    {
+      "path": "research/website",
+      "git_tree_sha1": "73d244272eca0114893e6e689b05bc493b1e7bbf"
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012",
+      "git_tree_sha1": "ba5e96b09055a8622a0df2dfaaa26721dc63d9ad"
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/site",
+      "git_tree_sha1": "bf9fa4ea1e1db6f5ae3789741cddbab7b3380cd7"
+    },
+    {
+      "path": "schema",
+      "git_tree_sha1": "e94f71afa27249632f4537a3c3a56657764954bd"
+    },
+    {
+      "path": "schema/r19",
+      "git_tree_sha1": "ced6c7ea741ef77ae61d47a22c0edb7a9d7b123c"
+    },
+    {
+      "path": "schema/r21",
+      "git_tree_sha1": "c649b2e080f304f5573311fd9af3574493d2f148"
+    },
+    {
+      "path": "schema/r21/r21r1",
+      "git_tree_sha1": "cc805718de895b5ce0a832e811adabd2be1c3473"
+    },
+    {
+      "path": "schema/r5",
+      "git_tree_sha1": "0330d6ff5939bd91a0cb00f051d6ff605fce4865"
+    },
+    {
+      "path": "scripts",
+      "git_tree_sha1": "97408038cc53efb7ae8280eda847aa83279cc68b"
+    },
+    {
+      "path": "scripts/r21r1",
+      "git_tree_sha1": "2d06ff71f506a0ca6baa5ce2e2042d5a5ba99718"
+    },
+    {
+      "path": "scripts/r5",
+      "git_tree_sha1": "593301c280e0b15c642a97dfa9448e9ffb1b1ea5"
+    },
+    {
+      "path": "tests",
+      "git_tree_sha1": "f95255bf28e7230cb4eeb4065824642e57540e9b"
+    },
+    {
+      "path": "tests/r19",
+      "git_tree_sha1": "e980da1656322167d59926b1b399fe10078886b5"
+    },
+    {
+      "path": "tests/r21",
+      "git_tree_sha1": "c53c4143adc88afd1be0009d5060e47a7b81754b"
+    },
+    {
+      "path": "tests/r21/r21r1",
+      "git_tree_sha1": "a9e2ed1ebf6cfd0773af297129ea322b4c0bf59d"
+    },
+    {
+      "path": "tests/r5",
+      "git_tree_sha1": "8007c4cbb90accf6967e12f44d452ac834ddd6d0"
+    },
+    {
+      "path": "validation",
+      "git_tree_sha1": "b65cce78e73a45f2094896d06c0ee138c09063ad"
+    },
+    {
+      "path": "validation/r21",
+      "git_tree_sha1": "6a172523bc59155f4cb30ec66b4ca1bf1fe093e7"
+    },
+    {
+      "path": "validation/r21/r21r1",
+      "git_tree_sha1": "5d0dcfb860ea846c72df78be4b5bfff2b4dc362d"
+    },
+    {
+      "path": "validation/r5",
+      "git_tree_sha1": "e15e086f7adfed740db460517759f750b43db485"
+    }
+  ],
+  "files": [
+    {
+      "path": "_config.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "dd4746ae1ff9a71a8e1046086268191e52d9352d",
+      "bytes": 164
+    },
+    {
+      "path": ".gitattributes",
+      "git_mode": "100644",
+      "git_blob_sha1": "953f7f6a28fd2745b427caac0060e902e1023841",
+      "bytes": 135
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "git_mode": "100644",
+      "git_blob_sha1": "e72ad7883c566f5024e2d66fa08a37aef5bf410e",
+      "bytes": 17
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e0dd2cf5aadd6c0446046f88027b48d4486450bb",
+      "bytes": 2777
+    },
+    {
+      "path": ".github/workflows/validate-a83-framework-hardening.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "b03b029f7c168ac80ae42f3a40a3ad9481c367a7",
+      "bytes": 2078
+    },
+    {
+      "path": ".github/workflows/validate-anchor.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "3ab2bfecc4949cf23bc9ea1eafeb65c342cf0b0e",
+      "bytes": 1138
+    },
+    {
+      "path": ".github/workflows/validate-external-agent-pr.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "065cf5b248d2ed4be6f3be3440da0289cc23e4c0",
+      "bytes": 1784
+    },
+    {
+      "path": ".github/workflows/validate-ix-r1-open-agent-foundation.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "42fac37d27c375e2636f0024184c1500d9a08225",
+      "bytes": 2600
+    },
+    {
+      "path": ".github/workflows/validate-ix-r2-integrity-boundary-foundation.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "45e960a7efa2317f0aacd245789dab43b00422ec",
+      "bytes": 2717
+    },
+    {
+      "path": ".github/workflows/validate-ix-r3-controlled-falsification.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "106f7a5c27fd14c6f1bc1d13c62652594e88aa49",
+      "bytes": 3546
+    },
+    {
+      "path": ".github/workflows/validate-ix-r4-order.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "f698dc4338508ce40edee23da5d1043c59f5309f",
+      "bytes": 1834
+    },
+    {
+      "path": ".github/workflows/validate-r19-orbis.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "6ec1c69d7e874e50ce1efebd26966602ce4b9f57",
+      "bytes": 979
+    },
+    {
+      "path": ".github/workflows/validate-r21-astra-nav.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "285561ab7400eacf915543fabbb81bf003139a6b",
+      "bytes": 6599
+    },
+    {
+      "path": ".github/workflows/validate-r7-radiometric.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "b03b073f8b6b4bb8cab3666e90f42e039c2954d3",
+      "bytes": 1314
+    },
+    {
+      "path": ".github/workflows/validate-r8-astratis-viii-closure-r3.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "e65c306b40e050c7e3b93413a6da445af2741895",
+      "bytes": 2106
+    },
+    {
+      "path": ".github/workflows/validate-r8-custody.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "01855895957d24a346e55dc8c1df6d9fc1b60c2a",
+      "bytes": 1981
+    },
+    {
+      "path": ".github/workflows/validate-r8-r1-r2-crossvalidation.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "68020a0e85b1591510cadcfb7cfba2068f41f2ad",
+      "bytes": 1726
+    },
+    {
+      "path": ".github/workflows/validate-repository-structure.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "721a48c1b99670b81ec426734e5c4bcaec15a72d",
+      "bytes": 1144
+    },
+    {
+      "path": ".github/workflows/validate-research-pipeline.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "79aa74c605efae04bc4f231bfeba0469298e69ec",
+      "bytes": 2263
+    },
+    {
+      "path": ".github/workflows/validate-scientific-communication.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "082979fd7531b22873f0a93a8418a5e7d5b6693a",
+      "bytes": 1126
+    },
+    {
+      "path": ".github/workflows/validate-scientific-ledger.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "787cc06380be6b3981ba2ab0fd20e53cb13881b4",
+      "bytes": 919
+    },
+    {
+      "path": ".gitignore",
+      "git_mode": "100644",
+      "git_blob_sha1": "db8aaac9e51334523ae215eaad59156841a633e3",
+      "bytes": 55
+    },
+    {
+      "path": "AGENTS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f24f7cf557927016860279b65d0725275e6270a9",
+      "bytes": 10110
+    },
+    {
+      "path": "archive/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "db88997c4225e06328182cc9aefa84e37bf4c24b",
+      "bytes": 500
+    },
+    {
+      "path": "CITATION.cff",
+      "git_mode": "100644",
+      "git_blob_sha1": "59c57e0145af3f5bdd4172ca5b111cffb167aad0",
+      "bytes": 413
+    },
+    {
+      "path": "communication/index/v1/latest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1a8b31788e2e49b4426b689a6c21e252c6ea2706",
+      "bytes": 572
+    },
+    {
+      "path": "communication/index/v1/records.jsonl",
+      "git_mode": "100644",
+      "git_blob_sha1": "ff4cc2040eeb9b20c0d0cc1db2b353b9fc997a93",
+      "bytes": 503
+    },
+    {
+      "path": "communication/objects/sha256/1c/df/1cdfcc74319f6f8500d969e8345ce5b6e1e6298482e03b6c96881cbbbd99dece/record.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8026d7f56986113b3086f1fe6e2ca9de548be13a",
+      "bytes": 973
+    },
+    {
+      "path": "communication/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a26f0879a1f9e9687c2ef0f7c3225db1dd84521a",
+      "bytes": 2251
+    },
+    {
+      "path": "docs/agent-protocol.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5f206e46bdbc021790d417dd7d42ef6e5fcd9a2c",
+      "bytes": 2134
+    },
+    {
+      "path": "docs/AI_CONTEXT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c24443bf45eba6afed3a1e40b6e316e972caf413",
+      "bytes": 5591
+    },
+    {
+      "path": "docs/AI_HANDOFF_PROTOCOL.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "85c1b0de59ac9002b6df20152a0596be33f46417",
+      "bytes": 7468
+    },
+    {
+      "path": "docs/architecture/NEXUS_OMEGA_AXIOM_R28_TWO_HOUR_AUTOMATED_FILE_HANDOFF_TO_NEXUS_CURSOR_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b77d3fd32ed6250a2ef7e215a1e0069674707fcd",
+      "bytes": 20605
+    },
+    {
+      "path": "docs/architecture/NEXUS_OMEGA_WWW_ICEBERG_V1_C1_FULL_PUBLICATION_PIPELINE_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "3923c601c8fe46efcb0e03425cbb2f61b5eb3550",
+      "bytes": 10135
+    },
+    {
+      "path": "docs/architecture/NEXUS_PUBLIC_ATOMIC_UPDATE_TICKER_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "85f99d91d9cd7d4642e4a7795ff39fb7dc1eae79",
+      "bytes": 10717
+    },
+    {
+      "path": "docs/architecture/NEXUS_R28_GITHUB_PREENTRY_SANDBOX_LAB_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b258510c9dd24c3c13ed085a7876d966777a0a7f",
+      "bytes": 11590
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_STRUCTURE.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "adedc180ebd7a7f78380a9ef27ec364744924ad8",
+      "bytes": 15326
+    },
+    {
+      "path": "docs/architecture/REPOSITORY_STRUCTURE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9b92c02765c72d89de1271280b1e0dca345199e6",
+      "bytes": 6422
+    },
+    {
+      "path": "docs/architecture/SHARED_RESEARCH_PIPELINE_ARCHITECTURE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "32a672353c3474a69451316c56f0e95c5570426f",
+      "bytes": 5212
+    },
+    {
+      "path": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5af1bada7771d7021e95c1865dc33e378e6a39ac",
+      "bytes": 10418
+    },
+    {
+      "path": "docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1fabcab7f556e83621a3676ddfb3d11cdd964b55",
+      "bytes": 2178
+    },
+    {
+      "path": "docs/governance/HOSTINGER_PRIMARY_ARTIFACT_TRANSFER_AND_CUSTODY_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9b8153390dac05116a40cf05797acb84e024c8ab",
+      "bytes": 10821
+    },
+    {
+      "path": "docs/governance/NEXUS_OMEGA_DEEPSEEK_TASK_ANCHOR_ADJUDICATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e51b944e60f9b8de247bba9dc425c58daf97cf86",
+      "bytes": 2770
+    },
+    {
+      "path": "docs/governance/NEXUS_OMEGA_GITHUB_WWW_PARITY_RULE_V1_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "bc82fb843b2a57fddfafdf933e544cb87f066ebe",
+      "bytes": 2503
+    },
+    {
+      "path": "docs/governance/NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a99e6fc7c71cbf82bdfdd9cf414b44a362073ce8",
+      "bytes": 2488
+    },
+    {
+      "path": "docs/governance/NEXUS_OMEGA_TASK_ANCHOR_NORM_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "51c97b624f14fe9c3f1dfe1bf13394a773f87935",
+      "bytes": 12650
+    },
+    {
+      "path": "docs/governance/REPOSITORY_ORDER_POLICY.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f2acb7dece8a37eb20c6c8f24c5742f882acf02a",
+      "bytes": 4396
+    },
+    {
+      "path": "docs/governance/REPOSITORY_PATH_RULES.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "d78f7b4ac73928d7578f14946feb90d675675f5b",
+      "bytes": 932
+    },
+    {
+      "path": "docs/OPEN_SCIENCE_AGENT_COMMUNICATION_MANIFEST.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "8b2a7140964ed8020e6495ecbb746d5a73c541c5",
+      "bytes": 10684
+    },
+    {
+      "path": "docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "0218676fce9bee688aba1b53f127990d60e99980",
+      "bytes": 2510
+    },
+    {
+      "path": "docs/phase2/A83_FRAMEWORK_INVENTORY_AND_GAP_REPORT_v1.0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e1a035f7e512cf936748d35fb01ba6051c0f1dbe",
+      "bytes": 1266
+    },
+    {
+      "path": "docs/phase2/NEXUS_OMEGA_A84_INDEPENDENT_GITHUB_VALIDATION_RETURN_20260831_R0_HANDSHAKE.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "20f1d622e61b47353a5f16df44929435e2c46868",
+      "bytes": 686
+    },
+    {
+      "path": "docs/phase2/NEXUS_OMEGA_A84_INDEPENDENT_GITHUB_VALIDATION_RETURN_20260831_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e50640e36190db582dc9710b5240e769116bf604",
+      "bytes": 5435
+    },
+    {
+      "path": "docs/r10/r23/NEXUS_OMEGA_AXIOM_R10R22_OPERATOR_CLOSURE_AND_R10R23_CANONICAL_OPEN_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "7073389f2ab21fb07b2990ec759eb9967a9d51cb",
+      "bytes": 5531
+    },
+    {
+      "path": "docs/r10/r23/NEXUS_OMEGA_AXIOM_R10R23_SCIENTIFIC_SMALLTALK_R23_R24_R25_EVIDENCE_BOUNDARY_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b934da26ae77f109d4e08afe73ae1138833b118f",
+      "bytes": 12470
+    },
+    {
+      "path": "docs/r19/AXIOM_R19_SCOPED_WWW_PUSHFREIGABE_AND_INTERMEDIATE_ADJUDICATION_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "dd8e1f1b2f8aa9642f5062492f78e08a101110ef",
+      "bytes": 10289
+    },
+    {
+      "path": "docs/r19/ORBIS_DYNAMIC_SATELLITE_SLOT_LEDGER_TO_WWW_C1_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "00a4f013024d359a70d38e29c993debd5a77cf61",
+      "bytes": 9893
+    },
+    {
+      "path": "docs/r21/nexus-provenance-atom-v1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c13c9dc999cb893de94ca03e8b6b4da18ad57695",
+      "bytes": 4188
+    },
+    {
+      "path": "docs/r21/nexus-symbiosis-contract-v1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e810246daf0bba6ea7cc811df93fd4d976d32be8",
+      "bytes": 2283
+    },
+    {
+      "path": "docs/r21/ORBIS_ASTRA_NAV_GNSS_OFFLINE_PHOTO_TERRAIN_FOUNDATION_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "99e555838b0a7c7822e48da7c03c7ce128887e8c",
+      "bytes": 14127
+    },
+    {
+      "path": "docs/r21/ORBIS_ASTRA_NAV_P0_EXECUTABLE_WWW_SCOPED_PUSH_HANDOFF_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "720001c8583b2f8c4b3b5fea4ff3a5fa1c9ec306",
+      "bytes": 5736
+    },
+    {
+      "path": "docs/r21/orbis-p0-attribution-surface-spec.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b3655815ffecbdada9e6f5171edb52534161ba3a",
+      "bytes": 2047
+    },
+    {
+      "path": "docs/r21/r21r1/ASTRA_NAV_P0_R21R1_CURSOR_SCOPED_DEPLOY_HANDOFF.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "041a638532b90def0106514043222422255518ca",
+      "bytes": 3890
+    },
+    {
+      "path": "docs/r21/r21r1/NEXUS_OMEGA_AXIOM_GROK_RETURN_ADJUDICATION_AND_R19_SGP4_SOURCE_EXACT_BRIDGE_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "91ae894b29290aed11a2a2151ee81665cac41df2",
+      "bytes": 8619
+    },
+    {
+      "path": "docs/r21/r21r1/NEXUS_OMEGA_AXIOM_TO_GROK_R21R1_R19_R10R22_POSTMODULE_MAXI_ADVERSARIAL_ORDER_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "94d34abed445023978f1cf07511e8d6b6f2a611a",
+      "bytes": 27303
+    },
+    {
+      "path": "docs/r21/r21r1/NEXUS_OMEGA_AXIOM_TO_MISTRAL_VIBE_R21R1_CAUSAL_EXECUTION_MAXI_ORDER_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5d7ad5fdaae48ea25598a41f5313bc833c9115f1",
+      "bytes": 18137
+    },
+    {
+      "path": "docs/r21/r21r1/NEXUS_OMEGA_MISTRAL_VIBE_R21R1_IMPLEMENTATION_AND_GAP_CLOSURE_RETURN_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "be13396c6e32c6cb31c157d0d2a88bf8ced889b4",
+      "bytes": 7585
+    },
+    {
+      "path": "docs/r21/r21r1/OFFLINE_ROUTING_ENGINE_COMPARISON.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9569e3cc4c46e9bceace3b0c8d02d3059f9e3762",
+      "bytes": 3503
+    },
+    {
+      "path": "docs/r21/r21r1/PHOTO_TERRAIN_RIGHTS_AND_GSD_MATRIX.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "03b74948f6f4e9cd8ade6d7cbad192d4666d61da",
+      "bytes": 3541
+    },
+    {
+      "path": "docs/r21/r21r1/SOURCE_EXACT_BASELINE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "39adce5c21587d1c16497f5dc640414f0d7fa7b9",
+      "bytes": 3829
+    },
+    {
+      "path": "docs/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "81ed5d8cbb4660a4a574140ddde1e0cd41ecc594",
+      "bytes": 375
+    },
+    {
+      "path": "docs/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d3a28e2f987a4864db4b2e0847de142c7622a3a4",
+      "bytes": 776
+    },
+    {
+      "path": "docs/release-checklist.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "76f9345ece84918e450e1baad8679e16db575e2e",
+      "bytes": 1120
+    },
+    {
+      "path": "docs/SCIENTIFIC_COMMUNICATION_IMPLEMENTATION_PROFILE_V0_1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "35f8cf0be1ecab7122f382625d653fa14c821fd8",
+      "bytes": 2028
+    },
+    {
+      "path": "examples/a83/handoff-envelope-v1.example.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "072a18de9ee8a3026efe9975e4d7d431f3e2275b",
+      "bytes": 932
+    },
+    {
+      "path": "examples/nexus-omega-iceberg-homepage-v1.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "25d19369eb144c5ae7efb24abe31a6cc63804e6f",
+      "bytes": 14257
+    },
+    {
+      "path": "examples/nexus-public-update-ticker-v1.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "681d55313a00d4c41c7d4ff3701a2889110294ec",
+      "bytes": 11682
+    },
+    {
+      "path": "examples/r19/orbis-satellite-directory.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "a3cf17441e5ca29373e84725f82cdb65809474ab",
+      "bytes": 8501
+    },
+    {
+      "path": "examples/r19/orbis-satellites-empty.fixture.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8e59a08dcee8b411b7d9d85675740b4cc969e4c4",
+      "bytes": 240
+    },
+    {
+      "path": "examples/r19/orbis-sgp4-public-contract-bridge.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "0cca8f9d953720f7aa5930b7d74a250753b3ad97",
+      "bytes": 5641
+    },
+    {
+      "path": "examples/r21/astra-nav-p0/app.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "a3984fd606556ff239ccf08de781ff2a9e6da648",
+      "bytes": 4184
+    },
+    {
+      "path": "examples/r21/astra-nav-p0/index.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "19a170be0f81d5a44483e3d66f1b15bf444fbfb3",
+      "bytes": 3000
+    },
+    {
+      "path": "examples/r21/astra-nav-p0/style.css",
+      "git_mode": "100644",
+      "git_blob_sha1": "d5a3bbaaf1a10766a91f74fc4aaf408ed320fb5f",
+      "bytes": 2796
+    },
+    {
+      "path": "examples/r21/astra-nav-p0/ui-model.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "20b259a653950c43258e45f578ff6223c91634ef",
+      "bytes": 4313
+    },
+    {
+      "path": "examples/r21/nexus-provenance-atom.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "c0ef568f4e389876a094e2d8d48ef62ed3f0b6a8",
+      "bytes": 3604
+    },
+    {
+      "path": "examples/r21/orbis-astra-nav-photo-lod.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "6eddf4ad835c86a877ff3cfc9e3b24a82fc6be3e",
+      "bytes": 4770
+    },
+    {
+      "path": "examples/r21/orbis-gsd-truth-ui.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "630e31f199d5f147c8b24200ccd652da73fe4092",
+      "bytes": 1442
+    },
+    {
+      "path": "examples/r21/r21r1/android-gnss-companion/AstraNavGnssCompanion.kt",
+      "git_mode": "100644",
+      "git_blob_sha1": "bf393c6ae1ef09455defd796bae3f30b930f9411",
+      "bytes": 4817
+    },
+    {
+      "path": "examples/r21/r21r1/nexus-nav-event.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "fc07d4b69d770701fa11255509256aa57ae7b757",
+      "bytes": 4186
+    },
+    {
+      "path": "examples/r21/r21r1/nexus-nav-fix.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "3f03b804baa034d6342383a5a674883787cf430f",
+      "bytes": 6080
+    },
+    {
+      "path": "examples/r21/r21r1/offline-pack.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "4a8b584b77d2f4f6457100d6c4f79f20a669d1b3",
+      "bytes": 6938
+    },
+    {
+      "path": "examples/r21/r21r1/photo-tile-provenance.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "2928fac0c71ef8cf6976654e4ad51f7a23902b75",
+      "bytes": 5442
+    },
+    {
+      "path": "examples/r21/r21r1/www-closeout-receipt.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "c1c3fa4e41da464ed08b5a4b6e5f2591a8817b10",
+      "bytes": 7266
+    },
+    {
+      "path": "examples/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "faae7705b14a8b6f3068d1ee96d5438bb8a52144",
+      "bytes": 222
+    },
+    {
+      "path": "examples/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "99d055d23a86a03824da330e5077d04c9102459d",
+      "bytes": 327
+    },
+    {
+      "path": "examples/scientific-communication/communication-receipt-v1.example.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "11ad3fddd854b97eaf5c76a0edf897374a729bcc",
+      "bytes": 1422
+    },
+    {
+      "path": "examples/task-anchor-v1.example.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2510b3149b37d8b3b132362ea5aee37a820dcae9",
+      "bytes": 3995
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b630b62eb9800e2f57b6c86318c72faadb29c23b",
+      "bytes": 2423
+    },
+    {
+      "path": "index.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5f62db505088def183f1ee580fff2bc55234b9c7",
+      "bytes": 2580
+    },
+    {
+      "path": "index/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f2cdf9cd0dbe66b00b05e8f20a28b1dd428be321",
+      "bytes": 274
+    },
+    {
+      "path": "index/v1/lanes/dps_epistemic_sovereignty.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "cef77639b4b9e36fecd80a93a6f1711881876393",
+      "bytes": 516
+    },
+    {
+      "path": "index/v1/latest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "4e957f463eda19734c1ab42c51bb4bb6cfa073d7",
+      "bytes": 871
+    },
+    {
+      "path": "index/v1/objects.jsonl",
+      "git_mode": "100644",
+      "git_blob_sha1": "974908b3294a1cf6b42da00d7b0ceeff6c7da80f",
+      "bytes": 701
+    },
+    {
+      "path": "LICENSE",
+      "git_mode": "100644",
+      "git_blob_sha1": "0ad2c2b86f21f298c18ddecb93dfe4fbc5a4fbf5",
+      "bytes": 768
+    },
+    {
+      "path": "objects/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9ec72c286cef561306a5b4eb153647a944ed05b0",
+      "bytes": 311
+    },
+    {
+      "path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/artifact.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2c93726ed86c1f44140b9c993cd917739ff49913",
+      "bytes": 3144
+    },
+    {
+      "path": "objects/sha256/9f/dd/9fdd1dccc9fd76222352eeb21af6b392358f18b7886b25137892c5a1c3a92145/manifest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "7397abcb6923a4a0c6857cba96a8e07984eb5c6a",
+      "bytes": 2258
+    },
+    {
+      "path": "README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "558d7a50aa2384fde33b3b767f411ee0cfa86f81",
+      "bytes": 23945
+    },
+    {
+      "path": "requirements-a83-test.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "5b240e092fccc901b0b35d57dd4d789d80e9cef1",
+      "bytes": 14
+    },
+    {
+      "path": "research/architecture/gotham-open-components-c1-prevalidation-20261012/NEXUS_OMEGA_AXIOM_GOTHAM_OSS_NODE_PREVALIDATION_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5fc7ad05c92ea136a1ed7bad261f7f5e46d6d849",
+      "bytes": 11644
+    },
+    {
+      "path": "research/architecture/gotham-open-components-c1-prevalidation-20261012/NEXUS_OMEGA_GOTHAM_OSS_NODE_CANDIDATE_REGISTRY_20261012_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "9c3545c33cae333620f8630ecd134aa798b34318",
+      "bytes": 8121
+    },
+    {
+      "path": "research/architecture/gotham-open-components-c1-prevalidation-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a950af37e78079e018b8b5b4a5bb97fc582e7e0f",
+      "bytes": 1766
+    },
+    {
+      "path": "research/architecture/node-bus-crosslane-tokenneutral-20261013/NEXUS_OMEGA_AXIOM_TO_CURSOR_NEXUS_NODE_BUS_TOKENNEUTRAL_ALL_LANE_CROSSVALIDATION_20261013_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "322ebfba9e6c40ae9fca9744917be9052f7df26b",
+      "bytes": 16248
+    },
+    {
+      "path": "research/architecture/node-bus-crosslane-tokenneutral-20261013/NEXUS_OMEGA_NODE_BUS_C1_22_LANE_AUDIT_PREFLIGHT_20261013_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8070e9ed32c8e762b3970e0ea55c5d256487a059",
+      "bytes": 16874
+    },
+    {
+      "path": "research/architecture/node-bus-crosslane-tokenneutral-20261013/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f0d19305dd9554c48c5379b7e910f43c5285a4c0",
+      "bytes": 3080
+    },
+    {
+      "path": "research/architecture/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b4f9da4c4c34de98a159530c2363ea2e447b5c33",
+      "bytes": 800
+    },
+    {
+      "path": "research/communication/nscf-r32-r18-seed-r33-legal-20261012/NEXUS_OMEGA_AXIOM_R32_R18_R33_INDEPENDENT_SOURCE_ADJUDICATION_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "60222d071d6a80e1cac3ac5d35aec81d0fde6997",
+      "bytes": 12078
+    },
+    {
+      "path": "research/communication/nscf-r32-r18-seed-r33-legal-20261012/NEXUS_OMEGA_AXIOM_R32_R18_R33_INDEPENDENT_SOURCE_LEDGER_20261012_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3d8717a4f3177d3125e9971b6c8a27b4eda342c3",
+      "bytes": 4885
+    },
+    {
+      "path": "research/communication/nscf-r32-r18-seed-r33-legal-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5c65f620804af0fae7f640d03ffa754579044ab4",
+      "bytes": 2002
+    },
+    {
+      "path": "research/communication/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "1a781f9d7359ed427bb809993a5ca4561517a399",
+      "bytes": 302
+    },
+    {
+      "path": "research/forum/github-implant-20261012/FORUM_HOSTINGER_ONE_SHOT_MOUNT.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "bed8c702efefcd8eb5d7bc40df130c764469345f",
+      "bytes": 1666
+    },
+    {
+      "path": "research/forum/github-implant-20261012/GATE_INTERFACE_CONTRACT_V1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a0b01fded54eeefdf8010595d5927ea98059136f",
+      "bytes": 5439
+    },
+    {
+      "path": "research/forum/github-implant-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "578e14d0bd57b906ba8325e72adeeb8204e8828f",
+      "bytes": 6795
+    },
+    {
+      "path": "research/forum/github-implant-20261012/SITE_GATE_ONE_SHOT_MOUNT.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "6558667fa246aea626cd908b6943ab9c59625ca1",
+      "bytes": 1609
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/assets/github-implant.css",
+      "git_mode": "100644",
+      "git_blob_sha1": "db18c75506934a18079a0bbbd35f8e5ad22bbb5b",
+      "bytes": 12441
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/assets/github-implant.js",
+      "git_mode": "100644",
+      "git_blob_sha1": "f2db5ccf5f41e79e7aec37a76cf2fb62c3c24076",
+      "bytes": 11693
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/gate-core.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "610fbe02cc1a1bcf7798912dcc42d2f054a49ef4",
+      "bytes": 2786
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/gate.css",
+      "git_mode": "100644",
+      "git_blob_sha1": "d53cbdde05f7e9ee449e090177cfd2b33efddd8d",
+      "bytes": 8464
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/gate.js",
+      "git_mode": "100644",
+      "git_blob_sha1": "6f5ea582d98763ca8032848f9955f4d024142cc8",
+      "bytes": 8477
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/index.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "cb5d9a1d7440d055303f73d852eb781927c0e706",
+      "bytes": 5182
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/index.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "6bf1cce29a17cff1d1530f6ef6b6c8aaefa1cbd9",
+      "bytes": 9611
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tests/test_gate.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "28552e39a50218005c9ac8e7a8f8ea641848fe2f",
+      "bytes": 2215
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tests/test_public_mirror.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "a23f271ad9c303e8bc2a44b0dced5c6cba04c7c7",
+      "bytes": 3084
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tools/mirror_public_git.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "80a30cea41e3b2f5cd085ee3b75dfa6a32c2e2e0",
+      "bytes": 5361
+    },
+    {
+      "path": "research/forum/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "3862eba169a75289769f932a18c6b7221d4c7868",
+      "bytes": 825
+    },
+    {
+      "path": "research/fundus/heads/NEXUS_FUNDUS_HEAD_20260920_R1.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "dc73348c4a1036044adf3648d06ac4db2ab33457",
+      "bytes": 6910
+    },
+    {
+      "path": "research/fundus/heads/NEXUS_FUNDUS_HEAD_20260920_R2.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "68d68fa98bf63ef7df81f0c3c432636c681917bd",
+      "bytes": 9392
+    },
+    {
+      "path": "research/fundus/heads/NEXUS_FUNDUS_HEAD_20260920_R3.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "aa8b638c4e4571429926349059ef1636da2ec2b5",
+      "bytes": 12495
+    },
+    {
+      "path": "research/fundus/NEXUS_FUNDUS_HEAD.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "aa8b638c4e4571429926349059ef1636da2ec2b5",
+      "bytes": 12495
+    },
+    {
+      "path": "research/fundus/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e27a282f63f97cbd36b516444c918d10ee37e7e0",
+      "bytes": 770
+    },
+    {
+      "path": "research/fundus/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "4bc52a9fa86b474b4c389fe6975ad7396f720df8",
+      "bytes": 486
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/ARTIFACT_REASONING_METHODS_CORRECTION.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "14ecb07bc4252b481274dac06de8a578dbaf19da",
+      "bytes": 2434
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/BODYTWIN_CONTINUITY_BLUEPRINT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "74e4b2bb56afe35508cf12df801b38b8a4a9beac",
+      "bytes": 2534
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/FIELD_LAB_AIRGAP_VALIDATION.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "56a4c905611d4ed55e5dc021f38e630f5d820a2f",
+      "bytes": 1681
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/MODULAR_AGENT_CORPUS_ARCHITECTURE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "3a92aa46ddffcb7589da33b508254c8f7ec02ad0",
+      "bytes": 5395
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/OPEN_GAPS_TO_R2.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "84273f69687e5608b61e8c095eca39588722dfe5",
+      "bytes": 1666
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/OPEN_SOURCE_CANDIDATE_MATRIX.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2edfb915af789a8a67a364d8c5713b2cbfa6fe0f",
+      "bytes": 3527
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/OPENNESS_TAXONOMY.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "e8b132bd0ea85b85abccb833e0c65f0b38f226cf",
+      "bytes": 1038
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/PRIMARY_SOURCE_AUDIT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c6e8b78e2aa627b52f1acb8820477eca66754876",
+      "bytes": 5222
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/R1_VALIDATION_REPORT_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "dcfff1742d4d3a3e13835b13ac2b4f0e77af9606",
+      "bytes": 2682
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/R2_OPEN_SOURCE_DISCOVERY_QUEUE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "71090016ece6f54eb63daacd680772eb883eb836",
+      "bytes": 3007
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "8ae8ac827b9e51df9743753a09eece5f0a0cd33e",
+      "bytes": 4834
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "329ae4cae776eb5c5de91eec14cb542810c94046",
+      "bytes": 1144
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r1/SOURCE_PACKAGE_INVENTORY.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "0d783bb5ed6e4c468c9e29b8c0ba2b3924fb19e2",
+      "bytes": 2433
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/BOUNDARY_PROVENANCE_CANDIDATE_MATRIX.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "73d14548061bccb9057831caf64ade607b5b5cbe",
+      "bytes": 3011
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/EVIDENCE_DELTA.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3b89f18f01e78a4afc976de153be522809ebc05c",
+      "bytes": 1054
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/OPEN_GAPS_TO_R3.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a2d8ab94a7ecf80f4f10e90d103834d39c476ac5",
+      "bytes": 2418
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/PRIMARY_SOURCE_AUDIT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b4061ff3c58e9687b53abf189d6ed174db77da23",
+      "bytes": 2623
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/R2_VALIDATION_REPORT_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "4fe7e952447deb0baaa238939d1370f8c15a110f",
+      "bytes": 2243
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "54620201c0177ad7beed6b81df02ec895075d37d",
+      "bytes": 3884
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "31fb51349d0fa9d956d751528b6b91319a667dba",
+      "bytes": 834
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/SOURCE_PACKAGE_INVENTORY.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "f36f21ee68280abe566f9eac3b4f9d0693ae2371",
+      "bytes": 3165
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/TERNARY_KLEENE_CORRECTIONS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "77346b280f355ec1ab035750f806df7d82c5803b",
+      "bytes": 1411
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r2/ZKP_INTEGRITY_CORRECTIONS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "29824dc6fdc852b3aa1b6340e48cd0905547f413",
+      "bytes": 1949
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/EXECUTION_RECEIPT.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "79a71406d53366cf7fd4eaa71d74afa475c39c5b",
+      "bytes": 1956
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/OPEN_GAPS_TO_R4.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a961230bbc7a2adc67b02db81030cc2aae188893",
+      "bytes": 1987
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/PRIMARY_SOURCE_CROSSCHECK.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "916c441de5485a595c0a497953d553c95c706683",
+      "bytes": 1779
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/R3_SOURCE_CLAIM_CORRECTIONS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "3600b54d6a44f6db31f784158a24cf6f0703965d",
+      "bytes": 2149
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/R3_VALIDATION_REPORT_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2fca79d5920998814644edc8f72d419cab4be181",
+      "bytes": 3226
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "729350cde8aeb186d6e2b60780611ba6f65f4894",
+      "bytes": 5474
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/reference_harness.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "e8d5587532e04464d6be91893fadcda11287c4e8",
+      "bytes": 8191
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/requirements.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "c011dd5d074245a5d49692b0d7044fd80d8a855f",
+      "bytes": 21
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "543af512517b5028df47487ebc8c4be029cc7aa8",
+      "bytes": 812
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r3/SOURCE_PACKAGE_INVENTORY.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "628c75c0994425fea266713012b62d7425ee3d1d",
+      "bytes": 3428
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4/PRIMARY_REFERENCES.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f8b844367b6cd06a5691ca7ecfc6a2d55ab58e2a",
+      "bytes": 1355
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4/R4_CANONICAL_CONTINUATION_ORDER_20260920_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c09f2851bdf1f6d522f57bc5138ad9a36815bd86",
+      "bytes": 7462
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4/R4_ORDER_STATE.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "7b263b5a5e0c30db9afe280ab622144f9a84a5e5",
+      "bytes": 942
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "836982eb22a34c761e8102294709b58e8501ea53",
+      "bytes": 1207
+    },
+    {
+      "path": "research/ix/open-agent-foundation-r4/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "10194c4e91f71666e96c0d51a03496e723ea1d4e",
+      "bytes": 363
+    },
+    {
+      "path": "research/ix/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a0e2119af6bbc59aa18b6590c32159ab872854d2",
+      "bytes": 828
+    },
+    {
+      "path": "research/pipeline/CONTINUITY_GUARD_V1_20261013.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d5c0b001c457f8e55aa92f9bc1f27b243acd2bf0",
+      "bytes": 7832
+    },
+    {
+      "path": "research/pipeline/events/2026/09/01/20260901T035600Z_NEXUS_RPE_20260901T035600Z_a31f6c20.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "46a83d5f6a15eeb448ee3cbf857fee7e888b1079",
+      "bytes": 587
+    },
+    {
+      "path": "research/pipeline/events/2026/09/01/20260901T040300Z_NEXUS_RPE_20260901T040300Z_2d7ce948.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2280ed1e5d535c1c13437576d20af65b07b582f5",
+      "bytes": 669
+    },
+    {
+      "path": "research/pipeline/events/2026/09/01/20260901T040301Z_NEXUS_RPE_20260901T040301Z_8b5a13d4.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "42e9b9b2735fdf9561705ed70bb2074916d3828f",
+      "bytes": 671
+    },
+    {
+      "path": "research/pipeline/events/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "31702a9d2d3d161b7603094b718a50fa5d4068aa",
+      "bytes": 553
+    },
+    {
+      "path": "research/pipeline/index/latest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "18c3dfac23809e5ef248a6f3d568fbdb4f003c79",
+      "bytes": 380
+    },
+    {
+      "path": "research/pipeline/index/packages.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "5cfefb2d53af1696236d630db53d64ccdc10abb3",
+      "bytes": 720
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/BACKFILL_SCOPE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "70fe1ef13e25cb98d2483639491db0af4ff635e7",
+      "bytes": 2508
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/CURSOR_MAXIMUM_BACKFILL_ORDER.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "6be210e0a9ac46cf670872baf1163c7200999151",
+      "bytes": 8277
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/items.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2d3a48e2e08b45e4dafaff672e137174bc6b81df",
+      "bytes": 5925
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/LOCAL_SOURCE_ROOTS.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "eabb3d3cc5ac0c4ee1d111c956d333f75d8b34a1",
+      "bytes": 5031
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/manifest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "f41cad41e87fa2bc3248e0552ce621b7816303b6",
+      "bytes": 2646
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/provenance.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "54a74e00edb5c39579ebe3814c74057cdfa62a07",
+      "bytes": 1736
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/CURSOR_HANDOFF.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "730ad1c806ee7575c78e502300eec55613b6f96c",
+      "bytes": 890
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/CURSOR_MAXIMUM_BACKFILL_ORDER.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "6be210e0a9ac46cf670872baf1163c7200999151",
+      "bytes": 8277
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/items.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2d3a48e2e08b45e4dafaff672e137174bc6b81df",
+      "bytes": 5925
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/LOCAL_SOURCE_ROOTS.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "eabb3d3cc5ac0c4ee1d111c956d333f75d8b34a1",
+      "bytes": 5031
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/manifest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "f41cad41e87fa2bc3248e0552ce621b7816303b6",
+      "bytes": 2646
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/provenance.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "54a74e00edb5c39579ebe3814c74057cdfa62a07",
+      "bytes": 1736
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "c1a6cb140c2e3d2d8b51dee6b20ef1eace0c10aa",
+      "bytes": 592
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/snapshots/v1/timeline.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "31f04552650129c138205c55e64bb7d93c8b6451",
+      "bytes": 3382
+    },
+    {
+      "path": "research/pipeline/packages/2026/09/NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27/timeline.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "31f04552650129c138205c55e64bb7d93c8b6451",
+      "bytes": 3382
+    },
+    {
+      "path": "research/pipeline/packages/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "db07352a089e6117dd033d400f8b04860b229815",
+      "bytes": 683
+    },
+    {
+      "path": "research/pipeline/POLICY.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "46bc3acb5b1e42ca5fc07ef847a53d2e4c1143ba",
+      "bytes": 4156
+    },
+    {
+      "path": "research/pipeline/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "74d1deaaacdd23fd162679c7f0055b80090b131d",
+      "bytes": 4756
+    },
+    {
+      "path": "research/pipeline/templates/event.template.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "a8da2bbf4ff50620a18f2feba3149e4f114009ea",
+      "bytes": 418
+    },
+    {
+      "path": "research/pipeline/templates/package-manifest.template.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "d474ae706e1f102df1bdb0243d1131c6653eaf33",
+      "bytes": 693
+    },
+    {
+      "path": "research/r10r23/dual-lineage-ring-attractor/r23-r25-science-evidence-ledger.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "c920c7ac3593657be29655b926d8b076f5b71c0a",
+      "bytes": 4861
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/NEXUS_OMEGA_AXIOM_R24_R26_CORRECTED_C1_ADJUDICATION_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "977c6e9a29a1dbe3c15904146995ff764f841042",
+      "bytes": 6758
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/r24-r26-intake-inventory.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "a43ab263419a8eeab8f2633fa8ae492656110204",
+      "bytes": 3713
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b3fff34d45f95f733a4732572aac1f0a527edeb0",
+      "bytes": 2677
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources/NE723C~1.MD",
+      "git_mode": "100644",
+      "git_blob_sha1": "e560961d98803759a54e5a8217670c13092f1eeb",
+      "bytes": 7912
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources/NEXUS_~1(20261010-164409).MD",
+      "git_mode": "100644",
+      "git_blob_sha1": "cc9869b0db75ebd8ff9d8ea74602ff5f358b3dfa",
+      "bytes": 7558
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources/NEXUS_~2(5).MD",
+      "git_mode": "100644",
+      "git_blob_sha1": "d924cea7d1681fe63d5578de5a55f527dbc1f04e",
+      "bytes": 7154
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources/NEXUS_~3(2).MD",
+      "git_mode": "100644",
+      "git_blob_sha1": "3574b545007d9d1837de09c8035946b07a345ba4",
+      "bytes": 5052
+    },
+    {
+      "path": "research/r10r23/r24-operator-closeout-r26-c1/sources/R26--P~1(1).MD",
+      "git_mode": "100644",
+      "git_blob_sha1": "5ccb41a20eed223c36bc8b2131409881ca44bcf4",
+      "bytes": 17682
+    },
+    {
+      "path": "research/r16/autoclaw-r3-cross-platform-20261012/NEXUS_OMEGA_AXIOM_R16_AUTOCLAW_R3_INDEPENDENT_SOURCE_INTAKE_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "72655d62946d3fd1a8a7eedeeec6cbbc337a6d0b",
+      "bytes": 8049
+    },
+    {
+      "path": "research/r16/autoclaw-r3-cross-platform-20261012/NEXUS_OMEGA_AXIOM_R16_AUTOCLAW_R3_SOURCE_LEDGER_20261012_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1deb58f081717aade8a664c5ef54325d1a166104",
+      "bytes": 1442
+    },
+    {
+      "path": "research/r16/autoclaw-r3-cross-platform-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "bc5fbe3e11d89f5c4fa513be79ae1c3f86135f1e",
+      "bytes": 778
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_c1_evidence_reducer.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "13f2a0e74473a16156c659f2d176f8a921ade565",
+      "bytes": 3463
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_NODE_C1_CONTINUOUS_SELF_MODIFICATION_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f8adcf6df22bba526c17dbff72b7ad494b42c63e",
+      "bytes": 11207
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/DETACHED_MANIFEST.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "0501ddb5add3edd230a7304086c3e799a78b5062",
+      "bytes": 1551
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/example_material.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3f73993945b5c67166256d557f4bbda37efaadfb",
+      "bytes": 215
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/example_material.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "fc3d813cbac42de6d132607dfc698f6f60b58242",
+      "bytes": 19
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "8fb01441ab3f3880bb31f6ba534e3fef4744fb81",
+      "bytes": 1742
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/test_alpha_c1_evidence_reducer.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "124a9fd159bed6173c9e801d9c877790b614681d",
+      "bytes": 2975
+    },
+    {
+      "path": "research/r16/axiom-software-foundation-20261012/NEXUS_OMEGA_AXIOM_R16_SOFTWARE_FOUNDATION_ARCHITECTURE_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f766361c0bb106baa83c0710552b327e65d6f915",
+      "bytes": 26444
+    },
+    {
+      "path": "research/r16/axiom-software-foundation-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "00893e895a4532cb6f05307ab1a4f1eb0f822434",
+      "bytes": 589
+    },
+    {
+      "path": "research/r16/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "4c0ac39b63ddbef55e5632959da39b4bf8ef89bf",
+      "bytes": 975
+    },
+    {
+      "path": "research/r17/axiom-mind-module-20261012/NEXUS_OMEGA_AXIOM_R17_ONE_SHOT_C1_SCOPED_HOLD_20261012_R1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "bef7b0dfe3aedd8e20d988a7c6f7b5635aca674c",
+      "bytes": 2188
+    },
+    {
+      "path": "research/r17/axiom-mind-module-20261012/NEXUS_OMEGA_AXIOM_R17_R16_SOURCE_EXACT_INTAKE_ADJUDICATION_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "6d86411b960334cf04167b7bea3216b485846a83",
+      "bytes": 7930
+    },
+    {
+      "path": "research/r17/axiom-mind-module-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d013a91643bd5a33ab2248310cb28cdf653c2283",
+      "bytes": 852
+    },
+    {
+      "path": "research/r17/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c118293d0b2de7e0a0df80475ac6ccd529f19f4a",
+      "bytes": 854
+    },
+    {
+      "path": "research/r18/clean-room-provenance-20261012/NEXUS_OMEGA_AXIOM_R18_CLEAN_ROOM_PROVENANCE_SOURCE_EXACT_INTAKE_ADJUDICATION_20261012_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "65d3fd5380a1b5a03fdb7f64f2a9510a9b5f5baf",
+      "bytes": 12370
+    },
+    {
+      "path": "research/r18/clean-room-provenance-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2c8b6526b2bf4241b4421a77cf7912408a3f38b6",
+      "bytes": 894
+    },
+    {
+      "path": "research/r18/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b928d5f4ce9d3b0873acc1d947b502b5fb1eeed1",
+      "bytes": 546
+    },
+    {
+      "path": "research/r21/orbis-astra-nav-primary-source-register.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2989ae1bb28555ea651393827151c6bffdc055b2",
+      "bytes": 7187
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/CURSOR_R2_EPISTEMIC_WALLS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "64fdb6b8daf0d109bd4ad8c79c205f671bce3e71",
+      "bytes": 768
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/CURSOR_R2_EXECUTIVE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a863cdb48f1e59d228ef8e1e90f30ff4931e0e8e",
+      "bytes": 5982
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/CURSOR_R2_HANDSHAKE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "24a19824adbabbe66da225cc0e0f5e5348c2037c",
+      "bytes": 1198
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/CURSOR_R2_SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "2ee1552812b0e762f41cd7df3cdf36f6c9cd833c",
+      "bytes": 243
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/R25-00_EXECUTIVE_ADJUDICATION_BRIEF.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "96555803000fefeecca21a6e44f42bc0a5854740",
+      "bytes": 5297
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/R25-03_RING_AND_ORBIT_ERROR_MODEL.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "de61f399f825e9e4a09d93c62edf3647d960550b",
+      "bytes": 4811
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/R25-05_E1_E2_CAUSAL_AUDIT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "6c34052b67f0d29127076bb6c503d545041d09ae",
+      "bytes": 4084
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/R25-07_ADVERSARIAL_REVIEW.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "94f756cdc35a2b99dc4e55ad0e1bedd591fb29b9",
+      "bytes": 4134
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/R25-09_RETURN_MANIFEST.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "d1c1eb6f4c5e9185d5b917b6796312019ad6c01f",
+      "bytes": 3103
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a9d65a19dfdad45bf36141fa87424dbc88332a38",
+      "bytes": 2427
+    },
+    {
+      "path": "research/r25/five-originals-independent-intake-r2/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "a8e4d44e52af6c7527a0fa7a434b23c21dfa3b53",
+      "bytes": 932
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/NEXUS_OMEGA_AXIOM_R26_FUNDAMENTAL_MAXI_RESEARCH_ORDER_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "4253e84c08954ed7b832b29d1f14bb2c9a2c144c",
+      "bytes": 35117
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_API_ASSET_MANIFEST_20261010_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "fea7e1ae5e0dc6749a261c4ce5e593552de0811c",
+      "bytes": 2852
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_CAUSAL_SOURCE_PINS_20261010_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "b2b37b694ac2aea1ce0bfcd939e63e8ad5e87710",
+      "bytes": 3281
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_GITHUB_API_HANDSHAKE_PROTOCOL_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "10c732429c118bfe0d3de179954417474a1ceceb",
+      "bytes": 8213
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/R26_RETURN_AND_ACK_CONTRACT_20261010_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "ded014c7b6f07861222c39c01020c32022d649a1",
+      "bytes": 7157
+    },
+    {
+      "path": "research/r26/axiom-fundamental-api-handshake-20261010/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d4ebe41fda270f702eb676f86d27bdd4a28490b8",
+      "bytes": 2955
+    },
+    {
+      "path": "research/r26/axiom-r1-adjudication-20261010/NEXUS_OMEGA_AXIOM_R26_MISTRAL_VIBE_R1_INDEPENDENT_RECEIVE_ACK_AND_ADJUDICATION_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "8514eb9af97a8ad7dded5ba15396b653d71b3bee",
+      "bytes": 11120
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_AXIOM_R26_BROAD_PARTIAL_REVIEW_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "7a2e593600ef9d09fadc84a8779c8fb69f695c22",
+      "bytes": 1839
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_AXIOM_R26_BROAD_RING_REVIEW_ADJUDICATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "1ce26e9c4f84f30dd0e2372043bfdfb174e9e8a3",
+      "bytes": 6511
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_R26_BROAD_ADVERSARIAL_REVIEW_INDEPENDENT_SYNTHESIS_20261011_R1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "396d2016e06634e9e0e954b0d357f374c9bebe06",
+      "bytes": 12311
+    },
+    {
+      "path": "research/r26/broad-adversarial-partial-review-20261011/NEXUS_OMEGA_R26_BROAD_ADVERSARIAL_REVIEW_RING_MAX_SUM_20261011_R1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c4d33ce3bc946609d75f04e3ad5c50047c7dc231",
+      "bytes": 21604
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "35ce20538a768dd43fc8593660cf9767230a8058",
+      "bytes": 13150
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_ORDER_PACKAGE_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "020419a2d8fac6868a630011aad27d2974aac9fd",
+      "bytes": 3821
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_EXPERT_ASSIGNMENT_LEDGER_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "7ba60595c4790287d6b642fa7294763e34ebbdff",
+      "bytes": 7139
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_DEEPSEEK_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2f82482dcb284ae06e108458c53f2538372e1038",
+      "bytes": 5938
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_GEMINI_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5561516123a53cc2fb193183b75cbaa02d9f0b17",
+      "bytes": 5831
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_GROK_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "32203e3a7a1ea5248d3c40f5c8eca8784a501ae0",
+      "bytes": 5798
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_MANUS_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "17eede2d88a9287d498f827fea1c3c6b93ff3bfd",
+      "bytes": 6077
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_MISTRAL_VIBE_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "49b1ed8594ee57eeb256a7fcf2295bc7c1372759",
+      "bytes": 6058
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_PERPLEXITY_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "53e29740ac7faa646b318dd6eadeb6c32384d4ef",
+      "bytes": 6099
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_TO_QWEN_R26_P26_R27_EXPERT_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9c041b5e4fae807c251f5ea41169b212c6b36702",
+      "bytes": 6124
+    },
+    {
+      "path": "research/r26/collective-expert-handoffs-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "1e0fc46c4936bf2772438a303017a6f930a164fc",
+      "bytes": 1932
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/EVENT_ENVELOPE_V1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "28654bbe29fafc3b3cfe9421bbedd7f224065d2e",
+      "bytes": 6420
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/FABRIC_POLICY_AND_NEGATIVE_FIXTURES_V1.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "82c9a29db156f3c0844089b3a14eb0f79a1846fc",
+      "bytes": 7073
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/NEXUS_OMEGA_AXIOM_GITHUB_WWW_LIVING_NODE_TRIGGER_FABRIC_BLUEPRINT_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "03eda5b519f6e7b0eb12f5d287df90aec6d5257d",
+      "bytes": 19576
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_GITHUB_WWW_LIVING_NODE_FABRIC_MAXI_IMPLEMENTATION_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "502eacca9d578e8314b70806f142e1d661ed29e9",
+      "bytes": 12691
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/R26_LIVING_NODE_FABRIC_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1a5fb978431adcf61f5abcfb6cb5d8eae7b8312d",
+      "bytes": 2571
+    },
+    {
+      "path": "research/r26/living-node-trigger-fabric-v1-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e49b4064dc32199abd279d41fc4d13f373f19e69",
+      "bytes": 2978
+    },
+    {
+      "path": "research/r26/meta-independent-review-20261010/META_AI_R26_R2_C1_SCOPED_CROSS_REVIEW_SOURCE_EXACT_20261010_R0.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "fc1b0814a03ac3eda265a9747b0a287241262169",
+      "bytes": 3923
+    },
+    {
+      "path": "research/r26/meta-independent-review-20261010/NEXUS_OMEGA_AXIOM_META_R26_R2_SCOPED_CROSS_REVIEW_ADJUDICATION_20261010_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "efb198835998dea7ddac3175501e63e81fc4bdca",
+      "bytes": 8839
+    },
+    {
+      "path": "research/r26/meta-independent-review-20261010/NEXUS_OMEGA_AXIOM_R26_META_SCOPED_REVIEW_MANIFEST_20261010_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "9379bfc38f48787637358e513ffcaa817e2cde2e",
+      "bytes": 1516
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/AXIOM_R26_INDEPENDENT_MINIMAL_FIXPOINT_REPRODUCTION_20261011_R0.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "4b980effaaf3de96dcca334c4b3686bf195a2ba0",
+      "bytes": 2644
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/NEXUS_OMEGA_AXIOM_R26_MISTRAL_MAX_RETURN_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "2b4318519d1ce50d3d971138e7e76a349d21de6e",
+      "bytes": 2082
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/NEXUS_OMEGA_AXIOM_R26_MISTRAL_VIBE_MAX_RETURN_ADJUDICATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "bc5372e3432ec6d2795a03a2c252086c610e28a6",
+      "bytes": 9739
+    },
+    {
+      "path": "research/r26/mistral-vibe-max-adversarial-return-20261011/NEXUS_OMEGA_MISTRAL_VIBE_R26_MAX_INDEPENDENT_FALSIFICATION_RETURN_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a38a3842ae69bd29f3b672884bd350a502d6167d",
+      "bytes": 28368
+    },
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011/NEXUS_OMEGA_AXIOM_TO_PERPLEXITY_R26_MAX_INDEPENDENT_FALSIFICATION_SOURCE_AUDIT_AND_PREREG_PREPARATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "733e401e105ac8d63be9af8164dd2ad9b7691c87",
+      "bytes": 30180
+    },
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011/R26_PERPLEXITY_ORDER_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "508c21c3d35ce550f5700c414cabd1793ee8e58d",
+      "bytes": 1527
+    },
+    {
+      "path": "research/r26/perplexity-max-external-research-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a4acc582c9798e1e767797d1171d2903cad02df5",
+      "bytes": 2492
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/NEXUS_OMEGA_AXIOM_R26_P26_16CELL_REPRO_20261011_R0.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "e5ab55bf98617d41c83fb99ec377e289bdaa88d6",
+      "bytes": 1728
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/NEXUS_OMEGA_AXIOM_R26_P26_C1_SEARCH_FIRST_PUBLIC_EXTRACT_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "cdc22ed10cd113c86e730fe97cf6b2a4880f9ccb",
+      "bytes": 8726
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/NEXUS_OMEGA_AXIOM_R26_R27_INTEGRATED_ADJUDICATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d5c21d75bcaa5a48181c4572ec6d3faeaf5b6848",
+      "bytes": 12081
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/NEXUS_OMEGA_PERPLEXITY_R26_RECEIVE_ACK_AND_INDEPENDENT_VERIFICATION_RETURN_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "ddb6495fb57fbe4fbafc3b0b969c4e1675f04ca2",
+      "bytes": 8718
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/NEXUS_OMEGA_PERPLEXITY_R26_RETURN_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "d589cb0677b67e1d5fd143ebbfd7bf833ea5b5e5",
+      "bytes": 1194
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/PERPLEXITY_R26_INDEPENDENT_VERIFICATION_20261011_R0.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "5262443955ca9fe29f895995e41a4849f7035099",
+      "bytes": 4648
+    },
+    {
+      "path": "research/r26/perplexity-max-return-20261011/PERPLEXITY_R26_INDEPENDENT_VERIFICATION_RAWLOG_20261011_R0.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "d61111e935949cc28b50984b0b54f489d315518c",
+      "bytes": 4770
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_AGENT_CONTINUITY_CONTROL_COMPARATIVE_DEEP_RESEARCH_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a5df310f82791f437b2c6a7c3f074c21af7d23bd",
+      "bytes": 20928
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_R27_WWW_EXTERN_FREE_WAKE_STRICT_BOUNDARY_AND_VALIDATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "04d1c88f245da062a39baa2e0adece3c614a0476",
+      "bytes": 14376
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_R27F_META_STACK_INDEPENDENT_INTAKE_AND_MINIMAL_INSTALL_PLAN_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "1be8f404d8d1072c80e0071907510dfe059fb0c3",
+      "bytes": 8607
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXISTING_CURSOR_R27_WWW_WAKE_AND_AUTHN_HARD_REMEDIATION_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "3223182e8e8381edc54effe509f77b4cff7d6e53",
+      "bytes": 10588
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXTERNAL_AGENTS_R27E_MAX_ADVERSARIAL_STRUCTURAL_GOVERNANCE_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "8879ae199bc35903a913db52f57a7bc0019c804a",
+      "bytes": 21471
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/NEXUS_OMEGA_AXIOM_TO_EXTERNAL_AGENTS_R27F_MAX_ADVERSARIAL_ENFORCEMENT_AND_IDENTITY_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "ae1cd49d08c99c6e0687e251a49eb152d6b4de05",
+      "bytes": 18608
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/R27_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "201b08592da24349bd3f98f82c655ef302551ccd",
+      "bytes": 2304
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/R27_WWW_WAKE_SECURITY_REPRODUCTION_AND_NEGATIVE_FIXTURES_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "50166ade1016733adb24f2fc58e29010ecce281e",
+      "bytes": 4664
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/R27E_AX_EXTERNAL_AGENT_STRUCTURE_FIREWALL_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "ed0e3fe3c443fbcb64f888a8cb927b073b29b2ee",
+      "bytes": 5177
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "5c967be206c748236a85eb8d484b9158f69190bf",
+      "bytes": 2557
+    },
+    {
+      "path": "research/r27/www-extern-wake-isolation-20261011/returns/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2f2890ed1d34486cfa2e465f2cf4137da119adde",
+      "bytes": 1598
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_AXIOM_R10R29_CROSSVALIDATION_SOURCE_LEDGER_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "599a3b631d1864bd4eb72180e6ff6c78da136ff0",
+      "bytes": 2206
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_AXIOM_R10R29_EXTERNAL_CROSSVALIDATION_ADJUDICATION_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2a44dd80bc1c07084003afb634465751103f895a",
+      "bytes": 4331
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_AXIOM_R10R29_PUBLIC_SAFE_TEXT_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "7c364518974952b54a3afee3108bd68d38ff1125",
+      "bytes": 1989
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/NEXUS_OMEGA_PERPLEXITY_COMPUTER_R10R29_CROSS_VALIDATION_RECEIPT_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "fdc96e8057e3077dc45c080d377dbd32b7629cc9",
+      "bytes": 5792
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/crossvalidation-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2e7ee672095f105c3ae1335cfd4daf79e96aca14",
+      "bytes": 922
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/NEXUS_OMEGA_AXIOM_R10R29_SOURCE_INTAKE_LEDGER_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "bc9a340efb7a740bba3bdae95873b1e2348aff63",
+      "bytes": 2391
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_DETACHED_MANIFEST_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "a7c7f2dbb2feb9668f0d1847ea11b974435ba858",
+      "bytes": 1315
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_OPEN_MIND_CROSS_DOMAIN_FALSIFICATION_MAXI_ORDER_20261011_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "671456fe630ed5c894945c6771d6ecd327691553",
+      "bytes": 18205
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/NEXUS_OMEGA_AXIOM_TO_CURSOR_R10R29_TASK_ANCHOR_20261011_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "faed2d3fbddc1e603592478469dd302968b59440",
+      "bytes": 5740
+    },
+    {
+      "path": "research/r29/r10r29-open-mind-cross-domain-20261011/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "48168a38887c7a9559a6bd38438f3c844f405f74",
+      "bytes": 1539
+    },
+    {
+      "path": "research/r29/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b55dee161f4eff423bee122e0eaa1f34a5d4876a",
+      "bytes": 1037
+    },
+    {
+      "path": "research/r5/axiom-platform-audit/NEXUS_OMEGA_R5_GITHUB_PLATFORM_AUDIT_20260831_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f85e4dffff662ab1a713b43a4ae73db1ec84dacd",
+      "bytes": 2864
+    },
+    {
+      "path": "research/r5/axiom-platform-audit/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "21a522235a662a5eab59b77130e7ea57ca1b5849",
+      "bytes": 321
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/provenance/NEXUS_OMEGA_GITHUB_FRAMEWORK_R4_CLOSURE_R5_CANONICAL_FOUNDATION_RECEIPT_20260831_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "dad402893a51a2f433ea5bce22da4985b86fdce5",
+      "bytes": 1084
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/provenance/NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_ORDER_RECEIPT_20260831_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "b255c51d41f38075eb05e3f22399a6392fe9eb42",
+      "bytes": 938
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/provenance/NEXUS_OMEGA_QWEN_CODER_R5_MAXIMUM_PROGRESS_TRANSPORT_RECEIPT_20260831_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8c6dc817e5d24a820dffba5df13ece7739238ff2",
+      "bytes": 871
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b478a925e2967018a7f2fdb694669fdef9be0761",
+      "bytes": 489
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/REMOTE_TRANSPORT_RECEIPT.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "dbdeb1827c8b521273c4343c64fd33d652f13d44",
+      "bytes": 1914
+    },
+    {
+      "path": "research/r5/qwen-coder/github-native/START_HERE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "333577ba0c98d3a7c72ebfa10c0ca8978366a47f",
+      "bytes": 16610
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/DELIVERY_RECEIPT.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "b422a80b198ce11c12b3d73eb05813ab022c3704",
+      "bytes": 1336
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "65547db9660c8cc98103e133c21c2525e31562eb",
+      "bytes": 433
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/REMOTE_REHASH_EXPECTATIONS.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "f009f9d9a492c21f23ed2186015e3ee18631c7cd",
+      "bytes": 1774
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/START_HERE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d9bb2f36a824334497e178d2e426461497e4afc8",
+      "bytes": 4483
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/STATUS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "14c78a2ffbcdf7db66d99f973723a2052b2bafcc",
+      "bytes": 639
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part01.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "775c714443a08520c95801e7004e929da8633bed",
+      "bytes": 6000
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part02.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "cc9b943b3ddeff0becf110af17e32b087f056698",
+      "bytes": 6000
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part03.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "a4516e05edde635e2e8a869314f35abd2461a8f1",
+      "bytes": 6000
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part04.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "178596c2d4afdb243b81b155e81da2de063d1595",
+      "bytes": 6000
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part05.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "8cc72de187c130a4173e984be1365121cc9f97a3",
+      "bytes": 6000
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/r5_qwen_transport.part06.b64",
+      "git_mode": "100644",
+      "git_blob_sha1": "9bca4b325ee35ed51ef76e95ec21d1b299958dfb",
+      "bytes": 5196
+    },
+    {
+      "path": "research/r5/qwen-coder/legacy-delivery/transport/TRANSPORT_MANIFEST.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "84bf5b547d6a20188526234ce378beb6b2d424c7",
+      "bytes": 1701
+    },
+    {
+      "path": "research/r5/qwen-coder/original-local-bindings/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "0ccef2173339bac4624ecdcdd248c02dc0109c70",
+      "bytes": 1227
+    },
+    {
+      "path": "research/r5/qwen-coder/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a14a76b1a38671d795e293de340af2a99ea3031c",
+      "bytes": 1020
+    },
+    {
+      "path": "research/r5/qwen-coder/receipts/NEXUS_OMEGA_QWEN_CODER_R5_CANONICAL_INTAKE_MIGRATION_RECEIPT_20260831_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "822cf478f0d013218c18e6d6cd9ed5dc023387db",
+      "bytes": 2912
+    },
+    {
+      "path": "research/r5/qwen-coder/returns/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e13da7b8beea813f2884275d60bbe1cc409becc5",
+      "bytes": 736
+    },
+    {
+      "path": "research/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "53b560ea08b8ecc026864701872e36cb5c91c213",
+      "bytes": 1165
+    },
+    {
+      "path": "research/r6/livecount/build_livecount.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "863b120ccb2438b99a39ccda521c63e3b666c2a4",
+      "bytes": 5303
+    },
+    {
+      "path": "research/r6/livecount/current.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "186c2ee21d264e76ff834ac15ac9b86779f35401",
+      "bytes": 3128
+    },
+    {
+      "path": "research/r6/livecount/events/20260919T070802Z_R6_CLOSURE.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "f18f51416ac8800d5c45aa415cd1909de5067a01",
+      "bytes": 516
+    },
+    {
+      "path": "research/r6/livecount/index.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "9f1b81e4c80964439dfeaf08d71f5ce84dbe3a1e",
+      "bytes": 6222
+    },
+    {
+      "path": "research/r6/livecount/livecount.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "9a21a60060c41e9c7ef519c50978abe1def0f611",
+      "bytes": 1097
+    },
+    {
+      "path": "research/r6/livecount/observation.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "06f9811a8fcb72f6084256e16065f522a7f8f533",
+      "bytes": 2131
+    },
+    {
+      "path": "research/r6/livecount/observations/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "aa7687c59d4c9155b6803fe61c8af8e2526008a6",
+      "bytes": 718
+    },
+    {
+      "path": "research/r6/livecount/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f5ced45066ece9ad6dc6e803111f3f180f39caf9",
+      "bytes": 2472
+    },
+    {
+      "path": "research/r6/livecount/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "aacb05627e2e58180cec486e8ec862c6ecf16d7a",
+      "bytes": 853
+    },
+    {
+      "path": "research/r6/livecount/sources.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "83b73e1f0761803331a43cac7239a6899964ff98",
+      "bytes": 2154
+    },
+    {
+      "path": "research/r6/livecount/test_livecount.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "10299cb6d764f83f42c1f5896fec761822251111",
+      "bytes": 1950
+    },
+    {
+      "path": "research/r6/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b3150d68bdda10749520c2f98bf69d580a539e74",
+      "bytes": 604
+    },
+    {
+      "path": "research/r7/radiometric-extension/corrected/reference_mapper_r7_1_2_c1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "3113b767e3add501e5b79b5a75bf12289c9b3472",
+      "bytes": 4313
+    },
+    {
+      "path": "research/r7/radiometric-extension/corrected/reference_result_r7_1_2.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "cb8cf8ec4f5f3340ecc21f0be94e9e966284d490",
+      "bytes": 2611
+    },
+    {
+      "path": "research/r7/radiometric-extension/corrected/sample_fixture_r7_1_2.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "0e6d33ed654920d903cf571a3d98298e00cf28c8",
+      "bytes": 1401
+    },
+    {
+      "path": "research/r7/radiometric-extension/PRIMARY_SOURCE_CROSSCHECK.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "fc72c28bba042292582cfef2cbfa66461d7add8b",
+      "bytes": 1505
+    },
+    {
+      "path": "research/r7/radiometric-extension/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a61193a201c00459548bd70bbe62d0517407c600",
+      "bytes": 4157
+    },
+    {
+      "path": "research/r7/radiometric-extension/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "4f5a6814afe332c148abacbeccf37cabbe774665",
+      "bytes": 704
+    },
+    {
+      "path": "research/r7/radiometric-extension/tests/test_reference_mapper_r7_1_2.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "a11084b5dcd5a5c06b83674a63e4fcc6b79f489a",
+      "bytes": 1644
+    },
+    {
+      "path": "research/r7/radiometric-extension/VALIDATION_REPORT_20260919_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "75470b8578d9e2338ff262a95141e58a9a35b774",
+      "bytes": 2260
+    },
+    {
+      "path": "research/r7/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "6dcf6acf8bb6cc4cffdfeadfdc4aad5187c8a547",
+      "bytes": 469
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/AXIOM_FULL_STACK_RECEIPT_20261005.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "50102c6c5271de82ab748dba1d540fc04d79ca76",
+      "bytes": 1446
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/MANUS_PGI1_RETURN/01_METRICS_DEFINITION.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2328fa9659941779145b6fb45cfad1e3089dd6c5",
+      "bytes": 4103
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/MANUS_PGI1_RETURN/02_COLLAPSE_CLASSIFIER.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f10b0d01c88ff650984e4a21c4ee94755c173e81",
+      "bytes": 2956
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/MANUS_PGI1_RETURN/05_SYNTHETIC_CALIBRATION_SKETCH.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "54873569be8d6b22a648e66e9d57ce3db58fcb4a",
+      "bytes": 2390
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/MANUS_PGI1_RETURN/06_MANIFEST_SHA256.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "433ec534a278844ab9888d213904ea0e7dfc6730",
+      "bytes": 3074
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/ORDER/NEXUS_R10R7_ORDER.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "ac9a42c1478b2a043a0899fffd04dbc09e078692",
+      "bytes": 37443
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_00_RESEARCH_REPORT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "97c8bd7274904d0143f28452efb06824aa538830",
+      "bytes": 12654
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_13_14_SCHEMAS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "36ddba62fc41d4397e1e00defb798ca7ba49cd59",
+      "bytes": 4955
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_29_30_OPEN_GAPS_FALSIFICATION_MATRIX.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a6dbb1ba8a4d6b94db623ac05776ff8d94db9e2e",
+      "bytes": 4848
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_E1_HARNESS_DESIGN.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "61a98b2589da2d7b14d11df877190c49eb848a96",
+      "bytes": 6996
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_E3_SYMBIOSIS_TRANSPORT_PROTOCOL.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "65f7aac39b33ad992a10273cdf259ce34bd7a46e",
+      "bytes": 5519
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/R7_ARTIFACTS/R7_E4_E5_PROTOCOLS.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "1bff45d0c7bb3e3b3ebdf6cc326b6a31900fba86",
+      "bytes": 7673
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "ecead5bd8d4efe58720982a19832ba1ed0886264",
+      "bytes": 1782
+    },
+    {
+      "path": "research/r7/soft-lineage-nci/VERIFICATION_RECEIPT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9f97ea0ec66360e503e10b8c24b7b76491690b39",
+      "bytes": 2347
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/earqv.example.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "b252d1279c4a34140f2ca63c2aeb6d7120f7467e",
+      "bytes": 2013
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/FIXTURE_LOOP_001.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "e35563814479a7329b99621fae3785d59e909149",
+      "bytes": 1776
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/IX_BOOTSTRAP.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e271a7a4f5cadbd74a8ecc1047e89370c976320f",
+      "bytes": 153
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/loop_detector.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "c510b67155a71b0906006298636e24a008b74e40",
+      "bytes": 2186
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/method/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a545f2e3c5d390f17861383f43c832e504e68917",
+      "bytes": 87
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/method/sim01_implementation_a.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "e3b04e88d3eced4b2259def9b555c6a605e217aa",
+      "bytes": 2314
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/method/sim01_implementation_b.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "7c6821a562212841b83bdef576d35e93e638908f",
+      "bytes": 2298
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "d002afac7626b209eed28693ec1d6a13622d7807",
+      "bytes": 513
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "47a0aab7db7c01c93a424822ff86459779f93365",
+      "bytes": 1069
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/SIM01_REEXECUTION_RECEIPT.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "4c852099100f7a2144b61ce81a2dc2b4956723f3",
+      "bytes": 1779
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/test_loop_and_invariants.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "aed313dcb010dfaa9f941325e43496c96141bc7d",
+      "bytes": 1754
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/VALIDATION_REPORT_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3a5a5a722040360f56e392fba4329733e675bd78",
+      "bytes": 838
+    },
+    {
+      "path": "research/r8/astratis-viii-closure-r3/VIII_CLOSURE.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "dca6aa38f1cb57491461be8fa105841315e16724",
+      "bytes": 283
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/LATE_SUPPLEMENT_SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "a74c7aaac98268e161a698edbc2fa0ede11ac835",
+      "bytes": 218
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/LATE_SUPPLEMENT_VALIDATION_20260919_R1.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "430f6f47e85aff55de653bfebc6b636e630775e9",
+      "bytes": 2586
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/LATE_SUPPLEMENT_VALIDATION_20260919_R1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "9b6fcc8ac4fc82e206db2fb6151608b58884312d",
+      "bytes": 4735
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/PRIMARY_SOURCE_AUDIT.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f39fbae01cc90bd087cbadca159b2930974c5044",
+      "bytes": 1982
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/R8_1_PROTOCOL_CORRECTION_R1.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "11d6d142fc5a8e9dffc0ac10ef9d0e3aeea8a096",
+      "bytes": 3915
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "a1681d3f014a81eddeee58390447ea3047a7415f",
+      "bytes": 4911
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "228b54eb054d562bc5fd147625636362ccccc3ab",
+      "bytes": 460
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/SOURCE_PACKAGE_SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "ceb64511cfca5fdcedcb117085be4bb8b862abde",
+      "bytes": 1456
+    },
+    {
+      "path": "research/r8/r8-0-custody-validation/VALIDATION_REPORT_20260919_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "dc947de77e6f92330831f3636472cbd94790e9cc",
+      "bytes": 2805
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation/PRIMARY_SOURCE_CORRECTION_20260920_R0.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "49381ca3d11f76ad11aa4fe7b11e87d7a8c585e3",
+      "bytes": 1501
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation/R8_1_R1_VALIDATION_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3e9dd6d86cb41110512c5196e94f166bebcc8e96",
+      "bytes": 1558
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation/R8_2_SIMULATION_VALIDATION_20260920_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "543f918fe42eebb6ee3109494efc09ff33ba0c7b",
+      "bytes": 2537
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "770c0aa85e20a953e7559ca3a5c765bef73b6766",
+      "bytes": 6423
+    },
+    {
+      "path": "research/r8/r8-1-r1-r8-2-crossvalidation/SHA256SUMS.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "c4ad6da304d708d66af9c27d7c3d90440798d147",
+      "bytes": 395
+    },
+    {
+      "path": "research/r8/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "037d6ca9671d56f0b78c71021e503cfe5f09a564",
+      "bytes": 651
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/AXIOM_VALIDATION_RECEIPT_20261005.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "c38b38b48b54b33af1e566a6a253cdb825f0e391",
+      "bytes": 4638
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/E0_2_VALIDATION_STATUS.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "120189bc38a3d8077225dff3256f757f654ee124",
+      "bytes": 1167
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "0b5a5f521cb43b2e20ad18bd5621514ccd1409da",
+      "bytes": 1823
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/validation/E0_2_FULL_INTEGRATION_RESULT_AXIOM_R1.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "956da7808672e6188734428febe5adf1eb0ec5fa",
+      "bytes": 3896
+    },
+    {
+      "path": "research/r8/soft-lineage-e0-2/validation/E0_2_FULL_INTEGRATION_TEST_AXIOM_R1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "a0920b61be7c085c0237d7b1bbea65b1146e51c5",
+      "bytes": 5236
+    },
+    {
+      "path": "research/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "17b852b677472415fdcb294eb791bce82685248c",
+      "bytes": 2533
+    },
+    {
+      "path": "research/website/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "0fd0cd0c52975f3e2125658a34cc4de80faa7509",
+      "bytes": 342
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "85ab1abe594d505a426a62cca17fd9a755fe301a",
+      "bytes": 7216
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/SITE_EXISTING_RESEARCH_CATALOG_MOUNT.txt",
+      "git_mode": "100644",
+      "git_blob_sha1": "3bf762b0121b6072628fe1dcab753ebefbf4f56a",
+      "bytes": 1774
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/site/catalog-snapshot.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "c6e811204727337279977d388026cd113ca16ca0",
+      "bytes": 3861
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/site/catalog.css",
+      "git_mode": "100644",
+      "git_blob_sha1": "33656ea1aa4f48ee25a908ed18b7923fa4514263",
+      "bytes": 11212
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/site/catalog.js",
+      "git_mode": "100644",
+      "git_blob_sha1": "66deb432f6e4f4161f5b7d4bbe220a859f9b0426",
+      "bytes": 8434
+    },
+    {
+      "path": "research/website/research-catalog-clarity-20261012/site/index.html",
+      "git_mode": "100644",
+      "git_blob_sha1": "30332f27f477de80b031f5738e0976af643d7aa7",
+      "bytes": 7833
+    },
+    {
+      "path": "schema/A83_handoff_envelope_v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "4c987d0386a126f8f353eadc7e1d0dba393a61c2",
+      "bytes": 2594
+    },
+    {
+      "path": "schema/access-classification-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3dac9a355623cadbaf492462f8f174f17cc670d8",
+      "bytes": 813
+    },
+    {
+      "path": "schema/agent-return-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "a7f275fd0c2cfebe19e4bb13ebb6cd04323e3ef3",
+      "bytes": 1098
+    },
+    {
+      "path": "schema/agent-run-checkpoint-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "589dcc18e24c3927e66ce8c427b33c3811d9203f",
+      "bytes": 1089
+    },
+    {
+      "path": "schema/anchor-manifest-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "11bd87a36946200a93ac2ce5a21d3e7870564190",
+      "bytes": 3698
+    },
+    {
+      "path": "schema/earqv-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "53213011f8b0b7c18851b4d55a8fc32636f69b63",
+      "bytes": 7150
+    },
+    {
+      "path": "schema/expert-hash-handshake-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1e495e57b201666bff971cbc7a6487184c05fbaf",
+      "bytes": 2965
+    },
+    {
+      "path": "schema/external-agent-return-r27e-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "39520121e8396af66b659b0a6dfc9ec6a81afe96",
+      "bytes": 1761
+    },
+    {
+      "path": "schema/independence-vector-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "d096717add5cd9611903f9266b47691993873bd6",
+      "bytes": 1399
+    },
+    {
+      "path": "schema/nexus-fundus-c1-index-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "05910b0acd138a1b95dc4490dbf87871292d3570",
+      "bytes": 1656
+    },
+    {
+      "path": "schema/r19/orbis-satellites-manifest.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "66849245b0f253fa8eea1de8557cb1ad9c377d55",
+      "bytes": 8294
+    },
+    {
+      "path": "schema/r21/nexus-provenance-atom-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "4aacd5754cbfe987195d6f6fbd78251344e0adb2",
+      "bytes": 2176
+    },
+    {
+      "path": "schema/r21/r21r1/nexus-nav-event-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "60e95549201c4696b5eb8e9126e235fed8900098",
+      "bytes": 3203
+    },
+    {
+      "path": "schema/r21/r21r1/nexus-nav-fix-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "a786fcb7a024617e7062f6094ac3440f6a651ce5",
+      "bytes": 3611
+    },
+    {
+      "path": "schema/r21/r21r1/nexus-offline-pack-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "1e49eafd9c3cf5b58a56c659248bc9b9b7685e78",
+      "bytes": 4701
+    },
+    {
+      "path": "schema/r21/r21r1/www-closeout-receipt.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "814247e27bf30c28c49084402622109c767700e2",
+      "bytes": 7747
+    },
+    {
+      "path": "schema/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "2e604f80fa5f2cbcbe28e3b45f51cca7d32f8e58",
+      "bytes": 224
+    },
+    {
+      "path": "schema/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "50596cdf9ced52e2f1f959149566329b9bc5579d",
+      "bytes": 258
+    },
+    {
+      "path": "schema/research-pipeline-event-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "08eac0c92aa74366b4dc43a0bab4560e1873236a",
+      "bytes": 1420
+    },
+    {
+      "path": "schema/research-pipeline-package-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "75ff39b13e3ae76d851d389e6204a12ff746b135",
+      "bytes": 2106
+    },
+    {
+      "path": "schema/scientific-communication-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "23e4226cc8fdb0aaaae8d1e30dfddf2f8722557f",
+      "bytes": 8338
+    },
+    {
+      "path": "schema/task-anchor-norm-v1.schema.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3c44450c75ab75b8bc440ef8128dc6cee97e0765",
+      "bytes": 6591
+    },
+    {
+      "path": "scripts/a83_decision.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "385a88cd7faea8066689c41be2f05f61f5b894b8",
+      "bytes": 189
+    },
+    {
+      "path": "scripts/a83_sentinel.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "0774c83361530ecedff38405ae9449d4b7b28535",
+      "bytes": 1610
+    },
+    {
+      "path": "scripts/append_scientific_record.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "7ec21637a708dbafec68354d50c09656ace38f0d",
+      "bytes": 4896
+    },
+    {
+      "path": "scripts/archive_continuity_guard.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "fe51de53a905a6c6ac5f8b999cbb34bed327a59d",
+      "bytes": 8726
+    },
+    {
+      "path": "scripts/nexus_preentry_lab.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "fbdba756977c60d099eb6351167551ad76beedf9",
+      "bytes": 4555
+    },
+    {
+      "path": "scripts/r21r1/verify-production-fileset-manifest.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "ee886b2628bbca694421fa6ae2b36c467899d1ec",
+      "bytes": 3778
+    },
+    {
+      "path": "scripts/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "11c4a56e27a137ff182da5dfa0ba88d9eb28acaf",
+      "bytes": 208
+    },
+    {
+      "path": "scripts/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "b9e3891adc5c697e78f8ae38bcbc67718da47cdd",
+      "bytes": 302
+    },
+    {
+      "path": "scripts/reproduce_a83.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "368f193026aa0e9730139743bea7a4bc005a8eab",
+      "bytes": 1991
+    },
+    {
+      "path": "scripts/research_pipeline.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "c31b928885e52d20cc10b897f9bb1f2146ea166d",
+      "bytes": 14749
+    },
+    {
+      "path": "scripts/validate_a83_handoff.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "fc3ed2707a6d7762a49dc68a6b8a78639ce782ee",
+      "bytes": 4563
+    },
+    {
+      "path": "scripts/validate_anchor.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "314dea15b4045179b13edd39c6f4c9801cb3c200",
+      "bytes": 7056
+    },
+    {
+      "path": "scripts/validate_external_agent_pr.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "187bc1e4377642280aba93d47921210740e0f95a",
+      "bytes": 12010
+    },
+    {
+      "path": "scripts/validate_repository_structure.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "58381d96546b5e892a9cea6a1337d3af432b3239",
+      "bytes": 6566
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "9b698da327706c8f45a893f6cc73d29476e8d71e",
+      "bytes": 4311
+    },
+    {
+      "path": "scripts/validate_scientific_communication.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "2c7ccf390cd43a6312e7bbcd7871dce44061be1d",
+      "bytes": 8327
+    },
+    {
+      "path": "scripts/validate_scientific_ledger.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "c99d1e0d148cbbf4936d3daea37cbb2b13f28f76",
+      "bytes": 7478
+    },
+    {
+      "path": "scripts/validate_task_anchor_norm_v1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "2215790b0e4059244ffdcf802298bf0556213a48",
+      "bytes": 11466
+    },
+    {
+      "path": "scripts/verify_a83_artifact_binding.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "851fff0467bb695790d0642c0750842b63f2e7c8",
+      "bytes": 1209
+    },
+    {
+      "path": "scripts/verify_expert_hash_handshake_v1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "0c620fd07870395fa0285afaeb555b2831d4b419",
+      "bytes": 5294
+    },
+    {
+      "path": "SECURITY.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "bb822e3b7ae6ec0dec6bf90ded84ee4937cadc21",
+      "bytes": 839
+    },
+    {
+      "path": "tests/nexus-omega-iceberg-homepage.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "2298f0aaac5180d3d64392b057f219f13e0b9aa2",
+      "bytes": 3078
+    },
+    {
+      "path": "tests/nexus-public-update-ticker.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "6d1103c7595c3b445a331c53db35954b9eb356df",
+      "bytes": 6991
+    },
+    {
+      "path": "tests/r19/orbis-satellite-directory.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "82430084f9fe816a502473012dcfac4c5e1e1846",
+      "bytes": 6206
+    },
+    {
+      "path": "tests/r19/orbis-sgp4-public-contract-bridge.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "c80d77b912d17e6eba0f8641d8b0cd4469ce051c",
+      "bytes": 5072
+    },
+    {
+      "path": "tests/r21/nexus-provenance-atom.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "24a9eb8c71dd24de0915139320bcb3770c44e40c",
+      "bytes": 3086
+    },
+    {
+      "path": "tests/r21/orbis-astra-nav-p0-surface.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "0df8b5261da4d753a0c43a5dc0783baaf22b9571",
+      "bytes": 5340
+    },
+    {
+      "path": "tests/r21/orbis-astra-nav-photo-lod.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "774ae7c5d6974b378bef1ce1fac1e33f62314d92",
+      "bytes": 3823
+    },
+    {
+      "path": "tests/r21/orbis-gsd-truth-ui.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "1eaecd381d1468e956bc18a1b80fdb121cc09ab6",
+      "bytes": 2145
+    },
+    {
+      "path": "tests/r21/r21r1/nexus-nav-event.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "1261c7ab723b1df14d15af81865a51325f239994",
+      "bytes": 5408
+    },
+    {
+      "path": "tests/r21/r21r1/nexus-nav-fix.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "74508648b64ca5f32ba6450c8811176d0cd9f6a7",
+      "bytes": 6172
+    },
+    {
+      "path": "tests/r21/r21r1/offline-pack.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "ec568b90839b66b5aeda10d6b1fca58d681118d6",
+      "bytes": 6956
+    },
+    {
+      "path": "tests/r21/r21r1/photo-tile-provenance.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "1512bd26d1e8e1251ceada3414218e6c8b81fdd2",
+      "bytes": 5861
+    },
+    {
+      "path": "tests/r21/r21r1/www-closeout-receipt.test.mjs",
+      "git_mode": "100644",
+      "git_blob_sha1": "68116aa26920cc702f24b1ee605f08366722f16c",
+      "bytes": 6801
+    },
+    {
+      "path": "tests/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "621f3796ed23bcb3432fe9c109479952c31f70ef",
+      "bytes": 201
+    },
+    {
+      "path": "tests/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "dd65bb6bcd8009a6e0e9d16c72e5af7583d92fd9",
+      "bytes": 249
+    },
+    {
+      "path": "tests/test_a83_handoff.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "73df97721ba499aadf1caf34db2123f6ad399492",
+      "bytes": 1139
+    },
+    {
+      "path": "tests/test_archive_continuity_guard.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "8fb0d59b9ec65beb1e569191e4ce90fb0ff61606",
+      "bytes": 5349
+    },
+    {
+      "path": "tests/test_expert_hash_handshake_v1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "6fbb3242cad266f42a5544d932958cdf55390705",
+      "bytes": 3585
+    },
+    {
+      "path": "tests/test_external_agent_pr.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "d6f5c51f9ef7b46fbc239d0a397e4dbb879a2420",
+      "bytes": 7006
+    },
+    {
+      "path": "tests/test_preentry_lab.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "2e53dbf3bb6471145f98075846179633c7f48d93",
+      "bytes": 6510
+    },
+    {
+      "path": "tests/test_repository_structure.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "923a3c2c9258e5523f2b531fc744cc9af94a7353",
+      "bytes": 1970
+    },
+    {
+      "path": "tests/test_research_pipeline.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "ca367503f8ba5cd6782d269c24b8989b0d152eb6",
+      "bytes": 3092
+    },
+    {
+      "path": "tests/test_scientific_communication.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "e03de6c13ee920a1f642b93272cec528b5dddae4",
+      "bytes": 1399
+    },
+    {
+      "path": "tests/test_scientific_ledger.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "35ca98ad4474258a80832e9823587a970147d531",
+      "bytes": 3670
+    },
+    {
+      "path": "tests/test_task_anchor_norm_v1.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "8fdd586a69a328c9790c8e4bd72c464bfd12eadb",
+      "bytes": 4592
+    },
+    {
+      "path": "tests/test_validate_anchor.py",
+      "git_mode": "100644",
+      "git_blob_sha1": "6c991f3c7b9430f3a15d8a467b0880d8896b4504",
+      "bytes": 4768
+    },
+    {
+      "path": "validation/A83_ARTIFACT_BINDING_v1.0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8e097cb0dccb85614c982f56474ff27d76baada3",
+      "bytes": 3797
+    },
+    {
+      "path": "validation/A83_FINAL_STATUS_v1.0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "8282a0f0ad6333e6a546eae6df2236ad9d955162",
+      "bytes": 1398
+    },
+    {
+      "path": "validation/A83_WEAKNESS_AND_OPEN_QUESTIONS_AUDIT_v1.0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "bd869b41b58c962416923824b3f8a8aef11e6d2a",
+      "bytes": 2985
+    },
+    {
+      "path": "validation/a83-handoff-negative-fixtures-v1.jsonl",
+      "git_mode": "100644",
+      "git_blob_sha1": "6e152d4ee2741af221d210d3f3dcadb73cba4e61",
+      "bytes": 1728
+    },
+    {
+      "path": "validation/r21/r21r1/astra-nav-p0-production-fileset-manifest.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "bbfad0abacb45754df43ebdb5cd62a0d4ebc9a86",
+      "bytes": 2465
+    },
+    {
+      "path": "validation/r21/r21r1/AXIOM_GROK_POSTMODULE_FIVE_UPLOAD_SOURCE_INTAKE_20261010_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "aedb0788ece261d1b21efa76075531e039836b81",
+      "bytes": 3780
+    },
+    {
+      "path": "validation/r21/r21r1/www-closeout-receipt.pending-example.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "c5dc3b8b1e4234f15ed6facd8336d2c54d1fcbdd",
+      "bytes": 2369
+    },
+    {
+      "path": "validation/r5/NEXUS_OMEGA_R5_GITHUB_PLATFORM_RECEIPT_20260831_R0.json",
+      "git_mode": "100644",
+      "git_blob_sha1": "3249bf20050f34e9f5ef86b5520ec943a99e3e5f",
+      "bytes": 1366
+    },
+    {
+      "path": "validation/r5/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "f8aa8c691503599fa6b329081d45085718b8e6cf",
+      "bytes": 463
+    },
+    {
+      "path": "validation/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "e06d75c13d33ceceb9778056b1f9d1204877e491",
+      "bytes": 287
+    },
+    {
+      "path": "validation/scientific-communication-negative-fixtures-v1.jsonl",
+      "git_mode": "100644",
+      "git_blob_sha1": "f9b16ca4557e4098b6b55fa32649ca316ffda52b",
+      "bytes": 6944
+    }
+  ]
+}

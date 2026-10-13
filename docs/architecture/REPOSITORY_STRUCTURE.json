@@ -304,7 +304,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.14",
+  "version": "1.7.15",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
@@ -350,5 +350,18 @@
     "external_actor_policy": "DENY_UNTIL_REGISTERED",
     "inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
     "authority": "OPERATOR_GOVERNED_ONLY"
+  },
+  "repository_steward": {
+    "object": "NEXUS_OMEGA_REPOSITORY_STEWARD_NODE_SEEDLING_20261013_R0",
+    "class": "READ_ONLY_CI_LANE_NOT_VERIFIED_NEXUS_NODE_BUS",
+    "source_contract": "docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md",
+    "script": "scripts/nexus_repository_steward.py",
+    "tests": "tests/test_nexus_repository_steward.py",
+    "existing_workflow": ".github/workflows/validate-repository-structure.yml",
+    "schedule_utc": "06:37_DAILY_GITHUB_ACTIONS_BEST_EFFORT",
+    "mode": "FULL_GIT_TREE_SOURCE_EXACT_NONDESTRUCTIVE",
+    "historic_migration": "MANUAL_RECEIPT_REQUIRED",
+    "external_writer_authority": "UNCHANGED_DEFAULT_DENY",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
   }
 }

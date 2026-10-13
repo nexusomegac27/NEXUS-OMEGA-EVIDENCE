@@ -1,6 +1,9 @@
 name: Validate repository structure
 
 on:
+  schedule:
+    - cron: '37 6 * * *'  # daily UTC, read-only existing structure workflow
+  workflow_dispatch:
   pull_request:
   push:
     branches: [main]
@@ -27,3 +30,10 @@ jobs:
 
       - name: Verify NEXUS ICEBERG C1 homepage source (offline)
         run: node --test tests/nexus-omega-iceberg-homepage.test.mjs
+
+      - name: NEXUS Repository Steward source-exact inventory (read-only)
+        run: |
+          python scripts/nexus_repository_steward.py --root . --output "$RUNNER_TEMP/nexus-repository-tree.jsonl" --fail-on-integrity > "$RUNNER_TEMP/nexus-repository-summary.json"
+          python -c 'import json,os; d=json.load(open(os.environ["RUNNER_TEMP"]+"/nexus-repository-summary.json")); print("## NEXUS Repository Steward"); print("Source commit:",d["source_commit"]); print("Tracked files:",d["tracked_file_count"]); print("Tracked directories:",d["directory_count"]); print("Registered research lanes:",d["registered_lane_count"]); print("Integrity findings:",d["integrity_error_count"]); print("Legacy naming reviews:",d["review_counts"]); print("MCP Node-Bus not assessed by CI")' >> "$GITHUB_STEP_SUMMARY"
+      - name: NEXUS Repository Steward deterministic negative fixtures
+        run: python -m unittest tests.test_nexus_repository_steward -v
