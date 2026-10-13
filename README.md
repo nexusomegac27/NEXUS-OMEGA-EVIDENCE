@@ -313,3 +313,8 @@ The operator-provided [12-artifact NSCF/R18/Legal-Flex intake](research/communic
 ## Research archive continuity · existing pipeline guard · 2026-10-13
 
 The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) prevents **silent research-discoverability debt** from being confused with a successful archive. It extends existing shared research pipeline CI with a daily, offline/std-lib, read-only audit of registered lane discovery, event/package integrity, 30-day open-package and navigation-index aging, ten negative fixtures, and GitHub Actions step-summary observability. It is source-only organizational C1 work; no new bus, workflow file, database, external model, host write or claim promotion. Existing Cursor/PRAXIS Node-Bus audit must bind private Windows source inventory separately. `C1_DESCRIPTIVE_ONLY`.
+
+
+## NEXUS Repository Steward · C1 seedling · 2026-10-13
+
+The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.

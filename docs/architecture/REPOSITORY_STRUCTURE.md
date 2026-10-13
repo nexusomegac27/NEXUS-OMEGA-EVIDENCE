@@ -101,3 +101,8 @@ This code enforces PR policy **when run**; only actual GitHub owner-side branch 
 ## Task Anchor Norm V1 · operator-owned control-plane contract
 
 Owner-governed prospective task format: `docs/governance/NEXUS_OMEGA_TASK_ANCHOR_NORM_V1.md`; JSON contract `schema/task-anchor-norm-v1.schema.json`; offline non-destructive drift validator `scripts/validate_task_anchor_norm_v1.py`; deterministic regression `tests/test_task_anchor_norm_v1.py`; example `examples/task-anchor-v1.example.json`. These reuse existing `docs`/`schema`/`scripts`/`tests`/`examples` domains; **no new root, namespace or write slot**. `DRIFT_RESET` is a source-exact, append-only correction witness without NODE_RESET or state deletion. Any future external-agent write remains subject to the existing R27-E firewall and actor registry. This is internal DIN SPEC-inspired discipline, not a DIN standard or certification. Historical source-bound orders remain immovable.
+
+
+## Repository Steward V1 · 2026-10-13 (prospective extension)
+
+A read-only steward is added to the **existing** repository-structure CI, without creating a new root namespace, Node Bus or material migration. [Executable and naming contract](NEXUS_REPOSITORY_STEWARD_V1_20261013.md); script `scripts/nexus_repository_steward.py`; tests `tests/test_nexus_repository_steward.py`. The complete tracked Git tree is measured on each run and old path-bound identifiers are classified REVIEW_ONLY unless there is a genuine cross-platform collision, missing source, source mismatch or root invariant fault. Existing machine structure contract is now v1.7.15. The steward remains a CI capability, not an independently discovered runtime Node identity.
