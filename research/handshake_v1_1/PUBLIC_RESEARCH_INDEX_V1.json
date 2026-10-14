@@ -1,0 +1,41 @@
+{
+  "schema": "NEXUS_PUBLIC_RESEARCH_INDEX_V1",
+  "object": "NEXUS_OMEGA_AXIOM_ANCHOR_V11_PUBLIC_SAFE_RESEARCH_20261014_R0",
+  "state": "PUBLIC_C1_RESEARCH_CANDIDATE_UNSIGNED_NO_CANONICAL_SIGNER",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "branch": "codex/nexus-public-handoff-witness-20261014",
+  "public_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "purpose": "PUBLIC_SAFE_SOURCE_ACCESS_FOR_EXTERNAL_AI_REVIEW_WITHOUT_PRIVATE_REPO_CREDENTIALS",
+  "artifacts": [
+    {
+      "path": "research/handshake_v1_1/PUBLIC_SAFE_HANDOFF_EXPLAINER_R0.md",
+      "bytes": 1214,
+      "sha256": "a5688784e218ac12be0a3394f5261fc56b003659d26bf6d04c2e958f42f16485",
+      "status": "PUBLIC_SAFE"
+    },
+    {
+      "path": "research/handshake_v1_1/nexus_anchor_v11.py",
+      "bytes": 14537,
+      "sha256": "ab894535665f389c2f0aad2bf7695c3454618ca9922467ac7ecfb0c10bea758a",
+      "status": "SANDBOX_REFERENCE_NOT_DEPLOYED"
+    },
+    {
+      "path": "research/handshake_v1_1/tests/test_nexus_anchor_v11.py",
+      "bytes": 9587,
+      "sha256": "9c58672293458737b7dbd571eafa9c3060cf8d8f551c06ab91c76fde1e0c0529",
+      "status": "25_TESTS_REPORTED_EXECUTED_SANDBOX"
+    }
+  ],
+  "trust_statement": "UNSIGNED_MANIFEST_GIT_CUSTODY_ONLY; NEVER ACCEPT_AS_ED25519_OPERATOR_SIGNATURE",
+  "exclusions": [
+    "NO_PRIVATE_SECOND_RUN_ZIP",
+    "NO_RAW_PRIVATE_EVIDENCE",
+    "NO_OPERATOR_SIGNER_KEYS",
+    "NO_HOSTINGER_ACCESS_TOKENS",
+    "NO_AUTOSTART",
+    "NO_MAIN_MERGE"
+  ],
+  "original_private_zip_status": "NOT_SHARED_EXTERNALLY",
+  "operator_copy_paste": "PUBLIC_INFO_REVIEW_ONLY",
+  "public_release_state": "PUBLIC_BRANCH_READABLE_PENDING_UNAUTHENTICATED_READBACK_CHECK"
+}
