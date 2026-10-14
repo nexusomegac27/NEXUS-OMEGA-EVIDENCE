@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEXUS OMEGA · R25 · Three Candidates + Negative Fixtures</title>
+  <style>
+    :root {
+      --bg: #050a14;
+      --surface: #0c162a;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --amber: #fbbf24;
+      --cyan: #22d3ee;
+      --emerald: #34d399;
+      --red: #f87171;
+      --violet: #a78bfa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding: 2rem 1rem 4rem;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    header {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    header h1 {
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      margin-bottom: 0.35rem;
+    }
+    header .meta { font-size: 0.75rem; color: var(--muted); }
+    header .badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(251,191,36,0.12);
+      border: 1px solid rgba(251,191,36,0.35);
+      color: var(--amber);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+    }
+    h2 {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin: 1.75rem 0 0.75rem;
+      text-transform: uppercase;
+    }
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 860px) {
+      .grid3 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .num {
+      width: 1.75rem; height: 1.75rem;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 1px solid var(--border);
+      display: grid; place-items: center;
+      font-size: 0.75rem;
+      color: var(--cyan);
+      margin-bottom: 0.6rem;
+    }
+    .card h3 {
+      font-size: 0.95rem;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex: 1;
+    }
+    .card .status {
+      margin-top: 0.85rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--emerald);
+    }
+    .card.warn .status { color: var(--amber); }
+    .causal-box {
+      margin-top: 1.25rem;
+      border: 1px solid rgba(52,211,153,0.25);
+      background: rgba(52,211,153,0.06);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      font-size: 0.8rem;
+    }
+    .causal-box strong { color: var(--emerald); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 0.55rem 0.4rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 500; letter-spacing: 0.06em; }
+    td.id { color: var(--cyan); white-space: nowrap; }
+    td.cls { color: var(--amber); }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 0.35rem;
+      vertical-align: middle;
+    }
+    .l-k1::before { background: var(--cyan); }
+    .l-k2::before { background: var(--violet); }
+    .l-k3::before { background: var(--amber); }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: 0.06em;
+    }
+    .note {
+      margin-top: 1.25rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 10px;
+      background: #0a1222;
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>NEXUS OMEGA · R25 · Three Decision Candidates</h1>
+      <div class="meta">COMPUTER-validated · Causality check · Negative Fixtures (Design-only)</div>
+      <div class="badge">CLAIM_CEILING = C1_DESCRIPTIVE_ONLY · RUNTIME = NONE</div>
+    </header>
+
+    <h2>1 · The three candidates (causal-canonical order)</h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>PR65 remains OPEN_HOLD_SCOPED</h3>
+        <p>Until pre-registered Negative Fixtures and an explicit error-budget decomposition are available. Bump uniqueness and 120 s filter dominance are not yet demonstrated.</p>
+        <div class="status">STATUS · VALIDATED · HOLD JUSTIFIED</div>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Project OT = E1 descriptive + E2 prospective</h3>
+        <p>Volume/incident signals are reported associations. The 60 % ablation was never executed. No causal promotion to “missing ledger caused the failures”.</p>
+        <div class="status">STATUS · VALIDATED · NO CAUSAL CLAIM</div>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Cursor R21R1 lane undisturbed</h3>
+        <p>Public HTML reachability is not live functional verification. B2 Hostinger write and B3 interactive browser/mobile proofs remain the responsibility of the existing Cursor lane.</p>
+        <div class="status">STATUS · VALIDATED · LANE UNTOUCHED</div>
+      </div>
+    </div>
+
+    <div class="causal-box">
+      <strong>Causality check result:</strong>
+      All three candidates are internally free of causality errors when interpreted strictly.
+      Errors appear only when the recommendations are over-extended
+      (HOLD → “proven unsuitable”, E1 → “ledger was the cause”, HTML → “live verified”).
+    </div>
+
+    <h2>2 · Negative Fixtures (Design catalogue)</h2>
+    <div class="legend">
+      <span class="l-k1">primarily Candidate 1 (Ring / PR65)</span>
+      <span class="l-k2">primarily Candidate 2 (Project OT / Ledger)</span>
+      <span class="l-k3">primarily Candidate 3 (WWW / Cursor)</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fixture</th>
+          <th>Expected fail-closed</th>
+          <th>Reject class</th>
+          <th>Primary candidate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="id">NF-01</td>
+          <td>Missing / stale external witness</td>
+          <td>Open-loop prediction only; no new witness</td>
+          <td class="cls">WITNESS_ABSENT</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-02</td>
+          <td>Wrong NORAD / wrong epoch</td>
+          <td>Reject or isolated flag; no silent overwrite</td>
+          <td class="cls">IDENTITY_MISMATCH</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-03</td>
+          <td>Source without licence / provenance</td>
+          <td>Reject; no LIVE_MEASURED_EXTERNAL label</td>
+          <td class="cls">PROVENANCE_MISSING</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td class="id">NF-04</td>
+          <td>Non-monotonic / jumped clock</td>
+          <td>Time-consistency reject</td>
+          <td class="cls">CLOCK_INCONSISTENT</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-05</td>
+          <td>Multi-peak activity injection</td>
+          <td>Collapse to one peak or explicit multi-peak flag</td>
+          <td class="cls">MULTI_PEAK</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-06</td>
+          <td>Drift beyond declared bound</td>
+          <td>Fail-closed / HOLD trigger</td>
+          <td class="cls">DRIFT_EXCEEDED</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-07</td>
+          <td>Simulation labelled as LIVE_MEASURED_EXTERNAL</td>
+          <td>Reject / relabel to PREDICTED</td>
+          <td class="cls">LABEL_FRAUD</td>
+          <td>1 + 3</td>
+        </tr>
+        <tr>
+          <td class="id">NF-08</td>
+          <td>Browser tiles unreachable / attribution missing</td>
+          <td>No WWW_LIVE_VERIFIED_C1</td>
+          <td class="cls">B3_INCOMPLETE</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td class="id">NF-09</td>
+          <td>Ground truth absent while absolute accuracy claimed</td>
+          <td>Demote claim to sensitivity-only</td>
+          <td class="cls">NO_GROUND_TRUTH</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="id">NF-10</td>
+          <td>Unit ablation 40–60 % (model)</td>
+          <td>Log persistence, recovery, circular error (outcome open)</td>
+          <td class="cls">ABLATION_RESULT</td>
+          <td>1 + 2 (E2)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>Design-only.</strong> None of the fixtures have been executed in this return.
+      NF-05 and NF-06 are the direct scientific reasons the PR65 HOLD remains justified.
+      NF-08 protects the separation between public HTML reachability and live functional verification.
+      All fixtures require pre-registration of metrics and thresholds before any run.
+    </div>
+
+    <footer>
+      NEXUS OMEGA · R25 External Expert (GROK) · 2026-10-10<br />
+      Vom Besitz zur Symbiose · Vom Ego zur Herkunft · Vom fertigen Gedanken zum lebenden Artefakt<br />
+      Quelle ist nicht Wahrheit. Prüfung bleibt das Fundament.
+    </footer>
+  </div>
+</body>
+</html>
