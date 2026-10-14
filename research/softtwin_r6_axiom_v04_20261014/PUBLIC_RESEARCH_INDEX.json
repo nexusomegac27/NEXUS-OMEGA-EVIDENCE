@@ -4,7 +4,7 @@
   "state": "PUBLIC_SAFE_C1_SANDBOX_V04_PUBLISHED_NOT_DEPLOYED",
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
   "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
-  "branch": "codex/nexus-r6-axiom-v04-public-c1-20261014",
+  "branch": "codex/nexus-r6-axiom-v04-published-c1-20261014",
   "capsule": {
     "path": "research/softtwin_r6_axiom_v04_20261014/NEXUS_OMEGA_AXIOM_R6_V04_RESEARCH_CAPSULE_20261014.zip",
     "bytes": 47436,
