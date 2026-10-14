@@ -1,0 +1,69 @@
+{
+  "schema": "NEXUS_R6_RETURN_BUNDLE_MANIFEST_V1",
+  "object": "NEXUS_OMEGA_R6_EXTERNAL_COLLECTIVE_MAXIMUM_CHALLENGE_CAUSAL_RETURN_20261014_R0",
+  "branch": "codex/nexus-r5-r6-maxi-public-c1-20261014",
+  "generated": "2026-10-14",
+  "files": [
+    {
+      "path": "EXECUTIVE_DECISION.md",
+      "bytes": 7215,
+      "sha256": "5c07e139c242325126014fc2b75ec0730d3381c411022063d772b93429a6cb1b"
+    },
+    {
+      "path": "SOURCE_AND_CUSTODY_LEDGER.json",
+      "bytes": 7087,
+      "sha256": "261418598650af9ce8c07ad28ca6d0418664bb36670dafa76b3e70cd22a17958"
+    },
+    {
+      "path": "ATTACK_FIXTURE_MATRIX.jsonl",
+      "bytes": 19051,
+      "sha256": "5794f31a9ca5b56ab8ccae42414912541249be61ba5a57a4e2eb5fbdce960666"
+    },
+    {
+      "path": "REPAIRED_CODE/nexus_artifact_triage_v02.py",
+      "bytes": 10903,
+      "sha256": "825f5ffdd590977c6b36ac183bf68fec66180c10107148553a8438ba66811751"
+    },
+    {
+      "path": "REPAIRED_CODE/test_triage_v02_new_fixtures.py",
+      "bytes": 5420,
+      "sha256": "caa3a57a0d927fabe853105ba1cd7ae33c9768fc1249734a302e8628e0206b15"
+    },
+    {
+      "path": "REPAIRED_CODE/DESIGN_ONLY_EXPLANATION.md",
+      "bytes": 3477,
+      "sha256": "ecfc9fccbb2837345ccd21274795609c27d44b1b8a0608db680e1410a5aa3e0e"
+    },
+    {
+      "path": "SOFTTWIN_EVIDENCE_ADAPTER_SPEC.md",
+      "bytes": 3711,
+      "sha256": "c03effa081e15a24d5e5a80b59533a1bf0885ae78f3dc59d4412cd18f15c52be"
+    },
+    {
+      "path": "CPU_NOT_EXECUTED_REASON.md",
+      "bytes": 3145,
+      "sha256": "33233fd670054f4c84da7e8b2f6d4b9b9989d58731cfca43ab08b3fdb3987d13"
+    },
+    {
+      "path": "MATH_PROOF_AND_COUNTEREXAMPLES.md",
+      "bytes": 5884,
+      "sha256": "2b15d3dbb0cf385e0abd1c60912b41cbd1ddf36bc9d7eddfb77684272d348998"
+    },
+    {
+      "path": "LEGAL_RIGHTS_AND_PROVENANCE_BOUNDARIES.md",
+      "bytes": 5222,
+      "sha256": "c606cb02469fd571648ea27598014242c06870a2bc9b505474bfc48b46eee810"
+    },
+    {
+      "path": "THREAT_AND_COST_REPORT.md",
+      "bytes": 4710,
+      "sha256": "421cf8945ff2474654ccb581a8aa18abf31f2043b5576ae6233c07bbf5b8e452"
+    },
+    {
+      "path": "FINAL_RETURN.json",
+      "bytes": 3339,
+      "sha256": "e942a96e5c7cdad259c693bf5c24f4283c94d0c8d21c86a1f2385464ac7f68ee"
+    }
+  ],
+  "note": "sha256 computed with an independent pure TypeScript FIPS-180-4 implementation (4/4 self-test vectors) over the exact UTF-8 bytes pushed in this commit."
+}

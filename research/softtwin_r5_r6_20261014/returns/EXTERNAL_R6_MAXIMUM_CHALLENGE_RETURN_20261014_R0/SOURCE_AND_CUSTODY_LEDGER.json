@@ -1,0 +1,158 @@
+{
+  "schema": "NEXUS_R6_SOURCE_AND_CUSTODY_LEDGER_V1",
+  "return_object": "NEXUS_OMEGA_R6_EXTERNAL_COLLECTIVE_MAXIMUM_CHALLENGE_CAUSAL_RETURN_20261014_R0",
+  "readback_commit": "165ab9638920b907c4a48869ee770fdd8e410168",
+  "branch": "codex/nexus-r5-r6-maxi-public-c1-20261014",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/docs/NEXUS_R6_EXTERNAL_EXPERT_MAXIMUM_CHALLENGE_SINGLE_PASS_ORDER_R0.md",
+      "bytes": 20493,
+      "sha256": "5fca7bebd48fd6a1dbf5f9d17624107859a5f19b55f66430b2eddf91039310f5",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-02",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/docs/R5_MATH_AND_LEGAL_ERRATA_R0.md",
+      "bytes": 1943,
+      "sha256": "f8522586cf19a4259e7e74ac0bb0970e6ab622906793dae1f9bb8c2040f23378",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-03",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/docs/R6_PUBLIC_SAFE_FOUNDATION_CAPSULE_R0.md",
+      "bytes": 2219,
+      "sha256": "6f5935e885baf7c11cea10ce8203187752c2abe961b399acaa0d188f48c70e5b",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-04",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/src/nexus_artifact_triage_v01.py",
+      "bytes": 8265,
+      "sha256": "f8cf970484d899d28bede9b0ce9f71325c2c388fca38c340f8ca9041429ed040",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-05",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/tests/test_triage_v01_compat.py",
+      "bytes": 4834,
+      "sha256": "428939892d0ff84c65919942be4c70f4f02ff013b9852e64032a1826596533dc",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-06",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/tests/test_triage_v01_delta.py",
+      "bytes": 6337,
+      "sha256": "aa926d1737a69fb884f5fdc297e63e9dadc660b8e38a1dda3e1b04b0aeba3aea",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-07",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/evidence/SANDBOX_R5_V01_TEST_RETURN.json",
+      "bytes": 1381,
+      "sha256": "07df7482fe68efd2e2f1e655cb631adbc267dfaa5ce60f188e2a2a8d46f4c0fd",
+      "status": "RECEIVED_REHASH_MATCH",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-08",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r5-r6-maxi-public-c1-20261014/research/softtwin_r5_r6_20261014/PUBLIC_RESEARCH_INDEX.json",
+      "status": "RECEIVED_STRUCTURALLY_VERIFIED_SEVEN_ENTRIES_ALL_SHA256_64HEX_NO_SELF_ENTRY",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-09",
+      "url": "https://github.com/nexusomegac27/NEXUS-OMEGA-AGENT-REGISTRY/blob/codex/axiom-r5-r6-maxi-20261014/handoffs/AXIOM_TO_SOFTTWIN/20261014_R5_R6_MAXI/docs/AXIOM_R5_INDEPENDENT_CAUSAL_ADJUDICATION_R0.md",
+      "bytes": 11293,
+      "status": "RECEIVED_PRIVATE_AUTHENTICATED_READ",
+      "mode": "PRIVATE_SOURCE_ONLY_WHERE_AUTHENTICATED"
+    },
+    {
+      "id": "SRC-10",
+      "url": "https://github.com/morluto/rea/tree/0f55f247cdd2ae9bd7903d5e45962b19dfc233dc",
+      "status": "RECEIVED_TREE_AND_PACKAGE_JSON_LICENSE_READ",
+      "detail": "package.json version 6.5.0, license MIT at pinned commit; tarball correspondence NOT asserted",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-11",
+      "url": "https://registry.npmjs.org/rea-agents",
+      "status": "RECEIVED_REGISTRY_METADATA_READ_ONLY",
+      "detail": "dist-tags.latest=6.5.0, license MIT, no install, no tarball download",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-12",
+      "url": "https://github.com/rea-githu/REA",
+      "status": "RECEIVED_EXISTENCE_AND_README_READ_ONLY",
+      "detail": "lookalike; README keyword-stuffed, advertises local MCP zip; NOT downloaded; no malware claim",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-13",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A62020CJ0013",
+      "status": "UNAVAILABLE_DIRECT_JS_GATE",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-14",
+      "url": "https://dejure.org/gesetze/UrhG/69d.html",
+      "status": "RECEIVED",
+      "detail": "section 69d UrhG text read",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-15",
+      "url": "https://www.gesetze-im-internet.de/urhg/__69e.html",
+      "status": "RECEIVED_VIA_SEARCH_SNIPPET",
+      "detail": "direct fetch temporarily unreachable; official title and operative text confirmed via snippet and dejure.org mirror",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-16",
+      "url": "https://docs.ollama.com/faq",
+      "status": "RECEIVED_VIA_SEARCH_SNIPPET",
+      "detail": "two-level concurrency, memory-gated model loading; version pin UNKNOWN",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-17",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "status": "RECEIVED_VIA_SEARCH_SNIPPET",
+      "detail": "C/C++ LLM inference; version pin UNKNOWN",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-18",
+      "url": "https://llama-cpp.com/",
+      "status": "RECEIVED_VIA_SEARCH_SNIPPET",
+      "detail": "AVX/AVX2/AVX512/NEON hand-tuned assembly claim",
+      "mode": "AUTHORIZED_PUBLIC_READONLY"
+    },
+    {
+      "id": "SRC-19",
+      "detail": "V0 original nexus_artifact_triage.py 5593 B sha256 647b19356396cbbb295100f1156841754d4fa2679bc83012a11dc7f7 and R5 ZIP payloads",
+      "status": "NOT_ACCESSED_SOURCE_GAP_PRIVATE_CUSTODY",
+      "mode": "NOT_ACCESSED"
+    },
+    {
+      "id": "SRC-20",
+      "detail": "R5 adjudication ZIP package (42510 B, package sha256 bd2f98db26188e92ade2f127ffd1372815ed342540465f6f8b4e582bb847c7b9)",
+      "status": "NOT_ACCESSED_SOURCE_GAP_PRIVATE_CUSTODY",
+      "mode": "NOT_ACCESSED"
+    }
+  ],
+  "total_received_public_capsule_bytes": 45472,
+  "rehash": {
+    "files": 7,
+    "sha256_match": 7,
+    "method": "INDEPENDENT_PURE_TS_SHA256_FIPS180_SELFTEST_4_OF_4"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "object": "NEXUS_OMEGA_R6_EXTERNAL_COLLECTIVE_MAXIMUM_CHALLENGE_CAUSAL_RETURN_20261014_R0",
+  "authority": "EXTERNAL_RESEARCH_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_evidence": {
+    "exact_bytes_received": {
+      "public_capsule_files": 7,
+      "public_capsule_total_bytes": 45472,
+      "sha256_rehash_match": 7,
+      "axiom_adjudication_doc_read_authenticated_private": 1
+    },
+    "private_inputs": "R5_ZIP_PAYLOADS_NOT_ACCESSED_SOURCE_GAP"
+  },
+  "lane_S": {
+    "tests_executed": 0,
+    "new_failures_confirmed": 2,
+    "fixed_with_proof": 0,
+    "fixed_designed_static_proved": 2,
+    "new_failures_detail": [
+      "ROOT_INTERMEDIATE_SYMLINK_FOLLOWED (S10b, STATIC_PROVED)",
+      "ZIP_LOCAL_DATA_REGION_UNBOUNDED (S26, STATIC_PROVED)"
+    ],
+    "open_risks": [
+      "RUNTIME_CONFIRMATION_PENDING_NO_PYTHON_IN_THIS_ENVIRONMENT",
+      "NO_ATOMIC_SNAPSHOT_VS_HOSTILE_INPLACE_WRITER",
+      "WINDOWS_NOT_EXECUTED_NO_WINDOWS_CLAIM",
+      "V0_ORIGINAL_SOURCE_GAP_PRIVATE_CUSTODY"
+    ]
+  },
+  "lane_P": {
+    "protocol_constraints_proven": [
+      "READONLY_TOOL_HINT_NE_OS_CAPABILITY",
+      "SIGNED_MANIFEST_NE_RECEIVED_BYTES",
+      "RECEIVED_BYTES_NE_EXECUTION_AUTHORIZATION",
+      "SOURCE_HASH_NE_SCIENTIFIC_TRUTH",
+      "DECOMPILED_CODE_NE_ORIGINAL_SOURCE",
+      "FAIL_CLOSED_UNKNOWN_FIELDS",
+      "FAIL_CLOSED_STALE_PROFILE",
+      "FAIL_CLOSED_ABSENT_PAYLOAD"
+    ],
+    "validator_self_tests_executed": 10,
+    "validator_self_tests_passed": 10,
+    "open_risks": [
+      "ADAPTER_EXECUTED_IN_TYPESCRIPT_ONLY_NOT_DEPLOYED",
+      "MCP_RUNTIME_NOT_EXERCISED_NO_INSTALL"
+    ]
+  },
+  "lane_C": {
+    "benchmark": "NOT_EXECUTED",
+    "accepted_task_utility": "UNKNOWN",
+    "primary_sources_confirmed": [
+      "docs.ollama.com/faq",
+      "github.com/ggml-org/llama.cpp",
+      "llama-cpp.com",
+      "qwen.readthedocs.io"
+    ],
+    "version_pins": "UNKNOWN"
+  },
+  "lane_M": {
+    "proof_status": "DEMONSTRATED",
+    "scope": "SIGNED_SCALAR_REAL_LAMBDA",
+    "details": {
+      "basel_witness_refuted": true,
+      "correct_witness_1_over_sqrt": true,
+      "sharp_gain_1_over_1_minus_abs_lambda": true,
+      "maximizing_frequency_pi_for_negative_lambda": true,
+      "N1000_counterexample_sum": "3993.333333333333",
+      "invalid_rhs": "888.8888888888889",
+      "corrected_rhs": "8000",
+      "randomized_invalid_formula_violations": "112_OF_200_ON_NEGATIVE_LAMBDA",
+      "randomized_corrected_bound_violations": "0_OF_200",
+      "young_violations": "0_OF_200"
+    }
+  },
+  "lane_L": {
+    "actual_pinned_sources": [
+      "morluto/rea@0f55f247cdd2ae9bd7903d5e45962b19dfc233dc",
+      "npm:rea-agents (registry metadata, latest 6.5.0)",
+      "rea-githu/REA (read-only existence characterization)"
+    ],
+    "legal_gate": "SOURCE_CORRECTED_NOT_BLANKET_AUTH",
+    "new_falsified_assertions": [
+      "ORDER_AND_CAPSULE_CLAIM_SIX_INDEX_ENTRIES_LIVE_MANIFEST_HAS_SEVEN"
+    ]
+  },
+  "independent_reviewer": {
+    "actual_review": "EVIDENCE_ONLY",
+    "unresolved_contradictions": [
+      "CAPSULE_AND_ORDER_COUNT_STATEMENT_STALE_VS_LIVE_SEVEN_ENTRY_MANIFEST"
+    ]
+  },
+  "claim_promotion": "NO",
+  "cursor_execution_authorized": "NO",
+  "hostinger_write": "FAIL_CLOSED",
+  "main_merge": "NO",
+  "mcp_install": "NO",
+  "autostart": "NO",
+  "next": "AXIOM_ONE_ADJUDICATION_NO_PING_PONG"
+}
