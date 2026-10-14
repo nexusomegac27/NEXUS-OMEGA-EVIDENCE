@@ -1,0 +1,71 @@
+{
+  "schema": "NEXUS_OMEGA_R7_PUBLIC_C1_SOURCE_INDEX_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R7_SOFTTWIN_REA_EVIDENCE_TERMINAL_FOUNDATION_MAXI_ORDER_20261015_R0",
+  "state": "PREPARED_NOT_DISPATCHED_C1_PUBLIC_SAFE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/nexus-r7-terminal-closure-public-c1-20261015",
+  "files": [
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/NEXUS_OMEGA_AXIOM_R7_MAXIMUM_EXPERT_TERMINAL_CLOSURE_20261015_R0.zip",
+      "bytes": 32412,
+      "sha256": "95c35d3fced603f704fbd885c2d35cc9acb1a44a7ef51240e6586bd2d190ae0a",
+      "git_blob_sha1": "01b0f8115cb1d819a4c33335890bd7246dd3cbf5"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/NEXUS_OMEGA_AXIOM_R7_MAXIMUM_EXPERT_TERMINAL_CLOSURE_ORDER_20261015_R0.md",
+      "bytes": 22567,
+      "sha256": "dbf995c1aba3550670f5b6702bc33609842d3f06ad3954ca151ff710faf49424",
+      "git_blob_sha1": "17f1a18121a23a24c54181d3b36b5ee97e20fe8f"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/R7_CLOSURE_BOUNDARY_AND_PRIORITIES.md",
+      "bytes": 5019,
+      "sha256": "8e8d519654b2cb696f698bf3edea7f72fc9175e0c9f60f1963353a62b8a202c0",
+      "git_blob_sha1": "5e186eef195218cad517d7e544b0c5c381c02a9a"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/schema/R7_CLOSURE_GATE_MATRIX.json",
+      "bytes": 5232,
+      "sha256": "832f177354e1d213a69919408b9be47a39a4e2bb18b1d2dccbcaf2229cfc84f2",
+      "git_blob_sha1": "e30af3ecec03790bb4b2ca91aa07017ba15a8fbe"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/schema/R7_EXTERNAL_FINAL_RETURN_SCHEMA.json",
+      "bytes": 7136,
+      "sha256": "e7c2314708aaf9307d2d59e4f44ae76a9915ef4f097ba60db9401bc534a45f6b",
+      "git_blob_sha1": "077e201eeffd0b19bf0c1abd9678bc1bffd112de"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/R7_OPERATOR_DISPATCH_DE.md",
+      "bytes": 1645,
+      "sha256": "69f11984d60bb0ae9313f8585c90a1f8b5af5a9d890b5cb8467ef8411ba58d8e",
+      "git_blob_sha1": "f67840fe39e0035ea4ee28ae665ec13fa453b206"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/MANIFEST_SHA256.json",
+      "bytes": 2740,
+      "sha256": "ca230d3fc00002229573ebf5ec3aa34037366f3002639901fa396e86aa51c66c",
+      "git_blob_sha1": "b410fb2e1391ce40cbaeb8a3f6248f858f6c1ce9"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/evidence/R7_PREPARATION_TEST_REPORT.json",
+      "bytes": 859,
+      "sha256": "6eb9f8ada3bd2f880afffbe3bda7baf9049cf62f5647d209b463b34fd41d9124",
+      "git_blob_sha1": "db9c1819660174ca33008772d04744318d71de9a"
+    }
+  ],
+  "upstream_r6_public_index": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/codex/nexus-r6-axiom-v04-published-c1-20261014/research/softtwin_r6_axiom_v04_20261014/PUBLIC_RESEARCH_INDEX.json",
+  "permissions": {
+    "hostinger_write": false,
+    "mcp_install": false,
+    "cursor_autostart": false,
+    "main_merge": false,
+    "production": false
+  },
+  "r7_expert_run": "NOT_STARTED",
+  "r7_framework_closure": "NOT_YET_ADJUDICATED",
+  "operator_signer": "NOT_PROVISIONED",
+  "cursor_receiver_ack": "NOT_ESTABLISHED",
+  "note": "Git object sha1, SHA256 and ZIP CRC do not establish scientific truth, operator signature, receiver receipt or approval"
+}

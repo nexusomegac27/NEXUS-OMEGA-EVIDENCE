@@ -1,0 +1,32 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R7_PREPARATION_TEST_REPORT_20261015_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "r6_v04_baseline_independently_reran_in_current_turn": {
+    "suite_compat_and_r6_attacks": {
+      "executed": 79,
+      "passed": 79,
+      "failed": 0
+    },
+    "suite_new_zip_boundaries": {
+      "executed": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "suite_synthetic_policy": {
+      "executed": 18,
+      "passed": 18,
+      "failed": 0
+    }
+  },
+  "r7_order_envelope_preflight": {
+    "executed": 20,
+    "passed": 20,
+    "failed": 0,
+    "interpretation": "STRUCTURAL_NEGATIVE_TESTS_ONLY_NOT_SECURITY_OR_SCIENTIFIC_PROOF"
+  },
+  "operating_system": "Linux",
+  "python_version": "3.13.5",
+  "r7_expert_tests_executed": false,
+  "r7_module_closure": "NOT_YET_ADJUDICATED",
+  "r7_foundation_closure": "NOT_YET_ADJUDICATED"
+}

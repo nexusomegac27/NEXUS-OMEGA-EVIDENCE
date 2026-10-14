@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus-mobile.de/schemas/nexus_r7_external_final_return_v1.json",
+  "title": "NEXUS OMEGA R7 External Expert Single Envelope — metadata/schema validation only",
+  "description": "This schema rejects malformed final reports but does not independently establish execution or truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object",
+    "authority",
+    "claim_ceiling",
+    "status",
+    "scope",
+    "sources",
+    "gates",
+    "tests",
+    "claims",
+    "permissions",
+    "transport",
+    "independent_reviewer"
+  ],
+  "properties": {
+    "object": {
+      "const": "NEXUS_OMEGA_R7_EXTERNAL_COLLECTIVE_TERMINAL_FOUNDATION_RETURN_20261015_R0"
+    },
+    "authority": {
+      "const": "EXTERNAL_RESEARCH_ONLY"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "status": {
+      "enum": [
+        "R7_RESEARCH_RETURN_ACCEPTED_C1",
+        "R7_RESEARCH_RETURN_HOLD_C1",
+        "R7_RESEARCH_RETURN_FAIL_C1"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "foundation",
+        "module",
+        "production",
+        "rea_mcp_runtime",
+        "windows"
+      ],
+      "properties": {
+        "foundation": {
+          "enum": [
+            "RECOMMEND_CLOSE_F1",
+            "HOLD_F1"
+          ]
+        },
+        "module": {
+          "enum": [
+            "RECOMMEND_CLOSE_M1",
+            "HOLD_M1"
+          ]
+        },
+        "production": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "rea_mcp_runtime": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "windows": {
+          "enum": [
+            "NOT_CLAIMED",
+            "NOT_TESTED"
+          ]
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "bytes",
+          "evidence_class"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "evidence_class": {
+            "enum": [
+              "ACTUAL_BYTES_REHASHED",
+              "EXTERNAL_REPORTED_ONLY",
+              "SOURCE_GAP",
+              "PRIVATE_SCOPE_EXCLUDED"
+            ]
+          }
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "reason",
+          "evidence_refs",
+          "independent_reviewer"
+        ],
+        "properties": {
+          "id": {
+            "pattern": "^G[0-9]$",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS_EXECUTED_AND_REVIEWED",
+              "PASS_PROVED_AND_SOURCE_BOUND",
+              "FAIL_REPRODUCED",
+              "HOLD_WITH_PRECISE_REASON",
+              "SCOPE_EXCLUDED_NOT_AUTHORIZED",
+              "EXTERNAL_REPORTED_ONLY"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "independent_reviewer": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "execution",
+          "source_sha256",
+          "toolchain",
+          "expected",
+          "actual",
+          "raw_log_path"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "execution": {
+            "enum": [
+              "ACTUAL_EXECUTED",
+              "STATIC_PROVED",
+              "DESIGNED_NOT_EXECUTED",
+              "EXTERNAL_REPORTED_ONLY"
+            ]
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "toolchain": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "actual": {
+            "type": "string"
+          },
+          "raw_log_path": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim",
+          "scope",
+          "basis",
+          "uncertainty"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hostinger_write",
+        "mcp_install",
+        "main_merge",
+        "cursor_autostart",
+        "third_party_target_execution",
+        "node_birth"
+      ],
+      "properties": {
+        "hostinger_write": {
+          "const": false
+        },
+        "mcp_install": {
+          "const": false
+        },
+        "main_merge": {
+          "const": false
+        },
+        "cursor_autostart": {
+          "const": false
+        },
+        "third_party_target_execution": {
+          "const": false
+        },
+        "node_birth": {
+          "const": false
+        }
+      }
+    },
+    "transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "receiver_ack",
+        "manifest_verified"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "EXPERT_DOWNLOAD_ONLY",
+            "PUBLIC_SAFE_CODEX_BRANCH",
+            "OPERATOR_BROKER"
+          ]
+        },
+        "receiver_ack": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "ACTUAL_BYTE_RECEIPT_WITH_PROOF"
+          ]
+        },
+        "manifest_verified": {
+          "type": "boolean"
+        }
+      }
+    },
+    "independent_reviewer": {
+      "type": "object",
+      "required": [
+        "identity_declared",
+        "different_session_or_entity",
+        "actual_rerun_of_critical_cases",
+        "source_ledger_ref"
+      ],
+      "properties": {
+        "identity_declared": {
+          "type": "string"
+        },
+        "different_session_or_entity": {
+          "type": "boolean"
+        },
+        "actual_rerun_of_critical_cases": {
+          "type": "boolean"
+        },
+        "source_ledger_ref": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

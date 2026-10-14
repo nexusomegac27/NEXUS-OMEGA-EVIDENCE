@@ -1,0 +1,179 @@
+{
+  "schema": "NEXUS_R7_CLOSURE_GATES_V1",
+  "object": "NEXUS_OMEGA_R7_TERMINAL_FOUNDATION_GATE_MATRIX_20261015_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": {
+    "foundation": "NEXUS_SOFTTWIN_STATIC_EVIDENCE_FOUNDATION_V1",
+    "module": "NEXUS_REA_TRIAGE_POSIX_C1_MODULE",
+    "production": "NOT_AUTHORIZED",
+    "mcp_runtime": "NOT_AUTHORIZED",
+    "windows_native": "NOT_CLAIMED",
+    "hostinger": "FAIL_CLOSED"
+  },
+  "gate_status_allowed": [
+    "PASS_EXECUTED_AND_REVIEWED",
+    "PASS_PROVED_AND_SOURCE_BOUND",
+    "FAIL_REPRODUCED",
+    "HOLD_WITH_PRECISE_REASON",
+    "SCOPE_EXCLUDED_NOT_AUTHORIZED",
+    "EXTERNAL_REPORTED_ONLY",
+    "UNSET"
+  ],
+  "gates": [
+    {
+      "id": "G0",
+      "name": "SOURCE_AND_R6_CUSTODY",
+      "description": "Source-exact public R6 capsule; full private R6 optional for public expert",
+      "scope": "both",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G1",
+      "name": "POSIX_FILESYSTEM_AND_IMMUTABLE_BYTE_BOUNDARY",
+      "description": "No overclaim of atomicity; scoped FS, SIGIO, lease and path controls",
+      "scope": "module",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G2",
+      "name": "ZIP_SPEC_AND_PARSER_DIFFERENTIAL",
+      "description": "Validity versus deliberate policy rejection; parsed-data bound; memory/CPU cap",
+      "scope": "module",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G3",
+      "name": "DETERMINISTIC_ADVERSARIAL_REPRODUCTION",
+      "description": "Fixed seeds and exact-byte reproducibility; bounded fuzz and one-defect fixtures",
+      "scope": "module",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G4",
+      "name": "TYPED_EVIDENCE_AUTHORITY_FIREWALL",
+      "description": "Concrete code and tests, stale/replay/injection/contradiction, no authority from text",
+      "scope": "both",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G5",
+      "name": "AUTHORITATIVE_MATH_ERRATUM",
+      "description": "Correct signed-lambda gain, c0/l2 witness, nonnormal boundary, canonical overlay receipt",
+      "scope": "foundation",
+      "proof_mode": "proof",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G6",
+      "name": "RIGHTS_AND_SOURCE_SCOPES",
+      "description": "German law, 2021 C-13/20 versus C-650/17, REA pinned and scope",
+      "scope": "foundation",
+      "proof_mode": "proof",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G7",
+      "name": "PROVENANCE_AND_RECEIPT_SEPARATION",
+      "description": "No hash-signature-receipt confusion, public-private redaction, exact return manifest",
+      "scope": "both",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G8",
+      "name": "REAL_CPU_ECONOMIC_COMPARISON",
+      "description": "Required only for an explicit CPU/Hostinger performance claim",
+      "scope": "performance",
+      "proof_mode": "executed",
+      "mandatory": false,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G9",
+      "name": "INTEGRATING_INDEPENDENT_REPRODUCTION",
+      "description": "One actual complete final return and independent review; no consensus-as-proof",
+      "scope": "both",
+      "proof_mode": "executed",
+      "mandatory": true,
+      "status": "UNSET",
+      "required_files": [],
+      "actual_artifact_refs": [],
+      "actual_evidence": null,
+      "precise_hold_reason": null
+    }
+  ],
+  "logic": {
+    "foundation_all_of": [
+      "G0",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G9"
+    ],
+    "module_all_of": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G7",
+      "G9"
+    ],
+    "performance_requires": [
+      "G8"
+    ],
+    "production_never_implied": true,
+    "full_rea_mcp_never_implied": true,
+    "default_status": "HOLD"
+  }
+}

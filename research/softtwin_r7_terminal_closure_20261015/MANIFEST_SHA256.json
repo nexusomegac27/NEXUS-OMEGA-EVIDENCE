@@ -1,0 +1,79 @@
+{
+  "schema": "NEXUS_OMEGA_R7_MAXI_SOURCE_MANIFEST_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R7_SOFTTWIN_REA_EVIDENCE_TERMINAL_FOUNDATION_MAXI_ORDER_20261015_R0",
+  "state": "PREPARED_NOT_DISPATCHED_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2184,
+      "sha256": "4ccba778f573caeea1acab9113463ad38f039d9ac07d6e093a6afcc8863289e6"
+    },
+    {
+      "path": "docs/NEXUS_OMEGA_AXIOM_R7_MAXIMUM_EXPERT_TERMINAL_CLOSURE_ORDER_20261015_R0.md",
+      "bytes": 22567,
+      "sha256": "dbf995c1aba3550670f5b6702bc33609842d3f06ad3954ca151ff710faf49424"
+    },
+    {
+      "path": "docs/R7_CLOSURE_BOUNDARY_AND_PRIORITIES.md",
+      "bytes": 5019,
+      "sha256": "8e8d519654b2cb696f698bf3edea7f72fc9175e0c9f60f1963353a62b8a202c0"
+    },
+    {
+      "path": "docs/R7_EXPERT_ASSIGNMENT_AND_SINGLE_RETURN.md",
+      "bytes": 3390,
+      "sha256": "a4936fa0c71293934db7c1c7e6e092e74fc0bb09a74bcbb211b2c8fa5abebc5b"
+    },
+    {
+      "path": "docs/R7_OPERATOR_DISPATCH_DE.md",
+      "bytes": 1645,
+      "sha256": "69f11984d60bb0ae9313f8585c90a1f8b5af5a9d890b5cb8467ef8411ba58d8e"
+    },
+    {
+      "path": "evidence/R7_PREPARATION_SOURCE_LEDGER.json",
+      "bytes": 1810,
+      "sha256": "248a6c993c0e7d5b5efc74c323439b1bc4c6fb04df7365e97cb2875537cc15cb"
+    },
+    {
+      "path": "evidence/R7_PREPARATION_TEST_REPORT.json",
+      "bytes": 859,
+      "sha256": "6eb9f8ada3bd2f880afffbe3bda7baf9049cf62f5647d209b463b34fd41d9124"
+    },
+    {
+      "path": "evidence/R7_RESIDUAL_DEFECT_REGISTER.json",
+      "bytes": 3320,
+      "sha256": "1faec093ec40e23f2d262d695870d5a3facb384646755577e90af57fa8362452"
+    },
+    {
+      "path": "schema/R7_CLOSURE_GATE_MATRIX.json",
+      "bytes": 5232,
+      "sha256": "832f177354e1d213a69919408b9be47a39a4e2bb18b1d2dccbcaf2229cfc84f2"
+    },
+    {
+      "path": "schema/R7_EXTERNAL_FINAL_RETURN_SCHEMA.json",
+      "bytes": 7136,
+      "sha256": "e7c2314708aaf9307d2d59e4f44ae76a9915ef4f097ba60db9401bc534a45f6b"
+    },
+    {
+      "path": "schema/R7_FINAL_RETURN_TEMPLATE.json",
+      "bytes": 3267,
+      "sha256": "14950d553cd82b9f6b100d8d214d4e52d996393cf0c4a2a170ad9998efd87aed"
+    },
+    {
+      "path": "tests/test_r7_closure_preflight.py",
+      "bytes": 5369,
+      "sha256": "f585b898df785da43d3dcd1a67c97b2958de4024926a0a03b94a5247758e29e4"
+    },
+    {
+      "path": "tools/r7_closure_preflight.py",
+      "bytes": 6396,
+      "sha256": "cb5599bddb688b6861d5dccc4fea96fd37e8d347648941296fdae8a6dedb8b33"
+    }
+  ],
+  "hash_manifest_is_not_signature": true,
+  "expert_result": "NOT_YET_RECEIVED",
+  "cursor_action": "NONE",
+  "hostinger_write": "FAIL_CLOSED",
+  "windows_validation": "NOT_EXECUTED",
+  "r7_implementation": "NOT_STARTED"
+}
