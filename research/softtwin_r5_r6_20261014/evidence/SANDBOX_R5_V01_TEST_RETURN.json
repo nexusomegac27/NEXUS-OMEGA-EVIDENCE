@@ -1,0 +1,53 @@
+{
+  "schema": "NEXUS_OMEGA_R5_REA_V01_INDEPENDENT_SYNTHETIC_TEST_EVIDENCE",
+  "execution_environment": {
+    "python": "3.13.5",
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "executed_by": "AXIOM_LOCAL_SANDBOX",
+  "results": [
+    {
+      "name": "R0_original_22",
+      "expected": 22,
+      "ran": 22,
+      "passed": 22,
+      "status": "ACTUAL_EXECUTED"
+    },
+    {
+      "name": "MANUS_ADVERSARIAL_A02_TO_A11",
+      "expected": 10,
+      "ran": 10,
+      "passed": 10,
+      "status": "ACTUAL_EXECUTED_VULNERABILITY_TESTS_NOT_SECURITY_PASS"
+    },
+    {
+      "name": "R5_V01_BASELINE_COMPAT",
+      "expected": 22,
+      "ran": 22,
+      "passed": 22,
+      "status": "ACTUAL_EXECUTED"
+    },
+    {
+      "name": "R5_V01_NEGATIVE_DELTA",
+      "expected": 20,
+      "ran": 20,
+      "passed": 20,
+      "status": "ACTUAL_EXECUTED"
+    }
+  ],
+  "run_total": 74,
+  "pass_total": 74,
+  "windows_MANUS_A01_A12": "NOT_EXECUTED",
+  "real_REA_MCP_runtime": "NOT_EXECUTED",
+  "hostinger": "FAIL_CLOSED",
+  "operator_execution_authority": "NOT_GRANTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "limitations": [
+    "PASSED_VULNERABILITY_REPRO_TESTS_ARE_NOT_SECURITY_PASS",
+    "NO_ATOMIC_SNAPSHOT_AGAINST_HOSTILE_INPLACE_WRITER",
+    "POSIX_ONLY_RESEARCH_CANDIDATE_NOT_WINDOWS",
+    "DOES_NOT_EXTRACT_OR_EXECUTE_TARGET_CODE",
+    "NO_SOURCE_PROVENANCE_SIGNATURE"
+  ]
+}

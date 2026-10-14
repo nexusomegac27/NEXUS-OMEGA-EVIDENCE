@@ -1,0 +1,64 @@
+{
+  "schema": "NEXUS_R6_PUBLIC_SAFE_SOURCE_MANIFEST_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R5_ADJUDICATION_R6_MAXI_EXPERT_FOUNDATION_20261014_R0",
+  "state": "C1_PUBLIC_SAFE_RESEARCH_BRANCH_SOURCE_PUBLISHED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/nexus-r5-r6-maxi-public-c1-20261014",
+  "files": [
+    {
+      "path": "research/softtwin_r5_r6_20261014/docs/NEXUS_R6_EXTERNAL_EXPERT_MAXIMUM_CHALLENGE_SINGLE_PASS_ORDER_R0.md",
+      "bytes": 20493,
+      "sha256": "5fca7bebd48fd6a1dbf5f9d17624107859a5f19b55f66430b2eddf91039310f5"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/docs/R5_MATH_AND_LEGAL_ERRATA_R0.md",
+      "bytes": 1943,
+      "sha256": "f8522586cf19a4259e7e74ac0bb0970e6ab622906793dae1f9bb8c2040f23378"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/docs/R6_PUBLIC_SAFE_FOUNDATION_CAPSULE_R0.md",
+      "bytes": 2219,
+      "sha256": "6f5935e885baf7c11cea10ce8203187752c2abe961b399acaa0d188f48c70e5b"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/src/nexus_artifact_triage_v01.py",
+      "bytes": 8265,
+      "sha256": "f8cf970484d899d28bede9b0ce9f71325c2c388fca38c340f8ca9041429ed040"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/tests/test_triage_v01_compat.py",
+      "bytes": 4834,
+      "sha256": "428939892d0ff84c65919942be4c70f4f02ff013b9852e64032a1826596533dc"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/tests/test_triage_v01_delta.py",
+      "bytes": 6337,
+      "sha256": "aa926d1737a69fb884f5fdc297e63e9dadc660b8e38a1dda3e1b04b0aeba3aea"
+    },
+    {
+      "path": "research/softtwin_r5_r6_20261014/evidence/SANDBOX_R5_V01_TEST_RETURN.json",
+      "bytes": 1381,
+      "sha256": "07df7482fe68efd2e2f1e655cb631adbc267dfaa5ce60f188e2a2a8d46f4c0fd"
+    }
+  ],
+  "source_qualification": {
+    "validation": "7_BLOB_CAS_EXACT_PRIVATE_SOURCE_MATCH",
+    "earlier_original_baseline_tests_executed": 22,
+    "manus_linux_adversarial_reproduced": 10,
+    "new_posix_candidate_compatibility_passed": 22,
+    "new_posix_candidate_delta_passed": 20
+  },
+  "not_proven": {
+    "rea_runtime": "NO",
+    "windows": "NO",
+    "hostinger_write": "FAIL_CLOSED",
+    "main_merge": "NO",
+    "private_payload_exposed": "NO",
+    "operator_signer": "NOT_PROVISIONED",
+    "external_expert_ack": "NOT_RECEIVED",
+    "r6_order_executed": "NO"
+  },
+  "policy": "EXPERT_RESEARCH_ONLY_NO_AUTOSTART_NO_GITHUB_COMMIT_AS_RECEIVER_ACK",
+  "source_root_git_private": "NEXUS-OMEGA-AGENT-REGISTRY_PRIVATE_MANIFEST_BOUND"
+}
