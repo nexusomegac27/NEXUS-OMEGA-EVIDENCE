@@ -1,0 +1,46 @@
+{
+  "schema": "NEXUS_OMEGA_C1_PUBLIC_SAFE_RESEARCH_INDEX_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R6_INDEPENDENT_ADJUDICATION_V04_RESEARCH_20261014_R0",
+  "state": "PUBLIC_SAFE_C1_SANDBOX_V04_PUBLISHED_NOT_DEPLOYED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/nexus-r6-axiom-v04-public-c1-20261014",
+  "capsule": {
+    "path": "research/softtwin_r6_axiom_v04_20261014/NEXUS_OMEGA_AXIOM_R6_V04_RESEARCH_CAPSULE_20261014.zip",
+    "bytes": 47436,
+    "sha256": "7f31a9177a8e38f64e81c13b1cdd2d28edf47b102e5f8db26492eed3d2b93aac",
+    "git_blob_sha1": "48ac94b39fae721185ac268b95884bb21078b5b8",
+    "zip_entries": 18,
+    "manifest_17_of_17": "MATCH"
+  },
+  "private_original": {
+    "repo": "nexusomegac27/NEXUS-OMEGA-AGENT-REGISTRY",
+    "branch": "codex/axiom-r6-full-return-audit-20261014",
+    "commit": "75f1409ee0f9baf8b7675e2f7eb6bee7cba56b87",
+    "bytes": 179031,
+    "sha256": "7f766bdd4113e6033b03221e404f104217c62fdcf608f1518e56350f35aa14c2",
+    "public_release": false
+  },
+  "tests": {
+    "v04_compat_and_attack": 79,
+    "v04_new_adversarial": 8,
+    "v03_compat": 42,
+    "v03_attack": 37,
+    "synthetic_policy": 18
+  },
+  "new_findings": [
+    "V03_ZIP_UNREFERENCED_TRAILING_BYTES_ACCEPTED",
+    "V03_ZIP_DATA_DESCRIPTOR_CRC_AND_SIZE_MISMATCH_ACCEPTED"
+  ],
+  "safety": {
+    "claim_promotion": "NO",
+    "operator_signer": "NOT_PROVISIONED",
+    "cursor_ack": "NOT_ESTABLISHED",
+    "hostinger_write": "FAIL_CLOSED",
+    "mcp_install": "NO",
+    "windows_claim": "NO",
+    "main_merge": "NO",
+    "autoexec": "NO"
+  },
+  "next": "NO_CURSOR_MICROORDERS_UNTIL_SUBSTANTIVE_OPERATOR_AUTHORIZATION"
+}
