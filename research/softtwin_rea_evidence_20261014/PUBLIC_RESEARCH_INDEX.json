@@ -1,0 +1,66 @@
+{
+  "schema": "NEXUS_OMEGA_PUBLIC_SAFE_C1_SOURCE_INDEX_V1",
+  "object": "NEXUS_OMEGA_AXIOM_REA_SOFTTWIN_STATIC_EVIDENCE_PUBLIC_RESEARCH_CAPSULE_20261014_R0",
+  "state": "PUBLIC_RESEARCH_BRANCH_PUBLISHED_C1_UNSIGNED_NOT_A_DEPLOY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_origin": {
+    "project": "morluto/rea",
+    "package": "rea-agents",
+    "version": "6.5.0_REPO_DECLARED",
+    "pinned_commit": "0f55f247cdd2ae9bd7903d5e45962b19dfc233dc",
+    "original_youtube_video_reviewed": false
+  },
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/nexus-rea-softtwin-public-c1-20261014",
+  "files": [
+    {
+      "path": "research/softtwin_rea_evidence_20261014/SOURCE_LEDGER.json",
+      "bytes": 2307,
+      "sha256": "1eb089d28443516a40c70134ec58da66a454880537ad62f0a92a7f49086dc300"
+    },
+    {
+      "path": "research/softtwin_rea_evidence_20261014/TEST_REPORT.json",
+      "bytes": 680,
+      "sha256": "cc8ba762c36ac9a9d03238698448d33724aa9b890332ebfea26f6210f8b29c3e"
+    },
+    {
+      "path": "research/softtwin_rea_evidence_20261014/docs/EXTERNAL_EXPERT_PUBLIC_SAFE_R0.md",
+      "bytes": 5925,
+      "sha256": "47fc69e8e2a84b3d1a6911eb4034c3d539c28cced1109036c7ad3c1e019abb05"
+    },
+    {
+      "path": "research/softtwin_rea_evidence_20261014/docs/PUBLIC_SAFE_CAPSULE_R0.md",
+      "bytes": 1622,
+      "sha256": "6079a92783fefe99f262968a3b2f779a5d30d6a9ce27c81effae1df0ff1d9395"
+    },
+    {
+      "path": "research/softtwin_rea_evidence_20261014/src/nexus_artifact_triage.py",
+      "bytes": 5593,
+      "sha256": "647b19356396cbbb295100f1156841754d4fa2679bc83012a11dc3ad311cd7f7"
+    },
+    {
+      "path": "research/softtwin_rea_evidence_20261014/tests/test_triage.py",
+      "bytes": 4818,
+      "sha256": "0afd2d5f6da4fc32a7257a8dab6796acd0629a830b0ee8af9521f8ba219431dc"
+    }
+  ],
+  "research_scope": "SOURCE_OWNED_AUTHORIZED_STATIC_ANALYSIS_ONLY",
+  "executable_tools_installed": false,
+  "mcp_activated": false,
+  "hostinger_write": "FAIL_CLOSED",
+  "operator_signer": "NOT_PROVISIONED",
+  "index_signature": "UNSIGNED_GIT_CUSTODY_ONLY",
+  "rights_gate": "REQUIRE_SOURCE_OWNERSHIP_OR_EXPLICIT_LEGAL_AUTHORIZATION",
+  "tests": {
+    "synthetic_offline_py_unittest_pass": 22,
+    "synthetic_offline_py_unittest_fail": 0,
+    "actual_rea_or_ghidra_test": "NOT_EXECUTED"
+  },
+  "permissions": {
+    "github_main_merge": false,
+    "cursor_autostart": false,
+    "private_source_published": false,
+    "no_paid_gpu_or_hopper": true
+  },
+  "next": "INDEPENDENT_EXTERNAL_FULL_ONE_PASS_REVIEW_THEN_NEXT_SUBSTANTIVE_SOFTTWIN_BATCH"
+}
