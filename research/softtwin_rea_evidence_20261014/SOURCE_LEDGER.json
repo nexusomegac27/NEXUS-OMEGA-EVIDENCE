@@ -1,0 +1,58 @@
+{
+  "object": "NEXUS_OMEGA_REA_SOFTTWIN_PRIMARY_SOURCE_LEDGER_20261014_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "review_date": "2026-10-14",
+  "source_upstream": {
+    "repo": "https://github.com/morluto/rea",
+    "verified_github_repo": true,
+    "commit": "0f55f247cdd2ae9bd7903d5e45962b19dfc233dc",
+    "package": "rea-agents",
+    "package_version_repo_declared": "6.5.0",
+    "npm_installed_or_checked_in_NEXUS": false,
+    "package_json_git_blob_sha1": "12a81a9867a2269ba1dd4242b8f016fc883bac5f",
+    "license_git_blob_sha1": "2d476d24fa5a9ae2ab35e5fd121494049eb2ee5d",
+    "security_git_blob_sha1": "1f3d73f8e50b43ebdfd2f662814b5ad6ac7b6bb4",
+    "bundled_skill_git_blob_sha1": "426a05ae56f1270514268751459575f00330631a",
+    "node_engines": "^22.19.0 || ^24.11.0 || >=26.0.0",
+    "license": "MIT",
+    "third_party_hopper_license": "SEPARATE_NOT_FREE_ASSUMED",
+    "ghidra_license": "Apache-2.0 (independent project)"
+  },
+  "other_first_party_sources": [
+    {
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "purpose": "Open-source SRE capability, security advisories and dependencies"
+    },
+    {
+      "url": "https://www.gesetze-im-internet.de/urhg/__69e.html",
+      "purpose": "German decompilation/interoperability legal conditions"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/security_best_practices",
+      "purpose": "MCP authorization, injection, SSRF and local-server security"
+    },
+    {
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-03-16-tool-annotations/",
+      "purpose": "Tool readOnlyHint etc are not enforcement"
+    },
+    {
+      "url": "https://skills.extensions.modelcontextprotocol.io/specification/stable/skills",
+      "purpose": "MCP served skill input is untrusted"
+    },
+    {
+      "url": "https://github.com/morluto/rea/blob/main/README.md",
+      "purpose": "Actual capability and host support subject to exact source commit"
+    }
+  ],
+  "operator_video": {
+    "url": "https://www.youtube.com/watch?v=wajoP_5Cpw8",
+    "primary_audiovisual_reviewed": false,
+    "characterization": "OPERATOR_DESCRIPTION_ONLY"
+  },
+  "risks": [
+    "MANY_SIMILARLY_NAMED_FORKS",
+    "REA_IS_NOT_A_SANDBOX",
+    "NO_LICENSE_TO_COPY_THIRD_PARTY_CODE",
+    "NO_CLAIM_PROMOTION"
+  ]
+}
