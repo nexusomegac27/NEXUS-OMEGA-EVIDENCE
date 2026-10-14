@@ -1,0 +1,22 @@
+{
+  "object": "NEXUS_OMEGA_REA_SOFTTWIN_STATIC_TRIAGE_SANDBOX_TEST_RETURN_20261014_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "runner": "python unittest",
+  "candidate": "src/nexus_artifact_triage.py",
+  "fixture_count": 22,
+  "passed": 22,
+  "failed": 0,
+  "status": "PASS_C1_LOCAL_OFFLINE_SYNTHETIC_FIXTURES_ONLY",
+  "real_rea_installed": false,
+  "real_ghidra_installed": false,
+  "real_proprietary_target_decompiled": false,
+  "hostinger_write": false,
+  "runtime_authority": false,
+  "limitations": [
+    "NOT_A_SECURITY_SANDBOX",
+    "NO_HARD_OS_ISOLATION",
+    "NO_CONCURRENT_HOSTILE_WRITER_GUARANTEE",
+    "ZIP_CENTRAL_DIRECTORY_ONLY",
+    "NO_LIVE_MCP_CLAIM"
+  ]
+}
