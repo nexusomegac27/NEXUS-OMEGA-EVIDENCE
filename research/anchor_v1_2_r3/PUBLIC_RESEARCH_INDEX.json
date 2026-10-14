@@ -1,0 +1,47 @@
+{
+  "schema": "NEXUS_C1_PUBLIC_SAFE_RESEARCH_INDEX_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R3_ANCHOR_V12_PUBLIC_SAFE_ROLLOUT_20261014_R0",
+  "state": "PUBLIC_C1_SANDBOX_RESEARCH_FILES_PUBLISHED_UNSIGNED_BRANCH_NOT_MERGED",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/nexus-r3-public-safe-anchor-v12-20261014",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "release_class": "PUBLIC_SAFE_C1_READONLY_RESEARCH",
+  "files": [
+    {
+      "path": "research/anchor_v1_2_r3/PUBLIC_SAFE_R3_ANCHOR_RESEARCH_CAPSULE_20261014_R0.md",
+      "bytes": 2603,
+      "sha256": "a0d56a0e1e916857bb630bccb9d03cb5a618d706366a1a0faccb4596fe07cfa7"
+    },
+    {
+      "path": "research/anchor_v1_2_r3/EXTERNAL_EXPERT_R4_MASTER_ONE_PASS_RESEARCH_ORDER_20261014_R0.md",
+      "bytes": 6753,
+      "sha256": "c3641f44e4f5f75e1dfd67cc1b0475f7ffa211c9708fe730b7d81fc6613db315"
+    },
+    {
+      "path": "research/anchor_v1_2_r3/nexus_anchor_v12.py",
+      "bytes": 17107,
+      "sha256": "63278004ef31d056e84e464e396c8e3f074ed7450572edf31811519a91eee2c3"
+    },
+    {
+      "path": "research/anchor_v1_2_r3/test_anchor_v12_delta.py",
+      "bytes": 5180,
+      "sha256": "18a2f7ee34419b41d8be2c01ad9086d90c60ded70eba3d0e0a8708b6f33fe814"
+    }
+  ],
+  "actual_test_claims": {
+    "anchor_v12_added_negative_tests": 16,
+    "anchor_v12_compat_tests": 25,
+    "context": "AXIOM_ISOLATED_SANDBOX_REPORTED_EXECUTED",
+    "runtime_hostinger": "NOT_EXECUTED"
+  },
+  "safety": {
+    "r1_private_zip": "NOT_PUBLISHED",
+    "operator_signer": "NOT_PROVISIONED",
+    "index_signature": "UNSIGNED_GIT_CUSTODY_ONLY",
+    "encrypted_private_transport": "NOT_IMPLEMENTED",
+    "public_main_merge": false,
+    "hostinger_write": "FAIL_CLOSED",
+    "github_push_auto_start": false
+  },
+  "next": "INDEPENDENT_ANONYMOUS_READBACK_AND_EXPERT_REVIEW; CURSOR_PRIVATE_BINARY_RECEIPT_SEPARATELY"
+}
