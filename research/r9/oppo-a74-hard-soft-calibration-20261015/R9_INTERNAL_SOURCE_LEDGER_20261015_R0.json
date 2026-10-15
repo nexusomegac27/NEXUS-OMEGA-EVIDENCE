@@ -1,0 +1,85 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R9_OPERATOR_UPLOAD_SOURCE_LEDGER_20261015_R0",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "operator_work_phase_closure": "R8_CLOSED_AS_WORK_PHASE",
+  "independent_upload_sha256": "AXIOM_LOCAL_PYTHON_FILE_READ",
+  "files": [
+    {
+      "name": "NEXUS_~3(5).TXT",
+      "bytes": 5564,
+      "sha256": "01992c8abfbf4d8fb2cc92bf2a423e9159ea9fd01b9016a2ab8c8e77e2fc2395",
+      "role": "previous AXIOM PR113 delivery transcript",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "PASS_C~1.TXT",
+      "bytes": 8846,
+      "sha256": "75ff5fbe1e3c672fb736be3e0294692e1a035a48b667a7a3eb2d3e52ebdcbf77",
+      "role": "GROK independent adversarial report",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "NEXUSO~1(5).MD",
+      "bytes": 8283,
+      "sha256": "70ab783dc3d42fb5d47766c7378da6a584530e5a7f49109f522a330bb6407813",
+      "role": "crossvalidation of theoretical R7 note",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "NEXUSO~2(1).MD",
+      "bytes": 17849,
+      "sha256": "b990e0c1446d46c86de27055e1096a1b2eb7940c6ae8c7fef88f65c75d1f1780",
+      "role": "mathematical assumptions, not executed",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "NEXUS-~1(8).MD",
+      "bytes": 17423,
+      "sha256": "49852dcdd64b1642d95ee40aa08e2ed4b3daff59ff5a1670ce5c9db128af9230",
+      "role": "independent PR113 check",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "GROKAD~1.TXT",
+      "bytes": 7553,
+      "sha256": "1119b432e188735bbcb63783a1e1a6a2fca5b50cccafe71f71dc041501b0a4b4",
+      "role": "GROK adversarial OPPO byte-gap return",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    },
+    {
+      "name": "NEXUS-~2(4).MD",
+      "bytes": 16052,
+      "sha256": "7df24dc00e5a2d3740cbef36a668cb0ce353aa92a32feb0a813174d4ece34101",
+      "role": "independent PR113 and signature evidence",
+      "classification": "USER_PROVIDED_PHYSICAL_BYTES",
+      "public_distribution": "HASH_AND_SUMMARY_ONLY_ORIGINAL_NOT_REPUBLISHED"
+    }
+  ],
+  "primary_predecessor": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+    "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+    "bytes": 22091,
+    "sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba",
+    "classification": "PREVIOUSLY_INDEPENDENTLY_REHASHED_GITHUB_SOURCE"
+  },
+  "cursor_private_parent": {
+    "object": "NEXUS_OMEGA_CURSOR_AXIOM_ADJUDICATION_OF_HOSTINGER_SCOPED_ACCESS_BIND_RETURN_20261015_R0",
+    "classification": "OPERATOR_REPORTED_NO_ORIGINAL_BYTES_PRESENT",
+    "original_cursor_return_rehash": "NOT_ESTABLISHED"
+  },
+  "scientific_gaps": [
+    "HOSTINGER_MULTI_MB_ORIGINAL_ZIPS_NOT_PRESENT",
+    "DEVICE_0002_0003_0004_SOURCE_GAP",
+    "R7_FOUNDATION_CLOSURE_NOT_ESTABLISHED",
+    "HARD_SOFT_CALIBRATION_NOT_EXECUTED"
+  ],
+  "note": "Uploaded files verified for local byte identity; their contents or expert asserted hashes do not provide original OPPO or Hostinger ZIP identity."
+}

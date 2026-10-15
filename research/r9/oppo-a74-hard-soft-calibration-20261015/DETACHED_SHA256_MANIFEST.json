@@ -1,0 +1,45 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R9_PREPARATION_DETACHED_MANIFEST_20261015_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r9-oppo-hard-soft-calibration-20261015",
+  "source_base_main_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "manifest_self_hash": "EXCLUDED",
+  "files": [
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/NEXUS_OMEGA_AXIOM_R9_OPPO_HARD_SOFT_CALIBRATION_MAXI_PREPARATION_20261015_R0.md",
+      "bytes": 17455,
+      "sha256": "efab3fbf8d728bfd62bd680f2717e3649a61d0c3232877af2664b7c7613650ba",
+      "git_blob_sha1": "f19392c29045c816789cb96de7217405a7a61669"
+    },
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/R9_INTERNAL_SOURCE_LEDGER_20261015_R0.json",
+      "bytes": 3740,
+      "sha256": "0239dea907ec7a3d8bc68485036cf3e118e7429767d41eb3057bb0e3e9c5d895",
+      "git_blob_sha1": "e592eced4eed214ada53d47e96f9db95b5d49b23"
+    },
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/TASK_ORDER_ANCHOR_V1.json",
+      "bytes": 6321,
+      "sha256": "7554ccb74b5152d8c2e3eec322ea2f76e385d3117ba005b2610bb9008ad9b6e2",
+      "git_blob_sha1": "0ff60e1f0aaba0f39545b213ae5fc8f21f0bff49"
+    },
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/R8_OPERATOR_CLOSURE_R9_SUCCESSION_20261015_R0.md",
+      "bytes": 2475,
+      "sha256": "529f52a9b2fdc3a537afb1db1fc72dad3429e66d9f0e94be7f2551ff28e223b8",
+      "git_blob_sha1": "6fad1102630ec83a531618a9cd006f38a58bc627"
+    },
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/README.md",
+      "bytes": 2341,
+      "sha256": "69be1fea481517e5bed3b78f7ae62042a12d6a75b0ed0063182e6370726dffa5",
+      "git_blob_sha1": "f01186832cceff670d53bfa379b8af78c5665cb5"
+    }
+  ],
+  "r8_operator_work_phase": "CLOSED_WITH_GAPS_PRESERVED",
+  "r9_calibration_result": "NOT_EXECUTED",
+  "hostinger_device_sha_pairs": "NOT_ESTABLISHED",
+  "private_original_device_bytes": "NOT_INCLUDED",
+  "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH"
+}

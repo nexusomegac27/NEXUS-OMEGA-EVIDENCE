@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_R9_OPPO_HARD_SOFT_CALIBRATION_MAXI_PREPARATION_20261015_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_EPISTEMIC_GOVERNANCE",
+    "recipient_role": "CURSOR_PRAXIS_WITH_INDEPENDENT_EXPERT_LANES",
+    "verified_github_actor": "nexusomegac27",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+    "predecessor_path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+    "predecessor_bytes": 22091,
+    "predecessor_sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba"
+  },
+  "delegation": {
+    "scope": "R9 prospective read-only OPPO A74/P9a device data source inventory and offline hardware/software calibration design, no production changes",
+    "allowed_actions": [
+      "Read previously authorized source copies and manifests",
+      "Validate hashes and exact data provenance",
+      "Develop isolated offline sensor and SR-UKF calibration candidates",
+      "Conduct independent external public-source research"
+    ],
+    "prohibited_actions": [
+      "No capture or app interrupt or live sensor-rate modification",
+      "No new device worker, Hostinger write, or device calibration firmware edit",
+      "No public raw IMU data or private VM transfer",
+      "No R3 reopening or unapproved production rollout",
+      "No unauthenticated expert GitHub write or scientific promotion"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Which hardware bias/timebase and SR-UKF Q/R calibration improvements are identifiable, falsifiable and reproducible on original trusted OPPO A74 / Pixel 9a data without disturbing existing capture?",
+    "deliverables": [
+      "R9 independent source inventory and original-byte gap register",
+      "Read-only per-device timing, bias and sensor calibration capability ledger",
+      "Preregistered offline SR-UKF baseline and null evaluation design",
+      "Negative fixtures, exact executed-versus-unexecuted receipt and detached manifest"
+    ],
+    "falsifiers": [
+      "Any original device↔Hostinger ZIP mismatch",
+      "Unaccounted timestamp discontinuity or device timebase mix",
+      "Train and heldout data overlap or posthoc thresholding",
+      "Numerical SPD breakdown or invalid NIS/NEES prerequisite",
+      "Public disclosure of private raw data"
+    ],
+    "acceptance_tests": [
+      "Exact predecessor source rehash and scoped R8 closure recorded",
+      "Noninterference with live OPPO capture established for every executed action",
+      "Frozen baseline and independent heldout protocol or honest NOT_COMPUTABLE",
+      "No external GitHub actor privilege without operator slot"
+    ],
+    "pause_conditions": [
+      "Source not physically accessible while capture active => scoped hold",
+      "Missing six-orientation truth => full accelerometer calibration NOT_COMPUTABLE",
+      "Missing state ground truth => NEES_NOT_COMPUTABLE",
+      "Unauthorized runtime write or secret disclosure => security hold"
+    ],
+    "not_executed": [
+      "New device capture or Soak redo",
+      "Real per-package independent Hostinger original ZIP readback",
+      "Live HAL/app calibration changes",
+      "New SR-UKF empirical heldout calibration run"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_R9_OPPO_HARD_SOFT_CALIBRATION_MAXI_PREPARATION_20261015_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Predecessor source identity mismatch",
+      "Evidence misrepresented as executed calibration",
+      "Unauthorized device interaction or scope expansion"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+        "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+        "bytes": 22091,
+        "sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Only public-safe hashes and research designs; no raw OPPO phone ZIP, personal data, secrets or private Cursor VM snapshots",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Source IDs and byte-pair mapping computable or marked NOT_COMPUTABLE",
+      "Calibration candidate improvement scored only on genuine locked heldout dataset"
+    ],
+    "robustness_stability": [
+      "No active capture interruption or production calibration write",
+      "Proposed negative fixtures and covariance SPD failures documented"
+    ],
+    "traceability_comprehensibility": [
+      "Uploaded original sources and SHA-256 locally checked",
+      "Operator R8 work-phase closure separated from other R8 research namespaces and R7 gates"
+    ]
+  }
+}
