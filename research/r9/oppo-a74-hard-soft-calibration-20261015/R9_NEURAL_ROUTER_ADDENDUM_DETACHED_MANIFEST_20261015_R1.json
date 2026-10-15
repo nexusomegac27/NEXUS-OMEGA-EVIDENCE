@@ -1,0 +1,25 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R9_NEURAL_ROUTER_ADDENDUM_DETACHED_MANIFEST_20261015_R1",
+  "parent_manifest": "DETACHED_SHA256_MANIFEST.json",
+  "parent_manifest_sha256": "6d606229ef89f0b0910aac0b5a34470d2384a71d072dcb8e508d5057f84fa283",
+  "version": "R1_APPEND_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "manifest_self_hash": "EXCLUDED",
+  "files": [
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/NEXUS_OMEGA_AXIOM_NEURAL_ABSTRACTION_ROUTER_AND_MORICZ_CROSS_LANE_20261015_R0.md",
+      "bytes": 11303,
+      "sha256": "2cbcd2abefccfc1d4fafcc0e0f27dcc42b84f2d3f18831c516f88c045e81ffc4",
+      "git_blob_sha1": "19f4247ad692b46dff62c86252618dd1e4a24939"
+    }
+  ],
+  "source_status": {
+    "cursor_return": "REPORT_LEVEL_UNVERIFIED_PRIVATE_BYTES",
+    "moricz_content": "PUBLIC_WEB_FIRST_PARTY_TEXTUAL_AS_OF_20261015",
+    "moricz_change": "NOT_ESTABLISHED",
+    "moricz_automation": "REACTIVATED_EXISTING_HOURLY_WATCH"
+  },
+  "prior_R9_files": "ORIGINAL_DETACHED_MANIFEST_UNCHANGED",
+  "scientific_calibration": "NOT_EXECUTED",
+  "receiver_ack": "PENDING_INDEPENDENT_SOURCE_REHASH"
+}
