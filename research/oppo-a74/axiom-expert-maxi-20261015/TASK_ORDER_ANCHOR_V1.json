@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_EPISTEMIC_AUDIT",
+    "recipient_role": "EXTERNAL_RESEARCH_COLLECTIVE",
+    "verified_github_actor": "nexusomegac27",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_MAXI_ORDER_20261011_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+    "predecessor_path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_MAXI_ORDER_20261011_R0.md",
+    "predecessor_bytes": 13150,
+    "predecessor_sha256": "4a4a2770622ee46dc394d84f32d693a05531896efb4213e7d01c8fc3873d82c5"
+  },
+  "delegation": {
+    "scope": "Read-only independent C1 source audit, OPPO A74 Soak chain falsification, scoped trinary-context model critique.",
+    "allowed_actions": [
+      "Fetch immutable pinned public internal sources",
+      "Independently analyze and falsify without rewriting original evidence",
+      "Supply reports through operator-mediated bridge"
+    ],
+    "prohibited_actions": [
+      "No device capture restart or interrupt",
+      "No unregistered GitHub external write or new directory",
+      "No Hostinger write or public raw-device ZIP",
+      "No private VM export or model self-modification",
+      "No claim promotion"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can the documented OPPO A74 device/server Soak chain be independently established on actual bound bytes, and which scientific and governance claims remain open?",
+    "deliverables": [
+      "Per-expert primary source register",
+      "Forty negative test designs, with actual executed count explicit",
+      "Per-claim falsification ledger",
+      "Detached SHA-256 child manifest and independent receiver handshake"
+    ],
+    "falsifiers": [
+      "Any material ZIP mismatch",
+      "Any package-ID reassignment",
+      "Any claimed test result without execution receipt",
+      "Any unverified GitHub actor masquerading as authorized"
+    ],
+    "acceptance_tests": [
+      "Source byte and SHA-256 readback verified",
+      "C1-only report with gaps and contradictory evidence",
+      "No unauthorized private/public boundary crossing"
+    ],
+    "pause_conditions": [
+      "Source missing: scoped HOLD",
+      "Unexpected private data: security HOLD",
+      "Insufficient binary bytes: NOT_COMPUTABLE"
+    ],
+    "not_executed": [
+      "Hostinger original multi-MB binary byte checks",
+      "New device capture or worker",
+      "40 proposed negative experiments",
+      "Any scientific claim above C1"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Material predecessor mismatch",
+      "Unregistered actor write attempt",
+      "Improper claim promotion"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+        "path": "research/r26/collective-expert-handoffs-20261011/NEXUS_OMEGA_AXIOM_COLLECTIVE_EXPERT_MAXI_ORDER_20261011_R0.md",
+        "bytes": 13150,
+        "sha256": "4a4a2770622ee46dc394d84f32d693a05531896efb4213e7d01c8fc3873d82c5",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Public research-only briefing; excludes raw sensor ZIP, personal conversations, credentials and private VM data.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "All required fields pass trusted schema validation when run",
+      "Falsification assignments are independently reproducible"
+    ],
+    "robustness_stability": [
+      "Negative tests and source absences retain scoped HOLD",
+      "No node reset or private memory export"
+    ],
+    "traceability_comprehensibility": [
+      "Two different predecessor lanes are separately named",
+      "Every material original-byte gap remains visible"
+    ]
+  }
+}
