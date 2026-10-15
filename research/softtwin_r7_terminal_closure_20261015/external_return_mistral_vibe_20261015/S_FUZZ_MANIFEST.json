@@ -1,0 +1,473 @@
+{
+  "schema": "NEXUS_R7_FUZZ_CAMPAIGN_MANIFEST_V1",
+  "object": "NEXUS_OMEGA_R7_LANE_S_FUZZ_CAMPAIGN_20261015_MISTRAL_VIBE_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "target": "lane_s_zip_reference_parser_v1.ts (unabhaengige TypeScript-Referenz-Implementierung, fail-closed)",
+  "scope_note": "Referenz-Parser, NICHT die Python-Zielimplementierung V0.4 (keine Python-/Linux-Runtime in der Expert-Sandbox). G3 bleibt HOLD_WITH_PRECISE_REASON; dieser Bericht ist Unterstuetzungs-Evidenz fuer Lane S.",
+  "toolchain": "TypeScript-Sandbox (deterministisch, kein Netz, keine Zufalls-API zur Laufzeit; mulberry32-PRNG mit festen Seeds)",
+  "seeds": [
+    "0x20261015",
+    "0x0f0f0f0f",
+    "0xdeadbeef"
+  ],
+  "mutations_per_seed": 1000,
+  "mutation_types": [
+    "flipBit",
+    "setFF",
+    "set00",
+    "truncate",
+    "insert",
+    "swap"
+  ],
+  "base_fixtures": [
+    {
+      "id": "B1_single_stored",
+      "bytes": 170,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B2_two_entries",
+      "bytes": 294,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B3_empty_archive",
+      "bytes": 22,
+      "ok": true,
+      "reason": "EMPTY_ARCHIVE"
+    },
+    {
+      "id": "B4_deflate_entry",
+      "bytes": 171,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B5_fake_eocd_in_data",
+      "bytes": 228,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B6_subdir_names",
+      "bytes": 526,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B7_bulk_2000",
+      "bytes": 2114,
+      "ok": true,
+      "reason": "OK"
+    },
+    {
+      "id": "B8_extra_fields",
+      "bytes": 192,
+      "ok": true,
+      "reason": "OK"
+    }
+  ],
+  "self_tests": {
+    "sha256_abc_ok": true,
+    "crc32_check_ok": true,
+    "inflate_stored_ok": true,
+    "inflate_fixed_aaaa_bbbb_ok": true,
+    "inflate_fixed_lz77_ok": true
+  },
+  "result": {
+    "total": 3000,
+    "accept": 426,
+    "deny": 2574,
+    "uncaught_exceptions": 0,
+    "internal_deny": 0,
+    "per_type": {
+      "flipBit": {
+        "accept": 68,
+        "deny": 450
+      },
+      "setFF": {
+        "accept": 74,
+        "deny": 432
+      },
+      "set00": {
+        "accept": 181,
+        "deny": 303
+      },
+      "truncate": {
+        "accept": 0,
+        "deny": 497
+      },
+      "insert": {
+        "accept": 2,
+        "deny": 497
+      },
+      "swap": {
+        "accept": 101,
+        "deny": 395
+      }
+    },
+    "per_seed": {
+      "0x20261015": {
+        "accept": 134,
+        "deny": 866
+      },
+      "0xf0f0f0f": {
+        "accept": 147,
+        "deny": 853
+      },
+      "0xdeadbeef": {
+        "accept": 145,
+        "deny": 855
+      }
+    },
+    "deterministic_double_run": true,
+    "verdict_digest_run1": "be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201",
+    "verdict_digest_run2": "be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201"
+  },
+  "named_one_defect_cases": {
+    "total": 44,
+    "conform": 44,
+    "nonconform": 0,
+    "log": "S_ATTACK_CASES.jsonl"
+  },
+  "mutation_log_48_combinations": [
+    {
+      "base": "B1_single_stored",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "CD_ENTRY_TRUNCATED",
+      "mutated_bytes": 170
+    },
+    {
+      "base": "B1_single_stored",
+      "mutation": "setFF",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 170
+    },
+    {
+      "base": "B1_single_stored",
+      "mutation": "set00",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 170
+    },
+    {
+      "base": "B1_single_stored",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 156
+    },
+    {
+      "base": "B1_single_stored",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 171
+    },
+    {
+      "base": "B1_single_stored",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "SPAN_GAP",
+      "mutated_bytes": 170
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_FLAG_MISMATCH",
+      "mutated_bytes": 294
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "setFF",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 294
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "set00",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 294
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 46
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 295
+    },
+    {
+      "base": "B2_two_entries",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "SPAN_GAP",
+      "mutated_bytes": 294
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "flipBit",
+      "verdict": "ACCEPT",
+      "reason": "EMPTY_ARCHIVE",
+      "mutated_bytes": 22
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 22
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "set00",
+      "verdict": "ACCEPT",
+      "reason": "EMPTY_ARCHIVE",
+      "mutated_bytes": 22
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "BUFFER_TOO_SHORT",
+      "mutated_bytes": 3
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 23
+    },
+    {
+      "base": "B3_empty_archive",
+      "mutation": "swap",
+      "verdict": "ACCEPT",
+      "reason": "EMPTY_ARCHIVE",
+      "mutated_bytes": 22
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 171
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "CD_ENTRY_TRUNCATED",
+      "mutated_bytes": 171
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "set00",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 171
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 94
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 172
+    },
+    {
+      "base": "B4_deflate_entry",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_NAME_MISMATCH",
+      "mutated_bytes": 171
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "CD_ENTRY_SIGNATURE",
+      "mutated_bytes": 228
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 228
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "set00",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 228
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 98
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 229
+    },
+    {
+      "base": "B5_fake_eocd_in_data",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "LOCAL_SIGNATURE",
+      "mutated_bytes": 228
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 526
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_NAME_MISMATCH",
+      "mutated_bytes": 526
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "set00",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 526
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 276
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 527
+    },
+    {
+      "base": "B6_subdir_names",
+      "mutation": "swap",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 526
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "flipBit",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 2114
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 2114
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "set00",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 2114
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 794
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 2115
+    },
+    {
+      "base": "B7_bulk_2000",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "CRC_MISMATCH",
+      "mutated_bytes": 2114
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "flipBit",
+      "verdict": "ACCEPT",
+      "reason": "OK",
+      "mutated_bytes": 192
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "setFF",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_NAMELEN_MISMATCH",
+      "mutated_bytes": 192
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "set00",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_NAME_MISMATCH",
+      "mutated_bytes": 192
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "truncate",
+      "verdict": "DENY",
+      "reason": "EOCD_SIGNATURE",
+      "mutated_bytes": 40
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "insert",
+      "verdict": "DENY",
+      "reason": "CD_SPAN_MISMATCH",
+      "mutated_bytes": 193
+    },
+    {
+      "base": "B8_extra_fields",
+      "mutation": "swap",
+      "verdict": "DENY",
+      "reason": "LOCAL_CD_NAME_MISMATCH",
+      "mutated_bytes": 192
+    }
+  ]
+}

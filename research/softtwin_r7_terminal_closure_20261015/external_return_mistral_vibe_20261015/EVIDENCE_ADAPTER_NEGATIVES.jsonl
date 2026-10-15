@@ -1,0 +1,45 @@
+{"seq":1,"fixture_id":"C01","description":"Gueltige statische Beobachtung","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":2,"fixture_id":"C02","description":"Gueltige dekompilationsgestuetzte Inferenz","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":3,"fixture_id":"C03","description":"Gueltige Laufzeitbeobachtung (isoliert, synthetisch)","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":4,"fixture_id":"C04","description":"Gueltige Verhaltensrekonstruktion","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":5,"fixture_id":"C05","description":"Gueltige UNKNOWN-Klassifizierung","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":6,"fixture_id":"C06","description":"Widerspruchsfirewall Schritt 1: gueltige Erstintragung","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":7,"fixture_id":"C06b","description":"Widerspruchsfirewall Schritt 2: gleiche Beobachtung, andere Klasse -> Konflikt","op":"ingest","expected":"DENY_CLASS_CONFLICT","actual":"DENY","actual_reason":"DENY_CLASS_CONFLICT","conform":true}
+{"seq":8,"fixture_id":"C06c","description":"Widerspruchsfirewall Schritt 3: affirmative Klasse am widerspruechigen Subjekt verweigert","op":"ingest","expected":"DENY_SUBJECT_UNDER_CONTRADICTION","actual":"DENY","actual_reason":"DENY_SUBJECT_UNDER_CONTRADICTION","conform":true}
+{"seq":9,"fixture_id":"C07","description":"Identisches Replay desselben Records: idempotent (Idempotenzpruefung vor Konfliktpruefung, R7-P06; Key-Set-Disziplin R7-P08)","op":"ingest","expected":"ACCEPT_IDEMPOTENT","actual":"ACCEPT_IDEMPOTENT","actual_reason":"IDENTICAL_REPLAY","conform":true}
+{"seq":10,"fixture_id":"C08","description":"Quelle wiederverwendet, neue Beobachtung: Persistenz bleibt erhalten","op":"ingest","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"seq":11,"fixture_id":"C09","description":"Nur-Lese-Query auf gespeichertes Subjekt","op":"query","expected":"ACCEPT","actual":"ACCEPT","actual_reason":"QUERY_READ_ONLY:SUBJECT_FOUND","conform":true}
+{"seq":12,"fixture_id":"N-A01","description":"event_id fehlt","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_MISSING_FIELD:event_id","conform":true}
+{"seq":13,"fixture_id":"N-A02","description":"evidence_class fehlt","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_MISSING_FIELD:evidence_class","conform":true}
+{"seq":14,"fixture_id":"N-A03","description":"observation fehlt","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_MISSING_FIELD:observation","conform":true}
+{"seq":15,"fixture_id":"N-A04","description":"action_authority fehlt","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_MISSING_FIELD:action_authority","conform":true}
+{"seq":16,"fixture_id":"N-A05","description":"toolchain_profile fehlt","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_MISSING_FIELD:toolchain_profile","conform":true}
+{"seq":17,"fixture_id":"N-A06","description":"Unbekanntes Zusaetzfeld (strict schema)","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_UNKNOWN_FIELD","conform":true}
+{"seq":18,"fixture_id":"N-A07","description":"annotations.readOnlyHint als Zusaetzfeld: Hint ist keine Autorisierung","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_UNKNOWN_FIELD","conform":true}
+{"seq":19,"fixture_id":"N-A08","description":"event_id-Format unzulaessig","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_FORMAT","conform":true}
+{"seq":20,"fixture_id":"N-A09","description":"event_id kleingeschrieben","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_FORMAT","conform":true}
+{"seq":21,"fixture_id":"N-A10","description":"Timestamp nicht ISO-8601 Z","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_FORMAT","conform":true}
+{"seq":22,"fixture_id":"N-A11","description":"Ungueltiger Klassen-String OBSERVED","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_CLASS","conform":true}
+{"seq":23,"fixture_id":"N-A12","description":"Klasse mit nachgestelltem Leerzeichen","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_CLASS","conform":true}
+{"seq":24,"fixture_id":"N-A13","description":"Erfundene Klasse AUTHORITATIVE_OBSERVED","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_CLASS","conform":true}
+{"seq":25,"fixture_id":"N-A14","description":"evidence_class als Zahl","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_CLASS","conform":true}
+{"seq":26,"fixture_id":"N-A15","description":"observation als Zahl","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_TYPE","conform":true}
+{"seq":27,"fixture_id":"N-A16","description":"observation leer","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_EMPTY","conform":true}
+{"seq":28,"fixture_id":"N-A17","description":"observation ueber 4096 Zeichen","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_SIZE","conform":true}
+{"seq":29,"fixture_id":"N-A18","description":"subject leer","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_EMPTY","conform":true}
+{"seq":30,"fixture_id":"N-A19","description":"subject ueber 512 Zeichen","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_SIZE","conform":true}
+{"seq":31,"fixture_id":"N-A20","description":"action_authority OPERATOR beansprucht","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_AUTHORITY_CLAIMED","conform":true}
+{"seq":32,"fixture_id":"N-A21","description":"action_authority FULL beansprucht","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_AUTHORITY_CLAIMED","conform":true}
+{"seq":33,"fixture_id":"N-A22","description":"action_authority none (klein): exakte Form NONE gefordert","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_AUTHORITY_CLAIMED","conform":true}
+{"seq":34,"fixture_id":"N-A23","description":"Unregistriertes Profil GOD_MODE_V1","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_PROFILE_NOT_REGISTERED","conform":true}
+{"seq":35,"fixture_id":"N-A24","description":"Profil leer","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_PROFILE_NOT_REGISTERED","conform":true}
+{"seq":36,"fixture_id":"N-A25","description":"toolchain_profile als Zahl","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_SCHEMA_TYPE","conform":true}
+{"seq":37,"fixture_id":"N-A26","description":"Gleiche event_id mit abweichendem Inhalt (Replay-Konflikt)","op":"ingest","expected":"DENY","actual":"DENY","actual_reason":"DENY_EVENT_ID_CONFLICT","conform":true}
+{"seq":38,"fixture_id":"N-A27","description":"Update-Op auf gespeicherten Record (append-only verletzt)","op":"update","expected":"DENY","actual":"DENY","actual_reason":"DENY_OP_APPEND_ONLY_FLOOR","conform":true}
+{"seq":39,"fixture_id":"N-A28","description":"Delete-Op (append-only verletzt)","op":"delete","expected":"DENY","actual":"DENY","actual_reason":"DENY_OP_APPEND_ONLY_FLOOR","conform":true}
+{"seq":40,"fixture_id":"N-A29","description":"Grant-Op (Autoritaetserfindung)","op":"grant","expected":"DENY","actual":"DENY","actual_reason":"DENY_OP_APPEND_ONLY_FLOOR","conform":true}
+{"seq":41,"fixture_id":"N-A30","description":"Unbekanntes Op overwrite","op":"overwrite","expected":"DENY","actual":"DENY","actual_reason":"DENY_OP_APPEND_ONLY_FLOOR","conform":true}
+{"seq":42,"fixture_id":"N-A31","description":"Prompt-Injection in observation -> Quarantaene zu UNKNOWN","op":"ingest","expected":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual_reason":"INJECTION_QUARANTINED","conform":true}
+{"seq":43,"fixture_id":"N-A32","description":"Eingebettete Autoritaetsanweisung ACTION_AUTHORITY=OPERATOR -> Quarantaene","op":"ingest","expected":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual_reason":"INJECTION_QUARANTINED","conform":true}
+{"seq":44,"fixture_id":"N-A33","description":"Prompt-Injection im subject -> Quarantaene","op":"ingest","expected":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual":"ACCEPT_QUARANTINED_TO_UNKNOWN","actual_reason":"INJECTION_QUARANTINED","conform":true}
+{"seq":45,"fixture_id":"N-A34","description":"Injection im Query-Filter","op":"query","expected":"DENY","actual":"DENY","actual_reason":"DENY_QUERY_INJECTION","conform":true}

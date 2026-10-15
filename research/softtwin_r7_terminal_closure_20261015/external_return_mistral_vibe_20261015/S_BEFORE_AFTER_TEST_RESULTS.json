@@ -1,0 +1,51 @@
+{
+  "schema": "NEXUS_R7_BEFORE_AFTER_TEST_RESULTS_V1",
+  "object": "NEXUS_OMEGA_R7_BEFORE_AFTER_20261015_MISTRAL_VIBE_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "adapter_repair_chain_session_record": [
+    {
+      "id": "R7-P01",
+      "repair": "Strict-Schema: unbekannte Zusaetzfelder und fehlende Pflichtfelder werden fail-closed abgelehnt",
+      "phase": "Run1 -> Run2"
+    },
+    {
+      "id": "R7-P02",
+      "repair": "action_authority MUSS exakt NONE sein (Typ- und Gross-/Kleinschreibungs-Disziplin)",
+      "phase": "Run1 -> Run2"
+    },
+    {
+      "id": "R7-P03",
+      "repair": "Profil-Allowlist (toolchain_profile registriert)",
+      "phase": "Run1 -> Run2"
+    },
+    {
+      "id": "R7-P04",
+      "repair": "Prompt-Injektionen werden zu UNKNOWN quarantaeniert statt als behauptete Klasse uebernommen",
+      "phase": "Run2 -> Run3"
+    },
+    {
+      "id": "R7-P05",
+      "repair": "Widerspruchsfirewall: gleiche Beobachtung mit anderer Klasse -> CONTRADICTED-Markierung, Nachtrag verweigert",
+      "phase": "Run2 -> Run3"
+    },
+    {
+      "id": "R7-P06",
+      "repair": "Idempotenzpruefung vor jeder Konflikt-/Nonce-Pruefung (identisches Replay ist immer idempotent)",
+      "phase": "Run2 -> Run3"
+    }
+  ],
+  "adapter_run_progression_session_record": {
+    "run1": "35/43 konform",
+    "run2": "42/43 konform",
+    "run3": "43/43 konform"
+  },
+  "continuation_replay_20261015": {
+    "base_fixtures": "8/8 ACCEPT nach Fix R7-P07 (Local-Method-Feld des Local-Headers liegt bei Offset +8; vor dem Fix 7/8 mit B4 = LOCAL_CD_METHOD_MISMATCH)",
+    "r7_p07": "Parser-Fix: Local-Method-Offset lo+8 (statt lo+10); danach B4 und N44 erwartungskonform",
+    "r7_p08": "Adapter-Fix: Idempotenzakzeptanz nur bei exaktem Key-Set (Objekte mit Zusaetzfeldern werden nicht idempotent akzeptiert, sondern fail-closed abgelehnt); danach N-A06/N-A07 konform",
+    "adapter": "43/43 Fixtures, 45/45 Assertionen konform",
+    "named_one_defect_cases": "44/44 konform",
+    "fuzz": "deterministisch; Digest be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201; 0 ungefangene Ausnahmen",
+    "math": "E=3993.333333 = 4(N-2+1/3); invalide Schranke 888.888889 verletzt; konservative Schranke 8000 haelt"
+  }
+}

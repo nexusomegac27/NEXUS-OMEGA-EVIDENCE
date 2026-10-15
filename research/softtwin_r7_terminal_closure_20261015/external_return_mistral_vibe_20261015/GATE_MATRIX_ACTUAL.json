@@ -1,0 +1,235 @@
+{
+  "schema": "NEXUS_R7_CLOSURE_GATES_V1",
+  "object": "NEXUS_OMEGA_R7_TERMINAL_FOUNDATION_GATE_MATRIX_ACTUAL_20261015_MISTRAL_VIBE_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "basis": {
+    "matrix_schema_sha256": "832f177354e1d213a69919408b9be47a39a4e2bb18b1d2dccbcaf2229cfc84f2",
+    "return_schema_sha256": "e7c2314708aaf9307d2d59e4f44ae76a9915ef4f097ba60db9401bc534a45f6b"
+  },
+  "scope": {
+    "foundation": "NEXUS_SOFTTWIN_STATIC_EVIDENCE_FOUNDATION_V1 -> HOLD_F1",
+    "module": "NEXUS_REA_TRIAGE_POSIX_C1_MODULE -> HOLD_M1",
+    "production": "NOT_AUTHORIZED",
+    "mcp_runtime": "NOT_AUTHORIZED",
+    "windows_native": "NOT_CLAIMED",
+    "hostinger": "FAIL_CLOSED"
+  },
+  "gates": [
+    {
+      "id": "G0",
+      "name": "SOURCE_AND_R6_CUSTODY",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "Alle 9 oeffentlichen R7-Textobjekte wurden im Fortsetzungslauf dieser Session mit eigener SHA-256-Toolchain neu gerehasht (Order-Doc dbf995c1... exakt bestaetigt, inkl. Kreuzvalidierung gegen MANIFEST_SHA256.json). R7-ZIP (32412 B) und oeffentliche R6-Kapsel (47436 B, 18/18 CRC) wurden in derselben Expert-Session byte-exakt verifiziert; 8/8 Git-Blob-SHAs stimmen ueberein.",
+      "actual_artifact_refs": [
+        "SOURCE_AND_BINARY_MANIFEST.json",
+        "SHA256SUMS.txt",
+        "PROVENANCE_AND_RIGHTS_R7.md"
+      ],
+      "actual_evidence": {
+        "text_objects_rehashed_this_run": 9,
+        "git_blobs_matched": "8/8",
+        "r7_zip_bytes": 32412,
+        "r6_capsule_bytes": 47436,
+        "r6_capsule_crc": "18/18"
+      },
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G1",
+      "name": "POSIX_FILESYSTEM_AND_IMMUTABLE_BYTE_BOUNDARY",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Statische Zeilen-Review von V0.4 vollstaendig (openat-Root-Walk mit O_NOFOLLOW, O_PATH ohne FIFO-Oeffnung, F_SETLEASE F_RDLCK mit SIGIO-Handling, nlink==1, /proc/self/fd-Reopen mit Inode-Match, pre/post-fstat ueber dev/ino/size/mtime_ns/ctime_ns, Grenzen 32 MiB / 128 MiB / 512 Eintraege / Ratio 200). Es steht keine Linux-Runtime in der Expert-Sandbox zur Verfuegung: F_SETLEASE-, openat2- und /proc-Semantik sind nicht ausfuehrbar reproduzierbar.",
+      "actual_artifact_refs": [
+        "LANE_S_SOURCE_REVIEW.md",
+        "S_RACE_AND_FS_MATRIX.json"
+      ],
+      "actual_evidence": {
+        "review": "STATIC_LINE_BY_LINE_COMPLETE",
+        "runtime_execution": "NOT_EXECUTED",
+        "residuals": [
+          "R7-S01",
+          "SIGIO_GLOBAL",
+          "LEASE_FS_DEPENDENT",
+          "PROC_REQUIRED"
+        ]
+      },
+      "precise_hold_reason": "NO_LINUX_RUNTIME_IN_EXPERT_SANDBOX: POSIX-Ausfuehrung (F_SETLEASE/openat2 RESOLVE_*/proc/self/fd) NOT_EXECUTED; statische Review vollstaendig, Residuen R7-S01 (lokale CRC/Size-Felder bei Nicht-Bit-3 nicht gegen CD geprueft), SIGIO prozess-global (Thread-Race verbleibt), Lease nur auf lokalen Linux-Dateisystemen, /proc erforderlich."
+    },
+    {
+      "id": "G2",
+      "name": "ZIP_SPEC_AND_PARSER_DIFFERENTIAL",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Keine Python-Runtime: ein Parser-Differential gegen V0.4 ist hier nicht ausfuehrbar. Ersatz-Evidenz: vollstaendige unabhaengige TypeScript-Referenz-Implementierung (lane_s_zip_reference_parser_v1.ts) mit 8 Basis-Fixtures, 44 benannten Ein-Defekt-Faellen und 3000 gemutierten Faellen; Policy-Ablehnungen gueltiger Formate werden als POLICY_REJECTION_OF_VALID_FORMAT separat klassifiziert (N21: Deskriptor ohne Signatur wird per Policy abgelehnt).",
+      "actual_artifact_refs": [
+        "LANE_S_SOURCE_REVIEW.md",
+        "S_ATTACK_CASES.jsonl",
+        "lane_s_zip_reference_parser_v1.ts"
+      ],
+      "actual_evidence": {
+        "differential_target": "TS reference implementation vs itself (fail-closed oracle)",
+        "v04_differential": "NOT_EXECUTED",
+        "policy_rejection_cases": [
+          "N21",
+          "N26",
+          "N11",
+          "N28"
+        ]
+      },
+      "precise_hold_reason": "NO_PYTHON_RUNTIME: V0.4-Differential NOT_EXECUTED; Referenz-Parser-Differential ausgefuehrt (3044 Faelle, 0 ungefangene Ausnahmen)."
+    },
+    {
+      "id": "G3",
+      "name": "DETERMINISTIC_ADVERSARIAL_REPRODUCTION",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Das eigentliche Ziel V0.4 (Python) ist hier nicht fuzzbar. Eigene deterministische Referenz-Kampagne: 3 feste Seeds (0x20261015, 0x0f0f0f0f, 0xdeadbeef) x 1000 Ein-Defekt-Mutationen (flipBit/setFF/set00/truncate/insert/swap) plus 44 benannte Ein-Defekt-Fixtures; Doppellauf identisch (Verdikt-Digest be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201), 0 ungefangene Ausnahmen, 0 INTERNAL.",
+      "actual_artifact_refs": [
+        "S_FUZZ_MANIFEST.json",
+        "S_ATTACK_CASES.jsonl"
+      ],
+      "actual_evidence": {
+        "total_mutations": 3000,
+        "accept": 426,
+        "deny": 2574,
+        "uncaught": 0,
+        "internal": 0,
+        "digest": "be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201",
+        "deterministic_double_run": true,
+        "named_cases": "44/44 konform"
+      },
+      "precise_hold_reason": "TARGET_V04_NOT_FUZZABLE_HERE (keine Python-/Linux-Runtime); Referenz-Kampagne deterministisch gruen, aber G3 fordert Reproduktion am Zielimplementierungs-Binaer/Quelltext."
+    },
+    {
+      "id": "G4",
+      "name": "TYPED_EVIDENCE_AUTHORITY_FIREWALL",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "NEXUS_EVIDENCE_ADAPTER_V1: 43 Fixtures (45 Assertionen) vollstaendig konform im Replay. Erzwungen: action_authority=NONE, strikte Schema-/Format-/Groessenpruefung, Profil-Allowlist, readOnlyHint ist keine Autorisierung, Prompt-Injektionen werden zu UNKNOWN quarantaeniert, Widerspruchsfirewall mit CONTRADICTED-Markierung, Append-only-Op-Boden, Dedupe ueber Beobachtungs-Digest + Event-ID, Idempotenz vor Konfliktpruefung.",
+      "actual_artifact_refs": [
+        "EVIDENCE_ADAPTER_NEGATIVES.jsonl",
+        "EVIDENCE_ADAPTER_SPEC_V1.md",
+        "evidence_adapter_v1.ts"
+      ],
+      "actual_evidence": {
+        "fixtures": 43,
+        "assertions": 45,
+        "conform": "45/45",
+        "adversarial_unique_negatives": 34,
+        "controls": 9
+      },
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G5",
+      "name": "AUTHORITATIVE_MATH_ERRATUM",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Beweis und numerische Verifikation vollstaendig: E(1000)=3993.333333 = 4(N-2+1/3); die invalide Schranke 2||d||^2/(1-lambda)^2 = 888.888889 (vergessene Betraege) ist reproduzierbar verletzt (E > Schranke); die konservative Schranke 2||d||^2/(1-|lambda|)^2 = 8000 haelt; scharfer l2-Gain 1/(1-|lambda|) = 2; HS-Kernnorm^2 4/3 ist nicht die Operatornorm^2 4; Zeugen: Basel-Partialsumme 1.644933067 (Ziel pi^2/6), Divergenz-Zeuge 1998.540, Abkling-Zeuge max tail 0.002000, Nichtnormal-Matrix [[0.5,1000],[0,0.5]] mit rho=0.5 und Peak 1000.000250 bei t=1.",
+      "actual_artifact_refs": [
+        "MATH_CANONICAL_ERRATUM_R7.md"
+      ],
+      "actual_evidence": {
+        "energy": "3993.333333",
+        "invalid_bound": "888.888889 (verletzt)",
+        "conservative_bound": 8000,
+        "sharp_gain": 2,
+        "hs_vs_operator": "4/3 vs 4 (nicht gleich)",
+        "basel": "1.644933067",
+        "div_witness": "1998.540",
+        "decay_tail": "0.002000",
+        "nonnormal_peak": "1000.000250 @ t=1, rho=0.5"
+      },
+      "precise_hold_reason": "ERRATUM_READY_BUT_CANONICAL_BIND_PENDING: Die kanonische Bindung des Erratums an das Foundation-Dokument (autorisierter append-only Overlay) ist in dieser Session nicht verfuegbar; G5 kann daher keine terminale Schliessung beanspruchen. Kein C2."
+    },
+    {
+      "id": "G6",
+      "name": "RIGHTS_AND_SOURCE_SCOPES",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "EUR-Lex/CURIA-Primärtexte (C-13/20 Top System, C-650/17 Royalty Pharma) und §69d UrhG sind robot-blockiert: keine primaere Byte-Verifikation moeglich (EXTERNAL_REPORTED_ONLY fuer diese Primärtexte). §69e via dejure.org inhaltlich konsistent bestaetigt (Interoperabilitaet). Technische Standards verifiziert: man7 F_SETLEASE (SIGIO-Default, EAGAIN bei konfliktierendem Open, FS-abhaengig), man7 openat2 (RESOLVE_BENEATH/RESOLVE_NO_SYMLINKS), APPNOTE-Mirror p1k.se (v6.3.3 FINAL; Mirror ist nicht der offizielle Signer), MCP Security Best Practices (2026-07-28), MCP tool-annotations (readOnlyHint nur Hint), SLSA v1.2, in-toto attestation v1.2. REA-Pin erneut verifiziert: morluto/rea @ 0f55f247..., package.json = rea-agents 6.5.0, MIT, MCP-Server (SHA-256 a5003023...). NPM_TARBALL_CORRESPONDENCE_NOT_ESTABLISHED (kein Blocker).",
+      "actual_artifact_refs": [
+        "PROVENANCE_AND_RIGHTS_R7.md",
+        "CPU_CLAIM_SCOPE.md"
+      ],
+      "actual_evidence": {
+        "legal_primary": "ROBOT_BLOCKED -> EXTERNAL_REPORTED_ONLY",
+        "s69e": "dejure.org, inhaltlich konsistent",
+        "tech_standards": "man7/openat2, APPNOTE-Mirror v6.3.3, MCP-Best-Practices 2026-07-28, SLSA v1.2, in-toto v1.2",
+        "rea_pin": "morluto/rea @ 0f55f247cdd2ae9bd7903d5e45962b19dfc233dc, rea-agents 6.5.0, MIT",
+        "npm_tarball": "NOT_ESTABLISHED"
+      },
+      "precise_hold_reason": "PRIMARY_LEGAL_TEXTS_ROBOT_BLOCKED (EUR-Lex/CURIA, §69d): Deskriptive C1-Einordnung nur auf Basis sekundaerer Quellen; primaere Byte-Verifikation ausstehend."
+    },
+    {
+      "id": "G7",
+      "name": "PROVENANCE_AND_RECEIPT_SEPARATION",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "Mechanischer Redaktions- und Geheimnis-Scan ueber alle 20 Umschlagsdateien im Build (0 Treffer). SHA-256-Summen ueber 18 Umschlagsdateien in SHA256SUMS.txt. Hash, Signatur und Quittung werden strikt getrennt: Store-Signer = UNSIGNED; ein Git-Push ist nie ein Receiver-ACK.",
+      "actual_artifact_refs": [
+        "SHA256SUMS.txt",
+        "SOURCE_AND_BINARY_MANIFEST.json",
+        "PROVENANCE_AND_RIGHTS_R7.md"
+      ],
+      "actual_evidence": {
+        "redaction_scan": "0 Treffer ueber 20 Dateien",
+        "sums_coverage": "18 Dateien (SHA256SUMS.txt und FINAL_RETURN.json aus Kreisfreiheitsgruenden ausgeschlossen)",
+        "signer": "UNSIGNED",
+        "receiver_ack": "NOT_ESTABLISHED (nie aus Git-Push abgeleitet)"
+      },
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G8",
+      "name": "REAL_CPU_ECONOMIC_COMPARISON",
+      "status": "SCOPE_EXCLUDED_NOT_AUTHORIZED",
+      "reason": "Es wird kein CPU- oder Hostinger-Performance-Claim erhoben; G8 ist nur fuer einen expliziten Performance-Claim Pflicht und bleibt scope-excluded. DESIGN-Skizze in CPU_CLAIM_SCOPE.md.",
+      "actual_artifact_refs": [
+        "CPU_CLAIM_SCOPE.md"
+      ],
+      "actual_evidence": {
+        "performance_claim": "NONE"
+      },
+      "precise_hold_reason": null
+    },
+    {
+      "id": "G9",
+      "name": "INTEGRATING_INDEPENDENT_REPRODUCTION",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Ein vollstaendiger, maschinenlesbarer Einzel-Return liegt vor; aber es steht kein unabhaengiger Zweitreviewer in derselben Session zur Verfuegung (different_session_or_entity=false, actual_rerun_of_critical_cases durch den Reviewer=false). Die AXIOM-Adjudikation steht aus; kein Konsens-als-Beweis.",
+      "actual_artifact_refs": [
+        "FINAL_RETURN.json",
+        "EXECUTIVE_DECISION.md"
+      ],
+      "actual_evidence": {
+        "single_return": true,
+        "independent_reviewer": "not available in same session",
+        "axiom_adjudication": "PENDING"
+      },
+      "precise_hold_reason": "NO_INDEPENDENT_SECOND_REVIEWER_IN_SAME_SESSION; AXIOM_ADJUDICATION_PENDING. Dieser Return schlaegt vor; AXIOM adjudiziert."
+    }
+  ],
+  "logic": {
+    "foundation_all_of": [
+      "G0",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G9"
+    ],
+    "module_all_of": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G7",
+      "G9"
+    ],
+    "performance_requires": [
+      "G8"
+    ],
+    "production_never_implied": true,
+    "full_rea_mcp_never_implied": true,
+    "derived_scope": {
+      "foundation": "HOLD_F1",
+      "module": "HOLD_M1"
+    }
+  }
+}

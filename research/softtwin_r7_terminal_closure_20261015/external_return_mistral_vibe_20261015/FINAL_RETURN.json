@@ -1,0 +1,321 @@
+{
+  "object": "NEXUS_OMEGA_R7_EXTERNAL_COLLECTIVE_TERMINAL_FOUNDATION_RETURN_20261015_R0",
+  "authority": "EXTERNAL_RESEARCH_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "status": "R7_RESEARCH_RETURN_HOLD_C1",
+  "scope": {
+    "foundation": "HOLD_F1",
+    "module": "HOLD_M1",
+    "production": "NOT_AUTHORIZED",
+    "rea_mcp_runtime": "NOT_AUTHORIZED",
+    "windows": "NOT_CLAIMED"
+  },
+  "sources": [
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/NEXUS_OMEGA_AXIOM_R7_MAXIMUM_EXPERT_TERMINAL_CLOSURE_20261015_R0.zip",
+      "sha256": "95c35d3fced603f704fbd885c2d35cc9acb1a44a7ef51240e6586bd2d190ae0a",
+      "bytes": 32412,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/NEXUS_OMEGA_AXIOM_R7_MAXIMUM_EXPERT_TERMINAL_CLOSURE_ORDER_20261015_R0.md",
+      "sha256": "dbf995c1aba3550670f5b6702bc33609842d3f06ad3954ca151ff710faf49424",
+      "bytes": 22567,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/R7_CLOSURE_BOUNDARY_AND_PRIORITIES.md",
+      "sha256": "8e8d519654b2cb696f698bf3edea7f72fc9175e0c9f60f1963353a62b8a202c0",
+      "bytes": 5019,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/docs/R7_OPERATOR_DISPATCH_DE.md",
+      "sha256": "69f11984d60bb0ae9313f8585c90a1f8b5af5a9d890b5cb8467ef8411ba58d8e",
+      "bytes": 1645,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/MANIFEST_SHA256.json",
+      "sha256": "ca230d3fc00002229573ebf5ec3aa34037366f3002639901fa396e86aa51c66c",
+      "bytes": 2740,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/evidence/R7_PREPARATION_TEST_REPORT.json",
+      "sha256": "6eb9f8ada3bd2f880afffbe3bda7baf9049cf62f5647d209b463b34fd41d9124",
+      "bytes": 859,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/schema/R7_CLOSURE_GATE_MATRIX.json",
+      "sha256": "832f177354e1d213a69919408b9be47a39a4e2bb18b1d2dccbcaf2229cfc84f2",
+      "bytes": 5232,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/schema/R7_EXTERNAL_FINAL_RETURN_SCHEMA.json",
+      "sha256": "e7c2314708aaf9307d2d59e4f44ae76a9915ef4f097ba60db9401bc534a45f6b",
+      "bytes": 7136,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r7_terminal_closure_20261015/PUBLIC_R7_SOURCE_INDEX.json",
+      "sha256": "43fdd7232c0c163bf58585c306d7d1005d11fa452d5ae9cf522efd2a008257d6",
+      "bytes": 3407,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "src/nexus_artifact_triage_v04.py",
+      "sha256": "a2972e6a1eaef8e933fcb2597bc5be85be76a36b6cbb3ad82ec28175103bff3a",
+      "bytes": 15786,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "research/softtwin_r6_axiom_v04_20261014/NEXUS_OMEGA_AXIOM_R6_V04_RESEARCH_CAPSULE_20261014.zip",
+      "sha256": "7f31a9177a8e38f64e81c13b1cdd2d28edf47b102e5f8db26492eed3d2b93aac",
+      "bytes": 47436,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    },
+    {
+      "path": "morluto/rea/package.json @ 0f55f247cdd2ae9bd7903d5e45962b19dfc233dc",
+      "sha256": "a500302319c1214a8bb6c9a8b4a4a090806e95eef884204a9d9fbb4003050a6c",
+      "bytes": 23946,
+      "evidence_class": "ACTUAL_BYTES_REHASHED"
+    }
+  ],
+  "gates": [
+    {
+      "id": "G0",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "Alle 9 oeffentlichen R7-Textobjekte wurden im Fortsetzungslauf dieser Session mit eigener SHA-256-Toolchain neu gerehasht (Order-Doc dbf995c1... exakt bestaetigt, inkl. Kreuzvalidierung gegen MANIFEST_SHA256.json). R7-ZIP (32412 B) und oeffentliche R6-Kapsel (47436 B, 18/18 CRC) wurden in derselben Expert-Session byte-exakt verifiziert; 8/8 Git-Blob-SHAs stimmen ueberein.",
+      "evidence_refs": [
+        "SOURCE_AND_BINARY_MANIFEST.json",
+        "SHA256SUMS.txt",
+        "PROVENANCE_AND_RIGHTS_R7.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G1",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Statische Zeilen-Review von V0.4 vollstaendig (openat-Root-Walk mit O_NOFOLLOW, O_PATH ohne FIFO-Oeffnung, F_SETLEASE F_RDLCK mit SIGIO-Handling, nlink==1, /proc/self/fd-Reopen mit Inode-Match, pre/post-fstat ueber dev/ino/size/mtime_ns/ctime_ns, Grenzen 32 MiB / 128 MiB / 512 Eintraege / Ratio 200). Es steht keine Linux-Runtime in der Expert-Sandbox zur Verfuegung: F_SETLEASE-, openat2- und /proc-Semantik sind nicht ausfuehrbar reproduzierbar.",
+      "evidence_refs": [
+        "LANE_S_SOURCE_REVIEW.md",
+        "S_RACE_AND_FS_MATRIX.json"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G2",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Keine Python-Runtime: ein Parser-Differential gegen V0.4 ist hier nicht ausfuehrbar. Ersatz-Evidenz: vollstaendige unabhaengige TypeScript-Referenz-Implementierung (lane_s_zip_reference_parser_v1.ts) mit 8 Basis-Fixtures, 44 benannten Ein-Defekt-Faellen und 3000 gemutierten Faellen; Policy-Ablehnungen gueltiger Formate werden als POLICY_REJECTION_OF_VALID_FORMAT separat klassifiziert (N21: Deskriptor ohne Signatur wird per Policy abgelehnt).",
+      "evidence_refs": [
+        "LANE_S_SOURCE_REVIEW.md",
+        "S_ATTACK_CASES.jsonl",
+        "lane_s_zip_reference_parser_v1.ts"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G3",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Das eigentliche Ziel V0.4 (Python) ist hier nicht fuzzbar. Eigene deterministische Referenz-Kampagne: 3 feste Seeds (0x20261015, 0x0f0f0f0f, 0xdeadbeef) x 1000 Ein-Defekt-Mutationen (flipBit/setFF/set00/truncate/insert/swap) plus 44 benannte Ein-Defekt-Fixtures; Doppellauf identisch (Verdikt-Digest be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201), 0 ungefangene Ausnahmen, 0 INTERNAL.",
+      "evidence_refs": [
+        "S_FUZZ_MANIFEST.json",
+        "S_ATTACK_CASES.jsonl"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G4",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "NEXUS_EVIDENCE_ADAPTER_V1: 43 Fixtures (45 Assertionen) vollstaendig konform im Replay. Erzwungen: action_authority=NONE, strikte Schema-/Format-/Groessenpruefung, Profil-Allowlist, readOnlyHint ist keine Autorisierung, Prompt-Injektionen werden zu UNKNOWN quarantaeniert, Widerspruchsfirewall mit CONTRADICTED-Markierung, Append-only-Op-Boden, Dedupe ueber Beobachtungs-Digest + Event-ID, Idempotenz vor Konfliktpruefung.",
+      "evidence_refs": [
+        "EVIDENCE_ADAPTER_NEGATIVES.jsonl",
+        "EVIDENCE_ADAPTER_SPEC_V1.md",
+        "evidence_adapter_v1.ts"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G5",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Beweis und numerische Verifikation vollstaendig: E(1000)=3993.333333 = 4(N-2+1/3); die invalide Schranke 2||d||^2/(1-lambda)^2 = 888.888889 (vergessene Betraege) ist reproduzierbar verletzt (E > Schranke); die konservative Schranke 2||d||^2/(1-|lambda|)^2 = 8000 haelt; scharfer l2-Gain 1/(1-|lambda|) = 2; HS-Kernnorm^2 4/3 ist nicht die Operatornorm^2 4; Zeugen: Basel-Partialsumme 1.644933067 (Ziel pi^2/6), Divergenz-Zeuge 1998.540, Abkling-Zeuge max tail 0.002000, Nichtnormal-Matrix [[0.5,1000],[0,0.5]] mit rho=0.5 und Peak 1000.000250 bei t=1.",
+      "evidence_refs": [
+        "MATH_CANONICAL_ERRATUM_R7.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G6",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "EUR-Lex/CURIA-Primärtexte (C-13/20 Top System, C-650/17 Royalty Pharma) und §69d UrhG sind robot-blockiert: keine primaere Byte-Verifikation moeglich (EXTERNAL_REPORTED_ONLY fuer diese Primärtexte). §69e via dejure.org inhaltlich konsistent bestaetigt (Interoperabilitaet). Technische Standards verifiziert: man7 F_SETLEASE (SIGIO-Default, EAGAIN bei konfliktierendem Open, FS-abhaengig), man7 openat2 (RESOLVE_BENEATH/RESOLVE_NO_SYMLINKS), APPNOTE-Mirror p1k.se (v6.3.3 FINAL; Mirror ist nicht der offizielle Signer), MCP Security Best Practices (2026-07-28), MCP tool-annotations (readOnlyHint nur Hint), SLSA v1.2, in-toto attestation v1.2. REA-Pin erneut verifiziert: morluto/rea @ 0f55f247..., package.json = rea-agents 6.5.0, MIT, MCP-Server (SHA-256 a5003023...). NPM_TARBALL_CORRESPONDENCE_NOT_ESTABLISHED (kein Blocker).",
+      "evidence_refs": [
+        "PROVENANCE_AND_RIGHTS_R7.md",
+        "CPU_CLAIM_SCOPE.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G7",
+      "status": "PASS_EXECUTED_AND_REVIEWED",
+      "reason": "Mechanischer Redaktions- und Geheimnis-Scan ueber alle 20 Umschlagsdateien im Build (0 Treffer). SHA-256-Summen ueber 18 Umschlagsdateien in SHA256SUMS.txt. Hash, Signatur und Quittung werden strikt getrennt: Store-Signer = UNSIGNED; ein Git-Push ist nie ein Receiver-ACK.",
+      "evidence_refs": [
+        "SHA256SUMS.txt",
+        "SOURCE_AND_BINARY_MANIFEST.json",
+        "PROVENANCE_AND_RIGHTS_R7.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G8",
+      "status": "SCOPE_EXCLUDED_NOT_AUTHORIZED",
+      "reason": "Es wird kein CPU- oder Hostinger-Performance-Claim erhoben; G8 ist nur fuer einen expliziten Performance-Claim Pflicht und bleibt scope-excluded. DESIGN-Skizze in CPU_CLAIM_SCOPE.md.",
+      "evidence_refs": [
+        "CPU_CLAIM_SCOPE.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    },
+    {
+      "id": "G9",
+      "status": "HOLD_WITH_PRECISE_REASON",
+      "reason": "Ein vollstaendiger, maschinenlesbarer Einzel-Return liegt vor; aber es steht kein unabhaengiger Zweitreviewer in derselben Session zur Verfuegung (different_session_or_entity=false, actual_rerun_of_critical_cases durch den Reviewer=false). Die AXIOM-Adjudikation steht aus; kein Konsens-als-Beweis.",
+      "evidence_refs": [
+        "FINAL_RETURN.json",
+        "EXECUTIVE_DECISION.md"
+      ],
+      "independent_reviewer": "NOT_AVAILABLE_IN_SAME_SESSION (MISTRAL/VIBE-Expert-Session 2026-10-15; unabhaengige AXIOM-Adjudikation ausstehend)"
+    }
+  ],
+  "tests": [
+    {
+      "name": "ADAPTER_FIREWALL_FIXTURE_SUITE_V1",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "69a1a5e80b16825e912406471c78e421b7c15fe572ab091d25efc4a338bcce7c",
+      "toolchain": "NEXUS_EVIDENCE_ADAPTER_V1, TypeScript-Sandbox-Replay 2026-10-15",
+      "expected": "43/43 Fixtures (45/45 Assertionen) konform",
+      "actual": "43/43 Fixtures, 45/45 Assertionen konform",
+      "raw_log_path": "EVIDENCE_ADAPTER_NEGATIVES.jsonl"
+    },
+    {
+      "name": "ZIP_REFERENCE_FUZZ_CAMPAIGN_V1",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "a62fa6715d6c81203d4a348f087e05418596927c5d516f1d9dbdd96e49d0ddb4",
+      "toolchain": "lane_s_zip_reference_parser_v1, TypeScript-Sandbox, mulberry32, Seeds 0x20261015/0x0f0f0f0f/0xdeadbeef",
+      "expected": "3000 Mutationen; 0 ungefangene Ausnahmen; Doppellauf identisch",
+      "actual": "426 ACCEPT / 2574 DENY; 0 ungefangene Ausnahmen; Digest be30a032b1e079ff536e6bf9fabbb26df0a27b80298ec8e68b3ba375dd0a8201 identisch in beiden Laeufen",
+      "raw_log_path": "S_FUZZ_MANIFEST.json"
+    },
+    {
+      "name": "ZIP_NAMED_ONE_DEFECT_CASES_44_V1",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "b509491b387aa7f58431e3ab4dc6c820ea5e119ade434dac67991c44313bafd2",
+      "toolchain": "lane_s_zip_reference_parser_v1, TypeScript-Sandbox",
+      "expected": "44/44 benannte Ein-Defekt-Faelle erwartungskonform",
+      "actual": "44/44 erwartungskonform",
+      "raw_log_path": "S_ATTACK_CASES.jsonl"
+    },
+    {
+      "name": "MATH_ENERGY_AND_GAIN_VERIFICATION_V1",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "dbf995c1aba3550670f5b6702bc33609842d3f06ad3954ca151ff710faf49424",
+      "toolchain": "Eigene numerische Verifikation (TypeScript-Sandbox), exakte Arithmetik",
+      "expected": "E(1000)=4(N-2+1/3); Schranke 888.888889 verletzt; konservative Schranke 8000 haelt; Gain 2",
+      "actual": "E=3993.333333; 888.888889 verletzt; 8000 haelt; Gain 2.000000; HS 4/3 vs Operator 4; Peak 1000.000250 @ t=1",
+      "raw_log_path": "MATH_CANONICAL_ERRATUM_R7.md"
+    },
+    {
+      "name": "PUBLIC_SOURCE_REHASH_20261015",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "95c35d3fced603f704fbd885c2d35cc9acb1a44a7ef51240e6586bd2d190ae0a",
+      "toolchain": "Eigene SHA-256-Toolchain; github_app get_file_contents (Quell-Branch codex/nexus-r7-terminal-closure-public-c1-20261015)",
+      "expected": "Alle oeffentlichen Quellobjekte hash-konsistent; Order-Doc-Praefix dbf995c1",
+      "actual": "9 Textobjekte neu gerehashet, 8/8 Git-Blobs konsistent, MANIFEST-Kreuzvalidierung konsistent; ZIP/Kapsel/V0.4 byte-exakt in dieser Session verifiziert",
+      "raw_log_path": "SOURCE_AND_BINARY_MANIFEST.json"
+    },
+    {
+      "name": "REDACTION_SECRET_SCAN_V1",
+      "execution": "ACTUAL_EXECUTED",
+      "source_sha256": "832f177354e1d213a69919408b9be47a39a4e2bb18b1d2dccbcaf2229cfc84f2",
+      "toolchain": "Mechanischer Substring-Scan im Build (fail-closed)",
+      "expected": "0 Treffer ueber alle 20 Umschlagsdateien",
+      "actual": "0 Treffer",
+      "raw_log_path": "PROVENANCE_AND_RIGHTS_R7.md"
+    },
+    {
+      "name": "V04_STATIC_SOURCE_REVIEW_V1",
+      "execution": "STATIC_PROVED",
+      "source_sha256": "a2972e6a1eaef8e933fcb2597bc5be85be76a36b6cbb3ad82ec28175103bff3a",
+      "toolchain": "Manuelle Zeilen-Review (keine Python-/Linux-Runtime)",
+      "expected": "Alle dokumentierten Kontrollen statisch vorhanden; Residuen benannt",
+      "actual": "Kontrollen vollstaendig; Residuen R7-S01, SIGIO global, Lease FS-abhaengig, /proc erforderlich",
+      "raw_log_path": "LANE_S_SOURCE_REVIEW.md"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Der Referenz-Parser weist in 3044 deterministischen adversarialen Faellen keine ungefangene Ausnahme auf; alle 44 benannten Ein-Defekt-Faelle sind erwartungskonform.",
+      "scope": "Referenz-Implementierung lane_s_zip_reference_parser_v1 in dieser Sandbox; ausdruecklich NICHT die Python-Zielimplementierung V0.4",
+      "basis": [
+        "S_FUZZ_MANIFEST.json",
+        "S_ATTACK_CASES.jsonl"
+      ],
+      "uncertainty": "Kein Transfer auf V0.4; V0.4-Fuzzing erfordert eine Linux-/Python-Runtime (G3 HOLD)."
+    },
+    {
+      "claim": "Die Energie-Identitaet E(N)=4(N-2+1/3) gilt fuer lambda=-1/2, N=1000 exakt (3993.333333); die Schranke 2||d||^2/(1-lambda)^2 = 888.888889 ist reproduzierbar verletzt; die konservative Schranke 8000 haelt; der scharfe l2-Gain ist 2.",
+      "scope": "Skalar-Rekursion e_{t+1}=lambda*e_t+d_t mit |lambda|<1, e_0=0, d_t=(-1)^t",
+      "basis": [
+        "MATH_CANONICAL_ERRATUM_R7.md"
+      ],
+      "uncertainty": "Kanonische Bindung des Erratums an das Foundation-Dokument steht aus (G5 HOLD); keine Matrix-Verallgemeinerung per Analogie."
+    },
+    {
+      "claim": "NEXUS_EVIDENCE_ADAPTER_V1 erzwingt Autoritaet=NONE, strict schema, Profil-Allowlist, Injektions-Quarantaene, Widerspruchsmarkierung und Append-only; 43/43 Fixtures konform.",
+      "scope": "Adapter-Referenz-Implementierung in dieser Sandbox; keine Produktions- oder MCP-Integration",
+      "basis": [
+        "EVIDENCE_ADAPTER_NEGATIVES.jsonl",
+        "EVIDENCE_ADAPTER_SPEC_V1.md"
+      ],
+      "uncertainty": "Logische Append-only-Immutabilitaet ist keine Signatur und kein Anti-Rollback (Store-Signer UNSIGNED)."
+    },
+    {
+      "claim": "Alle im Quellen-Ledger aufgefuehrten oeffentlichen Objekte wurden mit eigener SHA-256-Toolchain hash-verifiziert (9 Textobjekte im Fortsetzungslauf neu; ZIP, Kapsel und V0.4 byte-exakt in dieser Session).",
+      "scope": "Quellen-Kustodie dieses Returns (G0)",
+      "basis": [
+        "SOURCE_AND_BINARY_MANIFEST.json",
+        "PROVENANCE_AND_RIGHTS_R7.md"
+      ],
+      "uncertainty": "EUR-Lex/CURIA-Primärtexte bleiben robot-blockiert (EXTERNAL_REPORTED_ONLY); der Binaerkanal des Connectors lieferte die R7-ZIP im Fortsetzungsteilschritt nicht erneut."
+    },
+    {
+      "claim": "Windows-native Faehigkeit wurde weder getestet noch behauptet; Produktion und REA-MCP-Runtime sind nicht autorisiert.",
+      "scope": "Gesamt-Return",
+      "basis": [
+        "CLOSURE_SCOPES_AND_LIMITATIONS.md",
+        "CPU_CLAIM_SCOPE.md"
+      ],
+      "uncertainty": "Keine."
+    }
+  ],
+  "permissions": {
+    "hostinger_write": false,
+    "mcp_install": false,
+    "main_merge": false,
+    "cursor_autostart": false,
+    "third_party_target_execution": false,
+    "node_birth": false
+  },
+  "transport": {
+    "mode": "PUBLIC_SAFE_CODEX_BRANCH",
+    "receiver_ack": "NOT_ESTABLISHED",
+    "manifest_verified": true
+  },
+  "independent_reviewer": {
+    "identity_declared": "MISTRAL_VIBE_EXPERT_SESSION_20261015",
+    "different_session_or_entity": false,
+    "actual_rerun_of_critical_cases": false,
+    "source_ledger_ref": "PROVENANCE_AND_RIGHTS_R7.md (Quellen-Ledger) und SOURCE_AND_BINARY_MANIFEST.json"
+  }
+}

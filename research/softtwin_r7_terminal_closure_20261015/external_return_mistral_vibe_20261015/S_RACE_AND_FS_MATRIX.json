@@ -1,0 +1,61 @@
+{
+  "schema": "NEXUS_R7_RACE_AND_FS_MATRIX_V1",
+  "object": "NEXUS_OMEGA_R7_LANE_S_RACE_FS_MATRIX_20261015_MISTRAL_VIBE_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "target": "src/nexus_artifact_triage_v04.py (SHA-256 a2972e6a1eaef8e933fcb2597bc5be85be76a36b6cbb3ad82ec28175103bff3a, 15786 B, aus oeffentlicher R6-Kapsel)",
+  "execution_class": "STATIC_REVIEW_ONLY — keine Linux-Runtime in der Expert-Sandbox; Laufzeitzellen sind NOT_EXECUTED",
+  "controls": [
+    {
+      "control": "openat-Root-Walk mit O_NOFOLLOW je Komponente",
+      "static_finding": "Vollstaendig vorhanden; kein folgen von Symlink-Komponenten im Walk",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "O_PATH-Oeffnung (kein FIFO-/Geraete-Open)",
+      "static_finding": "Vorhanden: Deskriptor-Oeffnung ohne Lesen/Schreiben",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "F_SETLEASE F_RDLCK vor Parsing",
+      "static_finding": "Vorhanden; SIGIO-Handler fuer Lease-Bruch eingerichtet. Residuum: SIGIO ist prozess-global, Thread-Race verbleibt",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "nlink==1-Pruefung",
+      "static_finding": "Vorhanden",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "/proc/self/fd-Reopen mit Inode-Match",
+      "static_finding": "Vorhanden (dev+ino verglichen); Residuum: /proc erforderlich, Lease nur auf lokalen Linux-Dateisystemen",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "pre/post-fstat (dev, ino, size, mtime_ns, ctime_ns)",
+      "static_finding": "Vorhanden",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "MAX_FILE 32 MiB, MAX_UNCOMPRESSED 128 MiB, MAX_ENTRIES 512, MAX_RATIO 200",
+      "static_finding": "Vorhanden (Deskriptor- und Deklarationsgrenzen)",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "openat2 RESOLVE_BENEATH | RESOLVE_NO_SYMLINKS als Design-Alternative",
+      "static_finding": "Als Design-Alternative dokumentiert (man7 verifiziert), nicht als installierte API angenommen",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "control": "EOCD-Exaktheit, Deskriptor-Konsistenz, lueckenlose Spans, Local/CD-Match, Unicode-Deny, WIN_RESERVED, fail-closed",
+      "static_finding": "Vollstaendig vorhanden; R7-S01: lokale CRC/Size-Felder werden bei nicht gesetztem Bit 3 nicht gegen das CD geprueft (Inhalts-CRC wird gegen CD verifiziert; geringes Residuum)",
+      "runtime": "NOT_EXECUTED"
+    }
+  ],
+  "reference_parser_differential": {
+    "implementation": "lane_s_zip_reference_parser_v1.ts (diese Session, fail-closed)",
+    "cases": 3044,
+    "uncaught_exceptions": 0,
+    "named_cases_conform": "44/44",
+    "note": "Die Referenz-Implementierung ist strikter als V0.4 dokumentierte Politik (lokale Felder werden gegen CD geprueft); Abweichungen werden als Differenzial-Befund, nicht als V0.4-Verdikt gefuehrt."
+  }
+}

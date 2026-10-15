@@ -1,0 +1,44 @@
+{"id":"N01","description":"EOCD um letztes Byte abgeschnitten","input_bytes":293,"expected":"DENY","actual":"DENY","actual_reason":"EOCD_SIGNATURE","conform":true}
+{"id":"N02","description":"EOCD-Signatur zerstoert","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"EOCD_SIGNATURE","conform":true}
+{"id":"N03","description":"EOCD-Eintragzahl +1","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CD_ENTRY_TRUNCATED","conform":true}
+{"id":"N04","description":"EOCD-CD-Offset verschoben","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CD_SPAN_MISMATCH","conform":true}
+{"id":"N05","description":"Central-Directory-Eintrags-Signatur zerstoert","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CD_ENTRY_SIGNATURE","conform":true}
+{"id":"N06","description":"Local-Header-Signatur zerstoert","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"LOCAL_SIGNATURE","conform":true}
+{"id":"N07","description":"Methode 3 (nicht unterstuetzt) in Local+CD","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"METHOD_NOT_SUPPORTED","conform":true}
+{"id":"N08","description":"CRC in Local+CD gefaelscht","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CRC_MISMATCH","conform":true}
+{"id":"N09","description":"Stored: csize != usize (csize in Local+CD reduziert)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_GAP","conform":true}
+{"id":"N10","description":"Local-Name weicht vom CD-Namen ab","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"LOCAL_CD_NAME_MISMATCH","conform":true}
+{"id":"N11","description":"Nicht-ASCII-Dateiname (Unicode-Policy-Deny)","input_bytes":170,"expected":"DENY","actual":"DENY","actual_reason":"NAME_NOT_ASCII_PRINTABLE","conform":true}
+{"id":"N12","description":"Backslash im Dateinamen (WIN_RESERVED)","input_bytes":176,"expected":"DENY","actual":"DENY","actual_reason":"NAME_WIN_RESERVED","conform":true}
+{"id":"N13","description":"Uberlappende Spans (Local-Offset von Eintrag 2 in Daten von Eintrag 1)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_OVERLAP","conform":true}
+{"id":"N14","description":"Luecke zwischen Spans (Local-Offset von Eintrag 2 verschoben)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_GAP","conform":true}
+{"id":"N15","description":"Datenregion physikalisch um 5 Bytes gekuerzt","input_bytes":289,"expected":"DENY","actual":"DENY","actual_reason":"CD_SPAN_MISMATCH","conform":true}
+{"id":"N16","description":"Angehaengtes Byte nach EOCD","input_bytes":295,"expected":"DENY","actual":"DENY","actual_reason":"EOCD_SIGNATURE","conform":true}
+{"id":"N17","description":"513 Eintraege (ueber MAX_ENTRIES 512)","input_bytes":47731,"expected":"DENY","actual":"DENY","actual_reason":"TOO_MANY_ENTRIES","conform":true}
+{"id":"N18","description":"Deklarierte unkomprimierte Groesse 200 MiB (ueber MAX_UNCOMPRESSED 128 MiB)","input_bytes":173,"expected":"DENY","actual":"DENY","actual_reason":"UNCOMPRESSED_CAP","conform":true}
+{"id":"N19","description":"Deklarations-Luege: usize 1.000.000 bei kleinem csize (RATIO_CAP 200)","input_bytes":175,"expected":"DENY","actual":"DENY","actual_reason":"RATIO_CAP","conform":true}
+{"id":"N20","description":"Data-Descriptor (Bit 3) mit Signatur und korrekten Werten","input_bytes":184,"expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"id":"N21","description":"Data-Descriptor ohne Signatur (Policy: Signatur erforderlich)","input_bytes":180,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_GAP","conform":true}
+{"id":"N22","description":"Flag Bit 0 (Verschluesselung)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"ENCRYPTED","conform":true}
+{"id":"N23","description":"Zip64-EOCD-Locator zwischen CD und EOCD","input_bytes":318,"expected":"DENY","actual":"DENY","actual_reason":"CD_SPAN_MISMATCH","conform":true}
+{"id":"N24","description":"CD-Namelaenge falsch (um 1 erhoeht)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CD_ENTRY_SIGNATURE","conform":true}
+{"id":"N25","description":"CD-Extralaenge auf 100 gesetzt (Struktur-Desync)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"CD_ENTRY_TRUNCATED","conform":true}
+{"id":"N26","description":"EOCD-Kommentarlaenge 4 (Policy: Kommentar unzulaessig)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"COMMENT_NOT_ALLOWED","conform":true}
+{"id":"N27","description":"Doppelte Dateinamen","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"DUPLICATE_NAME","conform":true}
+{"id":"N28","description":"Version-needed 45 (Zip64) in Local+CD","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"VERSION_NOT_SUPPORTED","conform":true}
+{"id":"N29","description":"Local-Offset hinter Dateiende","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_GAP","conform":true}
+{"id":"N30","description":"Local-Offset 0xFFFFFFFF (Zip64-Marker ohne Zip64)","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"SPAN_GAP","conform":true}
+{"id":"N31","description":"Local csize weicht von CD csize ab","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"LOCAL_CD_CSIZE_MISMATCH","conform":true}
+{"id":"N32","description":"Local usize weicht von CD usize ab","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"LOCAL_CD_USIZE_MISMATCH","conform":true}
+{"id":"N33","description":"Data-Descriptor-CRC weicht von CD-CRC ab","input_bytes":184,"expected":"DENY","actual":"DENY","actual_reason":"DESCRIPTOR_CRC_MISMATCH","conform":true}
+{"id":"N34","description":"EOCD-Eintragzahl 0 bei vorhandenem Central Directory","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"EMPTY_COUNT_MISMATCH","conform":true}
+{"id":"N35","description":"Doppelte EOCD-Kopie am Ende","input_bytes":316,"expected":"DENY","actual":"DENY","actual_reason":"CD_SPAN_MISMATCH","conform":true}
+{"id":"N36","description":"Leeres Archiv (gueltig)","input_bytes":22,"expected":"ACCEPT","actual":"ACCEPT","actual_reason":"EMPTY_ARCHIVE","conform":true}
+{"id":"N37","description":"Steuerzeichen im Dateinamen","input_bytes":176,"expected":"DENY","actual":"DENY","actual_reason":"NAME_NOT_ASCII_PRINTABLE","conform":true}
+{"id":"N38","description":"Dateiname laenger als 255 Zeichen","input_bytes":752,"expected":"DENY","actual":"DENY","actual_reason":"NAME_TOO_LONG","conform":true}
+{"id":"N39","description":"Absoluter Pfadname (/etc/passwd)","input_bytes":174,"expected":"DENY","actual":"DENY","actual_reason":"NAME_ABSOLUTE","conform":true}
+{"id":"N40","description":"Pfad-Traversal (..) im Dateinamen","input_bytes":178,"expected":"DENY","actual":"DENY","actual_reason":"NAME_TRAVERSAL","conform":true}
+{"id":"N41","description":"Fake-EOCD innerhalb gespeicherter Daten (gueltig)","input_bytes":170,"expected":"ACCEPT","actual":"ACCEPT","actual_reason":"OK","conform":true}
+{"id":"N42","description":"Zwei komplette Archive aneinander gehaengt","input_bytes":588,"expected":"DENY","actual":"DENY","actual_reason":"CD_SPAN_MISMATCH","conform":true}
+{"id":"N43","description":"Reserved-Flag Bit 13 gesetzt","input_bytes":294,"expected":"DENY","actual":"DENY","actual_reason":"RESERVED_FLAGS","conform":true}
+{"id":"N44","description":"Deflate-Eintrag mit gefaelschtem CRC in Local+CD","input_bytes":171,"expected":"DENY","actual":"DENY","actual_reason":"CRC_MISMATCH","conform":true}
