@@ -1,0 +1,38 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_OPPO_A74_EXPERT_MAXI_DETACHED_SHA256_MANIFEST_20261015_R0",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "base_main_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "branch": "axiom/oppo-a74-expert-maxi-20261015",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_class": "OPERATOR_AUTHORED_PUBLIC_SAFE_C1",
+  "manifest_self_hash": "EXCLUDED",
+  "expert_return_status": "NOT_YET_RECEIVED",
+  "files": [
+    {
+      "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+      "bytes": 22091,
+      "sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba",
+      "git_blob_sha1": "bd030e571bb6202f69fe9fcc0d42727d139873ea"
+    },
+    {
+      "path": "research/oppo-a74/axiom-expert-maxi-20261015/TASK_ORDER_ANCHOR_V1.json",
+      "bytes": 5361,
+      "sha256": "f4d61efa6c5b7de848daa041467162560843650382221cb262605bef74a9324e",
+      "git_blob_sha1": "a8d17ef933540dee47d571166542f22ad59bafd2"
+    },
+    {
+      "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_TRINARY_SOFT_MEMORY_BRIDGE_C1_20261015_R0.md",
+      "bytes": 4521,
+      "sha256": "5584635e2dd43edc9c045d3a381d36648c14b41f62ff8102ecc869517636c174",
+      "git_blob_sha1": "fddc76d3e49b1e8e209b0196752237cbe27c7688"
+    },
+    {
+      "path": "research/oppo-a74/axiom-expert-maxi-20261015/README.md",
+      "bytes": 1655,
+      "sha256": "3ff6dc8484bf69b922410e44d73cfa94763cd7f82727eae63a0616fa38a9313e",
+      "git_blob_sha1": "cb69a8f8d2f87a2a22942ec3b910c8531dcc0281"
+    }
+  ],
+  "source_gap": "ORIGINAL_CURSOR_OPPO_RETURN_AND_HOSTINGER_MULTI_MB_ZIPS_NOT_INCLUDED",
+  "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH"
+}
