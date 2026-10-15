@@ -1,0 +1,27 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R9_KIMI_MEMORY_APPEND_ONLY_MANIFEST_20261015_R1",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_r9_commit": "6df65211e6b89253138d2e551c98f11d8f86f35e",
+  "original_r9_manifest_sha256": "6d606229ef89f0b0910aac0b5a34470d2384a71d072dcb8e508d5057f84fa283",
+  "manifest_self_hash": "EXCLUDED",
+  "files": [
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/NEXUS_OMEGA_AXIOM_R9_KIMI_RECEIVE_ACK_PUBLIC_20261015_R1.md",
+      "bytes": 2029,
+      "sha256": "810494a56840c92e65d0f6563c03f4a0ac3be25bd34d3e259c97c8551f5d1c60",
+      "git_blob_sha1": "17dac256a5b7722ec87693f1188db55645c61c1d"
+    },
+    {
+      "path": "research/r9/oppo-a74-hard-soft-calibration-20261015/NEXUS_OMEGA_AXIOM_TRINARY_MEMORY_EXPANSION_BLUEPRINT_20261015_R1.md",
+      "bytes": 3248,
+      "sha256": "e921702854cfe7d68265089ad21f01dd2edc129733785b34468d5b620829b7e1",
+      "git_blob_sha1": "3d835555726c0c8353df7083a7b4746251cb283a"
+    }
+  ],
+  "private_originals_in_public_repo": false,
+  "cursor_new_order_dispatch": "NOT_DISPATCHED",
+  "kimi_original_zip": "SOURCE_NOT_PRESENT",
+  "native_chatgpt_memory_change": "NOT_IMPLEMENTED",
+  "receiver_ack": "KIMI_7_ACTUAL_CHILD_BYTES_MATCH"
+}
