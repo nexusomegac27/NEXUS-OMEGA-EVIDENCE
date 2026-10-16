@@ -1,0 +1,33 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R66_GIT_PATH_SNAPSHOT_DETACHED_MANIFEST_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "predecessor_r65_zip_sha256": "1fac311e537fb98dc6c01f074d41c23cf4bf5ee1a443ae9d44c33196946d8791",
+  "predecessor_manifest_verified": "16/16",
+  "published_report": {
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/NEXUS_OMEGA_AXIOM_R66_TRUSTED_GIT_PATH_SNAPSHOT_20261016_R0.md",
+    "bytes": 3081,
+    "sha256": "d8fbf2af7b03a416aa24ae377940ca3e62b8ebd9997780589128beb79b3a2641",
+    "git_blob_sha1": "9edebde36c301e4b729925435b822721bbfed8de"
+  },
+  "local_only_candidate": {
+    "filename": "r66_pinned_git_executable_environment.py",
+    "sha256": "10538c67dda261ae5f9d721e071fa3a6ae98c74d205a2eb46dafd1a5df1e0f5d"
+  },
+  "local_only_frozen_evaluator": {
+    "filename": "frozen_r66_git_path_hijack_evaluator.py",
+    "sha256": "21a5a442bcc0f30280f3a1e939c132dab069c6b3334b2823e9a8ae8ccc1dcb2d"
+  },
+  "baseline": "7/8_PASS",
+  "candidate": "8/8_PASS",
+  "historical_regression": "10/10_PASS",
+  "negative_fixture": "PATH_SHIM_HIDES_UNMANIFESTED_GIT_CHANGE",
+  "false_accept_before": "1/1",
+  "false_accept_after": "0/1",
+  "r10_independent_expert_return": "SOURCE_NOT_PRESENT",
+  "r10_public_send": "PR_115_OPEN",
+  "integration": "NOT_AUTHORIZED_OR_PERFORMED",
+  "main_merge": "NOT_PERFORMED",
+  "www_parity": "NOT_ESTABLISHED",
+  "self_hash": "EXCLUDED"
+}
