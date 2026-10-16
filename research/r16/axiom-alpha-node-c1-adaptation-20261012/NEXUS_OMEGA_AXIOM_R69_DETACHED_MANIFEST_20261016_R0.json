@@ -1,0 +1,68 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R69_DETACHED_MANIFEST_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "predecessor_r68_zip_sha256": "7638a97beb6462d858da4d8fd53de55084a682820c1a95aabbd67ad4772685f3",
+  "report_branch_commit": "1982642216e648a7477cab8100148db4ec06bd26",
+  "files": [
+    {
+      "role": "report",
+      "filename": "NEXUS_OMEGA_AXIOM_R69_REMOTE_COMPLETION_DEFAULT_DENY_20261016_R0.md",
+      "bytes": 2925,
+      "sha256": "ab7f1ad508b48411940809d366a105ab7f6f02b4296bd6237d17e1308a7c3a4e",
+      "git_blob_sha1": "b21f75033b866b6d596d195750329f079bb9c50f",
+      "publication": "GITHUB_BRANCH"
+    },
+    {
+      "role": "predecessor_validator",
+      "filename": "r68_original_validator.py",
+      "bytes": 7857,
+      "sha256": "547e2ab9bd923cf3adea45486dc46528f34008f867b29697028d7c978357b8c6",
+      "git_blob_sha1": "0b0a829222665c3cf6cb8972276665614f911e8b",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    },
+    {
+      "role": "frozen_evaluator",
+      "filename": "frozen_r69_remote_completion_evaluator.py",
+      "bytes": 7478,
+      "sha256": "0fb94dfda8c96ef7b133dc456f8d7759b0cc28484bb777627d6c4b388796442f",
+      "git_blob_sha1": "f4912ffec104c6f8b132f6e93e880430260a97e5",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    },
+    {
+      "role": "isolated_candidate",
+      "filename": "r69_remote_completion_default_deny.py",
+      "bytes": 8830,
+      "sha256": "90dde8adf092034d1a44e1eb8349b9e225355fb9774ebd5cde14183b4199dcfa",
+      "git_blob_sha1": "27e3af942067a30fb3944669365193f09a5f292d",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    },
+    {
+      "role": "negative_mutant",
+      "filename": "r69_mutant_skip_remote_gate.py",
+      "bytes": 8840,
+      "sha256": "ae990b21dab66f2367b15d8025ad89377910612fae59a2a09f6fe60758bd49b1",
+      "git_blob_sha1": "0167aa273349fb6d2081a053acc145cb0116aa3f",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    },
+    {
+      "role": "historical_evaluator",
+      "filename": "frozen_r68_r10_actor_allowlist_evaluator.py",
+      "bytes": 5972,
+      "sha256": "a9a68c2f81e6577c151a3715cdf2b496ded657f1c0ca2d73755ef4ecebbb2895",
+      "git_blob_sha1": "523256a0119d6e09deffc553117da0ef1b4e8304",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    },
+    {
+      "role": "historical_simulation_shim",
+      "filename": "r69_legacy_simulation_shim.py",
+      "bytes": 333,
+      "sha256": "ac3caef951e791f8da85c8dc1c939916d772743aee225f9c2f94adec8d01a4ed",
+      "git_blob_sha1": "138202c58e34bb5756e7919d0ff3ae25885832ca",
+      "publication": "LOCAL_PACKAGE_ONLY"
+    }
+  ],
+  "manifest_self_hash": "EXCLUDED",
+  "main_merge": "NOT_ESTABLISHED",
+  "actual_handoff_30day_rate": null
+}
