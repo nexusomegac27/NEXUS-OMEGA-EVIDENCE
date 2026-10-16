@@ -44,6 +44,8 @@ jobs:
         run: python -m unittest tests.test_research_pipeline
       - name: Validate OPPO diagnostic science-only negative fixtures
         run: node --test research/oppo-a74/diagnostic-offline-connectivity-20261016/tests/test_diagnostic_event_reducer.mjs
+      - name: Validate science capsule original-byte negative fixtures
+        run: python -m unittest discover -s research/oppo-a74/diagnostic-offline-connectivity-20261016/tests -p 'test_verify_science_capsule.py' -v
       - name: Validate continuity and report bounded aging
         run: |
           python scripts/archive_continuity_guard.py --root . --max-age-days 30 --fail-on-integrity > "$RUNNER_TEMP/nexus-continuity.json"
