@@ -1,0 +1,31 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_MISTRAL_TWO_PEAK_REPLAY_RETURN_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-mistral-two-peak-replay-operator-intake-20261011",
+  "base_main": "88e8e798d1cbe41e61202381803f2a150b83a214",
+  "parent_main_r26_chain": "8c37445c709986a39191fd46af8efe70d1150b9c",
+  "parent_objects": [
+    "PR #77 (Perplexity-Return + AXIOM-Adjudikation)",
+    "NEXUS_OMEGA_MISTRAL_VIBE_R26_TWO_PEAK_REPLAY_RETURN_20261011_R0"
+  ],
+  "transport_label": "OPERATOR_TO_AXIOM_TRANSFER_NOT_AGENT_GITHUB_SEND",
+  "transport_note": "Push ueber die operator-eigene GitHub-API-Autorisierung (nexusomegac27); kein Agent-Self-Send, keine Rollenuebernahme, kein Merge durch den Produzenten.",
+  "children": [
+    {
+      "path": "research/r26/mistral-vibe-two-peak-replay-20261011/NEXUS_OMEGA_MISTRAL_VIBE_R26_TWO_PEAK_REPLAY_RETURN_20261011_R0.md",
+      "bytes": 28886,
+      "sha256": "520a8a4e57f2443659ddf4ba0e1ba4b43025e6defaa8b6068cb9581ea22674e3",
+      "git_blob_sha1": "381883353fcd0607bf01147077e3a6e189d6fb25",
+      "github_api_readback": {
+        "ref": "refs/heads/codex/r26-mistral-two-peak-replay-operator-intake-20261011",
+        "sha256_readback_recompute": "520a8a4e57f2443659ddf4ba0e1ba4b43025e6defaa8b6068cb9581ea22674e3",
+        "bytes_readback": 28886,
+        "verify": "SHA256_BYTE_EXACT_MATCH"
+      }
+    }
+  ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "merge_by_producer": false,
+  "axiom_adjudication": "PENDING"
+}
