@@ -1,0 +1,184 @@
+{
+  "receipt_type": "ZIP_META_VERIFICATION",
+  "zip_path": "C:\\omega_bridge\\Perfect Final Version\\nexus-real\\Version V.65\\Aufträge Cursor\\temporärer Ausgang - AXIOM\\NEXUS_OMEGA_FULL_LIVE_ROLLOUT\\NEXUS_Ἀστράτις, ὁ φύλαξ τῆς τριάδος X\\NEXUS_MASTER_CHIEF_MODUL\\R10_NEXUS_OMEGA_INCARNATIO_MAGNETICA\\R2\\NEXUS_~1.ZIP",
+  "declared_sha256": "adb218b67bacddce50ad4a1e2f2f5e350a048532e09afbe43856f18eb1ab0f4f",
+  "measured_sha256": "adb218b67bacddce50ad4a1e2f2f5e350a048532e09afbe43856f18eb1ab0f4f",
+  "hash_status": "MATCH",
+  "bytes": 31205,
+  "file_count": 23,
+  "crc_failures": [],
+  "path_traversal_findings": [],
+  "entries": [
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/",
+      "compressed_bytes": 0,
+      "uncompressed_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_CAPABILITY_STAMP.json",
+      "compressed_bytes": 507,
+      "uncompressed_bytes": 880,
+      "sha256": "792d16a1349791a8229d3d83422ad52ff0b330112f7b67f7549fd0a42b9c59f7",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_EMPFEHLUNG.md",
+      "compressed_bytes": 1232,
+      "uncompressed_bytes": 1997,
+      "sha256": "64250c38a5017d9881800d54dc299a2152624e318c5bb20d361dc473447c14c9",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_MANIFEST.json",
+      "compressed_bytes": 312,
+      "uncompressed_bytes": 489,
+      "sha256": "073bd993e370c01f06198cc296b079477238f7f14a5179d1da1a596a9498f1fe",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_A_ZIP_VERIFICATION.json",
+      "compressed_bytes": 1000,
+      "uncompressed_bytes": 1980,
+      "sha256": "f79c57e17a023617c9bb2e25c1f4c82ebe5db5eda94a6d01bdba717373f93d66",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_B_KOMPOSITIONS_MATRIX_VERDICT.json",
+      "compressed_bytes": 906,
+      "uncompressed_bytes": 2189,
+      "sha256": "a931d0e31d71d41560a8bcf7ccfbb03aabb49d3010dc357f821b79d2283ea1fe",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_C_FAILURE_ARTIFACT_VERDICT.json",
+      "compressed_bytes": 770,
+      "uncompressed_bytes": 1542,
+      "sha256": "e346e50f9c267162946b2351386e77c0562aa6e9469022d598f3c6875f08603e",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_D_LACUNA_RECOVERY_VERDICT.json",
+      "compressed_bytes": 547,
+      "uncompressed_bytes": 959,
+      "sha256": "51ba9eaac040d8d6bea2573251fa9f1d5b77b8b703c535ca735890b52578c673",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_E_SIEVE_DESIGN_VERDICT.json",
+      "compressed_bytes": 706,
+      "uncompressed_bytes": 1671,
+      "sha256": "02f92f7bb3e78132047bcda63187a6ebc6436bd484b653d463014d949e4a9703",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_PHASE_F_ONLINE_SOURCE_LEDGER.json",
+      "compressed_bytes": 823,
+      "uncompressed_bytes": 2498,
+      "sha256": "65b2ab776f99430f03bfdb4e6ffe0b95cefdd0659020ffe1d46efb76d8238176",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_GROK_TERMINAL_HANDSHAKE.json",
+      "compressed_bytes": 583,
+      "uncompressed_bytes": 1147,
+      "sha256": "ef1824562ab5b57fd33678acabc5a02d0126a3f4512b7bf5986d958e15175d9c",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_CAPABILITY_STAMP.json",
+      "compressed_bytes": 680,
+      "uncompressed_bytes": 1146,
+      "sha256": "4f48f3e0cc4cc19892fe7a322659481fe151e2f359e29dd1ddf377f745531214",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_EMPFEHLUNG.md",
+      "compressed_bytes": 1353,
+      "uncompressed_bytes": 2275,
+      "sha256": "4e5b1a411f9857f868d9f45cd3ea01c0d223c60945185faca7ccf053d895b5d7",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_MANIFEST.json",
+      "compressed_bytes": 515,
+      "uncompressed_bytes": 1170,
+      "sha256": "6e7fe1d1976f97f2202bf0b564c0d2ff899a74daf4d0d49be498c066a4dd79fc",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_A_EMPFEHLUNG.md",
+      "compressed_bytes": 1070,
+      "uncompressed_bytes": 1681,
+      "sha256": "ae8dad30aecfc1cfb9ccb25f01cb0655480980297079679bed8c21996e300926",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_A_MATRIX.json",
+      "compressed_bytes": 3534,
+      "uncompressed_bytes": 10735,
+      "sha256": "90684e3c223844cb2b2e758953415b15a44b5aebf10d0b710055aa3f989c7cf0",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_B_FAILURE_ARTIFACT.md",
+      "compressed_bytes": 1670,
+      "uncompressed_bytes": 2959,
+      "sha256": "200541943454433e96083a84b9c4d7b14544778291f8645fbcfde4f7dc087d4a",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_B_SCHEMA.json",
+      "compressed_bytes": 1721,
+      "uncompressed_bytes": 4422,
+      "sha256": "255af847a5940416603b55c7029f3c05470788b532147c363a1dc773024b3d1f",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_C_LACUNA_RECOVERY.md",
+      "compressed_bytes": 1563,
+      "uncompressed_bytes": 2964,
+      "sha256": "44637c11ccfe94cc2af744ae61109b906a7cadd956c8b0a0e19b888dc273c38e",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_C_NON_FINDING.json",
+      "compressed_bytes": 458,
+      "uncompressed_bytes": 794,
+      "sha256": "eefd1cd8d923d48014ef089bf2a7036876ec820202b21ad2fb282be49d62dd7f",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_D_SIEVE_DESIGN.md",
+      "compressed_bytes": 2416,
+      "uncompressed_bytes": 4946,
+      "sha256": "bd61735b6174c7ab09cdff92f37ae85ff91cfc52aaab659efac8fb31d46ae29e",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_PHASE_D_TEST_PROTOCOLS.json",
+      "compressed_bytes": 964,
+      "uncompressed_bytes": 2236,
+      "sha256": "80693223bede6c8e7f1d1c464e35db8fb446e9b281a41069c654d1d9f7c3e675",
+      "crc_read_ok": true
+    },
+    {
+      "path": "NEXUS_OMEGA_R10_R2_GROK_VERIFICATION_C1_20261004_R0/R10_R2_KOMPOSITION_TERMINAL_HANDSHAKE.json",
+      "compressed_bytes": 753,
+      "uncompressed_bytes": 1129,
+      "sha256": "ae2bc39f33dcd5fb13d7f10721bf51d8b5dc016b8944425d2199df0337004c80",
+      "crc_read_ok": true
+    }
+  ],
+  "artifact": "R10_R2_MANUS_PHASE_A_ZIP_META_VERIFICATION",
+  "declared_context": {
+    "grok_verification_zip": "NEXUS_~1.ZIP",
+    "declared_sha256": "adb218b67bacddce50ad4a1e2f2f5e350a048532e09afbe43856f18eb1ab0f4f"
+  },
+  "reference_mismatch_finding": {
+    "status": "MATERIAL",
+    "finding": "The GROK ZIP contains claims about a separate 12-file Mistral/Vibe composition stack (dab75cff..., 18599 bytes), not the same bytes as the current 23-entry GROK ZIP.",
+    "mistral_vibe_hash_recomputed_from_bytes": false
+  }
+}

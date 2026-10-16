@@ -1,0 +1,91 @@
+{
+  "artifact": "R10_R2_MANUS_PHASE_D_DRIFT_LEDGER",
+  "checked_on": "2026-10-04",
+  "sources": [
+    {
+      "source": "BagIt RFC 8493",
+      "version": "1.0",
+      "date": "2018-10",
+      "status": "Informational",
+      "url": "https://www.rfc-editor.org/rfc/rfc8493.html",
+      "drift_status": "NONE_MATERIAL",
+      "evidence": "RFC page remains available and defines fetch.txt."
+    },
+    {
+      "source": "RO-Crate",
+      "version": "1.3",
+      "date": "2026-06-22",
+      "status": "Recommendation",
+      "url": "https://w3id.org/ro/crate/1.3",
+      "drift_status": "UPDATED_SINCE_OLD_SNAPSHOT",
+      "evidence": "Primary page states this version and publication date."
+    },
+    {
+      "source": "SCITT",
+      "version": "RFC 9943",
+      "date": "2026-06",
+      "status": "RFC / Proposed Standard",
+      "url": "https://www.rfc-editor.org/rfc/rfc9943.html",
+      "drift_status": "STABLE_BUT_WIRE_FORMAT_MATTERS",
+      "evidence": "COSE_Sign1 Signed Statements and Receipts."
+    },
+    {
+      "source": "W3C PROV-O",
+      "version": "2013-04-30",
+      "date": "2013-04-30",
+      "status": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "drift_status": "NONE_MATERIAL"
+    },
+    {
+      "source": "in-toto Envelope v1",
+      "version": "main/v1 spec",
+      "date": "accessed 2026-10-04",
+      "status": "active specification",
+      "url": "https://github.com/in-toto/attestation/blob/main/spec/v1/envelope.md",
+      "drift_status": "NO_DIRECT_SCITT_EQUIVALENCE",
+      "evidence": "DSSE recommended; COSE_Sign1 is not ITE-5 compliant in this envelope spec."
+    },
+    {
+      "source": "SLSA Provenance",
+      "version": "v1 page / v1.2 current",
+      "date": "accessed 2026-10-04",
+      "status": "page says Retired; v1.2 current",
+      "url": "https://slsa.dev/provenance/v1",
+      "drift_status": "MATERIAL"
+    },
+    {
+      "source": "TUF",
+      "version": "1.0.36",
+      "date": "2026-08-05",
+      "status": "latest specification",
+      "url": "https://theupdateframework.io/specification/latest/",
+      "drift_status": "MATERIAL_VERSION_DRIFT"
+    },
+    {
+      "source": "CAAM",
+      "version": "draft-barney-caam-00",
+      "date": "latest revision 2026-02-25; expired 2026-08-29",
+      "status": "Expired Internet-Draft",
+      "url": "https://datatracker.ietf.org/doc/draft-barney-caam/00/",
+      "drift_status": "CONFIRMED_EXPIRED"
+    },
+    {
+      "source": "Lacuna",
+      "version": "0.6",
+      "date": "2026-09-14",
+      "status": "Zenodo specification, not a standard",
+      "url": "https://zenodo.org/records/22063353",
+      "drift_status": "MATERIAL_SOURCE_RECOVERY"
+    },
+    {
+      "source": "HDP/TIBET/UPIP",
+      "version": "not independently bound in accessible primary sources",
+      "date": "n/a",
+      "status": "unverified here",
+      "url": null,
+      "drift_status": "UNRESOLVED_GAP"
+    }
+  ],
+  "overall_drift_status": "DRIFT_FLAGGED"
+}
