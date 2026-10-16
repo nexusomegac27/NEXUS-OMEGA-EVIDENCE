@@ -1,0 +1,14 @@
+import test from "node:test";import assert from "node:assert/strict";
+import {appendEvent,checkEvent} from "../reference/diagnostic_event_reducer.mjs";
+const h=x=>x.repeat(64);
+const mk=(seq=0,prev=h("0"),digest=h("a"))=>({schema:"nexus-mobile-diagnostic-event/v0",session_id:"oppo-demo",event_id:"ev-"+seq,channel:"ADB",outcome:"DISCONNECTED",source_class:"SYNTHETIC",seq,mono_ns:1000+seq*50,observed_utc:"2026-10-16T00:00:00Z",payload_sha256:digest,previous_sha256:prev});
+test("synthetic event stays explicitly synthetic",()=>assert.equal(appendEvent(null,mk()).verdict,"SYNTHETIC_ONLY"));
+test("idempotent exact same sequence",()=>{let s=appendEvent(null,mk());assert.equal(appendEvent(s,mk()).verdict,"DUPLICATE_IDENTICAL")});
+test("conflicting retry rejected",()=>{let s=appendEvent(null,mk());assert.throws(()=>appendEvent(s,mk(0,h("0"),h("b"))),/REPLAY_OR_CONFLICT/)});
+test("missing event rejected",()=>assert.throws(()=>appendEvent(null,mk(2)),/SOURCE_GAP_SEQUENCE/));
+test("broken hash predecessor rejected",()=>{let s=appendEvent(null,mk());assert.throws(()=>appendEvent(s,mk(1,h("b"),h("c"))),/CHAIN_PREDECESSOR_MISMATCH/)});
+test("monotonic regression rejected",()=>{let s=appendEvent(null,mk());let e=mk(1,h("a"),h("b"));e.mono_ns=1;assert.throws(()=>appendEvent(s,e),/TIMEBASE_REGRESSION/)});
+test("forbid private and unstructured injected fields",()=>{let e=mk();e.token="secret";assert.throws(()=>checkEvent(e),/UNAPPROVED_FIELD/)});
+test("timestamp and format validated",()=>{let e=mk();e.observed_utc="BAD";assert.throws(()=>checkEvent(e),/UTC_INVALID/)});
+test("reported event is not a verified sensor observation",()=>{let e=mk();e.source_class="CURSOR_REPORTED";assert.equal(appendEvent(null,e).verdict,"SOURCE_REPORTED_NOT_INDEPENDENTLY_VERIFIED")});
+test("keep WIFI disconnect distinct from SENSOR continuity",()=>{let e=mk();e.channel="WIFI";assert.equal(appendEvent(null,e).last_payload_sha256,h("a"))});
