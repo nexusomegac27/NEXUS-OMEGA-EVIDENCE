@@ -1,0 +1,66 @@
+{
+  "object": "R10R10_FINAL_HANDOFF_AND_PUSH_20261008_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_stack": {
+    "bytes": 44934,
+    "sha256": "92e4af466758c19d95fd17bb7bccb04e1adc9c4851a6a833f8fff79470336363"
+  },
+  "sources": [
+    {
+      "filename": "ac02_o1_border_event_record.schema_3.zip",
+      "bytes": 4922,
+      "sha256": "f03a10a3b80aedf392255d10624fd284ac0e4a76dab683daeaf7f1743914f19e"
+    },
+    {
+      "filename": "freeze_limen_package2.zip",
+      "bytes": 5091,
+      "sha256": "533894c481fdea6b00c8e5efc2108ddb9b72c5d8618028438a150c582e8a3183"
+    },
+    {
+      "filename": "limen-open-obligations-o1-o9-vibe-return-r0.md",
+      "bytes": 21137,
+      "sha256": "0ebc1891d92111c9e6a158ce0d93d18ea94c00a7934e4f9512297fa04229bae6"
+    },
+    {
+      "filename": "NEXUS_GEMINI_Based on the context and research.txt",
+      "bytes": 4085,
+      "sha256": "610f1ba4642de36c515acd48ff0ea4b301807e9da65429158dea2e62d739377c"
+    },
+    {
+      "filename": "NEXUS_LIMEN_IDEE.zip",
+      "bytes": 80153,
+      "sha256": "21a2fd1338a7028153f5e41ff1f0bb9b4faceb1a365706c319dc8663793ae3c4"
+    },
+    {
+      "filename": "NEXUS_OMEGA_AXIOM_TO_VIBE_LIMEN_OPEN_OBLIGATIONS_DEEPENING_AND_SCHEMA_FREEZE_ORDER.txt",
+      "bytes": 6088,
+      "sha256": "72c78880c236bdd1edc8820a4dc129b4ef7516b470763af5303f29ee3e6b1147"
+    },
+    {
+      "filename": "NEXUS_OMEGA_GROK_CROSSVALIDATION_LIMEN_STACK_20261008_R0.md",
+      "bytes": 8751,
+      "sha256": "f10775ad11f9bdfb21718c71b950cbaa454f8292e929f0b0b7361fd9966d059d"
+    },
+    {
+      "filename": "NEXUS_OMEGA_GROK_RETURN_TO_AXIOM_LIMEN_RE_ADJUDICATION_20261008_R0.md",
+      "bytes": 11515,
+      "sha256": "8bc129aad0278ad6dd090f6ed3dda38e09cd7a319952166978553e84758e0bdb"
+    },
+    {
+      "filename": "NEXUS_OMEGA_LIMEN_STACK_20261008_R0.zip",
+      "bytes": 44934,
+      "sha256": "92e4af466758c19d95fd17bb7bccb04e1adc9c4851a6a833f8fff79470336363"
+    },
+    {
+      "filename": "NEXUS_OMEGA_R10R10_LIMEN_AGENT_BORDER_ADMISSION_REJECTION_METROLOGY_FOUNDATION.txt",
+      "bytes": 11647,
+      "sha256": "4de486f95eea7e547fcadab4138a3bc71a6aab726a01afc32ffed7d681fcd880"
+    }
+  ],
+  "verification_scope": "LOCAL_BYTE_CUSTODY_AND_SCHEMA_COUNTEREXAMPLES_ONLY",
+  "independent_scientific_validation": false,
+  "full_adjudication_present": false,
+  "schema_freeze": false,
+  "promotion": false,
+  "r10r11_execution": false
+}
