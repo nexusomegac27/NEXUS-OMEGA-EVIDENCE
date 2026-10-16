@@ -1,0 +1,18 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "files": [
+    {
+      "bytes": 3108,
+      "git_blob_sha1": "6948723f036f31eb29875814b5c44313e09c3fe6",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/NEXUS_OMEGA_AXIOM_R65_PINNED_VALIDATOR_BYTE_EXECUTION_20261016_R0.md",
+      "sha256": "595087c1aaeaf42353c5914de949ae7a242e9e8f2d186a19523da9641c2d3fb7"
+    }
+  ],
+  "initial_publication_commit": "489520bbde4b5d2b96dfecb59acd2b61e694496b",
+  "manifest_self_hash": "EXCLUDED",
+  "object": "NEXUS_OMEGA_AXIOM_R65_DETACHED_MANIFEST_20261016_R0",
+  "private_originals_included": false,
+  "scientific_claim": "ISOLATED_LOCAL_TEST_NOT_PRODUCTIVE_INTEGRATION",
+  "source_base_main_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "source_scope": "PUBLIC_REPORT_ONLY_LOCAL_CANDIDATE_EVALUATOR_NOT_PUBLISHED"
+}
