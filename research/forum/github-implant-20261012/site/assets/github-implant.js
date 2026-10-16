@@ -12,7 +12,7 @@
   const MIN_REQUEST_INTERVAL_MS = 60000;
   const MAX_PREVIEW_BYTES = 150000;
   const cache = new Map();
-  const state = {active:"commits",directory:"",files:[],lastUpdate:0,lastSuccess:0,commitsLoaded:false};
+  const state = {active:"commits",directory:"",files:[],lastUpdate:0,lastSuccess:0,commitsLoaded:false,stalePaths:new Set()};
   const byId = (id) => document.getElementById(id);
   const repoPage = "https://github.com/" + OWNER + "/" + REPO;
   const safePage = (url) => {
@@ -63,6 +63,7 @@
       const r = await fetch(ORIGIN + path, {headers, signal:ctrl.signal, credentials:"omit", referrerPolicy:"no-referrer", cache:"no-store"});
       if (r.status === 304 && previous) {
         cache.set(path, {...previous, time:Date.now()});
+        state.stalePaths.delete(path);
         status(true, "Unverändert · ETag bestätigt");
         return previous.data;
       }
@@ -73,11 +74,13 @@
       }
       const data = await r.json();
       cache.set(path, {time:Date.now(), data, etag:r.headers.get("ETag")});
+      state.stalePaths.delete(path);
       const remaining = r.headers.get("X-RateLimit-Remaining");
       status(true, remaining !== null ? "API antwortet · verbleibendes Limit: " + remaining : "Live-Antwort von GitHub");
       return data;
     } catch (e) {
       status(false, e.name === "AbortError" ? "API-Zeitlimit erreicht" : (e.message || "Netzfehler"));
+      state.stalePaths.add(path);
       if (previous) return previous.data; // previous cached response is NOT a new live observation
       throw e;
     } finally { clearTimeout(timeout); }
@@ -112,7 +115,8 @@
   async function loadPRs(force = false) {
     message("pr-feed","Pull Requests werden geladen …","loading");
     try {
-      const list = await getJson(ENDPOINT + "/pulls?state=all&sort=updated&direction=desc&per_page=20", force);
+      const prsPath=ENDPOINT + "/pulls?state=all&sort=updated&direction=desc&per_page=20";
+      const list = await getJson(prsPath, force);
       if (!Array.isArray(list)) throw new Error("Unerwartetes GitHub-Format");
       const e = byId("pr-feed");e.replaceChildren();
       list.forEach(item => {
@@ -123,8 +127,13 @@
         row.append(left,node("span","pr-state "+stateText.toLowerCase(),stateText));
         e.append(row);
       });
+      const latest=list.filter(item=>item && typeof item.updated_at==="string" && Number.isFinite(Date.parse(item.updated_at))).sort((a,b)=>Date.parse(b.updated_at)-Date.parse(a.updated_at))[0];
+      const prefix=state.stalePaths.has(prsPath)?"CACHE · nicht live bestätigt · ":"GitHub-PR-Metadaten · ";
+      byId("pr-activity").textContent=latest
+        ? (prefix+"PR #"+latest.number+" · "+(latest.merged_at?"MERGED":latest.state==="open"?"OFFEN":"GESCHLOSSEN")+" · zuletzt aktualisiert "+dateText(latest.updated_at)+" · PR-Aktivität ist kein Main-Commit und kein WWW-Deploy")
+        : (prefix+"Keine datierte PR-Aktivität beobachtet · main ist eine getrennte Quelle");
       if (!list.length) message("pr-feed","Keine Pull Requests vorhanden.");
-    } catch(err) {message("pr-feed",err.message,"error");}
+    } catch(err) {message("pr-feed",err.message,"error");byId("pr-activity").textContent="PR-Stand nicht abrufbar · "+err.message+" · keine aktuelle Aktivität bestätigt";}
   }
   function breadcrumbs() {
     const nav=byId("breadcrumbs");nav.replaceChildren();
@@ -215,5 +224,6 @@
   });
   byId("refresh").addEventListener("click",()=>{const key=state.active;chooseTab(key,true);if(key!=="commits")loadCommits(true);});
   loadCommits();
-  setInterval(()=>{if(!document.hidden){loadCommits();if(state.active==="prs")loadPRs();}},REFRESH_MS);
+  loadPRs();
+  setInterval(()=>{if(!document.hidden){loadCommits();loadPRs();}},REFRESH_MS);
 })();
