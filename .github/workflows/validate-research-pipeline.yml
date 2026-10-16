@@ -7,6 +7,8 @@ on:
   push:
     paths:
       - 'research/pipeline/**'
+      - 'research/forum/github-implant-20261012/**'
+      - 'research/r11/soft-metaphoric-visuality-20261016/**'
       - 'schema/research-pipeline-*.schema.json'
       - 'scripts/research_pipeline.py'
       - 'scripts/archive_continuity_guard.py'
@@ -17,6 +19,8 @@ on:
   pull_request:
     paths:
       - 'research/pipeline/**'
+      - 'research/forum/github-implant-20261012/**'
+      - 'research/r11/soft-metaphoric-visuality-20261016/**'
       - 'schema/research-pipeline-*.schema.json'
       - 'scripts/research_pipeline.py'
       - 'scripts/archive_continuity_guard.py'
@@ -40,6 +44,11 @@ jobs:
         run: python scripts/research_pipeline.py --root . validate
       - name: Run pipeline unit tests
         run: python -m unittest tests.test_research_pipeline
+      - name: Verify Forum Implant read-only source activity and gate fixtures
+        run: |
+          node --version
+          node --test research/forum/github-implant-20261012/tests/test_gate.mjs research/forum/github-implant-20261012/tests/test_implant_activity.mjs
+          python -m unittest discover -s research/forum/github-implant-20261012/tests -p 'test_*.py' -v
       - name: Validate continuity and report bounded aging
         run: |
           python scripts/archive_continuity_guard.py --root . --max-age-days 30 --fail-on-integrity > "$RUNNER_TEMP/nexus-continuity.json"
