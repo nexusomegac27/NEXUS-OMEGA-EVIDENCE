@@ -1,0 +1,35 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R67_DETACHED_MANIFEST_20261016_R1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "correction_class": "CONTRADICTION_APPEND_HASH_CALCULATOR_BUG",
+  "supersedes_path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/NEXUS_OMEGA_AXIOM_R67_DETACHED_MANIFEST_20261016_R0.json",
+  "supersedes_sha256": "bbef8a8fd94e864bfea855353b17b961001b8b7fda76fa1161da832a9dbeea91",
+  "correction_reason": "R0 manifest declared a wrong SHA256 for report due to faulty standalone JS SHA256 helper (assignment chain b=a=...). Original report bytes and Git blob remain unchanged; R0 retained append-only.",
+  "source_base_main_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "predecessor_r66_package_sha256": "0b85c59fdc3dfff05c252b47312e49a4af2a7534b18dd2fa801581f16c736475",
+  "files": [
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/NEXUS_OMEGA_AXIOM_R67_HANDOFF_DENOMINATOR_AND_COMPLETION_GATE_20261016_R0.md",
+      "bytes": 2683,
+      "sha256": "36e5638cdf644e29a077251dfbe415c139def77c715e422ca95f39de3eaf6ff9",
+      "git_blob_sha1": "ee429ae25e0540ef72bdcf22f015bf71f72983b4"
+    }
+  ],
+  "local_only_candidate": {
+    "filename": "r67_strict_handoff_denominator_gate.py",
+    "sha256": "98f69531c24c56f470e70f3999f80afc843bf7b3e95842421ffa0e16b9171b10"
+  },
+  "local_only_frozen_evaluator": {
+    "filename": "frozen_r67_handoff_accounting_evaluator.py",
+    "sha256": "176ec71865ee91361629bb99e2b50d04a826548b2f4e825bdfd88d7adbc91ee5"
+  },
+  "baseline": "4/20_PASS",
+  "candidate": "20/20_PASS",
+  "mutant": "18/20_PASS",
+  "actual_30_day_denominator": null,
+  "actual_30_day_numerator": null,
+  "integration": "NOT_PERFORMED",
+  "main_merge": "NOT_PERFORMED",
+  "www_parity": "NOT_ESTABLISHED",
+  "self_hash": "EXCLUDED"
+}
