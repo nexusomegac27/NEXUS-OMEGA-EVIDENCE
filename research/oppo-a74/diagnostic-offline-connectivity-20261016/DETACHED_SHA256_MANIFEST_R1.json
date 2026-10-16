@@ -1,0 +1,84 @@
+{
+  "object": "NEXUS_OMEGA_PRIVATE_SCIENCE_MIRROR_AND_OPPO_ANALYSIS_R1_DETACHED_SOURCE_MANIFEST_20261016",
+  "date": "2026-10-16",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/oppo-debug-offline-connectivity-science-20261016",
+  "original_pr": 118,
+  "canonical_predecessor_head": "757453e10409f75e1bf7c30ff410764a1302d3e9",
+  "previous_detached_manifest_sha256": "0dab2c8fcb2ed01220fa9ff90f792e050d69482dcd703e454783dae60e1768fc",
+  "manifest_self_hash": "EXCLUDED",
+  "scope": "PUBLIC_SAFE_SOURCE_DOCS_TESTS_ONLY_NO_PRIVATE_SENSOR_BYTES",
+  "private_science_vault_created": false,
+  "cursor_0033_0034_analysis_executed": false,
+  "axiom_private_original_bytes_received": false,
+  "files": [
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/reference/diagnostic_event_reducer.mjs",
+      "bytes": 3160,
+      "sha256": "161d8c883bc6bf7f922fa75050b7c61b49220649e52d9165a2bf481a6ac9e42b",
+      "git_blob_sha1": "f8b9c6ebd310b2b407df78220a7e9d8d35b080a0"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/tests/test_diagnostic_event_reducer.mjs",
+      "bytes": 1932,
+      "sha256": "633cccd64a3aedfd63a4e77caaa90f96a24e81791be2602cc25968608fc39c9a",
+      "git_blob_sha1": "0a536abee412e55354f3b8e1640c38905bfa0d2a"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/NEXUS_OPPO_DIAGNOSTIC_OFFLINE_CONNECTIVITY_MACHINE_CONTRACT_R0.json",
+      "bytes": 5423,
+      "sha256": "6743ca86946fb7d7c8cc5f1ba19f095b9f3c3e2e042d0176c5482caa5ea06803",
+      "git_blob_sha1": "c129c9a8170474c6301f5ade4bd04176857b8a21"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/NEXUS_OMEGA_AXIOM_CURSOR_OPPO_NEXUS_APP_SELF_DIAGNOSTIC_OFFLINE_FIRST_CONNECTIVITY_MAXI_ORDER_20261016_R0.md",
+      "bytes": 17809,
+      "sha256": "e47421d7250b406ddd251bb6f8a2b5265c62d78da11e908fadeb37e013a979af",
+      "git_blob_sha1": "92d4a6924c5a0e2debb38f5fa39992c4b69376b9"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/README.md",
+      "bytes": 1902,
+      "sha256": "1bcb0bfe4bc65ca1ec91d48d3661df75cff04e76a9c543ec0f02a57fb7b0cfa9",
+      "git_blob_sha1": "d7910e011f939ee3981b3243fda624054f448230"
+    },
+    {
+      "path": ".github/workflows/validate-research-pipeline.yml",
+      "bytes": 2820,
+      "sha256": "42ddc72ace143c498dd9a2b94c0a6ec5241fcc7895ca9611a5ff587e0cddd093",
+      "git_blob_sha1": "383c8a81f9fa051895e28d4c3869cd5ea3f7c7f7"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/DETACHED_SHA256_MANIFEST_R0.json",
+      "bytes": 2897,
+      "sha256": "0dab2c8fcb2ed01220fa9ff90f792e050d69482dcd703e454783dae60e1768fc",
+      "git_blob_sha1": "b49b067c3a7b7220a3c0a105f1ccc46eeed9654e"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/AXIOM_CURSOR_PRIVATE_SCIENTIFIC_EVIDENCE_MIRROR_POLICY_AND_OPPO_0033_0034_ORDER_20261016_R0.md",
+      "bytes": 14304,
+      "sha256": "cfc4748e23171bdfcc40f29fc1318cb3d920dabb4cd6421ea085cc1ef3501b6c",
+      "git_blob_sha1": "a256d7b75f93e957031d0ea1446d3163767385d4"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/PRIVATE_SCIENCE_MIRROR_AND_OPPO_ANALYSIS_CONTRACT_V1.json",
+      "bytes": 5055,
+      "sha256": "728a7225f3bd27a1f3c5654a2ae94a2b99357effbfec2796654c499afbc5a306",
+      "git_blob_sha1": "626db492a5f49360283d127f209aaba109bec45e"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/reference/verify_science_capsule.py",
+      "bytes": 5382,
+      "sha256": "edb9d50ee21e49d99e45afc7adbaea042b54b12cf7e5a8277bb364c94db2d930",
+      "git_blob_sha1": "16a15d3b8c27c061d523efb72a4ecc694232530a"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/tests/test_verify_science_capsule.py",
+      "bytes": 4026,
+      "sha256": "3fb3a7f74afdb62a88af0d0f58afb44a2bfbb69415e8faa2cb18361c0b9a2d8f",
+      "git_blob_sha1": "78e1be8837bf22039eacad20657c8c6490269e48"
+    }
+  ],
+  "file_count": 11
+}
