@@ -1,0 +1,159 @@
+{
+  "schema": "nexus-private-science-transfer-policy/v1",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_PRIVATE_SCIENCE_MIRROR_AND_OPPO_0033_0034_ANALYSIS_ORDER_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "authority": "OPERATOR_DIRECT_2026_10_16",
+  "predecessor": {
+    "object": "NEXUS_OMEGA_AXIOM_OPPO_LIVE_IMU_DEVICE_ORIGINAL_0033_0034_SOURCE_BOUND_DATA_QUALITY_CONTINUATION_20261016_R0",
+    "public_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "public_pr": 118,
+    "source_head_before_policy": "757453e10409f75e1bf7c30ff410764a1302d3e9"
+  },
+  "sources": [
+    {
+      "name": "oppo-live-imu-package-0033",
+      "bytes": 10035308,
+      "sha256": "31bc669f3adda9f0783bdcd7326a9fd54e2a47cd253ec18018e8b13cf4cbe052",
+      "source_class": "CURSOR_DEVICE_ORIGINAL_MATCH_REPORTED_NOT_AXIOM_REHASHED"
+    },
+    {
+      "name": "oppo-live-imu-package-0034",
+      "bytes": 9515383,
+      "sha256": "0cc640bd0b855f4f0f1d4e27ef9a8750c5ec9573ec99aa1863ba56f62984c281",
+      "source_class": "CURSOR_DEVICE_ORIGINAL_MATCH_REPORTED_NOT_AXIOM_REHASHED"
+    }
+  ],
+  "designated_private_repository": {
+    "name_candidate": "nexusomegac27/NEXUS-OMEGA-PRIVATE-SCIENCE-CUSTODY",
+    "actual_exists": "NOT_ESTABLISHED",
+    "require_visibility": "private",
+    "require_verified_owner": true,
+    "require_actual_acl_audit": true,
+    "external_agent_default": "DENY",
+    "allowed_actions": [
+      "source_private_staging",
+      "restricted_owner_push",
+      "AXIOM_GITHUB_FETCH_AND_BYTE_REHASH"
+    ],
+    "prohibit_public_repo_raw": true,
+    "prohibit_specialized_qwen_grok_registry_repurpose": true
+  },
+  "authorization": {
+    "scientific_copy": "OPERATOR_MANDATED_SCOPED_ALLOWLIST_ONLY",
+    "hostinger_read": "EXISTING_AUTHORIZED_SOURCES_ONLY",
+    "raw_imei_serial_location_contact_secrets": "BLOCK",
+    "third_party_without_rights": "BLOCK",
+    "device_runtime_change": false,
+    "hostinger_source_mutation": false,
+    "new_capture_worker": false,
+    "pixel_install": false,
+    "git_main_force_merge": false
+  },
+  "file_policy": {
+    "classes": [
+      "PUBLIC_SAFE_DERIVATIVE",
+      "PRIVATE_SCIENCE_ALLOWED",
+      "ENCRYPTED_RESTRICTED",
+      "BLOCKED_MISSING_RIGHTS"
+    ],
+    "roles": [
+      "SENSOR_ORIGINAL",
+      "SESSION_CONFIG",
+      "CAPTURE_METADATA",
+      "ANALYSIS_SCRIPT",
+      "TEST_LOG",
+      "NEGATIVE_CONTROL",
+      "STATISTICS",
+      "ESTIMATOR_STATE",
+      "NULL_MODEL",
+      "ENVIRONMENT_LOCK",
+      "SHELL_STDOUT",
+      "SHELL_STDERR",
+      "CHAIN_RECEIPT",
+      "SCIENTIFIC_REPORT",
+      "SOURCE_REGISTER",
+      "OTHER_SCIENCE"
+    ],
+    "requires": [
+      "relative_path",
+      "bytes",
+      "sha256",
+      "role",
+      "privacy_class",
+      "origin_object"
+    ],
+    "manifest_self_hash": "EXCLUDED",
+    "origin_byte_identity": "STRICT_ORIGINAL_SHA256_RECOMPUTE"
+  },
+  "transfer_state_machine": [
+    "DISCOVERED_SOURCE",
+    "CLASSIFIED_ALLOWED",
+    "SOURCE_LOCAL_REHASH",
+    "PRIVATE_STAGED",
+    "PRIVATE_GIT_PUSHED",
+    "PRIVATE_REMOTE_READBACK",
+    "AXIOM_ORIGINAL_BYTES_FETCHED",
+    "AXIOM_INDEPENDENT_REHASH_MATCH",
+    "SCIENTIFIC_REANALYSIS_COMPLETE"
+  ],
+  "integrity_gates": {
+    "lfs_pointer_is_not_original": true,
+    "github_private_is_not_encryption": true,
+    "github_push_is_not_axiom_receiver_ack": true,
+    "source_hash_only_is_not_science": true,
+    "private_binary_9MB_reader_support": "NOT_ESTABLISHED",
+    "first_canary": "SMALL_BENIGN_TEST_FILE_PRIVATE_REPO_READBACK_THEN_REAL_BINARY_CAPABILITY_TEST",
+    "receiver_ack_writer": "AXIOM_ONLY_AFTER_REAL_ORIGINAL_FETCH"
+  },
+  "science_jobs": {
+    "target_packs": [
+      "0033",
+      "0034"
+    ],
+    "status": "NOT_EXECUTED",
+    "read_only": true,
+    "metrics": [
+      "per_sensor_n_valid",
+      "parse_error_counts",
+      "n_missing_duplicate_out_of_order",
+      "monotonic_delta_p50_p95_p99",
+      "span_seconds",
+      "effective_hz_n_minus_1",
+      "jitter_mad",
+      "largest_gap",
+      "inter_package_overlap_gap",
+      "units_scale_saturation",
+      "still_controls_source_bound"
+    ],
+    "negative_controls": "12_DESIGNS_EXECUTED_COUNT_TO_BE_ACTUALLY_REPORTED",
+    "nis_nees_omega": "NOT_COMPUTABLE_WITHOUT_REQUIRED_ESTIMATOR_EVIDENCE",
+    "return_privately": [
+      "ORIGINAL_PACKS_WHERE_ALLOWED",
+      "EXACT_SCRIPTS",
+      "ENV_LOCK",
+      "NUMERIC_SCIENCE_TABLES",
+      "NEGATIVE_TEST_LOGS",
+      "STDOUT",
+      "STDERR",
+      "TRANSFER_RECEIPTS",
+      "SOURCE_CHAIN",
+      "INDEPENDENT_READBACK"
+    ]
+  },
+  "cadence": {
+    "trigger": "SOURCE_FILE_CLOSED_AND_SEALED_THEN_POLICY_PASS",
+    "behavior": "REPLAY_IDEMPOTENT_BOUNDED_RETRY_BACKOFF",
+    "no_user_manual_zip": true,
+    "no_recursion_into_unrelated_hostinger_tree": true
+  },
+  "terminal": {
+    "current_implementation": "ORDER_COMMITTED_NOT_EXECUTED",
+    "vault_provision": "PENDING",
+    "mirrored_private_originals": "NOT_YET_CONFIRMED",
+    "actual_receiver_ack": "PENDING",
+    "R3": "SEALED",
+    "R9": "OPEN",
+    "R10": "CLOSED",
+    "R11": "OPEN_NONINTERFERENCE"
+  }
+}

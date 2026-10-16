@@ -1,0 +1,61 @@
+{
+  "object": "NEXUS_OMEGA_OPPO_SELF_DIAGNOSTICS_DETACHED_SOURCE_MANIFEST_20261016_R0",
+  "date": "2026-10-16",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/oppo-debug-offline-connectivity-science-20261016",
+  "base_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "operator_predecessor": {
+    "object": "NEXUS_OMEGA_AXIOM_OPPO_A74_DELAYED_SHELL_LOG_DELTA_ADJUDICATION_20261016_R0",
+    "soak_exec_original_reported_bytes": 5563,
+    "soak_exec_original_reported_sha256": "f33a5772f7b30b73da797a88445ffc4b43e90a333fd67b454b6e35c21fb894f1",
+    "shell_exit": "FAILED_REPORTED",
+    "independent_actual_soak_bytes": "NOT_AVAILABLE"
+  },
+  "files": [
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/reference/diagnostic_event_reducer.mjs",
+      "bytes": 3160,
+      "sha256": "161d8c883bc6bf7f922fa75050b7c61b49220649e52d9165a2bf481a6ac9e42b",
+      "git_blob_sha1": "f8b9c6ebd310b2b407df78220a7e9d8d35b080a0"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/tests/test_diagnostic_event_reducer.mjs",
+      "bytes": 1932,
+      "sha256": "633cccd64a3aedfd63a4e77caaa90f96a24e81791be2602cc25968608fc39c9a",
+      "git_blob_sha1": "0a536abee412e55354f3b8e1640c38905bfa0d2a"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/NEXUS_OPPO_DIAGNOSTIC_OFFLINE_CONNECTIVITY_MACHINE_CONTRACT_R0.json",
+      "bytes": 5423,
+      "sha256": "6743ca86946fb7d7c8cc5f1ba19f095b9f3c3e2e042d0176c5482caa5ea06803",
+      "git_blob_sha1": "c129c9a8170474c6301f5ade4bd04176857b8a21"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/NEXUS_OMEGA_AXIOM_CURSOR_OPPO_NEXUS_APP_SELF_DIAGNOSTIC_OFFLINE_FIRST_CONNECTIVITY_MAXI_ORDER_20261016_R0.md",
+      "bytes": 17809,
+      "sha256": "e47421d7250b406ddd251bb6f8a2b5265c62d78da11e908fadeb37e013a979af",
+      "git_blob_sha1": "92d4a6924c5a0e2debb38f5fa39992c4b69376b9"
+    },
+    {
+      "path": "research/oppo-a74/diagnostic-offline-connectivity-20261016/README.md",
+      "bytes": 1902,
+      "sha256": "1bcb0bfe4bc65ca1ec91d48d3661df75cff04e76a9c543ec0f02a57fb7b0cfa9",
+      "git_blob_sha1": "d7910e011f939ee3981b3243fda624054f448230"
+    },
+    {
+      "path": ".github/workflows/validate-research-pipeline.yml",
+      "bytes": 2601,
+      "sha256": "1a1108dcbb4978b403191487351d267b23454b43c912bd37c345ad406da3abfa",
+      "git_blob_sha1": "9a5ee686aa7b2da338d93107cc3609d805cf6246"
+    }
+  ],
+  "file_count": 6,
+  "manifest_self_hash": "EXCLUDED",
+  "synthetic_reducer_tests": "10_OF_10_AX_SOURCE_MOCK_VALIDATED_WITHOUT_ANDROID",
+  "native_android_build": "NOT_EXECUTED_NO_SOURCE",
+  "oppo_device_write": "NONE",
+  "private_hostinger_ingress": "NOT_YET_ESTABLISHED",
+  "full_stdout_stderr_access": "NOT_AVAILABLE",
+  "pixel_install": "HOLD_EVIDENCE"
+}

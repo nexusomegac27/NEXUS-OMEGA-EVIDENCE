@@ -1,0 +1,152 @@
+{
+  "object": "NEXUS_OMEGA_R9_OPPO_DIAGNOSTIC_OFFLINE_CONNECTIVITY_CONTRACT_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "state": "SOURCE_ONLY_APP_NOT_BUILT",
+  "predecessor": {
+    "oppo_read": "DEVICE_NOT_ACCESSIBLE",
+    "soak_exec_bytes": 5563,
+    "soak_exec_sha256": "f33a5772f7b30b73da797a88445ffc4b43e90a333fd67b454b6e35c21fb894f1",
+    "soak_exec_hash_class": "CURSOR_LOCAL_MATCH_REPORTED",
+    "shell_exit": "FAILED_REPORTED",
+    "shell_failure_cause": "NOT_ESTABLISHED",
+    "column_A": "ABSENT",
+    "column_B": "HISTORICAL_SOAK_20261015",
+    "device_hostinger_zip_eight": "NOT_ESTABLISHED"
+  },
+  "app_label": "NEXUS RESEARCH DIAGNOSTICS",
+  "not_system_debugging": true,
+  "user_intent": "APP_RUNS_OWN_DIAGNOSTICS_AND_SENDS_PRIVATE_EVIDENCE_WITHOUT_ADB_DEPENDENCY",
+  "android_limitation": "APP_CANNOT_ENABLE_SYSTEM_WIRELESS_DEBUGGING_ON_STOCK_ANDROID",
+  "adb_wifi2_requires": "ANDROID_17_PLUS_DEVICE_ADB_37_PLUS_WORKSTATION",
+  "app_source_in_accessible_NEXUS_repos": "NOT_FOUND",
+  "device_connection": "NOT_CONNECTED",
+  "architecture": {
+    "channels": [
+      "SENSOR",
+      "APP_FGS",
+      "WIFI",
+      "ADB",
+      "UPLOAD",
+      "SERVER",
+      "AUDIT"
+    ],
+    "source_classes": [
+      "DEVICE_OBSERVED",
+      "APP_OBSERVED",
+      "SERVER_OBSERVED",
+      "CURSOR_REPORTED",
+      "SYNTHETIC"
+    ],
+    "offline_spool": "APP_PRIVATE_IMMUTABLE_SEGMENTS_HASHED_AND_CHAINED",
+    "crash_safety": "ATOMIC_COMMIT_WAL_FLUSH_AND_RESTART_RECOVERY",
+    "quota_policy": "BOUNDED_BACKPRESSURE_REPORT_DROPS_NO_SILENT_OVERWRITE",
+    "upload": "EXISTING_UNIQUE_WORKMANAGER_NETWORK_CONSTRAINED_EXPONENTIAL_BACKOFF",
+    "endpoint": "AUTHORIZED_PRIVATE_HTTPS_ONLY_NOT_ASSUMED_PRESENT",
+    "server_ack": "ACCEPT_ONLY_AFTER_INDEPENDENT_PRIVATE_BYTES_SHA256_READBACK",
+    "idempotency": "SESSION_ID_SEGMENT_SEQ_SHA256",
+    "redaction": "NO_PII_NO_IMEI_NO_SSID_NO_TOKENS_NO_PRIVATE_PATH_NO_RAW_SENSOR_PUBLICATION",
+    "no_auto_ADB_repair": true,
+    "session_timebase": "SENSOR_MONOTONIC_NANOS_SEPARATE_WALLCLOCK_UTC_AND_SERVER_UTC"
+  },
+  "diagnostics": [
+    "SENSOR_SAMPLING_GAPS",
+    "APP_PROCESS_AND_FGS_STATUS",
+    "WIFI_NETWORK_CHANGE",
+    "ADB_DETECTED_ONLY_WITH_REAL_AUTHORIZED_HOST_OBSERVATION",
+    "UPLOAD_QUEUE_AGE_AND_SIZE",
+    "HTTP_4XX_5XX_AND_RETRY",
+    "PRIVATE_SERVER_READBACK_HASH",
+    "CAPTURE_VS_TRANSPORT_GAP_DIFFERENTIAL"
+  ],
+  "tests": [
+    "N01_INTERRUPTED_NETWORK",
+    "N02_ADB_LOSS_SENSOR_UNCHANGED",
+    "N03_APP_CRASH_RESTART",
+    "N04_DUPLICATE_UPLOAD",
+    "N05_MISMATCHED_ACK",
+    "N06_HTTP403_PERMANENT",
+    "N07_HTTP429_RETRY_AFTER",
+    "N08_OUT_OF_ORDER_EVENTS",
+    "N09_MONOTONIC_RESET",
+    "N10_LOW_STORAGE",
+    "N11_REDACTION",
+    "N12_PRIVATE_DATA_LEAK",
+    "N13_FGS_DENIED",
+    "N14_ANDROID_OEM_BATTERY_RESTRICTION",
+    "N15_PIXEL_INSTALL_WITHOUT_AUTH",
+    "N16_CORRUPT_LOG_BLOCK"
+  ],
+  "github_research": [
+    {
+      "repo": "open-telemetry/opentelemetry-android",
+      "commit": "b4b9c307a35bd721304360589e59941351b7165c",
+      "license": "Apache-2.0",
+      "use": "ANR_CRASH_NETWORK_OFFLINE_TELEMETRY_REFERENCE"
+    },
+    {
+      "repo": "onnela-lab/beiwe-android",
+      "commit": "5eb833ce413fc3b7c52e1e2790b01c8d584df028",
+      "license": "BSD-3-Clause",
+      "use": "REPRODUCIBLE_SENSOR_STUDIES"
+    },
+    {
+      "repo": "awareframework/aware-client",
+      "commit": "f77e873baaedfc649fd39ca8f3547f914c3e6b32",
+      "license": "Apache-2.0",
+      "use": "MOBILE_INSTRUMENTATION"
+    },
+    {
+      "repo": "RADAR-base/radar-prmt-android",
+      "commit": "4e17dc986f877576a79316eab97086293f3bab96",
+      "license": "Apache-2.0",
+      "use": "SCHEMATIZED_STREAMING"
+    },
+    {
+      "repo": "android/nowinandroid",
+      "commit": "a49ed253d75e61a2b6ab80a8da677b57437b08eb",
+      "license": "Apache-2.0",
+      "use": "OFFLINE_WORKMANAGER_REFERENCE"
+    }
+  ],
+  "research_urls": [
+    "https://developer.android.com/tools/adb",
+    "https://developer.android.com/topic/architecture/data-layer/offline-first",
+    "https://developer.android.com/develop/background-work/background-tasks/persistent",
+    "https://developer.android.com/develop/background-work/services/fgs/changes",
+    "https://www.frontiersin.org/journals/ict/articles/10.3389/fict.2015.00006/full",
+    "https://mhealth.jmir.org/2019/8/e11734/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10231441/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13013828/"
+  ],
+  "return_contract": {
+    "source_actor": "ACTUAL_CURSOR_AUTHORIZED_APP_SOURCE_READER",
+    "private_logs": "EXISTING_AUTHORIZED_PRIVATE_EVIDENCE_INGRESS_ONLY",
+    "public_receipt": "REDACTED_HASH_POINTER_ONLY",
+    "expected": [
+      "SHELL_COMMAND_EXIT_STDOUT_STDERR",
+      "APP_BUILD_APK_SIGNER",
+      "DEVICE_ANDROID_OEM_FGS_MATRIX",
+      "ADBD_WIFI_STATUS_FROM_HOST_IF_CONNECTED",
+      "PRIVATE_CHUNK_SHA_AND_ACK",
+      "NETWORK_GAP_LOG",
+      "SENSOR_GAP_LOG",
+      "ACTUAL_NEGATIVE_TEST_LOGS",
+      "ROLLBACK",
+      "PIXEL_CANDIDACY_GATE"
+    ],
+    "no_raw_public": true,
+    "axiom_independent_rehash": "PENDING_ORIGINAL_BYTE_ACCESS"
+  },
+  "walls": {
+    "R3": "SEALED",
+    "R9": "OPEN",
+    "R10": "CLOSED",
+    "R11": "OPEN",
+    "pixel_install": "NO",
+    "oppo_runtime_write": "NO_WITHOUT_SEPARATE_SCOPED_CANARY_APPROVAL",
+    "new_worker": "NO",
+    "hostinger_403_bypass": "NO",
+    "secret_echo": "NO",
+    "claim_promotion": "NO"
+  }
+}
