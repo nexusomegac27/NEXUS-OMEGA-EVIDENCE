@@ -15,7 +15,7 @@
     "predecessor_commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
     "predecessor_path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
     "predecessor_bytes": 22091,
-    "predecessor_sha256": "c581aeaf5d6adff5dfaf79458dab20b2236779114b2dd6e5ea6755f2db29c2ba"
+    "predecessor_sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba"
   },
   "delegation": {
     "scope": "One-shot low-impact read-only OPPO A74 metadata audit and evidence-based Pixel 9a installation readiness design; no install or capture change.",
@@ -101,7 +101,7 @@
         "commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
         "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
         "bytes": 22091,
-        "sha256": "c581aeaf5d6adff5dfaf79458dab20b2236779114b2dd6e5ea6755f2db29c2ba",
+        "sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba",
         "source_status": "GITHUB_PR_SOURCE_REFERENCED"
       }
     ],
