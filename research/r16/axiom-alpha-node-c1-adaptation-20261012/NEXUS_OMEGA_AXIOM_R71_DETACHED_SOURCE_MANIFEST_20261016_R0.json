@@ -1,0 +1,19 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R71_DETACHED_SOURCE_MANIFEST_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "report_initial_commit": "5c4335ae4fce895712fc11c8703828c8929206dc",
+  "report": {
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/NEXUS_OMEGA_AXIOM_R71_DETACHED_MANIFEST_LOCAL_PREFLIGHT_20261016_R0.md",
+    "bytes": 2835,
+    "sha256": "bd8604c7a47b642d09be3a1057b2a74b72ddec23cf67f0435231a57fa2b130b1",
+    "git_blob_sha1": "3f623d23c0ceccd4b63dee8201b9fa2a2f6e29e8"
+  },
+  "local_only": {
+    "tool_sha256": "553aad734333aa219244e2e47a5843f32004ea4117e54863ef48c0d714e8ef73",
+    "frozen_evaluator_sha256": "e1f462ced3ee898b2c6655c78a47c1ede5107dd4e131659827b823735103b4d6"
+  },
+  "manifest_self_hash": "EXCLUDED",
+  "main_merge": "NOT_ESTABLISHED",
+  "www_parity": "NOT_ESTABLISHED"
+}
