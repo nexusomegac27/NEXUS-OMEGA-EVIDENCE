@@ -123,6 +123,10 @@
         row.append(left,node("span","pr-state "+stateText.toLowerCase(),stateText));
         e.append(row);
       });
+      const latest=list.filter(item=>item && typeof item.updated_at==="string" && Number.isFinite(Date.parse(item.updated_at))).sort((a,b)=>Date.parse(b.updated_at)-Date.parse(a.updated_at))[0];
+      byId("pr-activity").textContent=latest
+        ? ("PR #"+latest.number+" · "+(latest.state==="open"?"OFFEN":"GESCHLOSSEN")+" · letzte GitHub-PR-Aktivität "+dateText(latest.updated_at)+" · nicht auf main gemergt, sofern kein MERGED-Status ausgewiesen")
+        : "Keine datierte PR-Aktivität beobachtet · main ist eine getrennte Quelle";
       if (!list.length) message("pr-feed","Keine Pull Requests vorhanden.");
     } catch(err) {message("pr-feed",err.message,"error");}
   }
@@ -215,5 +219,6 @@
   });
   byId("refresh").addEventListener("click",()=>{const key=state.active;chooseTab(key,true);if(key!=="commits")loadCommits(true);});
   loadCommits();
-  setInterval(()=>{if(!document.hidden){loadCommits();if(state.active==="prs")loadPRs();}},REFRESH_MS);
+  loadPRs();
+  setInterval(()=>{if(!document.hidden){loadCommits();loadPRs();}},REFRESH_MS);
 })();
