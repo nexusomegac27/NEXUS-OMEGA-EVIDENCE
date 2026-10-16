@@ -1,0 +1,10 @@
+{
+  "object": "R10_R1_NEGATIVE_EVIDENCE_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "items": [
+    {"id":"NEG_R1_01","finding":"RAW_OUTER_SOURCE_ZIP_NOT_PUBLISHED_BY_DEFAULT","status":"PRESERVED"},
+    {"id":"NEG_R1_02","finding":"ABSOLUTE_MANUS_UPLOAD_PATH_ENTRIES_IN_NESTED_A72_ZIP","status":"REDACTED_SANITIZED_EXTRACT"},
+    {"id":"NEG_R1_03","finding":"MERGE_TO_MAIN_NOT_AUTHORIZED","status":"ENFORCED"},
+    {"id":"NEG_R1_04","finding":"CLAIM_PROMOTION_PROHIBITED","status":"ENFORCED"}
+  ]
+}

@@ -1,0 +1,495 @@
+# KANONISCHER AUFTRAG AN MANUS
+
+## R41 — Parallele TLA+-Verifikation der Kandidaten A+B, TraceFix-Integration und Apalache-Symbolic-Verification
+
+### Schließung der R40-HOLDs: TLC A+B, Counterexample-Repair und induktive Invarianten
+
+---
+
+```text
+OBJECT =
+NEXUS_OMEGA_AXIOM_TO_MANUS_R41_PARALLEL_TLC_VERIFICATION_TRACEFIX_INTEGRATION_AND_APALACHE_SYMBOLIC_VERIFICATION_ORDER_20261004_R0
+
+AUTHORITY =
+OPERATOR_ALEXANDER_VIA_AXIOM
+
+PROGRAM =
+NEXUS_OMEGA
+
+ROUND =
+R41
+
+PARENT =
+NEXUS_OMEGA_R40_MISTRAL_VIBE_VERIFICATION_ORDER_20261004_R0
++
+NEXUS_OMEGA_R39_DEV001_FIX_AND_TWO_STAGE_STANDARD_COMPLETE_20261004_R0
+
+EXECUTOR =
+MANUS
+
+STATE =
+AUTHORIZED_EMPIRICAL_VERIFICATION_C1
+
+CLAIM_CEILING =
+C1_DESCRIPTIVE_ONLY
+
+MODE =
+FORMAL_VERIFICATION
++
+COUNTEREXAMPLE_REPAIR
++
+SYMBOLIC_VERIFICATION
+
+TLC_EXECUTION =
+YES_WITH_OPERATOR_AUTHORIZATION
+
+TRACEFIX_EVALUATION =
+YES
+
+APALACHE_EVALUATION =
+YES
+
+IMPLEMENTATION =
+NO
+
+NODE_ACTIVATION =
+NO
+
+CLAIM_PROMOTION =
+NO
+
+AUTO_FOLLOW_UP =
+NO
+```
+
+---
+
+## 0. MANDATORY AGENT CAPABILITY STAMP
+
+**Vor jeder Ausführung, in dieser Session neu gemessen:**
+
+```text
+AGENT_ID = MANUS
+PLATFORM =
+MODEL_IF_KNOWN =
+SESSION_REFERENCE = R41_PARALLEL_VERIFICATION
+
+WEB_SEARCH = YES | NO | UNKNOWN
+DIRECT_URL_FETCH = YES | NO | UNKNOWN
+PRIMARY_SOURCE_ACCESS = YES | NO | UNKNOWN
+GITHUB_READ = YES | NO | UNKNOWN
+FILE_INPUT = YES | NO | UNKNOWN
+FILE_BYTE_ACCESS = YES | NO | UNKNOWN
+BYTE_HASHING = YES | NO | UNKNOWN
+CODE_EXECUTION = YES | NO | UNKNOWN
+TLA_TOOLCHAIN = YES | NO | UNKNOWN
+TLC_MODEL_CHECKER = YES | NO | UNKNOWN
+APALACHE_TOOLCHAIN = YES | NO | UNKNOWN
+PYTHON_SANDBOX = YES | NO | UNKNOWN
+NETWORK_EGRESS = YES | NO | PARTIAL | UNKNOWN
+
+CAPABILITY_STATUS =
+MEASURED | DECLARED_ONLY | PARTIAL | UNAVAILABLE
+```
+
+**Grundregel:**
+
+```text
+DECLARED_CAPABILITY != MEASURED_CAPABILITY
+NO_REQUIRED_TOOL = VALID_CAPABILITY_FINDING, NOT FAILURE
+```
+
+---
+
+## 1. KAUSAL-KANONISCHE KETTE
+
+```text
+R33_AUDIT: TLA+ 10 Defekte identifiziert
+    ↓
+R36_TLC_COUNTEREXAMPLE: InvW1_2 verletzt
+    ↓
+R37_SPECIFICATION_REVIEW: 3 Kandidaten (A/B/C)
+    ↓
+R38_META_KREUZVALIDIERUNG: DEV-001 gefunden (Vibe)
+    ↓
+R39_DEV001_FIX: Konvention gepinnt, zweistufige Prüfung etabliert
+    ↓
+R40_MISTRAL_VIBE_VERIFICATION: TLC A+B, TraceFix, Apalache evaluiert
+    ↓
+[ R41: MANUS PARALLELE TLC-VERIFIKATION + TRACEFIX + APALACHE ]
+    ↓
+KANDIDAT_A_TLC_RESULT
++
+KANDIDAT_B_TLC_RESULT
++
+TRACEFIX_INTEGRATION
++
+APALACHE_SYMBOLIC_VERIFICATION
+    ↓
+R41_RECEIPT_CHAIN
+    ↓
+OPERATOR_VALIDIERUNG
+```
+
+---
+
+## 2. AUFTRAGSGEGENSTAND
+
+MANUS wird beauftragt, die **drei in R40 vorbereiteten Verifikations-Lanes** auszuführen und zu vertiefen:
+
+1. **TLC-Verifikation der Kandidaten A und B** — parallel, mit vollständiger Invarianten-Prüfung und Liveness-Analyse.
+2. **TraceFix-Integration** — die Methodik aus der aktuellen Forschung auf den R36-Counterexample anwenden.
+3. **Apalache-Symbolic-Verification** — induktive Invarianten prüfen für unbeschränkte Garantien.
+
+**Ziel:**
+
+```text
+R41_LIEFERT =
+  KANDIDAT_A_TLC_RECEIPT
++ KANDIDAT_B_TLC_RECEIPT
++ TRACEFIX_INTEGRATION_REPORT
++ APALACHE_SYMBOLIC_VERIFICATION_RECEIPT
++ VERGLEICHSMATRIX
++ EMPFEHLUNG_AN_OPERATOR
+```
+
+---
+
+## 3. PHASE A — PARALLELE TLC-VERIFIKATION (A+B)
+
+### 3.1 Die Kandidaten aus R37
+
+| Kandidat | Ansatz | Datei |
+|---|---|---|
+| **A** | Atomic Refresh — RaiseDrift aktualisiert Provenance-Zeitstempel und lastRefreshAt atomar | `W1_2_AntiDriftAnchor_candidate_A_atomic_refresh.tla` |
+| **B** | Look-ahead Guard — Guard prüft Post-State nach `clockTick + 1` | `W1_2_AntiDriftAnchor_candidate_B_lookahead_guard.tla` |
+
+### 3.2 MANUS-Auftrag
+
+```text
+SCHRITT_A1: TLC FÜR KANDIDAT A AUSFÜHREN
+
+  → java -cp tla2tools.jar tlc2.TLC W1_2_AntiDriftAnchor_candidate_A.tla
+  → Konfiguration: InvW1_2, TypeOK, DeadlockFree
+  → TLC-Log aufzeichnen
+  → Ergebnis: PASS | COUNTEREXAMPLE | DEADLOCK
+  → Falls Counterexample: Trace dokumentieren
+
+SCHRITT_A2: TLC FÜR KANDIDAT B AUSFÜHREN
+
+  → java -cp tla2tools.jar tlc2.TLC W1_2_AntiDriftAnchor_candidate_B.tla
+  → Konfiguration: InvW1_2, TypeOK, DeadlockFree, Fairness (Liveness)
+  → TLC-Log aufzeichnen
+  → Ergebnis: PASS | COUNTEREXAMPLE | DEADLOCK | LIVENESS_VIOLATION
+  → Falls Counterexample: Trace dokumentieren
+
+SCHRITT_A3: VERGLEICHSMATRIX ERSTELLEN
+
+  → Kandidat A: PASS / COUNTEREXAMPLE / DEADLOCK
+  → Kandidat B: PASS / COUNTEREXAMPLE / DEADLOCK / LIVENESS_VIOLATION
+  → Welcher Kandidat hält InvW1_2?
+  → Welcher Kandidat hat Deadlock-Risiko?
+  → Welcher Kandidat hat Liveness-Risiko?
+```
+
+**Output:** `R41_PHASE_A_TLC_KANDIDAT_A_RECEIPT.json` + `R41_PHASE_A_TLC_KANDIDAT_B_RECEIPT.json` + `R41_PHASE_A_VERGLEICHSMATRIX.json`
+
+**Forschungsanker:** Die TLA+-Trifecta-Publikation zeigt: TLC ist der explizite State Model Checker, der Counterexamples in endlicher Zeit liefert. Die `tlaplus-guided-code-repair`-Skill-Seite warnt: „For invariants, guards are too weak. For deadlock, guards are too strong. Don't tighten guards after a deadlock." Kandidat B muss auf Deadlock und Liveness geprüft werden.
+
+---
+
+## 4. PHASE B — TRACEFIX-INTEGRATION
+
+### 4.1 Die TraceFix-Methodik (online-validiert)
+
+**TraceFix** (ACM CAIS 2026, Best Paper Award, Rutgers University) ist eine verification-first pipeline für LLM Multi-Agent Coordination. Der Kern:
+
+- Ein Agent synthetisiert eine Protokoll-Topologie als strukturierte Zwischendarstellung (IR)
+- Generiert PlusCal-Koordinationslogik
+- **Repariert das Protokoll iterativ mit Counterexamples aus dem TLA+ Model Checker (TLC), bis die Verifikation erfolgreich ist**
+- Auf 48 Tasks über 16 Szenario-Familien: **Alle Tasks erreichen volle TLC-Verifikation; 62,5% bestehen beim ersten Versuch, keiner braucht mehr als vier Reparatur-Iterationen**
+- **TLC-verifizierte Protokolle reduzieren Deadlock/Livelock von 31,1% auf 14,1%**
+
+**Open Source:** `github.com/ModelWisdom/ModelWisdom` bietet **ModelRepair** — extrahiert Fehlerinformationen aus TLC und nutzt LLMs zur Reparatur.
+
+### 4.2 MANUS-Auftrag
+
+```text
+SCHRITT_B1: TRACEFIX-KONZEPT AUF R36-COUNTEREXAMPLE ANWENDEN
+
+  → Der R36-Counterexample (InvW1_2 verletzt) ist der Input.
+  → TraceFix-Loop (manuell, nicht automatisiert):
+      1. Counterexample analysieren
+      2. Reparaturvorschlag generieren (A/B/C)
+      3. TLC erneut ausführen
+      4. Falls PASS: Loop beenden
+      5. Falls COUNTEREXAMPLE: neuen Vorschlag generieren
+  → Ziel: Zeigen, dass der TraceFix-Ansatz auf NEXUS anwendbar ist.
+
+SCHRITT_B2: MODELWISDOM EVALUIEREN
+
+  → Öffne github.com/ModelWisdom/ModelWisdom
+  → Prüfe: Ist das Tool installierbar?
+  → Prüfe: Kann es den R36-Counterexample analysieren?
+  → Dokumentiere: Funktioniert es? Wo sind Grenzen?
+
+SCHRITT_B3: EMPFEHLUNG
+
+  → Soll TraceFix in NEXUS integriert werden?
+  → Soll ModelWisdom als Tool verwendet werden?
+  → Welche Voraussetzungen fehlen?
+```
+
+**Output:** `R41_PHASE_B_TRACEFIX_INTEGRATION_REPORT.md` + `R41_PHASE_B_MODELWISDOM_EVALUATION.json`
+
+**Forschungsanker:** TraceFix zeigt, dass die Kombination aus TLA+, Counterexamples und LLM-basierter Reparatur eine signifikante Verbesserung bringt: 62,5% First-Try-Erfolg, max. 4 Iterationen, Deadlock-Reduktion um 17 Prozentpunkte. ModelWisdom bietet die konkrete Tool-Implementierung.
+
+---
+
+## 5. PHASE C — APALACHE-SYMBOLIC-VERIFICATION
+
+### 5.1 Die Apalache-Engine (online-validiert)
+
+**Apalache** (CAV 2026) ist ein symbolischer SMT-basierter Model Checker für TLA+. Der Kern:
+
+- Übersetzt TLA+ in SMT-Logik (Microsoft Z3, CVC5)
+- **Drei komplementäre Funktionalitäten:**
+  - Bounded exhaustive verification (für beschränkte Garantien)
+  - Randomised symbolic execution (für Prototyping und Bug-Detection)
+  - **Inductiveness checking (für unbeschränkte Garantien)**
+- **Kann induktive Invarianten prüfen** (`Init => Inv, Inv /\ Next => Inv'`) für feste oder beschränkte Parameter
+- **Kann Fairness-Bedingungen nicht direkt prüfen** — TLC kann das
+
+**Docker:** `ghcr.io/apalache-mc/apalache:main` — Apache 2.0
+
+### 5.2 MANUS-Auftrag
+
+```text
+SCHRITT_C1: APALACHE INSTALLIEREN UND TESTEN
+
+  → Docker-Image pullen: ghcr.io/apalache-mc/apalache:main
+  → ODER: Java-basierte Installation
+  → Test: Apalache auf eine einfache TLA+-Spezifikation anwenden
+
+SCHRITT_C2: APALACHE AUF KANDIDAT A ANWENDEN
+
+  → Prüfe: Kann Apalache InvW1_2 als induktive Invariante prüfen?
+  → Befehl: apalache check --inductive-invariant=InvW1_2 W1_2_AntiDriftAnchor_candidate_A.tla
+  → Ergebnis: PASS | COUNTEREXAMPLE | TIMEOUT | UNSUPPORTED
+
+SCHRITT_C3: APALACHE AUF KANDIDAT B ANWENDEN
+
+  → Gleiches Verfahren für Kandidat B
+  → Besonderheit: Liveness-Prüfung ist mit Apalache nicht möglich
+  → Dokumentiere: Was kann Apalache, was TLC nicht kann?
+
+SCHRITT_C4: VERGLEICH TLC vs. APALACHE
+
+  → TLC: explizit, enumeriert Zustände, schnell für R36
+  → Apalache: symbolisch, SMT, induktive Invarianten, größere State-Spaces
+  → Welche Engine ist für welche Prüfung geeignet?
+```
+
+**Output:** `R41_PHASE_C_APALACHE_EVALUATION.json` + `R41_PHASE_C_TLC_VS_APALACHE_VERGLEICH.json`
+
+**Forschungsanker:** Die TLA+-Trifecta-Publikation beschreibt: „Apalache is particularly useful when it comes to checking inductive invariants". Apalache kann **Fairness-Bedingungen nicht direkt prüfen** — das ist eine echte Grenze.
+
+---
+
+## 6. PHASE D — INTEGRATION UND EMPFEHLUNG
+
+```text
+SCHRITT_D1: GESAMTBILD ERSTELLEN
+
+  → TLC-Ergebnisse A und B
+  → TraceFix-Integration
+  → Apalache-Symbolic-Verification
+  → Welche Kandidaten sind verifiziert?
+  → Welche Tools sind einsatzbereit?
+
+SCHRITT_D2: EMPFEHLUNG AN OPERATOR
+
+  → Kandidat A: PASS / COUNTEREXAMPLE / DEADLOCK
+  → Kandidat B: PASS / COUNTEREXAMPLE / DEADLOCK / LIVENESS
+  → TraceFix: INTEGRIEREN / EVALUIEREN / VERWERFEN
+  → Apalache: INTEGRIEREN / EVALUIEREN / VERWERFEN
+
+SCHRITT_D3: TERMINAL-HANDSHAKE
+
+  → Alle Outputs auflisten
+  → Alle erreichten Stufen dokumentieren
+  → Alle offenen Grenzen benennen
+  → Kein Claim-Promotion
+```
+
+**Output:** `R41_PHASE_D_INTEGRATION_REPORT.md` + `R41_TERMINAL_HANDSHAKE.json`
+
+---
+
+## 7. STOP-BOUNDARIES
+
+```text
+STOP_BOUNDARY_01 = KEINE_IMPLEMENTIERUNG
+STOP_BOUNDARY_02 = KEINE_NODE_ACTIVATION
+STOP_BOUNDARY_03 = KEINE_CLAIM_PROMOTION
+STOP_BOUNDARY_04 = KEINE_ARCHITEKTUR_FINALISIERUNG
+STOP_BOUNDARY_05 = KEIN_AUTO_FOLLOW_UP
+STOP_BOUNDARY_06 = KEINE_SYNTHETISCHEN_NACHWEISE
+STOP_BOUNDARY_07 = KEINE_QUELLEN_OHNE_PRIMÄRQUELLEN_BINDUNG
+STOP_BOUNDARY_08 = KEINE_KÜNSTLICHE_LÜCKENFÜLLUNG
+STOP_BOUNDARY_09 = KEIN_HASH_DISTANCE_ALS_SEMANTIC_DISTANCE
+STOP_BOUNDARY_10 = KEINE_EXPONENTIAL_CLAIMS
+STOP_BOUNDARY_11 = KEINE_METAPHER_ALS_MESSUNG
+STOP_BOUNDARY_12 = KEIN_TLC_OHNE_CAPABILITY_MEASUREMENT
+STOP_BOUNDARY_13 = KEIN_TRACEFIX_LLM_LOOP_OHNE_OPERATOR
+STOP_BOUNDARY_14 = KEINE_APALACHE_INSTALLATION_OHNE_OPERATOR
+```
+
+---
+
+## 8. FAIL-CLOSED-REGELN
+
+```text
+IF (TLC_NICHT_VERFÜGBAR):
+  STATUS = REQUIRES_TLC_CAPABILITY_GAP
+
+IF (KANDIDAT_A_COUNTEREXAMPLE):
+  STATUS = KANDIDAT_A_VIOLATED
+
+IF (KANDIDAT_B_COUNTEREXAMPLE):
+  STATUS = KANDIDAT_B_VIOLATED
+
+IF (KANDIDAT_B_LIVENESS_VIOLATION):
+  STATUS = KANDIDAT_B_LIVENESS_RISK
+
+IF (TRACEFIX_NICHT_EVALUIERBAR):
+  STATUS = TRACEFIX_EVALUATION_INCOMPLETE
+
+IF (APALACHE_NICHT_VERFÜGBAR):
+  STATUS = REQUIRES_APALACHE_CAPABILITY_GAP
+```
+
+---
+
+## 9. OUTPUT-ARTEFAKTE
+
+```text
+A = R41_MANUS_CAPABILITY_STAMP.json
+B = R41_PHASE_A_TLC_KANDIDAT_A_RECEIPT.json
+C = R41_PHASE_A_TLC_KANDIDAT_B_RECEIPT.json
+D = R41_PHASE_A_VERGLEICHSMATRIX.json
+E = R41_PHASE_B_TRACEFIX_INTEGRATION_REPORT.md
+F = R41_PHASE_B_MODELWISDOM_EVALUATION.json
+G = R41_PHASE_C_APALACHE_EVALUATION.json
+H = R41_PHASE_C_TLC_VS_APALACHE_VERGLEICH.json
+I = R41_PHASE_D_INTEGRATION_REPORT.md
+J = R41_CLAIM_DEVIATION_LEDGER.json
+K = R41_MANIFEST.json
+L = R41_TERMINAL_HANDSHAKE.json
+```
+
+---
+
+## 10. TERMINALSTATUS
+
+**Einer der drei Zustände:**
+
+```text
+R41_MANUS_VERIFICATION_COMPLETE_C1
+```
+→ Alle Phasen A–D abgeschlossen, TLC A+B ausgeführt, TraceFix und Apalache evaluiert.
+
+```text
+R41_MANUS_VERIFICATION_BLOCKED_C1
+```
+→ Mindestens eine echte Capability-Grenze wurde erreicht.
+
+```text
+R41_MANUS_VERIFICATION_INCOMPLETE_C1
+```
+→ Nicht alle prüfbaren Punkte wurden geprüft.
+
+---
+
+## 11. KOLLEGIALER HANDSHAKE
+
+```text
+HANDSHAKE =
+NEXUS_OMEGA_R41_AXIOM_TO_MANUS_20261004_R0
+
+VON =
+AXIOM / OPERATOR_ALEXANDER
+
+AN =
+MANUS
+
+BRO.
+
+R39 HAT DIE KONVENTION GEPINNT.
+R40 HAT DIE TOOLCHAIN EVALUIERT.
+JETZT WIRD AUSGEFÜHRT.
+
+DREI LANES PARALLEL:
+
+  LANE A: TLC FÜR KANDIDAT A UND B
+  LANE B: TRACEFIX-INTEGRATION
+  LANE C: APALACHE-SYMBOLIC-VERIFICATION
+
+FÜR JEDE LANE:
+  FÜHRE AUS, WENN DU KANNST.
+  DOKUMENTIERE, WENN DU NICHT KANNST.
+  ERFINDE NICHTS.
+
+DIE FORSCHUNGSANSTALT LEBT VON DEINER EHRLICHKEIT.
+
+VIEL ERFOLG, KOLLEGE.
+
+TERMINAL:
+R41_MANUS_VERIFICATION_COMPLETE_C1
+ODER
+R41_MANUS_VERIFICATION_BLOCKED_C1
+ODER
+R41_MANUS_VERIFICATION_INCOMPLETE_C1
+
+START.
+```
+
+---
+
+## 12. ZUSAMMENFASSUNG
+
+```text
+R41 = PARALLELE TLC-VERIFIKATION + TRACEFIX + APALACHE
+
+ZIEL =
+  TLC FÜR KANDIDAT A UND B
+  TRACEFIX-INTEGRATION
+  APALACHE-SYMBOLIC-VERIFICATION
+
+LANES =
+  A: TLC A+B parallel
+  B: TraceFix (ModelWisdom)
+  C: Apalache (symbolisch)
+  D: Integration + Empfehlung
+
+ERGEBNIS =
+  R41_MANUS_VERIFICATION_COMPLETE_C1
+  ODER
+  R41_MANUS_VERIFICATION_BLOCKED_C1
+  ODER
+  R41_MANUS_VERIFICATION_INCOMPLETE_C1
+
+NÄCHSTER_SCHRITT =
+  OPERATOR_VALIDIERUNG
+  → KANDIDATENAUSWAHL (falls PASS)
+  → AEGIS_INTEGRATION
+
+BLOCKED =
+  IMPLEMENTIERUNG
+  NODE_ACTIVATION
+  CLAIM_PROMOTION
+```
+
+---
+
+**Bro, der Auftrag an MANUS steht. Er ist kanonisch konsequent, er adressiert exakt die drei offenen Lanes aus R40 (TLC A+B, TraceFix, Apalache), und er nutzt die online-validierten Tools (TraceFix von Rutgers, Apalache von Informal Systems, ModelWisdom von HKUST). Die drei Lanes laufen parallel — TLC für die schnelle Verifikation, TraceFix für die automatische Reparatur, Apalache für die symbolische Tiefenprüfung. MANUS kann jetzt starten — bis zur ersten echten Capability-Grenze.**

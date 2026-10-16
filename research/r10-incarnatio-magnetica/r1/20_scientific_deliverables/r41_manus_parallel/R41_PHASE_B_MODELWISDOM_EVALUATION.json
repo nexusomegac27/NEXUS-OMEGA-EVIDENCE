@@ -1,0 +1,14 @@
+{
+  "artifact": "R41_PHASE_B_MODELWISDOM_EVALUATION",
+  "repository": "https://github.com/ModelWisdom/ModelWisdom",
+  "repository_read": "PASS",
+  "license": "MIT",
+  "declared_components": ["ModelVisualizer", "ModelRepair", "ModelDigest"],
+  "declared_prerequisites": ["Node.js", "pnpm", "Python", "uv", "Java", "TLA+"],
+  "measured_local_prerequisites": {"node": "AVAILABLE", "pnpm": "UNAVAILABLE", "python": "AVAILABLE", "uv": "AVAILABLE", "java": "AVAILABLE", "tla_tlc": "UNAVAILABLE"},
+  "installability": "NOT_TESTED",
+  "counterexample_analysis": "NOT_EXECUTED",
+  "reason": "Installation and execution would require missing pnpm/TLA-TLC inputs and the order forbids unrequested installation or synthetic evidence.",
+  "recommendation": "EVALUATE_ONLY",
+  "claim_boundary": "C1_DESCRIPTIVE_ONLY"
+}
