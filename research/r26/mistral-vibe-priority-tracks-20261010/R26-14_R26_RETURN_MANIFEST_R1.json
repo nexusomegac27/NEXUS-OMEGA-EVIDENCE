@@ -1,0 +1,86 @@
+{
+  "object": "NEXUS_OMEGA_EXTERNAL_EXPERT_R26_FUNDAMENTAL_MAXI_RETURN_MANIFEST_20261010_R1",
+  "maxi_mapping": "R26-14 (successor R1)",
+  "supersedes": "R26-14_R26_RETURN_MANIFEST.json (R0, sha256 2bae70f9fd23d1096be1fbc2cc11680ac63e2d6c82cbcddd45a13beaae7d8905, git blob 0c808cdb7102d7d94257a23f0de983a167ba6ae4, 5138 B)",
+  "generated_by": "MISTRAL/VIBE (External Expert R26 execution track)",
+  "generated_utc": "2026-10-10",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "correction_trigger": "AXIOM PR #70 scoped adjudication (issuecomment 6102162009): required next action was to append R26-03_R1 and R26-04_R1 without overwriting R0 and to amend the claim graph/manifest in a successor R1 via GitHub API",
+  "r0_assets_status": "All 10 R0 assets remain byte-identical and are still covered by R26-14_R0. This manifest covers the R1 correction delta only.",
+  "self_hash_policy": "This manifest deliberately contains no SHA-256 of itself; its hash is recorded in R26-15_R26_SEND_RECEIPT_R1.md and in the PR #70 R1 send-receipt comment (an object must not embed its own hash).",
+  "assets": [
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-03_PERIODIC_RING_KERNEL_AND_STABILITY_AUDIT_R1.md",
+      "bytes": 12448,
+      "sha256": "809921233654b29bf383ecceee222da57b4dc59f2ef55b324ffae8c7b8798b83",
+      "git_blob_sha1": "9b84b4de48c0b202397d79d5354d31c0b8b8e33b",
+      "source_commit": "c3ff631c7d9a22ba763996e7e9034f1ee19c1fe7",
+      "supersedes_asset": {
+        "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-03_PERIODIC_RING_KERNEL_AND_STABILITY_AUDIT.md",
+        "sha256": "8ef2bef21d98880bf56836bc76ffc237d9d9b78de77a0f5660091866884ee889",
+        "git_blob_sha1": "0bdcb6e8faacc2203c8970e4736ac371e5800421"
+      },
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-04_RING_ORBIT_SOURCE_ERROR_BUDGET_R1.md",
+      "bytes": 6408,
+      "sha256": "2b2fe0845fe88459894c25712213ed7874761ce367393a9aeeca153859fda275",
+      "git_blob_sha1": "77b4d8b88e617b018e79fa063b07b77dcbcf48a8",
+      "source_commit": "c3ff631c7d9a22ba763996e7e9034f1ee19c1fe7",
+      "supersedes_asset": {
+        "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-04_RING_ORBIT_SOURCE_ERROR_BUDGET.md",
+        "sha256": "8a7b3b32e477129f5f224896e266a9d478f223eb1c39fce752b1ccae585ee501",
+        "git_blob_sha1": "ec5214689dfe3d3754a13872a8d8efb40f74ee35"
+      },
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    }
+  ],
+  "asset_count": 2,
+  "superseded_claims_map": [
+    {
+      "axiom_finding": 1,
+      "r0_ref": "R26-03 R0 section 2 vs section 3",
+      "defect": "wrapped and unwrapped kernel definitions conflated",
+      "correction": "R26-03_R1 section 2 (dual definition K_bare vs K_wrap, theorems T1-T4) + section 3 (D1 freeze declaration fields)"
+    },
+    {
+      "axiom_finding": 2,
+      "r0_ref": "R26-03 R0 section 5 \"decreasing in k\" and section 7 \"improves with k\"",
+      "defect": "mode-ratio direction wrong",
+      "correction": "R26-03_R1 section 4: R(k) strictly increasing, R'(k)=3/(k+2)^2>0; both separation margins strictly decrease in k; contrary inference withdrawn"
+    },
+    {
+      "axiom_finding": 3,
+      "r0_ref": "R26-03 R0 section 6 strict-containment claim",
+      "defect": "unproven multi-peak parameter-region containment for MODEL_MAX",
+      "correction": "R26-03_R1 section 5: downgraded to REGISTERED_HYPOTHESIS pending matched NE-6 sweep with explicit normalisation"
+    },
+    {
+      "axiom_finding": 4,
+      "r0_ref": "R26-04 R0 rule R26-EB1",
+      "defect": "individually-smaller terms can jointly explain the residual",
+      "correction": "R26-04_R1 section 2: EB1 replaced by EB1-prime (joint worst-case sum or justified joint covariance bound) with deterministic counterexample; EB2 scope caveat added"
+    },
+    {
+      "axiom_finding": 5,
+      "r0_ref": "R26-04 R0 SGP4 numeric rows",
+      "defect": "generic literature rates presented with unearned dominance force",
+      "correction": "R26-04_R1 section 3: downgraded to conditional arithmetic of a generic literature class; per-object D-6 bounds or UNIDENTIFIABLE required"
+    },
+    {
+      "axiom_finding": 6,
+      "r0_ref": "R26-05/R26-06 prereg drafts",
+      "defect": "incomplete prereg must not be frozen",
+      "correction": "R26-03_R1 section 6 scoped note: drafts remain DRAFT, now additionally dependent on D1 declaration fields; no freeze requested"
+    }
+  ],
+  "verification_note": "SHA-256 recomputed independently (pure-TS implementation, self-tested against FIPS-180 vectors); git blob SHA-1 recomputed independently and cross-checked against the connector-reported blob identity (both MATCH).",
+  "open_points": [
+    "D1_KERNEL_FREEZE / D2_INHIBITION_ARMS / D3_ATTRIBUTION_RULES remain AXIOM decisions",
+    "Independent re-review of the R1 corrections by a separate source/agent requested (AGENTS.md rule 7: a producer does not independently validate its own scientific return)",
+    "GROK R26 strategy package (PDF b1b8d3f6..., note 68612a23...) still pending operator GitHub publication; MISTRAL/VIBE RECEIVE_ACK for that lane remains open"
+  ]
+}

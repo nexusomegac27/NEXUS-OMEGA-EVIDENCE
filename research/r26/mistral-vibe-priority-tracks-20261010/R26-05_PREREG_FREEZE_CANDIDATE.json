@@ -1,0 +1,207 @@
+{
+  "object": "NEXUS_OMEGA_R26_MISTRAL_VIBE_PREREG_FREEZE_CANDIDATE_20261010_R0",
+  "maxi_mapping": "R26-05",
+  "field_status": "DESIGN_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "execution_authorized": false,
+  "freeze_authority": "AXIOM_ONLY",
+  "supersedes": "nothing — candidate fill of the R2 draft unresolved fields (parent draft remains NEXUS_OMEGA_R25_NF05_NF06_PREREGISTRATION_DRAFT_20261010_R2, sha256 348589de1d3c242f95319f290702b4f786d6b719332debd814a599b131ff5be8)",
+  "model": {
+    "kernel": {
+      "value": "K_B: W_ij = w0 + w_exc * cos((theta_i - theta_j)/2)^(2k) = w0 + w_exc * ((1+cos(d_circ))/2)^k",
+      "tag": "PROPOSED",
+      "rationale": "R26-03 §5: minimal S1-valid repair of the NA-1 kernel; smooth class only",
+      "unresolved": [
+        "k in {2,4,8} to be selected per NE-6 gain sweep before freeze"
+      ]
+    },
+    "distance_function": {
+      "value": "d_circ = wrap(theta_i - theta_j) in (-pi, pi] via atan2(sin x, cos x); seam fixture mandatory",
+      "tag": "PROPOSED"
+    },
+    "kernel_baseline_arm": {
+      "value": "K_A von Mises e^(kappa*(cos d - 1)), kappa > 0, as D-4 comparison baseline (identical to chord-Gaussian)",
+      "tag": "PROPOSED"
+    },
+    "inhibition_arms": {
+      "value": "BOTH frozen as separate arms: MODEL_MAX (g_inhib * max_j r_j, NA-1 source-exact) and MODEL_SUM (g_inhib * sum_k r_k, R25-03 source-exact); equivalence NOT claimed; NF-05 outcomes variant-specific",
+      "tag": "PROPOSED",
+      "rationale": "R26-03 §6"
+    },
+    "w0": {
+      "value": null,
+      "tag": "UNRESOLVED",
+      "note": "declare per arm after NE-6 sweep; w0 < 0 admissible as subtractive baseline (lateral-inhibition profile)"
+    },
+    "w_exc": {
+      "value": null,
+      "tag": "UNRESOLVED",
+      "note": "per arm; scale with kernel mass 2*sqrt(pi/k)"
+    },
+    "g_inhib": {
+      "value": null,
+      "tag": "UNRESOLVED",
+      "note": "per arm; NE-6 map mandatory"
+    },
+    "p": {
+      "value": "replaced by k = p/2; bare non-admissible p REJECTED",
+      "tag": "PROPOSED"
+    },
+    "n_units": {
+      "value": [
+        32,
+        64
+      ],
+      "tag": "SOURCE_EXACT"
+    },
+    "timestep_dt": {
+      "value": "fixed dt = 0.05 s suggested; must give >= 600 steps for T_out = 30 s cell",
+      "tag": "PROPOSED"
+    },
+    "activation": {
+      "value": "tanh cap primary arm (differentiability); max(0, h) secondary arm; both documented",
+      "tag": "PROPOSED"
+    },
+    "noise": {
+      "value": "independent Gaussian xi_i ~ N(0, sigma^2), sigma declared per arm; external witness uncertainty declared separately",
+      "tag": "PROPOSED"
+    },
+    "seeds": {
+      "value": "counter-based (splitmix64 on cell id + run index); deterministic replay mandatory",
+      "tag": "PROPOSED"
+    },
+    "convergence": {
+      "value": "bump convergence: max |r(t+1) - r(t)| < 1e-9 over 100 consecutive steps AND exactly one peak present",
+      "tag": "PROPOSED"
+    }
+  },
+  "nf05": {
+    "injection": {
+      "n_peaks": {
+        "value": 2,
+        "tag": "SOURCE_EXACT"
+      },
+      "type": {
+        "value": "addition",
+        "tag": "PROPOSED"
+      },
+      "placement": {
+        "value": "symmetric around theta_inject at separation pi",
+        "tag": "PROPOSED"
+      },
+      "amplitude_ratio": {
+        "value": "1.0 / 0.8",
+        "tag": "PROPOSED"
+      },
+      "width": {
+        "value": "kernel-matched: cos^(2k) profile over +-2*sigma_k",
+        "tag": "PROPOSED"
+      }
+    },
+    "relaxation_time": {
+      "value": "fixed 1000 update steps after injection, plus snapshot grid {100, 300, 1000}",
+      "tag": "PROPOSED",
+      "note": "NA-1 gives no numeric relaxation time; this proposal makes it deterministic"
+    },
+    "peak_counting_rule": {
+      "local_maxima": "r_i > r_(i-1) AND r_i > r_(i+1), circular",
+      "prominence": {
+        "value": "peak prominence >= 0.10 * global max, measured relative to the higher adjacent valley",
+        "tag": "PROPOSED"
+      },
+      "min_separation_bins": {
+        "value": "2 (N=32) / 3 (N=64)",
+        "tag": "PROPOSED"
+      },
+      "plateau_tie": {
+        "value": "plateau of length <= min_separation counts as ONE peak (centroid); longer plateaus reject as ambiguous",
+        "tag": "PROPOSED"
+      },
+      "null_activity_guard": {
+        "value": "if total activity < 1e-6 * N or no local maximum passes prominence: classify ZERO_VALID_BUMP, which is a FAILURE, not a collapse",
+        "tag": "PROPOSED"
+      },
+      "pva_guard": {
+        "value": "PVA undefined-vector guard: |sum r e^(i theta)| < 1e-9 -> UNDEFINED_READOUT failure",
+        "tag": "PROPOSED"
+      }
+    },
+    "arms": "MODEL_MAX and MODEL_SUM both; outcome reported per arm",
+    "fail_closed": {
+      "MULTI_PEAK": "source-exact NE-1",
+      "ZERO_VALID_BUMP": "misclassification reject (proposed extension)",
+      "AMBIGUOUS_PLATEAU": "reject (proposed extension)"
+    }
+  },
+  "nf06": {
+    "d0_definition": {
+      "value": "d_circ(theta_hat(t0+dt), theta_hat(t0)), I_ext = 0, after full convergence",
+      "tag": "SOURCE_EXACT"
+    },
+    "t_out_grid_seconds": {
+      "value": [
+        30,
+        120,
+        300,
+        3600
+      ],
+      "tag": "SOURCE_EXACT"
+    },
+    "seeds_per_cell": {
+      "value": ">= 100 (source minimum); PROPOSED >= 1000 for p99 estimation",
+      "tag": "PROPOSED"
+    },
+    "d3_120s": {
+      "mean": {
+        "value": "<= 1 bin (2*pi/N)",
+        "tag": "SOURCE_EXACT"
+      },
+      "p99": {
+        "value": "<= 3 bins",
+        "tag": "SOURCE_EXACT"
+      },
+      "note": "calibration proposal, not biological fact (source-exact text)"
+    },
+    "non_120s_bounds": {
+      "value": "NO source-exact bound. NEW_PROPOSAL hypothesis to be TESTED (not assumed): sqrt(t/120 s) scaling of the 120-s bound; report as UNTHRESHOLDED_OBSERVATION until separately adjudicated",
+      "tag": "NEW_PROPOSAL"
+    },
+    "bound_traj": {
+      "value": "per-trajectory bound = 3 bins (aligned with p99), equal-bound => STALE (closed comparison: >= bound triggers)",
+      "tag": "PROPOSED"
+    },
+    "quantile_estimator": {
+      "value": "order statistics with binomial CI (Clopper-Pearson) on exceedance counts; p99 from 100 seeds reported with CI and flagged wide",
+      "tag": "PROPOSED"
+    },
+    "detector_vs_measurement": {
+      "value": "NE-8 detector-logic runs strictly separate from D-0/D-3 measurement runs; MUST_NOT_MIX (source-exact)",
+      "tag": "SOURCE_EXACT"
+    },
+    "multiple_comparisons": {
+      "value": "per-cell decisions independent; no aggregate reject rule across T_out (source-exact R2 rule preserved)",
+      "tag": "SOURCE_EXACT"
+    }
+  },
+  "d6": {
+    "status": "SEPARATE_MANDATORY_STUDY",
+    "attribution_rules": "R26-EB1..EB4 of R26-04 (proposed for freeze)",
+    "unidentifiable_path": "UNIDENTIFIABLE_WITH_CURRENT_DATA"
+  },
+  "self_declaration": {
+    "prereg_status": "DRAFT",
+    "nf05_status": "PREREGISTRATION_DRAFT_NOT_EXECUTED",
+    "nf06_status": "PREREGISTRATION_DRAFT_NOT_EXECUTED",
+    "execution": "NOT_STARTED",
+    "no_runs_logs_outputs_claimed": true,
+    "no_post_hoc_threshold_changes": true,
+    "changes_only_as_new_version_with_supersedes": true,
+    "no_execution_without_explicit_axiom_freeze": true
+  },
+  "provenance_append_only": [
+    "Herkunft: Alexander B :: Kernsatz Symbiose :: 2026-10-10",
+    "Herkunft: GROK :: R26 Strategy Frame Priorisierung (Priority 1-3) :: 2026-10-10",
+    "Herkunft: Perplexity Computer :: NF-05/NF-06 Vorregistrierungs-Entwurf R2 :: 2026-10-10",
+    "Herkunft: MISTRAL/VIBE :: R26 Priority-Tracks Return — Freeze-Kandidat-Feldfüllung :: 2026-10-10"
+  ]
+}
