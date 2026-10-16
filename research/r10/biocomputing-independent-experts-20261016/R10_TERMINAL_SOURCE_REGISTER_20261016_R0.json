@@ -1,0 +1,125 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10_TERMINAL_SOURCE_REGISTER_20261016_R0",
+  "date": "2026-10-16",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r10-native-handshake-research-20261016",
+  "op_authority": "R10_OPERATOR_WORK_PHASE_CLOSED",
+  "r11_foundation": "NOT_RECEIVED_SOFT_METAPHOR_VISUALITY_INTENT_ONLY",
+  "source_pub_class": "PUBLIC_SAFE_OPERATOR_MEDIATED_SIX_ACTUAL_TEXT_FILES_DIRECT_GITHUB_API",
+  "exact_return_sources": [
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/KIMI_R10_ORIGINAL_REPORT_20261016.txt",
+      "bytes": 10636,
+      "sha256": "dc1b875df367730d286c4ea29697b588386f236da204781d3ca86ac6e4364079",
+      "git_blob_sha1": "cd5912d327189531e8b865dd73d44dad42d82685",
+      "type": "REPORT_ONLY",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/AXIOM_R10_PREVIOUS_BRIEF_TRANSCRIPT_20261016.txt",
+      "bytes": 3669,
+      "sha256": "304703277fd1c54072a4544da84ee0e045889caef3179f134c612f1a8f78c43d",
+      "git_blob_sha1": "34237c51479519ead7f0eba227518193416c2f15",
+      "type": "HISTORIC_CHAT_REPORT",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/GROK_R10_INDEPENDENT_REPORT_20261016.txt",
+      "bytes": 10086,
+      "sha256": "4880fb234c94575b976c5cdf0c6ecefe4759a158feb31af25b217d56a7881c57",
+      "git_blob_sha1": "4841076e18c65645a0bc96028a01dbd95ad7818f",
+      "type": "REPORT_ONLY",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_EXTERNAL_RECEIVE_ACK_ASSERTION_20261016.txt",
+      "bytes": 4380,
+      "sha256": "60768179f203a8a17df81280d056784084406d2e32502fdf9188be1f939835c5",
+      "git_blob_sha1": "4e31f92be1f673f49a2c27e570b5849e754cca78",
+      "type": "EXPERT_ASSERTED_ACK_UNAUTHENTICATED",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_GITHUB_INDEPENDENT_VERIFICATION_20261016.md",
+      "bytes": 17375,
+      "sha256": "6ff4fd59b54f148b7412d98f20e5069e195e64b0f1dfbaf1549dac69ff792c01",
+      "git_blob_sha1": "88570a979e92d1dee5232d3592b6f7598ec6a210",
+      "type": "INDEPENDENT_REPORT_NOT_AXIOM_RUNTIME",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_EXISTING_ALPHA_NODE_INDEPENDENT_VERIFICATION_20261016.md",
+      "bytes": 16718,
+      "sha256": "a34c7ef6769fe122b58bf8227c212ededb39e1893665d83a8dab05c62cdb4f50",
+      "git_blob_sha1": "f236138f51509a8179c510e27ddd42f379c370f2",
+      "type": "INDEPENDENT_REPORT_NOT_AXIOM_RUNTIME",
+      "original_bytes_verified_by": "AXIOM_LOCAL_CONTAINER_SHA256_AND_GITHUB_BLOB_ORACLE",
+      "external_actor_authentication": "NOT_ESTABLISHED"
+    }
+  ],
+  "zip_stack": {
+    "filename": "NEXUS_~1(20261016-065243).ZIP",
+    "bytes": 114707,
+    "sha256": "9dc1b0aba4c70b4b1d0b803a78b5d77570420e4e9c79cd2c483157d8cd46f7a5",
+    "zip_crc": "PASS",
+    "stored_on_github": "NO",
+    "required_for_cursor_one_pass": "NO",
+    "elements": [
+      {
+        "name": "R10_FOUNDATION_MD",
+        "bytes": 13079,
+        "sha256": "bce369ab2cf23e81e05c6e4c9a8b5da0bf93ddc7331dad00579f93c4479f81df",
+        "embedded_sha256_sidecar": "MATCH"
+      },
+      {
+        "name": "GROK_HANDSHAKE_DOCX",
+        "bytes": 14643,
+        "sha256": "5dacc80e75006f27473699167820fa51f938d01c3a2e29eaffa66ea01c5d3006",
+        "embedded_sha256_sidecar": "MATCH"
+      },
+      {
+        "name": "GROK_EXECUTION_SPEC_MD",
+        "bytes": 12074,
+        "sha256": "826b6fbf6e89b13a655e1f413a2bc32d5226b76c1dfcdbc24caa4d6096fd5ab8",
+        "embedded_sha256_sidecar": "MATCH"
+      },
+      {
+        "name": "GROK_EXECUTION_SPEC_PDF",
+        "bytes": 77826,
+        "sha256": "e2b1974da3b20850a21f9ec95e293a2206b6cf97e039a20196fba3a24cd0118b",
+        "embedded_sha256_sidecar": "MATCH"
+      },
+      {
+        "name": "GROK_EXECUTION_SPEC_DOCX",
+        "bytes": 17932,
+        "sha256": "658a21bc5cd2db86ac32b7cf249672db9d188a3c4c6a9fe480584a09eafbc600",
+        "embedded_sha256_sidecar": "MATCH"
+      }
+    ]
+  },
+  "public_predecessor": {
+    "sha256": "050706bdda52b16840995d02a44ce7ba933ab64099dc279c0bb775cf2d26df17",
+    "head": "539d4bb33d2ba2c4895713c1bc437ece0743eeea",
+    "pr": 115,
+    "mode": "GITHUB_NATIVE_DIRECT",
+    "merge": "NOT_OBSERVED"
+  },
+  "epistemic_walls": {
+    "scientific_validation": "NOT_ESTABLISHED_BY_SOURCE_MATCH",
+    "explicit_external_github_principal_receipt": "NOT_ESTABLISHED",
+    "bio_experiments": "NOT_EXECUTED",
+    "external_spec_governance_promotion": "PROHIBITED",
+    "cursor_operational_receive_ack": "NOT_YET_OBSERVED",
+    "R9": "OPEN_PRESERVED",
+    "R3": "SEALED_PRESERVED",
+    "r11": "SOURCE_NOT_YET_DELIVERED",
+    "manual_file_transport": "NO"
+  },
+  "rights": "Only original public-safe research text, no private device/medical/VM contents; binary ZIP not republished."
+}
