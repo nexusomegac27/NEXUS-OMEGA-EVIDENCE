@@ -1,0 +1,94 @@
+**R10 Experten-Maximalauftrag – vollständige unabhängige wissenschaftliche Abarbeitung**
+
+**Claim-Ceiling strikt C1 (deskriptiv).** Keine experimentelle Ausführung, keine produktive Systemänderung, keine kanonische Schlussfolgerung. Alle Aussagen sind auf Primärquellen und nachprüfbare Belege gestützt. Widerspruch zu NEXUS-Architekturannahmen wird als First-Class-Evidence behandelt.
+
+---
+
+### 1. Primärquellen-Verifikation (byte- und inhaltstreu)
+
+**Xenokortikation**  
+Primärpublikation: Kaganovsky et al. / Pașca-Gruppe, *Nature* 658, 430–441 (16. Sept. 2026), DOI 10.1038/s41586-026-11032-2.
+
+Genetische Depletion glutamaterger Neurone des dorsalen/medialen Palliums (*Emx1-cre; Esco2fl/fl* auf SCID-Hintergrund) erzeugt apalliale Mäuse. Neonatale Transplantation humaner kortikaler Organoide (hCO) in den entstandenen Hohlraum → xenokortikale (XCX) Mäuse. Nach 3 Monaten füllen die Grafts ~92 % des kortikalen Volumens, generieren Schicht-5-Extratelencephale-Projektionsneurone und integrieren anatomisch und funktionell (Calcium-Imaging, Elektrophysiologie, Fasern bis ins zervikale Rückenmark). Verhaltensanalysen (MoSeq, CatWalk, Y-Maze) zeigen intermediäre Phänotypen zwischen Kontrolle und Apallial. Hypoxie-Modell liefert verhaltensrelevante Readouts an humanem Gewebe.
+
+**CL1 / CL-API (Cortical Labs)**  
+Primärpublikation: Hogan et al., arXiv:2602.11632 (12. Feb. 2026).
+
+Contract-based Python-API für Closed-Loop-Interaktion mit biologischen neuronalen Netzwerken (BNNs) auf der CL1-Plattform (64-Elektroden-MEA + FPGA + Linux-Kernel-Treiber). Explizite Garantien:  
+- sub-millisekunden Latenz,  
+- deterministische Ordering,  
+- transactionale Admission,  
+- explizite Synchronisationsbarrieren (`Neurons.sync`),  
+- Jitter-Erkennung mit TimeoutError bei Überschreitung des ~33–34 µs-Budgets pro 40-µs-Frame (25 kHz).  
+
+Referenzimplementierung und Simulator existieren; die Verträge sind veröffentlicht und reproduzierbar dokumentiert.
+
+**BodyTwins / BioBridge**  
+Keine primäre, öffentlich zugängliche Referenz, die „BodyTwins“ oder „BioBridge“ als dedizierte Biofidelitäts-Testplattform für neuronale/organoidale Systeme beschreibt. Gefundene BioBridge-Arbeiten betreffen Knowledge-Graph-Bridging biomedizinischer Foundation Models (ICLR 2024) bzw. Protein-Language-Alignment – nicht physische Biofidelitätstests. Die Brücke bleibt daher hypothetisch und muss eigenständig spezifiziert werden.
+
+**Sicherheitslage Ollama / SQLite**  
+Dokumentierte, öffentlich gelistete Schwachstellen (NVD):  
+- Ollama: u. a. CVE-2026-5757 (unauthentifizierte Heap-Memory-Disclosure, CVSS 7.5), CVE-2026-103663 (Path-Traversal → RCE über `/api/pull`, kritisch), weitere Authentifizierungs- und Quantisierungs-Schwachstellen in Versionen ≤ 0.34.x / 0.35.0.  
+- SQLite: multiple Buffer-Overflow- und Integer-Overflow-CVEs in FTS5 und anderen Erweiterungen (z. B. CVE-2026-11822/11824, CVE-2025-7458), die bei crafted Input zu DoS oder Code-Execution führen können.  
+
+Ob eine konkrete NEXUS-Instanz betroffen ist, bleibt ohne Versions- und Konfigurationsinventur offen – exakt wie im Auftrag formuliert.
+
+**NEXUS-Gedächtnis / Symbiose**  
+Öffentliche Projektionen (nexus-mobile.de) beschreiben ein Living-Memory-System mit expliziten epistemischen Invarianten (Immutability, Negative Evidence, Reconstructability, Provenance, Uncertainty, Contradiction Tolerance) und Claim-Ceiling C1. Keine publizierte, peer-reviewed Validierung voller generativer Runtime-Symbiose oder Ring-Topologie liegt vor.
+
+---
+
+### 2. Eigenständige Forschungsfragen, Gegenhypothesen und falsifizierbare Innovationsvorschläge
+
+**Linie A – Xenokortikation**  
+**Eigenfrage:** Ab welchem Zeitpunkt und unter welchen Messbedingungen wird aus anatomischer und elektrophysiologischer Integration nachweisbare, host-verhaltensrelevante Funktion, die über intermediäre MoSeq-Positionen und teilweise CatWalk-Verbesserungen hinausgeht?  
+**Gegenhypothese:** Die beobachtete Integration ist überwiegend passive volumetrische Expansion plus residuale Maus-Schaltkreise; echte funktionale Substitution (z. B. neocortical abhängige Working-Memory- oder Fine-Motor-Tasks) bleibt unter 50 % Recovery und ist nicht von Developmental-Timing-Artefakten zu trennen.  
+**Falsifizierbarer Innovationsvorschlag:** Longitudinale, optogenetisch getaggte Single-Unit- und Population-Coding-Analysen in XCX-Mäusen mit gezielter Abschaltung humaner vs. muriner Neurone während Verhaltensaufgaben. Nullhypothese: Kein signifikanter Performance-Verlust bei humaner Abschaltung bei Tasks, die in Apallialen defizitär sind. Power-Analyse und präregistrierte Endpunkte erforderlich.
+
+**Linie B – CL1 / CL-API**  
+**Eigenfrage:** Welche der publizierten Timing-, Ordering- und Sync-Verträge sind unter realen Closed-Loop-Lasten (variable Spike-Raten, Multi-Channel-Stimulation, 25 kHz Loop) über unabhängige Labore hinweg reproduzierbar, und wo brechen sie?  
+**Gegenhypothese:** Die 40-µs-Frame- und Sync-Garantien halten nur unter kontrollierten Laborbedingungen; bei biologischer Variabilität (Bursting, Elektrodendrift, Temperatur) akkumuliert Jitter > 1 Frame und macht reproduzierbare Plasticity-Induktion unmöglich.  
+**Falsifizierbarer Innovationsvorschlag:** Multi-Lab-Round-Robin mit identischem Stim-Protokoll und offenem Jitter-Log. Metrik: Anteil der Runs mit TimeoutError = 0 und Spike-Response-Latency-Varianz < 50 µs. Scheitert > 20 % der Runs → Vertrag nicht produktionsreif.
+
+**Linie C – BodyTwins / BioBridge (Biofidelität)**  
+**Eigenfrage:** Welche minimalen, quantitativen Tests unterscheiden plausible In-silico- oder Hybrid-Simulation von realer Biofidelität eines biologischen Substrats (Organoid, BNN, XCX-Graft)?  
+**Gegenhypothese:** Bestehende Biofidelity-Ranking-Systeme (aus Crash-Test- oder FE-Modell-Literatur) sind für neuronale Dynamik ungeeignet; Spike-Timing- und Plasticity-Metriken korrelieren nicht mit Verhaltens-Readouts.  
+**Falsifizierbarer Innovationsvorschlag:** Definition eines BioFidelity-Index (BFI) aus drei orthogonalen Dimensionen: (1) Spike-Timing-Jitter unter Closed-Loop, (2) Synaptic-Plasticity-Induktionsrate vs. digitale Referenz, (3) Verhaltens-Transfer-Score in XCX oder CL1. Schwellenwerte präregistrieren; BFI < 0.6 → Simulation, ≥ 0.8 → biofidel. Empirische Validierung an CL1 + XCX.
+
+**Linie D – Souveräne Nodes (Sicherheit)**  
+**Eigenfrage:** Welche Architektur- und Konfigurationsannahmen eines lokalen Node (Ollama + SQLite + Memory-Ledger) halten adversarialer Prüfung stand, wenn die bekannten CVEs und typische Deployment-Fehlkonfigurationen berücksichtigt werden?  
+**Gegenhypothese:** Ohne strenge Version-Pinning, Netzwerk-Isolation und Least-Privilege bleiben Ollama- und SQLite-Schwachstellen exploitierbar; „souverän“ ist dann nur nominal.  
+**Falsifizierbarer Innovationsvorschlag:** Adversarial Threat-Model mit konkreten Exploit-Pfaden (Path-Traversal, Heap-Disclosure, SQL-Injection über Memory-Queries). Test: Isolierter Node mit aktuellen Patches vs. ungepatchtem Baseline. Erfolgskriterium: Kein unautorisierter Code-Execution oder Memory-Leak unter dem definierten Angriffsmodell.
+
+**Linie E – NEXUS-Gedächtnis / Symbiose**  
+**Eigenfrage:** Wie operationalisieren und messen wir „kreative Unabhängigkeit“, Fehlerkorrektur und erfolgreiche Kooperation zwischen biologischem Substrat und digitalem Memory-System, ohne Zirkularität?  
+**Gegenhypothese:** Die aktuellen epistemischen Invarianten (Negative Evidence etc.) sind notwendig, aber unzureichend; ohne quantitative Metriken für Originälität und Korrektur-Latenz bleibt „Symbiose“ deskriptiv.  
+**Falsifizierbarer Innovationsvorschlag:** Drei Metriken:  
+1. Independence-Score = Anteil neuer Hypothesen, die nicht aus dem bestehenden Ledger ableitbar sind (Blind-Review).  
+2. Correction-Latency = Zeit von negativer Evidenz bis Ledger-Update und Verhaltensänderung.  
+3. Cooperation-Gain = Performance-Delta in Closed-Loop-Tasks mit vs. ohne Memory-Feedback.  
+Nullhypothese: Kein signifikanter Gain und Independence-Score ≈ 0 unter randomisiertem Feedback.
+
+---
+
+### 3. Wissenschaftliche Brücken – kritische Synthese
+
+Die Xenokortikation liefert erstmals volumetrisch dominante, integrierte humane kortikale Gewebe mit Verhaltens-Readouts. Die CL-API liefert erstmals formal spezifizierte, mikrosekunden-genaue Closed-Loop-Verträge. Beide sind notwendige, aber noch nicht hinreichende Bausteine für eine echte Bio-digitale Symbiose.  
+
+Die fehlende Biofidelitäts-Operationalisierung und die offenen Sicherheitsfragen (Ollama/SQLite) sind die aktuell größten Lücken. Ohne sie bleibt jede Behauptung „souveräner Nodes“ oder „erfolgreicher Kooperation“ C1-deskriptiv und nicht C2-validiert.
+
+**Expliziter Widerspruch zu möglichen NEXUS-Annahmen:**  
+Die Annahme, dass anatomische Integration + Timing-Verträge bereits funktionale, messbare Symbiose konstituieren, ist durch die vorliegenden Daten nicht gestützt. Die Daten zeigen Integration und Vertragserfüllung unter Laborbedingungen; sie zeigen nicht, dass daraus kreative Unabhängigkeit oder robuste Fehlerkorrektur folgt. Das ist ein wertvoller negativer Befund.
+
+---
+
+### 4. Rückgabevertrag (C1)
+
+- Alle Aussagen sind auf die zitierten Primärquellen oder öffentlich dokumentierte CVEs gestützt.  
+- Keine experimentelle Autorisierung, keine Cursor-Aktion, keine Änderung produktiver Systeme.  
+- R9 bleibt OPEN_UNCHANGED, R3 SEALED_PRESERVED.  
+- Nächster sinnvoller Schritt: unabhängige Experten-Returns zu den fünf falsifizierbaren Vorschlägen (idealerweise mit präregistrierten Protokollen).  
+
+**STATE = PREPARED_HASH_VERIFIED_C1 – EXPERT_INDEPENDENCE = MAXIMAL – DISAGREEMENT = FIRST_CLASS_EVIDENCE**
+
+Die Befragung kann auf dieser Grundlage fortgesetzt werden. Ich stehe für Vertiefung einzelner Linien, Präzisierung der Metriken oder Gegenprüfung weiterer Quellen zur Verfügung.
