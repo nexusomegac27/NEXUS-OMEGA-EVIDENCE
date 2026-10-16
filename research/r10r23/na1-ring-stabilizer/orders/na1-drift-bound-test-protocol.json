@@ -1,0 +1,71 @@
+{
+  "object": "NEXUS_OMEGA_R10R23_NA1_DRIFT_BOUND_TEST_PROTOCOL_20261010_R0",
+  "date_utc": "2026-10-10",
+  "parent_pr": 64,
+  "parent_lane": "research/r10r23/dual-lineage-ring-attractor/",
+  "order_source": "GROK_R25_R26_SYNTHESIS_NA1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "model": {
+    "class": "RING_ATTRACTOR_1D_C1",
+    "n_units_grid": [32, 64],
+    "state": "circular_phase_theta",
+    "readout": "POPULATION_VECTOR_AVERAGE",
+    "ingress_semantics": {
+      "no_input": "BUMP_PERSISTENCE",
+      "external_witness": "BUMP_SHIFT_NOT_CREATION"
+    },
+    "provenance_double_field": {
+      "required": true,
+      "fields": ["predicted_state", "last_external_witness", "filter"]
+    }
+  },
+  "drift_bound_protocol": {
+    "definition": "circ_dist(theta_hat(t0+dt), theta_hat(t0)) with I_ext=0 after full bump convergence",
+    "test_grid_seconds": [30, 120, 300, 3600],
+    "runs_per_cell": 100,
+    "noise_seeds": "INDEPENDENT_DETERMINISTIC",
+    "metrics": ["circular_mean_drift", "circular_std_drift", "p95", "p99", "bump_amplitude_ratio"],
+    "scaling_check": "std_growth_vs_sqrt_t_or_subdiffusive_MEASURE_NOT_ASSUME",
+    "pass_criteria_proposal_operator_adjudicable": {
+      "D1_persistence": "bump_amplitude_ratio >= 0.5 after T_out",
+      "D2_uniqueness": "exactly_one_peak_at_all_times",
+      "D3_filter_internal_drift_120s": "mean <= 1_bin(2pi/N) AND p99 <= 3_bins",
+      "D4_baseline_comparison": "not_worse_than_circular_persistence_or_von_mises_baseline",
+      "D5_provenance_frozen": "last_external_witness_unchanged_during_no_input",
+      "D6_drift_source_attribution": "sgp4_self_propagation_error_documented_small_vs_filter_bound_for_120s"
+    },
+    "note": "biology_provides_principle_not_number; bound_measured_per_implementation; violation_is_first_class_negative_evidence"
+  },
+  "negative_evidence_suite": [
+    { "id": "NE-1", "ledger_ref": "MULTIPEAK_INJECTION", "test": "inject_two_bumps_expect_collapse_to_one", "fail_if": "more_than_one_peak_after_relaxation_time" },
+    { "id": "NE-2", "ledger_ref": "OSCILLATION_NEW", "test": "alternating_conflicting_witnesses", "fail_if": "limit_cycle_or_persistent_bump_oscillation" },
+    { "id": "NE-3", "ledger_ref": "WRONG_NORAD_EPOCH_SHA", "test": "inject_false_epoch_or_source_sha", "fail_if": "provenance_healed_instead_of_fail_closed_flag" },
+    { "id": "NE-4", "ledger_ref": "NO_INPUT_120S_DRIFT+HOLD_LAST_BASELINE", "test": "replay_with_real_omm_gaps_120s_plus", "fail_if": "measured_drift_exceeds_documented_bound" },
+    { "id": "NE-5", "ledger_ref": "PHASE_WRAP_AND_ANTIMERIDIAN", "test": "circular_wrap_edge_cases", "fail_if": "non_circular_metric_creates_jumps" },
+    { "id": "NE-6", "ledger_ref": "NEGATIVE_KNOWLEDGE_GAIN_MAP", "test": "gain_sweep_g_inhib_w_exc", "fail_if": "unstably_or_unknown_bistable_region_left_unmapped" },
+    { "id": "NE-7", "ledger_ref": "UNCERTAINTY_COVERAGE", "test": "diffusion_scaling_across_T_out_grid", "fail_if": "undocumented_deviation_from_diffusive_assumption" },
+    { "id": "NE-8", "ledger_ref": "FILTER_STALENESS", "test": "staleness_flag_when_bound_exceeded", "fail_if": "no_STALE_flag_despite_proven_bound_breach" }
+  ],
+  "carried_forward_from_pr64": [
+    "GROUND_TRUTH_COMPARISON_VS_SGP4_ONLY",
+    "NOAA_FLUX_AS_ORBIT_CORRECTION_REJECT",
+    "SOURCE_CREDIT_PROVENANCE"
+  ],
+  "primary_sources": [
+    { "id": "KIM_JAYARAMAN_2017", "doi": "10.1126/science.aal4835", "finding": "darkness bump persistence seconds-scale then measurable gradual drift; ring dynamics confirmed" },
+    { "id": "SEELIG_JAYARAMAN_2015", "doi": "10.1038/nature14446", "finding": "EB heading bump with landmark correction" },
+    { "id": "TURNER_EVANS_2017", "doi": "10.7554/eLife.23496", "finding": "angular velocity integration in darkness" },
+    { "id": "SEEHOLZER_2019", "doi": "10.1371/journal.pcbi.1006928", "finding": "bump center diffusion along attractor manifold" },
+    { "id": "CARRION_2015", "doi": "10.1162/NECO_a_00699", "finding": "subdiffusive bump wandering, neutrally stable along manifold" },
+    { "id": "PNAS_2012", "doi": "10.1073/pnas.1117386109", "finding": "noise limits persistent activity" },
+    { "id": "CONKEY_AMOS_2022", "url": "https://amostech.com/TechnicalPapers/2022/Poster/Conkey.pdf", "finding": "TLE/SGP4 in-track error up to ~25 km after days; grows with epoch age" },
+    { "id": "KURZ_2015", "url": "https://arxiv.org/abs/1501.05151", "finding": "recursive Bayesian filtering in circular state spaces" },
+    { "id": "JOKHAI_2026", "doi": "10.1038/s41593-026-02433-7", "finding": "dual lineage-restricted progenitors; composite organ; author hedge" },
+    { "id": "DORKENWALD_2024", "doi": "10.1038/s41586-024-07558-y", "finding": "fly connectome 139255 neurons" },
+    { "id": "WANG_CHEN_2024", "doi": "10.1038/s41592-024-02497-y", "finding": "NeuroMechFly v2 sensormor twin" }
+  ],
+  "no_new_execution_rights": true,
+  "runtime_ship": false,
+  "elite_node_births": 0,
+  "status": "OPEN_RESEARCH_ORDER"
+}
