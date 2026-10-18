@@ -318,3 +318,8 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+
+## R15 Soft Geography GPS/FOV research · 2026-10-18 · C1
+
+- [`research/r15/soft-geography-gps-fov-20261018/`](research/r15/soft-geography-gps-fov-20261018/) — Owner-proposed, read-only R15 GPS/FOV adversarial open-source geospatial research and prepared expert MAXI order. Scientific/operational status is `C1_DESCRIPTIVE_ONLY`, expert execution **not dispatched**, no real GPS or hardware testing, no Hostinger or Node-Bus mutation. Separate from R14/R15 node PR #90 and unmerged R11 PR #116. Registry: `docs/architecture/REPOSITORY_STRUCTURE.json` v1.7.16.
