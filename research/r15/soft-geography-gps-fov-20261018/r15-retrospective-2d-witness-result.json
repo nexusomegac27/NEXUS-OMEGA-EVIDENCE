@@ -1,0 +1,10 @@
+{
+  "candidate_source": "gps_fov_tile_preflight.py",
+  "claim": "No missed point among sampled synthetic witnesses only; NOT a full coverage proof or 3D/offline validation.",
+  "failures": [],
+  "passed_cases": 64,
+  "profile": "AXIOM_RETROSPECTIVE_INDEPENDENT_2D_POINT_ORACLE_SYNTHETIC_ONLY",
+  "sampled_cases": 64,
+  "sampled_points": 190254,
+  "seed": 20261018
+}

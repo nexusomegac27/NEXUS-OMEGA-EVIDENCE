@@ -1,0 +1,92 @@
+{
+  "as_of_date": "2026-10-18",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "identity_conclusion": {
+    "r0_6917_and_r1_25683": "TWO_DISTINCT_SOURCE_OBJECTS_VERIFIED",
+    "same_file_conflict": "NOT_PRESENT_IN_THESE_BYTES"
+  },
+  "limit": [
+    "Byte identity is not scientific truth",
+    "External-agent research texts not authenticated as independently adjudicated science",
+    "R16 referenced sibling bytes not present",
+    "No real GPS or network evidence"
+  ],
+  "object": "NEXUS_OMEGA_AXIOM_R15_FINAL_SOURCE_IDENTITY_LEDGER_20261018_R0",
+  "original_bytes": {
+    "grok_causal_synthesis": {
+      "bytes": 17820,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "28b24395f46de94e0d4817e9f2a67f292d5e07df10fe49dc04398b8cfe52d88f",
+      "source_name": "NEXUS_OMEGA_GROK_R15_R2_FULL_SYMBIOTIC_CAUSAL_CANONICAL_ARTIFACT_20261018_R0.md"
+    },
+    "grok_verification_handshake": {
+      "bytes": 4090,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "e3ffc151848de09a4c88301e4b82aac97ac7dd3eec4710ccb55801d3ba1cdccf",
+      "source_name": "NEXUS_OMEGA_GROK_R15_R2_ADVERSARIAL_GPS_FOV_DEEP_RESEARCH_CROSSVALIDATION_HANDSHAKE_20261018_R0.txt"
+    },
+    "manus_report": {
+      "bytes": 20366,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "c43604617082829faa0edde9320b3cacdbad9bb950303b9629fab951bb313c8d",
+      "source_name": "nexus-omega-·-axiom-adjudikation-r15-r2-·-kreuzvalidierungs-return-manus-·-2026-10-18.md"
+    },
+    "outer_operator_archive": {
+      "bytes": 173053,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "9e215a6eb990fb61e8524a2f5b2d85405b55a1a9889368b34b06526052691574",
+      "source_name": "NEXUS-~1.zip"
+    },
+    "r15_r0_3d_symbiosis_module_survey": {
+      "bytes": 6917,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "0b32132b6a529edc441a3f929401fcfb77bcf54b37978f17dcb2dc8ebaefa58b",
+      "source_name": "NEXUS_OMEGA_AXIOM_R15_OPENSOURCE_3D_MAPPING_MODULES_SYMBIOSIS_FOUNDATION_20261017_R0.md"
+    },
+    "r15_r1_foundation": {
+      "bytes": 25683,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "2a1e05cf4d633df6a8729eb1dc793239900ad60c6d2e6c1f74c00367f158cad5",
+      "source_name": "FOUNDATION_R15_R1.md"
+    },
+    "r15_r1_parent_zip": {
+      "bytes": 110827,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "a725dbc35fcc6d8a5524460bd6217e3355a7517cf269a00a2f71160553eb7229",
+      "source_name": "NEXUS_OMEGA_AXIOM_R15_GPS_FOV_3D_GIS_RESEARCH_STACK_20261018_R1.zip"
+    },
+    "r15_r2_expert_order": {
+      "bytes": 19751,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "a5ba0516deda50b8c599a9033c769e0da43c59703dd5a25d59a7d1b537bb17b0",
+      "source_name": "NEXUS_OMEGA_AXIOM_R15_GPS_FOV_3D_GIS_EXPERT_MAXIMAL_ORDER_20261018_R0.md"
+    },
+    "r15_r2_parent_zip": {
+      "bytes": 28881,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "72a429fd2a61b3c1b388720a6e68846c41b2d0ef6eb3c8a22cf6ca2bda8a7858",
+      "source_name": "NEXUS_OMEGA_AXIOM_R15_ADVERSARIAL_RESEARCH_EXPERT_MAXIMAL_ORDER_20261018_R2.zip"
+    },
+    "r15_r2_report": {
+      "bytes": 17770,
+      "evidence": "INDEPENDENT_BYTES_AVAILABLE",
+      "sha256": "91485b957b802d37d345c7c78d9abf983e6382f276e2a927b59f0015166bb33f",
+      "source_name": "NEXUS_OMEGA_AXIOM_R15_ADVERSARIAL_GPS_FOV_DEEP_RESEARCH_20261018_R2.md"
+    }
+  },
+  "publication": "OWNER_GITHUB_DRAFT_PR_ONLY_TO_BE_VERIFIED_AFTER_WRITE",
+  "publication_source": {
+    "main_merge": "NO_AT_READBACK",
+    "main_pinned": "d355400dabed3c280e1fce5030cab69ea099428b",
+    "pr_number": 119,
+    "pr_pre_audit_head": "b644227067cee2f1de782f5430bd2cb7bc07dae9"
+  },
+  "r1_manifest": {
+    "entries": 11,
+    "independent_matches": 11
+  },
+  "r2_manifest": {
+    "entries": 9,
+    "independent_matches": 9
+  }
+}

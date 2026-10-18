@@ -1,0 +1,56 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "execution_environment": "LOCAL_ISOLATED_PYTHON_PROCESSES_NOT_EXTERNAL_REVIEWER",
+  "object": "NEXUS_OMEGA_AXIOM_R15_INDEPENDENT_REPLAY_RECEIPT_20261018_R0",
+  "oracle_note": "AXIOM re-execution of original author-designed frozen tests plus retrospective independent witness sampler; not external scientific validation.",
+  "replay_safety": [
+    "No real GPS",
+    "No network requested by user scripts",
+    "No 3D renderer or browser executed",
+    "No production changes"
+  ],
+  "reproducibility": [
+    "python -I frozen_evaluator.py gps_fov_tile_preflight.py",
+    "python -I frozen_byte_ledger_evaluator.py synthetic_byte_ledger_guard.py",
+    "python -I r15_supplementary_2d_coverage_probe.py --candidate gps_fov_tile_preflight.py --output independent.json"
+  ],
+  "tests": [
+    {
+      "exit_code": 0,
+      "name": "R15_R1_original_frozen_evaluator",
+      "passed": 29,
+      "total": 29
+    },
+    {
+      "exit_code": 1,
+      "expected_fail": "gps_course_not_camera_heading",
+      "name": "R15_R1_heading_mutant",
+      "passed": 28,
+      "total": 29
+    },
+    {
+      "exit_code": 0,
+      "name": "R15_R2_original_frozen_evaluator",
+      "passed": 22,
+      "total": 22
+    },
+    {
+      "exit_code": 1,
+      "expected_fail": [
+        "wrong_dataset",
+        "wrong_view"
+      ],
+      "name": "R15_R2_pairwise_mutant",
+      "passed": 20,
+      "total": 22
+    },
+    {
+      "name": "AXIOM_retrospective_2D_point_witness",
+      "passed": 64,
+      "pre_registered_oracle": false,
+      "sampled_points": 190254,
+      "total": 64,
+      "unobserved_failures": 0
+    }
+  ]
+}
