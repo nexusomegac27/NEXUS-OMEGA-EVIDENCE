@@ -1,0 +1,41 @@
+--- a/scripts/archive_continuity_guard.py
++++ b/scripts/archive_continuity_guard.py
+@@ -17,6 +17,7 @@
+ OPEN_STATES = frozenset({"INTAKE", "ACTIVE", "READY_FOR_CURSOR", "CURSOR_PROCESSING", "REOPENED"})
+ TERMINAL_STATES = frozenset({"PROCESSED", "SUPERSEDED"})
+ ISO_UTC = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$")
++EVENT_FILENAME = re.compile(r"^(\d{8}T\d{6}Z)_(.+)\.json$")
+ 
+ 
+ def read_json(path: Path):
+@@ -117,12 +118,28 @@
+     event_paths = sorted(pipeline.glob("events/*/*/*/*.json"))
+     event_count = 0
+     event_errors = []
++    seen_event_ids = set()
+     for event in event_paths:
+         try:
+             data = read_json(event)
+-            if not isinstance(data.get("event_id"), str) or not isinstance(data.get("package_id"), str):
++            event_id, package_id = data.get("event_id"), data.get("package_id")
++            if not isinstance(event_id, str) or not event_id or not isinstance(package_id, str) or not package_id:
+                 raise ValueError("EVENT_IDENTITY_MISSING")
+-            timestamp(data.get("recorded_at_utc"))
++            recorded_utc = timestamp(data.get("recorded_at_utc"))
++            # The filename and UTC partition are part of the event-store identity.
++            # Do not let a valid JSON body silently impersonate another event path.
++            match = EVENT_FILENAME.fullmatch(event.name)
++            if match is None or match.group(2) != event_id:
++                raise ValueError("EVENT_FILENAME_ID_MISMATCH")
++            expected_clock = recorded_utc.strftime("%Y%m%dT%H%M%SZ")
++            if match.group(1) != expected_clock:
++                raise ValueError("EVENT_FILENAME_TIMESTAMP_MISMATCH")
++            expected_partition = tuple(recorded_utc.strftime("%Y/%m/%d").split("/"))
++            if event.relative_to(pipeline / "events").parts[:3] != expected_partition:
++                raise ValueError("EVENT_UTC_PARTITION_MISMATCH")
++            if event_id in seen_event_ids:
++                raise ValueError("DUPLICATE_EVENT_ID")
++            seen_event_ids.add(event_id)
+             event_count += 1
+         except (ValueError, KeyError, OSError, json.JSONDecodeError):
+             event_errors.append(event.relative_to(root).as_posix())
