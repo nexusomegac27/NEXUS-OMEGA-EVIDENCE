@@ -50,3 +50,5 @@ These paths are research/checkpoint surfaces only. They do not imply production 
 ## R27-E · Operator-owned external return slot
 
 `research/r27/www-extern-wake-isolation-20261011/returns/` is the first **preallocated** external-agent return slot. Its seven exact allowed filenames are registered in `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json`. Neither external agents nor website visitors may create a new phase, agent namespace, return subdirectory or internal control-plane path. External GitHub principals require explicit operator registration and a real required-check / review ruleset. Preintegration research remains descriptive C1, not an implementation.
+
+- [R16 attention-minimal-interface](r16/attention-minimal-interface-20261018/) — distinct C1 read-only human-interface research and study blueprint, no R16 historic renumbering.

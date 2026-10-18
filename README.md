@@ -318,3 +318,8 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+
+## R16 Attention and Minimal Interface · C1 research, 2026-10-18
+
+- [R16 attention research](research/r16/attention-minimal-interface-20261018/) — scientific, source-exact attention-fragmentation heuristic with testable ledger-versus-minimal-interface preregistration candidate; runtime and human studies not started; historical R16 Alpha-Node/AutoClaw untouched.

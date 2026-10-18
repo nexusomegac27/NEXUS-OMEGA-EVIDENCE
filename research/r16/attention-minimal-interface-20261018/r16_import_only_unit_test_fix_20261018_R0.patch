@@ -1,0 +1,11 @@
+--- a/src/lib/r16/logic.test.ts
++++ b/src/lib/r16/logic.test.ts
+@@ -2,6 +2,8 @@
+ import { describe, it } from "node:test";
+ import { CLAIMS, SOURCE_PIN, TASK_ID } from "./corpus.ts";
+ import {
++  ceilingAllowed,
++  comparisonValid,
+   exportFacts,
+   liveGates,
+   mutants,

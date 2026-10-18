@@ -231,6 +231,16 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r16-attention-minimal-interface-20261018": {
+      "path": "research/r16/attention-minimal-interface-20261018",
+      "state": "C1_SCIENTIFIC_RESEARCH_HEURISTIC_ONLY_NO_HUMAN_STUDY",
+      "parent": "R15_FINAL_SCIENCE_C1_RESEARCH_ONLY",
+      "original_r16_attention_sha256": "2afac8c736ff9336b0c72ab72acfabdd32bf6a54a8f1046f9d9b3a7b64647105",
+      "external_review_sha256": "5e5e6dda79af89300075bf9767ecaff78e7aa8ad37f05f0ac318b477747bdedd",
+      "runtime": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_actor_authority": false
     }
   },
   "research_lane_contract": {
@@ -304,7 +314,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.15",
+  "version": "1.7.16",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
