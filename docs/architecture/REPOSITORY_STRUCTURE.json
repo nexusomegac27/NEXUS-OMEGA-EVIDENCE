@@ -231,6 +231,19 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r18-evaluator-integrity-foundation-20261018": {
+      "path": "research/r18/evaluator-integrity-foundation-20261018",
+      "state": "PASS_WITH_MATERIAL_CAVEATS_C1_RESEARCH_FOUNDATION_ONLY",
+      "parent": "NEXUS_OMEGA_AXIOM_R17_FINAL_RESEARCH_CLOSURE_ADJUDICATION_20261018_R0",
+      "source_main_pin": "d355400dabed3c280e1fce5030cab69ea099428b",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_raw_source_audit": "K7_PARTIAL_NOT_HTTP_BYTE_VERIFIED",
+      "byzantine_production_selection": "NOT_ESTABLISHED",
+      "forty_seven_conditions": "DRAFT_PENDING_OPERATOR_RATIFICATION",
+      "shadow_loop": "HOLD_NO_START",
+      "runtime": false,
+      "external_actor_dispatch": false
     }
   },
   "research_lane_contract": {
@@ -304,7 +317,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.15",
+  "version": "1.7.16",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
