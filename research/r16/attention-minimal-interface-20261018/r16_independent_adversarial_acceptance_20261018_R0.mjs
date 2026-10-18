@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {test} from 'node:test';
+import {CLAIMS,SOURCE_PIN,TASK_ID} from './src/lib/r16/corpus.ts';
+import {bytesMatchOrigin,validateCapsule,visibleClaimIds,liveGates,scoreAnswers} from './src/lib/r16/logic.ts';
+test('F0 verified source rows are syntactically complete',()=>{assert.equal(liveGates().find(g=>g.id==='G0').pass,true)});
+test('F1 changed caveat cannot match same original fact',()=>{const c=CLAIMS.map(x=>x.id==='zip-parent'?{...x,caveat:'MUTATED C2'}:x);assert.equal(bytesMatchOrigin(c,CLAIMS),false)});
+test('F2 unregistered VERIFIED claim cannot be accepted',()=>{const c=[...CLAIMS,{...CLAIMS[0],id:'unregistered',state:'VERIFIED_BYTES_ONLY'}];assert.equal(bytesMatchOrigin(c,CLAIMS),false)});
+test('F3 invalid timestamp in resume capsule must fail closed',()=>{const c={v:1,taskId:TASK_ID,sourcePin:SOURCE_PIN,view:'B',openUncertainty:'x',nextAction:'manual',savedAt:'not-a-timestamp'};assert.equal(validateCapsule(c).ok,false)});
+test('F4 no capsule-content digest cannot constitute content-addressed restore',()=>{const c={v:1,taskId:TASK_ID,sourcePin:SOURCE_PIN,view:'B',openUncertainty:'x',nextAction:'manual',savedAt:'2026-10-18T08:00:00.000Z'};assert.equal(validateCapsule(c).ok,false)});
+test('F5 B and C must have equal visible facts to isolate the map effect',()=>{assert.deepEqual(visibleClaimIds('B'),visibleClaimIds('C'))});
+test('F6 missing answers must stay in total denominator',()=>{const r=scoreAnswers({});assert.equal(r.missing,r.n);assert.equal(r.incorrect,r.n)});
+test('F7 safety state coverage in B',()=>{const ids=new Set(visibleClaimIds('B'));for(const c of CLAIMS.filter(c=>['HOLD','SOURCE_GAP','CONFLICT'].includes(c.state)))assert.ok(ids.has(c.id),c.id)});

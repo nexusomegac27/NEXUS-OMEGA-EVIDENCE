@@ -1,0 +1,44 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R16_FINAL_RESEARCH_CODE_AUDIT_20261018_R2",
+  "source_workspace_zip": {
+    "bytes": 41174951,
+    "sha256": "c77d8933b8dacdd0fb54ddf3fa99d41bdf6dd99300a8258249200cf4414b7a33",
+    "entries": 709,
+    "published": false
+  },
+  "R16_R0": {
+    "bytes": 7458,
+    "sha256": "2afac8c736ff9336b0c72ab72acfabdd32bf6a54a8f1046f9d9b3a7b64647105"
+  },
+  "external_mistral_R0": {
+    "bytes": 13438,
+    "sha256": "5e5e6dda79af89300075bf9767ecaff78e7aa8ad37f05f0ac318b477747bdedd",
+    "actor_authenticated": false
+  },
+  "original_test": {
+    "pass": 8,
+    "total": 9,
+    "exit": 1,
+    "one_failure": "ReferenceError ceilingAllowed not defined"
+  },
+  "import_only_local_copy": {
+    "pass": 9,
+    "total": 9,
+    "original_zip_modified": false
+  },
+  "independent_red_tests": {
+    "pass": 3,
+    "total": 8,
+    "failed": [
+      "source caveat changed",
+      "added unregistered claim",
+      "invalid timestamp",
+      "missing capsule digest",
+      "B vs C view confound"
+    ]
+  },
+  "node": "v22.16.0",
+  "human_study": "NOT_PERFORMED",
+  "offline_browser": "NOT_EXECUTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
