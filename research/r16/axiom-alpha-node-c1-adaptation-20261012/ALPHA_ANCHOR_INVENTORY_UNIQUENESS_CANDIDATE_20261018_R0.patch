@@ -1,0 +1,19 @@
+--- a/scripts/validate_task_anchor_norm_v1.py
++++ b/scripts/validate_task_anchor_norm_v1.py
+@@ -116,8 +116,16 @@
+     const(p['independent_rehash_required'],True,'INDEPENDENT_REHASH')
+     if not isinstance(p['copyright_privacy'],str) or len(p['copyright_privacy'])<8: raise ValueError('COPYRIGHT_PRIVACY_REQUIRED')
+     if not isinstance(p['sources'],list) or not p['sources']: raise ValueError('SOURCE_INVENTORY_REQUIRED')
++    # An immutable repository/commit/path tuple identifies exactly one source.
++    # Reject duplicates even when their metadata appears identical: otherwise
++    # contradictory or redundant entries can masquerade as a unique witness.
++    seen_source_ids = set()
+     for x in p['sources']:
+         equal_keys(x,SOURCE_KEYS,'SOURCE')
++        source_id = (x['repository'], x['commit'], x['path'])
++        if source_id in seen_source_ids:
++            raise ValueError('DUPLICATE_SOURCE_IDENTITY')
++        seen_source_ids.add(source_id)
+         const(x['repository'],REPO,'SOURCE_REPO')
+         if not isinstance(x['commit'],str) or not HEX40.fullmatch(x['commit']): raise ValueError('SOURCE_COMMIT')
+         safe_repo_path(x['path'])
