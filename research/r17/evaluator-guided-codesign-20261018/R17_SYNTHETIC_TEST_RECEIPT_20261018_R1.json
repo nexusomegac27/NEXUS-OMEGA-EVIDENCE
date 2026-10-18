@@ -1,0 +1,16 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R17_EVALUATOR_GUIDED_C1_SYNTHETIC_TEST_RECEIPT_20261018_R1",
+  "test_suite_sha256": "cd399bf0e521bdade486ba28cee5cb146ab5a0c73c4c79bede927c0c9a6e8a28",
+  "candidate_sha256": "53e749dc336604b2ebbd74b5f15e9f91e66b53109c8291a65e4b4d999a461ded",
+  "deliberate_mutant_sha256": "b9901cd44fbecb7515976dc3cf020abb8016139548ebdc463d2fe2d361792040",
+  "local_synthetic_test_results": "20_OF_20_PASS_EXIT0",
+  "local_deliberate_mutant_results": "18_OF_20_PASS_TWO_EXPECTED_FAILURES_EXIT1",
+  "externally_independent_scientific_review": false,
+  "source_audit_raw_body_sha256": "NOT_AVAILABLE",
+  "primary_paper_content_review": "PARTIAL_NOT_K7_BYTE_VERIFIED",
+  "r18_ratification": "NOT_ESTABLISHED",
+  "no_runtime": true,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "offline_bundle_zip_sha256": "cc1a3b73278f92e455cc07ad69ea6c2b47663163a09f326bd07bf150dbdda386",
+  "offline_bundle_bytes": 22392
+}
