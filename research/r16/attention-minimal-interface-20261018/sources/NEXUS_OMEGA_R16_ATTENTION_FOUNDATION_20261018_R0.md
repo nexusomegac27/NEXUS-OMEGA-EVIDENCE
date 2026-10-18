@@ -71,3 +71,4 @@ RUNTIME = FROZEN
 R16 supplies a scientifically referenced design heuristic that explains why NEXUS prefers local, view-only, frustum-limited, provenance-explicit interfaces. It does not authorize implementation changes, does not measure cognitive benefit, and does not promote any claim above C1.
 
 `SOURCE ≠ TRUTH · FRAME ≠ MEASUREMENT · STIMULUS_VOLUME ≠ COGNITIVE_BENEFIT · EVIDENCE > AGREEMENT · HUMAN AUTHORITY PRESERVED`
+
