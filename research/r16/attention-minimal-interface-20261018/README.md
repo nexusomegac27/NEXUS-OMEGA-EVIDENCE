@@ -1,0 +1,2 @@
+# R16 Attention / Minimal Interface · C1
+Distinct operator R16 attention research following R15 GPS/FOV, without rewriting historical R16 Alpha-Node or AutoClaw paths. Original uploads are stored in sources/ for immutable provenance. The scientific successor is an independent research interpretation of those sources and cited external publications. No human study, runtime change, node creation or independent expert authentication.
