@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:alpha:pr124:manifest-file-row:v2",
+  "title": "NEXUS OMEGA PR124 historical manifest file-row structural guard (research-only)",
+  "description": "C1 structural row gate plus binary64 safe-integer byte lengths (1..2^53-1); does not prove original bytes, actor identity, scientific validity or integration. V1 remains immutable.",
+  "type": "object",
+  "required": [
+    "path",
+    "bytes",
+    "sha256",
+    "git_blob_sha1"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "type": "string",
+      "pattern": "^research/r16/axiom-alpha-node-c1-adaptation-20261012/[A-Za-z0-9][A-Za-z0-9_.-]*(?![\\s\\S])"
+    },
+    "bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "git_blob_sha1": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}(?![\\s\\S])"
+    }
+  }
+}

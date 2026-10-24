@@ -1,0 +1,107 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN119_REAL_SOURCE_REPLAY_20261024_R0",
+  "decision": "KNOWLEDGE_APPEND_C1_REAL_SOURCE_REPLAY_VERIFIED_BRANCH_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "predecessor_issue93_receipt": 6381558547,
+  "source_main_pin": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "source_pr": 124,
+  "source_pr_predecessor_head": "9cb5071d44f586386d46f724eff0e70a392fb6aa",
+  "source_pr_branch": "axiom/alpha-export-surface-closure-c1-20261021",
+  "historical_source_head": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+  "historical_source_tree": "a8f154ca5cfcf85d2f8402611ce5610453588f8e",
+  "historical_manifest": {
+    "commit": "39555c14bb1a16a33fa24c65e0f715508fb3ce0e",
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_CONTENT_BINDINGS_20261024_R0.json",
+    "bytes": 18083,
+    "sha256": "f164583cb0dbd23845a79f64d9cebea222ef90ea958d0e0bf6840d179af22d42",
+    "github_blob": "cacf5d271ee9c99cc4168a016765d9a73b1a52fb",
+    "original_tree_field": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+    "original_tree_field_status": "INCORRECT_HISTORICAL_UNCHANGED"
+  },
+  "append_only_tree_correction": {
+    "commit": "4edba81ace49854e026b4a2ce8f85c70c0edc765",
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_GIT_TREE_IDENTITY_CORRECTION_20261024_R0.json",
+    "bytes": 2051,
+    "sha256": "b11fd68d1665bbb8a64c9f421bafd8273505a26fc48406dd2d8b2c8be4564917",
+    "github_blob": "3c178f719ab53cc00b06b0a246b5ef6d309d1ee3",
+    "source_bound_supersedes": "MATCH"
+  },
+  "discovery_index": {
+    "commit": "78ddfe75c4fb8e0d76c44da6b7e59e171dbae564",
+    "bytes": 8561,
+    "sha256": "45308605c40df5b868b28ba2befb7c50351eacbfc0497b02e4577e89b46c90e7",
+    "github_blob": "ef56ed01ad34a8ee44fd97ccb4a3ab0ad3589b38"
+  },
+  "question": "Do the original 54 immutable source files still match the Run114 manifest after append-only correction, when actual file bytes are freshly retrieved and independently SHA-256 hashed?",
+  "negative_hypothesis": "A historical manifest can appear complete while a source file is missing or its actual bytes, SHA-256, size, GitHub blob ID, or pinned Git-tree identity diverge.",
+  "baseline": {
+    "run118_full_54_file_actual_byte_replay": "NOT_EXECUTED_IN_RUN118",
+    "fresh_this_iteration_before_readback": "0/54",
+    "run114_prior_replay": "REPORTED_IN_PRIOR_RECEIPT_NOT_TREATED_AS_THIS_RUNS_ORIGINAL_BYTES",
+    "projectwide_handoff_automation_denominator": "UNKNOWN"
+  },
+  "method": {
+    "source": "GitHub connected repository API, 54 fetch_file calls at immutable historical commit with base64 encoding, base64 decoded into raw bytes",
+    "independent_evaluator": "Separately implemented JavaScript SHA-256 and byte-count verifier, tested against published SHA-256 vectors; not the manifest-producing code",
+    "secondary_oracle": "GitHub content API blob ID compared with manifest blob and separately fetched complete, nontruncated Git-tree inventory",
+    "frozen_python_evaluator": "frozen_pr124_content_binding_evaluator_v1_20261024.py inspected at commit 123d13f5617dd969faad00a21a8dc6437a31d82d; actual Python evaluator NOT_EXECUTED",
+    "hash_semantics": "SHA-256 independently computed from decoded bytes; Git blob SHA-1 values compared across GitHub API views, not independently recomputed in this run",
+    "source_file_scope": "Only the historical 54-file manifest at pinned pre-index commit; not the current 62-file PR inventory"
+  },
+  "results": {
+    "batch_0_17": {
+      "matched": 18,
+      "total": 18,
+      "bytes": 61857
+    },
+    "batch_18_35": {
+      "matched": 18,
+      "total": 18,
+      "bytes": 52908
+    },
+    "batch_36_53": {
+      "matched": 18,
+      "total": 18,
+      "bytes": 78996
+    },
+    "actual_original_source_bytes": 193761,
+    "sha256_size_and_github_blob_manifest_matches": "54/54",
+    "complete_tree_entries": 706,
+    "tree_truncated": false,
+    "manifest_correction_index_source_chain_gates": "13/13_PASS",
+    "synthetic_negative_fixtures": "6/6_EXPECTED_REJECT",
+    "sha256_known_vectors": "3/3_PASS",
+    "base64_known_vector": "1/1_PASS",
+    "source_mismatch_count": 0
+  },
+  "negative_fixtures": [
+    "SHA-256 differs after byte mutation",
+    "Git-commit tree mismatch",
+    "Duplicate path",
+    "Missing tree entry",
+    "Wrong supersedes SHA-256",
+    "Historical wrong tree field is detected and corrected only append-only"
+  ],
+  "falsifier": "Any of the 54 original files at immutable head e0b5d8e... produces a different raw byte count or SHA-256 from the pinned manifest; or the pinned Git-commit tree differs from the append-only correction; or a negative fixture is incorrectly accepted.",
+  "decision_limits": [
+    "Reproducible source-byte identity only, not scientific validity",
+    "Original Python tree correction resolver V2 was not executed against this real 54-file corpus",
+    "No independent external third-party GitHub or non-GitHub witness",
+    "No new dedicated CI evaluator run",
+    "No production or main integration, no WWW parity",
+    "Current PR metadata snapshot may be stale; historical manifest is not a live PR index",
+    "No assertion of 90 percent project-wide handoff automation without full eligible denominator"
+  ],
+  "r10": {
+    "pr": 115,
+    "pinned_original_head": "539d4bb33d2ba2c4895713c1bc437ece0743eeea",
+    "public_send": "OBSERVED",
+    "independent_receiver_ack": "NOT_ESTABLISHED",
+    "authenticated_external_github_actor": "NOT_ESTABLISHED",
+    "axiom_scientific_adjudication": "NOT_PERFORMED",
+    "expert_research_actually_executed": "UNVERIFIED",
+    "new_original_expert_return": "SOURCE_NOT_PRESENT_IN_CHECKED_PR115_AND_ISSUE93"
+  },
+  "prohibitions_observed": "NO_MERGE_NO_RUNTIME_NO_HOSTINGER_NO_CURSOR_DISPATCH_NO_CLAIM_PROMOTION",
+  "projectwide_handoff_target": "90_PERCENT_NOT_ESTABLISHED"
+}
