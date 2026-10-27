@@ -20,8 +20,8 @@ def snapshot():
             'issue_number': 93, 'anchor_predecessor_id': 100,
             'expected_tail_id': 101,
             'comments': [{'id': 101, 'actor_login': 'nexusomegac27',
-                          'body': 'OBJECT=NEXUS_TEST\\nCLAIM_CEILING=C1_DESCRIPTIVE_ONLY\\n'
-                                  'PREDECESSOR_ISSUE93_RECEIPT=100\\nACTUAL_MAIN_READBACK=' + 'a' * 40 + '\\n'}]}
+                          'body': 'OBJECT=NEXUS_TEST\nCLAIM_CEILING=C1_DESCRIPTIVE_ONLY\n'
+                                  'PREDECESSOR_ISSUE93_RECEIPT=100\nACTUAL_MAIN_READBACK=' + 'a' * 40 + '\n'}]}
 
 
 def encoded(payload):
@@ -49,29 +49,29 @@ class FrozenUnicodeScalarOracle(unittest.TestCase):
     def test_02_valid_bmp_unicode(self):
         p = snapshot(); p['metadata'] = {'label': 'Grüße'}; self.good(encoded(p))
     def test_03_valid_nonbmp_surrogate_pair_escape(self):
-        p = snapshot(); p['metadata'] = {'label': '\\U0001f680'}; self.good(encoded(p))
+        p = snapshot(); p['metadata'] = {'label': '\U0001f680'}; self.good(encoded(p))
     def test_04_valid_nonbmp_key(self):
-        p = snapshot(); p['metadata'] = {'\\U0001f680': 'ok'}; self.good(encoded(p))
+        p = snapshot(); p['metadata'] = {'\U0001f680': 'ok'}; self.good(encoded(p))
     def test_05_valid_nested_unicode(self):
-        p = snapshot(); p['metadata'] = [{'inner': ['\\U0001f642', 'A']}]; self.good(encoded(p))
+        p = snapshot(); p['metadata'] = [{'inner': ['\U0001f642', 'A']}]; self.good(encoded(p))
     def test_06_valid_comment_body_unicode(self):
-        p = snapshot(); p['comments'][0]['body'] += 'NOTE=\\U0001f642\\n'; self.good(encoded(p))
+        p = snapshot(); p['comments'][0]['body'] += 'NOTE=\U0001f642\n'; self.good(encoded(p))
     def test_07_reject_lone_high_value(self):
-        p = snapshot(); p['metadata'] = {'label': '\\ud800'}; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = {'label': '\ud800'}; self.bad(encoded(p))
     def test_08_reject_lone_low_value(self):
-        p = snapshot(); p['metadata'] = {'label': '\\udfff'}; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = {'label': '\udfff'}; self.bad(encoded(p))
     def test_09_reject_lone_high_key(self):
-        p = snapshot(); p['metadata'] = {'\\ud800': 'ok'}; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = {'\ud800': 'ok'}; self.bad(encoded(p))
     def test_10_reject_lone_low_nested_key(self):
-        p = snapshot(); p['metadata'] = [{'\\udc00': 1}]; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = [{'\udc00': 1}]; self.bad(encoded(p))
     def test_11_reject_nested_array_surrogate(self):
-        p = snapshot(); p['metadata'] = {'nested': [[0, '\\ud801']]}; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = {'nested': [[0, '\ud801']]}; self.bad(encoded(p))
     def test_12_reject_actor_login_surrogate(self):
-        p = snapshot(); p['comments'][0]['actor_login'] += '\\ud800'; self.bad(encoded(p))
+        p = snapshot(); p['comments'][0]['actor_login'] += '\ud800'; self.bad(encoded(p))
     def test_13_reject_body_surrogate(self):
-        p = snapshot(); p['comments'][0]['body'] += 'NOTE=\\udfff\\n'; self.bad(encoded(p))
+        p = snapshot(); p['comments'][0]['body'] += 'NOTE=\udfff\n'; self.bad(encoded(p))
     def test_14_reject_mixed_valid_pair_and_lone(self):
-        p = snapshot(); p['metadata'] = '\\U0001f600\\ud800'; self.bad(encoded(p))
+        p = snapshot(); p['metadata'] = '\U0001f600\ud800'; self.bad(encoded(p))
     def test_15_duplicate_json_key_regression(self):
         raw = encoded(snapshot()).replace(b'"repository":', b'"repository":"forged/repo","repository":', 1)
         self.bad(raw)
