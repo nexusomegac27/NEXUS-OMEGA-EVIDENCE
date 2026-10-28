@@ -1,0 +1,29 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_RECEIPT_CHAIN_V2",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "scope": {
+    "first_pr": 173,
+    "last_pr": 173,
+    "base_sha": "a56c7a8eb4d922df543b534d7d90a5c0ada5bf3a",
+    "head_sha": "c0f69e9fcd2ff54243ffa1bf3aa9d90ce2bda62d",
+    "predecessor_receipt_id": 6470285817
+  },
+  "records": [
+    {
+      "pr": 173,
+      "merged": true,
+      "merge_sha": "c0f69e9fcd2ff54243ffa1bf3aa9d90ce2bda62d",
+      "receipt_id": 6472047244,
+      "receipt_predecessor_id": 6470285817,
+      "receipt_main_sha": "c0f69e9fcd2ff54243ffa1bf3aa9d90ce2bda62d",
+      "receipt_parent_sha": "a56c7a8eb4d922df543b534d7d90a5c0ada5bf3a",
+      "compare": {"ahead": 1, "behind": 0, "files_added": 4, "files_modified": 0, "files_deleted": 0},
+      "files": [
+        {"path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_chain_audit_c1_report_20261028.md", "status": "added"},
+        {"path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_chain_observed_snapshot_20261028.json", "status": "added"},
+        {"path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_chain_reconciler_v1_20261028.py", "status": "added"},
+        {"path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_receipt_chain_oracle_v1_20261028.py", "status": "added"}
+      ]
+    }
+  ]
+}
