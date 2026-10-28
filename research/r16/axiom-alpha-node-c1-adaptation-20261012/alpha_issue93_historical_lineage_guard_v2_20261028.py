@@ -11,7 +11,7 @@ import sys
 
 OBJECT = 'NEXUS_OMEGA_ALPHA_ISSUE93_HISTORICAL_LINEAGE_V2'
 REPO = 'nexusomegac27/NEXUS-OMEGA-EVIDENCE'
-SHA40 = re.compile(r'[0-9a-f]{40}\\Z')
+SHA40 = re.compile(r'[0-9a-f]{40}\Z')
 MAX_BYTES = 32768
 
 
