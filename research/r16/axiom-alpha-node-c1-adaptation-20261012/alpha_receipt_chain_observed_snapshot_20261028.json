@@ -1,0 +1,157 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_RECEIPT_CHAIN_V1",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "scope": {
+    "first_pr": 164,
+    "last_pr": 172,
+    "base_sha": "a8ce88c1b6073597cceadcd083af94be56bf33a3",
+    "head_sha": "a56c7a8eb4d922df543b534d7d90a5c0ada5bf3a",
+    "predecessor_receipt_id": 6460107290
+  },
+  "records": [
+    {
+      "pr": 164,
+      "merged": true,
+      "merge_sha": "b8be4e59f52d8d3739a5d0521e7d7bd80c9d7611",
+      "receipt_id": 6460634584,
+      "receipt_predecessor_id": 6460107290,
+      "receipt_main_sha": "b8be4e59f52d8d3739a5d0521e7d7bd80c9d7611",
+      "receipt_parent_sha": "a8ce88c1b6073597cceadcd083af94be56bf33a3",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 165,
+      "merged": true,
+      "merge_sha": "1157a2f9d9affc71414ca750333bcd2a1810c9db",
+      "receipt_id": 6461898518,
+      "receipt_predecessor_id": 6460634584,
+      "receipt_main_sha": "1157a2f9d9affc71414ca750333bcd2a1810c9db",
+      "receipt_parent_sha": "b8be4e59f52d8d3739a5d0521e7d7bd80c9d7611",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 166,
+      "merged": true,
+      "merge_sha": "ec66b61010212855a79297ec0673f84582dd8543",
+      "receipt_id": 6462252014,
+      "receipt_predecessor_id": 6461898518,
+      "receipt_main_sha": "ec66b61010212855a79297ec0673f84582dd8543",
+      "receipt_parent_sha": "1157a2f9d9affc71414ca750333bcd2a1810c9db",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 167,
+      "merged": true,
+      "merge_sha": "259aa1bfa0019903268f71f72fc0dc458137a1ad",
+      "receipt_id": 6463634536,
+      "receipt_predecessor_id": 6462252014,
+      "receipt_main_sha": "259aa1bfa0019903268f71f72fc0dc458137a1ad",
+      "receipt_parent_sha": "ec66b61010212855a79297ec0673f84582dd8543",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 168,
+      "merged": true,
+      "merge_sha": "2d9bebb5788bdcc47d95a2e68fb955d5cd230356",
+      "receipt_id": 6464324854,
+      "receipt_predecessor_id": 6463634536,
+      "receipt_main_sha": "2d9bebb5788bdcc47d95a2e68fb955d5cd230356",
+      "receipt_parent_sha": "259aa1bfa0019903268f71f72fc0dc458137a1ad",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 169,
+      "merged": true,
+      "merge_sha": "64170faa12da85db8d2c7d5cfcf6995269ea2f8e",
+      "receipt_id": 6465851951,
+      "receipt_predecessor_id": 6464324854,
+      "receipt_main_sha": "64170faa12da85db8d2c7d5cfcf6995269ea2f8e",
+      "receipt_parent_sha": "2d9bebb5788bdcc47d95a2e68fb955d5cd230356",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 170,
+      "merged": true,
+      "merge_sha": "3834ef7eddf08c5b3e0cd0bb662372d8c41e29e8",
+      "receipt_id": 6467072191,
+      "receipt_predecessor_id": 6465851951,
+      "receipt_main_sha": "3834ef7eddf08c5b3e0cd0bb662372d8c41e29e8",
+      "receipt_parent_sha": "64170faa12da85db8d2c7d5cfcf6995269ea2f8e",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 171,
+      "merged": true,
+      "merge_sha": "03fe4c62d3bb82c2ce28e36039d16ce6e086731d",
+      "receipt_id": 6469264130,
+      "receipt_predecessor_id": 6467072191,
+      "receipt_main_sha": "03fe4c62d3bb82c2ce28e36039d16ce6e086731d",
+      "receipt_parent_sha": "3834ef7eddf08c5b3e0cd0bb662372d8c41e29e8",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    },
+    {
+      "pr": 172,
+      "merged": true,
+      "merge_sha": "a56c7a8eb4d922df543b534d7d90a5c0ada5bf3a",
+      "receipt_id": 6470285817,
+      "receipt_predecessor_id": 6469264130,
+      "receipt_main_sha": "a56c7a8eb4d922df543b534d7d90a5c0ada5bf3a",
+      "receipt_parent_sha": "03fe4c62d3bb82c2ce28e36039d16ce6e086731d",
+      "compare": {
+        "ahead": 1,
+        "behind": 0,
+        "files_added": 3,
+        "files_modified": 0,
+        "files_deleted": 0
+      }
+    }
+  ]
+}
