@@ -1,0 +1,41 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_ISSUE93_API_CROSSCHECK_V1",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "comment": {
+    "id": 6478246029,
+    "issue_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "user": {"login": "nexusomegac27"},
+    "created_at": "2026-10-28T19:14:07Z",
+    "updated_at": "2026-10-28T19:14:07Z",
+    "body": "CLAIM_CEILING=C1_DESCRIPTIVE_ONLY\nPREDECESSOR_ISSUE93_RECEIPT=6477928081\nPINNED_MAIN_BEFORE=1c434c820c30d662ea8d557c7a5b06bb90f75823\nPR=https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/178\nACTUAL_MAIN_READBACK=6e700be6fd408c3d78d3d7e08619b635de92966f"
+  },
+  "predecessor_comment": {
+    "id": 6477928081,
+    "issue_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "user": {"login": "nexusomegac27"},
+    "created_at": "2026-10-28T18:59:30Z",
+    "updated_at": "2026-10-28T18:59:30Z"
+  },
+  "pull": {
+    "number": 178,
+    "user": {"login": "nexusomegac27"},
+    "merged_at": "2026-10-28T19:13:23Z",
+    "merge_commit_sha": "6e700be6fd408c3d78d3d7e08619b635de92966f"
+  },
+  "commit": {
+    "sha": "6e700be6fd408c3d78d3d7e08619b635de92966f",
+    "parents": [{"sha": "1c434c820c30d662ea8d557c7a5b06bb90f75823"}],
+    "commit": {"verification": {"verified": true, "reason": "valid"}},
+    "files": [
+      {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_order_chronology_c1_report_20261028.md", "status": "added"},
+      {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_order_guard_v1_20261028.py", "status": "added"},
+      {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_receipt_order_oracle_v1_20261028.py", "status": "added"}
+    ]
+  },
+  "branch": {"commit": {"sha": "6e700be6fd408c3d78d3d7e08619b635de92966f"}},
+  "pr_files": [
+    {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_order_chronology_c1_report_20261028.md", "status": "added"},
+    {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_receipt_order_guard_v1_20261028.py", "status": "added"},
+    {"filename": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_receipt_order_oracle_v1_20261028.py", "status": "added"}
+  ]
+}
