@@ -53,7 +53,8 @@
 | scripts/nexus_expertenkodex_validator.py | 17321 | `ff465ba0989e03eba8aed0013d9738c454d93d37cf53b7091133cce720403173` |
 | tests/test_nexus_expertenkodex_v1.py | 12258 | `22130de6663d162680628020adf6a5b78486749e2f17825e14140fc5bce7a824` |
 | scripts/nexus_github_exchange_chain.py | 29602 | `f9ea76160c07c6aaace984d6eee83b44c4b7ae6412a57be87276f0e3327dc500` |
-| .github/workflows/validate-repository-structure.yml | 2518 | `abd6a1e44d7e472a5c4592a7c6cd4aa113c9930c606f08066cfba4c58b69853f` |
+| .github/workflows/validate-repository-structure.yml | 2936 | `02e89b11ccf24465c9700125faaa92c30691ee9fbe873a3800e8e5fa02bda045` |
+| .github/workflows/validate-anchor.yml | 1608 | `9f217c3d43a7981bfcba27cff4f768fe31f6edb55a8aedc1cd59eee84c53b76c` |
 | docs/architecture/REPOSITORY_STRUCTURE.json | 18136 | `742bf1a0d233e9dfeebfd44ed8596e668fc7311d79de6f1379fd2f6ddc5bc7b9` |
 
 ## Blockers
@@ -61,6 +62,29 @@
 1. `ADAPTER_NOT_CONNECTED` — independent receiver ACK cycle not established
 2. Authenticated external agent adapters remain open
 3. PR #185 remains draft; AUTO_MERGE=NO
+
+## CI remediation delta (append-only · 2026-10-29)
+
+**Symptom (report-level):** On tip `43c8ba898c7c5afd37b96b91127695b97dddb256`, workflows
+`validate-anchor` (run `40951540650`) and `Validate repository structure`
+(run `40951540788`) FAIL with 9× `COMMIT_OBJECT_MISSING` for F01 pin
+`ee73769c966b22887fafbc755edf7c64d1a537e1` under default/custom depth=1 clone.
+
+**Cause:** `SourceResolver.verify_commit` → `git cat-file -t`; shallow tip-only
+checkout omits the ancestor PINNED_COMMIT object (local: ancestor of HEAD,
+`rev-list --count HEAD ^pin` = 7).
+
+**Remediation:**
+- `validate-repository-structure.yml` — post-checkout `git fetch --depth=1 origin <PIN>`
+- `validate-anchor.yml` — second `git fetch --depth=1` of same PIN after tip fetch;
+  detach to `${GITHUB_SHA}`; assert `cat-file -t` = commit
+
+**Local recheck after YAML edit:** `73_OF_73_PASS` (exchange 40 + expertenkodex 33).
+
+**CI_STATUS after this delta:** PENDING_PUSH_REREAD (not yet independent live PASS).
+
+**Walls preserved:** CI_CONFIGURED ≠ REQUIRED_CHECK_ENFORCED; LOCAL_UNIT_PASS ≠
+AXIOM_INDEPENDENT_REHASH; this delta ≠ TERMINAL_PASS; ADAPTER_NOT_CONNECTED remains.
 
 ## NEXT
 

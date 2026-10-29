@@ -17,6 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure F01 PINNED_COMMIT object
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Default checkout depth=1 omits ancestor tip pin used by
+          # SourceResolver / test_nexus_github_exchange_chain (COMMIT_OBJECT_MISSING).
+          PIN=ee73769c966b22887fafbc755edf7c64d1a537e1
+          git fetch --depth=1 origin "${PIN}"
+          git cat-file -t "${PIN}" | grep -qx commit
       - name: Validate repository-order contract
         run: python scripts/validate_repository_structure.py --root .
       - name: Run repository-structure tests
