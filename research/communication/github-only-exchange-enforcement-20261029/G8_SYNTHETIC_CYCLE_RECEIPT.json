@@ -1,0 +1,181 @@
+{
+  "object": "NEXUS_OMEGA_G8_SYNTHETIC_CYCLE_RECEIPT_20261029_R1",
+  "parent": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1",
+  "gate": "G8",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "generated_at_utc": "2026-10-29T16:57:46Z",
+  "pinned_commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+  "mode": "LOCAL_SYNTHETIC_ALLOW_NETWORK_FALSE",
+  "package_object": "NEXUS_SYNTHETIC_GITHUB_EXCHANGE_CYCLE_R1",
+  "result": {
+    "ok": true,
+    "reason": "PASS_SYNTHETIC_GITHUB_EXCHANGE_CYCLE",
+    "correlation_id": "2a6ed176-966f-4349-8421-cf367c21d6c2",
+    "gates": {
+      "G2": {
+        "ok": true,
+        "gate": "G2",
+        "reason": "PASS_DISPATCH_VALIDATED",
+        "details": {
+          "resolved_sources": [
+            {
+              "ok": true,
+              "source": {
+                "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+                "commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+                "path": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
+                "bytes": 9203,
+                "sha256": "ad471285d3b3b2f24cb5b832b749498fc11dca486957ddd5478a1ed3b91d6fcc",
+                "parent_refs": [
+                  {
+                    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+                    "commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+                    "path": "docs/AI_HANDOFF_PROTOCOL.md",
+                    "bytes": 8505,
+                    "sha256": "66558be74b297eeef0849de5eaa7716f67f9ce4dd64f917bd94f0e30bf2c0aaf"
+                  }
+                ]
+              },
+              "observed_bytes": 9203,
+              "observed_sha256": "ad471285d3b3b2f24cb5b832b749498fc11dca486957ddd5478a1ed3b91d6fcc",
+              "local_path": "C:\\Users\\alexa\\AppData\\Local\\Temp\\tmpbs_xnpnl\\checkout\\docs\\governance\\NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
+              "error": null,
+              "transitive": [
+                {
+                  "ok": true,
+                  "source": {
+                    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+                    "commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+                    "path": "docs/AI_HANDOFF_PROTOCOL.md",
+                    "bytes": 8505,
+                    "sha256": "66558be74b297eeef0849de5eaa7716f67f9ce4dd64f917bd94f0e30bf2c0aaf",
+                    "parent_refs": []
+                  },
+                  "observed_bytes": 8505,
+                  "observed_sha256": "66558be74b297eeef0849de5eaa7716f67f9ce4dd64f917bd94f0e30bf2c0aaf",
+                  "local_path": "C:\\Users\\alexa\\AppData\\Local\\Temp\\tmpbs_xnpnl\\checkout\\docs\\AI_HANDOFF_PROTOCOL.md",
+                  "error": null,
+                  "transitive": [],
+                  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+                }
+              ],
+              "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+            }
+          ]
+        }
+      },
+      "G3": {
+        "ok": true,
+        "gate": "G3",
+        "reason": "PASS_ADAPTER_IDENTITY_BOUND",
+        "details": {
+          "capabilities": {
+            "github_read": true,
+            "github_write": false,
+            "registered": true,
+            "github_login_bound": true,
+            "github_login": "synthetic-test-only"
+          },
+          "write_inferred": false,
+          "policy": "TEST_ALLOWLIST_SYNTHETIC_ONLY"
+        }
+      },
+      "G5_SLOT": {
+        "ok": true,
+        "gate": "G5",
+        "reason": "PASS_RETURN_SLOT_BOUND",
+        "details": {
+          "slot_id": "R27-E",
+          "assignment_id": "R27-E",
+          "canonical_return_path": "research/r27/www-extern-wake-isolation-20261011/returns",
+          "mode": "CREATE_ONLY_EXACT_REGISTERED_FILE",
+          "status": null
+        }
+      },
+      "G4_OUTBOUND": {
+        "event_id": "b857d18a-7e5c-46cc-a7ac-0db5f9613df0",
+        "sha256": "8adfa258da27f1c7f5943ff2b034c43ae090159ef3842b3a69938e6f7a059b77"
+      },
+      "G4_ACK": {
+        "ok": true,
+        "gate": "G4",
+        "reason": "PASS_RECEIVER_INDEPENDENT_ACK",
+        "details": {
+          "event_id": "8cfafe06-f51d-492b-a330-1e92269fcb8e",
+          "observed_sha256": "8adfa258da27f1c7f5943ff2b034c43ae090159ef3842b3a69938e6f7a059b77"
+        }
+      },
+      "G5_RETURN": {
+        "event_id": "2dd8cae8-1be5-4ff8-9772-872d8a5660bb",
+        "sha256": "c79f3daa9b0fb550050ae7419b79d15ab72048bd81cc3f6fa7ff8ceb88064145",
+        "path": "research/r27/www-extern-wake-isolation-20261011/returns/SYNTHETIC_RETURN_2a6ed176.json"
+      },
+      "G4_RECONCILE": {
+        "correlation_id": "2a6ed176-966f-4349-8421-cf367c21d6c2",
+        "status": "RECONCILED",
+        "event_count": 3,
+        "event_types": [
+          "DISPATCH_OUTBOUND",
+          "RECEIVER_INDEPENDENT_ACK",
+          "EXPERT_RETURN_READBACK"
+        ],
+        "has_outbound": true,
+        "has_ack": true,
+        "has_return_readback": true,
+        "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+      }
+    },
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "law": "NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2",
+    "manual_fallback_default": false,
+    "dispatch_chain_closed": true,
+    "technical_enforcement": "LOCAL_VALIDATOR_ACTIVE_MAIN_REQUIRED_CHECKS_NOT_YET_BOUND"
+  },
+  "e01_e10_lanes": [
+    {
+      "id": "E01",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E02",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E03",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E04",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E05",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E06",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E07",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E08",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E09",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "E10",
+      "status": "COMPLETE"
+    }
+  ],
+  "epistemic": {
+    "LOCAL_SYNTHETIC_PASS": "\u2260 INDEPENDENT_LIVE_EXPERT_ACK",
+    "DISPATCH_CHAIN_CLOSED_LOCAL": true,
+    "MAIN_REQUIRED_CHECKS": "NOT_YET_BOUND"
+  }
+}

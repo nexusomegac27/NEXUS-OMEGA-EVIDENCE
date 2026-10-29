@@ -37,3 +37,5 @@ jobs:
           python -c 'import json,os; d=json.load(open(os.environ["RUNNER_TEMP"]+"/nexus-repository-summary.json")); print("## NEXUS Repository Steward"); print("Source commit:",d["source_commit"]); print("Tracked files:",d["tracked_file_count"]); print("Tracked directories:",d["directory_count"]); print("Registered research lanes:",d["registered_lane_count"]); print("Integrity findings:",d["integrity_error_count"]); print("Legacy naming reviews:",d["review_counts"]); print("MCP Node-Bus not assessed by CI")' >> "$GITHUB_STEP_SUMMARY"
       - name: NEXUS Repository Steward deterministic negative fixtures
         run: python -m unittest tests.test_nexus_repository_steward -v
+      - name: GitHub-only Expert Exchange chain (G1–G5/G8/G9 offline fail-closed)
+        run: python -m unittest tests.test_nexus_github_exchange_chain -v

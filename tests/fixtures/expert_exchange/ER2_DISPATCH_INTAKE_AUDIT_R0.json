@@ -1,0 +1,28 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "declared_count": 15,
+  "errors": [],
+  "file": "NEXUS_~4 (2).zip",
+  "lane_count": 10,
+  "member_count": 6,
+  "mismatch": [],
+  "missing": [
+    "00_DISPATCH_MANIFEST_ER2_R1.md",
+    "envelopes/E01_DISPATCH_ENVELOPE.md",
+    "envelopes/E02_DISPATCH_ENVELOPE.md",
+    "envelopes/E03_DISPATCH_ENVELOPE.md",
+    "envelopes/E04_DISPATCH_ENVELOPE.md",
+    "envelopes/E05_DISPATCH_ENVELOPE.md",
+    "envelopes/E06_DISPATCH_ENVELOPE.md",
+    "envelopes/E07_DISPATCH_ENVELOPE.md",
+    "envelopes/E08_DISPATCH_ENVELOPE.md",
+    "envelopes/E09_DISPATCH_ENVELOPE.md",
+    "envelopes/E10_DISPATCH_ENVELOPE.md"
+  ],
+  "object": "NEXUS_EXPERT_EXCHANGE_INTAKE_AUDIT_V1",
+  "parent_round": "NEXUS_OMEGA_AXIOM_NATIVE_APP_R2_INDEPENDENT_EXPERT_ROUND_20261028_R1",
+  "scope": "LOCAL_CONTAINER_ONLY;REMOTE_SOURCE_CLOSURE_NOT_ESTABLISHED",
+  "state": "FAIL_CLOSED",
+  "zip_bytes": 37918,
+  "zip_sha256": "22fc416e045ffd196a017d453b79486b2807b5cc281135e2e17171d5ef9ba2c5"
+}

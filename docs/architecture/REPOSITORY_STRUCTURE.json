@@ -231,6 +231,24 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "github-only-exchange-enforcement-20261029": {
+      "path": "research/communication/github-only-exchange-enforcement-20261029",
+      "state": "PASS_WITH_CAVEATS_C1_LOCAL_CHAIN_INTEGRATED_DISPATCH_NOT_CLOSED",
+      "object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1",
+      "parent": "NEXUS_OMEGA_CURSOR_GITHUB_EXPERT_EXCHANGE_FOUNDATION_RETURN_20261029_R0",
+      "pinned_commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+      "draft_pr": 185,
+      "policy": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
+      "handoff": "docs/AI_HANDOFF_PROTOCOL.md",
+      "chain_script": "scripts/nexus_github_exchange_chain.py",
+      "chain_tests": "tests/test_nexus_github_exchange_chain.py",
+      "local_unit_tests": "22_OF_22_PASS_REPORT_LEVEL",
+      "independent_expert_ack_cycle": "NOT_ESTABLISHED",
+      "main_enforcement": "NOT_ESTABLISHED",
+      "hostinger_www_write": false,
+      "auto_merge": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     }
   },
   "research_lane_contract": {
@@ -304,7 +322,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.15",
+  "version": "1.7.16",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
