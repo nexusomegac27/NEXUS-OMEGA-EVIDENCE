@@ -41,7 +41,7 @@ def nonfinite(_):
 
 def validate_path(path):
     if (type(path) is not str or not 1 <= len(path) <= 256 or
-            path.startswith('/') or '\' in path or '%' in path or
+            path.startswith('/') or '\\' in path or '%' in path or
             any(not SAFE_SEG.fullmatch(x) or x in ('.', '..') for x in path.split('/'))):
         fail('UNSAFE_SOURCE_PATH')
 
