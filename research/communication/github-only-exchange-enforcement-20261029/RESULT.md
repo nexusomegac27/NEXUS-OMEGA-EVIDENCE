@@ -1,61 +1,65 @@
-# RESULT · GitHub-Only Exchange Enforcement 20261029 R1
+# RESULT · GitHub Exchange Hard Remediation 20261029 R2
 
 ```text
-OBJECT = NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1
-PARENT = NEXUS_OMEGA_CURSOR_GITHUB_EXPERT_EXCHANGE_FOUNDATION_RETURN_20261029_R0
+OBJECT = NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2
+PARENT = NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1
 AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
 CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
 REPOSITORY = nexusomegac27/NEXUS-OMEGA-EVIDENCE
 DRAFT_PR = 185
-PINNED_COMMIT = 0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4
+PINNED_COMMIT = ee73769c966b22887fafbc755edf7c64d1a537e1
 RETURN_PATH =
   research/communication/github-only-exchange-enforcement-20261029/
+NATIVE_APP_R3 = HOLD
 ```
 
 ## Source bind (G0)
 
 | Artifact | Bytes | SHA-256 | Status |
 |---|---:|---|---|
-| `docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md` | 9203 | `ad471285d3b3b2f24cb5b832b749498fc11dca486957ddd5478a1ed3b91d6fcc` | MATCH |
-| `docs/AI_HANDOFF_PROTOCOL.md` | 8505 | `66558be74b297eeef0849de5eaa7716f67f9ce4dd64f917bd94f0e30bf2c0aaf` | MATCH |
+| `AXIOM_INDEPENDENT_ADJUDICATION_R2.md` | 7269 | `01713e98f6d67171995a2c3b1a8e724b6d36eccc4294e7ec2a2aa56e93c8dc0b` | MATCH |
+| Task Anchor V1 | (this lane) | see file SHA after commit | PRESENT |
 
-Sources retrieved from GitHub checkout at pinned commit; independent local rehash MATCH. No chat reconstruction.
+Sources retrieved from GitHub checkout at pinned commit; independent local rehash MATCH. No chat reconstruction of missing bytes.
+
+## Hard remediation F01–F04
+
+| Finding | Remediation | Status |
+|---|---|---|
+| F01 Commit identity | `SourceResolver` requires repo identity + full commit SHA + `git cat-file`/`ls-tree` bound bytes; invented commit / wrong repo / path traversal / parent-graph gap → fail-closed | PASS_LOCAL |
+| F02 Agent identity | `DeclaredIdentity` ≠ `AuthenticatedPrincipal`; free-text `github_login` is not auth proof; empty allowlist DENY | PASS_LOCAL |
+| F03 Receiver ACK | Same-process ACK → `RECEIVER_ACK_SAME_PROCESS`; no live expert → `ADAPTER_NOT_CONNECTED`; synthetic cycle does not close independent ACK | PASS_LOCAL |
+| F04 Delivery journal | Append-only JSONL + `FileLock` (Windows non-blocking) + fsync + idempotency + quarantine + webhook reconcile | PASS_LOCAL |
 
 ## Gate status
 
 | Gate | Status | Evidence |
 |---|---|---|
-| G0 Governance | PASS_LOCAL | Policy + Handoff MATCH; STRUCTURE 1.7.16 lane registered |
-| G1 Source Resolver | PASS_LOCAL | `scripts/nexus_github_exchange_chain.py` + unittest |
-| G2 Dispatch Validator | PASS_LOCAL | fail-closed on hash/missing/incomplete |
-| G3 Agent Adapter | PASS_LOCAL | live WRITE_SLOTS list schema; empty allowlist DENY |
-| G4 Delivery Journal | PASS_LOCAL | outbound → ACK → reconcile |
-| G5 Expert Return Slots | PASS_LOCAL | fixture allowlist PASS; live PREALLOCATED DENY |
-| G6 CI Governance | PASS_LOCAL_WIRE | CI step + CODEOWNERS inventory; draft branch unprotected |
-| G7 Implant | PASS_ANALYSIS | `/assets/` 200; bare JS/CSS 404; no WWW write |
-| G8 Synthetic E2E | PASS_LOCAL_SYNTHETIC | `G8_SYNTHETIC_CYCLE_RECEIPT.json` |
-| G9 Efficiency | PASS_LOCAL_METRIC | `G9_EFFICIENCY_RECEIPT.json` reduction 0.95 |
+| G0 Governance / AXIOM R2 | PASS_LOCAL | Audit MATCH 7269 / `01713e98…` |
+| G1 Source Resolver | PASS_LOCAL_REMEDIATED | F01 adversarial suite |
+| G2 Dispatch Validator | PASS_LOCAL | repository / path / hash fail-closed |
+| G3 Agent Adapter | PASS_LOCAL_REMEDIATED | F02 principal separation |
+| G4 Delivery Journal | PASS_LOCAL_REMEDIATED | F04 crash / concurrent / idempotent |
+| G5 Expert Return Slots | PASS_LOCAL | unauthorized slot DENY; R27 slot not reused |
+| G6 CI Governance | PASS_LOCAL_WIRE | see `G6_CI_GOVERNANCE.md`; `CI_CONFIGURED` ≠ `REQUIRED_CHECK_ENFORCED` |
+| G7 Implant | PRESERVED | no WWW write this bind |
+| G8 Synthetic E2E | PASS_LOCAL_SYNTHETIC | does **not** close independent receiver cycle |
+| G9 Efficiency | `EFFICIENCY_TARGET_NOT_YET_OBSERVED` | no real receiver ACKs |
 
-Unit tests: **22/22 OK** (local).
-
-## Receipt hashes (this lane)
-
-| File | Bytes | SHA-256 |
-|---|---:|---|
-| `G8_SYNTHETIC_CYCLE_RECEIPT.json` | 6276 | `6c274c81ed188598bf837c406d3d147bd89e91d94474e82316530c9d053f2f85` |
-| `G9_EFFICIENCY_RECEIPT.json` | 1105 | `775f54abec2953ae984075f57bcd98a1320af5fd3e96378bad98341d726d5efc` |
+Unit tests: **40/40 OK** (local adversarial matrix F01–F09).
 
 ## Terminal adjudication
 
 ```text
-STATE = PASS_WITH_CAVEATS_C1_LOCAL_CHAIN_INTEGRATED_DISPATCH_NOT_CLOSED
+STATE = PASS_WITH_CAVEATS_C1_HARD_REMEDIATION_LOCAL_ADAPTER_NOT_CONNECTED
 TERMINAL_PASS = NO
 REASON =
-  LOCAL_SYNTHETIC_CYCLE_PASS
-  · LOCAL_EFFICIENCY_METRIC_PASS
-  · MAIN_REQUIRED_CHECKS_NOT_YET_BOUND
+  F01_F04_LOCAL_REMEDIATION_PASS
+  · UNITTESTS_40_OF_40_PASS
+  · ADAPTER_NOT_CONNECTED
   · INDEPENDENT_EXPERT_ACK_CYCLE = NOT_ESTABLISHED
   · TECHNICAL_ENFORCEMENT_ON_MAIN = NOT_ESTABLISHED
+  · EFFICIENCY_TARGET_NOT_YET_OBSERVED
 ```
 
 ## Explicit non-claims / DENY preserved
@@ -66,17 +70,19 @@ AUTO_MERGE = NO
 HOSTINGER_PRODUCTION_WRITE = NO
 WWW_PRODUCTION_WRITE = NO
 NATIVE_APP_R3 = HOLD
-DEVICE_INSTALL = NO
+DEVICE_INSTALL = PAUSED
 CLAIM_PROMOTION = NO
-UNREGISTERED_AGENT_RUNTIME = NO
+UNREGISTERED_EXTERNAL_WRITES = NO
+SYNTHETIC_ACK_AS_INDEPENDENT_PASS = NO
 ```
 
 ## Epistemic walls
 
 ```text
-LOCAL_22_OF_22 ≠ INDEPENDENT_AXIOM_REPRODUCTION
+LOCAL_40_OF_40 ≠ INDEPENDENT_AXIOM_REPRODUCTION
 LOCAL_SYNTHETIC_G8 ≠ LIVE_GITHUB→EXPERT→GITHUB_CYCLE
-LOCAL_G9_0_95 ≠ OPERATIONAL_90PCT_REDUCTION_PROVEN
+ADAPTER_NOT_CONNECTED ≠ PILOT_AUTHORIZED
+CI_CONFIGURED ≠ REQUIRED_CHECK_ENFORCED ≠ MERGE_AUTHORIZED
 DRAFT_PR_185 ≠ MAIN_ENFORCEMENT
 HASH_MATCH ≠ SCIENTIFIC_TRUTH
 ```
@@ -84,7 +90,10 @@ HASH_MATCH ≠ SCIENTIFIC_TRUTH
 ## NEXT
 
 ```text
-NEXT = WAIT_AXIOM_INDEPENDENT_ADJUDICATION
+NEXT =
+  AXIOM_INDEPENDENT_GITHUB_READBACK
+  AND
+  GITHUB_EXPERT_RECEIVER_CLOSURE_ADJUDICATION
 CURSOR_ACTION = NONE
 NATIVE_APP_R3 = HOLD
 ```

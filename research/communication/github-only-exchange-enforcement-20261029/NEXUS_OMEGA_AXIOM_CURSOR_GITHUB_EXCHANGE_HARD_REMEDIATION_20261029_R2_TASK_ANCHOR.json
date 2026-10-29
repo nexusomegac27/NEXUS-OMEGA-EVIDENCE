@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "ee73769c966b22887fafbc755edf7c64d1a537e1",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_INDEPENDENT_ADJUDICATION_R2.md",
+    "predecessor_bytes": 7269,
+    "predecessor_sha256": "01713e98f6d67171995a2c3b1a8e724b6d36eccc4294e7ec2a2aa56e93c8dc0b"
+  },
+  "delegation": {
+    "scope": "AUTHORIZED_SCOPED_INFRASTRUCTURE_REPAIR_C1_PR185_ONLY",
+    "allowed_actions": [
+      "READ_PINNED_GITHUB_SOURCES",
+      "INDEPENDENT_REHASH",
+      "REMEDIATE_SOURCE_RESOLVER_F01",
+      "REMEDIATE_AGENT_IDENTITY_F02",
+      "REMEDIATE_RECEIVER_ACK_F03",
+      "REMEDIATE_DELIVERY_JOURNAL_F04",
+      "EXTEND_ADVERSARIAL_UNIT_TESTS",
+      "UPDATE_DRAFT_PR_185_ONLY",
+      "OPERATOR_BRIDGE_RETURN"
+    ],
+    "prohibited_actions": [
+      "AUTO_MERGE",
+      "NATIVE_APP_R3_START",
+      "DEVICE_INSTALL",
+      "HOSTINGER_WRITE",
+      "WWW_PRODUCTION_WRITE",
+      "CLAIM_PROMOTION",
+      "UNREGISTERED_EXTERNAL_WRITES",
+      "INVENT_EXTERNAL_GITHUB_PRINCIPAL",
+      "REUSE_R27_SLOT_FOR_OTHER_OBJECT",
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "GITHUB_UNAUTHORIZED_WRITE",
+      "RUNTIME_EXECUTION"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Hard-remediate F01-F04 of the AXIOM R2 GitHub expert-exchange adjudication so local synthetic PASS cannot masquerade as commit-bound provenance, authenticated principal identity, independent receiver ACK, or crash-safe journal durability.",
+    "deliverables": [
+      "SOURCE_RESOLVER_COMMIT_BOUND_BYTES",
+      "AUTHENTICATED_PRINCIPAL_SEPARATION",
+      "RECEIVER_ACK_PROTOCOL_ADAPTER_NOT_CONNECTED",
+      "CRASH_SAFE_APPEND_ONLY_DELIVERY_JOURNAL",
+      "ADVERSARIAL_TEST_MATRIX_F01_F09",
+      "TASK_ANCHOR_V1",
+      "RESULT_AND_G6_UPDATE",
+      "DRAFT_PR_185_RETURN"
+    ],
+    "falsifiers": [
+      "CONTENT_HASH_OK_COMMIT_INVENTED",
+      "PATH_OK_WRONG_REPOSITORY",
+      "UNREGISTERED_ACTOR_SELF_CLAIMED_LOGIN",
+      "SENDER_SELF_GENERATED_INDEPENDENT_ACK",
+      "ABORTED_JOURNAL_WRITE_CORRUPTS_STATE",
+      "CONCURRENT_DELIVERY_SAME_IDENTITY_RACE",
+      "LOST_DUPLICATE_OR_FORGED_WEBHOOK",
+      "MISSING_TRANSITIVE_PARENT_SOURCE",
+      "UNAUTHORIZED_EXTERNAL_RETURN_SLOT"
+    ],
+    "acceptance_tests": [
+      "AXIOM_AUDIT_REHASH_MATCH",
+      "UNITTESTS_40_OF_40_PASS",
+      "SYNTHETIC_ACK_DOES_NOT_CLOSE_INDEPENDENT_CYCLE",
+      "ADAPTER_NOT_CONNECTED_WHEN_NO_LIVE_EXPERT",
+      "CI_CONFIGURED_SEPARATE_FROM_REQUIRED_CHECK_ENFORCED",
+      "NO_AUTO_MERGE",
+      "NATIVE_APP_R3_HOLD_PRESERVED"
+    ],
+    "pause_conditions": [
+      "AXIOM_AUDIT_BYTE_MISMATCH",
+      "AUTHORIZED_EXTERNAL_RECEIVER_ABSENT",
+      "PRIVILEGED_GITHUB_APP_REQUIRED",
+      "MAIN_REQUIRED_CHECK_MUTATION_REQUESTED",
+      "OUT_OF_SCOPE_WWW_OR_HOSTINGER_WRITE"
+    ],
+    "not_executed": [
+      "LIVE_GITHUB_EXPERT_RECEIVER_CYCLE",
+      "MAIN_REQUIRED_CHECK_ENFORCEMENT",
+      "PR185_MERGE",
+      "NATIVE_APP_R3",
+      "HOSTINGER_WWW_PRODUCTION_WRITE",
+      "EXTERNAL_PRINCIPAL_REGISTRATION"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "SOURCE_HASH_DRIFT",
+      "CLAIM_PROMOTION",
+      "AUTHORITY_ESCALATION",
+      "REPOSITORY_NAMESPACE_DRIFT",
+      "SYNTHETIC_ACK_AS_INDEPENDENT_PASS"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "ee73769c966b22887fafbc755edf7c64d1a537e1",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_INDEPENDENT_ADJUDICATION_R2.md",
+        "bytes": 7269,
+        "sha256": "01713e98f6d67171995a2c3b1a8e724b6d36eccc4294e7ec2a2aa56e93c8dc0b",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_GITHUB_ONLY_NO_MANUAL_ZIP_HANDOFF",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "SOURCE_RESOLVER_FAILS_INVENTED_COMMIT",
+      "RECEIVER_ACK_FAILS_SAME_PROCESS",
+      "JOURNAL_SURVIVES_ABORT_AND_CONCURRENT_WRITES"
+    ],
+    "robustness_stability": [
+      "ADAPTER_NOT_CONNECTED_PRESERVED",
+      "EMPTY_ALLOWLIST_DENIES_UNREGISTERED",
+      "FORGED_WEBHOOK_QUARANTINED"
+    ],
+    "traceability_comprehensibility": [
+      "PINNED_FULL_COMMIT_SHA",
+      "CI_CONFIGURED_VS_REQUIRED_CHECK_SEPARATED",
+      "EFFICIENCY_TARGET_NOT_YET_OBSERVED_WITHOUT_RECEIVER_ACKS"
+    ]
+  }
+}
