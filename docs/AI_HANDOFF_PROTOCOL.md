@@ -4,6 +4,12 @@ Use this protocol whenever responsibility moves between Operator, AXIOM, Cursor/
 
 The objective is a contiguous causal chain that survives chat limits, session loss, model changes, and ephemeral execution environments.
 
+## Operator GitHub-only data exchange mandate (prospective, 2026-10-29)
+
+For every agent with verified GitHub access, the **only** material manually forwarded by the Operator is AXIOM's pure work-order text. All research data, predecessor objects, full evidence packages, source files, returns, and receive/rehash records must be retrieved or transmitted through the governed GitHub data channel. Requirements and narrow scientifically compelled exception procedure: [NEXUS GitHub-Only Agent Data Exchange Law V2](governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md). When source graph closure, receiving actor or independently verified receipt is unavailable, mark scoped `SOURCE_GAP_BLOCKED` / `RECEIVER_INDEPENDENT_ACK=NOT_ESTABLISHED`; never ask the Operator to manually assemble missing packets as the ordinary repair path.
+
+This addendum is a **draft branch proposal**, not proof of merge, required checks, deployment, agent access or real dispatch. Existing historical evidence and governance precedence remain unchanged.
+
 ## Required handoff object
 
 Every material handoff should contain at least:
