@@ -39,3 +39,5 @@ jobs:
         run: python -m unittest tests.test_nexus_repository_steward -v
       - name: GitHub-only Expert Exchange chain (G1–G5/G8/G9 offline fail-closed)
         run: python -m unittest tests.test_nexus_github_exchange_chain -v
+      - name: Expertenkodex V1 header + C01–C16 adversarial (offline fail-closed)
+        run: python -m unittest tests.test_nexus_expertenkodex_v1 -v

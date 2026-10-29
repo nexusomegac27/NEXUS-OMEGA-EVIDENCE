@@ -234,21 +234,30 @@
     },
     "github-only-exchange-enforcement-20261029": {
       "path": "research/communication/github-only-exchange-enforcement-20261029",
-      "state": "PASS_WITH_CAVEATS_C1_LOCAL_CHAIN_INTEGRATED_DISPATCH_NOT_CLOSED",
-      "object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1",
-      "parent": "NEXUS_OMEGA_CURSOR_GITHUB_EXPERT_EXCHANGE_FOUNDATION_RETURN_20261029_R0",
-      "pinned_commit": "0b1f88d8f359e9fd2e50a909b07f0fbd155e11f4",
+      "state": "PASS_WITH_CAVEATS_C1_EXPERTENKODEX_V1_INTEGRATED_ADAPTER_NOT_CONNECTED",
+      "object": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_V1_ENFORCEMENT_20261029_R0",
+      "parent": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2",
+      "pinned_commit": "63721950b3c0818e7f6892f83e9b5ee4fd0a5762",
       "draft_pr": 185,
       "policy": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
       "handoff": "docs/AI_HANDOFF_PROTOCOL.md",
       "chain_script": "scripts/nexus_github_exchange_chain.py",
       "chain_tests": "tests/test_nexus_github_exchange_chain.py",
-      "local_unit_tests": "22_OF_22_PASS_REPORT_LEVEL",
+      "local_unit_tests": "33_OF_33_EK_PLUS_40_OF_40_EXCHANGE_PASS_REPORT_LEVEL",
       "independent_expert_ack_cycle": "NOT_ESTABLISHED",
       "main_enforcement": "NOT_ESTABLISHED",
       "hostinger_www_write": false,
       "auto_merge": false,
-      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "expertenkodex_object": "NEXUS_OMEGA_AXIOM_EXPERTENKODEX_GITHUB_COMMUNICATION_20261029_V1",
+      "expertenkodex_path": "docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md",
+      "expertenkodex_commit": "b17d38266777bad61178e608d09e41726b9f4769",
+      "expertenkodex_bytes": 15388,
+      "expertenkodex_sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab",
+      "expertenkodex_validator": "scripts/nexus_expertenkodex_validator.py",
+      "expertenkodex_tests": "tests/test_nexus_expertenkodex_v1.py",
+      "adversarial_gates": "C01_TO_C16_PASS_LOCAL",
+      "receiver_independent_ack": "ADAPTER_NOT_CONNECTED"
     }
   },
   "research_lane_contract": {
@@ -322,7 +331,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.16",
+  "version": "1.7.17",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",

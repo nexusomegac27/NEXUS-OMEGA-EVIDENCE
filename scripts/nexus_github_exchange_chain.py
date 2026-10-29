@@ -668,6 +668,35 @@ class DispatchValidator:
             if not r.get("ok"):
                 return r
             resolved.append(r["source"])
+        # Expertenkodex V1: fail-closed when EXPERTENKODEX / CODEX_* present
+        nested = manifest.get("expertenkodex") or manifest.get("expertenkodex_header")
+        has_top = any(
+            k in manifest
+            for k in (
+                "EXPERTENKODEX",
+                "CODEX_COMMIT",
+                "CODEX_PATH",
+                "CODEX_BYTES",
+                "CODEX_SHA256",
+            )
+        )
+        if nested is not None or has_top:
+            header = dict(manifest)
+            if isinstance(nested, dict):
+                header.update(nested)
+            try:
+                from scripts.nexus_expertenkodex_validator import (
+                    ExpertenkodexHeaderValidator,
+                )
+            except ImportError:  # pragma: no cover
+                from nexus_expertenkodex_validator import (  # type: ignore
+                    ExpertenkodexHeaderValidator,
+                )
+            ek = ExpertenkodexHeaderValidator().validate(
+                header, require_manifest_entries=True
+            )
+            if not ek.get("ok"):
+                return ek
         return ok(resolved_sources=resolved, object=manifest["object"])
 
 
