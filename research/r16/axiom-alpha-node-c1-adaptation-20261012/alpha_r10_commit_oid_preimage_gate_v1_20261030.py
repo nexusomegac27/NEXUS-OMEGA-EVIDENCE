@@ -11,7 +11,7 @@ import re
 import sys
 from pathlib import Path
 
-SHA40 = re.compile(r"[0-9a-f]{40}\\Z")
+SHA40 = re.compile(r"[0-9a-f]{40}\Z")
 
 def no_duplicates(pairs):
     obj = {}
