@@ -1,0 +1,61 @@
+{
+  "commit_sha": "dab7c59070d67e7e2a244bd6d05db9a4d37460e3",
+  "root_tree_sha": "d743c5d926d469470afa0d7331d5c56b8262d56c",
+  "hops": [
+    {
+      "parent_tree_sha": "d743c5d926d469470afa0d7331d5c56b8262d56c",
+      "truncated": false,
+      "entry": {
+        "path": "research",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f1dd45775b781db06acad2e60377eb9780546caa",
+        "size": null
+      }
+    },
+    {
+      "parent_tree_sha": "f1dd45775b781db06acad2e60377eb9780546caa",
+      "truncated": false,
+      "entry": {
+        "path": "r10",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3911eebd32855f25db0613401cd290e684b5ff44",
+        "size": null
+      }
+    },
+    {
+      "parent_tree_sha": "3911eebd32855f25db0613401cd290e684b5ff44",
+      "truncated": false,
+      "entry": {
+        "path": "biocomputing-independent-experts-20261016",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d7b2f423897ea086673bb1e9a6ffa09435f76c48",
+        "size": null
+      }
+    },
+    {
+      "parent_tree_sha": "d7b2f423897ea086673bb1e9a6ffa09435f76c48",
+      "truncated": false,
+      "entry": {
+        "path": "returns_20261016",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e2a0b605f8d55090d52fde71e04744aaeda02dbe",
+        "size": null
+      }
+    },
+    {
+      "parent_tree_sha": "e2a0b605f8d55090d52fde71e04744aaeda02dbe",
+      "truncated": false,
+      "entry": {
+        "path": "R10_EXTERNAL_RECEIVE_ACK_ASSERTION_20261016.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4e31f92be1f673f49a2c27e570b5849e754cca78",
+        "size": 4380
+      }
+    }
+  ]
+}
