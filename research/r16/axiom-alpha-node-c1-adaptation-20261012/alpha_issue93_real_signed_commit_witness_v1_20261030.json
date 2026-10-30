@@ -1,0 +1,12 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_ISSUE93_REAL_SIGNED_COMMIT_WITNESS_V1",
+  "expected_commit_sha": "b76994d0e431949e03e37d32ea45e179034550f8",
+  "expected_tree_sha": "3a2e8300090345a1fa6ac6b4263431247af42bab",
+  "expected_parent_sha": "8ce99dd243c6d3450ddaa7308a0fc4c5d52c71cc",
+  "payload": "tree 3a2e8300090345a1fa6ac6b4263431247af42bab\nparent 8ce99dd243c6d3450ddaa7308a0fc4c5d52c71cc\nauthor NEXUS_OMEGA <nexus.omega.c27@gmail.com> 1793323411 +0100\ncommitter GitHub <noreply@github.com> 1793323411 +0100\n\nresearch(alpha): C1 isolated Git tree binding preflight (#206)\n\nFrozen independent oracle first, isolated Git object chain candidate second, C1 report third. 16/16 synthetic subprocess tests; no runtime integration or GitHub authentication claim.",
+  "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq4/GTCRC1aQ7uu5UhlAAA2MUQADsPmbagv0U8YfM5jHD+rxrQ\n79kRPVaZkDqEwX7g0l6lTTFxQW73RT2eKP8Y/0YyZn3Dqrewi2d3A3+5Mj3rjFk5\n8fDyaPV6RFZqg+9sNNCq7ptakTgwnnhG/skKrW7MsIUJqlW8FkhPUNUe5QqNyylx\nY6vycN72GiAlVvC7qJItm3DVmN0njT7j+i3/rUJk7+Y38OKZ/OE12rpVrC6dD6yV\nCBOP7GbvMxaxfzvJG9nusAsN9hER/Ljel9a43dR1PE3rV7sMP6Fp4ePlgzZwYX37\nWrrT8ErNVnCJ3wZBY7UDyfymm8TIzAK4l1AqauhjgTyiM2nzfQ0QDL94LWZfwJUp\nJ/+WiyxoxqfA3X+iVQCBMSwCVCRUr8p5dTURXa+rUTy2lNPTs4pC9Ojj/c9ymkUF\nxkDsn60Mp9IC5A2bTtseKUecUhdp/uRnmwjp+cyymYRcJkmM0iaQgtkKy95CfMbw\nyXXrO9ymn7BMd1yRqcR+UuuEDE2LufOIQiNKZhe8HWfdB0YU8QNgIISjoUqmxBw3\nN2EZ5+HUyI+tv3g9YKT3fC8YuqCVm5kr36Bky2pqpJEqPWKNQNP3VAWBvtOT4wjP\nFLmFflw9PYCN34HO8hHlsxZr8qf2Xn6L/5nJQgrclu8J/VYHrXshuBxf1eWc/WfG\ndr4wfD8sfNAOy4TGU06y\n=ihiC\n-----END PGP SIGNATURE-----\n",
+  "source_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/git/commits/b76994d0e431949e03e37d32ea45e179034550f8",
+  "provenance": "GitHub API verification.payload + verification.signature, independently copied; raw object fetch not established",
+  "api_reported_verified": true,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
