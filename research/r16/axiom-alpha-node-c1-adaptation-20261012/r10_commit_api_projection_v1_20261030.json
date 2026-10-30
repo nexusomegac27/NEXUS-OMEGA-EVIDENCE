@@ -1,0 +1,9 @@
+{
+  "commit_sha": "dab7c59070d67e7e2a244bd6d05db9a4d37460e3",
+  "tree_sha": "d743c5d926d469470afa0d7331d5c56b8262d56c",
+  "parents": ["eb86e98228efd393e36fb3fbecf79f830b7c41e2"],
+  "author": {"name": "NEXUS_OMEGA", "email": "nexus.omega.c27@gmail.com", "date": "2026-10-16T07:17:31Z"},
+  "committer": {"name": "NEXUS_OMEGA", "email": "nexus.omega.c27@gmail.com", "date": "2026-10-16T07:17:31Z"},
+  "message": "research(r10): detached eight-file byte hashes for Cursor terminal R10 handoff",
+  "api_signature_state": "unsigned"
+}
