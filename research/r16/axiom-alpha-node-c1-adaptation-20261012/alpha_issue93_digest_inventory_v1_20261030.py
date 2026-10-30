@@ -10,7 +10,7 @@ import re
 import sys
 
 SOURCE = 'nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93'
-HEX40 = re.compile(r'[0-9a-f]{40}\\Z')
+HEX40 = re.compile(r'[0-9a-f]{40}\Z')
 
 class Reject(ValueError):
     pass
