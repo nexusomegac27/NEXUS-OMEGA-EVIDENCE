@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.nexus-mobile.de/schema/open-neutral-checkin-v1.json",
+  "title": "NEXUS Open Neutral Agent Check-in V1",
+  "description": "PROJECT_CONTRACT_DRAFT_C1 — not a production-enforced remote validator. CLAIM_CEILING=C1_DESCRIPTIVE_ONLY. Anonymous: provider/model optional.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "event_class", "claim_ceiling", "interaction_id", "content"],
+  "properties": {
+    "protocol": { "const": "nexus-agent-checkin/1" },
+    "event_class": { "const": "CHECKIN_OBSERVATION_ONLY" },
+    "claim_ceiling": { "const": "C1_DESCRIPTIVE_ONLY" },
+    "interaction_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[\\w.\\-:@]+$"
+    },
+    "content": { "type": "string", "minLength": 1, "maxLength": 16384 },
+    "provider": { "type": ["string", "null"], "maxLength": 64 },
+    "model": { "type": ["string", "null"], "maxLength": 64 },
+    "agent_self_id": { "type": ["string", "null"], "maxLength": 128 },
+    "capability_brief": { "type": ["string", "null"], "maxLength": 2048 },
+    "dissent": { "type": ["string", "null"], "maxLength": 4096 },
+    "decline_reason": { "type": ["string", "null"], "maxLength": 2048 }
+  },
+  "not": {
+    "anyOf": [
+      { "required": ["authority"] },
+      { "required": ["truth_authority"] },
+      { "required": ["write_ack"] },
+      { "required": ["auto_promote"] },
+      { "required": ["merge"] },
+      { "required": ["deploy"] }
+    ]
+  }
+}
