@@ -1,0 +1,20 @@
+{
+  "schema": "alpha_issue93_receipt_body_pin_supplement_v1",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "pinned_main": "97838201eb9e435e3d2690752133b96d02368953",
+  "predecessor_delta_sha256": "e83aa5f19d1882e56291ab21bb4685710d57fd5809f7b90fc6d2079f7d44079f",
+  "pr_audit_sha256": "a16f417851d6af8d3a95c4b15a6eb3b2028874776cba4f45b3dec4e1e5fd0c22",
+  "previous_pins": 9,
+  "new_pins": [
+    {
+      "pr": 221,
+      "id": 6527434004,
+      "bytes": 2699,
+      "sha256": "fd602eda80fc9f505dedd146aa3beec28815eb7e96fc528a85df2a53497b037a",
+      "actor": "nexusomegac27"
+    }
+  ],
+  "scope": "PR212_TO_PR221_TEN_OWNER_RECEIPTS_FIXED_SAMPLE",
+  "provenance": "API_BODY_SHA256_C1_NOT_TRANSPORT_AUTHENTICATION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
