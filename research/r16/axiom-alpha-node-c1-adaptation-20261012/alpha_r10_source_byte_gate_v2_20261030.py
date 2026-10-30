@@ -7,9 +7,9 @@ import re
 import sys
 from pathlib import Path
 
-HEX40 = re.compile(r"[0-9a-f]{40}\\Z")
-HEX64 = re.compile(r"[0-9a-f]{64}\\Z")
-LOGIN = re.compile(r"[A-Za-z0-9-]{1,39}\\Z")
+HEX40 = re.compile(r"[0-9a-f]{40}\Z")
+HEX64 = re.compile(r"[0-9a-f]{64}\Z")
+LOGIN = re.compile(r"[A-Za-z0-9-]{1,39}\Z")
 CLAIM_FIELDS = {
     "source_commit", "source_sha256", "source_bytes", "source_git_blob",
     "owner_login", "actor_login", "actor_origin", "receipt_origin",
@@ -83,7 +83,7 @@ def check(registry_raw, registry, claim, source_raw, pins):
     if len(source_raw) > 1048576 or not source_raw:
         raise ValueError("SOURCE_SIZE_LIMIT")
     actual_sha = hashlib.sha256(source_raw).hexdigest()
-    actual_blob = hashlib.sha1(b"blob " + str(len(source_raw)).encode("ascii") + b"\\0" + source_raw).hexdigest()
+    actual_blob = hashlib.sha1(b"blob " + str(len(source_raw)).encode("ascii") + b"\0" + source_raw).hexdigest()
     if (len(source_raw), actual_sha, actual_blob) != (pins.source_bytes, pins.source_sha256, pins.source_git_blob):
         raise ValueError("SOURCE_BYTES_HASH_BLOB_MISMATCH")
     if any(claim[key] != getattr(pins, key) for key in
