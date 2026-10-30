@@ -1,0 +1,155 @@
+{
+  "schema_id": "NEXUS_RECEIVER_INDEPENDENT_ACK_SCHEMA_V1",
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_RECEIVER_INDEPENDENT_ACK_SCHEMA_V1_20261030_R0",
+  "parent_order": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0",
+  "parent_order_sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "ack_pass_without_distinct_authenticated_receiver": "PROHIBITED",
+  "synthetic_label": "SYNTHETIC_NOT_EXTERNAL",
+  "required_fields": [
+    {
+      "key": "OBJECT",
+      "type": "string",
+      "description": "Canonical object id of the source package being ACKed"
+    },
+    {
+      "key": "PREDECESSOR",
+      "type": "string",
+      "description": "Parent order or adjudication object id"
+    },
+    {
+      "key": "CODEX_PIN",
+      "type": "object",
+      "properties": {
+        "commit": "string_40_hex",
+        "path": "string",
+        "bytes": "integer",
+        "sha256": "string_64_hex"
+      },
+      "description": "Pinned Expertenkodex V1 identity"
+    },
+    {
+      "key": "GITHUB_SOURCE_COMMIT",
+      "type": "string_40_hex",
+      "description": "Immutable commit of the fetched source package"
+    },
+    {
+      "key": "PATH",
+      "type": "string",
+      "description": "Repo-relative path of fetched artifact"
+    },
+    {
+      "key": "BYTES",
+      "type": "integer",
+      "minimum": 1,
+      "description": "Observed byte length after fetch"
+    },
+    {
+      "key": "SOURCE_SHA256",
+      "type": "string_64_hex",
+      "description": "Declared SHA-256 of the source package"
+    },
+    {
+      "key": "RECEIVER_OBSERVED_SHA256",
+      "type": "string_64_hex",
+      "description": "Independently computed SHA-256 by the receiver"
+    },
+    {
+      "key": "RECEIVER_PRINCIPAL",
+      "type": "object",
+      "properties": {
+        "github_login": "string",
+        "github_user_id": "integer",
+        "auth_route": "enum:oauth_app|github_app|collaborator_session|other_documented",
+        "distinct_from_producer": "boolean_must_be_true_for_ACK_PASS"
+      },
+      "description": "Authenticated principal that performed the fetch"
+    },
+    {
+      "key": "FETCH_EXECUTION_WITNESS",
+      "type": "object",
+      "properties": {
+        "method": "enum:gh_api_contents|git_blob|raw_githubusercontent|other_documented",
+        "request_ref": "string",
+        "http_status": "integer",
+        "retrieved_at_utc": "string_iso8601"
+      },
+      "description": "How bytes were obtained; must be GitHub-only"
+    },
+    {
+      "key": "UTC_TIMESTAMP",
+      "type": "string_iso8601",
+      "description": "ACK issuance time UTC"
+    },
+    {
+      "key": "NONCE_OR_CORRELATION_ID",
+      "type": "string",
+      "min_length": 8,
+      "description": "Anti-replay correlation token"
+    },
+    {
+      "key": "RETURN_LOCATION",
+      "type": "object",
+      "properties": {
+        "kind": "enum:pr_comment|issue_comment|pr_file_commit|gist_public_safe",
+        "url_or_ref": "string",
+        "repository": "string"
+      },
+      "description": "Where the ACK was published on GitHub"
+    }
+  ],
+  "verdict_enum": [
+    "ACK_PASS",
+    "ACK_FAIL_HASH_MISMATCH",
+    "ACK_FAIL_BYTES_MISMATCH",
+    "ACK_FAIL_PRINCIPAL_NOT_DISTINCT",
+    "ACK_FAIL_AUTH_NOT_ESTABLISHED",
+    "ACK_FAIL_FETCH_WITNESS_ABSENT",
+    "ACK_HOLD_ADAPTER_NOT_CONNECTED",
+    "SYNTHETIC_NOT_EXTERNAL"
+  ],
+  "match_rule": {
+    "ACK_PASS_requires": [
+      "RECEIVER_OBSERVED_SHA256 == SOURCE_SHA256",
+      "BYTES == declared_bytes",
+      "RECEIVER_PRINCIPAL.distinct_from_producer == true",
+      "RECEIVER_PRINCIPAL.github_login != nexusomegac27_OR_documented_producer_login",
+      "FETCH_EXECUTION_WITNESS present and GitHub-only",
+      "RETURN_LOCATION on GitHub",
+      "DATA_ROUTE != HOSTINGER"
+    ],
+    "PROHIBITED": [
+      "ACK_PASS without distinct authenticated receiver",
+      "Producer self-ACK as EXTERNAL_RECEIVER_ACK",
+      "Invented tokens or WRITE_ACK",
+      "Hostinger or www as ACK channel"
+    ]
+  },
+  "example_hold_when_adapter_absent": {
+    "OBJECT": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0",
+    "PREDECESSOR": "NEXUS_OMEGA_AXIOM_EXPERTENKODEX_F12_FINAL_POLICY_ADJUDICATION_20261030_R0",
+    "CODEX_PIN": {
+      "commit": "b17d38266777bad61178e608d09e41726b9f4769",
+      "path": "docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md",
+      "bytes": 15388,
+      "sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab"
+    },
+    "GITHUB_SOURCE_COMMIT": "7bc257103f3923dbfd633bc1f43ccb73de1b59bc",
+    "PATH": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_GITHUB_RECEIVER_PILOT_READINESS_ORDER_20261030_R0.md",
+    "BYTES": 6512,
+    "SOURCE_SHA256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+    "RECEIVER_OBSERVED_SHA256": null,
+    "RECEIVER_PRINCIPAL": {
+      "github_login": null,
+      "github_user_id": null,
+      "auth_route": null,
+      "distinct_from_producer": false
+    },
+    "FETCH_EXECUTION_WITNESS": null,
+    "UTC_TIMESTAMP": null,
+    "NONCE_OR_CORRELATION_ID": null,
+    "RETURN_LOCATION": null,
+    "VERDICT": "ACK_HOLD_ADAPTER_NOT_CONNECTED"
+  }
+}

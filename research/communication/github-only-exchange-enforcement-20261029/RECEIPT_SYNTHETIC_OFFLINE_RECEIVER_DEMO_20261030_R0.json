@@ -1,0 +1,60 @@
+{
+  "object": "NEXUS_OMEGA_RECEIPT_SYNTHETIC_OFFLINE_RECEIVER_DEMO_20261030_R0",
+  "schema_class": "SYNTHETIC_NOT_EXTERNAL",
+  "parent_order": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0",
+  "parent_order_commit": "7bc257103f3923dbfd633bc1f43ccb73de1b59bc",
+  "parent_order_sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+  "codex_commit": "b17d38266777bad61178e608d09e41726b9f4769",
+  "codex_sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "purpose": "Offline dry-run of fetch→rehash→ACK field fill without distinct authenticated external principal",
+  "execution": {
+    "mode": "LOCAL_OFFLINE_SAME_PRINCIPAL",
+    "producer_principal": "nexusomegac27",
+    "receiver_principal": "nexusomegac27",
+    "distinct_principal": false,
+    "fetch_api": "LOCAL_FILE_READ_SIMULATED_CONTENTS_API",
+    "utc_timestamp": "2026-10-30T12:00:00Z",
+    "nonce_or_correlation_id": "SYNTH-OFFLINE-20261030-R0-001"
+  },
+  "package_under_test": {
+    "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_GITHUB_RECEIVER_PILOT_READINESS_ORDER_20261030_R0.md",
+    "bytes_expected": 6512,
+    "source_sha256_expected": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+    "receiver_observed_bytes": 6512,
+    "receiver_observed_sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+    "byte_match": true,
+    "hash_match": true
+  },
+  "ack_fields_filled": {
+    "OBJECT": true,
+    "PREDECESSOR": true,
+    "CODEX_PIN": true,
+    "GITHUB_SOURCE_COMMIT": true,
+    "PATH": true,
+    "BYTES": true,
+    "SOURCE_SHA256": true,
+    "RECEIVER_OBSERVED_SHA256": true,
+    "RECEIVER_PRINCIPAL": true,
+    "FETCH_EXECUTION_WITNESS": true,
+    "UTC_TIMESTAMP": true,
+    "NONCE_OR_CORRELATION_ID": true,
+    "RETURN_LOCATION": true
+  },
+  "verdict": "SYNTHETIC_NOT_EXTERNAL",
+  "verdict_rationale": "Hash and bytes MATCH under same-principal offline simulation. ACK_PASS requires distinct authenticated external receiver ≠ producer. EXTERNAL_RECEIVER_ACK remains NOT_ESTABLISHED.",
+  "prohibitions_honored": {
+    "live_pilot": false,
+    "new_agent_rights": false,
+    "ruleset_mutation": false,
+    "ack_pass_claimed": false
+  },
+  "f10_f11_f12": {
+    "f10": "CLOSED_PRESERVED",
+    "f11": "CLOSED_TESTED_DISPATCH_PATH_PRESERVED",
+    "f12": "CLOSED_EMPTY_REGISTER_DEFAULT_DENY_PRESERVED",
+    "re_repair": "NO"
+  },
+  "external_receiver_ack": "NOT_ESTABLISHED",
+  "next": "OPERATOR_CONTROLLED_RECEIVER_ENROLLMENT_THEN_LIVE_ACK"
+}
