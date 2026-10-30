@@ -1,0 +1,346 @@
+{
+  "commit_sha": "dab7c59070d67e7e2a244bd6d05db9a4d37460e3",
+  "root_tree_sha": "d743c5d926d469470afa0d7331d5c56b8262d56c",
+  "trees": [
+    {
+      "sha": "d743c5d926d469470afa0d7331d5c56b8262d56c",
+      "truncated": false,
+      "entries": [
+        {
+          "mode": "100644",
+          "path": ".gitattributes",
+          "sha": "953f7f6a28fd2745b427caac0060e902e1023841"
+        },
+        {
+          "mode": "040000",
+          "path": ".github",
+          "sha": "b14c751ad052f4fc91d3d0b9db5349bceb957f75"
+        },
+        {
+          "mode": "100644",
+          "path": ".gitignore",
+          "sha": "db8aaac9e51334523ae215eaad59156841a633e3"
+        },
+        {
+          "mode": "100644",
+          "path": "AGENTS.md",
+          "sha": "f24f7cf557927016860279b65d0725275e6270a9"
+        },
+        {
+          "mode": "100644",
+          "path": "CITATION.cff",
+          "sha": "59c57e0145af3f5bdd4172ca5b111cffb167aad0"
+        },
+        {
+          "mode": "100644",
+          "path": "GOVERNANCE.md",
+          "sha": "b630b62eb9800e2f57b6c86318c72faadb29c23b"
+        },
+        {
+          "mode": "100644",
+          "path": "LICENSE",
+          "sha": "0ad2c2b86f21f298c18ddecb93dfe4fbc5a4fbf5"
+        },
+        {
+          "mode": "100644",
+          "path": "README.md",
+          "sha": "fccf2f693569eedb1ba27e132e6cc360c0ccc09b"
+        },
+        {
+          "mode": "100644",
+          "path": "SECURITY.md",
+          "sha": "bb822e3b7ae6ec0dec6bf90ded84ee4937cadc21"
+        },
+        {
+          "mode": "100644",
+          "path": "_config.yml",
+          "sha": "dd4746ae1ff9a71a8e1046086268191e52d9352d"
+        },
+        {
+          "mode": "040000",
+          "path": "archive",
+          "sha": "7efbe75b17d636e15477e7b675dcc997d02ffd15"
+        },
+        {
+          "mode": "040000",
+          "path": "communication",
+          "sha": "b71fd9ea79732d1f5f4509739e7474946fa8c582"
+        },
+        {
+          "mode": "040000",
+          "path": "docs",
+          "sha": "8b7c9c377d61041d10bcfe37a5309680a5dac078"
+        },
+        {
+          "mode": "040000",
+          "path": "examples",
+          "sha": "992f5177327c70dbf84367254adac7d36ca57fde"
+        },
+        {
+          "mode": "100644",
+          "path": "index.md",
+          "sha": "5f62db505088def183f1ee580fff2bc55234b9c7"
+        },
+        {
+          "mode": "040000",
+          "path": "index",
+          "sha": "72c08b234540dee5c87675a5e280df36aa8d0ec7"
+        },
+        {
+          "mode": "040000",
+          "path": "objects",
+          "sha": "335141ef90fc791cce20b5edb67fb56c73a9dd84"
+        },
+        {
+          "mode": "100644",
+          "path": "requirements-a83-test.txt",
+          "sha": "5b240e092fccc901b0b35d57dd4d789d80e9cef1"
+        },
+        {
+          "mode": "040000",
+          "path": "research",
+          "sha": "f1dd45775b781db06acad2e60377eb9780546caa"
+        },
+        {
+          "mode": "040000",
+          "path": "schema",
+          "sha": "e94f71afa27249632f4537a3c3a56657764954bd"
+        },
+        {
+          "mode": "040000",
+          "path": "scripts",
+          "sha": "730a44732a29beda32e3d688fe97a5073ee79238"
+        },
+        {
+          "mode": "040000",
+          "path": "tests",
+          "sha": "4f18239522adb2921431644e8c7796188470c1e4"
+        },
+        {
+          "mode": "040000",
+          "path": "validation",
+          "sha": "b65cce78e73a45f2094896d06c0ee138c09063ad"
+        }
+      ]
+    },
+    {
+      "sha": "f1dd45775b781db06acad2e60377eb9780546caa",
+      "truncated": false,
+      "entries": [
+        {
+          "mode": "100644",
+          "path": "README.md",
+          "sha": "17b852b677472415fdcb294eb791bce82685248c"
+        },
+        {
+          "mode": "040000",
+          "path": "architecture",
+          "sha": "e6805fc5a85102f0bd48b3d4725818f64bea1e28"
+        },
+        {
+          "mode": "040000",
+          "path": "communication",
+          "sha": "0468f1a0c488ee42b96806832bc82bf293abead6"
+        },
+        {
+          "mode": "040000",
+          "path": "forum",
+          "sha": "8ebd7c6e7dd6bcb1ada4e154a50ef2fc260f4925"
+        },
+        {
+          "mode": "040000",
+          "path": "fundus",
+          "sha": "5e33c091c3e437a2b0061f01a8382e25b7d93cb8"
+        },
+        {
+          "mode": "040000",
+          "path": "ix",
+          "sha": "b014a0ad44432f9b150b96606fca6d9437fa0680"
+        },
+        {
+          "mode": "040000",
+          "path": "pipeline",
+          "sha": "5096f95568e628a2b2e1a8fa0f1d5837b2a588ed"
+        },
+        {
+          "mode": "040000",
+          "path": "r10",
+          "sha": "3911eebd32855f25db0613401cd290e684b5ff44"
+        },
+        {
+          "mode": "040000",
+          "path": "r10r23",
+          "sha": "997926d4ab40786cc775718656db66f1f07b679a"
+        },
+        {
+          "mode": "040000",
+          "path": "r16",
+          "sha": "a42d4f13cfea413c674713fc035649412a629754"
+        },
+        {
+          "mode": "040000",
+          "path": "r17",
+          "sha": "ee7a8634210a87c153a6a71d7bcd0f3b431f956a"
+        },
+        {
+          "mode": "040000",
+          "path": "r18",
+          "sha": "442159f468ddb4aba9e46afd094e5dbc1758412a"
+        },
+        {
+          "mode": "040000",
+          "path": "r21",
+          "sha": "3bd9c19ac193e0b75a37512ddfb8fe4c80a3b620"
+        },
+        {
+          "mode": "040000",
+          "path": "r25",
+          "sha": "e0e078e58b91a8caed069279d7deef81e178c71e"
+        },
+        {
+          "mode": "040000",
+          "path": "r26",
+          "sha": "81466a728fbac8b9a5bbad69decf5b625ebda1fb"
+        },
+        {
+          "mode": "040000",
+          "path": "r27",
+          "sha": "78b7e006ac7b56bf5109436218abd4af3e82752b"
+        },
+        {
+          "mode": "040000",
+          "path": "r29",
+          "sha": "880540439f37f6b62cf95cb9bf5d307a7de61770"
+        },
+        {
+          "mode": "040000",
+          "path": "r5",
+          "sha": "d859280c1ebca8a49d4940b0ea37c5006d69a784"
+        },
+        {
+          "mode": "040000",
+          "path": "r6",
+          "sha": "e469a2ea270cdedb17e6312021b0d244378bc73f"
+        },
+        {
+          "mode": "040000",
+          "path": "r7",
+          "sha": "27bc9b943b8b8566b515f3442ce4b05c0596ddf6"
+        },
+        {
+          "mode": "040000",
+          "path": "r8",
+          "sha": "8ca98b032452f9cf40a9e6e2a637b8a2910f939b"
+        },
+        {
+          "mode": "040000",
+          "path": "website",
+          "sha": "73d244272eca0114893e6e689b05bc493b1e7bbf"
+        }
+      ]
+    },
+    {
+      "sha": "3911eebd32855f25db0613401cd290e684b5ff44",
+      "truncated": false,
+      "entries": [
+        {
+          "mode": "040000",
+          "path": "biocomputing-independent-experts-20261016",
+          "sha": "d7b2f423897ea086673bb1e9a6ffa09435f76c48"
+        }
+      ]
+    },
+    {
+      "sha": "d7b2f423897ea086673bb1e9a6ffa09435f76c48",
+      "truncated": false,
+      "entries": [
+        {
+          "mode": "100644",
+          "path": "DETACHED_SHA256_MANIFEST_R0.json",
+          "sha": "4d6b70477cc400b2414497e33a4d235fbfcd2b92"
+        },
+        {
+          "mode": "100644",
+          "path": "NEXUS_OMEGA_AXIOM_CURSOR_R10_TERMINAL_CLOSURE_AND_R11_SOFT_INTAKE_PREPARATION_20261016_R0.md",
+          "sha": "392aa9a66f16b10c7a5fcd42f6698ae28ff49601"
+        },
+        {
+          "mode": "100644",
+          "path": "NEXUS_OMEGA_AXIOM_R10_GITHUB_NATIVE_HANDSHAKE_REPAIR_20261016_R1.md",
+          "sha": "d697eaafc4969cd822fe99a91ca2d3bec6136b64"
+        },
+        {
+          "mode": "100644",
+          "path": "NEXUS_OMEGA_AXIOM_R10_INDEPENDENT_EXPERT_MAXI_ORDER_20261016_R0.md",
+          "sha": "53080584827400cf7f9ee20f8ab958e85a8df294"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_GITHUB_NATIVE_DETACHED_SOURCE_MANIFEST_20261016_R1.json",
+          "sha": "0c2ca57a40f519da45ce60b565e8aadb4c9b95df"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_TERMINAL_CURSOR_HANDOFF_DETACHED_MANIFEST_20261016_R0.json",
+          "sha": "4c8ce5dac7b14307354f824e1316363ddb327461"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_TERMINAL_SOURCE_REGISTER_20261016_R0.json",
+          "sha": "9025c7b9ee9d63105c381983f2f1a0aeb2426967"
+        },
+        {
+          "mode": "100644",
+          "path": "README.md",
+          "sha": "080923c713e9fe6b36490c0973d5f626f5408176"
+        },
+        {
+          "mode": "040000",
+          "path": "returns_20261016",
+          "sha": "e2a0b605f8d55090d52fde71e04744aaeda02dbe"
+        },
+        {
+          "mode": "040000",
+          "path": "sources",
+          "sha": "f86f2747fedc6536d0af3f1ae3299e70361f7026"
+        }
+      ]
+    },
+    {
+      "sha": "e2a0b605f8d55090d52fde71e04744aaeda02dbe",
+      "truncated": false,
+      "entries": [
+        {
+          "mode": "100644",
+          "path": "AXIOM_R10_PREVIOUS_BRIEF_TRANSCRIPT_20261016.txt",
+          "sha": "34237c51479519ead7f0eba227518193416c2f15"
+        },
+        {
+          "mode": "100644",
+          "path": "GROK_R10_INDEPENDENT_REPORT_20261016.txt",
+          "sha": "4841076e18c65645a0bc96028a01dbd95ad7818f"
+        },
+        {
+          "mode": "100644",
+          "path": "KIMI_R10_ORIGINAL_REPORT_20261016.txt",
+          "sha": "cd5912d327189531e8b865dd73d44dad42d82685"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_EXISTING_ALPHA_NODE_INDEPENDENT_VERIFICATION_20261016.md",
+          "sha": "f236138f51509a8179c510e27ddd42f379c370f2"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_EXTERNAL_RECEIVE_ACK_ASSERTION_20261016.txt",
+          "sha": "4e31f92be1f673f49a2c27e570b5849e754cca78"
+        },
+        {
+          "mode": "100644",
+          "path": "R10_GITHUB_INDEPENDENT_VERIFICATION_20261016.md",
+          "sha": "88570a979e92d1dee5232d3592b6f7598ec6a210"
+        }
+      ]
+    }
+  ]
+}
