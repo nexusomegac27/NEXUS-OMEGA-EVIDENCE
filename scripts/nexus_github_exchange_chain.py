@@ -37,6 +37,23 @@ ALLOWED_SOURCE_ROOTS = (
     "validation/",
 )
 ADAPTER_NOT_CONNECTED = "ADAPTER_NOT_CONNECTED"
+LEGACY_GRANT_REGISTER_REL = "docs/governance/EXPERTENKODEX_LEGACY_GRANT_REGISTER_V1.json"
+LEGACY_GRANT_CLASSIFICATION = "LEGACY_PRE_EXPERTENKODEX_V1"
+LEGACY_GRANT_REQUIRED_ENTRY_FIELDS = (
+    "grant_id",
+    "classification",
+    "policy_version",
+    "status",
+    "issuer",
+    "authorized_actor",
+    "repository",
+    "commit",
+    "path",
+    "sha256",
+    "bytes",
+    "permitted_scope",
+    "non_retroactive_cutoff",
+)
 
 
 def utc_now() -> str:
@@ -638,13 +655,166 @@ class DeliveryJournal:
 
 
 # ---------------------------------------------------------------------------
+# F12 — Owner-controlled Legacy Grant Register (fail-closed)
+# ---------------------------------------------------------------------------
+
+
+class LegacyGrantRegistry:
+    """Owner-verified legacy grants only. Self-asserted authenticated:true is never authority."""
+
+    def __init__(
+        self,
+        register_path: Optional[Path] = None,
+        register_doc: Optional[Dict[str, Any]] = None,
+    ) -> None:
+        if register_doc is not None:
+            self.doc = dict(register_doc)
+            self.register_path = register_path
+        elif register_path is not None and Path(register_path).is_file():
+            self.register_path = Path(register_path)
+            self.doc = json.loads(
+                self.register_path.read_text(encoding="utf-8")
+            )
+        else:
+            # Missing register → empty DENY (fail-closed; closes F12).
+            self.register_path = register_path
+            self.doc = {
+                "object": "NEXUS_OMEGA_EXPERTENKODEX_LEGACY_GRANT_REGISTER_V1",
+                "status": "C1_OWNER_CONTROLLED_EMPTY_DEFAULT_DENY",
+                "default": "DENY",
+                "grants": [],
+            }
+        grants = self.doc.get("grants")
+        if not isinstance(grants, list):
+            grants = []
+        self.grants: List[Dict[str, Any]] = [
+            g for g in grants if isinstance(g, dict)
+        ]
+        self.default = str(self.doc.get("default") or "DENY").upper()
+
+    @classmethod
+    def load(cls, repo_root: Path) -> "LegacyGrantRegistry":
+        return cls(register_path=Path(repo_root) / LEGACY_GRANT_REGISTER_REL)
+
+    def evaluate(
+        self,
+        grant: Any,
+        *,
+        repository: str,
+        commit: str,
+    ) -> Dict[str, Any]:
+        if not isinstance(grant, dict):
+            return fail("LEGACY_GRANT_MALFORMED", "expertenkodex_legacy_grant must be object")
+        if grant.get("authenticated") is not True:
+            return fail(
+                "LEGACY_GRANT_SELF_ASSERTED_REJECTED",
+                "authenticated must be boolean true before register evaluation",
+            )
+        grant_id = grant.get("grant_id")
+        policy_version = grant.get("policy_version")
+        classification = grant.get("classification")
+        if not isinstance(grant_id, str) or not grant_id.strip():
+            return fail("LEGACY_GRANT_MALFORMED", "grant_id required")
+        if not isinstance(policy_version, str) or not policy_version.strip():
+            return fail("LEGACY_GRANT_MALFORMED", "policy_version required")
+        if classification != LEGACY_GRANT_CLASSIFICATION:
+            return fail(
+                "LEGACY_GRANT_FIELD_MISMATCH",
+                f"classification must be {LEGACY_GRANT_CLASSIFICATION}",
+            )
+
+        # Empty owner register: DEFAULT_DENY — self-asserted authenticated:true never suffices.
+        if self.default == "DENY" and not self.grants:
+            return fail(
+                "LEGACY_GRANT_DEFAULT_DENY",
+                "owner register empty; SELF_ASSERTED authenticated:true rejected (F12)",
+            )
+
+        entry = next(
+            (g for g in self.grants if g.get("grant_id") == grant_id),
+            None,
+        )
+        if entry is None:
+            return fail(
+                "LEGACY_GRANT_NOT_IN_REGISTER",
+                f"grant_id not in owner register: {grant_id}",
+            )
+
+        for field_name in LEGACY_GRANT_REQUIRED_ENTRY_FIELDS:
+            if field_name not in entry:
+                return fail(
+                    "LEGACY_GRANT_MALFORMED",
+                    f"register entry missing field: {field_name}",
+                )
+
+        status = str(entry.get("status") or "").upper()
+        if status == "REVOKED":
+            return fail("LEGACY_GRANT_REVOKED", grant_id)
+        if status == "EXPIRED":
+            return fail("LEGACY_GRANT_EXPIRED", grant_id)
+        if status != "ACTIVE":
+            return fail(
+                "LEGACY_GRANT_FIELD_MISMATCH",
+                f"register status must be ACTIVE, got {status!r}",
+            )
+
+        mismatches: List[str] = []
+        if entry.get("classification") != classification:
+            mismatches.append("classification")
+        if entry.get("policy_version") != policy_version:
+            mismatches.append("policy_version")
+        if entry.get("repository") != repository:
+            mismatches.append("repository")
+        if entry.get("commit") != commit:
+            # Allow entry.commit to be the historical object commit; also accept
+            # explicit grant.commit override matching the entry.
+            grant_commit = grant.get("commit")
+            if grant_commit != entry.get("commit") and entry.get("commit") != commit:
+                mismatches.append("commit")
+        for key in ("issuer", "authorized_actor", "path", "sha256", "bytes"):
+            if key in grant and grant.get(key) != entry.get(key):
+                mismatches.append(key)
+        if mismatches:
+            return fail(
+                "LEGACY_GRANT_FIELD_MISMATCH",
+                "mismatched fields: " + ",".join(mismatches),
+            )
+
+        # Provenance: entry must bind historical object identity (non-empty).
+        for key in ("path", "sha256", "issuer", "authorized_actor"):
+            val = entry.get(key)
+            if not isinstance(val, str) or not val.strip():
+                return fail("LEGACY_GRANT_MALFORMED", f"entry.{key} empty")
+        if not isinstance(entry.get("bytes"), int) or entry["bytes"] < 0:
+            return fail("LEGACY_GRANT_MALFORMED", "entry.bytes must be non-negative int")
+        if not FULL_SHA_RE.match(str(entry.get("commit") or "")):
+            return fail("LEGACY_GRANT_MALFORMED", "entry.commit must be full sha")
+        if not FULL_SHA_RE.match(str(entry.get("sha256") or "")):
+            # sha256 is 64 hex; allow 64-char hex separately
+            sha = str(entry.get("sha256") or "")
+            if not re.fullmatch(r"[0-9a-f]{64}", sha):
+                return fail("LEGACY_GRANT_MALFORMED", "entry.sha256 must be 64 hex")
+
+        return ok(
+            expertenkodex="LEGACY_GRANT_ACCEPTED",
+            legacy_grant_id=grant_id,
+            legacy_grant_source="OWNER_VERIFIED_REGISTER",
+        )
+
+
+# ---------------------------------------------------------------------------
 # Dispatch validator + exchange chain
 # ---------------------------------------------------------------------------
 
 
 class DispatchValidator:
-    def __init__(self, resolver: SourceResolver) -> None:
+    def __init__(
+        self,
+        resolver: SourceResolver,
+        legacy_registry: Optional[LegacyGrantRegistry] = None,
+    ) -> None:
         self.resolver = resolver
+        self.legacy_registry = legacy_registry or LegacyGrantRegistry()
 
     def validate_manifest(self, manifest: Dict[str, Any]) -> Dict[str, Any]:
         required = ("repository", "commit", "sources", "object")
@@ -670,7 +840,7 @@ class DispatchValidator:
             resolved.append(r["source"])
         # Expertenkodex V1 (F11): Kodex is MANDATORY for dispatch — not optional.
         # Absent EXPERTENKODEX/CODEX_* → MISSING_EXPERTENKODEX_HEADER unless an
-        # explicit authenticated legacy grant is present (never inferred from silence).
+        # owner-verified legacy grant matches the register (F12; never self-asserted).
         nested = manifest.get("expertenkodex") or manifest.get("expertenkodex_header")
         has_top = any(
             k in manifest
@@ -683,11 +853,21 @@ class DispatchValidator:
             )
         )
         if nested is None and not has_top:
-            if self._is_authenticated_legacy_grant(manifest):
+            grant = manifest.get("expertenkodex_legacy_grant")
+            if isinstance(grant, dict) and grant.get("authenticated") is True:
+                ev = self.legacy_registry.evaluate(
+                    grant,
+                    repository=manifest["repository"],
+                    commit=manifest["commit"],
+                )
+                if not ev.get("ok"):
+                    return ev
                 return ok(
                     resolved_sources=resolved,
                     object=manifest["object"],
-                    expertenkodex="LEGACY_GRANT_ACCEPTED",
+                    expertenkodex=ev.get("expertenkodex", "LEGACY_GRANT_ACCEPTED"),
+                    legacy_grant_id=ev.get("legacy_grant_id"),
+                    legacy_grant_source=ev.get("legacy_grant_source"),
                 )
             return fail(
                 "MISSING_EXPERTENKODEX_HEADER",
@@ -712,24 +892,6 @@ class DispatchValidator:
             return ek
         return ok(resolved_sources=resolved, object=manifest["object"])
 
-    @staticmethod
-    def _is_authenticated_legacy_grant(manifest: Dict[str, Any]) -> bool:
-        """Explicit authenticated legacy grant only — never infer from absent Kodex fields."""
-        grant = manifest.get("expertenkodex_legacy_grant")
-        if not isinstance(grant, dict):
-            return False
-        if grant.get("authenticated") is not True:
-            return False
-        if grant.get("classification") != "LEGACY_PRE_EXPERTENKODEX_V1":
-            return False
-        grant_id = grant.get("grant_id")
-        policy_version = grant.get("policy_version")
-        if not isinstance(grant_id, str) or not grant_id.strip():
-            return False
-        if not isinstance(policy_version, str) or not policy_version.strip():
-            return False
-        return True
-
 
 class ExchangeChain:
     def __init__(
@@ -738,10 +900,16 @@ class ExchangeChain:
         journal_dir: Optional[Path] = None,
         allowlist: Optional[Sequence[str]] = None,
         write_slots: Optional[Sequence[str]] = None,
+        legacy_registry: Optional[LegacyGrantRegistry] = None,
     ) -> None:
         self.repo_root = Path(repo_root)
         self.resolver = SourceResolver(self.repo_root)
-        self.validator = DispatchValidator(self.resolver)
+        self.legacy_registry = legacy_registry or LegacyGrantRegistry.load(
+            self.repo_root
+        )
+        self.validator = DispatchValidator(
+            self.resolver, legacy_registry=self.legacy_registry
+        )
         self.process_id = f"pid:{os.getpid()}:{uuid.uuid4().hex[:8]}"
         self.adapter = AgentAdapter(allowlist=allowlist, write_slots=write_slots)
         self.receiver = ReceiverAckProtocol(self.process_id)

@@ -19,11 +19,13 @@ from scripts.nexus_expertenkodex_validator import build_obligatory_expert_order_
 from scripts.nexus_github_exchange_chain import (
     ADAPTER_NOT_CONNECTED,
     DEFAULT_REPO,
+    LEGACY_GRANT_CLASSIFICATION,
     PINNED_COMMIT,
     AgentAdapter,
     DeliveryJournal,
     DispatchValidator,
     ExchangeChain,
+    LegacyGrantRegistry,
     ReceiverAckProtocol,
     SourceResolver,
     measure_efficiency,
@@ -688,12 +690,13 @@ class TestF11ExpertenkodexMandatoryDispatch(unittest.TestCase):
         self.assertFalse(r["ok"])
         self.assertEqual(r["code"], "MISSING_EXPERTENKODEX_HEADER")
 
-    def test_authenticated_legacy_grant_accepted(self) -> None:
+    def test_authenticated_legacy_grant_rejected_empty_register(self) -> None:
+        """F12 — self-asserted authenticated:true is never sufficient under empty register."""
         r = self.validator.validate_manifest(
             {
                 "repository": DEFAULT_REPO,
                 "commit": PINNED_COMMIT,
-                "object": "NEXUS_OMEGA_F11_LEGACY",
+                "object": "NEXUS_OMEGA_F12_SELF_ASSERTED",
                 "sources": self._base_sources(),
                 "expertenkodex_legacy_grant": {
                     "authenticated": True,
@@ -703,8 +706,8 @@ class TestF11ExpertenkodexMandatoryDispatch(unittest.TestCase):
                 },
             }
         )
-        self.assertTrue(r["ok"], r)
-        self.assertEqual(r.get("expertenkodex"), "LEGACY_GRANT_ACCEPTED")
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_DEFAULT_DENY")
 
     def test_unauthenticated_legacy_grant_rejected(self) -> None:
         r = self.validator.validate_manifest(
@@ -753,6 +756,229 @@ class TestF11ExpertenkodexMandatoryDispatch(unittest.TestCase):
             }
         )
         self.assertTrue(r["ok"], r)
+
+
+class TestF12LegacyGrantHardClose(unittest.TestCase):
+    """F12 — self-asserted authenticated:true never authority; owner register only."""
+
+    def _base_sources(self) -> list:
+        return [
+            {
+                "path": LAW_PATH,
+                "sha256": LAW_SHA256,
+                "bytes": LAW_BYTES,
+                "commit": PINNED_COMMIT,
+            }
+        ]
+
+    @staticmethod
+    def _owner_entry(
+        *,
+        grant_id: str = "LEGACY-GRANT-F12-OWNER-001",
+        status: str = "ACTIVE",
+        policy_version: str = "LEGACY_GRANT_POLICY_V1",
+        classification: str = LEGACY_GRANT_CLASSIFICATION,
+        commit: str = PINNED_COMMIT,
+        repository: str = DEFAULT_REPO,
+    ) -> dict:
+        return {
+            "grant_id": grant_id,
+            "classification": classification,
+            "policy_version": policy_version,
+            "status": status,
+            "issuer": "OPERATOR_ALEXANDER_VIA_AXIOM",
+            "authorized_actor": "CURSOR_PRAXIS",
+            "repository": repository,
+            "commit": commit,
+            "path": LAW_PATH,
+            "sha256": LAW_SHA256,
+            "bytes": LAW_BYTES,
+            "permitted_scope": "DISPATCH_ONLY",
+            "non_retroactive_cutoff": "2026-10-30T00:00:00Z",
+        }
+
+    def _validator_with_register(self, grants: list, default: str = "DENY") -> DispatchValidator:
+        registry = LegacyGrantRegistry(
+            register_doc={
+                "object": "NEXUS_OMEGA_EXPERTENKODEX_LEGACY_GRANT_REGISTER_V1",
+                "status": "C1_OWNER_CONTROLLED_TEST_FIXTURE",
+                "default": default,
+                "grants": grants,
+            }
+        )
+        return DispatchValidator(
+            SourceResolver(ROOT, expected_repository=DEFAULT_REPO),
+            legacy_registry=registry,
+        )
+
+    def test_self_asserted_empty_register_default_deny(self) -> None:
+        validator = DispatchValidator(
+            SourceResolver(ROOT, expected_repository=DEFAULT_REPO)
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_SELF_ASSERTED",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-SELF-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_DEFAULT_DENY")
+
+    def test_unauthenticated_grant_missing_kodex(self) -> None:
+        validator = DispatchValidator(
+            SourceResolver(ROOT, expected_repository=DEFAULT_REPO)
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_UNAUTH",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": False,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-UNAUTH-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "MISSING_EXPERTENKODEX_HEADER")
+
+    def test_wrong_classification_field_mismatch(self) -> None:
+        validator = self._validator_with_register(
+            [self._owner_entry()]
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_BAD_CLASS",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": "NOT_A_LEGACY_CLASS",
+                    "grant_id": "LEGACY-GRANT-F12-OWNER-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_FIELD_MISMATCH")
+
+    def test_grant_id_not_in_register(self) -> None:
+        validator = self._validator_with_register(
+            [self._owner_entry(grant_id="LEGACY-GRANT-F12-OTHER")]
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_NOT_IN_REGISTER",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-MISSING",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_NOT_IN_REGISTER")
+
+    def test_revoked_grant_rejected(self) -> None:
+        validator = self._validator_with_register(
+            [self._owner_entry(status="REVOKED")]
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_REVOKED",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-OWNER-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_REVOKED")
+
+    def test_expired_grant_rejected(self) -> None:
+        validator = self._validator_with_register(
+            [self._owner_entry(status="EXPIRED")]
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_EXPIRED",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-OWNER-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_EXPIRED")
+
+    def test_policy_version_mismatch(self) -> None:
+        validator = self._validator_with_register(
+            [self._owner_entry(policy_version="LEGACY_GRANT_POLICY_V1")]
+        )
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_POLICY_MISMATCH",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-OWNER-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V999",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "LEGACY_GRANT_FIELD_MISMATCH")
+
+    def test_owner_verified_register_fixture_pass(self) -> None:
+        """Positive path only via injected owner-verified register fixture."""
+        validator = self._validator_with_register([self._owner_entry()])
+        r = validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F12_OWNER_VERIFIED",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": LEGACY_GRANT_CLASSIFICATION,
+                    "grant_id": "LEGACY-GRANT-F12-OWNER-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertTrue(r["ok"], r)
+        self.assertEqual(r["expertenkodex"], "LEGACY_GRANT_ACCEPTED")
+        self.assertEqual(r["legacy_grant_source"], "OWNER_VERIFIED_REGISTER")
+        self.assertEqual(r["legacy_grant_id"], "LEGACY-GRANT-F12-OWNER-001")
 
 
 if __name__ == "__main__":
