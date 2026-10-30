@@ -267,9 +267,10 @@
       "result_path": "research/communication/github-only-exchange-enforcement-20261029/RESULT_EXPERTENKODEX_F10_F11_REMEDIATION_20261029_R1.md",
       "capability_census": "research/communication/github-only-exchange-enforcement-20261029/CAPABILITY_CENSUS_AUTHENTICATED_EXTERNAL_GITHUB_RECEIVER_20261029_R1.md",
       "github_ci_remediation_tip": "SUCCESS_10_OF_10_CHECK_RUNS_AT_bc56d350",
-      "validate_anchor_run": "41000843841",
-      "validate_structure_run": "41000843880",
-      "github_ci_this_tip": "PENDING_POST_PUSH_CI_RECEIPT_COMMIT",
+      "ci_receipt_tip_commit": "90ac0337310c61b3bd2991647beab7326f65737a",
+      "validate_anchor_run": "41002453936",
+      "validate_structure_run": "41002454021",
+      "github_ci_this_tip": "SUCCESS_10_OF_10_CHECK_RUNS_INCLUDING_SEMGREP_AT_90ac033",
       "terminal_pass": false
     }
   },
