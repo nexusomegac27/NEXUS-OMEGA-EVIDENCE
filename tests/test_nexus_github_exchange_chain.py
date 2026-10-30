@@ -15,6 +15,7 @@ import threading
 import unittest
 from pathlib import Path
 
+from scripts.nexus_expertenkodex_validator import build_obligatory_expert_order_header
 from scripts.nexus_github_exchange_chain import (
     ADAPTER_NOT_CONNECTED,
     DEFAULT_REPO,
@@ -28,6 +29,7 @@ from scripts.nexus_github_exchange_chain import (
     measure_efficiency,
     sha256_bytes,
 )
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -49,6 +51,28 @@ AXIOM_AUDIT_SHA256 = (
 
 FAKE_COMMIT = "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef"
 WRONG_REPO = "evil-org/not-nexus-evidence"
+
+
+def _kodex_header_for_law_and_handoff() -> dict:
+    """Obligatory Expertenkodex V1 header for exchange-chain ok-path manifests."""
+    return build_obligatory_expert_order_header(
+        mandate_source_manifest=[
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "path": LAW_PATH,
+                "bytes": LAW_BYTES,
+                "sha256": LAW_SHA256,
+            },
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "path": HANDOFF_PATH,
+                "bytes": HANDOFF_BYTES,
+                "sha256": HANDOFF_SHA256,
+            },
+        ]
+    )
 
 
 class TestF01SourceResolverCommitIdentity(unittest.TestCase):
@@ -495,6 +519,7 @@ class TestF05DispatchAndManifest(unittest.TestCase):
         self.assertEqual(r["code"], "MANIFEST_COMMIT_INVALID")
 
     def test_manifest_ok(self) -> None:
+        header = _kodex_header_for_law_and_handoff()
         r = self.validator.validate_manifest(
             {
                 "repository": DEFAULT_REPO,
@@ -508,6 +533,7 @@ class TestF05DispatchAndManifest(unittest.TestCase):
                         "commit": PINNED_COMMIT,
                     }
                 ],
+                **header,
             }
         )
         self.assertTrue(r["ok"], r)
@@ -547,6 +573,7 @@ class TestF06F07F08F09ExchangeAndSlots(unittest.TestCase):
                     "commit": PINNED_COMMIT,
                 },
             ],
+            **_kodex_header_for_law_and_handoff(),
         }
 
     def test_f06_synthetic_cycle_does_not_close_independent_ack(self) -> None:
@@ -629,6 +656,103 @@ class TestPinnedConstants(unittest.TestCase):
         audit = (ROOT / AXIOM_AUDIT_PATH).read_bytes()
         self.assertEqual(len(audit), AXIOM_AUDIT_BYTES)
         self.assertEqual(sha256_bytes(audit), AXIOM_AUDIT_SHA256)
+
+
+class TestF11ExpertenkodexMandatoryDispatch(unittest.TestCase):
+    """F11 — Kodexpflicht fail-closed; absent fields never grandfather."""
+
+    def setUp(self) -> None:
+        self.validator = DispatchValidator(
+            SourceResolver(ROOT, expected_repository=DEFAULT_REPO)
+        )
+
+    def _base_sources(self) -> list:
+        return [
+            {
+                "path": LAW_PATH,
+                "sha256": LAW_SHA256,
+                "bytes": LAW_BYTES,
+                "commit": PINNED_COMMIT,
+            }
+        ]
+
+    def test_absent_kodex_fails_missing_expertenkodex_header(self) -> None:
+        r = self.validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F11_ABSENT",
+                "sources": self._base_sources(),
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "MISSING_EXPERTENKODEX_HEADER")
+
+    def test_authenticated_legacy_grant_accepted(self) -> None:
+        r = self.validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F11_LEGACY",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": True,
+                    "classification": "LEGACY_PRE_EXPERTENKODEX_V1",
+                    "grant_id": "LEGACY-GRANT-F11-TEST-001",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertTrue(r["ok"], r)
+        self.assertEqual(r.get("expertenkodex"), "LEGACY_GRANT_ACCEPTED")
+
+    def test_unauthenticated_legacy_grant_rejected(self) -> None:
+        r = self.validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F11_LEGACY_UNAUTH",
+                "sources": self._base_sources(),
+                "expertenkodex_legacy_grant": {
+                    "authenticated": False,
+                    "classification": "LEGACY_PRE_EXPERTENKODEX_V1",
+                    "grant_id": "LEGACY-GRANT-F11-TEST-002",
+                    "policy_version": "LEGACY_GRANT_POLICY_V1",
+                },
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "MISSING_EXPERTENKODEX_HEADER")
+
+    def test_empty_expertenkodex_fields_c01(self) -> None:
+        r = self.validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F11_EMPTY",
+                "sources": self._base_sources(),
+                "EXPERTENKODEX": "",
+                "CODEX_COMMIT": "",
+                "CODEX_PATH": "",
+                "CODEX_BYTES": "",
+                "CODEX_SHA256": "",
+            }
+        )
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["code"], "C01_MISSING_EXPERTENKODEX_OR_REQUIRED_FIELD")
+
+    def test_full_kodex_header_pass(self) -> None:
+        header = _kodex_header_for_law_and_handoff()
+        r = self.validator.validate_manifest(
+            {
+                "repository": DEFAULT_REPO,
+                "commit": PINNED_COMMIT,
+                "object": "NEXUS_OMEGA_F11_FULL",
+                "sources": self._base_sources(),
+                **header,
+            }
+        )
+        self.assertTrue(r["ok"], r)
 
 
 if __name__ == "__main__":

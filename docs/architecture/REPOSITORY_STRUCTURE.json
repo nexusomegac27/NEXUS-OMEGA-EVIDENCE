@@ -234,16 +234,16 @@
     },
     "github-only-exchange-enforcement-20261029": {
       "path": "research/communication/github-only-exchange-enforcement-20261029",
-      "state": "PASS_WITH_CAVEATS_C1_EXPERTENKODEX_V1_INTEGRATED_ADAPTER_NOT_CONNECTED",
-      "object": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_V1_ENFORCEMENT_20261029_R0",
-      "parent": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2",
-      "pinned_commit": "63721950b3c0818e7f6892f83e9b5ee4fd0a5762",
+      "state": "PASS_WITH_MATERIAL_CAVEATS_C1_F10_WITNESSED_F11_FAIL_CLOSED",
+      "object": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_F10_F11_REMEDIATION_20261029_R1",
+      "parent": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_V1_ENFORCEMENT_20261029_R0",
+      "pinned_commit": "d1af9bc31317a07e9c4db29afe5c5faf1605b647",
       "draft_pr": 185,
       "policy": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
       "handoff": "docs/AI_HANDOFF_PROTOCOL.md",
       "chain_script": "scripts/nexus_github_exchange_chain.py",
       "chain_tests": "tests/test_nexus_github_exchange_chain.py",
-      "local_unit_tests": "33_OF_33_EK_PLUS_40_OF_40_EXCHANGE_PASS_REPORT_LEVEL",
+      "local_unit_tests": "33_OF_33_EK_PLUS_45_OF_45_EXCHANGE_78_OF_78_PASS_REPORT_LEVEL",
       "independent_expert_ack_cycle": "NOT_ESTABLISHED",
       "main_enforcement": "NOT_ESTABLISHED",
       "hostinger_www_write": false,
@@ -257,7 +257,16 @@
       "expertenkodex_validator": "scripts/nexus_expertenkodex_validator.py",
       "expertenkodex_tests": "tests/test_nexus_expertenkodex_v1.py",
       "adversarial_gates": "C01_TO_C16_PASS_LOCAL",
-      "receiver_independent_ack": "ADAPTER_NOT_CONNECTED"
+      "receiver_independent_ack": "NOT_ESTABLISHED",
+      "axiom_audit_r1": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_EXPERTENKODEX_V1_INDEPENDENT_ADJUDICATION_20261029_R1.md",
+      "axiom_audit_r1_sha256": "38339af22120fccd13aa30f9c14df7d71a038147694f40779714f91929502b18",
+      "f10_witness": "research/communication/github-only-exchange-enforcement-20261029/F10_TASK_ANCHOR_DISCREPANCY_WITNESS_20261029_R1.md",
+      "f10_status": "WITNESSED_DUAL_IDENTITY_NOT_SILENTLY_NORMALIZED",
+      "f11_status": "FAIL_CLOSED_MISSING_EXPERTENKODEX_HEADER",
+      "result_path": "research/communication/github-only-exchange-enforcement-20261029/RESULT_EXPERTENKODEX_F10_F11_REMEDIATION_20261029_R1.md",
+      "capability_census": "research/communication/github-only-exchange-enforcement-20261029/CAPABILITY_CENSUS_AUTHENTICATED_EXTERNAL_GITHUB_RECEIVER_20261029_R1.md",
+      "github_ci_this_tip": "PENDING_POST_PUSH",
+      "terminal_pass": false
     }
   },
   "research_lane_contract": {
@@ -331,7 +340,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.17",
+  "version": "1.7.19",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",

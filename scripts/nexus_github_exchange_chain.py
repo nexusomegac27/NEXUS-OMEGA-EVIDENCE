@@ -668,7 +668,9 @@ class DispatchValidator:
             if not r.get("ok"):
                 return r
             resolved.append(r["source"])
-        # Expertenkodex V1: fail-closed when EXPERTENKODEX / CODEX_* present
+        # Expertenkodex V1 (F11): Kodex is MANDATORY for dispatch — not optional.
+        # Absent EXPERTENKODEX/CODEX_* → MISSING_EXPERTENKODEX_HEADER unless an
+        # explicit authenticated legacy grant is present (never inferred from silence).
         nested = manifest.get("expertenkodex") or manifest.get("expertenkodex_header")
         has_top = any(
             k in manifest
@@ -680,24 +682,53 @@ class DispatchValidator:
                 "CODEX_SHA256",
             )
         )
-        if nested is not None or has_top:
-            header = dict(manifest)
-            if isinstance(nested, dict):
-                header.update(nested)
-            try:
-                from scripts.nexus_expertenkodex_validator import (
-                    ExpertenkodexHeaderValidator,
+        if nested is None and not has_top:
+            if self._is_authenticated_legacy_grant(manifest):
+                return ok(
+                    resolved_sources=resolved,
+                    object=manifest["object"],
+                    expertenkodex="LEGACY_GRANT_ACCEPTED",
                 )
-            except ImportError:  # pragma: no cover
-                from nexus_expertenkodex_validator import (  # type: ignore
-                    ExpertenkodexHeaderValidator,
-                )
-            ek = ExpertenkodexHeaderValidator().validate(
-                header, require_manifest_entries=True
+            return fail(
+                "MISSING_EXPERTENKODEX_HEADER",
+                "EXPERTENKODEX/CODEX_* required for GitHub-capable expert dispatch; "
+                "absent fields do not grandfather",
             )
-            if not ek.get("ok"):
-                return ek
+        header = dict(manifest)
+        if isinstance(nested, dict):
+            header.update(nested)
+        try:
+            from scripts.nexus_expertenkodex_validator import (
+                ExpertenkodexHeaderValidator,
+            )
+        except ImportError:  # pragma: no cover
+            from nexus_expertenkodex_validator import (  # type: ignore
+                ExpertenkodexHeaderValidator,
+            )
+        ek = ExpertenkodexHeaderValidator().validate(
+            header, require_manifest_entries=True
+        )
+        if not ek.get("ok"):
+            return ek
         return ok(resolved_sources=resolved, object=manifest["object"])
+
+    @staticmethod
+    def _is_authenticated_legacy_grant(manifest: Dict[str, Any]) -> bool:
+        """Explicit authenticated legacy grant only — never infer from absent Kodex fields."""
+        grant = manifest.get("expertenkodex_legacy_grant")
+        if not isinstance(grant, dict):
+            return False
+        if grant.get("authenticated") is not True:
+            return False
+        if grant.get("classification") != "LEGACY_PRE_EXPERTENKODEX_V1":
+            return False
+        grant_id = grant.get("grant_id")
+        policy_version = grant.get("policy_version")
+        if not isinstance(grant_id, str) or not grant_id.strip():
+            return False
+        if not isinstance(policy_version, str) or not policy_version.strip():
+            return False
+        return True
 
 
 class ExchangeChain:
