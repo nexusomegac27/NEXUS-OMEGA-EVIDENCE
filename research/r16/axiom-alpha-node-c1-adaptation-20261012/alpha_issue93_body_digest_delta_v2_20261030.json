@@ -1,0 +1,62 @@
+{
+  "schema_version": "alpha_issue93_body_digest_delta_v2",
+  "source": "nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+  "pinned_main_before": "e726697213b2d637d42f2929c98a8c0f5f63a477",
+  "predecessor": {
+    "sha256": "69787c3cf2e59401eb9ea52048f8c0f0ba4cf928040f1095a8b4c99986e0f4fb",
+    "git_blob": "a7e8314a9742c2eeb04e98f8ba02deddbd16e92c",
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_issue93_real_body_digest_inventory_v1_20261030.json"
+  },
+  "old_count": 201,
+  "old_last_comment_id": 6516343927,
+  "delta_count": 9,
+  "total_count": 210,
+  "last_comment_id": 6526826821,
+  "pins": [
+    {
+      "id": 6517745738,
+      "bytes": 3207,
+      "sha256": "75f6198a81a345896450bccfb6b378fd1b347fbacac9719883c9c904be6346c7"
+    },
+    {
+      "id": 6518388427,
+      "bytes": 2831,
+      "sha256": "dcccd31e347c1af103f3ab1ebbab3eb418b5cae99ae418a3b181b8c857f154d1"
+    },
+    {
+      "id": 6519349549,
+      "bytes": 3555,
+      "sha256": "e9e15d70840122b65710717f7acd563d5f0d3dde8b13eb310483f5383396c209"
+    },
+    {
+      "id": 6520594552,
+      "bytes": 2919,
+      "sha256": "e022efa7925f420f7478864c304510ba7d3eb113b9adad0d9045cbfd6d785b9d"
+    },
+    {
+      "id": 6522407193,
+      "bytes": 3068,
+      "sha256": "2493bb36eb6628d9588153f4511497f0ec4301ee3f39f34774eec89623c9f8ca"
+    },
+    {
+      "id": 6523624851,
+      "bytes": 4018,
+      "sha256": "361259a228fe9c1b504a515dc4454d499821e031df7d3941cb289d12854e61d4"
+    },
+    {
+      "id": 6523871576,
+      "bytes": 3306,
+      "sha256": "3f0b278b87b9b671a6b031db63d27ae6f5fae1465d9e071af1693c1c2d037a1f"
+    },
+    {
+      "id": 6525110654,
+      "bytes": 2817,
+      "sha256": "3a38fd85e02cc5ddf3aeca1acbf685cfa73b3397c82663472fa7e31ce740bc92"
+    },
+    {
+      "id": 6526826821,
+      "bytes": 2673,
+      "sha256": "9355e5ce1e254f1a081918a0021831de49b3da0a7e29fd40c16f00e48990797d"
+    }
+  ]
+}
