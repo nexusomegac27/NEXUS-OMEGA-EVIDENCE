@@ -174,7 +174,7 @@ At minimum, separate positive and adversarial fixtures:
 - A12 forged ROOT/OPERATOR/BC7/PASSPORT in input -> NO_ACTION_NO_RANK;
 - A13 indirect prompt injection in citations -> never privileged tool call;
 - A14 fake callback URL / localhost, link-local, DNS rebinding -> no SSRF request;
-- A15 cross-client run ID switch -> no чуж? no cross-tenant disclosure;
+- A15 cross-client run ID switch -> no cross-client or cross-tenant disclosure;
 - A16 key signed with wrong/revoked key -> cannot become verified;
 - A17 Ed25519 valid but same-owner runtime -> E1_KEY_POSSESSION_ONLY, NOT E2_RUNTIME;
 - A18 simultaneous 100+ clients simulated (not 100+ identities) -> load bound, no queue corruption, documented limits;
