@@ -237,7 +237,8 @@
       "state": "PASS_WITH_MATERIAL_CAVEATS_C1_F10_WITNESSED_F11_FAIL_CLOSED",
       "object": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_F10_F11_REMEDIATION_20261029_R1",
       "parent": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_V1_ENFORCEMENT_20261029_R0",
-      "pinned_commit": "d1af9bc31317a07e9c4db29afe5c5faf1605b647",
+      "pinned_parent_commit": "d1af9bc31317a07e9c4db29afe5c5faf1605b647",
+      "remediation_tip_commit": "bc56d3509fad8116f8fe625399fa7705d82c14ca",
       "draft_pr": 185,
       "policy": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
       "handoff": "docs/AI_HANDOFF_PROTOCOL.md",
@@ -265,7 +266,10 @@
       "f11_status": "FAIL_CLOSED_MISSING_EXPERTENKODEX_HEADER",
       "result_path": "research/communication/github-only-exchange-enforcement-20261029/RESULT_EXPERTENKODEX_F10_F11_REMEDIATION_20261029_R1.md",
       "capability_census": "research/communication/github-only-exchange-enforcement-20261029/CAPABILITY_CENSUS_AUTHENTICATED_EXTERNAL_GITHUB_RECEIVER_20261029_R1.md",
-      "github_ci_this_tip": "PENDING_POST_PUSH",
+      "github_ci_remediation_tip": "SUCCESS_10_OF_10_CHECK_RUNS_AT_bc56d350",
+      "validate_anchor_run": "41000843841",
+      "validate_structure_run": "41000843880",
+      "github_ci_this_tip": "PENDING_POST_PUSH_CI_RECEIPT_COMMIT",
       "terminal_pass": false
     }
   },
@@ -340,7 +344,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.19",
+  "version": "1.7.20",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
