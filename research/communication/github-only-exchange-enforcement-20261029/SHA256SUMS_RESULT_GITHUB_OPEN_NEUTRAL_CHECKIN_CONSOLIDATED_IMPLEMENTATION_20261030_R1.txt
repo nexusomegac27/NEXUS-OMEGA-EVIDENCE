@@ -1,0 +1,18 @@
+# SHA256SUMS · Open Neutral Check-in Consolidated Implementation R1
+# OBJECT = NEXUS_OMEGA_CURSOR_AGENT_BORDER_OPEN_NEUTRAL_CHECKIN_CONSOLIDATED_IMPLEMENTATION_RETURN_20261030_R1
+# FORMAT = <sha256>  <bytes>  <relative_path>
+# All digests are full 64-hex; no truncations.
+
+4250d2c565be5fc4c17c7b1cebbb7d0e522ba64d52119f3b4787b0540e8ec88d  7869  research/communication/github-only-exchange-enforcement-20261029/RESULT_GITHUB_OPEN_NEUTRAL_CHECKIN_CONSOLIDATED_IMPLEMENTATION_20261030_R1.md
+79be9bb4a4f19327f4f850a4f548baeb8ae1f7ff238594f6b252600570e362f5  12362  examples/open-neutral-checkin/open-neutral-checkin.mjs
+401febed7489b541e2631a7f6500bc2aafb769954b1e50d90ea60c38c939f5a2  3520  examples/open-neutral-checkin/server.mjs
+f40186f0b03d162e088b205341a221cd646428caab62ede63a207aafe508ebf2  7900  examples/open-neutral-checkin/selftest.mjs
+5daa1d4fbdfe3ece5892a799443828abf636e679ecd0d81c64becd856d86ab09  268  examples/open-neutral-checkin/selftest.ps1
+bfbc179f8810701581da1093d4268e4c40a3c386bca2f7ced69d047b6478dcaa  5383  examples/open-neutral-checkin/ui/index.html
+e30f604adb3d607debef78772e7cd8878ffc0975fcf28553d38d4f1318422f82  4258  examples/open-neutral-checkin/fixtures/a00-a30.json
+4e6fca9d63d62c7819377ae2b2891f44030c6eadf512e99588b7a977b744b320  6517  tests/open-neutral-checkin.test.mjs
+460d109b8388d09758890a21884da77ea300085e96d9e5e3de2e417a89fbe14c  1571  schema/open-neutral-checkin-v1.json
+be52986ba364da8681a9cdb49a1a501202f9a7ad8faeb0be7aecfca0fbdf5977  999  .github/workflows/validate-open-neutral-checkin.yml
+7477957ec50f9846e113ab9722badb1000dff1409e7e362bb8307a976ce4ea10  2448  research/communication/github-only-exchange-enforcement-20261029/G1_SOURCE_CENSUS_AGENT_BORDER_B01_B18_20261030_R1.md
+84abd4af6e7c48e9de3e43f8745fb580956c33bab527211c9aeef08d986b1cea  990  research/communication/github-only-exchange-enforcement-20261029/G4_MULTI_TRANSPORT_V3_DRAFT_ONLY_20261030_R1.md
+de8e36141ffc0790c47b8faff99f7cff7eead912da7f4b3eb9278b716786af44  2017  research/communication/github-only-exchange-enforcement-20261029/G5_SCIENTIFIC_STUDY_PROTOCOL_OPEN_NEUTRAL_CHECKIN_20261030_R1.md

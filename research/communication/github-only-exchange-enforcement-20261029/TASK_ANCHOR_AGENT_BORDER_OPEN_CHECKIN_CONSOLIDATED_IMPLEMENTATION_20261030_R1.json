@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_BORDER_OPEN_NEUTRAL_CHECKIN_CONSOLIDATED_IMPLEMENTATION_20261030_R1",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_SOFT_GOVERNANCE",
+    "recipient_role": "CURSOR_PRAXIS_OWNER_GOVERNED",
+    "verified_github_actor": "OWNER_GOVERNED_REPO_ONLY_NO_EXTERNAL_AGENT_PRINCIPAL_CLAIM",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_CURSOR_OPEN_NEUTRAL_AGENT_BORDER_CHECKIN_HARDENING_20261030_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "5390655654b954836cea35ccfa42227072bc989f",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/TASK_ANCHOR_OPEN_NEUTRAL_AGENT_BORDER_CHECKIN_20261030_R0.json",
+    "predecessor_bytes": 8118,
+    "predecessor_sha256": "25db6d476f2f264b432b5e24292b799add6b5756eb9a826104997bdc5119029b"
+  },
+  "delegation": {
+    "scope": "IMPLEMENT_ACTUAL_AGENT_BORDER_OPEN_NEUTRAL_CHECKIN_IN_EXISTING_OWNER_CODE_AND_ISOLATED_LOCAL_TESTS_WITH_GITHUB_EVIDENCE_RETURN",
+    "allowed_actions": [
+      "source-exact GitHub and Hostinger WWW read-only forensic inventory",
+      "make runnable code, schema, isolated local check-in service and controlled UI integration in existing owner branch",
+      "adversarial A00-A30 fixtures, privacy and scientific experimental controls, CI and rollback dry run",
+      "append-only Github evidence and source-pinned implementation proof under owner control",
+      "prepare independently reviewable first external agent pilot without executing it"
+    ],
+    "prohibited_actions": [
+      "deploy live external writable endpoint, activate production ingress or first external agent tests",
+      "create parallel Border/AEGIS/SFT or trust authority",
+      "grant external writer access, verified model identity from self claim, BC tier or automatic passport",
+      "replace GitHub-only V2 with unapproved transport V3, alter main ruleset, merge PR185",
+      "publish sensitive data, issue live credentials, Hostinger/WWW unapproved writes, Native App R3"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Implement and close the existing NEXUS Agent Border open-neutral check-in as an executable, deterministic and fail-closed local reference, with evidence-proven readiness for subsequent separately authorized external agent tests.",
+    "deliverables": [
+      "WWW/Hostinger/source exact border inventory and B01-B18 categorized defect report",
+      "actual existing-source integrated protocol discovery, local isolated check-in service and UI adapter",
+      "schema, quarantine, idempotent evidence ledger, consent/retention and anonymous pseudonymous separation",
+      "open-neutral unrestricted-provider model registry with bounded resource consumption and no prestige ranks",
+      "accountless key-possession-only optional sandbox protocol and separate V3 transport decision draft",
+      "preregistered first agent reaction experiment with null controls, safe refusal and sourced dissent",
+      "all 31 A00-A30 executable falsification tests plus F10-F12 regressions and exact CI",
+      "independent browser/staging source evidence where permitted, rollback proof and scoped holds",
+      "one GitHub-only source-bound implementation return for AXIOM adjudication"
+    ],
+    "falsifiers": [
+      "unrecognized provider or anonymous agent is rejected solely based on provider allowlist",
+      "check-in self-claim grants privileged tool, rank, passport or website write",
+      "untrusted input triggers SSRF, XSS, prompt injection into privileged action or cross-agent data leak",
+      "negative controls not detected by end-to-end code paths",
+      "runtime or WWW PASS claimed with only static plans or synthetic tests",
+      "first real agent contacted without subsequent operator acceptance"
+    ],
+    "acceptance_tests": [
+      "runnable local service and UI with single reproducible command and no external accounts required for observation",
+      "source- and version-bound 31 cases A00-A30 with PASS/FAIL_EXPECTED/HOLD as observed",
+      "deterministic end-to-end no privilege leakage, resource caps, replay/nonce and privacy",
+      "current GitHub CI exact commit and owner-code repo hashes independently read back",
+      "source-forensic WWW/Hostinger inventory with no invented evidence; rollback dry-run",
+      "real external tests NOT_EXECUTED and separate pilot authorization preparation"
+    ],
+    "pause_conditions": [
+      "missing original WWW source/Hostinger or permission-bound source access",
+      "new live public POST, provider privileges or alternate scientific transport requires specific owner authorization",
+      "confirmed integrity/privacy/safety defect in scope => quarantine and local fail-closed repair",
+      "independent runtime witness not established for claim promotion"
+    ],
+    "not_executed": [
+      "no external agent test enrollment or challenge delivery",
+      "no live public check-in endpoint or new Hostinger service deployment",
+      "no production GitHub main merge or ruleset mutation",
+      "no NATIVE_APP_R3 activation"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AGENT_BORDER_OPEN_NEUTRAL_CHECKIN_CONSOLIDATED_IMPLEMENTATION_ANCHOR_20261030_R1",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "schema/anchor/source mismatch or hidden manual byte substitution",
+      "anonymous event causes privileged authority, persistent hidden profiling or unintended publication",
+      "new root/parallel AEGIS or SFT introduced",
+      "live runtime PASS claimed without exact independent code and host evidence"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "ad3949fa1f739b9c50bee62ee5544aec0812d3bc",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_AGENT_BORDER_OPEN_CHECKIN_CONSOLIDATED_IMPLEMENTATION_MAXI_ORDER_20261030_R1.md",
+        "bytes": 26800,
+        "sha256": "ecea5530306e241407c580f6988c34b7fe260b459944a4a028df8b05bc940537",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "5390655654b954836cea35ccfa42227072bc989f",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/TASK_ANCHOR_OPEN_NEUTRAL_AGENT_BORDER_CHECKIN_20261030_R0.json",
+        "bytes": 8118,
+        "sha256": "25db6d476f2f264b432b5e24292b799add6b5756eb9a826104997bdc5119029b",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "2ba92e051beb0442f4ad8edd9f6ab7f641957b38",
+        "path": "docs/architecture/NEXUS_AGENT_BORDER_OPEN_NEUTRAL_CHECKIN_V1_BLUEPRINT_20261030.md",
+        "bytes": 20107,
+        "sha256": "d15d9ff472bb6b0761d17c3cf6ba7ace9596315925bfe51d90b021884db04950",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "b17d38266777bad61178e608d09e41726b9f4769",
+        "path": "docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md",
+        "bytes": 15388,
+        "sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "5390655654b954836cea35ccfa42227072bc989f",
+        "path": "docs/governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md",
+        "bytes": 9203,
+        "sha256": "ad471285d3b3b2f24cb5b832b749498fc11dca486957ddd5478a1ed3b91d6fcc",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_CONTENT_ONLY_NO_SENSITIVE_OR_RIGHTS_UNCLEARED_DATA",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "real runnable check-in reference, not merely API plan",
+      "no fixed provider whitelist, anonymous observation allowed, bounded resources",
+      "scientific input and outcome collection stable and source pinned"
+    ],
+    "robustness_stability": [
+      "all critical negative tests fail closed across actual dispatch/service/HTML paths",
+      "privacy isolation, idempotent replay protection and explicit system limits",
+      "no live external write without owner grant, recovery + rollback dry run"
+    ],
+    "traceability_comprehensibility": [
+      "complete immutable prior source DAG and independent readback",
+      "clear origin/claim ceilings, safe refusal and dissent preserved",
+      "separate local reference, staging evidence and live WWW evidence statuses"
+    ]
+  }
+}

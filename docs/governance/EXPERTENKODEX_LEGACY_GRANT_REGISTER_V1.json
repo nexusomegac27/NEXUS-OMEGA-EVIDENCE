@@ -1,0 +1,22 @@
+{
+  "object": "NEXUS_OMEGA_EXPERTENKODEX_LEGACY_GRANT_REGISTER_V1",
+  "schema_version": "1.0.0",
+  "status": "C1_OWNER_CONTROLLED_EMPTY_DEFAULT_DENY",
+  "authority": "NEXUS_OPERATOR_GITHUB_OWNER_VERIFIED_ONLY",
+  "default": "DENY",
+  "owner_github_login": "nexusomegac27",
+  "anchor_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "grants": [],
+  "identity_policy": "SELF_ASSERTED_AUTHENTICATED_TRUE_NEVER_SUFFICIENT; OWNER_VERIFIED_REGISTER_ENTRY_REQUIRED_FOR_LEGACY_GRANT",
+  "prohibited": [
+    "SELF_ASSERTED_LEGACY_GRANT",
+    "IMPLICIT_GRANDFATHERING",
+    "MANIFEST_AUTHENTICATED_TRUE_AS_AUTHORITY",
+    "GRANT_ID_STRING_ALONE_AS_AUTHORITY"
+  ],
+  "notes": [
+    "Empty grants + default DENY closes F12_SELF_ASSERTED_LEGACY_GRANT_AUTHENTICATION_BYPASS.",
+    "Future entries require Operator/owner-verified historical object identity (commit/path/sha256/bytes) plus authorized actor and issuer."
+  ]
+}

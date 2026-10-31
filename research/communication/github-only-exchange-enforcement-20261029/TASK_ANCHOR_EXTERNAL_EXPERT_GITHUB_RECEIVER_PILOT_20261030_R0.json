@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_EXTERNAL_EXPERT_INDEPENDENT_GITHUB_RECEIVER_PILOT_20261030_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_SOFT_GOVERNANCE",
+    "recipient_role": "INDEPENDENT_EXTERNAL_GITHUB_EXPERT_PRE_ENROLLMENT",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_GITHUB_RECEIVER_PILOT_READINESS_INDEPENDENT_ADJUDICATION_20261030_R1",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "e6d0c336660f4017200cd1ea9d7ec1e9faf85221",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_GITHUB_RECEIVER_PILOT_READINESS_INDEPENDENT_ADJUDICATION_20261030_R1.md",
+    "predecessor_bytes": 7137,
+    "predecessor_sha256": "a3b16ee65abff6b3ed1c026f420a0d3b3b3c416e60eea30137b1acef9c0235a9"
+  },
+  "delegation": {
+    "scope": "READ_ONLY_GITHUB_SOURCE_FETCH_INDEPENDENT_REHASH_LOCAL_NEGATIVE_CONTROL_AND_EXISTING_AUTHORIZED_PR185_COMMENT_ONLY",
+    "allowed_actions": [
+      "read public GitHub objects at exact commit/path",
+      "independently verify receiver principal and rehash source bytes",
+      "perform negative mutation in isolated local copy",
+      "publish public-safe receipt on PR185 only if existing distinct-account permission is verified"
+    ],
+    "prohibited_actions": [
+      "create new GitHub actor, permission, App, PAT or branch",
+      "use owner account or producer token to impersonate external receiver",
+      "manually transfer source packages via Operator",
+      "push code or write to Hostinger, WWW, rulesets, PR merge or Native App R3"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can a distinct independently authenticated external GitHub principal fetch and rehash the exact source objects and submit a verifiable public-safe ACK through an already-authorized GitHub return surface?",
+    "deliverables": [
+      "identity proof by authenticated GitHub principal ID without disclosing secrets",
+      "source-exact independent SHA256/bytes for each pinned input",
+      "local one-byte mutation negative control FAIL_EXPECTED",
+      "public-safe PR185 comment witness if already permitted, otherwise explicit scoped HOLD"
+    ],
+    "falsifiers": [
+      "same GitHub principal as Cursor owner / producer",
+      "fetched byte count or SHA256 differs from immutable pinned source",
+      "no independent fetch execution witness",
+      "no existing authenticated GitHub comment permission"
+    ],
+    "acceptance_tests": [
+      "all required source commits and paths independently fetched",
+      "independent receiver SHA256 equals expected digest for each tested source",
+      "GitHub comment author identity matches distinct independently authenticated receiver, if comment submitted",
+      "AXIOM rehash and separate adjudication still required"
+    ],
+    "pause_conditions": [
+      "missing GitHub identity or permission",
+      "source integrity mismatch",
+      "receiver uses owner delegated credentials",
+      "private or unlicensed source proposed for public return"
+    ],
+    "not_executed": [
+      "no external account enrollment",
+      "no code branch writes or receiver write slot grants",
+      "no production pilot activation",
+      "no Native App R3 or Hostinger/WWW deploy"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_EXTERNAL_GITHUB_RECEIVER_PILOT_TASK_ANCHOR_20261030_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "claimed receiver identity equals GitHub owner",
+      "missing or mismatched original source SHA256",
+      "unauthorized GitHub write or private upload",
+      "false terminal ACK based on synthetic or sender evidence"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "5246032a11e32f97ff23e39b461125f52e145093",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_EXTERNAL_EXPERT_INDEPENDENT_GITHUB_RECEIVER_PILOT_ORDER_20261030_R0.md",
+        "bytes": 11023,
+        "sha256": "4dca2096ec2f62f155dec17a8344553e849ca149503411030506b17dcd88598c",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "b17d38266777bad61178e608d09e41726b9f4769",
+        "path": "docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md",
+        "bytes": 15388,
+        "sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "7bc257103f3923dbfd633bc1f43ccb73de1b59bc",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_GITHUB_RECEIVER_PILOT_READINESS_ORDER_20261030_R0.md",
+        "bytes": 6512,
+        "sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "e6d0c336660f4017200cd1ea9d7ec1e9faf85221",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_GITHUB_RECEIVER_PILOT_READINESS_INDEPENDENT_ADJUDICATION_20261030_R1.md",
+        "bytes": 7137,
+        "sha256": "a3b16ee65abff6b3ed1c026f420a0d3b3b3c416e60eea30137b1acef9c0235a9",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "1e74d6860b91e9e3edcc62609ba191e5f06cd24b",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/RECEIVER_INDEPENDENT_ACK_SCHEMA_V1.json",
+        "bytes": 5256,
+        "sha256": "e56090abf89dddc4d39f79700af8bed5a16edb736562a07ff6b2e7ab5c302373",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_PROVENANCE_ONLY_NO_PERSONAL_PRIVATE_OR_LICENSE_UNCLEARED_BYTES",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "distinct authenticated GitHub principal self-fetches with zero Operator file transfer",
+      "retains full immutable commit+byte+SHA256 receipts"
+    ],
+    "robustness_stability": [
+      "one-byte local negative mutation yields hash mismatch",
+      "missing actor or comment permission gives a scoped fail-closed HOLD"
+    ],
+    "traceability_comprehensibility": [
+      "single immutable source DAG pin with predecessor",
+      "explicit SYNTHETIC_NOT_EXTERNAL versus real receiver claim",
+      "approved external PR185 comment route separate from internal issue93 bridge contract"
+    ]
+  }
+}

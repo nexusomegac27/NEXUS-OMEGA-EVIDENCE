@@ -4,6 +4,32 @@ Use this protocol whenever responsibility moves between Operator, AXIOM, Cursor/
 
 The objective is a contiguous causal chain that survives chat limits, session loss, model changes, and ephemeral execution environments.
 
+## Operator GitHub-only data exchange mandate (prospective, 2026-10-29)
+
+For every agent with verified GitHub access, the **only** material manually forwarded by the Operator is AXIOM's pure work-order text. All research data, predecessor objects, full evidence packages, source files, returns, and receive/rehash records must be retrieved or transmitted through the governed GitHub data channel. Requirements and narrow scientifically compelled exception procedure: [NEXUS GitHub-Only Agent Data Exchange Law V2](governance/NEXUS_GITHUB_ONLY_AGENT_DATA_EXCHANGE_LAW_V2.md). When source graph closure, receiving actor or independently verified receipt is unavailable, mark scoped `SOURCE_GAP_BLOCKED` / `RECEIVER_INDEPENDENT_ACK=NOT_ESTABLISHED`; never ask the Operator to manually assemble missing packets as the ordinary repair path.
+
+This addendum is a **draft branch proposal**, not proof of merge, required checks, deployment, agent access or real dispatch. Existing historical evidence and governance precedence remain unchanged.
+
+## Mandatory Expertenkodex V1 reference in every new expert order
+
+A new AXIOM-authored expert assignment for an agent with verified GitHub data access MUST include the following **pure work-order text**. The Operator forwards only this work order, **not** source attachments. Resolve the code and research input objects from GitHub independently and verify exact immutable commit, byte length and SHA-256 before processing. This is prospective and subject to the existing operator/security/actor-rights hierarchy.
+
+```text
+EXPERTENKODEX = NEXUS_OMEGA_AXIOM_EXPERTENKODEX_GITHUB_COMMUNICATION_20261029_V1
+CODEX_REPOSITORY = nexusomegac27/NEXUS-OMEGA-EVIDENCE
+CODEX_COMMIT = b17d38266777bad61178e608d09e41726b9f4769
+CODEX_PATH = docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md
+CODEX_BYTES = 15388
+CODEX_SHA256 = adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab
+DATA_ROUTE = GITHUB_ONLY
+MANUAL_OPERATOR_ROUTE = PURE_WORK_ORDER_TEXT_ONLY
+MANDATE_SOURCE_MANIFEST = <PINNED_COMMIT_PATH_BYTES_SHA256>
+ACK_REQUIRED = INDEPENDENT_RECEIVER_FETCH_AND_REHASH
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+```
+
+The codex [source](governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md) is a **draft governance proposal** until owner review/merge; code presence is not CI enforcement, external registration or runtime proof. The mandatory reference format is operator-directed here, and its technical enforcement must be independently tested. With no authorized receiver or incomplete source graph, mark `SOURCE_GAP_BLOCKED` or `ADAPTER_NOT_CONNECTED`; never replace data-channel evidence with manual operator file collection. The extraordinary scientific transfer exception is narrowly documented in the codex and GitHub-only Law V2.
+
 ## Required handoff object
 
 Every material handoff should contain at least:

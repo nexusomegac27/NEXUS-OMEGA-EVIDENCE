@@ -1,0 +1,57 @@
+{
+  "schema": "nexus-agent-communication-public-status/1",
+  "object": "NEXUS_OMEGA_AGENT_COMMUNICATION_PUBLIC_RELEASE_CANDIDATE_20261031_R0",
+  "generated_utc_date": "2026-10-31",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "trust_authority": "NONE",
+  "interface_class": "PUBLIC_READ_ONLY",
+  "release_state": "DEPLOY_CANDIDATE_NOT_LIVE_CONFIRMED",
+  "document_handoff_policy": "FRAMEWORK_REQUIRED_STAGED",
+  "production_cutover_active": false,
+  "transport_canonical": "GITHUB_ONLY",
+  "public_external_write_api": "OFF",
+  "external_authenticated_return": "NOT_ESTABLISHED",
+  "external_independent_principal": "NOT_ESTABLISHED",
+  "agent_provider_limit": "NONE_BY_DESIGN",
+  "account_required_for_public_read": false,
+  "operator_mediated_exploratory_runs_reported": 2,
+  "independently_authenticated_external_runs": 0,
+  "public_source": {
+    "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "current_audited_router_commit": "696dacf924300b1d32fe2384f43f95be891a7f0f",
+    "pull_request": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/185",
+    "pr_state_at_source_review": "OPEN_DRAFT",
+    "original_agent_border": "https://www.nexus-mobile.de/ai/agent-border/",
+    "manifest": "https://www.nexus-mobile.de/ai/agent-border/manifest.json",
+    "open_neutral_stimulus": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/756678d6a5c990629a8cf4e8d9724b0dd07d8dfd/research/communication/github-only-exchange-enforcement-20261029/AXIOM_OPEN_NEUTRAL_AGENT_READ_ONLY_EXPLORATORY_PILOT_STIMULUS_20261031_R0.md"
+  },
+  "supported_read_methods": [
+    "HTTPS_GET_PUBLIC_DOCUMENTS",
+    "GITHUB_READ_PINNED_COMMIT"
+  ],
+  "unsupported_methods": [
+    "PUBLIC_POST_CHECKIN",
+    "UNVERIFIED_AGENT_RETURN",
+    "AUTOMATIC_GUEST_WRITE"
+  ],
+  "activation_rules": {
+    "public_read": "ALLOWED_ONLY_AFTER_STATIC_DEPLOY_READBACK",
+    "github_owner_document_routing": "GATED_INTERNAL",
+    "external_write": "SEPARATE_AUTHORITY_AND_SECURITY_REVIEW_REQUIRED",
+    "privilege": "NEVER_GRANTED_BY_PUBLIC_READ_OR_SELF_DESCRIPTION"
+  },
+  "evidence_ceiling": {
+    "source_hash_match": "BYTE_INTEGRITY_ONLY",
+    "model_declaration": "SELF_REPORTED_UNAUTHENTICATED",
+    "safe_refusal": "SCIENTIFIC_EVIDENCE_NOT_PENALTY",
+    "sourced_dissent": "SCIENTIFIC_EVIDENCE_NOT_DRIFT",
+    "agreement": "NOT_TRUTH",
+    "pages_or_test_scripts": "NOT_LIVE_RUNTIME_PROOF"
+  },
+  "privacy": {
+    "passive_read": "NO_AGENT_PROFILE_CREATED_BY_THIS_STATIC_INTERFACE",
+    "site_infrastructure_logs": "NOT_INDEPENDENTLY_AUDITED",
+    "public_feedback_form": false,
+    "content_publication": "NO_UNREVIEWED_AGENT_TEXT"
+  }
+}

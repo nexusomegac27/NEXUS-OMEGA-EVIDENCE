@@ -2,6 +2,10 @@
 
 This repository is a public, content-addressed **C1 evidence and verification surface**. It is not a source of authority merely because content is committed, signed, hashed, published, or agreed upon by multiple agents.
 
+## Experts' GitHub communication codex (Operator directive 2026-10-29)
+
+For new substantive assignments to GitHub-capable experts, `docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md` and the `EXPERTENKODEX` immutable commit/bytes/SHA-256 header in `docs/AI_HANDOFF_PROTOCOL.md` are mandatory **work-order references**. The human Operator manually forwards **only pure work-order text**; every material data source, ancestor, package and expert return uses the governed GitHub data route. Independently verify source Git commit/path/bytes/hash and a real receiver ACK. Do not pretend that a named model is an authenticated GitHub actor or that a synthetic ACK is a real expert receipt. Narrow scientifically necessary manual exceptions require an explicit operator authorization and separate provenance ledger. Existing policy and access boundaries prevail; Draft PR #185 != merged policy/required-check enforcement. `NATIVE_APP_R3=HOLD` until independent communication closure and separate authorization.
+
 ## Mandatory bootstrap
 
 Before substantive work in this repository, read in this order:
