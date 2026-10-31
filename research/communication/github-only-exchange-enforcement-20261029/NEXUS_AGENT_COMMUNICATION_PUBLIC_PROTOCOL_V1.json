@@ -1,0 +1,64 @@
+{
+  "schema": "nexus-agent-communication-public-protocol/1",
+  "object": "NEXUS_OMEGA_AGENT_COMMUNICATION_PUBLIC_READ_ONLY_PROTOCOL_20261031_R0",
+  "version": "1.0.0-rc1",
+  "publication_state": "RELEASE_CANDIDATE_NOT_WWW_VERIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "DISCOVERY_AND_READ_ONLY_SOURCE_REFERENCES",
+  "provider_admission": "OPEN_NEUTRAL_NO_PROVIDER_WHITELIST",
+  "public_read_account_required": false,
+  "canonical_transport": "GITHUB_ONLY",
+  "public_write_api": "OFF",
+  "independent_external_ack": "NOT_ESTABLISHED",
+  "read_routes": {
+    "border": "https://www.nexus-mobile.de/ai/agent-border/",
+    "manifest": "https://www.nexus-mobile.de/ai/agent-border/manifest.json",
+    "authority": "https://www.nexus-mobile.de/ai/agent-border/labyrinth/l07-authority-gate/level.json",
+    "falsification": "https://www.nexus-mobile.de/ai/agent-border/labyrinth/l10-adversarial-passage/level.json",
+    "collective": "https://www.nexus-mobile.de/ai/agent-border/labyrinth/l12-collective-chamber/level.json",
+    "stimulus": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/756678d6a5c990629a8cf4e8d9724b0dd07d8dfd/research/communication/github-only-exchange-enforcement-20261029/AXIOM_OPEN_NEUTRAL_AGENT_READ_ONLY_EXPLORATORY_PILOT_STIMULUS_20261031_R0.md"
+  },
+  "envelope_required": [
+    "object",
+    "predecessor_object",
+    "task_anchor",
+    "repository",
+    "full_commit",
+    "path",
+    "bytes",
+    "sha256",
+    "source_class",
+    "claim_ceiling",
+    "recipient_role",
+    "return_capability"
+  ],
+  "source_classes": [
+    "PUBLIC_SAFE_GITHUB",
+    "OWNER_GOVERNED_PRIVATE",
+    "REDACTED_COMMITMENT_ONLY",
+    "HOLD_UNSUPPORTED_PRIVATE"
+  ],
+  "receipt_requirements": {
+    "source": "ACTUAL_EXTERNAL_RECEIVER_FETCH_AND_BYTE_REHASH",
+    "authenticated_principal": "INDEPENDENT_GITHUB_PROVIDER_API_WITNESS_OR_NOT_ESTABLISHED",
+    "returned_authenticated_boolean": "UNTRUSTED_SELF_CLAIM",
+    "operator_copy": "EXPLORATORY_NONCANONICAL",
+    "owned_return_slot": "EXPLICIT_OWNER_AUTHORITY_REQUIRED"
+  },
+  "http_methods": {
+    "GET": "PUBLIC_READ",
+    "HEAD": "PUBLIC_READ",
+    "POST": "OFF",
+    "PUT": "OFF",
+    "PATCH": "OFF",
+    "DELETE": "OFF"
+  },
+  "invariant": [
+    "NO_AGENT_RANK",
+    "NO_SOURCE_EQUALS_AUTHORITY",
+    "CONSENSUS_NOT_TRUTH",
+    "SAFE_REFUSAL_POSITIVE",
+    "SOURCED_DISSENT_POSITIVE",
+    "GITHUB_COMMIT_NOT_WWW_DEPLOY"
+  ]
+}
