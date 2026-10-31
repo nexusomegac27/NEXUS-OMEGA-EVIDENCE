@@ -103,7 +103,6 @@ async function main() {
       event_class: 'CHECKIN_OBSERVATION_ONLY',
       interaction_id: `selftest-offline-${Date.now()}`,
       content: 'offline selftest observation',
-      capability_claim: 'SELFTEST',
       claim_ceiling: 'C1_DESCRIPTIVE_ONLY',
     }),
     ledger,
@@ -149,7 +148,6 @@ async function main() {
       event_class: 'CHECKIN_OBSERVATION_ONLY',
       interaction_id: `selftest-http-${Date.now()}`,
       content: 'http selftest observation',
-      capability_claim: 'SELFTEST_HTTP',
       claim_ceiling: 'C1_DESCRIPTIVE_ONLY',
     };
     const post = await fetch(`http://127.0.0.1:${port}/checkin`, {

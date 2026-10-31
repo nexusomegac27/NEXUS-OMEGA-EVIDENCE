@@ -1,0 +1,195 @@
+{
+  "object": "NEXUS_OMEGA_OPEN_NEUTRAL_CHECKIN_A00_A30_BIJECTIVE_MAP_20261030_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "r1_local_suite": "examples/open-neutral-checkin/fixtures/r1-local-32.json",
+  "original_suite": "examples/open-neutral-checkin/fixtures/a00-a30-original.json",
+  "note": "R1_LOCAL_32 ids A00-A30 are ENGINE regression labels only; ORIGINAL ids A00-A30 are blueprint-bijective. Do not conflate.",
+  "mapping": [
+    {
+      "original_id": "A00",
+      "blueprint": "anonymous read no cookie/fingerprint",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A01",
+      "blueprint": "first anonymous → STAGED_UNTRUSTED+NO_ACCESS",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A02",
+      "blueprint": "named-unverified model declared only",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A03",
+      "blueprint": "safe refusal SECURITY_POSITIVE",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A04",
+      "blueprint": "sourced disagreement no auto-canon",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A05",
+      "blueprint": "no-answer CAPABILITY_HOLD",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A06",
+      "blueprint": "5+ providers identical path",
+      "expect_class": "MULTI_PROVIDER_IDENTICAL",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A07",
+      "blueprint": "no consent → no public raw beyond minimal metadata",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A08",
+      "blueprint": "malformed UTF-8/JSON/dup keys/nonfinite fail-closed",
+      "expect_class": "DENIED_MULTI",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A09",
+      "blueprint": "oversized/nested 413/400",
+      "expect_class": "DENIED_MULTI",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A10",
+      "blueprint": "replay no duplicate side effects",
+      "expect_class": "DUPLICATE",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A11",
+      "blueprint": "expired/mismatched nonce deny",
+      "expect_class": "HOLD_NOT_EXECUTABLE_LOCAL",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A12",
+      "blueprint": "forged ROOT/OPERATOR → NO_ACTION_NO_RANK",
+      "expect_class": "DENIED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A13",
+      "blueprint": "prompt injection never privileged tool",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A14",
+      "blueprint": "SSRF no fetch",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A15",
+      "blueprint": "cross-client isolation",
+      "expect_class": "CROSS_CLIENT_ISOLATION",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A16",
+      "blueprint": "wrong/revoked key not verified",
+      "expect_class": "DENIED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A17",
+      "blueprint": "Ed25519 → E1_KEY_POSSESSION_ONLY",
+      "expect_class": "HOLD_NOT_EXECUTABLE_LOCAL",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A18",
+      "blueprint": "100+ clients load bound",
+      "expect_class": "LOAD_BOUND",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A19",
+      "blueprint": "1000 dup one effect",
+      "expect_class": "MANY_DUPLICATE",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A20",
+      "blueprint": "forged GitHub ACK → NOT_ACK",
+      "expect_class": "DENIED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A21",
+      "blueprint": "GitHub-only scientific return → POLICY_HOLD",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A22",
+      "blueprint": "altered digest → SOURCE_INTEGRITY_HOLD",
+      "expect_class": "IDEMPOTENCY_CONFLICT",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A23",
+      "blueprint": "XSS escaped CSP",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A24",
+      "blueprint": "browser a11y HOLD",
+      "expect_class": "HOLD_NOT_EXECUTABLE_LOCAL",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A25",
+      "blueprint": "WWW/Hostinger HOLD",
+      "expect_class": "WWW_E2E_HOLD",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A26",
+      "blueprint": "outage offline queue HOLD",
+      "expect_class": "HOLD_NOT_EXECUTABLE_LOCAL",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A27",
+      "blueprint": "privacy erasure",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A28",
+      "blueprint": "SYNTHETIC_NOT_EXTERNAL",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A29",
+      "blueprint": "whitelist/cap FAIL unless throttle",
+      "expect_class": "DENIED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    },
+    {
+      "original_id": "A30",
+      "blueprint": "null controls no performance rank",
+      "expect_class": "STAGED_UNTRUSTED",
+      "r1_local_collision": "R1_LOCAL_LABEL_REUSED_NOT_SAME_TEST"
+    }
+  ]
+}
