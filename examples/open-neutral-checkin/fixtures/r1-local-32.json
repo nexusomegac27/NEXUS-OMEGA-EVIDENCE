@@ -110,7 +110,8 @@
       "title": "secret_redaction_github_pat",
       "expect": "STAGED_UNTRUSTED",
       "patch": {
-        "content": "token ghp_abcdefghijklmnopqrstuvwxyz0123456789 leak"
+        "content": "token ghp_abcdefghijklmnopqrstuvwxyz0123456789 leak",
+        "consent": "opt_in"
       },
       "expect_redactions_ge": 1
     },
@@ -205,7 +206,8 @@
       "title": "email_redaction",
       "expect": "STAGED_UNTRUSTED",
       "patch": {
-        "content": "contact me@example.com please"
+        "content": "contact me@example.com please",
+        "consent": "opt_in"
       },
       "expect_redactions_ge": 1
     },

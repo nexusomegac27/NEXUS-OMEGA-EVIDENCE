@@ -29,6 +29,19 @@ export const DEFAULT_RATE_WINDOW_MS = 60_000;
 export const DEFAULT_RETENTION_DAYS = 30;
 export const MAX_RETENTION_DAYS = 3650;
 
+/** Optional request field max lengths (schema contract; preserve prior schema bounds). */
+export const FIELD_MAX = Object.freeze({
+  provider: 64,
+  model: 64,
+  agent_self_id: 128,
+  capability_brief: 2048,
+  dissent: 4096,
+  decline_reason: 2048,
+  schema_version: 64,
+  submitted_at: 64,
+  interpretation_provenance: 512,
+});
+
 /** Schema-bound top-level keys only (additionalProperties: false). */
 export const ALLOWED_TOP_LEVEL_FIELDS = Object.freeze([
   'protocol',
@@ -436,6 +449,18 @@ export function validateCheckinObject(parsed) {
     }
   }
 
+  // Enforce schema-bound maxLengths (R3 / FIELD_MAX).
+  for (const [f, max] of Object.entries(FIELD_MAX)) {
+    if (!Object.prototype.hasOwnProperty.call(parsed, f)) continue;
+    const v = parsed[f];
+    if (typeof v === 'string' && v.length > max) {
+      return deny('FIELD_TOO_LONG', `field '${f}' exceeds ${max} chars`, {
+        field: f,
+        chars: v.length,
+      });
+    }
+  }
+
   if (Object.prototype.hasOwnProperty.call(parsed, 'consent')) {
     if (typeof parsed.consent !== 'string' || !['opt_in', 'opt_out', 'unspecified'].includes(parsed.consent)) {
       return deny('BAD_CONSENT', "consent must be 'opt_in'|'opt_out'|'unspecified'");
@@ -546,6 +571,59 @@ export function createLedger(rootDir) {
       }
       return;
     }
+    if (
+      intent &&
+      intent.phase === 'PENDING' &&
+      intent.observation &&
+      intent.ledgerLine &&
+      intent.interaction_id &&
+      intent.body_sha256 &&
+      intent.receipt_id
+    ) {
+      // Crash after PENDING journal write (payload stored), before COMMITTED/seen.
+      // Complete append idempotently (skip if receipt already present), then mark seen.
+      let already = false;
+      try {
+        if (existsSync(paths.observations)) {
+          const obsRaw = readFileSync(paths.observations, 'utf8');
+          already =
+            obsRaw.includes(`"receipt_id":"${intent.receipt_id}"`) ||
+            obsRaw.includes(`"receipt_id": "${intent.receipt_id}"`);
+        }
+      } catch {
+        /* ignore */
+      }
+      if (!already) {
+        appendFileSync(paths.observations, `${JSON.stringify(intent.observation)}\n`);
+        appendFileSync(paths.ledger, `${JSON.stringify(intent.ledgerLine)}\n`);
+        appendFileSync(paths.events, `${JSON.stringify(intent.ledgerLine)}\n`);
+      }
+      try {
+        const m = loadSeen();
+        const prior = m[intent.interaction_id];
+        if (!prior) {
+          m[intent.interaction_id] = {
+            receipt_id: intent.receipt_id,
+            body_sha256: intent.body_sha256,
+            at: intent.at || nowIso(),
+          };
+          atomicWriteJson(paths.seen, m);
+        } else if (prior.body_sha256 && prior.body_sha256 !== intent.body_sha256) {
+          // Conflict: leave journal for operator inspection.
+          return;
+        }
+      } catch {
+        /* seen corrupt — leave journal */
+        return;
+      }
+      try {
+        unlinkSync(paths.journal);
+      } catch {
+        /* ignore */
+      }
+      return;
+    }
+
     if (intent && intent.phase === 'COMMITTED' && intent.interaction_id && intent.body_sha256) {
       // Ensure seen map contains the entry (crash after ledger, before journal clear)
       try {
@@ -605,6 +683,8 @@ export function createLedger(rootDir) {
         receipt_id: receiptId,
         body_sha256: bodySha,
         at: nowIso(),
+        observation,
+        ledgerLine,
       };
       writeFileSync(paths.journal, JSON.stringify(intent), 'utf8');
 
@@ -762,6 +842,7 @@ export function processCheckin(rawBody, optionsOrLedger, maybeOptions) {
   const { content: redacted, redactions } = redactContent(parsed.content);
   const receiptId = randomUUID();
   const consent = typeof parsed.consent === 'string' ? parsed.consent : 'unspecified';
+  const storeFreitext = consent === 'opt_in';
   const retentionDays =
     typeof parsed.retention_days === 'number' ? parsed.retention_days : DEFAULT_RETENTION_DAYS;
   const retentionUntil = new Date(Date.now() + retentionDays * 86400000).toISOString();
@@ -776,7 +857,8 @@ export function processCheckin(rawBody, optionsOrLedger, maybeOptions) {
         ? 'SUBMITTER_DECLARED_UNVERIFIED'
         : null;
 
-  // C15: privacy-safe scientific observation (redacted content only; consent + retention)
+  // C15 / R2: digests-only when consent is opt_out or unspecified (no freitext persistence).
+  // opt_in: redacted freitext + retention; content_redacted remains SERVER_DERIVED_ONLY.
   const contentSha = sha256Hex(Buffer.from(redacted, 'utf8'));
   const observation = {
     kind: 'SCIENTIFIC_OBSERVATION',
@@ -784,19 +866,21 @@ export function processCheckin(rawBody, optionsOrLedger, maybeOptions) {
     interaction_id: parsed.interaction_id,
     body_sha256: bodyHash,
     content_sha256: contentSha,
-    content_redacted: redacted,
+    // Freitext gated by consent; redaction metadata always retained (digest path).
+    content_redacted: storeFreitext ? redacted : null,
     redactions,
     consent,
     retention_days: retentionDays,
     retention_until: retentionUntil,
-    interpretation_labels: interpretationLabels,
-    interpretation_provenance: interpretationProvenance,
+    interpretation_labels: storeFreitext ? interpretationLabels : [],
+    interpretation_provenance: storeFreitext ? interpretationProvenance : null,
     interpretation_class: 'SUBMITTER_DECLARED_NOT_QUALITY_SCORE',
-    provider: typeof parsed.provider === 'string' ? parsed.provider : null,
-    model: typeof parsed.model === 'string' ? parsed.model : null,
-    dissent: typeof parsed.dissent === 'string' ? parsed.dissent : null,
+    provider: storeFreitext && typeof parsed.provider === 'string' ? parsed.provider : null,
+    model: storeFreitext && typeof parsed.model === 'string' ? parsed.model : null,
+    dissent: storeFreitext && typeof parsed.dissent === 'string' ? parsed.dissent : null,
     claim_ceiling: CLAIM_CEILING,
     scientific_status: 'RAW_NOT_VALIDATED',
+    privacy_mode: storeFreitext ? 'OPT_IN_REDACTED' : 'DIGESTS_ONLY',
     logged_at: nowIso(),
   };
 
@@ -811,7 +895,7 @@ export function processCheckin(rawBody, optionsOrLedger, maybeOptions) {
     scientific_status: 'RAW_NOT_VALIDATED',
     body_sha256: bodyHash,
     content_sha256: contentSha,
-    content_redacted: redacted,
+    content_redacted: storeFreitext ? redacted : null,
     redactions,
     consent,
     retention_days: retentionDays,
@@ -823,6 +907,7 @@ export function processCheckin(rawBody, optionsOrLedger, maybeOptions) {
     privilege: 'NONE',
     access: 'NO_ACCESS',
     aegis: 'OBSERVATION_ONLY_NO_ESCALATION',
+    privacy_mode: observation.privacy_mode,
   };
 
   if (ledger) {
@@ -1069,6 +1154,18 @@ export function createAppHandler(options = {}) {
     }
 
     if (req.method === 'POST' && (path === '/checkin' || path === '/api/v1/checkin')) {
+      const ct = String(req.headers['content-type'] || '');
+      if (!/^application\/json(\s*;|$)/i.test(ct)) {
+        const d = deny(
+          'UNSUPPORTED_MEDIA_TYPE',
+          'Content-Type must be application/json',
+          { content_type: ct || null },
+        );
+        if (ledger) ledger.append('DENIED', d);
+        res.writeHead(415, { 'content-type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify(d));
+        return;
+      }
       const chunks = [];
       let total = 0;
       let aborted = false;

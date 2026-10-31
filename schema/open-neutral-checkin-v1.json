@@ -2,36 +2,359 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://www.nexus-mobile.de/schema/open-neutral-checkin-v1.json",
   "title": "NEXUS Open Neutral Agent Check-in V1",
-  "description": "PROJECT_CONTRACT_DRAFT_C1 — not a production-enforced remote validator. CLAIM_CEILING=C1_DESCRIPTIVE_ONLY. Anonymous: provider/model optional.",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["protocol", "event_class", "claim_ceiling", "interaction_id", "content"],
-  "properties": {
-    "protocol": { "const": "nexus-agent-checkin/1" },
-    "event_class": { "const": "CHECKIN_OBSERVATION_ONLY" },
-    "claim_ceiling": { "const": "C1_DESCRIPTIVE_ONLY" },
-    "interaction_id": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 128,
-      "pattern": "^[\\w.\\-:@]+$"
+  "description": "PROJECT_CONTRACT_DRAFT_C1 — Request/Response/StoredObservation/LedgerReceipt. CLAIM_CEILING=C1_DESCRIPTIVE_ONLY. content=REQUEST_INPUT; consent=OPTIONAL_REQUEST_ENUM; content_redacted=SERVER_DERIVED_ONLY. Synced to parser at c98dcf3 + R1–R4 repair.",
+  "$defs": {
+    "CheckinRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol",
+        "event_class",
+        "claim_ceiling",
+        "interaction_id",
+        "content"
+      ],
+      "properties": {
+        "protocol": {
+          "const": "nexus-agent-checkin/1"
+        },
+        "event_class": {
+          "const": "CHECKIN_OBSERVATION_ONLY"
+        },
+        "claim_ceiling": {
+          "const": "C1_DESCRIPTIVE_ONLY"
+        },
+        "interaction_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9._:-]{8,128}$"
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "schema_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "submitted_at": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "provider": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "agent_self_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "capability_brief": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "dissent": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "decline_reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "consent": {
+          "type": "string",
+          "enum": [
+            "opt_in",
+            "opt_out",
+            "unspecified"
+          ]
+        },
+        "retention_days": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3650
+        },
+        "interpretation_labels": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          }
+        },
+        "interpretation_provenance": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "authority"
+            ]
+          },
+          {
+            "required": [
+              "truth_authority"
+            ]
+          },
+          {
+            "required": [
+              "write_ack"
+            ]
+          },
+          {
+            "required": [
+              "auto_promote"
+            ]
+          },
+          {
+            "required": [
+              "merge"
+            ]
+          },
+          {
+            "required": [
+              "deploy"
+            ]
+          },
+          {
+            "required": [
+              "content_redacted"
+            ]
+          },
+          {
+            "required": [
+              "receipt_id"
+            ]
+          },
+          {
+            "required": [
+              "body_sha256"
+            ]
+          }
+        ]
+      }
     },
-    "content": { "type": "string", "minLength": 1, "maxLength": 16384 },
-    "provider": { "type": ["string", "null"], "maxLength": 64 },
-    "model": { "type": ["string", "null"], "maxLength": 64 },
-    "agent_self_id": { "type": ["string", "null"], "maxLength": 128 },
-    "capability_brief": { "type": ["string", "null"], "maxLength": 2048 },
-    "dissent": { "type": ["string", "null"], "maxLength": 4096 },
-    "decline_reason": { "type": ["string", "null"], "maxLength": 2048 }
+    "CheckinResponse": {
+      "type": "object",
+      "description": "Server-derived response / staged receipt. content_redacted only when privacy_mode=OPT_IN_REDACTED.",
+      "additionalProperties": true,
+      "required": [
+        "status",
+        "claim_ceiling"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "STAGED_UNTRUSTED",
+            "DUPLICATE",
+            "IDEMPOTENCY_CONFLICT",
+            "DENIED"
+          ]
+        },
+        "receipt_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "interaction_id": {
+          "type": "string"
+        },
+        "body_sha256": {
+          "type": "string"
+        },
+        "content_sha256": {
+          "type": "string"
+        },
+        "content_redacted": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "redactions": {
+          "type": "array"
+        },
+        "consent": {
+          "type": "string",
+          "enum": [
+            "opt_in",
+            "opt_out",
+            "unspecified"
+          ]
+        },
+        "privacy_mode": {
+          "type": "string",
+          "enum": [
+            "OPT_IN_REDACTED",
+            "DIGESTS_ONLY"
+          ]
+        },
+        "claim_ceiling": {
+          "const": "C1_DESCRIPTIVE_ONLY"
+        },
+        "deny_code": {
+          "type": "string"
+        }
+      }
+    },
+    "StoredObservation": {
+      "type": "object",
+      "description": "Persisted scientific observation. Freitext only when consent=opt_in.",
+      "additionalProperties": true,
+      "required": [
+        "kind",
+        "receipt_id",
+        "interaction_id",
+        "body_sha256",
+        "content_sha256",
+        "consent",
+        "claim_ceiling"
+      ],
+      "properties": {
+        "kind": {
+          "const": "SCIENTIFIC_OBSERVATION"
+        },
+        "receipt_id": {
+          "type": "string"
+        },
+        "interaction_id": {
+          "type": "string"
+        },
+        "body_sha256": {
+          "type": "string"
+        },
+        "content_sha256": {
+          "type": "string"
+        },
+        "content_redacted": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "redactions": {
+          "type": "array"
+        },
+        "consent": {
+          "type": "string",
+          "enum": [
+            "opt_in",
+            "opt_out",
+            "unspecified"
+          ]
+        },
+        "retention_days": {
+          "type": "integer"
+        },
+        "retention_until": {
+          "type": "string"
+        },
+        "interpretation_labels": {
+          "type": "array"
+        },
+        "interpretation_provenance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "interpretation_class": {
+          "type": "string"
+        },
+        "provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dissent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_ceiling": {
+          "const": "C1_DESCRIPTIVE_ONLY"
+        },
+        "scientific_status": {
+          "type": "string"
+        },
+        "privacy_mode": {
+          "type": "string",
+          "enum": [
+            "OPT_IN_REDACTED",
+            "DIGESTS_ONLY"
+          ]
+        },
+        "logged_at": {
+          "type": "string"
+        }
+      }
+    },
+    "LedgerReceipt": {
+      "type": "object",
+      "description": "Append-only ledger / event line (no freitext content).",
+      "additionalProperties": true,
+      "required": [
+        "kind",
+        "receipt_id",
+        "interaction_id",
+        "body_sha256"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "receipt_id": {
+          "type": "string"
+        },
+        "interaction_id": {
+          "type": "string"
+        },
+        "body_sha256": {
+          "type": "string"
+        },
+        "redaction_count": {
+          "type": "integer"
+        },
+        "consent": {
+          "type": "string"
+        },
+        "retention_until": {
+          "type": "string"
+        },
+        "logged_at": {
+          "type": "string"
+        }
+      }
+    }
   },
-  "not": {
-    "anyOf": [
-      { "required": ["authority"] },
-      { "required": ["truth_authority"] },
-      { "required": ["write_ack"] },
-      { "required": ["auto_promote"] },
-      { "required": ["merge"] },
-      { "required": ["deploy"] }
-    ]
-  }
+  "$ref": "#/$defs/CheckinRequest"
 }
