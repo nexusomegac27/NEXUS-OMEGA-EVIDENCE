@@ -1,0 +1,77 @@
+{
+  "check_runs": [
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431405622,
+      "name": "nexus-preentry-lab",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431376226,
+      "name": "r27e-external-structural-firewall",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431375890,
+      "name": "validate-repository-structure",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431375427,
+      "name": "validate",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431375425,
+      "name": "validate",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431375353,
+      "name": "validate",
+      "status": "completed"
+    },
+    {
+      "app_id": 15368,
+      "conclusion": "success",
+      "id": 124431375274,
+      "name": "validate",
+      "status": "completed"
+    },
+    {
+      "app_id": 4695336,
+      "conclusion": "success",
+      "id": 124431374173,
+      "name": "semgrep-cloud-platform/scan",
+      "status": "completed"
+    }
+  ],
+  "pinned_main": "830dfd18dc30f3a8dc878418f09faf128b1ad7e3",
+  "pr_head": "a6a04f775d620e1e94cb1fd0ebcd16dfa4518c4d",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "ruleset": {
+    "enforcement": "active",
+    "id": 21252293,
+    "ref_include": [
+      "refs/heads/main"
+    ],
+    "required_status_checks": [
+      {
+        "context": "validate",
+        "integration_id": 15368
+      }
+    ]
+  },
+  "schema": "NEXUS_ALPHA_CI_RULESET_CHECK_SNAPSHOT_V1"
+}
