@@ -8,8 +8,8 @@ import json
 import re
 import sys
 
-SHA = re.compile(r'[0-9a-f]{40}\\Z')
-PATH = re.compile(r'research/[a-z0-9_./-]+\\Z')
+SHA = re.compile(r'[0-9a-f]{40}\Z')
+PATH = re.compile(r'research/[a-z0-9_./-]+\Z')
 REPO = 'nexusomegac27/NEXUS-OMEGA-EVIDENCE'
 
 
@@ -33,7 +33,7 @@ def valid_sha(x):
 
 def valid_path(x):
     return (isinstance(x, str) and PATH.fullmatch(x) is not None
-            and all(segment not in ('', '.', '..') for segment in x.split('/'))
+            and all(segment not in ('', '.', '..') for segment in x.split('/')))
 
 
 def inventory(files, label, require_blob):
