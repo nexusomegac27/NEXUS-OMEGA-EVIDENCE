@@ -1,0 +1,309 @@
+{
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "pinned_workflow_commit": "b7adbc05c0d6b92ab77dd1fc7370f02506bfb3d9",
+  "inventory_commit": "56c383b6675d47b61d1b35bb543d24a2d36de512",
+  "inventory_blob": "66a330dddee79726c2384421ec2ac940a53f1225",
+  "pr_number": 231,
+  "pr_head": "a6a04f775d620e1e94cb1fd0ebcd16dfa4518c4d",
+  "changed_files": [
+    "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_actor_registry_source_pin_v2_20261031.js",
+    "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_actor_registry_source_pin_v2_c1_report_20261031.md",
+    "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_actor_registry_pin_oracle_v1_20261031.js"
+  ],
+  "workflows": [
+    {
+      "path": ".github/workflows/validate-a83-framework-hardening.yml",
+      "blob_sha": "b03b029f7c168ac80ae42f3a40a3ad9481c367a7",
+      "byte_length": 2078,
+      "pull_request": true,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-anchor.yml",
+      "blob_sha": "3ab2bfecc4949cf23bc9ea1eafeb65c342cf0b0e",
+      "byte_length": 1138,
+      "pull_request": true,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-external-agent-pr.yml",
+      "blob_sha": "065cf5b248d2ed4be6f3be3440da0289cc23e4c0",
+      "byte_length": 1784,
+      "pull_request": false,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "r27e-external-structural-firewall",
+          "name": "r27e-external-structural-firewall"
+        },
+        {
+          "id": "nexus-preentry-lab",
+          "name": "nexus-preentry-lab"
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-ix-r1-open-agent-foundation.yml",
+      "blob_sha": "42fac37d27c375e2636f0024184c1500d9a08225",
+      "byte_length": 2600,
+      "pull_request": true,
+      "paths": [
+        "research/ix/**",
+        "research/fundus/**",
+        ".github/workflows/validate-ix-r1-open-agent-foundation.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-ix-r2-integrity-boundary-foundation.yml",
+      "blob_sha": "45e960a7efa2317f0aacd245789dab43b00422ec",
+      "byte_length": 2717,
+      "pull_request": true,
+      "paths": [
+        "research/ix/open-agent-foundation-r2/**",
+        "research/fundus/**",
+        ".github/workflows/validate-ix-r2-integrity-boundary-foundation.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-ix-r3-controlled-falsification.yml",
+      "blob_sha": "106f7a5c27fd14c6f1bc1d13c62652594e88aa49",
+      "byte_length": 3546,
+      "pull_request": true,
+      "paths": [
+        "research/ix/open-agent-foundation-r3/**",
+        "research/fundus/**",
+        ".github/workflows/validate-ix-r3-controlled-falsification.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-ix-r4-order.yml",
+      "blob_sha": "f698dc4338508ce40edee23da5d1043c59f5309f",
+      "byte_length": 1834,
+      "pull_request": true,
+      "paths": [
+        "research/ix/open-agent-foundation-r4/**",
+        ".github/workflows/validate-ix-r4-order.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r19-orbis.yml",
+      "blob_sha": "6ec1c69d7e874e50ce1efebd26966602ce4b9f57",
+      "byte_length": 979,
+      "pull_request": true,
+      "paths": [
+        "docs/r19/**",
+        "schema/r19/**",
+        "examples/r19/**",
+        "tests/r19/**",
+        ".github/workflows/validate-r19-orbis.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "source-bound-negative-fixtures",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r21-astra-nav.yml",
+      "blob_sha": "285561ab7400eacf915543fabbb81bf003139a6b",
+      "byte_length": 6599,
+      "pull_request": true,
+      "paths": [
+        "docs/r21/**",
+        "research/r21/**",
+        "examples/r21/**",
+        "tests/r21/**",
+        "schema/r21/**",
+        ".github/workflows/validate-r21-astra-nav.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "zoom-provenance-and-offline-gates",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r7-radiometric.yml",
+      "blob_sha": "b03b073f8b6b4bb8cab3666e90f42e039c2954d3",
+      "byte_length": 1314,
+      "pull_request": true,
+      "paths": [
+        "research/r7/radiometric-extension/**",
+        ".github/workflows/validate-r7-radiometric.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r8-astratis-viii-closure-r3.yml",
+      "blob_sha": "e65c306b40e050c7e3b93413a6da445af2741895",
+      "byte_length": 2106,
+      "pull_request": true,
+      "paths": [
+        "research/r8/astratis-viii-closure-r3/**",
+        "research/fundus/**",
+        "schema/earqv-v1.schema.json",
+        "schema/nexus-fundus-c1-index-v1.schema.json",
+        ".github/workflows/validate-r8-astratis-viii-closure-r3.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r8-custody.yml",
+      "blob_sha": "01855895957d24a346e55dc8c1df6d9fc1b60c2a",
+      "byte_length": 1981,
+      "pull_request": true,
+      "paths": [
+        "research/r8/r8-0-custody-validation/**",
+        ".github/workflows/validate-r8-custody.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-r8-r1-r2-crossvalidation.yml",
+      "blob_sha": "68020a0e85b1591510cadcfb7cfba2068f41f2ad",
+      "byte_length": 1726,
+      "pull_request": true,
+      "paths": [
+        "research/r8/r8-1-r1-r8-2-crossvalidation/**",
+        ".github/workflows/validate-r8-r1-r2-crossvalidation.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-repository-structure.yml",
+      "blob_sha": "7dae4e8eb4705421e801ce109a46fe41632c115e",
+      "byte_length": 2207,
+      "pull_request": true,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate-repository-structure",
+          "name": "validate-repository-structure"
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-research-pipeline.yml",
+      "blob_sha": "79aa74c605efae04bc4f231bfeba0469298e69ec",
+      "byte_length": 2263,
+      "pull_request": true,
+      "paths": [
+        "research/pipeline/**",
+        "schema/research-pipeline-*.schema.json",
+        "scripts/research_pipeline.py",
+        "scripts/archive_continuity_guard.py",
+        "tests/test_archive_continuity_guard.py",
+        "docs/architecture/REPOSITORY_STRUCTURE.json",
+        "tests/test_research_pipeline.py",
+        ".github/workflows/validate-research-pipeline.yml"
+      ],
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate-research-pipeline",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-scientific-communication.yml",
+      "blob_sha": "082979fd7531b22873f0a93a8418a5e7d5b6693a",
+      "byte_length": 1126,
+      "pull_request": true,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    },
+    {
+      "path": ".github/workflows/validate-scientific-ledger.yml",
+      "blob_sha": "787cc06380be6b3981ba2ab0fd20e53cb13881b4",
+      "byte_length": 919,
+      "pull_request": true,
+      "paths": null,
+      "paths_ignore": false,
+      "jobs": [
+        {
+          "id": "validate",
+          "name": null
+        }
+      ]
+    }
+  ]
+}
