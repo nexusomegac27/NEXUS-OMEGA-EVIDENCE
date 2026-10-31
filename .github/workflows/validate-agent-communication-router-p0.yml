@@ -1,0 +1,29 @@
+name: Validate Agent Communication Router P0
+
+on:
+  pull_request:
+    paths:
+      - "scripts/nexus_document_router.py"
+      - "tests/test_nexus_document_router.py"
+      - ".github/workflows/validate-agent-communication-router-p0.yml"
+  push:
+    branches:
+      - "codex/github-expert-exchange-foundation-20261029"
+    paths:
+      - ".github/workflows/validate-agent-communication-router-p0.yml"
+      - "scripts/nexus_document_router.py"
+      - "tests/test_nexus_document_router.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  router-p0:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out current PR code
+        uses: actions/checkout@v4
+      - name: Execute router unit tests on actual checkout
+        run: python3 -m unittest discover -s tests -p 'test_nexus_document_router.py' -v
