@@ -299,12 +299,12 @@
       "prior_pilot_result": "research/communication/github-only-exchange-enforcement-20261029/RESULT_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0.md",
       "prior_pilot_task_anchor": "research/communication/github-only-exchange-enforcement-20261029/TASK_ANCHOR_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0.json",
       "document_router": "scripts/nexus_document_router.py",
-      "document_router_bytes": 33332,
-      "document_router_sha256": "264d9abca1695e54f022c6e449d33817447bf0f991695a0322763f527af17513",
+      "document_router_bytes": 45479,
+      "document_router_sha256": "98508e051ff78092e13615fec84f6faf36d857baddd31c8199d6b07872e10eb7",
       "document_router_tests": "tests/test_nexus_document_router.py",
-      "document_router_tests_bytes": 13844,
-      "document_router_tests_sha256": "eda05d6cc767f3efab00ebe2f5c6448ad48b0ef9ae3e72dfb75b605cbd7d5a17",
-      "document_router_local_tests": "17_OF_17_PASS_REPORT_LEVEL",
+      "document_router_tests_bytes": 19549,
+      "document_router_tests_sha256": "511d8dcfbd42225f0c84fd9778adc2345500f3196c4395c14eb300a757c62c96",
+      "document_router_local_tests": "22_OF_22_PASS_REPORT_LEVEL_P0_HARDCLOSE",
       "chain_local_tests": "53_OF_53_PASS_REPORT_LEVEL",
       "framework_policy": "APPROVED",
       "document_handoff": "FRAMEWORK_REQUIRED_STAGED",
@@ -317,7 +317,15 @@
       "task_anchor_sha256": "6f696340b2d7251d8ff3b5fdcec5efe63fc1a44bc6ca0d98ec58946296d8c21f",
       "task_anchor_validation": "ANCHOR_FORMAT_VALIDATED_ONLY",
       "result_bytes": 4439,
-      "result_sha256": "1c31005207fb7801856ec6c6492db83d8e7f1c34c5c6c14626b40574c35c3890"
+      "result_sha256": "1c31005207fb7801856ec6c6492db83d8e7f1c34c5c6c14626b40574c35c3890",
+      "public_interface_www": {
+        "route": "https://www.nexus-mobile.de/ai/agent-border/communication/",
+        "html_sha256": "1b9a7902b64bf8fd1059821d33bb7dab604194212ee14e2378090bd0ed1f6987",
+        "protocol_sha256": "8c5f45076e4b21607903c39a8b46b2d7bd1d923e70a7e775dec53802dfc26b51",
+        "status_live_sha256": "3e6d6d46297a46fa11e1b7de08ec8ab66af0eddc8aac48e8d58389da6fe62707",
+        "release_state": "LIVE_READ_ONLY_CONFIRMED",
+        "router_p0": "HARD_CLOSED_STAGED"
+      }
     }
   },
   "research_lane_contract": {
@@ -391,7 +399,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.23",
+  "version": "1.7.24",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",

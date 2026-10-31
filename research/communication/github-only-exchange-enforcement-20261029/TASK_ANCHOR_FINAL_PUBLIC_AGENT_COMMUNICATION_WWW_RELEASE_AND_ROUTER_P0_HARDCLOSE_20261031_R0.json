@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "NOT_ESTABLISHED_FROM_FORMAT",
+    "predecessor_object": "NEXUS_OMEGA_CURSOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_RETURN_20261031_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0.md",
+    "predecessor_bytes": 9597,
+    "predecessor_sha256": "54649b6863ca9085d2ae02f620efa3312b2e4b473f19858aa6c307f51b7638a3"
+  },
+  "delegation": {
+    "scope": "Deploy public read-only Agent Communication interface to existing Hostinger Agent Border route and hard-close DocumentRouter P0 auth/dispatch/cutover/privacy defects under C1.",
+    "allowed_actions": [
+      "HOSTINGER_STATIC_PUBLIC_SAFE_DEPLOY",
+      "ROUTER_P0_HARD_CLOSE",
+      "WWW_BYTE_WITNESS",
+      "BROWSER_READBACK",
+      "COMMIT_AND_PUSH_DRAFT_PR185",
+      "WRITE_TRANSFER_RETURN"
+    ],
+    "prohibited_actions": [
+      "MERGE_PR185",
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "INVENT_RECEIVER_ACK",
+      "CLAIM_CUTOVER_ACTIVE",
+      "NATIVE_APP_R3",
+      "PARALLEL_COMMUNICATION_ARCHITECTURE"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can Cursor publish the static public Agent Communication interface under /ai/agent-border/communication/ with independent WWW byte proofs and hard-close DocumentRouter P0 without activating productive bidirectional cutover?",
+    "deliverables": [
+      "WWW communication index/status/protocol",
+      "Router P0 hard-close",
+      "Task Anchor Norm V1",
+      "RESULT return",
+      "TRANSFER package"
+    ],
+    "falsifiers": [
+      "Order SHA mismatch",
+      "WWW bytes mismatch source",
+      "DISPATCHED without transport witness",
+      "self-asserted authenticated promotes principal",
+      "--activate-cutover alone sets ACTIVE",
+      "private dispatch with flag alone"
+    ],
+    "acceptance_tests": [
+      "Order rehash MATCH 9597/54649b68",
+      "Three WWW SHA MATCH",
+      "Browser desktop readback",
+      "Router pytest PASS including P0 negatives",
+      "Rollback rehearsal OK"
+    ],
+    "pause_conditions": [
+      "SSH deploy unavailable",
+      "Hostinger permission denied"
+    ],
+    "not_executed": [
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "NATIVE_APP_R3",
+      "PR185_MERGE",
+      "EXTERNAL_AUTHENTICATED_RECEIVER"
+    ]
+  },
+  "bindings": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "pinned_order_commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+    "order_sha256": "54649b6863ca9085d2ae02f620efa3312b2e4b473f19858aa6c307f51b7638a3",
+    "www_html_sha256": "1b9a7902b64bf8fd1059821d33bb7dab604194212ee14e2378090bd0ed1f6987",
+    "www_protocol_sha256": "8c5f45076e4b21607903c39a8b46b2d7bd1d923e70a7e775dec53802dfc26b51",
+    "www_status_live_sha256": "3e6d6d46297a46fa11e1b7de08ec8ab66af0eddc8aac48e8d58389da6fe62707",
+    "document_router_sha256": "98508e051ff78092e13615fec84f6faf36d857baddd31c8199d6b07872e10eb7"
+  },
+  "governance": {
+    "PUBLIC_STATIC_ROLLOUT": "AUTHORIZED_WITH_PROOF",
+    "DOCUMENT_ROUTER_P0": "HARD_CLOSE_REQUIRED",
+    "PUBLIC_EXTERNAL_WRITE_API": "OFF",
+    "CUTOVER_ACTIVE": "NO_UNTIL_VERIFIED",
+    "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY"
+  },
+  "created_utc": "2026-10-31T17:14:02Z"
+}

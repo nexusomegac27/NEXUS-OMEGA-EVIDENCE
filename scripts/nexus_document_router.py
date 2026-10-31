@@ -86,6 +86,7 @@ ROUTING_STATES = (
     "PRIVACY_LICENSE_PASS",
     "MANIFEST_CLOSED",
     "STAGED",
+    "OUTBOUND_QUEUED",
     "DISPATCHED",
     "FETCH_OBSERVED",
     "RECEIVED_BYTES_VERIFIED",
@@ -166,28 +167,189 @@ def classify_source(
     return "PUBLIC_SAFE_GITHUB"
 
 
+def _valid_private_lane_proof(proof: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    """Fail-closed private lane: boolean flag alone is never enough."""
+    if not isinstance(proof, dict):
+        return fail(
+            "PRIVACY_PRIVATE_LANE_PROOF_REQUIRED",
+            "OWNER_GOVERNED_PRIVATE requires private_lane_proof object",
+        )
+    required = (
+        "proof_kind",
+        "lane_id",
+        "owner_approved",
+        "rights_scope",
+        "connected",
+    )
+    missing = [k for k in required if k not in proof]
+    if missing:
+        return fail(
+            "PRIVACY_PRIVATE_LANE_PROOF_INCOMPLETE",
+            f"missing={missing}",
+        )
+    if proof.get("proof_kind") != "OWNER_PRIVATE_LANE_V1":
+        return fail(
+            "PRIVACY_PRIVATE_LANE_PROOF_KIND",
+            str(proof.get("proof_kind")),
+        )
+    if proof.get("owner_approved") is not True:
+        return fail("PRIVACY_PRIVATE_LANE_NOT_OWNER_APPROVED", "owner_approved!=true")
+    if proof.get("connected") is not True:
+        return fail("PRIVACY_PRIVATE_LANE_NOT_CONNECTED", "connected!=true")
+    scope = str(proof.get("rights_scope") or "")
+    if scope not in ("OWNER_PRIVATE_DISPATCH", "OWNER_PRIVATE_READ_WRITE"):
+        return fail("PRIVACY_PRIVATE_LANE_SCOPE_DENIED", scope)
+    return ok(privacy="PASS_OWNER_PRIVATE_LANE", lane_id=proof.get("lane_id"))
+
+
 def privacy_gate(
     *,
     source_class: str,
     path: str,
     allow_private_dispatch: bool = False,
+    private_lane_proof: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     if source_class == "HOLD_UNSUPPORTED_PRIVATE":
         return fail(
             "PRIVACY_HOLD_UNSUPPORTED_PRIVATE",
             f"path={path}; unsupported private material must not dispatch",
         )
-    if source_class == "OWNER_GOVERNED_PRIVATE" and not allow_private_dispatch:
-        return fail(
-            "PRIVACY_OWNER_PRIVATE_REQUIRES_EXPLICIT_FLAG",
-            "set allow_private_dispatch=true only under owner-governed scope",
-        )
+    if source_class == "OWNER_GOVERNED_PRIVATE":
+        if not allow_private_dispatch:
+            return fail(
+                "PRIVACY_OWNER_PRIVATE_REQUIRES_EXPLICIT_FLAG",
+                "set allow_private_dispatch=true only under owner-governed scope",
+            )
+        lane = _valid_private_lane_proof(private_lane_proof)
+        if not lane.get("ok"):
+            return lane
+        return lane
     if source_class == "REDACTED_COMMITMENT_ONLY":
         return ok(
             privacy="PASS_REDACTED_COMMITMENT_ONLY",
             note="commitment/hash only; raw private bytes not transported",
         )
     return ok(privacy="PASS_PUBLIC_SAFE_GITHUB")
+
+
+def validate_cutover_activation_manifest(
+    manifest: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Independent gates required before CUTOVER_ACTIVE. Flag alone is insufficient."""
+    if not isinstance(manifest, dict):
+        return fail("CUTOVER_ACTIVATION_MANIFEST_REQUIRED", "manifest must be object")
+    required = (
+        "owner_approval",
+        "integrity_gate",
+        "privacy_gate",
+        "ci_gate",
+        "rollback_gate",
+        "pinned_commit",
+        "order_sha256",
+    )
+    missing = [k for k in required if k not in manifest]
+    if missing:
+        return fail("CUTOVER_ACTIVATION_MANIFEST_INCOMPLETE", f"missing={missing}")
+    if manifest.get("owner_approval") is not True:
+        return fail("CUTOVER_OWNER_APPROVAL_FALSE", "owner_approval must be true")
+    for gate in ("integrity_gate", "privacy_gate", "ci_gate", "rollback_gate"):
+        if str(manifest.get(gate)) != "PASS":
+            return fail("CUTOVER_GATE_NOT_PASS", f"{gate}={manifest.get(gate)}")
+    pin = str(manifest.get("pinned_commit") or "")
+    if len(pin) < 40:
+        return fail("CUTOVER_PINNED_COMMIT_INVALID", pin)
+    order_sha = str(manifest.get("order_sha256") or "").lower()
+    if len(order_sha) != 64 or any(c not in "0123456789abcdef" for c in order_sha):
+        return fail("CUTOVER_ORDER_SHA_INVALID", order_sha)
+    return ok(
+        cutover_activation="AUTHORIZED",
+        pinned_commit=pin,
+        order_sha256=order_sha,
+    )
+
+
+def verify_github_receiver_witness(
+    *,
+    witness: Optional[Dict[str, Any]],
+    document: Dict[str, Any],
+    receipt: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Never trust receipt.authenticated / return_source_verified booleans."""
+    if not isinstance(witness, dict):
+        return fail(
+            "ACK_GITHUB_WITNESS_REQUIRED",
+            "principal/return verification requires github_api_witness",
+        )
+    required = (
+        "author_id",
+        "author_login",
+        "immutable_url",
+        "observed_sha256",
+        "observed_bytes",
+        "api_attestation",
+    )
+    missing = [k for k in required if k not in witness]
+    if missing:
+        return fail("ACK_GITHUB_WITNESS_INCOMPLETE", f"missing={missing}")
+    try:
+        author_id = int(witness["author_id"])
+    except (TypeError, ValueError):
+        return fail("ACK_GITHUB_AUTHOR_ID_INVALID", str(witness.get("author_id")))
+    if author_id <= 0:
+        return fail("ACK_GITHUB_AUTHOR_ID_INVALID", str(author_id))
+    login = str(witness.get("author_login") or "").strip()
+    if not login or login.upper() in ("UNAUTHENTICATED", "UNKNOWN", "SELF"):
+        return fail("ACK_GITHUB_AUTHOR_LOGIN_INVALID", login)
+    url = str(witness.get("immutable_url") or "")
+    if not (
+        url.startswith("https://github.com/")
+        and ("/issues/comment/" in url or "/pull/" in url or "/commit/" in url)
+    ):
+        return fail("ACK_GITHUB_IMMUTABLE_URL_INVALID", url)
+    if str(witness.get("api_attestation")) != "GITHUB_REST_VERIFIED":
+        return fail(
+            "ACK_GITHUB_API_ATTESTATION_MISSING",
+            str(witness.get("api_attestation")),
+        )
+    obs_sha = str(witness.get("observed_sha256") or "").lower()
+    doc_sha = str(document.get("sha256") or "").lower()
+    try:
+        obs_bytes = int(witness.get("observed_bytes"))
+    except (TypeError, ValueError):
+        return fail(
+            "ACK_GITHUB_OBSERVED_BYTES_INVALID",
+            str(witness.get("observed_bytes")),
+        )
+    if not doc_sha or obs_sha != doc_sha or obs_bytes != int(document.get("bytes") or -1):
+        return fail(
+            "ACK_GITHUB_BYTES_MISMATCH",
+            f"witness_sha={obs_sha}; doc_sha={doc_sha}",
+        )
+    producer = str(
+        receipt.get("producer_principal") or document.get("repository") or ""
+    ).lower()
+    receiver = str(
+        receipt.get("receiver_principal") or witness.get("author_login") or ""
+    ).lower()
+    if receiver and producer and receiver == producer:
+        return fail("ACK_PRODUCER_EQUALS_RECEIVER", receiver)
+    if login.lower() == "nexusomegac27":
+        return fail(
+            "ACK_OWNER_LOGIN_REUSE_REJECTED",
+            "owner login cannot self-attest as independent receiver",
+        )
+    return_source_ok = False
+    if witness.get("return_source_commit") and witness.get("return_source_sha256"):
+        if str(witness.get("return_source_sha256")).lower() == doc_sha:
+            return_source_ok = True
+    return ok(
+        principal_verified=True,
+        return_source_verified=return_source_ok,
+        author_id=author_id,
+        author_login=login,
+        immutable_url=url,
+        api_attestation="GITHUB_REST_VERIFIED",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -421,6 +583,7 @@ class RouterConfig:
     store_path: Path
     journal_dir: Path
     cutover_force_active: bool = False
+    activation_manifest: Optional[Dict[str, Any]] = None
 
 
 class DocumentRouter:
@@ -436,9 +599,16 @@ class DocumentRouter:
         self.adapter = self.chain.adapter
         self.receiver = self.chain.receiver
         self.journal = self.chain.journal
+        # P0-C: --activate-cutover / cutover_force_active alone NEVER flips ACTIVE.
         if cfg.cutover_force_active:
-            # Only for owner-authorized activation after G0–G7 critical PASS.
-            self.store.set_cutover(CUTOVER_ACTIVE)
+            gate = validate_cutover_activation_manifest(cfg.activation_manifest or {})
+            if gate.get("ok"):
+                self.store.set_cutover(CUTOVER_ACTIVE)
+                self._cutover_activation = gate
+            else:
+                self._cutover_activation = gate
+        else:
+            self._cutover_activation = None
 
     def close(self) -> None:
         self.store.close()
@@ -456,11 +626,26 @@ class DocumentRouter:
             claim_ceiling=CLAIM_CEILING,
             order_object=ORDER_OBJECT,
             order_pinned_commit=ORDER_PINNED_COMMIT,
+            activation_attempt=self._cutover_activation,
             note=(
                 "STAGED means DOCUMENT_HANDOFF=FRAMEWORK_REQUIRED for new "
                 "material; productive GitHub cutover ACTIVE only after "
-                "critical integrity/privacy/CI/rollback gates PASS"
+                "critical integrity/privacy/CI/rollback gates PASS; "
+                "CLI --activate-cutover without valid activation manifest "
+                "leaves STAGED"
             ),
+        )
+
+    def activate_cutover(self, activation_manifest: Dict[str, Any]) -> Dict[str, Any]:
+        gate = validate_cutover_activation_manifest(activation_manifest)
+        self._cutover_activation = gate
+        if not gate.get("ok"):
+            return gate
+        self.store.set_cutover(CUTOVER_ACTIVE)
+        return ok(
+            document_handoff=CUTOVER_ACTIVE,
+            activation=gate,
+            claim_ceiling=CLAIM_CEILING,
         )
 
     def dispatch_document(
@@ -475,8 +660,10 @@ class DocumentRouter:
         privacy_class: str = "PUBLIC_SAFE",
         redacted: bool = False,
         allow_private_dispatch: bool = False,
+        private_lane_proof: Optional[Dict[str, Any]] = None,
         agent_id: Optional[str] = None,
         document_id: Optional[str] = None,
+        transport_witness: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         # Hold public write surfaces.
         for forbidden in FORBIDDEN_PUBLIC_WRITE:
@@ -490,6 +677,7 @@ class DocumentRouter:
             source_class=source_class,
             path=path,
             allow_private_dispatch=allow_private_dispatch,
+            private_lane_proof=private_lane_proof,
         )
         if not pg.get("ok"):
             return pg
@@ -584,27 +772,70 @@ class DocumentRouter:
                 "sha256": observed_sha256,
                 "bytes": observed_bytes,
                 "transport": "GITHUB_ONLY",
+                "intent": "OUTBOUND_QUEUED",
             },
             idempotency_key=f"doc-outbound:{did}:{commit}",
         )
+        # P0-B: local journal is intent only — never claim DISPATCHED/SENT here.
         self.store.transition(
-            did, "DISPATCHED", detail={"outbound": outbound.get("event_id")}
+            did,
+            "OUTBOUND_QUEUED",
+            detail={"outbound": outbound.get("event_id"), "delivery": "NOT_WITNESSED"},
         )
 
         adapter_status = ADAPTER_NOT_CONNECTED
+        adapter_decl: Dict[str, Any] = {}
         if agent_id:
-            # AgentAdapter.declare(model_id, claimed_github_login=None)
-            decl = self.adapter.declare(model_id=agent_id)
-            adapter_status = decl.get("status", ADAPTER_NOT_CONNECTED)
+            adapter_decl = self.adapter.declare(model_id=agent_id)
+            adapter_status = adapter_decl.get("status", ADAPTER_NOT_CONNECTED)
+
+        delivery_state = "OUTBOUND_QUEUED"
+        tw = transport_witness if isinstance(transport_witness, dict) else {}
+        witness_ok = (
+            tw.get("transport") == "GITHUB_ONLY"
+            and tw.get("api_attestation") == "TRANSPORT_API_VERIFIED"
+            and str(tw.get("observed_sha256", "")).lower()
+            == str(observed_sha256 or "").lower()
+            and int(tw.get("observed_bytes", -1)) == int(observed_bytes or -2)
+            and adapter_status != ADAPTER_NOT_CONNECTED
+        )
+        if witness_ok:
+            self.store.transition(
+                did,
+                "DISPATCHED",
+                detail={
+                    "outbound": outbound.get("event_id"),
+                    "transport_witness": tw,
+                    "adapter_status": adapter_status,
+                },
+            )
+            delivery_state = "DISPATCHED"
+            transport_result: Dict[str, Any] = {
+                "delivered": True,
+                "reason": "TRANSPORT_API_WITNESS_ACCEPTED",
+                "adapter_status": adapter_status,
+            }
+        else:
+            transport_result = {
+                "delivered": False,
+                "reason": (
+                    "ADAPTER_NOT_CONNECTED"
+                    if adapter_status == ADAPTER_NOT_CONNECTED
+                    else "TRANSPORT_WITNESS_INCOMPLETE"
+                ),
+                "adapter_status": adapter_status,
+                "adapter_decl": adapter_decl,
+            }
 
         return ok(
             document_id=did,
-            routing_state="DISPATCHED",
+            routing_state=delivery_state,
             source_class=source_class,
             manifest=manifest,
             validation=v,
             outbound=outbound,
             adapter_status=adapter_status,
+            transport_result=transport_result,
             cutover=self.store.get_cutover(),
             independent_expert_ack="NOT_ESTABLISHED",
             terminal_pass=False,
@@ -665,34 +896,30 @@ class DocumentRouter:
             rid = self.store.add_receipt(document_id, "RECEIPT_REJECTED", receipt)
             return fail("RECEIPT_FIELDS_MISSING", f"receipt_id={rid}; missing={missing}")
 
-        try:
-            issued = self.receiver.issue_independent_ack(
-                repository=str(receipt["repository"]),
-                commit=str(receipt["commit"]),
-                object_path=str(receipt["object_path"]),
-                bytes_len=int(receipt["bytes"]),
-                sha256=str(receipt["sha256"]),
-                fetch_method=str(receipt["fetch_method"]),
-                receiver_principal=str(
-                    receipt.get("receiver_principal") or "UNAUTHENTICATED"
-                ),
-                receiver_process_id=str(
-                    incoming_pid or receipt.get("receiver_process_id") or "unknown"
-                ),
-                authenticated=bool(receipt.get("authenticated", False)),
-            )
-        except Exception as exc:  # noqa: BLE001 — fail closed
-            rid = self.store.add_receipt(document_id, "RECEIPT_REJECTED", receipt)
-            return fail("RECEIPT_ISSUE_FAIL", f"receipt_id={rid}; {exc}")
-
-        if not issued.get("ok"):
+        # P0-A: build byte-level ACK without trusting receipt.authenticated.
+        # Do not feed self-asserted auth into ReceiverAckProtocol.issue_independent_ack.
+        fetch_method = str(receipt["fetch_method"])
+        if fetch_method not in {"GITHUB_API_CONTENTS", "GIT_FETCH_SHOW", "GITHUB_RAW"}:
             rid = self.store.add_receipt(document_id, "RECEIPT_REJECTED", receipt)
             return fail(
-                issued.get("code", "RECEIPT_VERIFY_FAIL"),
-                f"receipt_id={rid}; {issued.get('detail', '')}",
+                "RECEIVER_FETCH_METHOD_INVALID",
+                f"receipt_id={rid}; {fetch_method}",
             )
-
-        ack = issued.get("ack") or {}
+        ack = {
+            "repository": str(receipt["repository"]),
+            "commit": str(receipt["commit"]),
+            "object_path": str(receipt["object_path"]),
+            "bytes": int(receipt["bytes"]),
+            "sha256": str(receipt["sha256"]),
+            "receiver_principal": str(
+                receipt.get("receiver_principal") or "UNAUTHENTICATED"
+            ),
+            "fetch_method": fetch_method,
+            "independent": True,
+            "ack_id": str(uuid.uuid4()),
+            "sender_process_id": self.receiver.sender_process_id,
+            "auth_claim_ignored": True,
+        }
         observed_sha = doc.get("sha256")
         observed_bytes = doc.get("bytes")
         bytes_match = (
@@ -701,10 +928,20 @@ class DocumentRouter:
             and str(ack.get("sha256", "")).lower() == str(observed_sha).lower()
             and int(ack.get("bytes", -1)) == int(observed_bytes)
         )
-        principal_verified = bool(ack.get("receiver_principal")) and bool(
-            receipt.get("authenticated", False)
+        # Ignore self-asserted authenticated / return_source_verified booleans.
+        _ = receipt.get("authenticated")
+        _ = receipt.get("return_source_verified")
+        witness_gate = verify_github_receiver_witness(
+            witness=receipt.get("github_api_witness"),
+            document=doc,
+            receipt=receipt,
         )
-        return_source_verified = bool(receipt.get("return_source_verified", False))
+        principal_verified = bool(
+            witness_gate.get("ok") and witness_gate.get("principal_verified")
+        )
+        return_source_verified = bool(
+            witness_gate.get("ok") and witness_gate.get("return_source_verified")
+        )
         verified = {
             "ok": True,
             "ack": ack,
@@ -713,6 +950,8 @@ class DocumentRouter:
             "return_source_verified": return_source_verified,
             "independent": bool(ack.get("independent")),
             "ack_id": ack.get("ack_id"),
+            "github_witness": witness_gate,
+            "self_asserted_auth_ignored": True,
         }
 
         rid = self.store.add_receipt(document_id, "RECEIVER_ACK", verified)
@@ -724,8 +963,11 @@ class DocumentRouter:
 
         state = doc["routing_state"]
         advances = []
-        if state == "DISPATCHED":
-            self.store.transition(document_id, "FETCH_OBSERVED", detail={"receipt_id": rid})
+        # Fetch may be observed from queued GitHub source without agent delivery.
+        if state in ("OUTBOUND_QUEUED", "DISPATCHED"):
+            self.store.transition(
+                document_id, "FETCH_OBSERVED", detail={"receipt_id": rid}
+            )
             advances.append("FETCH_OBSERVED")
             state = "FETCH_OBSERVED"
         if state == "FETCH_OBSERVED" and verified.get("bytes_match"):
@@ -738,7 +980,7 @@ class DocumentRouter:
             self.store.transition(
                 document_id,
                 "RECEIVED_PRINCIPAL_VERIFIED_IF_REQUIRED",
-                detail={"receipt_id": rid},
+                detail={"receipt_id": rid, "witness": witness_gate},
             )
             advances.append("RECEIVED_PRINCIPAL_VERIFIED_IF_REQUIRED")
             state = "RECEIVED_PRINCIPAL_VERIFIED_IF_REQUIRED"
@@ -751,16 +993,18 @@ class DocumentRouter:
             )
             advances.append("RETURN_SOURCE_VERIFIED")
 
+        independent_ack = (
+            "ESTABLISHED_REPORT_LEVEL"
+            if principal_verified and bytes_match
+            else "NOT_ESTABLISHED"
+        )
         return ok(
             document_id=document_id,
             receipt_id=rid,
             advances=advances,
             routing_state=self.store.get_document(document_id)["routing_state"],
-            independent_expert_ack=(
-                "ESTABLISHED_REPORT_LEVEL"
-                if verified.get("ok") and verified.get("bytes_match")
-                else "NOT_ESTABLISHED"
-            ),
+            independent_expert_ack=independent_ack,
+            github_witness=witness_gate,
             claim_ceiling=CLAIM_CEILING,
         )
 
@@ -845,7 +1089,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--activate-cutover",
         action="store_true",
-        help="Owner-only: set cutover ACTIVE (requires prior critical gate PASS)",
+        help="Owner-only request: ACTIVE only with --activation-manifest gates PASS",
+    )
+    p.add_argument(
+        "--activation-manifest",
+        type=Path,
+        help="JSON activation manifest with owner/integrity/privacy/ci/rollback gates",
     )
     sub = p.add_subparsers(dest="cmd", required=True)
 
@@ -859,6 +1108,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     d.add_argument("--privacy-class", default="PUBLIC_SAFE")
     d.add_argument("--redacted", action="store_true")
     d.add_argument("--allow-private-dispatch", action="store_true")
+    d.add_argument("--private-lane-proof-json", type=Path)
+    d.add_argument("--transport-witness-json", type=Path)
     d.add_argument("--agent-id")
     d.add_argument("--document-id")
 
@@ -888,16 +1139,35 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     store_default, journal_default = _default_paths(root)
     store = args.store or store_default
     journal = args.journal_dir or journal_default
+    activation_manifest = None
+    if args.activation_manifest:
+        activation_manifest = json.loads(
+            Path(args.activation_manifest).read_text(encoding="utf-8")
+        )
+    elif args.activate_cutover:
+        # Explicit empty manifest → fail-closed STAGED (P0-C negative path).
+        activation_manifest = {}
     router = DocumentRouter(
         RouterConfig(
             repo_root=root,
             store_path=store,
             journal_dir=journal,
             cutover_force_active=bool(args.activate_cutover),
+            activation_manifest=activation_manifest,
         )
     )
     try:
         if args.cmd == "dispatch_document":
+            private_lane_proof = None
+            if args.private_lane_proof_json:
+                private_lane_proof = json.loads(
+                    Path(args.private_lane_proof_json).read_text(encoding="utf-8")
+                )
+            transport_witness = None
+            if args.transport_witness_json:
+                transport_witness = json.loads(
+                    Path(args.transport_witness_json).read_text(encoding="utf-8")
+                )
             result = router.dispatch_document(
                 object_id=args.object,
                 repository=args.repository,
@@ -908,8 +1178,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 privacy_class=args.privacy_class,
                 redacted=args.redacted,
                 allow_private_dispatch=args.allow_private_dispatch,
+                private_lane_proof=private_lane_proof,
                 agent_id=args.agent_id,
                 document_id=args.document_id,
+                transport_witness=transport_witness,
             )
         elif args.cmd == "verify_manifest":
             result = router.verify_manifest(args.document_id)

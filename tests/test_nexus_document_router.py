@@ -26,6 +26,8 @@ from scripts.nexus_document_router import (  # noqa: E402
     RouterConfig,
     classify_source,
     privacy_gate,
+    validate_cutover_activation_manifest,
+    verify_github_receiver_witness,
 )
 from scripts.nexus_github_exchange_chain import (  # noqa: E402
     DEFAULT_REPO,
@@ -110,13 +112,29 @@ class PrivacyGateTests(unittest.TestCase):
         self.assertFalse(r["ok"])
         self.assertEqual(r["code"], "PRIVACY_OWNER_PRIVATE_REQUIRES_EXPLICIT_FLAG")
 
-    def test_owner_private_with_flag(self) -> None:
+    def test_owner_private_with_flag_alone_fails(self) -> None:
         r = privacy_gate(
             source_class="OWNER_GOVERNED_PRIVATE",
             path="private/x",
             allow_private_dispatch=True,
         )
-        self.assertTrue(r["ok"])
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "PRIVACY_PRIVATE_LANE_PROOF_REQUIRED")
+
+    def test_owner_private_with_lane_proof(self) -> None:
+        r = privacy_gate(
+            source_class="OWNER_GOVERNED_PRIVATE",
+            path="private/x",
+            allow_private_dispatch=True,
+            private_lane_proof={
+                "proof_kind": "OWNER_PRIVATE_LANE_V1",
+                "lane_id": "lane-fixture-1",
+                "owner_approved": True,
+                "rights_scope": "OWNER_PRIVATE_DISPATCH",
+                "connected": True,
+            },
+        )
+        self.assertTrue(r.get("ok"), msg=r)
 
 
 class DocumentStoreTests(unittest.TestCase):
@@ -195,12 +213,40 @@ class CutoverStatusTests(unittest.TestCase):
         self.assertEqual(st["document_handoff"], "FRAMEWORK_REQUIRED_STAGED")
         self.assertEqual(st["claim_ceiling"], CLAIM_CEILING)
 
-    def test_force_active(self) -> None:
+    def test_force_active_without_manifest_stays_staged(self) -> None:
         cfg = RouterConfig(
             repo_root=self.root,
             store_path=self.root / "store2.sqlite",
             journal_dir=self.root / "journal2",
             cutover_force_active=True,
+            activation_manifest={},
+        )
+        r = DocumentRouter(cfg)
+        try:
+            st = r.cutover_status()
+            self.assertEqual(st["document_handoff"], "FRAMEWORK_REQUIRED_STAGED")
+            self.assertFalse((st.get("activation_attempt") or {}).get("ok", True))
+        finally:
+            r.close()
+
+    def test_force_active_with_valid_manifest(self) -> None:
+        manifest = {
+            "owner_approval": True,
+            "integrity_gate": "PASS",
+            "privacy_gate": "PASS",
+            "ci_gate": "PASS",
+            "rollback_gate": "PASS",
+            "pinned_commit": "a" * 40,
+            "order_sha256": "b" * 64,
+        }
+        gate = validate_cutover_activation_manifest(manifest)
+        self.assertTrue(gate.get("ok"), msg=gate)
+        cfg = RouterConfig(
+            repo_root=self.root,
+            store_path=self.root / "store3.sqlite",
+            journal_dir=self.root / "journal3",
+            cutover_force_active=True,
+            activation_manifest=manifest,
         )
         r = DocumentRouter(cfg)
         try:
@@ -208,6 +254,20 @@ class CutoverStatusTests(unittest.TestCase):
             self.assertEqual(st["document_handoff"], "FRAMEWORK_REQUIRED_ACTIVE")
         finally:
             r.close()
+
+    def test_activation_manifest_stale_ci_rejected(self) -> None:
+        bad = {
+            "owner_approval": True,
+            "integrity_gate": "PASS",
+            "privacy_gate": "PASS",
+            "ci_gate": "PENDING",
+            "rollback_gate": "PASS",
+            "pinned_commit": "a" * 40,
+            "order_sha256": "b" * 64,
+        }
+        gate = validate_cutover_activation_manifest(bad)
+        self.assertFalse(gate.get("ok"))
+        self.assertEqual(gate["code"], "CUTOVER_GATE_NOT_PASS")
 
 
 class DispatchAndReceiptTests(unittest.TestCase):
@@ -237,10 +297,11 @@ class DispatchAndReceiptTests(unittest.TestCase):
             privacy_class="PUBLIC_SAFE",
         )
         self.assertTrue(r.get("ok"), msg=r)
-        self.assertEqual(r["routing_state"], "DISPATCHED")
+        self.assertEqual(r["routing_state"], "OUTBOUND_QUEUED")
         self.assertEqual(r["source_class"], "PUBLIC_SAFE_GITHUB")
         self.assertEqual(r["independent_expert_ack"], "NOT_ESTABLISHED")
         self.assertFalse(r["terminal_pass"])
+        self.assertFalse(r["transport_result"]["delivered"])
         self.assertEqual(r["manifest"]["sha256"], self.digest)
         self.assertEqual(r["manifest"]["bytes"], self.nbytes)
 
@@ -282,7 +343,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
         self.assertFalse(ack.get("ok"))
         self.assertEqual(ack["code"], "SAME_PROCESS_ACK_PROHIBITED")
 
-    def test_receive_foreign_process_ack(self) -> None:
+    def test_receive_foreign_process_ack_forged_auth_ignored(self) -> None:
         r = self.router.dispatch_document(
             object_id="TEST_DOC_3",
             repository=DEFAULT_REPO,
@@ -293,7 +354,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
         )
         self.assertTrue(r.get("ok"), msg=r)
         doc_id = r["document_id"]
-        good = {
+        forged = {
             "repository": DEFAULT_REPO,
             "commit": self.commit,
             "object_path": "docs/hello.txt",
@@ -302,12 +363,78 @@ class DispatchAndReceiptTests(unittest.TestCase):
             "fetch_method": "GIT_FETCH_SHOW",
             "process_id": "foreign-pid-99999",
             "authenticated": True,
+            "return_source_verified": True,
             "receiver_principal": "expert-fixture",
         }
-        ack = self.router.receive_receipt(document_id=doc_id, receipt=good)
+        ack = self.router.receive_receipt(document_id=doc_id, receipt=forged)
         self.assertTrue(ack.get("ok"), msg=ack)
-        self.assertEqual(ack["routing_state"], "RECEIVED_PRINCIPAL_VERIFIED_IF_REQUIRED")
+        self.assertEqual(ack["routing_state"], "RECEIVED_BYTES_VERIFIED")
+        self.assertEqual(ack.get("independent_expert_ack"), "NOT_ESTABLISHED")
+        self.assertFalse((ack.get("github_witness") or {}).get("ok", True))
+
+    def test_receive_ack_with_github_witness_promotes_principal(self) -> None:
+        r = self.router.dispatch_document(
+            object_id="TEST_DOC_3B",
+            repository=DEFAULT_REPO,
+            commit=self.commit,
+            path="docs/hello.txt",
+            expected_sha256=self.digest,
+            expected_bytes=self.nbytes,
+        )
+        self.assertTrue(r.get("ok"), msg=r)
+        doc_id = r["document_id"]
+        receipt = {
+            "repository": DEFAULT_REPO,
+            "commit": self.commit,
+            "object_path": "docs/hello.txt",
+            "bytes": self.nbytes,
+            "sha256": self.digest,
+            "fetch_method": "GIT_FETCH_SHOW",
+            "process_id": "foreign-pid-witness-1",
+            "authenticated": False,
+            "receiver_principal": "external-expert-1",
+            "producer_principal": "nexus-owner",
+            "github_api_witness": {
+                "author_id": 424242,
+                "author_login": "external-expert-1",
+                "immutable_url": (
+                    "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/"
+                    "issues/comment/1"
+                ),
+                "observed_sha256": self.digest,
+                "observed_bytes": self.nbytes,
+                "api_attestation": "GITHUB_REST_VERIFIED",
+                "return_source_commit": self.commit,
+                "return_source_sha256": self.digest,
+            },
+        }
+        ack = self.router.receive_receipt(document_id=doc_id, receipt=receipt)
+        self.assertTrue(ack.get("ok"), msg=ack)
+        self.assertEqual(ack["routing_state"], "RETURN_SOURCE_VERIFIED")
         self.assertEqual(ack.get("independent_expert_ack"), "ESTABLISHED_REPORT_LEVEL")
+
+    def test_owner_login_reuse_rejected(self) -> None:
+        doc = {"sha256": "a" * 64, "bytes": 10, "repository": DEFAULT_REPO}
+        r = verify_github_receiver_witness(
+            witness={
+                "author_id": 1,
+                "author_login": "nexusomegac27",
+                "immutable_url": (
+                    "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/"
+                    "issues/comment/9"
+                ),
+                "observed_sha256": "a" * 64,
+                "observed_bytes": 10,
+                "api_attestation": "GITHUB_REST_VERIFIED",
+            },
+            document=doc,
+            receipt={
+                "receiver_principal": "nexusomegac27",
+                "producer_principal": "other",
+            },
+        )
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "ACK_OWNER_LOGIN_REUSE_REJECTED")
 
     def test_mark_scientific_requires_ref(self) -> None:
         r = self.router.dispatch_document(
@@ -336,6 +463,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
             },
         )
         self.assertTrue(ack.get("ok"), msg=ack)
+        self.assertEqual(ack["routing_state"], "RECEIVED_BYTES_VERIFIED")
         with self.assertRaises(TypeError):
             self.router.mark_scientific_adjudication(doc_id)  # type: ignore[call-arg]
         m = self.router.mark_scientific_adjudication(
