@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_AND_UNIFIED_DOCUMENT_HANDOFF_20261031_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "NOT_ESTABLISHED_FROM_FORMAT",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_INDEPENDENT_RECEIVER_PILOT_READINESS_20261030_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "7bc257103f3923dbfd633bc1f43ccb73de1b59bc",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_GITHUB_RECEIVER_PILOT_READINESS_ORDER_20261030_R0.md",
+    "predecessor_bytes": 6512,
+    "predecessor_sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f"
+  },
+  "delegation": {
+    "scope": "Implement G0-G10 of the Final Gated Release: document frontdoor router, GitHub-only handoff, Task Anchor Norm V1, privacy gates, CI/rollback evidence, and staged cutover under C1.",
+    "allowed_actions": [
+      "IMPLEMENT_DOCUMENT_ROUTER",
+      "BIND_TASK_ANCHOR_NORM_V1",
+      "UPDATE_REPOSITORY_STRUCTURE",
+      "RUN_LOCAL_UNIT_TESTS",
+      "COMMIT_AND_PUSH_DRAFT_PR185",
+      "WRITE_TRANSFER_RETURN"
+    ],
+    "prohibited_actions": [
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "GITHUB_UNAUTHORIZED_WRITE",
+      "RUNTIME_EXECUTION",
+      "CLAIM_PROMOTION",
+      "MERGE_PR185",
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "HOSTINGER_WWW_WRITE",
+      "INVENT_RECEIVER_ACK",
+      "PARALLEL_COMMUNICATION_ARCHITECTURE",
+      "REGULAR_MANUAL_ZIP_HANDOFF"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can Cursor implement and evidence the Agent Communication Framework Final Gated Release G0-G10 as the regular document handoff path under GitHub-Only Law V2 without claiming productive external ACK or claim promotion?",
+    "deliverables": [
+      "scripts/nexus_document_router.py",
+      "tests/test_nexus_document_router.py",
+      "TASK_ANCHOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_20261031_R0.json",
+      "REPOSITORY_STRUCTURE tip bump with document_router",
+      "TRANSFER return with SHA-256 inventory and cutover status"
+    ],
+    "falsifiers": [
+      "Order SHA-256 mismatch against bebfaeb2ddfa067a94448250b1aa20a8d3c12a8f2460218d7d51eabcd552cfd0",
+      "Task Anchor Norm V1 validation fails",
+      "Document router accepts HOLD_UNSUPPORTED_PRIVATE without fail-closed",
+      "Same-process receiver ACK accepted as independent",
+      "Cutover ACTIVE without owner activate flag",
+      "PR185 merged without owner release-gate review"
+    ],
+    "acceptance_tests": [
+      "Independent rehash of pinned order at 978f411 matches 15567/bebfaeb2",
+      "validate_task_anchor_norm_v1.py returns ANCHOR_FORMAT_VALIDATED_ONLY",
+      "pytest tests/test_nexus_document_router.py PASS",
+      "Privacy gate rejects unsupported private dispatch",
+      "Cutover remains STAGED unless --activate-cutover",
+      "Draft PR185 push without merge"
+    ],
+    "pause_conditions": [
+      "SOURCE_GAP on pinned order bytes",
+      "Independent expert ACK still NOT_ESTABLISHED for live cutover ACTIVE",
+      "Owner ruleset or CI hard fail"
+    ],
+    "not_executed": [
+      "NATIVE_APP_R3",
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "MULTI_TRANSPORT_V3",
+      "MERGE_PR185",
+      "HOSTINGER_WWW_WRITE",
+      "CLAIM_PROMOTION"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_AND_UNIFIED_DOCUMENT_HANDOFF_20261031_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "object_id_change",
+      "predecessor_sha256_mismatch",
+      "claim_ceiling_change",
+      "recipient_role_change",
+      "write_slot_change"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "7bc257103f3923dbfd633bc1f43ccb73de1b59bc",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_GITHUB_RECEIVER_PILOT_READINESS_ORDER_20261030_R0.md",
+        "bytes": 6512,
+        "sha256": "dd0874f8a1ad112fd1ea824558436d4d957df3433c3aa2cd8b5fcde2e909618f",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "978f41138f76d75c162bd33be61938c0b95c4200",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_AND_UNIFIED_DOCUMENT_HANDOFF_20261031_R0.md",
+        "bytes": 15567,
+        "sha256": "bebfaeb2ddfa067a94448250b1aa20a8d3c12a8f2460218d7d51eabcd552cfd0",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Operator-mediated external agent returns remain unattested; no private raw bytes in public transport; redacted commitment-only class allowed.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Document router CLI dispatch_document/verify_manifest/receive_receipt/cutover_status executable",
+      "SourceResolver nested source resolve against pinned commit blobs",
+      "Task Anchor Norm V1 structural validation PASS"
+    ],
+    "robustness_stability": [
+      "Privacy fail-closed for HOLD_UNSUPPORTED_PRIVATE",
+      "Same-process ACK rejected",
+      "Cutover STAGED by default",
+      "Rollback path documented without inventing WRITE_ACK"
+    ],
+    "traceability_comprehensibility": [
+      "ORDER_OBJECT bound in router header",
+      "DeliveryJournal append-only outbound and receiver_ack streams",
+      "REPOSITORY_STRUCTURE tip records document_router and final order pin"
+    ]
+  }
+}
