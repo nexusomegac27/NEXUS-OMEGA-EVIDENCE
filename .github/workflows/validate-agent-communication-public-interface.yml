@@ -1,0 +1,31 @@
+name: Validate Agent Communication Public Interface
+
+on:
+  pull_request:
+    paths:
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_*.json"
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_*.html"
+      - "tests/test_nexus_agent_communication_public_interface.py"
+      - ".github/workflows/validate-agent-communication-public-interface.yml"
+  push:
+    branches:
+      - "codex/github-expert-exchange-foundation-20261029"
+    paths:
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_*.json"
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_*.html"
+      - "tests/test_nexus_agent_communication_public_interface.py"
+      - ".github/workflows/validate-agent-communication-public-interface.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-public-interface:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out PR merge candidate
+        uses: actions/checkout@v4
+      - name: Validate public read-only interface (no external network)
+        run: python3 -m unittest discover -s tests -p 'test_nexus_agent_communication_public_interface.py' -v
