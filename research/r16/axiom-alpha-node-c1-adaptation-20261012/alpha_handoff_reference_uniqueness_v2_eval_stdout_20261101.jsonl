@@ -1,0 +1,16 @@
+{"case": "unique_positive", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "duplicate_success_reference", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "whitespace_alias_reference", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "success_failure_same_reference", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "ineligible_duplicate_reference", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "distinct_fragment_reference", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "duplicate_attempt_id", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "blank_evidence_ref", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "eligible_failure_counted", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "pass": true}
+{"case": "manual_nudge_excluded_from_numerator", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "pass": true}
+{"case": "missing_accessibility", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "incomplete_coverage", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "zero_eligible", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "private_excluded", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 2, 2], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 2, 2], "pass": true}
+{"case": "unicode_whitespace_alias", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"passed": 15, "scope": "SYNTHETIC_ONLY", "total": 15}
