@@ -1,0 +1,13 @@
+{"fixture": "positive_exact_inventory", "v1": true, "v2": true, "expected_v1": true, "expected_v2": true, "pass": true}
+{"fixture": "positive_order_invariant", "v1": true, "v2": true, "expected_v1": true, "expected_v2": true, "pass": true}
+{"fixture": "missing_semgrep_replaced_by_other", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "semgrep_wrong_app", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "missing_preentry", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "missing_firewall", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "missing_structure", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "validate_count_reduced", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "semgrep_name_case_changed", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "validate_wrong_app", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "semgrep_replaced_by_validate", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"fixture": "preentry_wrong_app", "v1": true, "v2": false, "expected_v1": true, "expected_v2": false, "pass": true}
+{"total": 12, "pass": 12, "negative": 10, "claim": "SYNTHETIC_STRUCTURE_ONLY"}
