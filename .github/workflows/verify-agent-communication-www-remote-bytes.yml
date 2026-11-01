@@ -1,0 +1,67 @@
+name: Verify Agent Communication WWW Remote Bytes
+
+on:
+  push:
+    branches:
+      - "codex/github-expert-exchange-foundation-20261029"
+    paths:
+      - ".github/workflows/verify-agent-communication-www-remote-bytes.yml"
+      - "research/communication/github-only-exchange-enforcement-20261029/AXIOM_*WWW*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remote-www-bytes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify actual HTTPS body bytes, HEAD and source commitments
+        env:
+          EXPECTED_HTML_SHA256: "1b9a7902b64bf8fd1059821d33bb7dab604194212ee14e2378090bd0ed1f6987"
+          EXPECTED_PROTOCOL_SHA256: "8c5f45076e4b21607903c39a8b46b2d7bd1d923e70a7e775dec53802dfc26b51"
+          EXPECTED_STATUS_SHA256: "3e6d6d46297a46fa11e1b7de08ec8ab66af0eddc8aac48e8d58389da6fe62707"
+        run: |
+          python3 - <<'PY'
+          import datetime
+          import hashlib
+          import json
+          import os
+          import urllib.request
+          from urllib.parse import urlsplit
+          urls = {
+              'html': ('https://www.nexus-mobile.de/ai/agent-border/communication/',os.environ['EXPECTED_HTML_SHA256'],'text/html'),
+              'status': ('https://www.nexus-mobile.de/ai/agent-border/communication/status.json',os.environ['EXPECTED_STATUS_SHA256'],'application/json'),
+              'protocol': ('https://www.nexus-mobile.de/ai/agent-border/communication/protocol.json',os.environ['EXPECTED_PROTOCOL_SHA256'],'application/json'),
+          }
+          print('UTC_WITNESS',datetime.datetime.now(datetime.timezone.utc).isoformat(),flush=True)
+          for name,(url,expect,mime) in urls.items():
+              with urllib.request.urlopen(urllib.request.Request(url,method='HEAD',headers={'User-Agent':'NEXUS-OMEGA-GITHUB-CI-WWW-READONLY'}),timeout=25) as response:
+                  print(name,'HEAD',response.status,'CONTENT_TYPE',response.headers.get('Content-Type'),'URL',response.url,flush=True)
+                  assert response.status==200 and urlsplit(response.url).netloc=='www.nexus-mobile.de'
+                  assert mime in (response.headers.get('Content-Type') or '').lower()
+              with urllib.request.urlopen(urllib.request.Request(url,method='GET',headers={'User-Agent':'NEXUS-OMEGA-GITHUB-CI-WWW-READONLY','Cache-Control':'no-cache'}),timeout=25) as response:
+                  body=response.read(3_000_000)
+                  observed=hashlib.sha256(body).hexdigest()
+                  print(name,'GET',response.status,'BYTES',len(body),'SHA256',observed,'EXPECTED',expect,'MATCH',observed==expect,'URL',response.url,flush=True)
+                  assert response.status==200 and response.url==url
+                  assert mime in (response.headers.get('Content-Type') or '').lower()
+                  assert observed==expect, name+' remote bytes different from pinned release'
+                  if name=='status':
+                      doc=json.loads(body)
+                      assert doc['release_state']=='LIVE_READ_ONLY_CONFIRMED'
+                      assert doc['production_cutover_active'] is False
+                      assert doc['external_authenticated_return']=='NOT_ESTABLISHED'
+                      assert doc['public_external_write_api']=='OFF'
+                  if name=='protocol':
+                      doc=json.loads(body)
+                      assert doc['public_write_api']=='OFF'
+                      assert doc['independent_external_ack']=='NOT_ESTABLISHED'
+                  if name=='html':
+                      text=body.decode('utf-8')
+                      assert 'href="status.json"' in text
+                      assert 'href="protocol.json"' in text
+                      assert '<script' not in text.lower() and '<form' not in text.lower()
+          print('WWW_REMOTE_BYTE_SHA256_ALL_3_PASS_C1_READ_ONLY',flush=True)
+          PY

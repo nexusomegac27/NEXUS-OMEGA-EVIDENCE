@@ -19,8 +19,15 @@ jobs:
           set -euo pipefail
           git init .
           git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          # Tip SHA plus F01 PINNED_COMMIT (ee73769…) required by
+          # tests.test_nexus_github_exchange_chain under unittest discover.
+          # depth=1 on tip alone → COMMIT_OBJECT_MISSING for the pin.
           git fetch --depth=1 origin "${GITHUB_SHA}"
-          git checkout --detach FETCH_HEAD
+          git fetch --depth=1 origin ee73769c966b22887fafbc755edf7c64d1a537e1
+          git checkout --detach "${GITHUB_SHA}"
+          git rev-parse HEAD
+          test "$(git rev-parse HEAD)" = "${GITHUB_SHA}"
+          git cat-file -t ee73769c966b22887fafbc755edf7c64d1a537e1 | grep -qx commit
       - name: Compile validator
         run: python3 -m py_compile scripts/validate_anchor.py scripts/validate_repository.py tests/test_validate_anchor.py
       - name: Unit tests
