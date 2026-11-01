@@ -45,7 +45,7 @@
       "NATIVE_APP_R3",
       "NODE_RESET"
     ],
-    "write_slot": "EXISTING_OWNER_GOVERNED_GITHUB_PR_ONLY",
+    "write_slot": "NOT_ALLOCATED",
     "runtime_authorized": false,
     "node_reset_authorized": false,
     "claim_promotion_authorized": false
@@ -169,8 +169,8 @@
         "source_status": "GITHUB_SOURCE_VERIFIED"
       }
     ],
-    "missing_source_policy": "REPORT_EXTERNAL_USER_UPLOAD_OPERATOR_RELAYED_NOT_GITHUB_AUTHENTICATED; WHOLE_FILE_SHA256_f67e42cc9f4e08007cdf55b302d823d94dcb1d93df19f17a95bd0afeb7a68750; NO_PUBLIC_ORIGINAL_UPLOAD",
-    "copyright_privacy": "PUBLIC_SAFE_RESEARCH_SYNTHESIS_ONLY; RAW_OPERATOR_UPLOADED_MISTRAL_RETURN_STAYS_OUT_OF_PUBLIC_GITHUB",
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_RESEARCH_SYNTHESIS_ONLY; RAW_OPERATOR_UPLOADED_MISTRAL_RETURN_STAYS_OUT_OF_PUBLIC_GITHUB; EXTERNAL_REPORT_OPERATOR_RELAYED_SHA256_f67e42cc9f4e08007cdf55b302d823d94dcb1d93df19f17a95bd0afeb7a68750",
     "independent_rehash_required": true
   },
   "return_contract": {
