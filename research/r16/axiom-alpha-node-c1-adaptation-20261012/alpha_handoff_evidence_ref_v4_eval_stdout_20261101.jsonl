@@ -1,0 +1,18 @@
+{"case": "positive_baseline", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "positive_distinct_composed_unicode", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "positive_case_sensitive", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "positive_internal_punctuation", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 3], "pass": true}
+{"case": "regression_failed_attempt_in_denominator", "expected": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "observed": ["METRIC_READY_STRUCTURAL_ONLY", 3, 2], "pass": true}
+{"case": "regression_exact_duplicate", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "regression_incomplete_coverage", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_single_padded", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_single_nfd", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_zero_width_joiner", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_embedded_nul", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_embedded_newline", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_single_nbsp_padding", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_single_tab_suffix", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_bom_format", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_nfc_nfd_alias", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "negative_invisible_alias", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"passed": 17, "scope": "SYNTHETIC_ONLY", "total": 17}
