@@ -1,0 +1,13 @@
+{"case": "positive_exact_required", "expected": ["OBSERVED_CONTEXTS_COVERED", []], "observed": ["OBSERVED_CONTEXTS_COVERED", null], "pass": true}
+{"case": "absent_second_required", "expected": ["GAP_OBSERVED", [["semgrep", 4695336]]], "observed": ["OBSERVED_CONTEXTS_COVERED", null], "pass": false}
+{"case": "absent_only_required_wrong_name", "expected": ["GAP_OBSERVED", [["semgrep", 15368]]], "observed": ["GAP_OBSERVED", null], "pass": false}
+{"case": "absent_only_required_wrong_app", "expected": ["GAP_OBSERVED", [["validate", 4695336]]], "observed": ["GAP_OBSERVED", null], "pass": false}
+{"case": "positive_two_required", "expected": ["OBSERVED_CONTEXTS_COVERED", []], "observed": ["OBSERVED_CONTEXTS_COVERED", null], "pass": true}
+{"case": "extra_unrequired_context", "expected": ["GAP_OBSERVED", []], "observed": ["GAP_OBSERVED", null], "pass": true}
+{"case": "duplicate_required_name", "expected": ["GAP_OBSERVED", []], "observed": ["GAP_OBSERVED", null], "pass": true}
+{"case": "failed_required_check", "expected": ["NOT_COMPUTABLE", null], "observed": ["NOT_COMPUTABLE", null], "pass": true}
+{"case": "empty_inventory", "expected": ["NOT_COMPUTABLE", null], "observed": ["NOT_COMPUTABLE", null], "pass": true}
+{"case": "wrong_head", "expected": ["NOT_COMPUTABLE", null], "observed": ["NOT_COMPUTABLE", null], "pass": true}
+{"case": "duplicate_required_rule", "expected": ["NOT_COMPUTABLE", null], "observed": ["NOT_COMPUTABLE", null], "pass": true}
+{"case": "bool_integration_id", "expected": ["NOT_COMPUTABLE", null], "observed": ["NOT_COMPUTABLE", null], "pass": true}
+{"passed": 9, "scope": "SYNTHETIC_NORMALIZED_FIELDS_NOT_AUTHENTICATED", "total": 12}
