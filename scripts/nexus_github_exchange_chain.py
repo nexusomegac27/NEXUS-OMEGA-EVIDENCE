@@ -328,6 +328,7 @@ class AgentAdapter:
         )
         return ok(
             declared=asdict(self._declared),
+            status="DECLARED",
             note="DECLARED_IDENTITY_IS_NOT_AUTHENTICATION",
         )
 

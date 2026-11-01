@@ -1,0 +1,56 @@
+name: Validate MISTRAL P0 Hard Repair
+
+on:
+  pull_request:
+    paths:
+      - "scripts/nexus_document_router.py"
+      - "scripts/nexus_github_exchange_chain.py"
+      - "tests/test_nexus_document_router.py"
+      - "research/communication/p0-diagnostics-20261101/**"
+      - ".github/workflows/validate-mistral-p0-hard-repair.yml"
+  push:
+    branches:
+      - "codex/mistral-p0-original-python-hard-repair-20261101"
+    paths:
+      - "scripts/nexus_document_router.py"
+      - "scripts/nexus_github_exchange_chain.py"
+      - "tests/test_nexus_document_router.py"
+      - "research/communication/p0-diagnostics-20261101/**"
+      - ".github/workflows/validate-mistral-p0-hard-repair.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-and-repaired-negatives:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repair tip
+        uses: actions/checkout@v4
+
+      - name: Router unit tests (PASS required)
+        run: python3 -m unittest discover -s tests -p 'test_nexus_document_router.py' -v
+
+      - name: Repaired-negative suite (PASS = DEFECT FIXED)
+        run: python3 -m unittest research/communication/p0-diagnostics-20261101/test_mistral_original_python_repaired_negatives.py -v
+
+  baseline-defects-must-fail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repair tip
+        uses: actions/checkout@v4
+
+      - name: Baseline original-Python defect suite must FAIL after repair
+        run: |
+          set +e
+          python3 -m unittest research/communication/p0-diagnostics-20261101/test_mistral_original_python_vulnerabilities.py -v
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            echo "Baseline EXPECTED_DEFECT suite unexpectedly PASSED after repair"
+            exit 1
+          fi
+          echo "Baseline suite failed as required (defects closed on this tip); exit=$code"

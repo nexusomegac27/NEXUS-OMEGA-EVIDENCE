@@ -123,6 +123,37 @@ FORBIDDEN_PUBLIC_WRITE = (
     "UNREGISTERED_AGENT_WRITE",
 )
 
+# Owner / operator principals allowed to sign private-lane activation.
+PRIVATE_LANE_SIGNER_ALLOWLIST = frozenset(
+    {
+        "OPERATOR_ALEXANDER",
+        "OPERATOR_ALEXANDER_VIA_AXIOM",
+        "AXIOM_OPERATOR",
+    }
+)
+
+# GitHub author_association values that may establish a receiver principal.
+GITHUB_RECEIVER_ASSOCIATIONS = frozenset(
+    {
+        "OWNER",
+        "MEMBER",
+        "COLLABORATOR",
+        "CONTRIBUTOR",
+    }
+)
+
+# Genuine GitHub HTML issue/PR comment URLs (REST docs: #issuecomment-{id}).
+_GITHUB_ISSUE_COMMENT_HTML = re.compile(
+    r"^https://github\.com/"
+    r"(?P<repo>[^/]+/[^/]+)/"
+    r"(?:issues|pull)/(?P<number>\d+)"
+    r"#issuecomment-(?P<cid>\d+)/?$"
+)
+_GITHUB_COMMENT_ID_FROM_API = re.compile(
+    r"/repos/[^/]+/[^/]+/issues/comments/(?P<cid>\d+)/?$"
+)
+_GITHUB_COMMENT_ID_FRAGMENT = re.compile(r"#issuecomment-(?P<cid>\d+)")
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -145,7 +176,11 @@ def _valid_transition(current: str, nxt: str) -> bool:
             "RECEIVED_PRINCIPAL_VERIFIED_IF_REQUIRED",
             "RECEIVED_BYTES_VERIFIED",
         )
-    return ni == ci + 1 or (ni > ci and nxt in ROUTING_STATES[ci:])
+    # receive_receipt may observe fetch before local DISPATCHED stamp lands
+    # (OUTBOUND_QUEUED -> FETCH_OBSERVED). DISPATCHED -> FETCH_OBSERVED remains adjacent.
+    if current == "OUTBOUND_QUEUED" and nxt == "FETCH_OBSERVED":
+        return True
+    return ni == ci + 1
 
 
 def classify_source(
@@ -195,6 +230,8 @@ def _valid_private_lane_proof(
     signer = str(entry.get("signer") or entry.get("owner") or "").strip()
     if not signer:
         return fail("PRIVATE_LANE_SIGNER_REQUIRED", entry_id)
+    if signer not in PRIVATE_LANE_SIGNER_ALLOWLIST:
+        return fail("PRIVATE_LANE_SIGNER_NOT_ALLOWLISTED", signer)
     return ok(
         private_lane=True,
         entry_id=entry_id,
@@ -293,13 +330,20 @@ def validate_cutover_activation_manifest(
             "CUTOVER_EVIDENCE_STATUS_INVALID",
             str(trusted_cutover_evidence.get("status")),
         )
-    # Reject caller-supplied activation booleans as authority.
+    # Reject caller-supplied activation claims as authority (any type).
     for banned in ("cutover_active", "force_active", "authorized"):
-        if banned in manifest and isinstance(manifest.get(banned), bool):
+        if banned in manifest:
             return fail(
                 "CUTOVER_BOOLEAN_CLAIM_REJECTED",
                 f"field={banned} is not trusted evidence",
             )
+    att_kind = str(manifest.get("attestation_kind") or "").strip()
+    att_ref = str(manifest.get("attestation_ref") or "").strip()
+    if not att_kind or not att_ref:
+        return fail(
+            "CUTOVER_ATTESTATION_REQUIRED",
+            "attestation_kind and attestation_ref required on manifest",
+        )
     return ok(
         cutover_activation="AUTHORIZED",
         object_id=str(manifest.get("object_id")),
@@ -307,6 +351,8 @@ def validate_cutover_activation_manifest(
         evidence_bytes=man_bytes,
         activation_token=str(manifest.get("activation_token")),
         authorized_at_utc=str(manifest.get("authorized_at_utc")),
+        attestation_kind=att_kind,
+        attestation_ref=att_ref,
     )
 
 
@@ -328,19 +374,22 @@ def verify_github_receiver_witness(
         "GITHUB_REST_VERIFIED",
         "TRANSPORT_API_VERIFIED",
     ):
-        # Still allow the *field* to be present as untrusted hint only when
-        # a github_client will independently re-fetch. If no client → reject.
-        if github_client is None:
-            return fail(
-                "CALLER_GITHUB_API_WITNESS_REJECTED",
-                "api_attestation from caller is not trusted without verifier fetch",
-            )
+        return fail(
+            "ACK_GITHUB_CALLER_ATTESTATION_REJECTED",
+            "caller-supplied api_attestation is never accepted; verifier must fetch bytes",
+        )
     comment_id = witness.get("comment_id") or witness.get("issue_comment_id")
     immutable_url = str(witness.get("immutable_url") or "")
     if comment_id is None and immutable_url:
-        m = re.search(r"/issues/comments?/(\d+)", immutable_url)
-        if m:
-            comment_id = m.group(1)
+        m_html = _GITHUB_ISSUE_COMMENT_HTML.match(immutable_url)
+        m_api = _GITHUB_COMMENT_ID_FROM_API.search(immutable_url)
+        m_frag = _GITHUB_COMMENT_ID_FRAGMENT.search(immutable_url)
+        if m_html:
+            comment_id = m_html.group("cid")
+        elif m_api:
+            comment_id = m_api.group("cid")
+        elif m_frag:
+            comment_id = m_frag.group("cid")
     if comment_id is None:
         return fail(
             "ACK_GITHUB_COMMENT_ID_REQUIRED",
@@ -374,40 +423,58 @@ def verify_github_receiver_witness(
     ).strip()
     if not login or login.upper() in ("UNAUTHENTICATED", "UNKNOWN", "SELF"):
         return fail("ACK_GITHUB_AUTHOR_LOGIN_INVALID", login)
-    url = str(
-        fetched.get("html_url")
-        or fetched.get("immutable_url")
-        or immutable_url
+    association = str(
+        fetched.get("author_association")
+        or (fetched.get("user") or {}).get("author_association")
         or ""
-    )
-    if not (
-        url.startswith("https://github.com/")
-        and ("/issues/comment/" in url or "/pull/" in url or "/commit/" in url)
-    ):
+    ).strip().upper()
+    if association not in GITHUB_RECEIVER_ASSOCIATIONS:
+        return fail("ACK_GITHUB_ASSOCIATION_REJECTED", association or "MISSING")
+    url = str(fetched.get("html_url") or fetched.get("immutable_url") or "")
+    url_match = _GITHUB_ISSUE_COMMENT_HTML.match(url)
+    if not url_match:
         return fail("ACK_GITHUB_IMMUTABLE_URL_INVALID", url)
-    # Observed document bytes must match the document under custody — from
-    # verifier context, never from caller-asserted observed_* alone.
+    if int(url_match.group("cid")) != comment_id_int:
+        return fail(
+            "ACK_GITHUB_COMMENT_ID_URL_MISMATCH",
+            f"url_cid={url_match.group('cid')}; fetch_cid={comment_id_int}",
+        )
+    expected_repo = str(document.get("repository") or "").strip().lower()
+    url_repo = str(url_match.group("repo") or "").strip().lower()
+    if expected_repo and url_repo and expected_repo != url_repo:
+        return fail(
+            "ACK_GITHUB_REPO_MISMATCH",
+            f"url_repo={url_repo}; document_repo={expected_repo}",
+        )
+    # Digests from verifier-fetched comment body only (CLAIM_*); never witness.
+    body_text = str(fetched.get("body") or "")
+    claim_sha_m = re.search(
+        r"(?im)^\s*CLAIM_SHA256\s*[:=]\s*([0-9a-fA-F]{64})\s*$",
+        body_text,
+    )
+    claim_bytes_m = re.search(
+        r"(?im)^\s*CLAIM_BYTES\s*[:=]\s*(\d+)\s*$",
+        body_text,
+    )
+    claim_commit_m = re.search(
+        r"(?im)^\s*CLAIM_COMMIT\s*[:=]\s*([0-9a-fA-F]{7,64})\s*$",
+        body_text,
+    )
+    if not claim_sha_m or not claim_bytes_m:
+        return fail(
+            "ACK_GITHUB_CLAIM_FIELDS_MISSING",
+            "fetched comment body must include CLAIM_SHA256 and CLAIM_BYTES",
+        )
     doc_sha = str(document.get("sha256") or "").lower()
     try:
         doc_bytes = int(document.get("bytes") or -1)
     except (TypeError, ValueError):
         return fail("ACK_GITHUB_OBSERVED_BYTES_INVALID", "document.bytes")
-    obs_sha = str(
-        fetched.get("observed_sha256")
-        or witness.get("observed_sha256")
-        or ""
-    ).lower()
+    obs_sha = claim_sha_m.group(1).lower()
     try:
-        obs_bytes = int(
-            fetched.get("observed_bytes")
-            if fetched.get("observed_bytes") is not None
-            else witness.get("observed_bytes")
-        )
+        obs_bytes = int(claim_bytes_m.group(1))
     except (TypeError, ValueError):
-        return fail(
-            "ACK_GITHUB_OBSERVED_BYTES_INVALID",
-            str(witness.get("observed_bytes")),
-        )
+        return fail("ACK_GITHUB_OBSERVED_BYTES_INVALID", claim_bytes_m.group(1))
     if not doc_sha or obs_sha != doc_sha or obs_bytes != doc_bytes:
         return fail(
             "ACK_GITHUB_BYTES_MISMATCH",
@@ -425,23 +492,28 @@ def verify_github_receiver_witness(
             "owner login cannot self-attest as independent receiver",
         )
     return_source_ok = False
-    rs_commit = fetched.get("return_source_commit") or witness.get(
-        "return_source_commit"
-    )
-    rs_sha = fetched.get("return_source_sha256") or witness.get(
-        "return_source_sha256"
-    )
-    if rs_commit and rs_sha and str(rs_sha).lower() == doc_sha:
+    rs_commit = claim_commit_m.group(1) if claim_commit_m else ""
+    expected_commit = str(document.get("commit_sha") or "").strip()
+    if rs_commit and expected_commit and rs_commit != expected_commit:
+        return fail(
+            "ACK_GITHUB_RETURN_COMMIT_MISMATCH",
+            "CLAIM_COMMIT must equal document.commit_sha",
+        )
+    if rs_commit and expected_commit and rs_commit == expected_commit and obs_sha == doc_sha:
         return_source_ok = True
     return ok(
         principal_verified=True,
         return_source_verified=return_source_ok,
         author_id=author_id,
         author_login=login,
+        author_association=association,
         immutable_url=url,
         comment_id=comment_id_int,
         api_attestation="GITHUB_REST_VERIFIER_FETCHED",
         attestation_class="VERIFIER_OWNED",
+        observed_sha256=obs_sha,
+        observed_bytes=obs_bytes,
+        return_source_commit=rs_commit or None,
     )
 
 
@@ -458,7 +530,7 @@ class DocumentStore:
         self._conn = sqlite3.connect(str(self.db_path), check_same_thread=False)
         self._conn.row_factory = sqlite3.Row
         self._conn.execute("PRAGMA journal_mode=WAL")
-        self._conn.execute("PRAGMA synchronous=NORMAL")
+        self._conn.execute("PRAGMA synchronous=FULL")
         self._init_schema()
 
     def _init_schema(self) -> None:
@@ -546,6 +618,25 @@ class DocumentStore:
         sha256: Optional[str] = None,
         document_id: Optional[str] = None,
     ) -> Dict[str, Any]:
+        # Idempotent: identical custody tuple reuses existing row (no IntegrityError).
+        if sha256 is not None and bytes_n is not None:
+            existing = self._conn.execute(
+                "SELECT document_id FROM documents "
+                "WHERE object_id=? AND repository=? AND commit_sha=? AND path=? "
+                "AND sha256=? AND bytes=? AND source_class=? AND privacy_class=?",
+                (
+                    object_id,
+                    repository,
+                    commit_sha,
+                    path,
+                    sha256,
+                    bytes_n,
+                    source_class,
+                    privacy_class,
+                ),
+            ).fetchone()
+            if existing is not None:
+                return self.get_document(str(existing["document_id"]))
         did = document_id or f"doc:{uuid.uuid4().hex}"
         ts = utc_now()
         cutover = self.get_cutover()
@@ -942,6 +1033,8 @@ class DocumentRouter:
                 delivery_state = "DISPATCHED"
                 transport_result = {
                     "delivered": True,
+                    "ok": True,
+                    "adapter_proved": True,
                     "reason": "TRANSPORT_ADAPTER_PROVE_ACCEPTED",
                     "adapter_status": adapter_status,
                     "adapter_prove": adapter_prove,

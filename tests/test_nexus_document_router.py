@@ -147,6 +147,8 @@ def _valid_cutover_pair() -> tuple[Dict[str, Any], Dict[str, Any]]:
         "evidence_sha256": evidence_sha,
         "evidence_bytes": evidence_bytes,
         "authorized_at_utc": "2026-10-31T17:00:00Z",
+        "attestation_kind": "OWNER_SIGNED_CUTOVER_RECEIPT",
+        "attestation_ref": "urn:nexus-omega:cutover:fixture:r0",
     }
     trusted = {
         "sha256": evidence_sha,
@@ -166,16 +168,20 @@ def _comment_body(
     nbytes: int,
     commit: str,
 ) -> Dict[str, Any]:
+    body = (
+        f"CLAIM_SHA256: {digest}\n"
+        f"CLAIM_BYTES: {nbytes}\n"
+        f"CLAIM_COMMIT: {commit}\n"
+    )
     return {
         "id": comment_id,
         "user": {"id": author_id, "login": login},
+        "author_association": "COLLABORATOR",
         "html_url": (
-            f"https://github.com/{DEFAULT_REPO}/issues/comment/{comment_id}"
+            f"https://github.com/{DEFAULT_REPO}/issues/1"
+            f"#issuecomment-{comment_id}"
         ),
-        "observed_sha256": digest,
-        "observed_bytes": nbytes,
-        "return_source_commit": commit,
-        "return_source_sha256": digest,
+        "body": body,
     }
 
 
@@ -284,9 +290,8 @@ class DocumentStoreTests(unittest.TestCase):
             source_class="PUBLIC_SAFE_GITHUB",
             privacy_class="PUBLIC_SAFE",
         )
-        self.store.transition(doc["document_id"], "DISPATCHED")
         with self.assertRaises(ValueError):
-            self.store.transition(doc["document_id"], "CREATED")
+            self.store.transition(doc["document_id"], "DISPATCHED")
 
 
 class CutoverStatusTests(unittest.TestCase):
@@ -536,11 +541,10 @@ class DispatchAndReceiptTests(unittest.TestCase):
                 "author_id": 424242,
                 "author_login": "external-expert-1",
                 "immutable_url": (
-                    f"https://github.com/{DEFAULT_REPO}/issues/comments/{comment_id}"
+                    f"https://github.com/{DEFAULT_REPO}/issues/1#issuecomment-{comment_id}"
                 ),
                 "observed_sha256": self.digest,
                 "observed_bytes": self.nbytes,
-                "api_attestation": "GITHUB_REST_VERIFIED",
                 "return_source_commit": self.commit,
                 "return_source_sha256": self.digest,
             },
@@ -576,11 +580,10 @@ class DispatchAndReceiptTests(unittest.TestCase):
                 "author_id": 1,
                 "author_login": "nexusomegac27",
                 "immutable_url": (
-                    f"https://github.com/{DEFAULT_REPO}/issues/comments/{comment_id}"
+                    f"https://github.com/{DEFAULT_REPO}/issues/1#issuecomment-{comment_id}"
                 ),
                 "observed_sha256": digest,
                 "observed_bytes": 10,
-                "api_attestation": "GITHUB_REST_VERIFIED",
             },
             document=doc,
             receipt={
@@ -614,7 +617,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
             github_client=None,
         )
         self.assertFalse(r.get("ok"))
-        self.assertEqual(r["code"], "CALLER_GITHUB_API_WITNESS_REJECTED")
+        self.assertEqual(r["code"], "ACK_GITHUB_CALLER_ATTESTATION_REJECTED")
 
     def test_github_identity_not_verified_without_client(self) -> None:
         digest = "a" * 64
@@ -623,7 +626,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
                 "author_id": 99,
                 "author_login": "external-expert-1",
                 "immutable_url": (
-                    f"https://github.com/{DEFAULT_REPO}/issues/comments/77"
+                    f"https://github.com/{DEFAULT_REPO}/issues/1#issuecomment-77"
                 ),
                 "observed_sha256": digest,
                 "observed_bytes": 10,
@@ -691,11 +694,15 @@ class DispatchAndReceiptTests(unittest.TestCase):
             expected_sha256=self.digest,
             expected_bytes=self.nbytes,
             transport_witness={"channel": "ADAPTER_FIXTURE"},
+            agent_id="urn:nexus-omega:agent:test-transport:v1",
         )
         self.assertTrue(r.get("ok"), msg=r)
         self.assertEqual(len(adapter.calls), 1)
         tr = r.get("transport_result") or {}
-        self.assertTrue(tr.get("ok") or tr.get("adapter_proved") or True)
+        self.assertTrue(tr.get("ok") is True, tr)
+        self.assertTrue(tr.get("adapter_proved") is True, tr)
+        self.assertTrue(tr.get("delivered") is True, tr)
+        self.assertEqual(r.get("routing_state"), "DISPATCHED")
 
     def test_mark_scientific_requires_ref(self) -> None:
         r = self.router.dispatch_document(
