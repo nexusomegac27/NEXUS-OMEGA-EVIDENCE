@@ -45,7 +45,8 @@
     "dual_device_sync": "NOT_AUTHORIZED",
     "live_sensor_relay": "NOT_AUTHORIZED",
     "raw_sensor_cloud_upload": "NOT_AUTHORIZED",
-    "opto_in": "REQUIRED_EXPLICIT"
+    "opt_in": "REQUIRED_EXPLICIT",
+    "previous_oppo_evidence_reverification": "REQUIRED_BEFORE_NEW_PIXEL_ACTION"
   },
   "symbiosis": {
     "state": "C1_FEEDBACK_LOOP_RESEARCH_ONLY",
