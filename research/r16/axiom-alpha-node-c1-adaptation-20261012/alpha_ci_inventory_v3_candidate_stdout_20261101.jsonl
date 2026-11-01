@@ -1,0 +1,17 @@
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "complete_one_page_positive", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "complete_two_page_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "missing_inventory", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "truncated_total_count", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "understated_total_count", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "next_page_unfetched", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "not_complete", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "page_id_mismatch", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "missing_page", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "bool_page_size", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "bool_total_count", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "wrong_api_label", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "wrong_inventory_head", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "existing_failed_run_regression", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "complete_single_page_extra_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "extra_page_id", "expected": "NOT_COMPUTABLE", "pass": true}
+{"passed": 16, "scope": "SYNTHETIC_NORMALIZED_FIELDS_UNAUTHENTICATED", "total": 16}
