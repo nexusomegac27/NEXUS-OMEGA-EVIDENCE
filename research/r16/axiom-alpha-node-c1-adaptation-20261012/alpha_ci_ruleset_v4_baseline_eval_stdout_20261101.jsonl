@@ -1,0 +1,18 @@
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "valid_main_no_exclusions_no_bypass", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "valid_extra_check_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "valid_required_absent_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "valid_multiple_includes", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "excluded_main", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "excluded_other_unmodeled_pattern", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "excluded_all", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "exclude_string_type", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "exclude_missing", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "bypass_actor_present", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "bypass_missing", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "bypass_null", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "bypass_wrong_type", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "include_string_type", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "include_dict_type", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "include_duplicate", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "include_mixed_type", "expected": "NOT_COMPUTABLE", "pass": false}
+{"passed": 4, "scope": "SYNTHETIC_RULESET_SCOPE_AND_BYPASS_NOT_AUTHENTICATED", "total": 17}
