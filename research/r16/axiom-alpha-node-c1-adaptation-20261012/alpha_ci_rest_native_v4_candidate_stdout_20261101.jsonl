@@ -1,0 +1,17 @@
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "raw_positive", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "raw_extra_context_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "raw_required_absent_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "truncated_response", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "multipage_fail_closed", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "unfetched_page", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "wrong_page", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "stale_url", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "bool_app_id", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "wrong_run_head", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "wrong_ruleset_id", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "missing_required_rule", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "ruleset_not_active", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "failed_run", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "duplicate_run_id", "expected": "NOT_COMPUTABLE", "pass": true}
+{"actual": "NOT_COMPUTABLE", "case": "bool_total", "expected": "NOT_COMPUTABLE", "pass": true}
+{"passed": 16, "scope": "SYNTHETIC_RAW_REST_SHAPES_NOT_AUTHENTICATED", "total": 16}
