@@ -1,0 +1,10 @@
+{"baseline_v2": true, "candidate_v3": true, "expected_v2": true, "expected_v3": true, "fixture": "positive_canonical", "pass": true}
+{"baseline_v2": true, "candidate_v3": true, "expected_v2": true, "expected_v3": true, "fixture": "positive_finite_exponent", "pass": true}
+{"baseline_v2": true, "candidate_v3": false, "expected_v2": true, "expected_v3": false, "fixture": "positive_overflow", "pass": true}
+{"baseline_v2": true, "candidate_v3": false, "expected_v2": true, "expected_v3": false, "fixture": "negative_overflow", "pass": true}
+{"baseline_v2": true, "candidate_v3": false, "expected_v2": true, "expected_v3": false, "fixture": "very_large_exponent", "pass": true}
+{"baseline_v2": true, "candidate_v3": false, "expected_v2": true, "expected_v3": false, "fixture": "many_digit_exponent", "pass": true}
+{"baseline_v2": true, "candidate_v3": false, "expected_v2": true, "expected_v3": false, "fixture": "nested_overflow", "pass": true}
+{"baseline_v2": false, "candidate_v3": false, "expected_v2": false, "expected_v3": false, "fixture": "baseline_nan_rejected", "pass": true}
+{"baseline_v2": false, "candidate_v3": false, "expected_v2": false, "expected_v3": false, "fixture": "baseline_duplicate_key_rejected", "pass": true}
+{"claim": "SYNTHETIC_STRUCTURE_ONLY", "pass": 9, "total": 9}
