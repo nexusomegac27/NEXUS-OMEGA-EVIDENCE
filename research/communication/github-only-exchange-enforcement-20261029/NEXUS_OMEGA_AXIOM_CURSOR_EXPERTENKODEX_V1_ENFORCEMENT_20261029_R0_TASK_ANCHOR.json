@@ -1,0 +1,59 @@
+{
+  "schema": "NEXUS_TASK_ORDER_ANCHOR_V1",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_EXPERTENKODEX_V1_ENFORCEMENT_20261029_R0",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/github-expert-exchange-foundation-20261029",
+  "draft_pr": 185,
+  "parent_object": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_EXCHANGE_HARD_REMEDIATION_20261029_R2",
+  "pinned_commit_at_intake": "63721950b3c0818e7f6892f83e9b5ee4fd0a5762",
+  "order_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_EXPERTENKODEX_V1_INTEGRATION_ORDER_R0.md",
+  "order_bytes": 5176,
+  "order_sha256": "94c6c9226d2f0ac3f1edeb9f29886b28c5ab8005ebea732c45e5178ad9ffdd32",
+  "expertenkodex_object": "NEXUS_OMEGA_AXIOM_EXPERTENKODEX_GITHUB_COMMUNICATION_20261029_V1",
+  "expertenkodex_commit": "b17d38266777bad61178e608d09e41726b9f4769",
+  "expertenkodex_path": "docs/governance/NEXUS_EXPERTENKODEX_GITHUB_COMMUNICATION_V1.md",
+  "expertenkodex_bytes": 15388,
+  "expertenkodex_sha256": "adf69aa393afc97773fe9a00628cdd1c3b6bfcfba9d40f179ed15915deb789ab",
+  "data_route": "GITHUB_ONLY",
+  "manual_operator_route": "PURE_WORK_ORDER_TEXT_ONLY",
+  "native_app_r3": "HOLD",
+  "auto_merge": "NO",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "gates": {
+    "K0_FETCH_REHASH": "PASS",
+    "K1_CODEX_PIN": "PASS_MATCH",
+    "K2_HEADER_VALIDATOR": "PASS_LOCAL",
+    "K3_C01_C16": "PASS_LOCAL_33_OF_33",
+    "K4_CHAIN_HOOK": "PASS_LOCAL",
+    "K5_CI_CONFIGURED": "PASS_CONFIGURED",
+    "K6_RECEIVER_INDEPENDENT_ACK": "FAIL_ADAPTER_NOT_CONNECTED",
+    "K7_RETURN_APPEND_ONLY": "PASS_THIS_ARTIFACT"
+  },
+  "deliverables": {
+    "scripts/nexus_expertenkodex_validator.py": {
+      "bytes": 17321,
+      "sha256": "ff465ba0989e03eba8aed0013d9738c454d93d37cf53b7091133cce720403173"
+    },
+    "tests/test_nexus_expertenkodex_v1.py": {
+      "bytes": 12258,
+      "sha256": "22130de6663d162680628020adf6a5b78486749e2f17825e14140fc5bce7a824"
+    },
+    "scripts/nexus_github_exchange_chain.py": {
+      "bytes": 29602,
+      "sha256": "f9ea76160c07c6aaace984d6eee83b44c4b7ae6412a57be87276f0e3327dc500"
+    },
+    ".github/workflows/validate-repository-structure.yml": {
+      "bytes": 2518,
+      "sha256": "abd6a1e44d7e472a5c4592a7c6cd4aa113c9930c606f08066cfba4c58b69853f"
+    },
+    "docs/architecture/REPOSITORY_STRUCTURE.json": {
+      "bytes": 18136,
+      "sha256": "742bf1a0d233e9dfeebfd44ed8596e668fc7311d79de6f1379fd2f6ddc5bc7b9"
+    }
+  },
+  "local_unit_tests": "33_OF_33_EK_PLUS_40_OF_40_EXCHANGE_PASS_REPORT_LEVEL",
+  "terminal_pass": "NO",
+  "blocker": "ADAPTER_NOT_CONNECTED",
+  "created_utc": "2026-10-29T20:38:44Z"
+}

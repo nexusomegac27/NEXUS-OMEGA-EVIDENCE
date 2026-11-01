@@ -1,0 +1,79 @@
+name: validate-mistral-p0-hard-repair
+
+# Targeted P0-A..E hard-repair CI for original-Python router.
+# - unit-and-repaired-negatives: PASS = defects FIXED
+# - baseline-defects-must-fail: historical EXPECTED_DEFECT suite must FAIL (EXIT != 0)
+# C1_DESCRIPTIVE_ONLY · no tokens · no external writes · no Hostinger
+
+on:
+  push:
+    branches:
+      - "codex/mistral-p0-original-python-hard-repair-*"
+    paths:
+      - "scripts/nexus_document_router.py"
+      - "scripts/nexus_github_exchange_chain.py"
+      - "tests/test_nexus_document_router.py"
+      - "research/communication/p0-diagnostics-20261101/**"
+      - ".github/workflows/validate-mistral-p0-hard-repair.yml"
+  pull_request:
+    paths:
+      - "scripts/nexus_document_router.py"
+      - "scripts/nexus_github_exchange_chain.py"
+      - "tests/test_nexus_document_router.py"
+      - "research/communication/p0-diagnostics-20261101/**"
+      - ".github/workflows/validate-mistral-p0-hard-repair.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-and-repaired-negatives:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit suite (repaired tip)
+        run: |
+          set -euo pipefail
+          PYTHONPATH="${GITHUB_WORKSPACE}/scripts" \
+            python3 -m unittest discover -s tests -p 'test_nexus_document_router.py' -v
+
+      - name: Repaired-negative suite (PASS = DEFECT FIXED)
+        run: |
+          set -euo pipefail
+          PYTHONPATH="${GITHUB_WORKSPACE}/scripts" \
+            python3 research/communication/p0-diagnostics-20261101/test_mistral_original_python_repaired_negatives.py \
+              "${GITHUB_WORKSPACE}"
+
+  baseline-defects-must-fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Historical EXPECTED_DEFECT suite must FAIL on repaired tip
+        run: |
+          set -euo pipefail
+          set +e
+          PYTHONPATH="${GITHUB_WORKSPACE}/scripts" \
+            python3 research/communication/p0-diagnostics-20261101/test_mistral_original_python_vulnerabilities.py \
+              "${GITHUB_WORKSPACE}"
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            echo "FAIL: baseline EXPECTED_DEFECT suite unexpectedly PASSed on repaired tip" >&2
+            exit 1
+          fi
+          echo "PASS: baseline EXPECTED_DEFECT suite failed as required (rc=$rc)"

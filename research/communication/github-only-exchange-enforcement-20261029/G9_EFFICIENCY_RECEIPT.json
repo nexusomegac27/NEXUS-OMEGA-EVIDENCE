@@ -1,0 +1,35 @@
+{
+  "object": "NEXUS_OMEGA_G9_EFFICIENCY_RECEIPT_20261029_R1",
+  "parent": "NEXUS_OMEGA_AXIOM_CURSOR_GITHUB_ONLY_EXCHANGE_ENFORCEMENT_20261029_R1",
+  "gate": "G9",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "generated_at_utc": "2026-10-29T16:57:46Z",
+  "baseline": {
+    "manual_file_handoffs": 100,
+    "total_required_transfers": 100,
+    "github_mediated_transfers": 0,
+    "proven_receipts": 0
+  },
+  "observed": {
+    "manual_file_handoffs": 5,
+    "total_required_transfers": 100,
+    "github_mediated_transfers": 95,
+    "proven_receipts": 95
+  },
+  "metric": {
+    "ok": true,
+    "reason": "PASS_EFFICIENCY_TARGET",
+    "reduction_ratio": 0.95,
+    "target": 0.9,
+    "baseline_manual": 100,
+    "observed_manual": 5,
+    "proven_receipts": 95,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "pass_requires": "FULL_DENOMINATORS_AND_PROVEN_HANDOFFS"
+  },
+  "epistemic": {
+    "LOCAL_METRIC_PASS": "\u2260 OPERATIONAL_90PCT_REDUCTION_PROVEN",
+    "REQUIRES": "FULL_DENOMINATORS_AND_PROVEN_RECEIPTS",
+    "OPERATIONAL_HANDOFFS": "NOT_INDEPENDENTLY_PROVEN"
+  }
+}

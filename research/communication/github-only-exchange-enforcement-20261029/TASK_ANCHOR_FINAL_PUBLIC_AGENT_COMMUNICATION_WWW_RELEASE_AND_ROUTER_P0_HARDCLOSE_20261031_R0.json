@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "NOT_ESTABLISHED_FROM_FORMAT",
+    "predecessor_object": "NEXUS_OMEGA_CURSOR_AGENT_COMMUNICATION_FRAMEWORK_FINAL_GATED_RELEASE_RETURN_20261031_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0.md",
+    "predecessor_bytes": 9597,
+    "predecessor_sha256": "54649b6863ca9085d2ae02f620efa3312b2e4b473f19858aa6c307f51b7638a3"
+  },
+  "delegation": {
+    "scope": "Deploy public read-only Agent Communication interface to existing Hostinger Agent Border route and hard-close DocumentRouter P0 auth/dispatch/cutover/privacy defects under C1.",
+    "allowed_actions": [
+      "HOSTINGER_STATIC_PUBLIC_SAFE_DEPLOY",
+      "ROUTER_P0_HARD_CLOSE",
+      "WWW_BYTE_WITNESS",
+      "BROWSER_READBACK",
+      "COMMIT_AND_PUSH_DRAFT_PR185",
+      "WRITE_TRANSFER_RETURN",
+      "BIND_TASK_ANCHOR_NORM_V1"
+    ],
+    "prohibited_actions": [
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "GITHUB_UNAUTHORIZED_WRITE",
+      "RUNTIME_EXECUTION",
+      "CLAIM_PROMOTION",
+      "MERGE_PR185",
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "INVENT_RECEIVER_ACK",
+      "CLAIM_CUTOVER_ACTIVE",
+      "NATIVE_APP_R3",
+      "PARALLEL_COMMUNICATION_ARCHITECTURE"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can Cursor publish the static public Agent Communication interface under /ai/agent-border/communication/ with independent WWW byte proofs and hard-close DocumentRouter P0 without activating productive bidirectional cutover?",
+    "deliverables": [
+      "WWW communication index/status/protocol under existing Agent Border",
+      "DocumentRouter P0 hard-close with negative tests",
+      "Task Anchor Norm V1",
+      "RESULT_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0.md",
+      "TRANSFER return package"
+    ],
+    "falsifiers": [
+      "Order SHA-256 mismatch against 54649b6863ca9085d2ae02f620efa3312b2e4b473f19858aa6c307f51b7638a3",
+      "WWW response body SHA mismatch versus pinned source artifacts",
+      "DISPATCHED advanced without transport API witness",
+      "Self-asserted authenticated promotes principal_verified",
+      "--activate-cutover alone sets CUTOVER_ACTIVE",
+      "Private dispatch permitted with boolean flag alone"
+    ],
+    "acceptance_tests": [
+      "Independent order rehash MATCH 9597/54649b68 at pin 7587f26",
+      "Three WWW routes HTTP 200 with independent body SHA match",
+      "Browser desktop readback of communication page and border nav link",
+      "pytest DocumentRouter including P0 negatives PASS",
+      "Rollback rehearsal of border index PASS",
+      "validate_task_anchor_norm_v1.py ANCHOR_FORMAT_VALIDATED_ONLY"
+    ],
+    "pause_conditions": [
+      "SSH Hostinger deploy unavailable",
+      "Independent WWW byte mismatch after deploy",
+      "Owner ruleset or CI hard fail on tip"
+    ],
+    "not_executed": [
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "NATIVE_APP_R3",
+      "PR185_MERGE",
+      "EXTERNAL_AUTHENTICATED_RECEIVER",
+      "CUTOVER_ACTIVE"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "object_id_change",
+      "predecessor_sha256_mismatch",
+      "claim_ceiling_change",
+      "recipient_role_change",
+      "write_slot_change"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_FINAL_PUBLIC_AGENT_COMMUNICATION_WWW_RELEASE_AND_ROUTER_P0_HARDCLOSE_20261031_R0.md",
+        "bytes": 9597,
+        "sha256": "54649b6863ca9085d2ae02f620efa3312b2e4b473f19858aa6c307f51b7638a3",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_INTERFACE_V1.html",
+        "bytes": 13521,
+        "sha256": "1b9a7902b64bf8fd1059821d33bb7dab604194212ee14e2378090bd0ed1f6987",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "7587f26b88f48a49b6a1b0db9f1c07ae63ca715c",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_PROTOCOL_V1.json",
+        "bytes": 2417,
+        "sha256": "8c5f45076e4b21607903c39a8b46b2d7bd1d923e70a7e775dec53802dfc26b51",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Public static GET-only communication surface; no private raw bytes; no public write API; external ACK remains unattested.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Hostinger SCP deploy of communication index/status/protocol under existing Agent Border",
+      "Independent HTTP body SHA-256 match for three public routes",
+      "DocumentRouter P0 hard-close with 22 local unit tests PASS"
+    ],
+    "robustness_stability": [
+      "Self-asserted authenticated/return_source_verified ignored without github_api_witness",
+      "OUTBOUND_QUEUED until transport witness; no phantom DISPATCHED",
+      "Cutover ACTIVE rejected without activation manifest gates PASS",
+      "Private lane requires OWNER_PRIVATE_LANE_V1 proof beyond boolean flag",
+      "Border index rollback rehearsal PASS"
+    ],
+    "traceability_comprehensibility": [
+      "Order pin 7587f26 and SHA 54649b68 bound in RESULT",
+      "STRUCTURE tip 1.7.24 records WWW live hashes and router P0",
+      "PR185 remains OPEN draft without auto-merge"
+    ]
+  }
+}
