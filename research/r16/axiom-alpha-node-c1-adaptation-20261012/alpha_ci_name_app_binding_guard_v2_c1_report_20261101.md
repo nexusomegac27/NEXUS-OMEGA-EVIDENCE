@@ -35,7 +35,7 @@ The independent subprocess evaluator was committed **before** the V2 candidate. 
 |---|---:|---:|
 | Two positive inventories accepted | 2/2 | 2/2 |
 | Ten targeted name/app negative fixtures rejected | 0/10 | 10/10 |
-| Frozen evaluator expected outcomes | 2/12 | 12/12 |
+| Desired security outcomes (2 positive + 10 negative) | 2/12 | 12/12 |
 
 Mutations: substitute an unrelated successful check for Semgrep, preentry, firewall, structure or validate; change Semgrep/validate/preentry app; change Semgrep name case; duplicate validate in place of Semgrep. Every negative retains valid unique IDs, matching heads, eight completed successes and the other synthetic positive matrix fields.
 
