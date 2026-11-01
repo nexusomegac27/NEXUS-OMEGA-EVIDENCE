@@ -1,0 +1,34 @@
+name: Verify MISTRAL P0 Defects Against Original Python
+
+on:
+  push:
+    branches:
+      - codex/axiom-mistral-p0-original-python-diagnostics-20261101
+  pull_request:
+    paths:
+      - "research/communication/p0-diagnostics-20261101/test_mistral_original_python_vulnerabilities.py"
+      - ".github/workflows/verify-mistral-p0-original-python-diagnostics.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-python-isolated-falsification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout independent AXIOM test code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Checkout pinned immutable Cursor original Python, no credentials
+        uses: actions/checkout@v4
+        with:
+          repository: nexusomegac27/NEXUS-OMEGA-EVIDENCE
+          ref: 986b9af8f4bcfb341a188cbb6ed7d8da3d500e98
+          path: subject
+          persist-credentials: false
+      - name: Demonstrate independent original-Python P0 negative controls (green means defect reproduced)
+        run: |
+          python3 research/communication/p0-diagnostics-20261101/test_mistral_original_python_vulnerabilities.py subject
