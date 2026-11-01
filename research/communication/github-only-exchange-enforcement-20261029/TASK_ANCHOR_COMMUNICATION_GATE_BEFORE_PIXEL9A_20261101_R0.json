@@ -14,8 +14,8 @@
     "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
     "predecessor_commit": "9330c2c55886488e8ffd05843937e96265219893",
     "predecessor_path": "scripts/nexus_document_router.py",
-    "predecessor_bytes": 0,
-    "predecessor_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    "predecessor_bytes": 54371,
+    "predecessor_sha256": "db249a8827421549b09e6c5a11ac8d9c7a69bb9d486dbc71bb06a53421c11fec"
   },
   "delegation": {
     "scope": "IMPLEMENT_GATE_A_B_C_D_WITH_ACTUAL_PROVIDER_RECEIPT_TRUSTED_SOURCE_AND_ROLLBACK_BEFORE_PIXEL9A_PREFLIGHT_C1",
@@ -166,9 +166,17 @@
         "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
         "commit": "9330c2c55886488e8ffd05843937e96265219893",
         "path": ".github/workflows/validate-mistral-p0-hard-repair.yml",
-        "bytes": 2651,
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
-        "source_status": "OPERATOR_REPORTED"
+        "bytes": 2654,
+        "sha256": "7c79305e69e6ef0126a42bfb11cf2623067c6d6da935ecbeca659041105bb881",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "9330c2c55886488e8ffd05843937e96265219893",
+        "path": "scripts/nexus_document_router.py",
+        "bytes": 54371,
+        "sha256": "db249a8827421549b09e6c5a11ac8d9c7a69bb9d486dbc71bb06a53421c11fec",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
       }
     ],
     "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
