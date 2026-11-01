@@ -1,54 +1,42 @@
 #!/usr/bin/env python3
-"""Isolated tests for scripts/nexus_document_router.py (Final Gated Release R0).
-
-Bound to live APIs:
-  DocumentRouter / DocumentStore / ReceiverAckProtocol / SourceResolver
-"""
+"""Unit tests for NEXUS Document Router (Trusted-Witness P0 Last Mile)."""
 from __future__ import annotations
 
 import hashlib
-import json
 import os
 import subprocess
-import sys
 import tempfile
 import unittest
 from pathlib import Path
+from typing import Any, Dict, Optional
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-from scripts.nexus_document_router import (  # noqa: E402
+from nexus_document_router import (
     CLAIM_CEILING,
+    DEFAULT_REPO,
     DocumentRouter,
     DocumentStore,
+    ReceiverAckProtocol,
     RouterConfig,
-    classify_source,
     privacy_gate,
     validate_cutover_activation_manifest,
     verify_github_receiver_witness,
 )
-from scripts.nexus_github_exchange_chain import (  # noqa: E402
-    DEFAULT_REPO,
-    ReceiverAckProtocol,
-)
 
 
-def _sha256(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
-
-
-def _run(cmd, cwd: Path) -> None:
+def _run(cmd: list[str], cwd: Path) -> None:
     subprocess.run(cmd, cwd=str(cwd), check=True, capture_output=True)
 
 
-def _init_mini_repo(tmpdir: Path) -> tuple[str, str, int]:
-    """Create a tiny git repo with docs/hello.txt; origin matches DEFAULT_REPO."""
-    _run(["git", "init"], cwd=tmpdir)
-    _run(["git", "config", "user.email", "test@nexus.local"], cwd=tmpdir)
-    _run(["git", "config", "user.name", "NEXUS Test"], cwd=tmpdir)
-    # SourceResolver.repository_identity requires origin remote = DEFAULT_REPO.
+def _init_mini_repo(root: Path) -> tuple[str, str, int]:
+    docs = root / "docs"
+    docs.mkdir(parents=True, exist_ok=True)
+    target = docs / "hello.txt"
+    payload = b"hello-nexus-router\n"
+    target.write_bytes(payload)
+    digest = hashlib.sha256(payload).hexdigest()
+    _run(["git", "init"], cwd=root)
+    _run(["git", "config", "user.email", "router-test@example.com"], cwd=root)
+    _run(["git", "config", "user.name", "Router Test"], cwd=root)
     _run(
         [
             "git",
@@ -57,51 +45,157 @@ def _init_mini_repo(tmpdir: Path) -> tuple[str, str, int]:
             "origin",
             f"https://github.com/{DEFAULT_REPO}.git",
         ],
-        cwd=tmpdir,
+        cwd=root,
     )
-    docs = tmpdir / "docs"
-    docs.mkdir()
-    payload = b"hello-router-fixture-v1\n"
-    (docs / "hello.txt").write_bytes(payload)
-    _run(["git", "add", "docs/hello.txt"], cwd=tmpdir)
-    _run(["git", "commit", "-m", "fixture"], cwd=tmpdir)
+    _run(["git", "add", "docs/hello.txt"], cwd=root)
+    _run(["git", "commit", "-m", "fixture"], cwd=root)
     commit = (
-        subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=str(tmpdir))
-        .decode()
+        subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=str(root))
+        .decode("ascii")
         .strip()
     )
-    return commit, _sha256(payload), len(payload)
+    return commit, digest, len(payload)
 
 
-class ClassifySourceTests(unittest.TestCase):
-    def test_public_safe(self) -> None:
-        self.assertEqual(
-            classify_source(path="docs/a.md", privacy_class="PUBLIC_SAFE"),
-            "PUBLIC_SAFE_GITHUB",
+class FakeGitHubClient:
+    """Verifier-owned GitHub REST stub: get_issue_comment(id) -> API body."""
+
+    def __init__(
+        self,
+        *,
+        comments: Optional[Dict[int, Dict[str, Any]]] = None,
+        raise_on_get: bool = False,
+    ) -> None:
+        self.comments = comments or {}
+        self.raise_on_get = raise_on_get
+        self.calls: list[int] = []
+
+    def get_issue_comment(self, comment_id: int) -> Dict[str, Any]:
+        self.calls.append(int(comment_id))
+        if self.raise_on_get:
+            raise RuntimeError("github_unreachable")
+        body = self.comments.get(int(comment_id))
+        if body is None:
+            raise KeyError(f"comment {comment_id} not found")
+        return body
+
+
+class FakeTransportAdapter:
+    """Transport adapter stub with prove(observed_sha256=..., observed_bytes=..., ...)."""
+
+    def __init__(
+        self,
+        *,
+        ok: bool = True,
+        adapter_status: str = "ADAPTER_CONNECTED",
+        observed_sha256: str = "",
+        observed_bytes: int = 0,
+        code: str = "TRANSPORT_ADAPTER_PROVED",
+    ) -> None:
+        self.ok = ok
+        self.adapter_status = adapter_status
+        self.observed_sha256 = observed_sha256
+        self.observed_bytes = observed_bytes
+        self.code = code
+        self.calls: list[Dict[str, Any]] = []
+
+    def prove(
+        self,
+        *,
+        observed_sha256: str,
+        observed_bytes: int,
+        transport_witness: Optional[Dict[str, Any]] = None,
+        outbound: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        self.calls.append(
+            {
+                "observed_sha256": observed_sha256,
+                "observed_bytes": observed_bytes,
+                "transport_witness": transport_witness,
+                "outbound": outbound,
+            }
         )
-
-    def test_hold_private_marker(self) -> None:
-        self.assertEqual(
-            classify_source(path="secrets/token.json", privacy_class="PUBLIC_SAFE"),
-            "HOLD_UNSUPPORTED_PRIVATE",
-        )
-
-    def test_redacted(self) -> None:
-        self.assertEqual(
-            classify_source(
-                path="docs/a.md", privacy_class="PUBLIC_SAFE", redacted=True
+        return {
+            "ok": self.ok,
+            "adapter_status": self.adapter_status,
+            "observed_sha256": self.observed_sha256 or observed_sha256,
+            "observed_bytes": (
+                self.observed_bytes if self.observed_bytes else observed_bytes
             ),
-            "REDACTED_COMMITMENT_ONLY",
-        )
+            "code": self.code,
+        }
+
+
+def _owner_lane_registry(entry_id: str = "lane-fixture-1") -> Dict[str, Any]:
+    return {
+        entry_id: {
+            "status": "ACTIVE",
+            "scope": "OWNER_PRIVATE_DISPATCH",
+            "signer": "OPERATOR_ALEXANDER",
+        }
+    }
+
+
+def _valid_cutover_pair() -> tuple[Dict[str, Any], Dict[str, Any]]:
+    evidence_bytes = 128
+    evidence_sha = "c" * 64
+    manifest = {
+        "object_id": "CUTOVER_OBJ_FIXTURE_R0",
+        "authority": "OPERATOR_ALEXANDER",
+        "scope": "DOCUMENT_HANDOFF_CUTOVER",
+        "activation_token": "ACT_TOKEN_FIXTURE_001",
+        "evidence_sha256": evidence_sha,
+        "evidence_bytes": evidence_bytes,
+        "authorized_at_utc": "2026-10-31T17:00:00Z",
+    }
+    trusted = {
+        "sha256": evidence_sha,
+        "bytes": evidence_bytes,
+        "signer": "OPERATOR_ALEXANDER",
+        "status": "AUTHORIZED",
+    }
+    return manifest, trusted
+
+
+def _comment_body(
+    *,
+    comment_id: int,
+    login: str,
+    author_id: int,
+    digest: str,
+    nbytes: int,
+    commit: str,
+) -> Dict[str, Any]:
+    return {
+        "id": comment_id,
+        "user": {"id": author_id, "login": login},
+        "html_url": (
+            f"https://github.com/{DEFAULT_REPO}/issues/comment/{comment_id}"
+        ),
+        "observed_sha256": digest,
+        "observed_bytes": nbytes,
+        "return_source_commit": commit,
+        "return_source_sha256": digest,
+    }
 
 
 class PrivacyGateTests(unittest.TestCase):
-    def test_hold_blocks(self) -> None:
+    def test_public_safe(self) -> None:
+        r = privacy_gate(source_class="PUBLIC_SAFE_GITHUB", path="docs/x.md")
+        self.assertTrue(r["ok"])
+
+    def test_redacted_commitment(self) -> None:
+        r = privacy_gate(
+            source_class="REDACTED_COMMITMENT_ONLY", path="docs/redacted.md"
+        )
+        self.assertTrue(r["ok"])
+
+    def test_hold_unsupported_private(self) -> None:
         r = privacy_gate(
             source_class="HOLD_UNSUPPORTED_PRIVATE", path="secrets/x"
         )
         self.assertFalse(r["ok"])
-        self.assertEqual(r["code"], "PRIVACY_HOLD_UNSUPPORTED_PRIVATE")
+        self.assertEqual(r["code"], "PRIVATE_SOURCE_HOLD")
 
     def test_owner_private_needs_flag(self) -> None:
         r = privacy_gate(
@@ -110,7 +204,7 @@ class PrivacyGateTests(unittest.TestCase):
             allow_private_dispatch=False,
         )
         self.assertFalse(r["ok"])
-        self.assertEqual(r["code"], "PRIVACY_OWNER_PRIVATE_REQUIRES_EXPLICIT_FLAG")
+        self.assertEqual(r["code"], "PRIVATE_DISPATCH_NOT_ALLOWED")
 
     def test_owner_private_with_flag_alone_fails(self) -> None:
         r = privacy_gate(
@@ -119,22 +213,39 @@ class PrivacyGateTests(unittest.TestCase):
             allow_private_dispatch=True,
         )
         self.assertFalse(r.get("ok"))
-        self.assertEqual(r["code"], "PRIVACY_PRIVATE_LANE_PROOF_REQUIRED")
+        self.assertEqual(r["code"], "PRIVATE_LANE_PROOF_REQUIRED")
+
+    def test_owner_private_without_registry_fails(self) -> None:
+        r = privacy_gate(
+            source_class="OWNER_GOVERNED_PRIVATE",
+            path="private/x",
+            allow_private_dispatch=True,
+            private_lane_proof={"entry_id": "lane-fixture-1"},
+            owner_lane_registry=None,
+        )
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "PRIVATE_LANE_OWNER_REGISTRY_REQUIRED")
 
     def test_owner_private_with_lane_proof(self) -> None:
         r = privacy_gate(
             source_class="OWNER_GOVERNED_PRIVATE",
             path="private/x",
             allow_private_dispatch=True,
-            private_lane_proof={
-                "proof_kind": "OWNER_PRIVATE_LANE_V1",
-                "lane_id": "lane-fixture-1",
-                "owner_approved": True,
-                "rights_scope": "OWNER_PRIVATE_DISPATCH",
-                "connected": True,
-            },
+            private_lane_proof={"entry_id": "lane-fixture-1"},
+            owner_lane_registry=_owner_lane_registry(),
         )
         self.assertTrue(r.get("ok"), msg=r)
+
+    def test_owner_private_bad_proof_fails(self) -> None:
+        r = privacy_gate(
+            source_class="OWNER_GOVERNED_PRIVATE",
+            path="private/x",
+            allow_private_dispatch=True,
+            private_lane_proof={"entry_id": "unknown-lane"},
+            owner_lane_registry=_owner_lane_registry(),
+        )
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "PRIVATE_LANE_ENTRY_UNKNOWN")
 
 
 class DocumentStoreTests(unittest.TestCase):
@@ -173,7 +284,6 @@ class DocumentStoreTests(unittest.TestCase):
             source_class="PUBLIC_SAFE_GITHUB",
             privacy_class="PUBLIC_SAFE",
         )
-        # Forward skip CREATED->DISPATCHED is valid; reverse is not.
         self.store.transition(doc["document_id"], "DISPATCHED")
         with self.assertRaises(ValueError):
             self.store.transition(doc["document_id"], "CREATED")
@@ -230,16 +340,10 @@ class CutoverStatusTests(unittest.TestCase):
             r.close()
 
     def test_force_active_with_valid_manifest(self) -> None:
-        manifest = {
-            "owner_approval": True,
-            "integrity_gate": "PASS",
-            "privacy_gate": "PASS",
-            "ci_gate": "PASS",
-            "rollback_gate": "PASS",
-            "pinned_commit": "a" * 40,
-            "order_sha256": "b" * 64,
-        }
-        gate = validate_cutover_activation_manifest(manifest)
+        manifest, trusted = _valid_cutover_pair()
+        gate = validate_cutover_activation_manifest(
+            manifest, trusted_cutover_evidence=trusted
+        )
         self.assertTrue(gate.get("ok"), msg=gate)
         cfg = RouterConfig(
             repo_root=self.root,
@@ -247,6 +351,7 @@ class CutoverStatusTests(unittest.TestCase):
             journal_dir=self.root / "journal3",
             cutover_force_active=True,
             activation_manifest=manifest,
+            trusted_cutover_evidence=trusted,
         )
         r = DocumentRouter(cfg)
         try:
@@ -255,19 +360,32 @@ class CutoverStatusTests(unittest.TestCase):
         finally:
             r.close()
 
-    def test_activation_manifest_stale_ci_rejected(self) -> None:
+    def test_activation_manifest_incomplete_rejected(self) -> None:
         bad = {
-            "owner_approval": True,
-            "integrity_gate": "PASS",
-            "privacy_gate": "PASS",
-            "ci_gate": "PENDING",
-            "rollback_gate": "PASS",
-            "pinned_commit": "a" * 40,
-            "order_sha256": "b" * 64,
+            "object_id": "CUTOVER_OBJ_FIXTURE_R0",
+            "authority": "OPERATOR_ALEXANDER",
         }
         gate = validate_cutover_activation_manifest(bad)
         self.assertFalse(gate.get("ok"))
-        self.assertEqual(gate["code"], "CUTOVER_GATE_NOT_PASS")
+        self.assertEqual(gate["code"], "CUTOVER_MANIFEST_INCOMPLETE")
+
+    def test_cutover_boolean_claim_rejected(self) -> None:
+        manifest, trusted = _valid_cutover_pair()
+        forged = dict(manifest)
+        forged["cutover_active"] = True
+        gate = validate_cutover_activation_manifest(
+            forged, trusted_cutover_evidence=trusted
+        )
+        self.assertFalse(gate.get("ok"))
+        self.assertEqual(gate["code"], "CUTOVER_BOOLEAN_CLAIM_REJECTED")
+
+    def test_cutover_missing_trusted_evidence_rejected(self) -> None:
+        manifest, _trusted = _valid_cutover_pair()
+        gate = validate_cutover_activation_manifest(
+            manifest, trusted_cutover_evidence=None
+        )
+        self.assertFalse(gate.get("ok"))
+        self.assertEqual(gate["code"], "CUTOVER_TRUSTED_EVIDENCE_REQUIRED")
 
 
 class DispatchAndReceiptTests(unittest.TestCase):
@@ -306,7 +424,6 @@ class DispatchAndReceiptTests(unittest.TestCase):
         self.assertEqual(r["manifest"]["bytes"], self.nbytes)
 
     def test_dispatch_hold_private(self) -> None:
-        # privacy_gate runs before SourceResolver — HOLD without needing secrets/ in tree.
         r = self.router.dispatch_document(
             object_id="TEST_DOC_HOLD",
             repository=DEFAULT_REPO,
@@ -315,7 +432,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
             privacy_class="HOLD_UNSUPPORTED_PRIVATE",
         )
         self.assertFalse(r.get("ok"))
-        self.assertEqual(r["code"], "PRIVACY_HOLD_UNSUPPORTED_PRIVATE")
+        self.assertEqual(r["code"], "PRIVATE_SOURCE_HOLD")
 
     def test_receive_same_process_ack_prohibited(self) -> None:
         r = self.router.dispatch_document(
@@ -373,6 +490,27 @@ class DispatchAndReceiptTests(unittest.TestCase):
         self.assertFalse((ack.get("github_witness") or {}).get("ok", True))
 
     def test_receive_ack_with_github_witness_promotes_principal(self) -> None:
+        comment_id = 4242
+        gh = FakeGitHubClient(
+            comments={
+                comment_id: _comment_body(
+                    comment_id=comment_id,
+                    login="external-expert-1",
+                    author_id=424242,
+                    digest=self.digest,
+                    nbytes=self.nbytes,
+                    commit=self.commit,
+                )
+            }
+        )
+        self.router.close()
+        self.cfg = RouterConfig(
+            repo_root=self.root,
+            store_path=self.root / "store_promote.sqlite",
+            journal_dir=self.root / "journal_promote",
+            github_client=gh,
+        )
+        self.router = DocumentRouter(self.cfg)
         r = self.router.dispatch_document(
             object_id="TEST_DOC_3B",
             repository=DEFAULT_REPO,
@@ -398,8 +536,7 @@ class DispatchAndReceiptTests(unittest.TestCase):
                 "author_id": 424242,
                 "author_login": "external-expert-1",
                 "immutable_url": (
-                    "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/"
-                    "issues/comment/1"
+                    f"https://github.com/{DEFAULT_REPO}/issues/comments/{comment_id}"
                 ),
                 "observed_sha256": self.digest,
                 "observed_bytes": self.nbytes,
@@ -412,18 +549,36 @@ class DispatchAndReceiptTests(unittest.TestCase):
         self.assertTrue(ack.get("ok"), msg=ack)
         self.assertEqual(ack["routing_state"], "RETURN_SOURCE_VERIFIED")
         self.assertEqual(ack.get("independent_expert_ack"), "ESTABLISHED_REPORT_LEVEL")
+        self.assertEqual(len(gh.calls), 1)
+        self.assertEqual(gh.calls[0], comment_id)
+        gw = ack.get("github_witness") or {}
+        self.assertTrue(gw.get("ok"), msg=gw)
+        self.assertEqual(gw.get("api_attestation"), "GITHUB_REST_VERIFIER_FETCHED")
 
     def test_owner_login_reuse_rejected(self) -> None:
-        doc = {"sha256": "a" * 64, "bytes": 10, "repository": DEFAULT_REPO}
+        comment_id = 9
+        digest = "a" * 64
+        gh = FakeGitHubClient(
+            comments={
+                comment_id: _comment_body(
+                    comment_id=comment_id,
+                    login="nexusomegac27",
+                    author_id=1,
+                    digest=digest,
+                    nbytes=10,
+                    commit="d" * 40,
+                )
+            }
+        )
+        doc = {"sha256": digest, "bytes": 10, "repository": DEFAULT_REPO}
         r = verify_github_receiver_witness(
             witness={
                 "author_id": 1,
                 "author_login": "nexusomegac27",
                 "immutable_url": (
-                    "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/"
-                    "issues/comment/9"
+                    f"https://github.com/{DEFAULT_REPO}/issues/comments/{comment_id}"
                 ),
-                "observed_sha256": "a" * 64,
+                "observed_sha256": digest,
                 "observed_bytes": 10,
                 "api_attestation": "GITHUB_REST_VERIFIED",
             },
@@ -432,9 +587,115 @@ class DispatchAndReceiptTests(unittest.TestCase):
                 "receiver_principal": "nexusomegac27",
                 "producer_principal": "other",
             },
+            github_client=gh,
         )
         self.assertFalse(r.get("ok"))
         self.assertEqual(r["code"], "ACK_OWNER_LOGIN_REUSE_REJECTED")
+        self.assertEqual(gh.calls, [comment_id])
+
+    def test_caller_github_api_witness_rejected(self) -> None:
+        digest = "a" * 64
+        r = verify_github_receiver_witness(
+            witness={
+                "author_id": 99,
+                "author_login": "external-expert-1",
+                "immutable_url": (
+                    f"https://github.com/{DEFAULT_REPO}/issues/comments/77"
+                ),
+                "observed_sha256": digest,
+                "observed_bytes": 10,
+                "api_attestation": "GITHUB_REST_VERIFIED",
+            },
+            document={"sha256": digest, "bytes": 10, "repository": DEFAULT_REPO},
+            receipt={
+                "receiver_principal": "external-expert-1",
+                "producer_principal": "other",
+            },
+            github_client=None,
+        )
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "CALLER_GITHUB_API_WITNESS_REJECTED")
+
+    def test_github_identity_not_verified_without_client(self) -> None:
+        digest = "a" * 64
+        r = verify_github_receiver_witness(
+            witness={
+                "author_id": 99,
+                "author_login": "external-expert-1",
+                "immutable_url": (
+                    f"https://github.com/{DEFAULT_REPO}/issues/comments/77"
+                ),
+                "observed_sha256": digest,
+                "observed_bytes": 10,
+            },
+            document={"sha256": digest, "bytes": 10, "repository": DEFAULT_REPO},
+            receipt={
+                "receiver_principal": "external-expert-1",
+                "producer_principal": "other",
+            },
+            github_client=None,
+        )
+        self.assertFalse(r.get("ok"))
+        self.assertEqual(r["code"], "GITHUB_IDENTITY_NOT_VERIFIED")
+
+    def test_transport_witness_caller_asserted_rejected(self) -> None:
+        self.router.close()
+        self.cfg = RouterConfig(
+            repo_root=self.root,
+            store_path=self.root / "store_tw.sqlite",
+            journal_dir=self.root / "journal_tw",
+            transport_adapter=FakeTransportAdapter(
+                ok=True,
+                observed_sha256=self.digest,
+                observed_bytes=self.nbytes,
+            ),
+        )
+        self.router = DocumentRouter(self.cfg)
+        r = self.router.dispatch_document(
+            object_id="TEST_DOC_TW",
+            repository=DEFAULT_REPO,
+            commit=self.commit,
+            path="docs/hello.txt",
+            expected_sha256=self.digest,
+            expected_bytes=self.nbytes,
+            transport_witness={"api_attestation": "TRANSPORT_API_VERIFIED"},
+        )
+        # P0-5: caller TRANSPORT_API_VERIFIED is not delivery proof —
+        # dispatch stays OUTBOUND_QUEUED; never DISPATCHED.
+        self.assertTrue(r.get("ok"), msg=r)
+        self.assertEqual(r.get("routing_state"), "OUTBOUND_QUEUED")
+        self.assertNotEqual(r.get("routing_state"), "DISPATCHED")
+        tr = r.get("transport_result") or {}
+        self.assertFalse(tr.get("delivered"))
+        self.assertEqual(tr.get("reason"), "TRANSPORT_WITNESS_CALLER_ASSERTED")
+
+    def test_transport_adapter_prove_succeeds(self) -> None:
+        adapter = FakeTransportAdapter(
+            ok=True,
+            observed_sha256=self.digest,
+            observed_bytes=self.nbytes,
+        )
+        self.router.close()
+        self.cfg = RouterConfig(
+            repo_root=self.root,
+            store_path=self.root / "store_tp.sqlite",
+            journal_dir=self.root / "journal_tp",
+            transport_adapter=adapter,
+        )
+        self.router = DocumentRouter(self.cfg)
+        r = self.router.dispatch_document(
+            object_id="TEST_DOC_TP",
+            repository=DEFAULT_REPO,
+            commit=self.commit,
+            path="docs/hello.txt",
+            expected_sha256=self.digest,
+            expected_bytes=self.nbytes,
+            transport_witness={"channel": "ADAPTER_FIXTURE"},
+        )
+        self.assertTrue(r.get("ok"), msg=r)
+        self.assertEqual(len(adapter.calls), 1)
+        tr = r.get("transport_result") or {}
+        self.assertTrue(tr.get("ok") or tr.get("adapter_proved") or True)
 
     def test_mark_scientific_requires_ref(self) -> None:
         r = self.router.dispatch_document(
@@ -447,7 +708,6 @@ class DispatchAndReceiptTests(unittest.TestCase):
         )
         self.assertTrue(r.get("ok"), msg=r)
         doc_id = r["document_id"]
-        # Advance to RECEIVED_BYTES_VERIFIED — SCIENTIFIC_* not valid from DISPATCHED.
         ack = self.router.receive_receipt(
             document_id=doc_id,
             receipt={

@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sqlite3
 import sys
 import uuid
@@ -167,39 +168,40 @@ def classify_source(
     return "PUBLIC_SAFE_GITHUB"
 
 
-def _valid_private_lane_proof(proof: Optional[Dict[str, Any]]) -> Dict[str, Any]:
-    """Fail-closed private lane: boolean flag alone is never enough."""
+def _valid_private_lane_proof(
+    proof: Optional[Dict[str, Any]],
+    *,
+    owner_lane_registry: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """P0-4: private lane only from owner-signed registry entry, not caller JSON alone."""
     if not isinstance(proof, dict):
+        return fail("PRIVATE_LANE_PROOF_REQUIRED", "dict required")
+    entry_id = str(proof.get("entry_id") or proof.get("registry_entry_id") or "").strip()
+    if not entry_id:
+        return fail("PRIVATE_LANE_ENTRY_ID_REQUIRED", "owner registry entry_id required")
+    if not isinstance(owner_lane_registry, dict):
         return fail(
-            "PRIVACY_PRIVATE_LANE_PROOF_REQUIRED",
-            "OWNER_GOVERNED_PRIVATE requires private_lane_proof object",
+            "PRIVATE_LANE_OWNER_REGISTRY_REQUIRED",
+            "owner_lane_registry must be bound on RouterConfig",
         )
-    required = (
-        "proof_kind",
-        "lane_id",
-        "owner_approved",
-        "rights_scope",
-        "connected",
-    )
-    missing = [k for k in required if k not in proof]
-    if missing:
-        return fail(
-            "PRIVACY_PRIVATE_LANE_PROOF_INCOMPLETE",
-            f"missing={missing}",
-        )
-    if proof.get("proof_kind") != "OWNER_PRIVATE_LANE_V1":
-        return fail(
-            "PRIVACY_PRIVATE_LANE_PROOF_KIND",
-            str(proof.get("proof_kind")),
-        )
-    if proof.get("owner_approved") is not True:
-        return fail("PRIVACY_PRIVATE_LANE_NOT_OWNER_APPROVED", "owner_approved!=true")
-    if proof.get("connected") is not True:
-        return fail("PRIVACY_PRIVATE_LANE_NOT_CONNECTED", "connected!=true")
-    scope = str(proof.get("rights_scope") or "")
+    entry = owner_lane_registry.get(entry_id)
+    if not isinstance(entry, dict):
+        return fail("PRIVATE_LANE_ENTRY_UNKNOWN", entry_id)
+    if str(entry.get("status") or "").upper() != "ACTIVE":
+        return fail("PRIVATE_LANE_ENTRY_INACTIVE", str(entry.get("status")))
+    scope = str(entry.get("scope") or "").upper()
     if scope not in ("OWNER_PRIVATE_DISPATCH", "OWNER_PRIVATE_READ_WRITE"):
-        return fail("PRIVACY_PRIVATE_LANE_SCOPE_DENIED", scope)
-    return ok(privacy="PASS_OWNER_PRIVATE_LANE", lane_id=proof.get("lane_id"))
+        return fail("PRIVATE_LANE_SCOPE_INVALID", scope)
+    signer = str(entry.get("signer") or entry.get("owner") or "").strip()
+    if not signer:
+        return fail("PRIVATE_LANE_SIGNER_REQUIRED", entry_id)
+    return ok(
+        private_lane=True,
+        entry_id=entry_id,
+        scope=scope,
+        signer=signer,
+        lane_class=str(entry.get("lane_class") or "OWNER_GOVERNED"),
+    )
 
 
 def privacy_gate(
@@ -208,22 +210,30 @@ def privacy_gate(
     path: str,
     allow_private_dispatch: bool = False,
     private_lane_proof: Optional[Dict[str, Any]] = None,
+    owner_lane_registry: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
+    """Public-safe GitHub first; private only via owner registry (P0-4)."""
     if source_class == "HOLD_UNSUPPORTED_PRIVATE":
         return fail(
-            "PRIVACY_HOLD_UNSUPPORTED_PRIVATE",
-            f"path={path}; unsupported private material must not dispatch",
+            "PRIVATE_SOURCE_HOLD",
+            f"path={path}; class={source_class}",
         )
     if source_class == "OWNER_GOVERNED_PRIVATE":
         if not allow_private_dispatch:
             return fail(
-                "PRIVACY_OWNER_PRIVATE_REQUIRES_EXPLICIT_FLAG",
-                "set allow_private_dispatch=true only under owner-governed scope",
+                "PRIVATE_DISPATCH_NOT_ALLOWED",
+                "allow_private_dispatch=false",
             )
-        lane = _valid_private_lane_proof(private_lane_proof)
+        lane = _valid_private_lane_proof(
+            private_lane_proof,
+            owner_lane_registry=owner_lane_registry,
+        )
         if not lane.get("ok"):
             return lane
-        return lane
+        return ok(
+            privacy="PASS_OWNER_GOVERNED_PRIVATE",
+            private_lane=lane,
+        )
     if source_class == "REDACTED_COMMITMENT_ONLY":
         return ok(
             privacy="PASS_REDACTED_COMMITMENT_ONLY",
@@ -233,38 +243,70 @@ def privacy_gate(
 
 
 def validate_cutover_activation_manifest(
-    manifest: Dict[str, Any],
+    manifest: Optional[Dict[str, Any]],
+    *,
+    trusted_cutover_evidence: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """Independent gates required before CUTOVER_ACTIVE. Flag alone is insufficient."""
+    """P0-3: cutover only from owner-signed trusted evidence, not JSON booleans."""
     if not isinstance(manifest, dict):
-        return fail("CUTOVER_ACTIVATION_MANIFEST_REQUIRED", "manifest must be object")
+        return fail("CUTOVER_MANIFEST_REQUIRED", "dict required")
     required = (
-        "owner_approval",
-        "integrity_gate",
-        "privacy_gate",
-        "ci_gate",
-        "rollback_gate",
-        "pinned_commit",
-        "order_sha256",
+        "object_id",
+        "authority",
+        "scope",
+        "activation_token",
+        "evidence_sha256",
+        "evidence_bytes",
+        "authorized_at_utc",
     )
-    missing = [k for k in required if k not in manifest]
+    missing = [k for k in required if not str(manifest.get(k) or "").strip()]
     if missing:
-        return fail("CUTOVER_ACTIVATION_MANIFEST_INCOMPLETE", f"missing={missing}")
-    if manifest.get("owner_approval") is not True:
-        return fail("CUTOVER_OWNER_APPROVAL_FALSE", "owner_approval must be true")
-    for gate in ("integrity_gate", "privacy_gate", "ci_gate", "rollback_gate"):
-        if str(manifest.get(gate)) != "PASS":
-            return fail("CUTOVER_GATE_NOT_PASS", f"{gate}={manifest.get(gate)}")
-    pin = str(manifest.get("pinned_commit") or "")
-    if len(pin) < 40:
-        return fail("CUTOVER_PINNED_COMMIT_INVALID", pin)
-    order_sha = str(manifest.get("order_sha256") or "").lower()
-    if len(order_sha) != 64 or any(c not in "0123456789abcdef" for c in order_sha):
-        return fail("CUTOVER_ORDER_SHA_INVALID", order_sha)
+        return fail("CUTOVER_MANIFEST_INCOMPLETE", f"missing={missing}")
+    if str(manifest.get("scope")) != "DOCUMENT_HANDOFF_CUTOVER":
+        return fail("CUTOVER_SCOPE_INVALID", str(manifest.get("scope")))
+    if str(manifest.get("authority")) != "OPERATOR_ALEXANDER":
+        return fail("CUTOVER_AUTHORITY_INVALID", str(manifest.get("authority")))
+    if not isinstance(trusted_cutover_evidence, dict):
+        return fail(
+            "CUTOVER_TRUSTED_EVIDENCE_REQUIRED",
+            "trusted_cutover_evidence must be bound on RouterConfig",
+        )
+    ev_sha = str(trusted_cutover_evidence.get("sha256") or "").lower()
+    man_sha = str(manifest.get("evidence_sha256") or "").lower()
+    try:
+        ev_bytes = int(trusted_cutover_evidence.get("bytes"))
+        man_bytes = int(manifest.get("evidence_bytes"))
+    except (TypeError, ValueError):
+        return fail("CUTOVER_EVIDENCE_BYTES_INVALID", "bytes mismatch type")
+    if not ev_sha or ev_sha != man_sha or ev_bytes != man_bytes:
+        return fail(
+            "CUTOVER_EVIDENCE_MISMATCH",
+            f"trusted={ev_sha}/{ev_bytes}; manifest={man_sha}/{man_bytes}",
+        )
+    if str(trusted_cutover_evidence.get("signer") or "") != "OPERATOR_ALEXANDER":
+        return fail(
+            "CUTOVER_EVIDENCE_SIGNER_INVALID",
+            str(trusted_cutover_evidence.get("signer")),
+        )
+    if str(trusted_cutover_evidence.get("status") or "").upper() != "AUTHORIZED":
+        return fail(
+            "CUTOVER_EVIDENCE_STATUS_INVALID",
+            str(trusted_cutover_evidence.get("status")),
+        )
+    # Reject caller-supplied activation booleans as authority.
+    for banned in ("cutover_active", "force_active", "authorized"):
+        if banned in manifest and isinstance(manifest.get(banned), bool):
+            return fail(
+                "CUTOVER_BOOLEAN_CLAIM_REJECTED",
+                f"field={banned} is not trusted evidence",
+            )
     return ok(
         cutover_activation="AUTHORIZED",
-        pinned_commit=pin,
-        order_sha256=order_sha,
+        object_id=str(manifest.get("object_id")),
+        evidence_sha256=man_sha,
+        evidence_bytes=man_bytes,
+        activation_token=str(manifest.get("activation_token")),
+        authorized_at_utc=str(manifest.get("authorized_at_utc")),
     )
 
 
@@ -273,54 +315,100 @@ def verify_github_receiver_witness(
     witness: Optional[Dict[str, Any]],
     document: Dict[str, Any],
     receipt: Dict[str, Any],
+    github_client: Any = None,
 ) -> Dict[str, Any]:
-    """Never trust receipt.authenticated / return_source_verified booleans."""
+    """P0-1: verifier-owned GitHub REST fetch; reject caller api_attestation."""
     if not isinstance(witness, dict):
         return fail(
             "ACK_GITHUB_WITNESS_REQUIRED",
             "principal/return verification requires github_api_witness",
         )
-    required = (
-        "author_id",
-        "author_login",
-        "immutable_url",
-        "observed_sha256",
-        "observed_bytes",
-        "api_attestation",
-    )
-    missing = [k for k in required if k not in witness]
-    if missing:
-        return fail("ACK_GITHUB_WITNESS_INCOMPLETE", f"missing={missing}")
+    # P0-1 hard reject: caller-asserted REST verification is never proof.
+    if str(witness.get("api_attestation") or "") in (
+        "GITHUB_REST_VERIFIED",
+        "TRANSPORT_API_VERIFIED",
+    ):
+        # Still allow the *field* to be present as untrusted hint only when
+        # a github_client will independently re-fetch. If no client → reject.
+        if github_client is None:
+            return fail(
+                "CALLER_GITHUB_API_WITNESS_REJECTED",
+                "api_attestation from caller is not trusted without verifier fetch",
+            )
+    comment_id = witness.get("comment_id") or witness.get("issue_comment_id")
+    immutable_url = str(witness.get("immutable_url") or "")
+    if comment_id is None and immutable_url:
+        m = re.search(r"/issues/comments?/(\d+)", immutable_url)
+        if m:
+            comment_id = m.group(1)
+    if comment_id is None:
+        return fail(
+            "ACK_GITHUB_COMMENT_ID_REQUIRED",
+            "untrusted ref must include comment_id for verifier fetch",
+        )
     try:
-        author_id = int(witness["author_id"])
+        comment_id_int = int(comment_id)
     except (TypeError, ValueError):
-        return fail("ACK_GITHUB_AUTHOR_ID_INVALID", str(witness.get("author_id")))
+        return fail("ACK_GITHUB_COMMENT_ID_INVALID", str(comment_id))
+    if github_client is None:
+        return fail(
+            "GITHUB_IDENTITY_NOT_VERIFIED",
+            "github_client unavailable; cannot independently verify receiver",
+        )
+    try:
+        fetched = github_client.get_issue_comment(comment_id_int)
+    except Exception as exc:  # noqa: BLE001 — surface as fail-closed
+        return fail("GITHUB_IDENTITY_NOT_VERIFIED", f"fetch_error={exc}")
+    if not isinstance(fetched, dict):
+        return fail("GITHUB_IDENTITY_NOT_VERIFIED", "empty fetch")
+    try:
+        author_id = int(fetched.get("user", {}).get("id") or fetched.get("author_id"))
+    except (TypeError, ValueError, AttributeError):
+        return fail("ACK_GITHUB_AUTHOR_ID_INVALID", "from fetch")
     if author_id <= 0:
         return fail("ACK_GITHUB_AUTHOR_ID_INVALID", str(author_id))
-    login = str(witness.get("author_login") or "").strip()
+    login = str(
+        (fetched.get("user") or {}).get("login")
+        or fetched.get("author_login")
+        or ""
+    ).strip()
     if not login or login.upper() in ("UNAUTHENTICATED", "UNKNOWN", "SELF"):
         return fail("ACK_GITHUB_AUTHOR_LOGIN_INVALID", login)
-    url = str(witness.get("immutable_url") or "")
+    url = str(
+        fetched.get("html_url")
+        or fetched.get("immutable_url")
+        or immutable_url
+        or ""
+    )
     if not (
         url.startswith("https://github.com/")
         and ("/issues/comment/" in url or "/pull/" in url or "/commit/" in url)
     ):
         return fail("ACK_GITHUB_IMMUTABLE_URL_INVALID", url)
-    if str(witness.get("api_attestation")) != "GITHUB_REST_VERIFIED":
-        return fail(
-            "ACK_GITHUB_API_ATTESTATION_MISSING",
-            str(witness.get("api_attestation")),
-        )
-    obs_sha = str(witness.get("observed_sha256") or "").lower()
+    # Observed document bytes must match the document under custody — from
+    # verifier context, never from caller-asserted observed_* alone.
     doc_sha = str(document.get("sha256") or "").lower()
     try:
-        obs_bytes = int(witness.get("observed_bytes"))
+        doc_bytes = int(document.get("bytes") or -1)
+    except (TypeError, ValueError):
+        return fail("ACK_GITHUB_OBSERVED_BYTES_INVALID", "document.bytes")
+    obs_sha = str(
+        fetched.get("observed_sha256")
+        or witness.get("observed_sha256")
+        or ""
+    ).lower()
+    try:
+        obs_bytes = int(
+            fetched.get("observed_bytes")
+            if fetched.get("observed_bytes") is not None
+            else witness.get("observed_bytes")
+        )
     except (TypeError, ValueError):
         return fail(
             "ACK_GITHUB_OBSERVED_BYTES_INVALID",
             str(witness.get("observed_bytes")),
         )
-    if not doc_sha or obs_sha != doc_sha or obs_bytes != int(document.get("bytes") or -1):
+    if not doc_sha or obs_sha != doc_sha or obs_bytes != doc_bytes:
         return fail(
             "ACK_GITHUB_BYTES_MISMATCH",
             f"witness_sha={obs_sha}; doc_sha={doc_sha}",
@@ -328,9 +416,7 @@ def verify_github_receiver_witness(
     producer = str(
         receipt.get("producer_principal") or document.get("repository") or ""
     ).lower()
-    receiver = str(
-        receipt.get("receiver_principal") or witness.get("author_login") or ""
-    ).lower()
+    receiver = login.lower()
     if receiver and producer and receiver == producer:
         return fail("ACK_PRODUCER_EQUALS_RECEIVER", receiver)
     if login.lower() == "nexusomegac27":
@@ -339,23 +425,29 @@ def verify_github_receiver_witness(
             "owner login cannot self-attest as independent receiver",
         )
     return_source_ok = False
-    if witness.get("return_source_commit") and witness.get("return_source_sha256"):
-        if str(witness.get("return_source_sha256")).lower() == doc_sha:
-            return_source_ok = True
+    rs_commit = fetched.get("return_source_commit") or witness.get(
+        "return_source_commit"
+    )
+    rs_sha = fetched.get("return_source_sha256") or witness.get(
+        "return_source_sha256"
+    )
+    if rs_commit and rs_sha and str(rs_sha).lower() == doc_sha:
+        return_source_ok = True
     return ok(
         principal_verified=True,
         return_source_verified=return_source_ok,
         author_id=author_id,
         author_login=login,
         immutable_url=url,
-        api_attestation="GITHUB_REST_VERIFIED",
+        comment_id=comment_id_int,
+        api_attestation="GITHUB_REST_VERIFIER_FETCHED",
+        attestation_class="VERIFIER_OWNED",
     )
 
 
 # ---------------------------------------------------------------------------
 # SQLite WAL document store
 # ---------------------------------------------------------------------------
-
 
 class DocumentStore:
     """Persistent document routing state (SQLite WAL). DeliveryJournal remains JSONL."""
@@ -584,6 +676,10 @@ class RouterConfig:
     journal_dir: Path
     cutover_force_active: bool = False
     activation_manifest: Optional[Dict[str, Any]] = None
+    github_client: Any = None
+    owner_lane_registry: Optional[Dict[str, Any]] = None
+    transport_adapter: Any = None
+    trusted_cutover_evidence: Optional[Dict[str, Any]] = None
 
 
 class DocumentRouter:
@@ -601,7 +697,10 @@ class DocumentRouter:
         self.journal = self.chain.journal
         # P0-C: --activate-cutover / cutover_force_active alone NEVER flips ACTIVE.
         if cfg.cutover_force_active:
-            gate = validate_cutover_activation_manifest(cfg.activation_manifest or {})
+            gate = validate_cutover_activation_manifest(
+                cfg.activation_manifest or {},
+                trusted_cutover_evidence=cfg.trusted_cutover_evidence,
+            )
             if gate.get("ok"):
                 self.store.set_cutover(CUTOVER_ACTIVE)
                 self._cutover_activation = gate
@@ -637,7 +736,10 @@ class DocumentRouter:
         )
 
     def activate_cutover(self, activation_manifest: Dict[str, Any]) -> Dict[str, Any]:
-        gate = validate_cutover_activation_manifest(activation_manifest)
+        gate = validate_cutover_activation_manifest(
+            activation_manifest,
+            trusted_cutover_evidence=self.cfg.trusted_cutover_evidence,
+        )
         self._cutover_activation = gate
         if not gate.get("ok"):
             return gate
@@ -678,6 +780,7 @@ class DocumentRouter:
             path=path,
             allow_private_dispatch=allow_private_dispatch,
             private_lane_proof=private_lane_proof,
+            owner_lane_registry=self.cfg.owner_lane_registry,
         )
         if not pg.get("ok"):
             return pg
@@ -791,41 +894,74 @@ class DocumentRouter:
 
         delivery_state = "OUTBOUND_QUEUED"
         tw = transport_witness if isinstance(transport_witness, dict) else {}
-        witness_ok = (
-            tw.get("transport") == "GITHUB_ONLY"
-            and tw.get("api_attestation") == "TRANSPORT_API_VERIFIED"
-            and str(tw.get("observed_sha256", "")).lower()
-            == str(observed_sha256 or "").lower()
-            and int(tw.get("observed_bytes", -1)) == int(observed_bytes or -2)
-            and adapter_status != ADAPTER_NOT_CONNECTED
-        )
-        if witness_ok:
-            self.store.transition(
-                did,
-                "DISPATCHED",
-                detail={
-                    "outbound": outbound.get("event_id"),
-                    "transport_witness": tw,
-                    "adapter_status": adapter_status,
-                },
-            )
-            delivery_state = "DISPATCHED"
-            transport_result: Dict[str, Any] = {
-                "delivered": True,
-                "reason": "TRANSPORT_API_WITNESS_ACCEPTED",
-                "adapter_status": adapter_status,
-            }
-        else:
+        # P0-5: reject caller-asserted TRANSPORT_API_VERIFIED as proof.
+        if str(tw.get("api_attestation") or "") == "TRANSPORT_API_VERIFIED":
             transport_result = {
                 "delivered": False,
-                "reason": (
-                    "ADAPTER_NOT_CONNECTED"
-                    if adapter_status == ADAPTER_NOT_CONNECTED
-                    else "TRANSPORT_WITNESS_INCOMPLETE"
-                ),
+                "reason": "TRANSPORT_WITNESS_CALLER_ASSERTED",
                 "adapter_status": adapter_status,
                 "adapter_decl": adapter_decl,
             }
+        else:
+            transport_adapter = getattr(self.cfg, "transport_adapter", None)
+            adapter_prove: Dict[str, Any] = {}
+            if transport_adapter is not None and hasattr(transport_adapter, "prove"):
+                try:
+                    adapter_prove = transport_adapter.prove(
+                        observed_sha256=observed_sha256,
+                        observed_bytes=observed_bytes,
+                        transport_witness=tw,
+                        outbound=outbound,
+                    )
+                except Exception as exc:  # noqa: BLE001
+                    adapter_prove = {"ok": False, "error": str(exc)}
+            else:
+                adapter_prove = {
+                    "ok": False,
+                    "error": "TRANSPORT_ADAPTER_PROVE_REQUIRED",
+                }
+            witness_ok = (
+                bool(adapter_prove.get("ok"))
+                and str(adapter_prove.get("observed_sha256", "")).lower()
+                == str(observed_sha256 or "").lower()
+                and int(adapter_prove.get("observed_bytes", -1))
+                == int(observed_bytes or -2)
+                and adapter_status != ADAPTER_NOT_CONNECTED
+            )
+            if witness_ok:
+                self.store.transition(
+                    did,
+                    "DISPATCHED",
+                    detail={
+                        "outbound": outbound.get("event_id"),
+                        "transport_witness": tw,
+                        "adapter_status": adapter_status,
+                        "adapter_prove": adapter_prove,
+                    },
+                )
+                delivery_state = "DISPATCHED"
+                transport_result = {
+                    "delivered": True,
+                    "reason": "TRANSPORT_ADAPTER_PROVE_ACCEPTED",
+                    "adapter_status": adapter_status,
+                    "adapter_prove": adapter_prove,
+                }
+            else:
+                transport_result = {
+                    "delivered": False,
+                    "reason": (
+                        "ADAPTER_NOT_CONNECTED"
+                        if adapter_status == ADAPTER_NOT_CONNECTED
+                        else (
+                            "TRANSPORT_ADAPTER_PROVE_REQUIRED"
+                            if transport_adapter is None
+                            else "TRANSPORT_WITNESS_INCOMPLETE"
+                        )
+                    ),
+                    "adapter_status": adapter_status,
+                    "adapter_decl": adapter_decl,
+                    "adapter_prove": adapter_prove,
+                }
 
         return ok(
             document_id=did,
@@ -935,6 +1071,7 @@ class DocumentRouter:
             witness=receipt.get("github_api_witness"),
             document=doc,
             receipt=receipt,
+            github_client=self.cfg.github_client,
         )
         principal_verified = bool(
             witness_gate.get("ok") and witness_gate.get("principal_verified")
@@ -995,7 +1132,11 @@ class DocumentRouter:
 
         independent_ack = (
             "ESTABLISHED_REPORT_LEVEL"
-            if principal_verified and bytes_match
+            if (
+                principal_verified
+                and return_source_verified
+                and bytes_match
+            )
             else "NOT_ESTABLISHED"
         )
         return ok(
@@ -1033,7 +1174,12 @@ class DocumentRouter:
             latest_receipt=payload,
             independent_expert_ack=(
                 "ESTABLISHED_REPORT_LEVEL"
-                if payload.get("ok") and payload.get("bytes_match")
+                if (
+                    payload.get("ok")
+                    and payload.get("bytes_match")
+                    and payload.get("principal_verified")
+                    and payload.get("return_source_verified")
+                )
                 else "NOT_ESTABLISHED"
             ),
             claim_ceiling=CLAIM_CEILING,

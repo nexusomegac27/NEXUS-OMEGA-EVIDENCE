@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_COMMUNICATION_TRUSTED_WITNESS_P0_LAST_MILE_ORDER_20261031_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_COMMUNICATION_TRUSTED_WITNESS_P0_LAST_MILE_ORDER_20261031_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "12d79983f44e8ea6bd0361a43c66242be42439a0",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_AGENT_COMMUNICATION_TRUSTED_WITNESS_P0_LAST_MILE_ORDER_20261031_R0.md",
+    "predecessor_bytes": 8385,
+    "predecessor_sha256": "1aeacbecb80ecef7846bd5b4d696d848b3240b76f847c01e094c6a222c5286b6"
+  },
+  "delegation": {
+    "scope": "TRUSTED_WITNESS_P0_LAST_MILE_PLUS_PR185_GOVERNANCE_SPLIT_C1",
+    "allowed_actions": [
+      "REHASH_ORDER_AND_LIVING_FOUNDATION",
+      "PATCH_DOCUMENT_ROUTER_TRUSTED_SOURCE_P0",
+      "ADD_NEGATIVE_UNIT_TESTS_P0",
+      "RUN_LOCAL_UNITTEST_SUITE",
+      "WRITE_TASK_ANCHOR_AND_RESULT",
+      "COMMIT_TIP_ROUTER_TESTS_ANCHOR_RESULT",
+      "PUSH_TIP_NO_MERGE",
+      "CREATE_DRAFT_SUCCESSOR_OPEN_NEUTRAL_PR_UNDER_100_FILES",
+      "WRITE_TRANSFER_RETURN",
+      "BIND_LIVING_FOUNDATION_V1_APPEND_ONLY"
+    ],
+    "prohibited_actions": [
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "GITHUB_UNAUTHORIZED_WRITE",
+      "RUNTIME_EXECUTION",
+      "CLAIM_PROMOTION",
+      "HOSTINGER_WRITE",
+      "WWW_MUTATION",
+      "PUBLIC_WRITE_API_ENABLE",
+      "CUTOVER_ACTIVATION",
+      "UNREVIEWED_MERGE_PR185",
+      "UNREVIEWED_MERGE_PR246",
+      "WEAKEN_R27E_VALIDATOR",
+      "REWRITE_HISTORICAL_EVIDENCE",
+      "PARALLEL_COMMUNICATION_ARCHITECTURE",
+      "INVENT_EXTERNAL_ACK",
+      "ACCEPT_CALLER_GITHUB_API_WITNESS_AS_PROOF"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can DocumentRouter P0 reject caller-supplied GitHub API/transport attestations and require verifier-fetched trusted sources for receiver identity, ACK, transport, cutover, and private lane, while splitting PR185 under the R27-E 100-file limit and binding Living Foundation V1 as closed append-only without unreviewed merge?",
+    "deliverables": [
+      "PATCHED_nexus_document_router_trusted_witness_p0",
+      "PATCHED_test_nexus_document_router_negative_suite",
+      "LOCAL_UNITTEST_PASS_RECEIPT",
+      "TASK_ANCHOR_NORM_V1_THIS_OBJECT",
+      "RESULT_MARKDOWN_THIS_OBJECT",
+      "TIP_COMMIT_ROUTER_TESTS_ANCHOR_RESULT",
+      "DRAFT_SUCCESSOR_OPEN_NEUTRAL_PR_LE_100_FILES",
+      "TRANSFER_RETURN_PACKAGE",
+      "LIVING_FOUNDATION_V1_BOUND_APPEND_ONLY"
+    ],
+    "falsifiers": [
+      "CALLER_GITHUB_API_WITNESS_ACCEPTED_AS_PROOF",
+      "TRANSPORT_API_VERIFIED_PROMOTES_TO_DISPATCHED",
+      "CUTOVER_ACTIVATED_FROM_BOOL_FIELD",
+      "PRIVATE_LANE_PASS_WITHOUT_OWNER_REGISTRY",
+      "EXTERNAL_ACK_CLAIMED_WITHOUT_VERIFIER_FETCH",
+      "R27E_VALIDATOR_WEAKENED",
+      "PR185_OR_PR246_UNREVIEWED_MERGE",
+      "WWW_READ_ONLY_INTERRUPTED",
+      "CLAIM_CEILING_ABOVE_C1"
+    ],
+    "acceptance_tests": [
+      "P0_1_REJECT_CALLER_GITHUB_API_WITNESS",
+      "P0_2_TRANSPORT_CALLER_ASSERTED_KEEPS_OUTBOUND_QUEUED",
+      "P0_3_GITHUB_IDENTITY_REQUIRES_VERIFIER_FETCH",
+      "P0_4_ACK_OWNER_LOGIN_REUSE_REJECTED",
+      "P0_5_PRIVATE_LANE_AND_CUTOVER_TRUSTED_SOURCE",
+      "P0_6_LOCAL_UNITTEST_GREEN_HOSTINGER_SKIPPED",
+      "GOVERNANCE_PR185_FILES_VS_MAIN_LE_100",
+      "TASK_ANCHOR_NORM_V1_VALIDATES",
+      "LIVING_FOUNDATION_REHASH_MATCH_8469"
+    ],
+    "pause_conditions": [
+      "TYPE_C_HOSTINGER_REQUIRED_FOR_WWW_MUTATION",
+      "OWNER_REVIEW_REQUIRED_FOR_PR246_MERGE",
+      "GITHUB_REAL_API_AUTHOR_WITNESS_ABSENT"
+    ],
+    "not_executed": [
+      "HOSTINGER_SCP",
+      "WWW_BYTE_MUTATION",
+      "CUTOVER_ACTIVATION",
+      "PUBLIC_WRITE_API_ENABLE",
+      "PR185_MERGE",
+      "PR246_MERGE",
+      "EXTERNAL_AUTHENTICATED_ACK",
+      "REAL_GITHUB_REST_LIVE_FETCH_IN_CI_THIS_TIP"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_AGENT_COMMUNICATION_TRUSTED_WITNESS_P0_LAST_MILE_ORDER_20261031_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "PREDECESSOR_HASH_MISMATCH",
+      "CALLER_ATTESTATION_ACCEPTED",
+      "CLAIM_PROMOTION_ATTEMPT",
+      "R27E_LIMIT_BYPASS"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "12d79983f44e8ea6bd0361a43c66242be42439a0",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_AGENT_COMMUNICATION_TRUSTED_WITNESS_P0_LAST_MILE_ORDER_20261031_R0.md",
+        "bytes": 8385,
+        "sha256": "1aeacbecb80ecef7846bd5b4d696d848b3240b76f847c01e094c6a222c5286b6",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "120eace7fb807552148cdecd52eeb07cc4fc9c3c",
+        "path": "docs/architecture/NEXUS_AGENT_COMMUNICATION_FRAMEWORK_V1_LIVING_FOUNDATION_20261031_R0.md",
+        "bytes": 8469,
+        "sha256": "c6c941991f870d8497427824b6b9afefe10f2ec945524be350d57810cbe438ef",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "2085f2c4167590f47dad5827026780bc1e7c730a",
+        "path": "scripts/nexus_document_router.py",
+        "bytes": 50522,
+        "sha256": "31a30eaae3bad5f52225947206a3ee7f3c22ae337400dca01519be0a596351ec",
+        "source_status": "OPERATOR_REPORTED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "2085f2c4167590f47dad5827026780bc1e7c730a",
+        "path": "tests/test_nexus_document_router.py",
+        "bytes": 29061,
+        "sha256": "7447da6946e712ab3fe3920652cd300a6b02a9cc64edf0f71a8b671c74f945fc",
+        "source_status": "OPERATOR_REPORTED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_ONLY_NO_PRIVATE_PAYLOAD",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "LOCAL_UNITTEST_29_OF_29_OK",
+      "WWW_READ_ONLY_3_OF_3_AXIOM_REMOTE_BYTE_MATCH_PRESERVED",
+      "GITHUB_REAL_API_AUTHOR_WITNESS_NOT_ESTABLISHED"
+    ],
+    "robustness_stability": [
+      "CALLER_GITHUB_API_WITNESS_REJECTED",
+      "TRANSPORT_CALLER_ASSERTED_KEEPS_OUTBOUND_QUEUED",
+      "CUTOVER_ACTIVE_NO",
+      "PUBLIC_WRITE_API_OFF"
+    ],
+    "traceability_comprehensibility": [
+      "ORDER_REHASH_8385_MATCH",
+      "LIVING_FOUNDATION_8469_MATCH",
+      "PR185_PEEL_TIP_80_FILES_VS_MAIN",
+      "PR246_OWNER_REVIEW_ONLY_NO_MERGE"
+    ]
+  }
+}
