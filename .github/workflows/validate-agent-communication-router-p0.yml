@@ -26,4 +26,4 @@ jobs:
       - name: Check out current PR code
         uses: actions/checkout@v4
       - name: Execute router unit tests on actual checkout
-        run: python3 -m unittest discover -s tests -p 'test_nexus_document_router.py' -v
+        run: PYTHONPATH="${GITHUB_WORKSPACE}/scripts" python3 -m unittest discover -s tests -p 'test_nexus_document_router.py' -v
