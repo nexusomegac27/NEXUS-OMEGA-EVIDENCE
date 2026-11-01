@@ -1,0 +1,154 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_ISSUE93_V4_FROZEN_REGRESSION_CLOSURE_20261101_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "pinned_main": "ec887632a4f1659a29c01f4db8bbf1cc79c30ae6",
+  "predecessor_pr": 251,
+  "predecessor_issue93_receipt_id": 6549786500,
+  "classification": "TESTED_IMPROVEMENT_C1_QUALITY_EVIDENCE_ONLY",
+  "negative_hypothesis": "V4 may regress older inventory, finite-number or Unicode-scalar behavior despite its own 15-case oracle passing.",
+  "source_files": [
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_issue93_double_inventory_guard_v1_20261031.py",
+      "bytes": 4064,
+      "sha256": "633c7621d8bfb7851a292fc2cc638c03bfe4691a72ee684f0246f3f8f3a014c5",
+      "git_blob_sha1": "673e1424a9e85914b80c58d4b2e659ad0339e258"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_issue93_double_inventory_nonfinite_exponent_v2_20261031.py",
+      "bytes": 847,
+      "sha256": "baf335b20f1a169dd35f33d811213d675c34c7a222a1827dbfd5d8e6644dccab",
+      "git_blob_sha1": "400a7d161217e87c19bc41b8e26859e8be2fad4b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_issue93_unicode_scalar_guard_v3_20261031.py",
+      "bytes": 1246,
+      "sha256": "e17749dd802096fc95ff56c8023674e767d3dc64668508286473768b26c45fe0",
+      "git_blob_sha1": "4a0663fc7769f7cc56ff161a1383ea72f3453503"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_issue93_bounded_json_guard_v4_20261031.py",
+      "bytes": 1213,
+      "sha256": "9fe29bc6e49cbc16b0395e4a883829b9d46f658c4ba2c713818948a11dd0cbc8",
+      "git_blob_sha1": "c414358a03968f604842e6425316437d041afcff"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_issue93_double_inventory_oracle_v1_20261031.py",
+      "bytes": 3996,
+      "sha256": "c695952fe1ae4740e99912b2c5ec1068d5aa8a38f1d3a905b1015b79b77fb60a",
+      "git_blob_sha1": "624066fa3ae09fd59781fbae9afcb54d801ea763"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_issue93_nonfinite_exponent_oracle_v1_20261031.py",
+      "bytes": 1912,
+      "sha256": "247df4df9fa47edbc9ebb15d8585c36ab8aec6776a3332cd2c7f9ef29df58ec5",
+      "git_blob_sha1": "7982186d629feec53a0ab173cf55dac8ad410911"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_issue93_unicode_scalar_oracle_v1_20261031.py",
+      "bytes": 3154,
+      "sha256": "268498fc6f4d7c03c9a368bce7df93937a0ea86bd4c038dfba31f295e8c22c93",
+      "git_blob_sha1": "f9d03c6ebe70c9cbfce40fc0aa444aa4d5ae9908"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_issue93_bounded_json_oracle_v1_20261031.py",
+      "bytes": 3692,
+      "sha256": "90bb84a98760131b7d1fcfe4fda2a7ce82defacbf00c01f521f3fc118d542de0",
+      "git_blob_sha1": "dc174d900724d111e3a360b1340a4e05f9d8cfbd"
+    }
+  ],
+  "frozen_oracles": [
+    {
+      "id": "V1_DOUBLE_INVENTORY",
+      "oracle": "frozen_alpha_issue93_double_inventory_oracle_v1_20261031.py",
+      "args": [
+        "alpha_issue93_bounded_json_guard_v4_20261031.py"
+      ],
+      "command": "python frozen_alpha_issue93_double_inventory_oracle_v1_20261031.py alpha_issue93_bounded_json_guard_v4_20261031.py",
+      "cases": 25,
+      "positive": 3,
+      "negative": 22,
+      "stdout_bytes": 580,
+      "stdout_sha256": "6709c2cf8b8b1c15da88b17ca356ad18be4e37a3332b89aa9e842c06e3af3f00",
+      "terminal": "ORACLE_EXPECTED_OUTCOMES=25/25"
+    },
+    {
+      "id": "V2_NONFINITE",
+      "oracle": "frozen_alpha_issue93_nonfinite_exponent_oracle_v1_20261031.py",
+      "args": [
+        "alpha_issue93_double_inventory_guard_v1_20261031.py",
+        "alpha_issue93_bounded_json_guard_v4_20261031.py"
+      ],
+      "command": "python frozen_alpha_issue93_nonfinite_exponent_oracle_v1_20261031.py alpha_issue93_double_inventory_guard_v1_20261031.py alpha_issue93_bounded_json_guard_v4_20261031.py",
+      "cases": 9,
+      "positive": 4,
+      "negative": 5,
+      "stdout_bytes": 378,
+      "stdout_sha256": "049825b0f746f8086d371083a995ff6f697bf4eee922fe585b53c9ff68a45297",
+      "terminal": "ORACLE_CANDIDATE=9/9;BASELINE_OVERFLOW_FALSE_ACCEPT=2/2"
+    },
+    {
+      "id": "V3_UNICODE",
+      "oracle": "frozen_alpha_issue93_unicode_scalar_oracle_v1_20261031.py",
+      "args": [
+        "alpha_issue93_double_inventory_nonfinite_exponent_v2_20261031.py",
+        "alpha_issue93_bounded_json_guard_v4_20261031.py"
+      ],
+      "command": "python frozen_alpha_issue93_unicode_scalar_oracle_v1_20261031.py alpha_issue93_double_inventory_nonfinite_exponent_v2_20261031.py alpha_issue93_bounded_json_guard_v4_20261031.py",
+      "cases": 12,
+      "positive": 5,
+      "negative": 7,
+      "stdout_bytes": 387,
+      "stdout_sha256": "1fb8712ec9337fa66a4c886d44ba134a1121484cbe1a26bde4af62dabe75b7e9",
+      "terminal": "CANDIDATE=12/12; NEGATIVES=7/7; BASELINE_FALSE_ACCEPT=2/2; BASELINE_BODY_REJECT=1/1"
+    },
+    {
+      "id": "V4_BOUNDED",
+      "oracle": "frozen_alpha_issue93_bounded_json_oracle_v1_20261031.py",
+      "args": [
+        "alpha_issue93_unicode_scalar_guard_v3_20261031.py",
+        "alpha_issue93_bounded_json_guard_v4_20261031.py"
+      ],
+      "command": "python frozen_alpha_issue93_bounded_json_oracle_v1_20261031.py alpha_issue93_unicode_scalar_guard_v3_20261031.py alpha_issue93_bounded_json_guard_v4_20261031.py",
+      "cases": 15,
+      "positive": 6,
+      "negative": 9,
+      "stdout_bytes": 482,
+      "stdout_sha256": "b8c018bed3ad9531af99800ae543b58f02e603df8320ef7971c3dad6d22431c9",
+      "terminal": "CANDIDATE=15/15; POSITIVE=6/6; NEGATIVE=9/9; BASELINE_OVERSIZE_FALSE_ACCEPT=1/1; BASELINE_RECURSION_UNSTRUCTURED=1/1"
+    }
+  ],
+  "measured": {
+    "previous_v4_cases_executed": 15,
+    "prior_frozen_cases_not_rerun_on_v4": 46,
+    "current_expected_outcomes_passed": 61,
+    "current_expected_outcomes_total": 61,
+    "positive_expected": 18,
+    "negative_expected": 43
+  },
+  "independent_evaluator": "Four previously committed frozen black-box Python subprocess oracles; source files unchanged; separate local manifest check 1/1 PASS and five hash-declaration mutations 5/5 REJECT.",
+  "falsifier": "Any pinned source/oracle byte mismatch, nonzero oracle exit, missing expected terminal line, or changed expected classification on rerun refutes the scoped result.",
+  "execution": {
+    "python": "3.13.5",
+    "network": "NO",
+    "raw_stdout_archived": false,
+    "real_issue93_rest_inventory_executed": false,
+    "production_integration": false,
+    "model_modification": false
+  },
+  "r10": {
+    "pr": 115,
+    "public_send": "OBSERVED",
+    "independent_receiver_ack": "NOT_ESTABLISHED",
+    "authenticated_external_expert_actor": "NOT_ESTABLISHED",
+    "expert_research_actually_executed": "UNVERIFIED"
+  },
+  "project_targets": {
+    "automation_rate": "NOT_COMPUTABLE_NO_ELIGIBLE_ATTEMPT_DENOMINATOR",
+    "publication_full_readback_rate": "NOT_COMPUTABLE_NO_GLOBAL_DENOMINATOR"
+  },
+  "publication": {
+    "pr": "PENDING",
+    "main_readback": "PENDING",
+    "issue93_receipt": "PENDING"
+  }
+}
