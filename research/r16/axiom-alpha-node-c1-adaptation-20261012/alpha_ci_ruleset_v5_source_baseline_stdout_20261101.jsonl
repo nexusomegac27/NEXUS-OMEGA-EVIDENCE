@@ -1,0 +1,17 @@
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "valid_exact_repo", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "valid_extra_check_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "GAP_OBSERVED", "case": "valid_required_absent_gap", "expected": "GAP_OBSERVED", "pass": true}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "valid_multiple_includes", "expected": "OBSERVED_CONTEXTS_COVERED", "pass": true}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_missing", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_null", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_foreign_repo", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_case_drift", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_trailing_space", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_boolean", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_type_missing", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_type_org", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_type_null", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "source_type_boolean", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "ruleset_url_missing", "expected": "NOT_COMPUTABLE", "pass": false}
+{"actual": "OBSERVED_CONTEXTS_COVERED", "case": "ruleset_url_foreign", "expected": "NOT_COMPUTABLE", "pass": false}
+{"passed": 4, "scope": "SYNTHETIC_RULESET_SOURCE_IDENTITY_NOT_AUTHENTICATED", "total": 16}
