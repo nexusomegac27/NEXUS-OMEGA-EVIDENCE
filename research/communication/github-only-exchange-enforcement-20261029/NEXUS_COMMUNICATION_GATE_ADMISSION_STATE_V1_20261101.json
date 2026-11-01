@@ -1,0 +1,69 @@
+{
+  "schema": "nexus-omega-communication-gate-admission-v1",
+  "object": "NEXUS_OMEGA_AGENT_COMMUNICATION_GATE_SOFTWARE_FOUNDATION_20261101_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "release_class": "C1_LOCAL_POLICY_PREENTRY_ONLY",
+  "v1_architecture": "CLOSED_LIVING",
+  "public_www": {
+    "state": "LIVE_READ_ONLY_CONFIRMED_AT_RECORDED_CHECK",
+    "last_proof": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/actions/runs/41224585554/job/124605976802",
+    "write_api": "OFF",
+    "no_account_required_for_public_read": true
+  },
+  "github_document_router": {
+    "state": "STAGED",
+    "tested_commit": "9330c2c55886488e8ffd05843937e96265219893",
+    "pr_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/259",
+    "ci_at_tested_commit": "16_OF_16_SUCCESS",
+    "unit_suite": "29_OF_29_SUCCESS",
+    "repaired_negatives": "15_OF_15_PASS",
+    "baseline_defects": "12_OF_12_FAIL_EXPECTED"
+  },
+  "real_receiver": {
+    "state": "NOT_ESTABLISHED",
+    "source_fetch_by_receiver": "NOT_ESTABLISHED",
+    "github_distinct_principal": "NOT_ESTABLISHED",
+    "return_source_independently_verified": "NOT_ESTABLISHED"
+  },
+  "owner_cutover": {
+    "state": "NO",
+    "authorization": "NOT_INDEPENDENTLY_PROVEN",
+    "rollback": "NOT_INDEPENDENTLY_PROVEN",
+    "platform_delivery": "NOT_ESTABLISHED"
+  },
+  "private_source": {
+    "state": "HOLD",
+    "transport": "NOT_ESTABLISHED",
+    "permission": "NOT_ESTABLISHED",
+    "raw_to_public_github": "PROHIBITED"
+  },
+  "pixel9a_second_twin": {
+    "state": "NOT_ADMITTED",
+    "oppo_attribution_and_recovery": "NOT_ESTABLISHED_IN_THIS_SOURCE_SET",
+    "connectivity": "MODE_SPECIFIC_EVIDENCE_REQUIRED",
+    "phase": "READ_ONLY_OFFLINE_PREFLIGHT_ONLY",
+    "dual_device_sync": "NOT_AUTHORIZED",
+    "live_sensor_relay": "NOT_AUTHORIZED",
+    "raw_sensor_cloud_upload": "NOT_AUTHORIZED",
+    "opto_in": "REQUIRED_EXPLICIT"
+  },
+  "symbiosis": {
+    "state": "C1_FEEDBACK_LOOP_RESEARCH_ONLY",
+    "human_authority": "OPERATOR",
+    "agent_identity": "NOT_ATTESTED_BY_MODEL_LABEL",
+    "success_metric": "MEASURED_REDUCED_MANUAL_HANDOFF_AND_INDEPENDENT_PROOF",
+    "claim_of_consciousness": "NOT_ESTABLISHED"
+  },
+  "violations_always_fail": [
+    "PUBLIC_POST_ENABLED",
+    "EXTERNAL_ACK_FROM_CALLER_JSON",
+    "RECEIVED_BYTES_VERIFIED_FROM_CALLER_SHA",
+    "CUTOVER_ACTIVE_FROM_CONFIG_SELF_ATTESTATION",
+    "PRIVATE_TRANSPORT_WITHOUT_REAL_PERMISSION",
+    "PIXEL_ACTIVATED_BEFORE_OPPO_FIRST_GATES",
+    "CLAIM_ABOVE_C1",
+    "UNREVIEWED_PRIVACY_DATA_TO_PUBLIC_GITHUB"
+  ],
+  "next_release_requirement": "EXACT_SOURCE_BOUND_VERIFIER_API_AND_RETURN_BLOB_FETCH_PLUS_OWNER_RIGHTS_AND_ROLLBACK_BEFORE_CUTOVER",
+  "publication_policy": "DO_NOT_DEPLOY_THIS_LOCAL_POLICY_FILE_AS_LIVE_WEB_STATUS_WITHOUT_SEPARATE_RELEASE_AND_REMOTE_BYTES_CHECK"
+}
