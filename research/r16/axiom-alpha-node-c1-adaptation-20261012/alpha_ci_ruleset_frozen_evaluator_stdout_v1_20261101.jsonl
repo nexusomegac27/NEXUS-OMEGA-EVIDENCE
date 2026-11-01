@@ -1,0 +1,12 @@
+{"case": "observed_ruleset_gap", "expected": ["GAP_OBSERVED", ["nexus-preentry-lab", "r27e-external-structural-firewall", "semgrep-cloud-platform/scan", "validate-repository-structure"], 4], "observed": ["GAP_OBSERVED", ["nexus-preentry-lab", "r27e-external-structural-firewall", "semgrep-cloud-platform/scan", "validate-repository-structure"], 4], "pass": true}
+{"case": "all_names_required_but_duplicate_validate", "expected": ["GAP_OBSERVED", [], 4], "observed": ["GAP_OBSERVED", [], 4], "pass": true}
+{"case": "synthetic_all_unique_required", "expected": ["OBSERVED_CONTEXTS_COVERED", [], 0], "observed": ["OBSERVED_CONTEXTS_COVERED", [], 0], "pass": true}
+{"case": "inactive_ruleset", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "wrong_branch", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "wrong_required_app", "expected": ["GAP_OBSERVED", ["nexus-preentry-lab", "r27e-external-structural-firewall", "semgrep-cloud-platform/scan", "validate", "validate-repository-structure"], 4], "observed": ["GAP_OBSERVED", ["nexus-preentry-lab", "r27e-external-structural-firewall", "semgrep-cloud-platform/scan", "validate", "validate-repository-structure"], 4], "pass": true}
+{"case": "failed_run", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "head_mismatch", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "duplicate_run_id", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "empty_required_checks", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"case": "bool_app_id", "expected": ["NOT_COMPUTABLE", null, null], "observed": ["NOT_COMPUTABLE", null, null], "pass": true}
+{"passed": 11, "scope": "SYNTHETIC_NORMALIZED_API_FIELDS_ONLY", "total": 11}
