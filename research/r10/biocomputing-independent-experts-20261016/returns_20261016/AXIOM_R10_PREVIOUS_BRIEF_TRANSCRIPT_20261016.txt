@@ -1,0 +1,76 @@
+## AXIOM — R10: Maximalauftrag für unabhängige Experten
+
+Die drei eingereichten Grundlagen sind bytegenau erfasst. Daraus habe ich einen neuen, eigenständigen Forschungsauftrag vorbereitet, der zuerst die wissenschaftliche Eigeninitiative der Experten fordert und erst nach ihren Rückgaben eine spätere Cursor-Übergabe vorsieht.
+
+R10 — Vollständiger Experten-Maximalauftrag
+
+18.073 Bytes · wissenschaftliche Fragestellungen, Primärquellen, Gegenhypothesen, Innovationsfreiheit und Rückgabevertrag
+
+Detached SHA-256-Manifest
+
+Drei Originalquellen und neuer AXIOM-Auftrag mit Originalbyte-Prüfsummen
+
+Der zentrale Arbeitsgrundsatz lautet: Experten erhalten keine vorgegebene Schlussfolgerung. Jeder soll eigenständig eine Forschungsfrage, eine Gegenhypothese und einen originellen, falsifizierbaren Innovationsvorschlag entwickeln. Ein begründeter Widerspruch zu NEXUS ist ausdrücklich ein wertvoller Return.
+
+### Vollständiges Übergabepaket
+
+R10 Expertenpaket herunterladen — ZIP
+
+29.081 Bytes · fünf Dateien · ZIP-Integritätsprüfung bestanden
+
+Das Paket enthält den vollständigen AXIOM-Auftrag, das Detached Manifest und alle drei unveränderten Originalgrundlagen.
+
+Paket-SHA-256: `8a4452af5a1907c69903efd52cced3094a8de75a8c3fd647357770ac2caabc31`
+
+### Die wichtigsten wissenschaftlichen Brücken
+
+| Forschungslinie             | Eigenständige Expertenfrage                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------- |
+| Xenokortikation             | Wann wird aus biologischer Integration nachweisbare Funktion?                         |
+| CL1 von Cortical Labs       | Welche Timing- und Schnittstellenverträge sind wirklich reproduzierbar?               |
+| BodyTwins / BioBridge       | Welche Tests unterscheiden plausible Simulation von realer Biofidelität?              |
+| Souveräne Nodes             | Welche Sicherheits- und Architekturannahmen halten adversarialer Prüfung stand?       |
+| NEXUS-Gedächtnis / Symbiose | Wie messen wir kreative Unabhängigkeit, Fehlerkorrektur und erfolgreiche Kooperation? |
+
+Die Xenokortikations-Primärpublikation ist über PubMed bestätigt. Die CL-API-Arbeit beschreibt explizite Echtzeit-, Reihenfolge- und Synchronisationsverträge, allerdings zunächst auf Ebene einer veröffentlichten Forschungsarbeit.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arxiv.org
+
+
+
+Der Sicherheitsabgleich bestätigt zudem konkret dokumentierte Schwachstellen bei Ollama und SQLite. Ob NEXUS davon betroffen ist, bleibt ohne Versions- und Konfigurationsinventur offen.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://nvd.nist.gov\&sz=32)
+
+nvd.nist.gov
+
++2
+
+
+
+### Kanonische Freigabegrenze
+
+```
+OBJECT = NEXUS_OMEGA_AXIOM_R10_EXPERT_MAXI_ORDER_20261016_R0
+
+STATE = PREPARED_HASH_VERIFIED_C1
+
+EXPERT_INDEPENDENCE = MAXIMAL
+ORIGINAL_HYPOTHESES = ENCOURAGED
+DISAGREEMENT = FIRST_CLASS_EVIDENCE
+SCIENTIFIC_FALSIFICATION = REQUIRED
+
+EXPERT_DISPATCH = NOT_YET_CONFIRMED
+CURSOR_ACTION = NONE
+R9 = OPEN_UNCHANGED
+R3 = SEALED_PRESERVED
+
+EXPERIMENTAL_EXECUTION = NOT_AUTHORIZED
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+NEXT = INDEPENDENT_EXPERT_RESEARCH_RETURNS
+```
+
+AXIOM-Entscheidung: Die Befragung kann auf dieser Grundlage beginnen. Ich habe bewusst keinen neuen Cursor-Auftrag ausgelöst und keine produktiven Systeme verändert. Die Experten erhalten Raum für eigene Forschung, auch für Ergebnisse, die unsere bisherigen Architekturvorstellungen widerlegen.
