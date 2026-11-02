@@ -1,0 +1,161 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_REQUIRED_CHECK_LIVE_READINESS_PREFLIGHT_20261103_R0",
+  "parent_main": "88e7bb6aa41f15bb1127753e869e0cd38b74f031",
+  "proposed_targets": [
+    "validate-anchor",
+    "validate-scientific-ledger",
+    "validate-scientific-communication",
+    "validate-a83-framework-hardening"
+  ],
+  "sources": {
+    "ruleset": {
+      "url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/rulesets/21252293",
+      "api_response_utf8_bytes": 1291,
+      "api_response_sha256": "90a79aa952439b6def40222ce4d81f8f2716154c7a1770ee3920f4b05e72d0ce",
+      "ruleset_id": 21252293,
+      "enforcement": "active",
+      "required": [
+        {
+          "context": "validate",
+          "integration_id": 15368
+        }
+      ]
+    },
+    "pr_head": {
+      "url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/commits/370d67d94bd6940098610f97f734f0c1895bb537/check-runs?per_page=100",
+      "api_response_utf8_bytes": 24380,
+      "api_response_sha256": "f662955fbaad1939b84ec777035758256ce7f9b955f787794ca330a56d548bb1",
+      "commit": "370d67d94bd6940098610f97f734f0c1895bb537",
+      "total_count": 8,
+      "checks": [
+        {
+          "id": 125593173124,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593173300,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593173401,
+          "name": "validate-repository-structure",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593173508,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593173702,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593175021,
+          "name": "r27e-external-structural-firewall",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593198604,
+          "name": "semgrep-cloud-platform/scan",
+          "app_id": 4695336,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125593245045,
+          "name": "nexus-preentry-lab",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "main": {
+      "url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/commits/88e7bb6aa41f15bb1127753e869e0cd38b74f031/check-runs?per_page=100",
+      "api_response_utf8_bytes": 25513,
+      "api_response_sha256": "3ca8154d90a253c307d1265faac128997ead1cfc89422853f6d27672e85bc4f1",
+      "commit": "88e7bb6aa41f15bb1127753e869e0cd38b74f031",
+      "total_count": 8,
+      "checks": [
+        {
+          "id": 125594609243,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125594609272,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125594609472,
+          "name": "validate-repository-structure",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125594609491,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125594609535,
+          "name": "validate",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125594618050,
+          "name": "build",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125599402393,
+          "name": "deploy",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 125599402461,
+          "name": "report-build-status",
+          "app_id": 15368,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "r10": {
+      "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/539d4bb33d2ba2c4895713c1bc437ece0743eeea/research/r10/biocomputing-independent-experts-20261016/R10_GITHUB_NATIVE_DETACHED_SOURCE_MANIFEST_20261016_R1.json",
+      "api_response_utf8_bytes": 4588,
+      "api_response_sha256": "7e026d579e4a0c6062203c3c6ca9b720301e5cf87b86a4c4052b0351233fd6cc",
+      "object": "NEXUS_OMEGA_AXIOM_R10_GITHUB_NATIVE_SOURCE_EXACT_DETACHED_MANIFEST_20261016_R1"
+    }
+  }
+}
