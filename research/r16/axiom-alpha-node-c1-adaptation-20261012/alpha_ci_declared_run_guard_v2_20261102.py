@@ -1,20 +1,20 @@
 """Research-only C1 check-head and declared workflow run guard.
 
-Conservative textual YAML scan: only a direct Python command under a `run:`
+Conservative textual YAML scan: only a direct Python command under a \`run:\`
 key counts as a declared step. It is NOT evidence that the command executed.
 No YAML dependencies, network calls, runtime integration or claim promotion.
 """
 import re
 
-HEX40 = re.compile(r"[0-9a-f]{40}\\Z")
-TARGET = re.compile(r"[A-Za-z0-9_]+\\.py\\Z")
-RUN = re.compile(r"^(\\s*)(?:-\\s*)?run:\\s*(.*?)\\s*$")
+HEX40 = re.compile(r"[0-9a-f]{40}\Z")
+TARGET = re.compile(r"[A-Za-z0-9_]+\.py\Z")
+RUN = re.compile(r"^(\s*)(?:-\s*)?run:\s*(.*?)\s*$")
 
 
 def declared_runs(workflow, target):
     """Count narrowly recognizable direct Python run commands, not mentions."""
-    command = re.compile(r"^\\s*python(?:3(?:\\.\\d+)?)?\\s+(?:-B\\s+)?(?:\\./)?"
-                         + re.escape(target) + r"(?=\\s|$)")
+    command = re.compile(r"^\s*python(?:3(?:\.\d+)?)?\s+(?:-B\s+)?(?:\./)?"
+                         + re.escape(target) + r"(?=\s|$)")
     lines = workflow.splitlines()
     found = 0
     block_indent = None
