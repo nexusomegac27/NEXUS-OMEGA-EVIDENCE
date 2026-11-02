@@ -9,6 +9,7 @@ PREDECESSOR_PR=291
 PREDECESSOR_ISSUE93_RECEIPT=6577253195
 FROZEN_EVALUATOR_FIRST_COMMIT=64811abb73ed731c38cbdd95ae3b464d4604c240
 CANDIDATE_SECOND_COMMIT=3e78673619440810f065ece05aad7669730af748
+CANDIDATE_FINAL_FIX_COMMIT=c6eecd69f0422db43a3104fe977ec74ce46f45c5
 PRODUCTION_INTEGRATION=NO
 WWW_PARITY=NOT_ESTABLISHED
 ```
@@ -26,9 +27,9 @@ A naive counter that accepts `unattended=YES` from self-declared records can cla
 Two **new additive research files** in the existing R16 path, with frozen evaluator committed before candidate:
 
 - `frozen_alpha_handoff_denominator_evaluator_v1_20261102.py`: **4,025 bytes**, SHA-256 `480b7e89a3d2f7682c5428df8660bafcff012752ce88803507592303f9869416`, Git blob `7cfbe67c4ce744bafa164883b0647ab5b714c397`.
-- `alpha_handoff_denominator_guard_v1_20261102.py`: **3,622 bytes**, SHA-256 `1314df70b5edae6f77463f159638089f26bcfaaf03b95849e5d420270a9c0907`, Git blob `8bda940b71fcb23a4c9165c4fda42af26831a5c5`.
+- `alpha_handoff_denominator_guard_v1_20261102.py`: **3,666 bytes**, SHA-256 `560ea49f753fa1a1118b12526e837bdfa3a055dfabe87894f553a7f3b1d04fb9`, Git blob `61bb0e9d989cc32f3ca55c2ee7264381345d0559`.
 
-Independent Python evaluator executed in a separate process against exact candidate bytes, **14/14 expected outcomes PASS**, including missing source, missing trigger, missing evaluator, operator nudge, mismatched hash, duplicate ID, private exclusion, unknown eligibility, incomplete population and a deliberate self-attested forgery falsifier. Test stdout: **2,372 bytes**, SHA-256 `031045a50e0c5dad7c5b9bac611162aa098436fa9024ba6d40842e863e415f95`. Candidate and evaluator Git blobs were independently re-fetched from the immutable branch commit and matched local Git blob calculations.
+Independent Python evaluator executed in a separate process against exact candidate bytes, **14/14 expected outcomes PASS**, including missing source, missing trigger, missing evaluator, operator nudge, mismatched hash, duplicate ID, private exclusion, unknown eligibility, incomplete population and a deliberate self-attested forgery falsifier. Test stdout: **2,372 bytes**, SHA-256 `031045a50e0c5dad7c5b9bac611162aa098436fa9024ba6d40842e863e415f95`. A separate adversarial probe found the first unmerged candidate raised TypeError for list/dict eligibility fields; the final unmerged fix returns INVALID_INPUT for all 3 malformed values, while the original frozen evaluator still passes 14/14. Both commits are retained in the unmerged branch history. Candidate and evaluator Git blobs were independently re-fetched from the immutable branch commit and matched local Git blob calculations.
 
 Reproduce with `python frozen_alpha_handoff_denominator_evaluator_v1_20261102.py alpha_handoff_denominator_guard_v1_20261102.py`.
 
