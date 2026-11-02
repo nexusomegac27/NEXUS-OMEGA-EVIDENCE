@@ -1,0 +1,377 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_BOUNDED_CI_WORKFLOW_READBACK_274_283_20261102_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_scope": "FIRST_PAGE_PR_TRIGGERED_WORKFLOW_RUNS_ONLY_NOT_COMPLETE_CHECK_RUN_CENSUS",
+  "prs": [
+    {
+      "pr": 274,
+      "head_sha": "574c7ecd2a2892bb8031895695f5829ce28053cc",
+      "workflow_runs": [
+        {
+          "id": 41333615869,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41333615895,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41333615877,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41333615923,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41333615932,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 275,
+      "head_sha": "0f0cde1b1217b3808483b5a2417657f9b8a5bf4e",
+      "workflow_runs": [
+        {
+          "id": 41337848011,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41337848076,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41337848016,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41337848015,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41337848062,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 276,
+      "head_sha": "9c1afa0c1b05ae6284b8dd735f232b84f005316f",
+      "workflow_runs": [
+        {
+          "id": 41340919403,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41340919421,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41340919375,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41340919407,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41340919412,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 277,
+      "head_sha": "3e9177d26ccfc173c401691a3e3a451593e036bb",
+      "workflow_runs": [
+        {
+          "id": 41348686100,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41348686102,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41348686143,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41348686150,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41348686104,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 278,
+      "head_sha": "84910f2357a2a32b7e0387807784be05f204e67c",
+      "workflow_runs": [
+        {
+          "id": 41351948055,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41351948089,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41351948065,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41351947999,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41351947989,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 279,
+      "head_sha": "ba33d8302be802794435b31af35638daa45e2aa8",
+      "workflow_runs": [
+        {
+          "id": 41357338664,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41357338510,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41357338293,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41357338327,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41357338509,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 280,
+      "head_sha": "a3055fb4f38c321ba5a4238a50402e7d99bcdb8a",
+      "workflow_runs": [
+        {
+          "id": 41362732563,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41362732515,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41362732587,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41362732592,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41362732703,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 281,
+      "head_sha": "2f7f7657e66d0a60933e932675f56ccca2fa4eaa",
+      "workflow_runs": [
+        {
+          "id": 41368798718,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41368798420,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41368798478,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41368798512,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41368798567,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 282,
+      "head_sha": "4b42d852911a001781a0bbe0be41a88004be2738",
+      "workflow_runs": [
+        {
+          "id": 41375113678,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41375113671,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41375113682,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41375113677,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41375113720,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    },
+    {
+      "pr": 283,
+      "head_sha": "964775a1991a377fcbd550ca295acb6169452c6e",
+      "workflow_runs": [
+        {
+          "id": 41376121742,
+          "name": "validate-scientific-ledger",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41376121579,
+          "name": "Validate repository structure",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41376121503,
+          "name": "validate-scientific-communication",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41376121697,
+          "name": "validate-a83-framework-hardening",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 41376121542,
+          "name": "validate-anchor",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "all_five_success": true
+    }
+  ]
+}

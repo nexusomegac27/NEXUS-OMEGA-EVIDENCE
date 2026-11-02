@@ -1,0 +1,397 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_PUBLICATION_COHORT_CENSUS_274_283_20261102_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "cohort": {
+    "start_pr": 274,
+    "end_pr": 283,
+    "selection": "EXPLICIT_BOUNDED_NOT_PROJECT_WIDE"
+  },
+  "pinned_main": "7961026bf0f630aee160e083122c2900744d2da1",
+  "prs": [
+    {
+      "number": 274,
+      "merge_commit": "3cc35487e8cae54aeac95377b6a8c376f412dc4f",
+      "parent_commit": "964fe47c4bdbad599e0689b132ff73c0822f3518",
+      "receipt_id": 6561672055,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_github_rest_native_adapter_v4_20261101.py",
+          "bytes": 4462,
+          "sha256": "17e81cb944bd0a79fc616e5bbb4ad79962190d2b800a96d79b9a3590221dacd3",
+          "git_blob_sha1": "4806d9fbb8086b25b345ddef6452d6a6ed0d5968",
+          "github_blob_sha1": "4806d9fbb8086b25b345ddef6452d6a6ed0d5968",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_github_rest_native_adapter_v4_c1_report_20261101.md",
+          "bytes": 6022,
+          "sha256": "d237c53ac2455b2a56d2dd6af66bdbb18503c899d1042bfd69446deb70925da0",
+          "git_blob_sha1": "929b91cc7127cd279fc0f6e5c23f65c0ff7efcf9",
+          "github_blob_sha1": "929b91cc7127cd279fc0f6e5c23f65c0ff7efcf9",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_rest_native_v3_baseline_stdout_20261101.jsonl",
+          "bytes": 1698,
+          "sha256": "487da0577af796b09f3bae4383ec6b483287e9d92cb33be3c0b28ce682e62b67",
+          "git_blob_sha1": "3458bc2a654cca122d617c8e5ef747e8ffe009b1",
+          "github_blob_sha1": "3458bc2a654cca122d617c8e5ef747e8ffe009b1",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_rest_native_v4_candidate_stdout_20261101.jsonl",
+          "bytes": 1702,
+          "sha256": "e3b74814a2cc1595e9a73c1535ea7b43ab9632fbc09158e1ba81329664ad2b36",
+          "git_blob_sha1": "389a3e34b6037865336c5027a6578dc3729a3ee9",
+          "github_blob_sha1": "389a3e34b6037865336c5027a6578dc3729a3ee9",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_ci_rest_native_evaluator_v4_20261101.py",
+          "bytes": 4313,
+          "sha256": "cf54b496b861f02ae468cc342e096e145899b93278a14cf30e56445d9b7fb952",
+          "git_blob_sha1": "746118dec849366facf070223a3896499d6dd6ab",
+          "github_blob_sha1": "746118dec849366facf070223a3896499d6dd6ab",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 275,
+      "merge_commit": "3fef33f230f5cfbec75167811d0a12787f1847db",
+      "parent_commit": "3cc35487e8cae54aeac95377b6a8c376f412dc4f",
+      "receipt_id": 6562253845,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_effective_scope_guard_v5_20261101.py",
+          "bytes": 2837,
+          "sha256": "afd7e905e95f41a48fbbaf577584acabb35e90fd36491b24be9e094ba016de35",
+          "git_blob_sha1": "ac9b226447448c090b2fb4e7744f5a7fae090841",
+          "github_blob_sha1": "ac9b226447448c090b2fb4e7744f5a7fae090841",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_effective_scope_guard_v5_c1_report_20261101.md",
+          "bytes": 6421,
+          "sha256": "fbec2db80fd7c5bb6ec2788c788ecc6dde5c0d6be5c8a11c52477bc2bf1b0fa2",
+          "git_blob_sha1": "9c9174d57aaa07c732b82eb71fdd87a5be9032e5",
+          "github_blob_sha1": "9c9174d57aaa07c732b82eb71fdd87a5be9032e5",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_v4_baseline_eval_stdout_20261101.jsonl",
+          "bytes": 2056,
+          "sha256": "c8c7b31a5cbe254a4c6b2fa0d780d5f9d83084091f71303afbf104119b1999b1",
+          "git_blob_sha1": "22cddca61851c4bdd468e240cbdcd2016e9b96e9",
+          "github_blob_sha1": "22cddca61851c4bdd468e240cbdcd2016e9b96e9",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_v5_candidate_eval_stdout_20261101.jsonl",
+          "bytes": 1901,
+          "sha256": "0c71eda936458878d342556df502322eaec415ad01e6c55c57094db744f1b99a",
+          "git_blob_sha1": "e00f420019281d2a9689788c280df43c115a813c",
+          "github_blob_sha1": "e00f420019281d2a9689788c280df43c115a813c",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_ci_ruleset_effective_scope_evaluator_v5_20261101.py",
+          "bytes": 4695,
+          "sha256": "b8e282e8a11083bd5245c0775b962c7f98e5be0d3df6376b1ce6c7b513924ff8",
+          "git_blob_sha1": "6676e61a812e27f67b1bd1699319eaadbf220dc7",
+          "github_blob_sha1": "6676e61a812e27f67b1bd1699319eaadbf220dc7",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 276,
+      "merge_commit": "71feb351c3e2436344a10b22b53ba19c946d73df",
+      "parent_commit": "3fef33f230f5cfbec75167811d0a12787f1847db",
+      "receipt_id": 6562668295,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_source_identity_guard_v6_20261101.py",
+          "bytes": 2035,
+          "sha256": "f3f4e8a740752a77046b171508c4141329e09bf258aaa4f1be8e760e0dde3564",
+          "git_blob_sha1": "9713b07537dfd4577fa087e3c6f38231cca7490d",
+          "github_blob_sha1": "9713b07537dfd4577fa087e3c6f38231cca7490d",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_source_identity_guard_v6_c1_report_20261101.md",
+          "bytes": 5576,
+          "sha256": "16dcc904365cb0015de06d6f630653e3773e07da4cff9fe3ee0c17d737d9e86d",
+          "git_blob_sha1": "64801bd2a7bbc540af510ce9581a94f4be9cbccf",
+          "github_blob_sha1": "64801bd2a7bbc540af510ce9581a94f4be9cbccf",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_v5_source_baseline_stdout_20261101.jsonl",
+          "bytes": 1919,
+          "sha256": "f9f0644a24bb94cf38df76803237b5379407cd89c15aa62c49944af9f32cf11a",
+          "git_blob_sha1": "a89d8174d35aa7e80e96ac05f495e616fb4e0fe4",
+          "github_blob_sha1": "a89d8174d35aa7e80e96ac05f495e616fb4e0fe4",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_ci_ruleset_v6_source_candidate_stdout_20261101.jsonl",
+          "bytes": 1776,
+          "sha256": "b2064fd3ca470c8c41c91df9671a5e8ac1d992daebe520e70c85da501ed7b910",
+          "git_blob_sha1": "5ee0a3e92999ec33b0db5dc7d48b3de8e0c69bb0",
+          "github_blob_sha1": "5ee0a3e92999ec33b0db5dc7d48b3de8e0c69bb0",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_ci_ruleset_source_binding_evaluator_v6_20261101.py",
+          "bytes": 4011,
+          "sha256": "bce18a4aa02b3c0081fa6f0b046418041e180fb908236a2d143c1bf24839f1f7",
+          "git_blob_sha1": "fc5b44c1a63947fe0c150dcadd1ef26e2cfc82f6",
+          "github_blob_sha1": "fc5b44c1a63947fe0c150dcadd1ef26e2cfc82f6",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 277,
+      "merge_commit": "b23cf96871608a18d21350f9c3df0fb075d9cec1",
+      "parent_commit": "71feb351c3e2436344a10b22b53ba19c946d73df",
+      "receipt_id": 6563701606,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_consistency_guard_v5_20261101.py",
+          "bytes": 2688,
+          "sha256": "dd3a3e1b4d51e71efecc6d4d770d8b15d47e642c5f7f0b90b735b5abb2f2d756",
+          "git_blob_sha1": "fa3f98e48a32a1df618c05ea6bdeeefd0ca7bd44",
+          "github_blob_sha1": "fa3f98e48a32a1df618c05ea6bdeeefd0ca7bd44",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_consistency_v5_c1_report_20261101.md",
+          "bytes": 4242,
+          "sha256": "e6bd3ee452415cf5b6865f2d163eb46a5042018c0b1efbac3dc840a956b9fac9",
+          "git_blob_sha1": "e4f6f92b1ab0657fa71fdfae4b64dee15638b3c0",
+          "github_blob_sha1": "e4f6f92b1ab0657fa71fdfae4b64dee15638b3c0",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_inventory_evaluator_v5_20261101.py",
+          "bytes": 3934,
+          "sha256": "616c9aa0189ea877d094613ea52b8b116b6c08238664a296e9eb7df5a41162f7",
+          "git_blob_sha1": "43d8d452cce02d59c4749c7b2e93c94bc91b7c98",
+          "github_blob_sha1": "43d8d452cce02d59c4749c7b2e93c94bc91b7c98",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 278,
+      "merge_commit": "265d760ce6a1e0e0bf4e526e48881d9ef55e3144",
+      "parent_commit": "b23cf96871608a18d21350f9c3df0fb075d9cec1",
+      "receipt_id": 6564141672,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_source_binding_guard_v6_20261101.py",
+          "bytes": 3258,
+          "sha256": "01872e43b23e5de5989bfdf2fa07d3ca75ffb50842ebd03c6feb8f5f65a9f6e1",
+          "git_blob_sha1": "c8a4d93f430062bd0f7708800cf50c7a3f78035a",
+          "github_blob_sha1": "c8a4d93f430062bd0f7708800cf50c7a3f78035a",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_source_binding_v6_c1_report_20261101.md",
+          "bytes": 5060,
+          "sha256": "8d861f8acbbbdd7454ed18a8470cb51f77561a52c82f2271b38debc1b3036b23",
+          "git_blob_sha1": "95a5c91929a9edcdc1c2b2a0e5984804a410eb0b",
+          "github_blob_sha1": "95a5c91929a9edcdc1c2b2a0e5984804a410eb0b",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_inventory_source_evaluator_v6_20261101.py",
+          "bytes": 4374,
+          "sha256": "532bad43b49fbb4b29e558a3acdeaf524c426ca5c122c55d4e073996c76342fd",
+          "git_blob_sha1": "8481874a8c1dfe2ca07433b2b1040819f7914fc7",
+          "github_blob_sha1": "8481874a8c1dfe2ca07433b2b1040819f7914fc7",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 279,
+      "merge_commit": "9e5110ce84f2bd63bad1882d80a7ee6a219b448d",
+      "parent_commit": "265d760ce6a1e0e0bf4e526e48881d9ef55e3144",
+      "receipt_id": 6564862176,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_outcome_source_binding_guard_v7_20261101.py",
+          "bytes": 3882,
+          "sha256": "417c986a185430e4db87c9762b3acb300f096cc19ee83aebc71e625fd37dffd5",
+          "git_blob_sha1": "17b78f0c95cb9c469d654e70977c82354bb960ed",
+          "github_blob_sha1": "17b78f0c95cb9c469d654e70977c82354bb960ed",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_outcome_source_binding_v7_c1_report_20261101.md",
+          "bytes": 4785,
+          "sha256": "7bb1c58085a3e69c31ba3f18b2c7bc4e84b1974d15af4c7132b98bca394f1095",
+          "git_blob_sha1": "9382a30193ac918a11f2ad5d2013a864e263155a",
+          "github_blob_sha1": "9382a30193ac918a11f2ad5d2013a864e263155a",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_outcome_source_evaluator_v7_20261101.py",
+          "bytes": 5110,
+          "sha256": "65f313f51a9ec59fff7a78a0a3c3fc336eab36304ece35824b0971393a5e6393",
+          "git_blob_sha1": "e4a9398059fab812ff1f3a4f2d36d427b7c3a58c",
+          "github_blob_sha1": "e4a9398059fab812ff1f3a4f2d36d427b7c3a58c",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 280,
+      "merge_commit": "c1aee5da5015e1108ceab049c7031180978c109d",
+      "parent_commit": "9e5110ce84f2bd63bad1882d80a7ee6a219b448d",
+      "receipt_id": 6565584811,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_coverage_state_source_binding_guard_v8_20261102.py",
+          "bytes": 3837,
+          "sha256": "6f95502177a7be45c8b655485505f949ee66589e8be823237e62a26229d742b8",
+          "git_blob_sha1": "30abeb0bf47bf53f96f8446ae6e3dfdc4128dd30",
+          "github_blob_sha1": "30abeb0bf47bf53f96f8446ae6e3dfdc4128dd30",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_coverage_state_source_binding_v8_c1_report_20261102.md",
+          "bytes": 4752,
+          "sha256": "2cee9e869d5f61a8d5e9920f6e874ebd8d6df2c55b94f5b2a054b026356a0503",
+          "git_blob_sha1": "39e9a4e4121f134e4fc323487ff3c1e2d56a9dcc",
+          "github_blob_sha1": "39e9a4e4121f134e4fc323487ff3c1e2d56a9dcc",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_coverage_state_evaluator_v8_20261102.py",
+          "bytes": 5085,
+          "sha256": "a21d0c49b3b13b34381e45c558108214a118cd16b4c1a6de52cfb9033da9b0fa",
+          "git_blob_sha1": "18caea663f8f74fb4e5aea40976f9bf0f4a0650b",
+          "github_blob_sha1": "18caea663f8f74fb4e5aea40976f9bf0f4a0650b",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 281,
+      "merge_commit": "4e22d346006b67de332bfeb1f0ea68db8412fd70",
+      "parent_commit": "c1aee5da5015e1108ceab049c7031180978c109d",
+      "receipt_id": 6566413038,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_independent_git_blob_anchor_v9_c1_report_20261102.md",
+          "bytes": 5364,
+          "sha256": "e8d011cdcdc8cba95bf6e8cf1ccf7f9c8c0367c880db41abd418a5c388d26741",
+          "git_blob_sha1": "0c875828aa873ad31c9715c126edd0e521bcec37",
+          "github_blob_sha1": "0c875828aa873ad31c9715c126edd0e521bcec37",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_independent_git_blob_guard_v9_20261102.py",
+          "bytes": 3463,
+          "sha256": "e848bf157ac56ae75fcb978ca4180836da4bab1067916614873152118617e18f",
+          "git_blob_sha1": "a2ba4c03cc824169c754c982bfe2b394e5258ef2",
+          "github_blob_sha1": "a2ba4c03cc824169c754c982bfe2b394e5258ef2",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_git_blob_evaluator_v9_20261102.py",
+          "bytes": 3554,
+          "sha256": "1a9e2066c4efe7c4f3fccd46879b7221259f64019ba301687aa56600905f0508",
+          "git_blob_sha1": "62829fd646b004a3d7d8cc44df702a139a643b49",
+          "github_blob_sha1": "62829fd646b004a3d7d8cc44df702a139a643b49",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 282,
+      "merge_commit": "b7f966a886c88e015ac49f32efdf4bf7e31f1fea",
+      "parent_commit": "4e22d346006b67de332bfeb1f0ea68db8412fd70",
+      "receipt_id": 6567269097,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_github_api_source_guard_v10_20261102.py",
+          "bytes": 6327,
+          "sha256": "4ba4e969cf0d8643915185bf5f05ca4ae93acde01854ba7ebc170683dc8ca39a",
+          "git_blob_sha1": "906614086b2e014e198b2324fe26669cc425607a",
+          "github_blob_sha1": "906614086b2e014e198b2324fe26669cc425607a",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_github_api_source_readback_v10_c1_report_20261102.md",
+          "bytes": 6905,
+          "sha256": "dcd94b022354bf91c088ce364495e9433e0eafac0ad73d2b4251f8cdde6bf35d",
+          "git_blob_sha1": "7886b956d599e7b5a4df374e288179cf17b75d0c",
+          "github_blob_sha1": "7886b956d599e7b5a4df374e288179cf17b75d0c",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_api_source_evaluator_v10_20261102.py",
+          "bytes": 5765,
+          "sha256": "67536a0eb045561004663d684f04d1309a92c1b01a670048438290101d41d941",
+          "git_blob_sha1": "e61eb45de10f276a3736cf7d2942dc0ac67f4926",
+          "github_blob_sha1": "e61eb45de10f276a3736cf7d2942dc0ac67f4926",
+          "independent_byte_check": true
+        }
+      ]
+    },
+    {
+      "number": 283,
+      "merge_commit": "7961026bf0f630aee160e083122c2900744d2da1",
+      "parent_commit": "b7f966a886c88e015ac49f32efdf4bf7e31f1fea",
+      "receipt_id": 6567407508,
+      "merged": true,
+      "files": [
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_github_api_no_redirect_guard_v11_20261102.py",
+          "bytes": 6651,
+          "sha256": "e3586c63265ec4c613341329924ebe0965d6d76c2b358e5de6532900d524384e",
+          "git_blob_sha1": "17e80fabd6febe21bdd181d15bbe44ce13dfbfd9",
+          "github_blob_sha1": "17e80fabd6febe21bdd181d15bbe44ce13dfbfd9",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_no_redirect_guard_v11_c1_report_20261102.md",
+          "bytes": 5246,
+          "sha256": "ce54a88e5d519862ae7d3b3aeb1a36cece69784ace0a1d1778776ab6f046458a",
+          "git_blob_sha1": "126a9aff581fe000ba2fe89feab0ac870f1879c3",
+          "github_blob_sha1": "126a9aff581fe000ba2fe89feab0ac870f1879c3",
+          "independent_byte_check": true
+        },
+        {
+          "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_alpha_handoff_no_redirect_evaluator_v11_20261102.py",
+          "bytes": 7623,
+          "sha256": "14fa9cc6bd8af062e98ce430a290cca7ecb15dd701350976a7737620f0f2c007",
+          "git_blob_sha1": "304e5d762f931242c841d637f3af72bada17d9fd",
+          "github_blob_sha1": "304e5d762f931242c841d637f3af72bada17d9fd",
+          "independent_byte_check": true
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "NOT_PROJECT_WIDE",
+    "NO_ACTOR_AUTHENTICATION",
+    "RECEIPT_IS_OWNER_REPORTED_NOT_INDEPENDENT_EXPERT_ACK",
+    "NOT_LIVE_HTTPS_E2E",
+    "NOT_REAL_HANDOFF_AUTOMATION_RATE"
+  ]
+}
