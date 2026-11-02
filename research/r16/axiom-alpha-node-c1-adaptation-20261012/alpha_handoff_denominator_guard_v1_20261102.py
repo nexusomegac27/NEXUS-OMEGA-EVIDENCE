@@ -58,7 +58,8 @@ def assess(events, population):
         if not isinstance(e, dict) or not isinstance(e.get('id'), str) or not e['id'] or len(e['id']) > 128 or e['id'] in seen:
             return out
         seen.add(e['id'])
-        if any(e.get(k) not in FLAGS for k in ('public', 'routine', 'authorized', 'accessible')):
+        if any(not isinstance(e.get(k), str) or e[k] not in FLAGS
+               for k in ('public', 'routine', 'authorized', 'accessible')):
             return out
     if not isinstance(population, dict):
         return out
