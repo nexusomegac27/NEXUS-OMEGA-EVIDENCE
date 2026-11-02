@@ -1,0 +1,65 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10_TERMINAL_CURSOR_HANDOFF_DETACHED_MANIFEST_20261016_R0",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r10-native-handshake-research-20261016",
+  "parent_commit": "eb86e98228efd393e36fb3fbecf79f830b7c41e2",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "file_count": 8,
+  "files": [
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/KIMI_R10_ORIGINAL_REPORT_20261016.txt",
+      "bytes": 10636,
+      "sha256": "dc1b875df367730d286c4ea29697b588386f236da204781d3ca86ac6e4364079",
+      "git_blob_sha1": "cd5912d327189531e8b865dd73d44dad42d82685"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/AXIOM_R10_PREVIOUS_BRIEF_TRANSCRIPT_20261016.txt",
+      "bytes": 3669,
+      "sha256": "304703277fd1c54072a4544da84ee0e045889caef3179f134c612f1a8f78c43d",
+      "git_blob_sha1": "34237c51479519ead7f0eba227518193416c2f15"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/GROK_R10_INDEPENDENT_REPORT_20261016.txt",
+      "bytes": 10086,
+      "sha256": "4880fb234c94575b976c5cdf0c6ecefe4759a158feb31af25b217d56a7881c57",
+      "git_blob_sha1": "4841076e18c65645a0bc96028a01dbd95ad7818f"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_EXTERNAL_RECEIVE_ACK_ASSERTION_20261016.txt",
+      "bytes": 4380,
+      "sha256": "60768179f203a8a17df81280d056784084406d2e32502fdf9188be1f939835c5",
+      "git_blob_sha1": "4e31f92be1f673f49a2c27e570b5849e754cca78"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_GITHUB_INDEPENDENT_VERIFICATION_20261016.md",
+      "bytes": 17375,
+      "sha256": "6ff4fd59b54f148b7412d98f20e5069e195e64b0f1dfbaf1549dac69ff792c01",
+      "git_blob_sha1": "88570a979e92d1dee5232d3592b6f7598ec6a210"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/returns_20261016/R10_EXISTING_ALPHA_NODE_INDEPENDENT_VERIFICATION_20261016.md",
+      "bytes": 16718,
+      "sha256": "a34c7ef6769fe122b58bf8227c212ededb39e1893665d83a8dab05c62cdb4f50",
+      "git_blob_sha1": "f236138f51509a8179c510e27ddd42f379c370f2"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/NEXUS_OMEGA_AXIOM_CURSOR_R10_TERMINAL_CLOSURE_AND_R11_SOFT_INTAKE_PREPARATION_20261016_R0.md",
+      "bytes": 8998,
+      "sha256": "86e02d8addc52a32757f0d185b6e660232a493a09043ed795c8b6323f7b37506",
+      "git_blob_sha1": "392aa9a66f16b10c7a5fcd42f6698ae28ff49601"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/R10_TERMINAL_SOURCE_REGISTER_20261016_R0.json",
+      "bytes": 5749,
+      "sha256": "d7bb33b0fbb3a1920ab4792d9206f12fc875a1284435ad12cb17c8794bb5c76f",
+      "git_blob_sha1": "9025c7b9ee9d63105c381983f2f1a0aeb2426967"
+    }
+  ],
+  "manifest_self_hash": "EXCLUDED",
+  "operator_r10_work_phase": "CLOSED",
+  "expert_github_actor_auth": "NOT_ESTABLISHED",
+  "r11_soft_foundation": "NOT_YET_RECEIVED",
+  "original_r10_zip_github_raw_presence": "NO",
+  "cursor_live_ack": "PENDING",
+  "manual_file_transport": "NONE"
+}
