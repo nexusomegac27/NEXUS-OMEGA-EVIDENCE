@@ -1,6 +1,6 @@
 """Research-only C1 check-head and declared workflow run guard.
 
-Conservative textual YAML scan: only a direct Python command under a \`run:\`
+Conservative textual YAML scan: only a direct Python command under a `run:`
 key counts as a declared step. It is NOT evidence that the command executed.
 No YAML dependencies, network calls, runtime integration or claim promotion.
 """
