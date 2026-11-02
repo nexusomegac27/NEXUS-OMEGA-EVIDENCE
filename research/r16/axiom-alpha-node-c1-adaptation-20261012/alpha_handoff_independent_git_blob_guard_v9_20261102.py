@@ -29,7 +29,7 @@ def unique_pairs(pairs):
 def valid_path(path):
     return (type(path) is str and 0 < len(path) <= 512 and
             not path.startswith("/") and "\\" not in path and "\x00" not in path and
-            all(x not in ("", ".", "..") for x in path.split("/"))
+            all(x not in ("", ".", "..") for x in path.split("/")))
 
 
 def check(data, trusted_commit, trusted_path, trusted_blob):
