@@ -1,0 +1,59 @@
+{
+    "schema_version":  "1.0.0",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "claim_promotion":  false,
+    "generated_at_utc":  "2026-11-06T11:26:07Z",
+    "source":  "NEXUS-OMEGA-EVIDENCE",
+    "milestones":  [
+                       {
+                           "id":  "E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1",
+                           "title":  "E12 Offline Optimization Fail-Closed Repair",
+                           "status":  "CLOSED_C1_OFFLINE_ONLY",
+                           "verdict":  "PASS_C1_INDEPENDENT_OFFLINE_OPTIMIZATION_FAIL_CLOSED_VALIDATOR_REPAIR_ONLY",
+                           "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+                           "summary":  "Offline validator repair after reproduced python -O false PASS (assert stripping). 72/72 + 116/116 across NORMAL/-O/-OO/PYTHONOPTIMIZE=1. Elite runtime and claim promotion not established.",
+                           "falsification":  "ORIGINAL_FALSE_PASS=REPRODUCED under python -O; REPAIRED_FALSE_PASS=REJECTED; AST_ASSERT_NODES=0",
+                           "evidence":  {
+                                            "regression":  "PASS_72_OF_72",
+                                            "axiom_adjudication_zip_sha256":  "ee8b91e92d9869bd22327dd24fb1f6d1bbe6633f4d1da89afdb5b4aa78f3118c",
+                                            "artifact_sha256":  "52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111",
+                                            "manifest_sha256":  "724a3daf59ffa07b44d9cce94a0b02d868cdeeb7bc84f72dcdb485943d2701cf",
+                                            "negative":  "PASS_116_OF_116",
+                                            "parent_repair_zip_sha256":  "7937bbd34d3fed8537af191609849b3a076d0b027650c7f77011d2cd9025ba51",
+                                            "repaired_validator_sha256":  "0ac4199cc1483f411fd271e8a7fb035c56f4a3a34d8f866cfd0dc52a32b9d803"
+                                        },
+                           "holds":  [
+                                         "G11=HOLD",
+                                         "N33=OPEN",
+                                         "STAGE2_316=HOLD_NO_START",
+                                         "ELITE_RUNTIME=NOT_VALIDATED"
+                                     ],
+                           "not_established":  [
+                                                   "Elite runtime",
+                                                   "Architecture qualification",
+                                                   "Production PEP",
+                                                   "Hostinger privilege",
+                                                   "Scientific claim promotion"
+                                               ],
+                           "github_path":  "objects/sha256/52/53/52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111"
+                       },
+                       {
+                           "id":  "R10_AWAITING_OPERATOR_FUNDAMENT",
+                           "title":  "R10 — Awaiting Operator Fundament",
+                           "status":  "AWAITING_OPERATOR_SOURCE",
+                           "verdict":  "NOT_STARTED",
+                           "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+                           "summary":  "R10 remains untouched until the operator fundament is handed over. No synthetic milestone.",
+                           "falsification":  "NO_ARTIFACT_CLAIMS",
+                           "evidence":  null,
+                           "holds":  [
+                                         "AWAITING_OPERATOR_SOURCE"
+                                     ],
+                           "not_established":  [
+                                                   "Any R10 scientific claim",
+                                                   "Any invented fundament bytes"
+                                               ],
+                           "github_path":  null
+                       }
+                   ]
+}

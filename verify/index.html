@@ -1,0 +1,16 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herkunftsnachweis · nexus-mobile.de</title>
+<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.5}code,pre{background:#f2f2f2;word-break:break-all}td{padding:.3rem;border-bottom:1px solid #ddd}.w{border-left:4px solid #c80;padding:.5rem 1rem;background:#fff8e8}</style></head><body>
+<h1>Herkunftsnachweis (Provenienz)</h1>
+<p>Diese Seite beschreibt, welche Dateien unter <code>/forum/github-implant/</code> veröffentlicht sind und aus welchem Commit sie stammen: <code>nexusomegac27/NEXUS-OMEGA-EVIDENCE</code> @ <code>33225fd</code>.</p>
+<div class="w"><b>Hinweis zum Schlüssel:</b> Der Signaturschlüssel wurde auf einer Arbeitsmaschine (Grok-Bot-Box) erzeugt. Er belegt, dass die Bytes seit der Signatur unverändert sind. Er belegt <b>nicht</b> die Identität des Betreibers. Keine Rechtsberatung, keine Bewertung (C1, nur beschreibend).</div>
+<h2>Manifest</h2><table><tr><th>Pfad</th><th>SHA-256</th></tr><tr><td><code>/forum/github-implant/assets/github-implant.css</code></td><td><code>1d9e7860a8b0e473228404b1b3e9d8cc7671008df102b70894121e5a4af94e89</code></td></tr><tr><td><code>/forum/github-implant/assets/github-implant.js</code></td><td><code>d1944d24781ab4cd53d836b8a5c97d6bc0b64e7ae1fd3e8598b80ea25e9fd22d</code></td></tr><tr><td><code>/forum/github-implant/</code></td><td><code>b1d4ddf12be0f40626ccc86564c5a7a4fc14e06eb3891c698fc2e4362f78edeb</code></td></tr></table>
+<h2>Öffentlicher Schlüssel (Ed25519)</h2><p>Key-ID: <code>687b4f4c1bb398471e8f19b556d87ba0110f9ba8ec009eacd81b17f1ba57c565</code></p><pre>-----BEGIN PUBLIC KEY-----
+MCowBQYDK2VwAyEAu9ON9Eluekxuw+wNO8RKyjexFOy44npi0Gvgp9gQrlI=
+-----END PUBLIC KEY-----
+</pre>
+<h2>Selbst prüfen</h2><ol>
+<li>Dateien laden und hashen: <pre>curl -s https://www.nexus-mobile.de/forum/github-implant/ | sha256sum</pre></li>
+<li>Werte mit dem Manifest oben bzw. <a href="/.well-known/nexus-site-manifest.json">/.well-known/nexus-site-manifest.json</a> vergleichen.</li>
+<li>Signatur der DSSE-Hülle <a href="/.well-known/nexus-provenance.dsse.json">/.well-known/nexus-provenance.dsse.json</a> prüfen: Signiert ist <code>PAE("application/vnd.in-toto+json", payload)</code> = <code>"DSSEv1 " + len(type) + " " + type + " " + len(payload) + " " + payload</code> mit dem Schlüssel oben (z.&nbsp;B. mit Python <code>cryptography</code> oder <code>openssl pkeyutl -verify -rawin</code>).</li>
+<li>Im Payload (base64, in-toto Statement v1, SLSA Provenance v1) stehen dieselben SHA-256-Werte als <code>subject</code>.</li></ol>
+</body></html>
