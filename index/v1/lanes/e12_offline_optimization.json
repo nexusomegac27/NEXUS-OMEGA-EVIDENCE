@@ -1,0 +1,10 @@
+{
+    "schema_version":  "1.0.0",
+    "lane":  "E12_OFFLINE_OPTIMIZATION",
+    "head_object_id":  "E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1",
+    "head_manifest_path":  "objects/sha256/52/53/52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111/manifest.json",
+    "head_manifest_sha256":  "724a3daf59ffa07b44d9cce94a0b02d868cdeeb7bc84f72dcdb485943d2701cf",
+    "claim_ceiling":  "C1",
+    "canonical_promotion":  false,
+    "external_anchor":  "NOT_YET_ESTABLISHED"
+}

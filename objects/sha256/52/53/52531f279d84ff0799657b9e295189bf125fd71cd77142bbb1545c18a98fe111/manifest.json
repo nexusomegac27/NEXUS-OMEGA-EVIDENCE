@@ -1,0 +1,80 @@
+{
+    "schema_version":  "1.0.0",
+    "object_id":  "E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1",
+    "version":  "R0_PUBLIC_SAFE",
+    "lane":  "E12_OFFLINE_OPTIMIZATION",
+    "title":  "E12 Offline Optimization Fail-Closed Repair — Public-Safe C1",
+    "claim":  "C1_ONLY",
+    "verdict":  "PASS_C1_INDEPENDENT_OFFLINE_OPTIMIZATION_FAIL_CLOSED_VALIDATOR_REPAIR_ONLY",
+    "caveats":  [
+                    "CLOSED_C1_OFFLINE_ONLY",
+                    "ELITE_RUNTIME_VALIDATED_NO",
+                    "ARCHITECTURE_QUALIFICATION_NOT_EXECUTED",
+                    "PRODUCTION_PEP_NOT_ESTABLISHED",
+                    "G11_HOLD",
+                    "N33_OPEN",
+                    "STAGE2_316_HOLD_NO_START",
+                    "HASH_MATCH_NE_SCIENTIFIC_TRUTH",
+                    "PRIVATE_PACKAGE_BYTES_NOT_REDISTRIBUTED"
+                ],
+    "asset":  {
+                  "path":  "objects/sha256/52/53/52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111/artifact.md",
+                  "sha256":  "52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111",
+                  "bytes":  "2688",
+                  "media_type":  "text/markdown"
+              },
+    "semantic_scopes":  [
+                            {
+                                "scope_id":  "FULL_PUBLIC_SAFE_OBJECT",
+                                "bytes":  "2688",
+                                "sha256":  "52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111"
+                            }
+                        ],
+    "parents":  [
+                    {
+                        "sha256":  "7937bbd34d3fed8537af191609849b3a076d0b027650c7f77011d2cd9025ba51",
+                        "object_id":  "NEXUS_OMEGA_CURSOR_E12_PYTHON_OPTIMIZATION_FAIL_CLOSED_REPAIR_RETURN_20261106_R0",
+                        "bytes":  "13268"
+                    },
+                    {
+                        "sha256":  "ee8b91e92d9869bd22327dd24fb1f6d1bbe6633f4d1da89afdb5b4aa78f3118c",
+                        "object_id":  "NEXUS_OMEGA_AXIOM_E12_OPTIMIZATION_REPAIR_INDEPENDENT_ADJUDICATION_20261106_R0",
+                        "bytes":  "4326"
+                    }
+                ],
+    "repaired_validator_sha256":  "0ac4199cc1483f411fd271e8a7fb035c56f4a3a34d8f866cfd0dc52a32b9d803",
+    "test_observation":  {
+                             "class":  "C1_TEST_OBSERVED",
+                             "repaired_false_pass":  "REJECTED",
+                             "original_false_pass":  "REPRODUCED",
+                             "modes":  [
+                                           "NORMAL",
+                                           "-O",
+                                           "-OO",
+                                           "PYTHONOPTIMIZE=1"
+                                       ],
+                             "regression":  "PASS_72_OF_72",
+                             "ast_assert_nodes":  0,
+                             "hostinger_false_accept_repaired":  "DENY_ALL_MODES",
+                             "negative":  "PASS_116_OF_116"
+                         },
+    "publication":  {
+                        "release_url":  "SOURCE_NOT_BOUND",
+                        "software_heritage_swhid":  "SOURCE_NOT_BOUND",
+                        "immutable_release_verified":  false,
+                        "github_repository":  "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+                        "anchor_level":  "A0_LOCAL_STAGING",
+                        "release_asset_verified":  false,
+                        "release_tag":  "SOURCE_NOT_BOUND",
+                        "zenodo_doi":  "SOURCE_NOT_BOUND",
+                        "git_commit":  "PENDING_PUSH"
+                    },
+    "authority":  {
+                      "deployment_authorized":  false,
+                      "claim_ceiling":  "C1",
+                      "elite_runtime_start":  false,
+                      "promotion_authorized":  false
+                  },
+    "supersedes":  null,
+    "issued_at":  "2026-11-06T11:26:07Z"
+}

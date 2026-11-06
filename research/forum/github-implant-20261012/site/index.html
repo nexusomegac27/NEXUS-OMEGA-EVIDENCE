@@ -6,10 +6,11 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#07121a">
   <meta name="description" content="NEXUS OMEGA GitHub Implant: ein quelloffenes, transparentes C1-Forschungsfenster mit direkt lesbaren GitHub-Daten.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
   <title>GitHub Implant · NEXUS OMEGA Forum</title>
   <link rel="stylesheet" href="./assets/github-implant.css">
   <script src="./assets/github-implant.js" defer></script>
+<link rel="stylesheet" href="/forum/github-implant/nexus-forum-live-addon.css" data-nexus-r9="true">
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -37,6 +38,9 @@
     <div class="status-strip" role="status" aria-live="polite">
       <span class="status-left"><span class="status-dot" id="live-dot"></span><strong id="live-label">QUELLE WIRD GEPRÜFT</strong><span class="divider-mini"></span><span id="live-message">GitHub-Abfrage ausstehend</span></span>
       <span class="status-right" id="last-sync">Kein verifizierter Live-Abruf</span>
+    </div>
+    <div class="status-strip" role="status" aria-live="polite" aria-label="GitHub-Änderungen außerhalb von main">
+      <span class="status-left"><strong>RESEARCH-PRs · NICHT MAIN</strong><span class="divider-mini"></span><span id="pr-activity">Neue Pull-Request-Aktivität wird separat abgefragt …</span></span>
     </div>
     <section class="metrics" aria-label="Repository-Zustand">
       <article class="metric"><span class="metric-label">REPOSITORY</span><strong class="metric-large metric-name">NEXUS-OMEGA-EVIDENCE</strong><span class="metric-meta">C1 / PUBLIC EVIDENCE</span></article>
@@ -72,8 +76,37 @@
       </section>
       <div class="workspace-footer"><span>DATA SOURCE · GITHUB REST API</span><span>NO TOKEN · NO TRACKING · C1_DESCRIPTIVE_ONLY</span></div>
     </section>
+    <section id="meilensteine" class="about-strip" aria-labelledby="meilensteine-title">
+      <div class="about-copy">
+        <span class="section-kicker">PUBLIC SCIENCE ANCHOR</span>
+        <h2 id="meilensteine-title">Wissenschaftliche Meilensteine</h2>
+        <p>Quellengebundene Artefaktkarten mit SHA-256, Prüfergebnis, Falsifikation und C1-Grenzen. HOLD und widerlegte Hypothesen bleiben sichtbar, soweit public-safe. Keine Claim-Promotion.</p>
+      </div>
+      <div id="milestones-live" class="method-grid" data-milestones-src="./milestones.json">
+        <article data-milestone-id="E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1">
+          <span class="method-number">E12</span>
+          <h4>Offline Optimization Fail-Closed Repair</h4>
+          <p><strong>Status:</strong> CLOSED_C1_OFFLINE_ONLY · PASS_C1_INDEPENDENT_OFFLINE_OPTIMIZATION_FAIL_CLOSED_VALIDATOR_REPAIR_ONLY</p>
+          <p>Offline-Validator-Reparatur unter python -O/-OO/PYTHONOPTIMIZE=1 unabhängig bestätigt (72/72 + 116/116). Elite-Runtime nicht gestartet. G11=HOLD · N33=OPEN · STAGE2_316=HOLD_NO_START.</p>
+          <p><strong>Artifact SHA-256:</strong> <code>52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111</code></p>
+          <p><strong>Manifest SHA-256:</strong> <code>724a3daf59ffa07b44d9cce94a0b02d868cdeeb7bc84f72dcdb485943d2701cf</code></p>
+          <p><strong>Falsifikation:</strong> python -O stripped assert → Hostinger-Mutant false PASS; behoben fail-closed.</p>
+          <p><a href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/main/research/e12-offline-optimization-fail-closed-repair-20261106/PUBLIC_RESEARCH_INDEX.md" target="_blank" rel="noopener noreferrer">Evidence Index ↗</a></p>
+        </article>
+        <article data-milestone-id="R10_AWAITING_OPERATOR_FUNDAMENT">
+          <span class="method-number">R10</span>
+          <h4>AWAITING_OPERATOR_FUNDAMENT</h4>
+          <p><strong>Status:</strong> AWAITING_OPERATOR_SOURCE · HOLD</p>
+          <p>R10 bleibt bis zur Übergabe des Operator-Fundaments unangetastet. Keine Inventur von Quellen-Bytes. Kein Autostart.</p>
+          <p><strong>Artifact SHA-256:</strong> <code>NOT_ESTABLISHED</code></p>
+          <p><strong>Falsifikation:</strong> Jede Inventur von R10-Bytes ohne Operator-Fundament = FAIL.</p>
+        </article>
+      </div>
+      <p class="panel-intro" style="margin-top:1rem"><small>Index: <a href="./milestones.json">milestones.json</a> · Schema 1.0.0 · C1_DESCRIPTIVE_ONLY · APPEND_ONLY_HISTORY</small></p>
+    </section>
     <section class="closing"><div><span class="section-kicker">NEXUS PRINCIPLE</span><h2>Vom Besitz zur Symbiose.<br><span>Vom Ego zur Herkunft.</span></h2><p>Jede Version trägt ihre Herkunft. Jeder Befund bleibt prüfbar. Eine Veröffentlichung wird nicht zur Wahrheit, nur weil sie öffentlich ist.</p></div><a href="/forum/">Zurück zum Forum <span aria-hidden="true">↗</span></a></section>
   </main>
   <footer class="foot"><div><strong>NEXUS Ω</strong><span>SYMBIOTIC SCIENCE · OPEN PROVENANCE</span></div><div>Eigenständige NEXUS-Darstellung · kein offizielles GitHub-Produkt</div><div><a href="/forum/">Forum</a><a href="https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+<script type="module" src="/forum/github-implant/nexus-forum-live-addon.mjs" data-nexus-r9="true"></script>
 </body>
 </html>

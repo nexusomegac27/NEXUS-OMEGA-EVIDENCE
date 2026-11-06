@@ -169,15 +169,32 @@
     },
     "forum-github-implant-live-20261012": {
       "path": "research/forum/github-implant-20261012",
-      "state": "C1_WEB_MODULE_SOURCE_IMPLEMENTED_GITHUB_HOSTINGER_DEPLOY_NOT_ESTABLISHED",
+      "state": "C1_SOURCE_SYNCED_MILESTONE_INDEX_AND_ADDONS_STAGED_WWW_DEPLOY_PENDING_SCOPED_HOSTINGER",
       "site_target": "https://www.nexus-mobile.de/forum/github-implant/",
       "interface": "OFFICIAL_GITHUB_REST_READONLY",
-      "www_deploy": "NOT_EXECUTED_CAPABILITY_GAP",
+      "www_deploy": "PENDING_SCOPED_HOSTINGER_AFTER_PR",
       "public_safe_mirror": "OFFLINE_BUILDER_SOURCE_ONLY_NOT_HOST_DEPLOYED",
       "source_file_count": 3,
       "source_license": "MIT_ORIGINAL_FIRST_PARTY",
+      "milestone_index": "site/milestones.json",
+      "public_safe_e12_card": "E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "claim_promotion": false,
       "governance": "docs/governance/NEXUS_OMEGA_GITHUB_WWW_PARITY_RULE_V1_20261012_R0.md"
+    },
+    "e12-offline-optimization-fail-closed-repair-20261106": {
+      "path": "research/e12-offline-optimization-fail-closed-repair-20261106",
+      "state": "C1_PUBLIC_SAFE_SOURCE_STAGED_GITHUB_PR_PENDING",
+      "object_id": "E12_OFFLINE_OPTIMIZATION_FAIL_CLOSED_REPAIR_C1",
+      "lane": "E12_OFFLINE_OPTIMIZATION",
+      "cas_artifact_sha256": "52531f279d84ff0799657b9e295189bf125fd71cd77142bbb1545c18a98fe111",
+      "cas_manifest_sha256": "724a3daf59ffa07b44d9cce94a0b02d868cdeeb7bc84f72dcdb485943d2701cf",
+      "elite_runtime": "NOT_VALIDATED",
+      "claim_promotion": false,
+      "g11": "HOLD",
+      "n33": "OPEN",
+      "stage2_316": "HOLD_NO_START",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
     },
     "website-research-catalog-clarity-20261012": {
       "path": "research/website/research-catalog-clarity-20261012",
@@ -304,7 +321,7 @@
     "affected path-reference migration",
     "historical binding preservation or explicit supersession"
   ],
-  "version": "1.7.15",
+  "version": "1.7.16",
   "external_agent_structural_firewall": {
     "state": "C1_CONTRACT_PENDING_ADMIN_ENFORCEMENT",
     "policy": "docs/governance/EXTERNAL_AGENT_STRUCTURAL_FIREWALL_V1.md",
