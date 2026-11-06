@@ -1,0 +1,10 @@
+/* Scoped public C1 display: no external font/image dependency. */
+#nexus-temporal-anchor-r11 { max-width:1100px; margin:1.2rem auto; padding:1.1rem 1.3rem; border:1px solid #506779; border-radius:14px; background:#0e1c27; color:#eff4f8; font:inherit; }
+#nexus-temporal-anchor-r11 h2 { font-size:1.3rem; margin:0 0 .5rem; }
+#nexus-temporal-anchor-r11 p { margin:.45rem 0; line-height:1.5; }
+#nexus-temporal-anchor-r11 .nexus-r11-tag { color:#a9c7d9; font-weight:600; }
+#nexus-temporal-anchor-r11 .nexus-r11-label { color:#c2d0da; }
+#nexus-temporal-anchor-r11 .nexus-r11-clock {display:block;font-size:clamp(1.15rem,3vw,1.85rem);font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:normal;overflow-wrap:anywhere; }
+#nexus-temporal-anchor-r11 .nexus-r11-witness,#nexus-temporal-anchor-r11 .nexus-r11-quality,#nexus-temporal-anchor-r11 .nexus-r11-runtime,#nexus-temporal-anchor-r11 .nexus-r11-note { font-size:.9rem; color:#c1cad1; }
+#nexus-temporal-anchor-r11 a { color:#9bdaf2; text-decoration:underline; }
+#nexus-temporal-anchor-r11 a:focus-visible {outline:2px solid #9bdaf2;outline-offset:4px;}
