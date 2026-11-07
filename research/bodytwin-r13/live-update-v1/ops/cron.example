@@ -1,0 +1,3 @@
+# Set ROOT only after Cursor proves the actual Hostinger docroot. Do not guess paths.
+# Linux Hostinger cron, every 5 minutes; do not log raw public state payloads.
+*/5 * * * * /usr/bin/python3 /ABSOLUTE_VERIFIED_SCRIPT_DIR/refresh_public_feed.py --document-root /ABSOLUTE_VERIFIED_WWW_DOCROOT >> /ABSOLUTE_VERIFIED_PRIVATE_LOG_DIR/bodytwin_feed.log 2>&1
