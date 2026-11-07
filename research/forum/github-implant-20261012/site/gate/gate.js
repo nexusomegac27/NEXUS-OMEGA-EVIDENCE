@@ -129,4 +129,4 @@ drag.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;let
 drag.addEventListener('pointermove',e=>{if(!start)return;const d=$('dock');d.style.left=Math.max(0,Math.min(innerWidth-d.offsetWidth,start.l+e.clientX-start.x))+'px';d.style.top=Math.max(0,Math.min(innerHeight-d.offsetHeight,start.t+e.clientY-start.y))+'px';d.style.right='auto';d.style.bottom='auto';});
 drag.addEventListener('pointerup',()=>start=null);drag.addEventListener('pointercancel',()=>start=null);
 run(true);
-setInterval(()=>{evaluateFreshness();if(!document.hidden&&(!Number.isFinite(lastCompletedAt)||performance.now()-lastCompletedAt>=CONTRACT.freshnessMs))run(true);},60000);
+setInterval(()=>{evaluateFreshness();if(!document.hidden&&(!Number.isFinite(lastCompletedAt)||performance.now()-lastCompletedAt>=CONTRACT.freshnessMs))run(true);},5000);
