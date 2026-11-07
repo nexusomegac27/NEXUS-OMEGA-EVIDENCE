@@ -1,127 +1,132 @@
-/* NEXUS GATE · Browser-only Security+Science transport monitor · SPDX-License-Identifier: Apache-2.0 */
-import {CONTRACT,parseGitHubContent,digest,classify,isC1Marked} from "./gate-core.mjs";
-const ROOT="https://api.github.com/repos/"+CONTRACT.repository;
-const INTERVAL=30*60*1000,CLICK_COOLDOWN=60000,MAX_BYTES=600000;
-const $=(id)=>document.getElementById(id);
-let lastStart=0,lastStatus={code:"NO_OBSERVATION",label:"NO OBSERVATION",detail:"Noch keine Prüfung durchgeführt"},lastCount="— / 3",lastTime="Nicht geprüft",lastHead="—",running=false,pip=null;
-function mk(name,cls,txt){let e=document.createElement(name);if(cls)e.className=cls;if(txt!==undefined)e.textContent=String(txt);return e}
-function when(d){return new Intl.DateTimeFormat("de-DE",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Berlin"}).format(d)}
-function sourceURL(file){return "https://github.com/"+CONTRACT.repository+"/blob/main/"+CONTRACT.sourceRoot+file}
-function siteURL(file){return new URL("../"+file,location.href).href}
-function emit(status,count,head) {
- lastStatus=status;lastCount=count;lastTime=when(new Date());lastHead=head;
- $("verdict").textContent=status.label;$("verdict-desc").textContent=status.detail;$("match-counter").textContent=count;
- $("timestamp").textContent=lastTime;$("head").textContent="SOURCE HEAD · "+head;
- $("dot").className="status-indicator "+(status.code==="MATCH_C1"?"ok":status.code==="DIVERGENCE"?"fail":"warn");
- $("dock-status").textContent=status.label;$("dock-info").textContent=status.detail;$("dock-time").textContent="C1 · "+lastTime;
- refreshPip();
-}
-async function fetchSource(file){
- const controller=new AbortController(),abort=setTimeout(()=>controller.abort(),10000);
- try{
-  const p=CONTRACT.sourceRoot+file;
-  const u=ROOT+"/contents/"+p.split("/").map(encodeURIComponent).join("/")+"?ref=main";
-  const r=await fetch(u,{signal:controller.signal,cache:"no-store",credentials:"omit",referrerPolicy:"no-referrer",headers:{Accept:"application/vnd.github+json"}});
-  if(!r.ok)throw new Error("GitHub HTTP "+r.status);
-  const meta=await r.json();
-  const bytes=parseGitHubContent(meta);
-  if(bytes.byteLength>MAX_BYTES)throw new Error("GitHub-Datei überschreitet Prüfgrenze");
-  return {sha:await digest(bytes),bytes:bytes.byteLength,raw:bytes};
- }finally{clearTimeout(abort)}
-}
-async function fetchLive(file){
- const controller=new AbortController(),abort=setTimeout(()=>controller.abort(),10000);
- try{
-  const r=await fetch(siteURL(file),{signal:controller.signal,cache:"no-store",credentials:"omit",redirect:"error"});
-  if(!r.ok)throw new Error("WWW HTTP "+r.status);
-  const size=Number(r.headers.get("Content-Length")||0);
-  if(size>MAX_BYTES)throw new Error("WWW-Datei überschreitet Prüfgrenze");
-  const bytes=new Uint8Array(await r.arrayBuffer());
-  if(bytes.length>MAX_BYTES)throw new Error("WWW-Datei überschreitet Prüfgrenze");
-  return {sha:await digest(bytes),bytes:bytes.byteLength,raw:bytes};
- }finally{clearTimeout(abort)}
-}
-function showRows(rows) {
- const list=$("files");list.replaceChildren();
- for (const row of rows){
-  const el=mk("article","file-row"),left=mk("div"),name=mk("a","",row.file);
-  name.href=sourceURL(row.file);name.rel="noopener noreferrer";name.target="_blank";
-  left.append(name);
-  left.append(mk("p","",row.github?"GITHUB · "+row.github.sha.slice(0,18)+"… · "+row.github.bytes+" B":"GITHUB · QUELLE NICHT ERREICHBAR"));
-  left.append(mk("p","",row.web?"NEXUS · "+row.web.sha.slice(0,18)+"… · "+row.web.bytes+" B":"NEXUS · NICHT BEOBACHTBAR"));
-  if(row.error)left.append(mk("p","",row.error));
-  el.append(left,mk("span","file-state "+row.status.toLowerCase(),row.status));list.append(el);
- }
-}
-async function sourceHead(){
- const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),7000);
- try{
-  const r=await fetch(ROOT+"/commits?sha=main&per_page=1",{signal:ctrl.signal,credentials:"omit",cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
-  if(!r.ok)return "HEAD UNBEKANNT";
-  const z=await r.json();return Array.isArray(z)&&typeof z[0]?.sha==="string"?z[0].sha.slice(0,10):"HEAD UNBEKANNT";
- }catch{return "HEAD UNBEKANNT"}finally{clearTimeout(timer)}
-}
-async function run(){
- if(running||Date.now()-lastStart<CLICK_COOLDOWN)return;
- if(!globalThis.crypto?.subtle){emit({code:"HOLD_CRYPTO",label:"KRYPTOGRAFIE NICHT VERFÜGBAR",detail:"SHA-256-WebCrypto benötigt einen sicheren HTTPS-Kontext"},"— / 3","—");return}
- running=true;lastStart=Date.now();$("run").disabled=true;$("verdict").textContent="PRÜFUNG LÄUFT";$("verdict-desc").textContent="Zwei unabhängige HTTP-Abfragen je Datei …";
- const rows=[],head=await sourceHead();
- try{
-  for(const file of CONTRACT.files){
-   const [g,w]=await Promise.allSettled([fetchSource(file),fetchLive(file)]);
-   const gh=g.status==="fulfilled"?g.value:null,web=w.status==="fulfilled"?w.value:null;
-   const status=!gh?"SOURCE_GAP":!web?"ERROR":gh.sha===web.sha&&gh.bytes===web.bytes?"MATCH":"DIVERGENT";
-   rows.push({file,github:gh,web,status,error:g.status==="rejected"?"GitHub: "+String(g.reason.message||g.reason):w.status==="rejected"?"WWW: "+String(w.reason.message||w.reason):null});
-  }
-  showRows(rows);
-  const valid=rows.find(x=>x.file==="index.html"),decoder=new TextDecoder("utf-8");
-  const scienceOK=!!valid?.github&&!!valid?.web&&isC1Marked(decoder.decode(valid.github.raw))&&isC1Marked(decoder.decode(valid.web.raw));
-  const ok=rows.every(x=>x.github);
-  const result=classify(rows,ok,scienceOK);
-  const count=rows.filter(x=>x.status==="MATCH").length+" / 3";
-  emit(result,count,head);
- }catch(err){emit({code:"HOLD_SCOPE",label:"PRÜFUNG UNVOLLSTÄNDIG",detail:String(err.message||err)},"— / 3",head)}
- finally{running=false;$("run").disabled=false}
-}
-function refreshPip(){
- if(!pip||pip.closed){pip=null;return}
- const d=pip.document;
- const code=d.getElementById("pip-code"),info=d.getElementById("pip-info"),meta=d.getElementById("pip-meta");
- if(code)code.textContent=lastStatus.label;
- if(info)info.textContent=lastStatus.detail;
- if(meta)meta.textContent=lastCount+" · "+lastTime+" · "+lastHead+" · C1";
-}
-$("run").addEventListener("click",run);
-$("dock-open").addEventListener("click",()=>{const d=$("dock");d.hidden=!d.hidden;if(!d.hidden)refreshPip()});
-$("dock-close").addEventListener("click",()=>{$("dock").hidden=true});
-$("native-pip").addEventListener("click",async()=>{
- if(!window.documentPictureInPicture?.requestWindow){$("dock").hidden=false;$("dock-info").textContent="Echtes Dokument-PiP wird hier nicht unterstützt. Eingebettetes Schwebefenster aktiv.";return}
- try {
-  if(pip&&!pip.closed){pip.focus();return}
-  const w=await window.documentPictureInPicture.requestWindow({width:410,height:300});
-  pip=w;w.document.title="NEXUS · Gate";
-  const style=w.document.createElement("link");style.rel="stylesheet";style.href=new URL("./gate.css",location.href).href;w.document.head.append(style);
-  const main=w.document.createElement("main");main.className="dock";
-  // PiP CSS override via class names; only text nodes from local status, never remote HTML.
-  const heading=mk("h2","","NEXUS · GATE");const code=mk("p","dock-code",lastStatus.label);code.id="pip-code";
-  const info=mk("p","",lastStatus.detail);info.id="pip-info";
-  const meta=mk("small","",lastTime+" · C1");meta.id="pip-meta";
-  main.append(heading,code,info,meta);w.document.body.append(main);
-  w.addEventListener("pagehide",()=>{if(pip===w)pip=null});
+/* NEXUS OMEGA Gate V2 · browser-only independent GET observations · C1 */
+import {
+  CONTRACT, sourceUrl, liveUrl, validateReleaseManifest,
+  digest, parseGitHubContent, compareFile, classify, isC1Marked, statusIsStale
+} from './gate-core.mjs';
+const $ = id => document.getElementById(id);
+const ORIGIN = location.origin;
+const API = 'https://api.github.com/repos/' + CONTRACT.repository;
+const DEADLINE_MS = 12000;
+let running=false, startedAt=-Infinity, lastCompletedAt=NaN, hiddenSinceCheck=false, pip=null;
+let lastStatus={code:'NO_OBSERVATION', label:'NO OBSERVATION', detail:'Keine aktuelle Prüfung'},lastCount='— / 10',lastTime='Nicht geprüft',lastRef='—';
+function el(name, css='', value) {const e=document.createElement(name);if(css)e.className=css;if(value!==undefined)e.textContent=String(value);return e;}
+function humanDate(date) {return new Intl.DateTimeFormat('de-DE',{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Berlin'}).format(date);}
+function putStatus(s,count='— / 10',ref='—',completed=false) {
+  lastStatus=s; lastCount=count; lastRef=ref;
+  if(completed){lastCompletedAt=performance.now();hiddenSinceCheck=false;lastTime=humanDate(new Date())+' · Geräteuhr ungeprüft';}
+  $('verdict').textContent=s.label; $('verdict-desc').textContent=s.detail;
+  $('match-counter').textContent=count; $('timestamp').textContent=lastTime;
+  $('head').textContent='RELEASE REF · '+ref;
+  $('dot').className='status-indicator '+(s.code==='MATCH_C1'?'ok':s.code==='DIVERGENCE'?'fail':'warn');
+  $('dock-status').textContent=s.label; $('dock-info').textContent=s.detail;$('dock-time').textContent='C1 · '+lastTime;
   refreshPip();
- }catch(e){$("dock").hidden=false;$("dock-info").textContent="Externes PiP-Fenster nicht verfügbar · eingebettete Ansicht aktiv"}
+}
+async function timedGet(url, responseType, sameOrigin=false) {
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),DEADLINE_MS);
+  try {
+    const r=await fetch(url,{method:'GET',signal:ctl.signal,cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',headers:sameOrigin?{}:{Accept:'application/vnd.github+json'}});
+    if(!r.ok)throw Error('HTTP '+r.status);
+    const size=Number(r.headers.get('Content-Length')||0);
+    if(size>CONTRACT.maxBytes)throw Error('RESPONSE_TOO_LARGE');
+    if(responseType==='json') {
+      const text=await r.text();if(text.length>750000)throw Error('JSON_TOO_LARGE');
+      return JSON.parse(text);
+    }
+    const bytes=new Uint8Array(await r.arrayBuffer());
+    if(bytes.length<1||bytes.length>CONTRACT.maxBytes)throw Error('BYTES_SIZE_INVALID');
+    return bytes;
+  } finally {clearTimeout(timer);}
+}
+async function getRelease(){
+  const m=await timedGet(ORIGIN+CONTRACT.targetRoot+CONTRACT.manifest,'json',true);
+  return validateReleaseManifest(m);
+}
+async function getSource(file,ref){
+  const bytes=parseGitHubContent(await timedGet(sourceUrl(file,ref),'json'));
+  return {sha:await digest(bytes),bytes:bytes.length,raw:bytes};
+}
+async function getWWW(file){
+  const bytes=await timedGet(liveUrl(file,ORIGIN),'bytes',true);
+  return {sha:await digest(bytes),bytes:bytes.length,raw:bytes};
+}
+async function getMainHead(){
+  try{
+    const arr=await timedGet(API+'/commits?sha=main&per_page=1','json');
+    return Array.isArray(arr)&&/^[0-9a-f]{40}$/.test(arr[0]?.sha)?arr[0].sha:null;
+  }catch{return null;}
+}
+function renderRows(rows,refs){
+  const panel=$('files');panel.replaceChildren();
+  for(const x of rows){
+    const item=el('article','file-row'),body=el('div');
+    const a=el('a','',x.file);a.href='https://github.com/' + CONTRACT.repository + '/blob/' + refs + '/' + CONTRACT.sourceRoot + x.file;
+    a.target='_blank';a.rel='noopener noreferrer';body.append(a);
+    body.append(el('p','',x.gh?'SOURCE · '+x.gh.sha.slice(0,16)+'… · '+x.gh.bytes+' B':'SOURCE · UNAVAILABLE'));
+    body.append(el('p','',x.www?'WWW · '+x.www.sha.slice(0,16)+'… · '+x.www.bytes+' B':'WWW · UNAVAILABLE'));
+    if(x.error)body.append(el('p','',String(x.error).slice(0,220)));
+    item.append(body,el('span','file-state '+x.status.toLowerCase(),x.status));panel.append(item);
+  }
+}
+async function run(force=false){
+  const now=performance.now();
+  if(running||(!force&&now-startedAt<CONTRACT.clickCooldownMs))return;
+  if(!globalThis.crypto?.subtle){putStatus({code:'HOLD_CRYPTO',label:'WEBCRYPTO NICHT VERFÜGBAR',detail:'SHA-256 benötigt einen sicheren Browserkontext'});return;}
+  running=true;startedAt=now;$('run').disabled=true;
+  $('verdict').textContent='PRÜFUNG LÄUFT';$('verdict-desc').textContent='Gepinnte GitHub-Quellen gegen Website und Release-Manifest…';
+  let rows=[],ref='—';
+  try{
+    const release=await getRelease();ref=release.sourceCommit.slice(0,12);
+    const mainHead=await getMainHead();
+    for(const file of CONTRACT.files){
+      const [a,b]=await Promise.allSettled([getSource(file,release.sourceCommit),getWWW(file)]);
+      const gh=a.status==='fulfilled'?a.value:null,www=b.status==='fulfilled'?b.value:null;
+      const r=compareFile(file,release.fileRecords[file],gh,www);
+      if(a.status==='rejected'||b.status==='rejected')r.error=(a.status==='rejected'?'SOURCE '+(a.reason?.message||a.reason):'WWW '+(b.reason?.message||b.reason));
+      rows.push(r);
+    }
+    renderRows(rows,release.sourceCommit);
+    const html=rows.find(x=>x.file==='index.html');
+    const c1=!!html?.gh&&!!html?.www&&isC1Marked(new TextDecoder('utf-8',{fatal:true}).decode(html.gh.raw))&&isC1Marked(new TextDecoder('utf-8',{fatal:true}).decode(html.www.raw));
+    const s=classify(rows,true,c1,mainHead);
+    const count=rows.filter(x=>x.status==='MATCH').length+' / '+CONTRACT.files.length;
+    putStatus(s,count,ref,true);
+    const m=$('main-ref');if(m)m.textContent=mainHead?mainHead.slice(0,12):'UNKNOWN';
+  } catch(e){renderRows(rows,ref);putStatus({code:'HOLD_RELEASE_BIND',label:'RELEASE-NACHWEIS FEHLT',detail:String(e.message||e).slice(0,220)},'— / 10',ref,true)}
+  finally{running=false;$('run').disabled=false;}
+}
+function refreshPip(){if(!pip||pip.closed){pip=null;return;}const d=pip.document;
+  for(const [id,val] of [['pip-code',lastStatus.label],['pip-info',lastStatus.detail],['pip-meta',lastCount+' · '+lastTime+' · '+lastRef]]){const x=d.getElementById(id);if(x)x.textContent=val;}}
+function markStale(reason='Browser-Pause / Prüfalter überschritten') {
+  if(lastStatus.code==='MATCH_C1')putStatus({code:'STALE',label:'NACHWEIS VERALTET',detail:reason},lastCount,lastRef);
+}
+function evaluateFreshness(){
+  if(statusIsStale(lastCompletedAt,performance.now(),hiddenSinceCheck))markStale();
+}
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){hiddenSinceCheck=true;markStale('Browserseite nicht sichtbar; frühere Beobachtung nicht aktuell');}
+  else {evaluateFreshness();run(true);}
 });
-const drag=$("dock").querySelector(".dock-head");let start=null;
-drag.addEventListener("pointerdown",evt=>{
- if(evt.target.closest("button"))return;
- const rect=$("dock").getBoundingClientRect();start={x:evt.clientX,y:evt.clientY,l:rect.left,t:rect.top};drag.setPointerCapture(evt.pointerId);
+window.addEventListener('pageshow',e=>{if(e.persisted){hiddenSinceCheck=true;markStale('Wiederhergestellte Seite braucht neue Prüfung');run(true);}});
+$('run').addEventListener('click',()=>run());
+$('dock-open').addEventListener('click',()=>{$('dock').hidden=!$('dock').hidden;});
+$('dock-close').addEventListener('click',()=>{$('dock').hidden=true;});
+$('native-pip').addEventListener('click',async()=>{
+  if(!window.documentPictureInPicture?.requestWindow){$('dock').hidden=false;$('dock-info').textContent='Picture-in-Picture nicht unterstützt; eingebettetes Panel aktiv';return;}
+  try{
+    if(pip&&!pip.closed){pip.focus();return;}
+    pip=await window.documentPictureInPicture.requestWindow({width:410,height:290});
+    const d=pip.document;d.title='NEXUS · Gate';const css=d.createElement('link');css.rel='stylesheet';css.href=new URL('./gate.css',location.href).href;d.head.append(css);
+    const main=el('main','dock');const h=el('h2','','NEXUS · GATE');
+    const st=el('p','dock-code',lastStatus.label);st.id='pip-code';
+    const desc=el('p','',lastStatus.detail);desc.id='pip-info';
+    const meta=el('small','',lastTime+' · C1');meta.id='pip-meta';
+    main.append(h,st,desc,meta);d.body.append(main);
+    pip.addEventListener('pagehide',()=>pip=null);refreshPip();
+  }catch{$('dock').hidden=false;$('dock-info').textContent='PiP nicht verfügbar';}
 });
-drag.addEventListener("pointermove",evt=>{
- if(!start)return;
- const panel=$("dock"),x=Math.max(0,Math.min(innerWidth-panel.offsetWidth,start.l+evt.clientX-start.x)),y=Math.max(0,Math.min(innerHeight-panel.offsetHeight,start.t+evt.clientY-start.y));
- panel.style.left=x+"px";panel.style.top=y+"px";panel.style.right="auto";panel.style.bottom="auto";
-});
-drag.addEventListener("pointerup",()=>{start=null});
-drag.addEventListener("pointercancel",()=>{start=null});
-run();
-setInterval(()=>{if(!document.hidden&&Date.now()-lastStart>=INTERVAL)run()},INTERVAL);
+const drag=$('dock').querySelector('.dock-head');let start=null;
+drag.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;let b=$('dock').getBoundingClientRect();start={x:e.clientX,y:e.clientY,l:b.left,t:b.top};drag.setPointerCapture(e.pointerId);});
+drag.addEventListener('pointermove',e=>{if(!start)return;const d=$('dock');d.style.left=Math.max(0,Math.min(innerWidth-d.offsetWidth,start.l+e.clientX-start.x))+'px';d.style.top=Math.max(0,Math.min(innerHeight-d.offsetHeight,start.t+e.clientY-start.y))+'px';d.style.right='auto';d.style.bottom='auto';});
+drag.addEventListener('pointerup',()=>start=null);drag.addEventListener('pointercancel',()=>start=null);
+run(true);
+setInterval(()=>{evaluateFreshness();if(!document.hidden&&(!Number.isFinite(lastCompletedAt)||performance.now()-lastCompletedAt>=CONTRACT.freshnessMs))run(true);},60000);
