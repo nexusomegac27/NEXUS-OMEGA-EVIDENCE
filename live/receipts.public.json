@@ -1,0 +1,23 @@
+{
+  "schema": "nexus-bodytwin-public-receipts/1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_object": "NEXUS_OMEGA_AXIOM_R14_R2R1_WINDOWS_PORTABILITY_HARNESS_REPAIR_HANDOFF_20261107_R0",
+  "source_date": "2026-11-07",
+  "windows": {
+    "status": "CURSOR_REPORTED_PASS_C1",
+    "node_pass": 177,
+    "node_total": 177,
+    "mutation_pass": 7,
+    "mutation_total": 7,
+    "schema_pass": 18,
+    "schema_total": 18
+  },
+  "gates": {
+    "a72": "SOURCE_GAP",
+    "r13_stage_ii": "HOLD_DEPLOY_GAP",
+    "physical_imu": "NOT_AUTHORIZED",
+    "bodytwin_validated": "NO",
+    "consent": "OPEN",
+    "gate_v2": "HOLD_R9_MJS_PREREQUISITE"
+  }
+}

@@ -1,0 +1,1286 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+<!-- V847 public adaption 20260914 · CLAIM_CEILING=C1 · TRUE_3DGS=NO · SYNTHETIC_ONLY · BODYTWIN_LAB -->
+<!-- base removed for public host -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#0c0c0b" />
+<title>NEXUS OMEGA · Bodytwin</title>
+<!--
+  OBJECT: NEXUS_OMEGA_BODYTWIN_VIEWER_20260914_R0
+  CLAIM_CEILING: C1_DESCRIPTIVE_ONLY · PROMOTION: NO · PHASE5: NOT_AUTHORIZED
+  font-stack: IBM Plex Sans / IBM Plex Mono (erbt den bestehenden NEXUS-Sledgehammer-Stil,
+              Auditspur: design-system = Projekt-Tokens src/styles.css, nicht craft-Default)
+  Kein Soft-Satz erzeugt Hard-Status. Hash-Match ≠ Wahrheit. Immersion ≠ Verständnis.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" />
+<style>
+  :root{
+    --bg:#0c0c0b; --surface:#141412; --elevated:#1c1c18;
+    --fg:#eceae4; --muted:#9a9890; --subtle:#6e6c66;
+    --border:#2a2924; --line:#3a3932;
+    --accent:#cfc8b8; --bronze:#a8895a; --survive:#7d9a7a; --warn:#c4a574;
+    --danger:#c45c4a; --kill:#8b2a22;
+    /* Achsen-Palette – aus dem Projekt-Ton (Bronze/Bone) in oklch harmonisch abgeleitet */
+    --ax-struct:#a8895a; --ax-neural:#cfc8b8; --ax-metab:#c4a574;
+    --ax-immuno:#7d9a7a; --ax-temp:#b07a52; --ax-resid:#d8ceba;
+    --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  html,body{margin:0;background:var(--bg);color:var(--fg);min-height:100%}
+  body{font-family:var(--sans);font-size:14px;line-height:1.55}
+  ::selection{background:color-mix(in oklab,var(--bronze) 40%,transparent);color:var(--fg)}
+  button{font:inherit;color:inherit}
+  button:not(:disabled){cursor:pointer}
+  :focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+  .mono{font-family:var(--mono)}
+  .tk{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- Rahmen ---------- */
+  html,body{max-width:100%}
+  .app{display:grid;grid-template-columns:minmax(0,268px) minmax(0,1fr) minmax(0,344px);
+       grid-template-rows:auto auto minmax(0,1fr) auto;
+       grid-template-areas:"hdr hdr hdr" "strip strip strip" "rail stage side" "foot foot foot";
+       min-height:100vh;width:100%;max-width:100%}
+  .hdr{grid-area:hdr;position:sticky;top:0;z-index:30;background:color-mix(in oklab,var(--bg) 92%,transparent);
+       backdrop-filter:blur(6px);border-bottom:1px solid var(--border);min-width:0;max-width:100%}
+  .strip{grid-area:strip;position:sticky;top:0;z-index:20;min-width:0;max-width:100%}
+  .rail{grid-area:rail;border-right:1px solid var(--border);min-width:0}
+  .stage{grid-area:stage;position:relative;min-width:0;min-height:520px;max-width:100%}
+  .side{grid-area:side;border-left:1px solid var(--border);min-width:0}
+  .foot{grid-area:foot;border-top:1px solid var(--border);min-width:0}
+
+  .hdr-in{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:12px 20px;min-width:0;max-width:100%}
+  .mark{display:flex;align-items:center;justify-content:center;width:34px;height:34px;
+        border:1px solid var(--line);border-radius:4px;flex:none}
+  .brand{min-width:0;flex:1 1 12rem}
+  .brand small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--subtle);overflow-wrap:anywhere}
+  .brand b{font-weight:600;font-size:14px;letter-spacing:-.01em}
+  .hdr-chips{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-width:0;max-width:100%}
+  .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--border);background:var(--elevated);
+        border-radius:4px;padding:5px 9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);
+        max-width:100%;overflow-wrap:anywhere;text-decoration:none}
+  a.chip:hover{color:var(--fg);border-color:var(--line)}
+  a.chip:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--bronze);flex:none}
+  .chip.is-warn{border-color:color-mix(in oklab,var(--warn) 45%,transparent);color:var(--warn)}
+  .chip.is-danger{border-color:color-mix(in oklab,var(--danger) 45%,transparent);color:var(--danger)}
+  .chip.is-ok{border-color:color-mix(in oklab,var(--survive) 45%,transparent);color:var(--survive)}
+  .chip.homeback{color:var(--fg);border-color:var(--bronze)}
+
+  /* ---------- Status-Strip ---------- */
+  .strip-in{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;padding:9px 20px;
+            background:var(--surface);border-bottom:1px solid var(--border);max-width:100%;min-width:0}
+  .fs{display:flex;align-items:baseline;gap:8px;flex:0 1 auto;min-width:0;max-width:100%}
+  .fs .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--subtle);text-transform:uppercase;flex:none}
+  .fs .v{font-family:var(--mono);font-size:11.5px;color:var(--fg);overflow-wrap:anywhere;word-break:break-word}
+  .banner{display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:7px 20px;background:var(--elevated);
+          border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);
+          max-width:100%;min-width:0}
+  .banner span,.banner b{overflow-wrap:anywhere;word-break:break-word}
+  .banner .sep{color:var(--subtle)}
+  .banner b{color:var(--warn);font-weight:500}
+
+  /* ---------- Rail ---------- */
+  .sec{padding:16px}
+  .sec+.sec{border-top:1px solid var(--border)}
+  .sec h2{margin:0 0 10px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+          text-transform:uppercase;color:var(--subtle);font-weight:500}
+  .views{display:grid;gap:4px}
+  .viewbtn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid transparent;
+           background:transparent;border-radius:6px;padding:9px 10px;transition:background .15s,border-color .15s}
+  .viewbtn:hover{background:var(--surface)}
+  .viewbtn[aria-pressed="true"]{background:var(--elevated);border-color:var(--line)}
+  .viewbtn svg{width:16px;height:16px;flex:none;stroke-width:1.5;color:var(--muted)}
+  .viewbtn[aria-pressed="true"] svg{color:var(--accent)}
+  .viewbtn .lbl{font-size:13px;font-weight:500}
+  .viewbtn .dc{margin-left:auto;font-family:var(--mono);font-size:9px;color:var(--subtle)}
+
+  .ctl{margin-bottom:11px}
+  .ctl:last-child{margin-bottom:0}
+  .ctl label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;
+             letter-spacing:.1em;color:var(--muted);margin-bottom:5px}
+  input[type=range]{width:100%;height:18px;-webkit-appearance:none;appearance:none;background:transparent}
+  input[type=range]::-webkit-slider-runnable-track{height:2px;background:var(--line)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;margin-top:-4.5px;
+     border-radius:50%;background:var(--accent);border:none}
+  input[type=range]::-moz-range-track{height:2px;background:var(--line)}
+  input[type=range]::-moz-range-thumb{width:11px;height:11px;border:none;border-radius:50%;background:var(--accent)}
+  .modebtns{display:flex;flex-wrap:wrap;gap:5px}
+  .mbtn{border:1px solid var(--border);background:var(--surface);border-radius:4px;padding:5px 8px;
+        font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--muted)}
+  .mbtn[aria-pressed="true"]{border-color:var(--bronze);color:var(--fg);background:var(--elevated)}
+  .mbtn:hover{color:var(--fg)}
+  .switch{display:flex;align-items:center;gap:9px;width:100%;background:transparent;border:1px solid var(--border);
+          border-radius:5px;padding:8px 10px;margin-top:6px}
+  .switch:hover{background:var(--surface)}
+  .switch .tki{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted)}
+  .sw{width:28px;height:15px;border-radius:20px;background:var(--line);position:relative;flex:none;transition:background .15s}
+  .sw::after{content:"";position:absolute;top:2px;left:2px;width:11px;height:11px;border-radius:50%;background:var(--subtle);transition:transform .15s,background .15s}
+  .switch[aria-pressed="true"] .sw{background:color-mix(in oklab,var(--bronze) 55%,transparent)}
+  .switch[aria-pressed="true"] .sw::after{transform:translateX(13px);background:var(--accent)}
+
+  /* ---------- Stage ---------- */
+  .stagewrap{position:absolute;inset:0;display:flex;flex-direction:column}
+  .stagehead{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--border)}
+  .stagehead h1{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+  .stagehead .sub{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--subtle)}
+  .stagebody{position:relative;flex:1;min-height:0;overflow:auto}
+  canvas#tess{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+  .softlayer{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;
+             padding:0 4%;pointer-events:none;opacity:.16;max-width:100%;min-width:0;overflow:hidden}
+  .softlayer svg{height:auto;width:auto;max-height:82%;max-width:min(42%,12rem);flex:0 1 auto}
+  .softlayer .cap{position:absolute;bottom:10px;left:18px;font-family:var(--mono);font-size:9.5px;
+                  letter-spacing:.12em;color:var(--subtle);max-width:calc(100% - 36px);overflow-wrap:anywhere}
+  .projbadge{position:absolute;top:12px;left:14px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+             color:var(--muted);border:1px solid var(--border);background:color-mix(in oklab,var(--bg) 70%,transparent);
+             border-radius:4px;padding:5px 8px;pointer-events:none;max-width:calc(100% - 28px);overflow-wrap:anywhere}
+  .legend{position:absolute;bottom:12px;right:14px;display:grid;gap:3px;pointer-events:none;max-width:calc(100% - 28px)}
+  .legend .li{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--subtle)}
+  .legend .sw2{width:9px;height:9px;border-radius:2px;flex:none}
+
+  .domwrap{padding:18px;display:grid;gap:18px;align-content:start}
+  .panel{border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:16px}
+  .panel h3{margin:0 0 4px;font-size:13px;font-weight:600}
+  .panel p.lead{margin:0 0 12px;color:var(--muted);font-size:12.5px;max-width:64ch}
+
+  /* Statusmaschine */
+  .sm{display:grid;gap:5px}
+  .smrow{display:flex;align-items:center;gap:12px;border:1px solid var(--border);background:var(--elevated);
+         border-radius:6px;padding:10px 12px}
+  .smrow .n{font-family:var(--mono);font-size:10px;color:var(--subtle)}
+  .smrow .s{flex:1;font-family:var(--mono);font-size:12px}
+  .smrow .st{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em}
+  .smrow.on{border-color:color-mix(in oklab,var(--survive) 40%,transparent)}
+  .smrow.on .st{color:var(--survive)}
+  .smrow:not(.on) .st{color:var(--subtle)}
+
+  /* Claims */
+  .claims{display:grid;gap:6px}
+  .claim{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:start;width:100%;text-align:left;
+         border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:11px 12px;transition:border-color .15s,background .15s}
+  .claim:hover{background:var(--elevated)}
+  .claim[aria-pressed="true"]{border-color:var(--bronze);background:var(--elevated)}
+  .claim .id{font-family:var(--mono);font-size:11px;color:var(--bronze)}
+  .claim .tx{font-size:12.5px;line-height:1.45}
+  .claim .tags{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+
+  /* Marks */
+  .mk{display:inline-flex;align-items:center;border:1px solid;border-radius:4px;padding:2px 6px;
+      font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;white-space:nowrap}
+  .mk.g-H1{border-color:color-mix(in oklab,var(--bronze) 50%,transparent);color:var(--bronze)}
+  .mk.g-H2{border-color:color-mix(in oklab,var(--warn) 55%,transparent);color:var(--warn)}
+  .mk.g-H3{border-color:color-mix(in oklab,var(--danger) 60%,transparent);color:var(--danger)}
+  .mk.g-H4{border-color:var(--kill);color:var(--danger);background:color-mix(in oklab,var(--kill) 22%,transparent)}
+  .mk.s-SURVIVED{border-color:color-mix(in oklab,var(--survive) 45%,transparent);color:var(--survive)}
+  .mk.s-WEAKENED{border-color:color-mix(in oklab,var(--warn) 45%,transparent);color:var(--warn)}
+  .mk.s-DESTROYED{border-color:color-mix(in oklab,var(--danger) 45%,transparent);color:var(--danger)}
+  .mk.s-UNTOUCHABLE{border-color:color-mix(in oklab,var(--accent) 35%,transparent);color:var(--accent)}
+  .mk.s-PENDING{border-color:var(--border);color:var(--muted)}
+
+  /* Graph — scroll inside panel; never expand document width */
+  .graphbox{overflow-x:auto;max-width:100%;min-width:0;-webkit-overflow-scrolling:touch}
+  .graphbox svg{width:100%;height:auto;min-width:0;max-width:820px;display:block;margin:0 auto}
+
+  /* Attack */
+  .field{margin-bottom:12px}
+  .field label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);margin-bottom:6px}
+  select{width:100%;background:var(--elevated);border:1px solid var(--border);border-radius:6px;padding:9px 10px;
+         font-family:var(--mono);font-size:12px;color:var(--fg)}
+  .row{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{border:1px solid var(--line);background:var(--elevated);border-radius:6px;padding:9px 14px;font-size:12.5px;font-weight:500}
+  .btn:hover{background:#232320}
+  .btn.primary{border-color:var(--bronze);background:color-mix(in oklab,var(--bronze) 16%,transparent)}
+  .btn:disabled{opacity:.45}
+  .btn.ghost{background:transparent}
+  .receipt{border:1px solid var(--border);background:var(--bg);border-radius:8px;padding:12px;margin-top:12px;
+           font-family:var(--mono);font-size:11px;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:var(--muted)}
+  .receipt b{color:var(--fg);font-weight:500}
+  .ledger{display:grid;gap:8px;margin-top:6px}
+  .lrow{border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:10px 12px}
+  .lrow .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .lrow .rid{font-family:var(--mono);font-size:10.5px;color:var(--bronze)}
+  .lrow .res{margin-top:6px;font-size:12px;color:var(--muted)}
+
+  /* Side / inspector */
+  .side-in{padding:16px;display:grid;gap:16px;align-content:start;min-width:0;max-width:100%;overflow-wrap:anywhere}
+  .kv{display:grid;gap:7px;min-width:0;max-width:100%}
+  .kv .r{display:grid;grid-template-columns:minmax(0,104px) minmax(0,1fr);gap:10px;align-items:baseline;min-width:0}
+  .kv .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--subtle);text-transform:uppercase}
+  .kv .v{font-family:var(--mono);font-size:11px;color:var(--fg);word-break:break-word;overflow-wrap:anywhere;min-width:0}
+  .axisrow{display:flex;align-items:center;gap:10px;border:1px solid var(--border);background:var(--surface);
+           border-radius:6px;padding:9px 10px;width:100%;max-width:100%;min-width:0;text-align:left;box-sizing:border-box}
+  .axisrow:hover{background:var(--elevated)}
+  .axisrow[aria-pressed="true"]{border-color:var(--bronze);background:var(--elevated)}
+  .axisrow .chip2{width:10px;height:10px;border-radius:2px;flex:none}
+  .axisrow .bid{font-family:var(--mono);font-size:11px;width:26px;flex:none;color:var(--fg)}
+  .axisrow .dim{font-size:12px;color:var(--muted);flex:1;min-width:0;overflow-wrap:anywhere;word-break:break-word;white-space:normal}
+  .note{font-size:11.5px;color:var(--subtle);line-height:1.6}
+  .rule{border:1px dashed var(--line);border-radius:6px;padding:10px 12px;font-size:11.5px;color:var(--muted)}
+  .radar{width:100%;height:auto;display:block}
+  .dimlist{display:grid;gap:6px;margin-top:8px}
+  .dl{display:grid;grid-template-columns:1fr 46px;gap:10px;align-items:center;font-size:11.5px}
+  .dl .bar{height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+  .dl .bar i{display:block;height:100%;background:var(--bronze)}
+  .dl .num{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:right}
+
+  .foot-in{display:grid;gap:10px;padding:18px 20px;font-family:var(--mono);font-size:10.5px;color:var(--subtle);line-height:1.7;min-width:0;max-width:100%}
+  .foot-in .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px}
+  .foot-in b{color:var(--muted);font-weight:500}
+  .hash{word-break:break-all;color:var(--muted);overflow-wrap:anywhere}
+
+  .divider-air{display:flex;align-items:center;gap:10px;margin:4px 0 2px;color:var(--subtle);
+               font-family:var(--mono);font-size:9.5px;letter-spacing:.14em}
+  .divider-air::before,.divider-air::after{content:"";flex:1;border-top:1px dashed var(--line)}
+
+  .empty{padding:24px;text-align:center;color:var(--subtle);font-family:var(--mono);font-size:11px}
+
+  .panel,.domwrap,.side-in,.sec,.stagewrap,.stagebody,.stagehead{min-width:0;max-width:100%}
+  .claim{grid-template-columns:minmax(0,44px) minmax(0,1fr) auto}
+  .kv .r{grid-template-columns:minmax(0,104px) minmax(0,1fr)}
+
+  @media (max-width:1180px){
+    .app{grid-template-columns:minmax(0,1fr);grid-template-areas:"hdr" "strip" "stage" "side" "rail" "foot";}
+    .rail{border-right:none;border-top:1px solid var(--border)}
+    .side{border-left:none;border-top:1px solid var(--border)}
+    .stage{min-height:460px}
+    .stagebody{min-height:420px}
+  }
+  @media (max-width:560px){
+    .hdr-in{padding:11px 14px;gap:10px}
+    .hdr-chips{margin-left:0;width:100%}
+    .strip-in{padding:8px 14px;gap:6px 12px}
+    .banner{padding:7px 14px}
+    .legend{display:none}
+    .stagehead{padding:11px 14px}
+    .side-in,.sec{padding:12px}
+    .softlayer{padding:0 2%}
+    .softlayer svg{max-width:min(40%,7.5rem)}
+    .claim{grid-template-columns:minmax(0,36px) minmax(0,1fr);gap:8px}
+    .claim .tags{grid-column:1 / -1;flex-direction:row;flex-wrap:wrap;align-items:flex-start}
+  }
+  @media (max-width:390px){
+    .brand b{font-size:13px}
+    .chip{letter-spacing:.08em;padding:5px 7px}
+    .graphbox svg{min-width:0}
+    .side-in,.sec{padding:10px}
+    .axisrow{padding:8px;gap:8px}
+    .axisrow .bid{width:22px;font-size:10px}
+  }
+  @media (max-width:200px){
+    .side-in,.sec,.hdr-in,.strip-in,.banner,.foot-in{padding-left:8px;padding-right:8px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  }
+</style>
+
+  <!-- NEXUS_BODYTWIN_LIVE_PANEL_V1 BEGIN -->
+  <link rel="stylesheet" href="/bodytwin/live/live-panel.css" data-nexus="NEXUS_BODYTWIN_LIVE_PANEL_V1">
+  <script type="module" src="/bodytwin/live/live-panel.mjs" data-nexus="NEXUS_BODYTWIN_LIVE_PANEL_V1"></script>
+  <!-- NEXUS_BODYTWIN_LIVE_PANEL_V1 END -->
+</head>
+<body>
+<div class="app">
+
+  <header class="hdr">
+<!-- V847 public adaption 20260914 · CLAIM_CEILING=C1 · TRUE_3DGS=NO · SYNTHETIC_ONLY · BODYTWIN_LAB -->
+
+    <div class="hdr-in">
+      <div class="mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.4">
+          <path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M12 2v20M3 7l9 5 9-5M3 17l9-5 9 5"/>
+        </svg>
+      </div>
+      <div class="brand">
+        <b>NEXUS OMEGA · Bodytwin</b>
+        <small>NEXUS_OMEGA_BODYTWIN_VIEWER_20260914_R0</small>
+      </div>
+      <div class="hdr-chips">
+        <a class="chip homeback" id="homeBack" href="/">Zur Startseite</a>
+        <span class="chip"><span class="dot"></span>C1_DESCRIPTIVE_ONLY</span>
+        <span class="chip is-danger">PHASE 5 NOT_AUTHORIZED</span>
+        <span class="chip" id="liveChip" role="status" aria-live="polite"><span class="dot"></span>LIVE · INIT</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="strip">
+    <div class="strip-in" id="statusStrip" role="group" aria-label="Live-Status"></div>
+    <div class="banner">
+      <b>HASH-MATCH ≠ WISSENSCHAFTLICHE WAHRHEIT</b><span class="sep">·</span>
+      <span>Nur belegte Übergänge erzeugen Status</span><span class="sep">·</span>
+      <span id="airgapNote">Luftspalt Soft↔Hard offen</span>
+    </div>
+  </div>
+
+  <nav class="rail" aria-label="Arbeitsbereiche">
+    <div class="sec">
+      <h2>Ansicht</h2>
+      <div class="views" id="viewNav"></div>
+    </div>
+    <div class="sec" id="projSec">
+      <h2>4D-Projektion · [P]</h2>
+      <div class="modebtns" id="projBtns"></div>
+      <button class="switch" id="isoBtn" aria-pressed="false" type="button">
+        <span class="sw"></span><span class="tki">Isokline Rotation</span>
+      </button>
+    </div>
+    <div class="sec">
+      <h2>SO(4)-Ebenen</h2>
+      <div id="rotControls"></div>
+    </div>
+    <div class="sec">
+      <h2>Humility Score</h2>
+      <svg class="radar" id="radar" viewBox="0 0 200 190" role="img" aria-label="Humility Score Radar"></svg>
+      <div class="dimlist" id="dimList"></div>
+      <div class="note" id="humNote" style="margin-top:8px"></div>
+    </div>
+  </nav>
+
+  <main class="stage" id="stage" aria-live="polite">
+    <div class="stagewrap">
+      <div class="stagehead">
+        <h1 id="stageTitle">Soft-View</h1>
+        <span class="sub" id="stageSub"></span>
+      </div>
+      <div class="stagebody" id="stageBody"></div>
+    </div>
+  </main>
+
+  <aside class="side" aria-label="Inspektor">
+    <div class="side-in" id="inspector"></div>
+  </aside>
+
+  <footer class="foot">
+    <div class="foot-in">
+      <div class="grid">
+        <div>
+          <b>Nicht-Ziele</b><br>
+          Keine klinische / biologische / physikalische Validität · keine automatische Promotion ·
+          Immersion ≠ Verständnis · Symbolik bleibt markiert · Theologischer Fundus = Orientierung, kein Evidence-Status.
+        </div>
+        <div>
+          <b>Regeln</b><br>
+          Soft darf Hard orientieren und benennen. Hard hält Soft angreifbar und residual sichtbar.
+          Kein Soft-Satz erzeugt je einen Hard-Status. Jede Ableitung aus Tesserakt oder Body-Twin
+          auf Klinik / Physik / Promotion ist ein Blow-Ziel (DESTROYED).
+        </div>
+        <div>
+          <b>Live-SOT</b><br>
+          <span class="hash" id="footHashes">—</span>
+        </div>
+        <div>
+          <b>Projektion</b><br>
+          <span class="hash" id="footProj">DERIVED_MINIMAL_PROJECTION · C1_DESCRIPTIVE_ONLY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s);};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+
+/* =========================================================
+   EMBEDDED SNAPSHOTS der drei öffentlichen Live-Objekte.
+   Diese sind ein FALLBACK, falls der Browser-Fetch (CORS/Offline)
+   nicht durchgeht. Sie sind als EMBEDDED_SNAPSHOT markiert und
+   NICHT autoritativ. Der Live-Fetch bleibt der SOT.
+   ========================================================= */
+var EMB = {
+  status:{
+    sha:"d110095535e8b455293c476479abbe3d2fc9102fc741b4624e0a81cd6ebd9ca1",
+    url:"https://www.nexus-mobile.de/status.json",
+    doc:{
+      schema_version:"nexus-www-status/1",
+      object:"NEXUS_OMEGA_WWW_PUBLICATION_STATUS_20260911_R0",
+      updated_utc:"2026-09-11T04:45:00Z",
+      claim_ceiling:"C1_DESCRIPTIVE_ONLY",
+      promotion:false,
+      phase5_authorized:false,
+      evidence_classes_allowed:["OBSERVED","SIMULATED","SUPPORTED","OPEN"],
+      evidence_classes_prohibited_as_proven:["REPRODUCED","PROVEN","VALIDATED_UNIVERSAL"],
+      current_research:[
+        {id:"continuity",public_title:"Kontinuität und Quellenidentität",evidence_class:"OBSERVED",locator:"/internal-comm/axiom-continuity/v0/"},
+        {id:"avc",public_title:"Closed Validation Cell (Pilot)",evidence_class:"OBSERVED",locator:"/internal-comm/validation-cell/v1/"},
+        {id:"zero-relay",public_title:"Zero-Operator-Relay Beobachtung",evidence_class:"OBSERVED",locator:"/internal-comm/axiom-continuity/v0/RETURN_NEXUS_OMEGA_ZERO_OPERATOR_RELAY_CONTINUITY_OBSERVATION_20260911_R0.json"},
+        {id:"eban",public_title:"EBAN Remediation",evidence_class:"OPEN",locator:"/internal-comm/v841-eban/r4/"}
+      ],
+      not_proven:[
+        "Universelle AI-Qualität",
+        "Energie-Optimalität",
+        "Wissenschaftliche Promotion über C1",
+        "OS-Level Pilot-Isolation für EBAN",
+        "Unabhängige Reproduktion der Paper-Ergebnisse arXiv:2608.09567"
+      ],
+      changes_feed:"/research/changes.json",
+      terminal_route:"/terminal/"
+    }
+  },
+  live:{
+    sha:"60674103ed2f7afdf73788a757dd5d2547a344fd1f813204a1f509096f6f88e2",
+    url:"https://www.nexus-mobile.de/status/nexus-omega-v845-live-state.json",
+    doc:{
+      OBJECT:"NEXUS_OMEGA_V845_LIVE_STATE",
+      SCHEMA:"NEXUS_OMEGA_V845_LIVE_STATE_V1",
+      AUTHORITY:"OPERATOR_ALEXANDER_VIA_AXIOM",
+      CLAIM_CEILING:"C1_DESCRIPTIVE_ONLY",
+      PROMOTION:"NO",
+      PHASE:"V8.4.5_EXTERNAL_AGENT_LIVE_SOURCE_GATE",
+      CANONICAL_LIVE_VERSION:"V8.4.5",
+      LIVE_CLASS:"AUTHORITATIVE_LIVE_SOT",
+      GENERATED_AT:"2026-09-12T07:55:00+02:00",
+      TOPOLOGY:{
+        EXTERNAL_ENTRY:"https://www.nexus-online.de",
+        EXTERNAL_ENTRY_ROLE:"COORDINATION_ENTRY_POINTER_NOT_SECOND_CANON",
+        AUTHORITATIVE_LIVE:"https://www.nexus-mobile.de",
+        AUTHORITATIVE_LIVE_ROLE:"CANONICAL_LIVE_SOURCE_OF_TRUTH"
+      },
+      GATE_STATUS:{
+        EXTERNAL_AGENT_START:"NOT_AUTHORIZED_BY_CURSOR",
+        PHASE_4_5_EXTERNAL_EXPERT_ROUND:"HOLD",
+        ENVELOPE_A_EXECUTION_BY_CURSOR:"PROHIBITED"
+      },
+      LAST_VERIFIED:{
+        METHOD:"CURSOR_PUBLIC_FETCH_SHA256",
+        STATUS:"DEPLOYMENT_VERIFIED",
+        VERIFIED_AT:"2026-09-12T07:57:00+02:00"
+      },
+      EPISTEMIC_WALLS:[
+        "HASH_MATCH_NE_SCIENTIFIC_TRUTH",
+        "ONLINE_DE_NE_SECOND_CANON",
+        "1757_META_NE_961_WORTLAUT",
+        "PRE_A_VIEW_NE_POST_A_LIVE",
+        "EXTERNAL_AGENT_START_NE_AUTHORIZED_BY_THIS_GATE_ALONE"
+      ]
+    }
+  },
+  memory:{
+    sha:"4ccc495e242313423707c37b7f4a34e412c3fa7e1ebdcd93356066886028faa9",
+    url:"https://www.nexus-mobile.de/status/nexus-omega-living-memory.json",
+    doc:{
+      claim_ceiling:"C1",
+      schema:"NEXUS_OMEGA_LIVING_MEMORY_PUBLIC_PROJECTION_V1",
+      generated_at:"2026-09-05T17:00:00Z",
+      hash_receipt_interpreted_as_validation:false,
+      epistemic_invariants:["EI01_IMMUTABILITY","EI02_NEGATIVE_EVIDENCE","EI03_RECONSTRUCTABILITY","EI04_PROVENANCE","EI05_UNCERTAINTY","EI06_CONTRADICTION_TOLERANCE"],
+      material_events:["R5_AI_LAB_CLOSED","R6_AI_OPEN","PUBLIC_AI_LIVE_C1","NST_V1_ACTIVE","R6_8_STARTED","R6_8_TEMPORARY_RESEARCH_COMPLETION","GLM_LATE_RETURN_RECEIVED"],
+      negative_results:[
+        {id:"FULL_GENERATIVE_RUNTIME_VALIDATION",status:"NOT_ESTABLISHED"},
+        {id:"RING_TOPOLOGY_UNIQUE_VALUE",status:"NOT_COMPUTABLE"},
+        {id:"ENERGY_OPTIMALITY",status:"NOT_ESTABLISHED"},
+        {id:"R6_E0_E9_CANONICAL_EXECUTION",status:"NOT_ESTABLISHED"},
+        {id:"HISTORIC_GLM_ADJUDICATION",status:"FAIL_SOURCE_NOT_PRESENT",note:"PRESERVED_NOT_REWRITTEN"}
+      ],
+      open_uncertainties:["UNKNOWN","NOT_MEASURED","NOT_COMPUTABLE","SOURCE_REPORTED"],
+      principles:{
+        INTERNAL_CANONICAL_MEMORY:"NST_EVENT_HISTORY",
+        LIVING_MEMORY:"IMMUTABLE_EVIDENCE_HISTORY+MINIMAL_CURRENT_STATE+EXPLICIT_NEGATIVE_EVIDENCE+EXPLICIT_UNCERTAINTY+RECONSTRUCTABLE_CAUSALITY",
+        PUBLIC_MEMORY:"DERIVED_MINIMAL_PROJECTION"
+      },
+      projection_class:"DERIVED_PUBLIC_MEMORY",
+      projection_sha256:"0865d8eef3b9823eba253d36169b4873e496adc00d83ba9bb09c4fcf382b9362",
+      research_axes:["INFORMATION_DENSITY","ZERO_DATA_WASTE","MINIMUM_SUFFICIENT_REPRESENTATION","FULL_RECONSTRUCTABILITY","NO_QUALITY_LOSS"],
+      state:{CLAIM_CEILING:"C1",PROMOTION:"NO",NST_V1:"ACTIVE_INTERNAL_C1",PUBLIC_AI:"LIVE_C1",RING_TOPOLOGY:"NOT_COMPUTABLE",ENERGY_EVIDENCE:"NOT_MEASURED",F6_4_FULL_RUNTIME_VALIDATION:"HOLD",F6_4_PUBLIC_DEPLOYMENT:"PASS_C1",R6_8:"TEMPORARILY_COMPLETE_C1_PENDING_FULL_SYMBIOPSIS_OR_POST",GLM_GAP:"RESOLVED_BY_LATE_INTAKE_C1",OLD_GLM_FAIL:"PRESERVED"}
+    }
+  }
+};
+
+/* =========================================================
+   Lokale, hash-gebundene Werkstatt-Daten (Phase B / Sledgehammer).
+   Quelle: bestehender NEXUS-Sledgehammer-Workspace (src/data/*).
+   ========================================================= */
+var CLAIMS=[
+ {id:"C01",text:"W1 and W2 are BUILD_VERIFIED.",src:"phase_b_kernel_result.json / witnesses.*.build_verified",grade:"H2",status:"DESTROYED",residue:"build_verified=false for W1 and W2; status held at STATIC_AUDIT_PASSED.",ev:"phase_b_kernel_result.json#build_verified"},
+ {id:"C02",text:"Phase B terminal verdict PASS_WITH_CAVEATS proves mathematical truth of the Navier-Stokes formalizations.",src:"Phase B.md §K",grade:"H2",status:"DESTROYED",residue:"Verdict is PASS_WITH_CAVEATS_PHASE_B_FORMAL_PROVENANCE_C1; no math promotion; no lake build receipt.",ev:"Phase B.md §J"},
+ {id:"C03",text:"FM1–FM4 passing means the theorems are correct.",src:"failure_mode_tests.json",grade:"H2",status:"DESTROYED",residue:"Tests check status-drift quarantine, not theorem correctness.",ev:"Phase B.md §F"},
+ {id:"C04",text:"render_success is evidence of understanding.",src:"Sledgehammer Mandate §3.1",grade:"H2",status:"DESTROYED",residue:"Category error: render_success is a UI/build observation, not an epistemic receipt.",ev:"mandate §3.1"},
+ {id:"C05",text:"build_success is evidence of truth.",src:"Sledgehammer Mandate §3.3",grade:"H2",status:"DESTROYED",residue:"SOURCE_PRESENT != BUILD_VERIFIED != truth.",ev:"Phase B.md §D"},
+ {id:"C06",text:"structure_bijection is evidence of clinical_validity.",src:"Sledgehammer Mandate §3.2",grade:"H2",status:"DESTROYED",residue:"Bijection of structure is not a clinical validity receipt.",ev:"mandate §3.2"},
+ {id:"C07",text:"W2_BUCKMASTER is unforced Euler.",src:"FM2 / witness_bindings.json forcing_status",grade:"H2",status:"DESTROYED",residue:"forcing_status = forced Euler; FM2 REJECT_SUMMARY_SCOPE_MISMATCH.",ev:"failure_mode_tests.json FM2"},
+ {id:"C08",text:"Challenge.lean containing sorry is a complete proof.",src:"FM1 / W2 Challenge.lean",grade:"H2",status:"DESTROYED",residue:"QUARANTINE_REFERENCE_PLACEHOLDER; template, not proof evidence.",ev:"FM1"},
+ {id:"C09",text:"A self-assessed review without independent receipt is independent verification.",src:"FM3",grade:"H2",status:"DESTROYED",residue:"REJECT_INDEPENDENT_VERIFICATION.",ev:"FM3"},
+ {id:"C10",text:"Possible contamination between W1 and W2 is established.",src:"evidence_graph.json edges POSSIBLE_CONTAMINATION",grade:"H2",status:"DESTROYED",residue:"edge status = contested/not established.",ev:"evidence_graph.json"},
+ {id:"C11",text:"PROVENANCE_BOUND has been reached for W1 and W2.",src:"phase_b_kernel_result.json provenance_bound",grade:"H2",status:"DESTROYED",residue:"provenance_bound=false; no full bind in this run.",ev:"kernel result"},
+ {id:"C12",text:"Phase 5 is authorized.",src:"Mandate Schlussklausel / OBJECT orders",grade:"H3",status:"DESTROYED",residue:"Phase 5 remains NOT_AUTHORIZED. Hammer may never authorize Phase 5.",ev:"mandate §9"},
+ {id:"C13",text:"This visual artifact authorizes Phase 5.",src:"this artefact",grade:"H3",status:"DESTROYED",residue:"Visual pre-check is not authorization. C1_DESCRIPTIVE_ONLY.",ev:"mandate §9"},
+ {id:"C14",text:"W1 and W2 are SOURCE_PRESENT and STATIC_AUDIT_PASSED with matching commits.",src:"witness_bindings.json",grade:"H1",status:"SURVIVED",residue:"Commit match true; statuses SOURCE_PRESENT + STATIC_AUDIT_PASSED. Survives under C1.",ev:"witness_bindings.json"},
+ {id:"C15",text:"Claim ceiling remains C1_DESCRIPTIVE_ONLY.",src:"all bound objects",grade:"H1",status:"UNTOUCHABLE",residue:"Bound constitutional field. Hammer may not raise ceiling.",ev:"mandate §9"}
+];
+var KERNEL={status_machine:["SOURCE_PRESENT","STATIC_AUDIT_PASSED","BUILD_ATTEMPTED","BUILD_VERIFIED","COMPARATOR_PASSED","AXIOM_RECEIPT_CLEAN","PROVENANCE_BOUND"],
+ reached:["SOURCE_PRESENT","STATIC_AUDIT_PASSED"],
+ rule:"No state may be upgraded without its own evidence event and pointer.",
+ failures:[
+  {id:"FM1_CHALLENGE_SORRY",obs:"QUARANTINE_REFERENCE_PLACEHOLDER"},
+  {id:"FM2_FORCING_CONFUSION",obs:"REJECT_SUMMARY_SCOPE_MISMATCH"},
+  {id:"FM3_SELF_ASSESSED_REVIEW",obs:"REJECT_INDEPENDENT_VERIFICATION"},
+  {id:"FM4_BUILD_ILLUSION",obs:"HOLD_SOURCE_PRESENT_ONLY"}],
+ limitations:["Full lake build and Comparator replay not completed in this run.","No mathematical claim promotion.","Historical priority and non-contamination remain not established."]};
+var WITNESSES={
+ W1_OPENAI:{url:"https://github.com/openai/NavierStokesAndEuler",commit:"f9e8bc5b38b6e212696e8a30e3e91517af887bbd",toolchain:"leanprover/lean4:v4.34.0-rc2",forcing:"mixed: forced Navier-Stokes; unforced Euler",status:"SOURCE_PRESENT · STATIC_AUDIT_PASSED",hash:"e851db4143574f633f34f35424e52bb017cc54443d49fd2b292325913b777faf"},
+ W2_BUCKMASTER:{url:"https://github.com/tristanbuckmaster/fluid_lean",commit:"d0124689230b58b4f86e7b90ac59de06404b3b6b",toolchain:"leanprover/lean4:v4.32.2",forcing:"forced Euler",status:"SOURCE_PRESENT · STATIC_AUDIT_PASSED",hash:"d649af42fd5f3d61d6e8fb2a3269e06a25f0fd572abff37d2f7adf3968c71eb0"}};
+var GRAPH={
+ nodes:[{id:"W1_OPENAI",label:"W1 OpenAI",sub:"mixed NS/Euler · STATIC_AUDIT",hash:"e851db41…",role:"VALIDATOR"},
+        {id:"W2_BUCKMASTER",label:"W2 Buckmaster / Alpège",sub:"forced Euler · STATIC_AUDIT",hash:"d649af42…",role:"VALIDATOR"},
+        {id:"CÓRDOBA_MARTÍNEZ_ZOROA",label:"Córdoba–Martínez-Zoroa",sub:"methodischer Vorläufer",hash:"—",role:"PRODUCER"}],
+ edges:[{from:"CÓRDOBA_MARTÍNEZ_ZOROA",to:"W2_BUCKMASTER",type:"METHODOLOGICAL_SUCCESSION",status:"reported"},
+        {from:"CÓRDOBA_MARTÍNEZ_ZOROA",to:"W1_OPENAI",type:"METHODOLOGICAL_SUCCESSION",status:"reported/inferred"},
+        {from:"W2_BUCKMASTER",to:"W1_OPENAI",type:"POSSIBLE_CONTAMINATION",status:"contested/not established"}]};
+
+/* =========================================================
+   Tesserakt-Geometrie (16/32/24/8) + Zellen→Humility-Achsen
+   ========================================================= */
+var VERTS=[];
+for(var vi=0;vi<16;vi++){VERTS.push([(vi&1)?1:-1,(vi&2)?1:-1,(vi&4)?1:-1,(vi&8)?1:-1]);}
+var TEDGES=[];
+for(var a=0;a<16;a++)for(var b=a+1;b<16;b++){var d=a^b;if((d&(d-1))===0)TEDGES.push([a,b]);}
+var AXIS_DEF=[
+ {axis:0,plus:{id:"B0",dim:"strukturell / anatomisch",fn:"Rollentrennung · irdische Schicht",json:"GATE_STATUS, TOPOLOGY",hue:"#a8895a",brief:"Rollen-Trennung (PRODUCER ≠ VALIDATOR), irdische Schicht"},
+        minus:{id:"B2",dim:"strukturell (Gegenrichtung)",fn:"Entry-vs-Live · Luftspalt",json:"TOPOLOGY.EXTERNAL_ENTRY",hue:"#a8895a",brief:"EXTERNAL_ENTRY ≠ SECOND_CANON"}},
+ {axis:1,plus:{id:"B3",dim:"neural-integrativ",fn:"Evidence-Pointer-Vollständigkeit · Scope-Guard",json:"current_research[], locator",hue:"#cfc8b8",brief:"Jeder Claim braucht Pointer; Scope-Guard gegen Claim-Drift"},
+        minus:{id:"B5",dim:"immuno-regulatorisch",fn:"Negative Evidence · Contradiction Tolerance",json:"not_proven[], negative_results[]",hue:"#7d9a7a",brief:"EI02 Negative Evidence, EI06 Contradiction Tolerance"}},
+ {axis:2,plus:{id:"B4",dim:"zirkulatorisch-metabolisch",fn:"Event-Ledger · Receipt-Fluss (append-only)",json:"material_events[], LAST_VERIFIED",hue:"#c4a574",brief:"Append-only Receipt-Fluss ohne Status-Sprung"},
+        minus:{id:"B6",dim:"epigenetisch-temporär",fn:"Reconstructability · Immutability",json:"EI01, EI03",hue:"#b07a52",brief:"Rekonstruierbarkeit + Unveränderlichkeit der Evidenzkette"}},
+ {axis:3,plus:{id:"B7",dim:"kohärenz-abstrakt (Residual)",fn:"Uncertainty · Claim-Ceiling UNTOUCHABLE",json:"claim_ceiling, PROMOTION",hue:"#d8ceba",brief:"EI05 Uncertainty + Ceiling als UNTOUCHABLE (EI05)"},
+        minus:{id:"B7′",dim:"kohärenz-residual (Gegen)",fn:"explizite Offenheit",json:"open_uncertainties[]",hue:"#d8ceba",brief:"Explizite offene Unsicherheiten bleiben sichtbar"}}
+];
+var CELLS=[];
+AXIS_DEF.forEach(function(def){
+  [["plus",1],["minus",-1]].forEach(function(pair){
+    var meta=def[pair[0]], sign=pair[1];
+    var idxs=[],e=[];
+    for(var i=0;i<16;i++){ if(VERTS[i][def.axis]===sign) idxs.push(i); }
+    for(var x=0;x<idxs.length;x++)for(var y=x+1;y<idxs.length;y++){var dd=idxs[x]^idxs[y];if((dd&(dd-1))===0)e.push([idxs[x],idxs[y]]);}
+    CELLS.push({axis:def.axis,sign:sign,id:meta.id,dim:meta.dim,fn:meta.fn,json:meta.json,hue:meta.hue,brief:meta.brief,verts:idxs,edges:e});
+  });
+});
+function cellBySign(axis,sign){for(var i=0;i<CELLS.length;i++){if(CELLS[i].axis===axis&&CELLS[i].sign===sign)return CELLS[i];}return null;}
+var PAIRS=[]; for(var pa=0;pa<4;pa++){PAIRS.push([cellBySign(pa,1),cellBySign(pa,-1)]);}
+
+/* --------- 4D-Rotation / Projektion --------- */
+function rotPlanes(v,r){
+  var x=v[0],y=v[1],z=v[2],w=v[3],t;
+  t=x*Math.cos(r.xy)-y*Math.sin(r.xy); y=x*Math.sin(r.xy)+y*Math.cos(r.xy); x=t;
+  t=x*Math.cos(r.xz)-z*Math.sin(r.xz); z=x*Math.sin(r.xz)+z*Math.cos(r.xz); x=t;
+  t=x*Math.cos(r.xw)-w*Math.sin(r.xw); w=x*Math.sin(r.xw)+w*Math.cos(r.xw); x=t;
+  t=y*Math.cos(r.yz)-z*Math.sin(r.yz); z=y*Math.sin(r.yz)+z*Math.cos(r.yz); y=t;
+  t=y*Math.cos(r.yw)-w*Math.sin(r.yw); w=y*Math.sin(r.yw)+w*Math.cos(r.yw); y=t;
+  t=z*Math.cos(r.zw)-w*Math.sin(r.zw); w=z*Math.sin(r.zw)+w*Math.cos(r.zw); z=t;
+  return [x,y,z,w];
+}
+function proj4to3(v,mode){
+  var x=v[0],y=v[1],z=v[2],w=v[3],d;
+  if(mode==="orthographic")return [x,y,z];
+  if(mode==="stereographic"){d=1-w; if(Math.abs(d)<0.08)d=0.08*(d<0?-1:1); return [x/d,y/d,z/d];}
+  if(mode==="schlegel"){d=2-w; return [x/d,y/d,z/d];}
+  if(mode==="double_perspective"){d=2.2-w;var p1=[x/d,y/d,z/d];var d2=2.4-p1[2];return [p1[0]/d2,p1[1]/d2,p1[2]/d2];}
+  /* perspective */ d=2.6-w; return [x/d,y/d,z/d];
+}
+function orbit3(p,rot){
+  var x=p[0],y=p[1],z=p[2],t;
+  t=x*Math.cos(rot.y)+z*Math.sin(rot.y); z=-x*Math.sin(rot.y)+z*Math.cos(rot.y); x=t;
+  t=y*Math.cos(rot.x)-z*Math.sin(rot.x); z=y*Math.sin(rot.x)+z*Math.cos(rot.x); y=t;
+  return [x,y,z];
+}
+
+/* --------- SHA-256 (pure JS, Fallback zu crypto.subtle) --------- */
+function rotr(x,n){return (x>>>n)|(x<<(32-n));}
+var SHA_K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+function sha256hex(msg){
+  var H=new Uint32Array([0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19]);
+  var l=msg.length,withOne=l+1,k=((56-withOne)%64+64)%64,total=withOne+k+8;
+  var m=new Uint8Array(total); m.set(msg); m[l]=0x80;
+  var bitLen=l*8, dv=new DataView(m.buffer);
+  dv.setUint32(total-8,Math.floor(bitLen/0x100000000)); dv.setUint32(total-4,bitLen>>>0);
+  var w=new Uint32Array(64),i,t;
+  for(i=0;i<total;i+=64){
+    for(t=0;t<16;t++)w[t]=dv.getUint32(i+t*4);
+    for(t=16;t<64;t++){
+      var s0=rotr(w[t-15],7)^rotr(w[t-15],18)^(w[t-15]>>>3);
+      var s1=rotr(w[t-2],17)^rotr(w[t-2],19)^(w[t-2]>>>10);
+      w[t]=(w[t-16]+s0+w[t-7]+s1)>>>0;
+    }
+    var a=H[0],b=H[1],c=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+    for(t=0;t<64;t++){
+      var S1=rotr(e,6)^rotr(e,11)^rotr(e,25), ch=(e&f)^((~e)&g);
+      var t1=(h+S1+ch+SHA_K[t]+w[t])>>>0;
+      var S0=rotr(a,2)^rotr(a,13)^rotr(a,22), maj=(a&b)^(a&c)^(b&c);
+      var t2=(S0+maj)>>>0;
+      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    H[0]=(H[0]+a)>>>0;H[1]=(H[1]+b)>>>0;H[2]=(H[2]+c)>>>0;H[3]=(H[3]+d)>>>0;H[4]=(H[4]+e)>>>0;H[5]=(H[5]+f)>>>0;H[6]=(H[6]+g)>>>0;H[7]=(H[7]+h)>>>0;
+  }
+  var out=""; for(i=0;i<8;i++)out+=("00000000"+H[i].toString(16)).slice(-8); return out;
+}
+function bytesOf(str){ return new TextEncoder().encode(str); }
+
+/* =========================================================
+   State
+   ========================================================= */
+var PROJ_MODES=["perspective","orthographic","stereographic","schlegel","double_perspective"];
+var PROJ_LABEL={perspective:"Perspektive",orthographic:"Orthographisch",stereographic:"Stereographisch",schlegel:"Schlegel",double_perspective:"Doppel-Perspektive"};
+var S={
+  view:"soft",
+  proj:0,
+  rot:{xy:0.36,xz:0.0,xw:0.18,yz:0.0,yw:0.0,zw:0.0},
+  cam:{x:-0.34,y:0.62},
+  zoom:1,
+  iso:false,
+  sel:0,               /* selected cell index */
+  hover:-1,
+  softLayer:true,
+  selectedClaim:"C01",
+  blows:[],
+  grade:"H2",
+  ceComplete:true,
+  live:{state:"INIT",objs:{}},
+  localStatus:{}       /* claimId -> status override from local blows */
+};
+var TAU=Math.PI*2;
+
+/* =========================================================
+   Live-Fetch + Hash-Verifikation
+   ========================================================= */
+function fetchTimeout(url,ms){
+  return new Promise(function(res,rej){
+    var c=new AbortController(); var to=setTimeout(function(){c.abort();},ms);
+    fetch(url,{cache:"no-store",signal:c.signal}).then(function(r){
+      clearTimeout(to); if(!r.ok)throw new Error("HTTP "+r.status); return r.arrayBuffer();
+    }).then(res).catch(rej);
+  });
+}
+function loadLive(){
+  var list=[["status",EMB.status],["live",EMB.live],["memory",EMB.memory]];
+  var done=0, ok=0;
+  var chip=$("#liveChip");
+  if(chip){ chip.className="chip is-warn"; chip.innerHTML='<span class="dot"></span>VERBINDUNG WIRD GEPRÜFT …'; }
+  list.forEach(function(p){
+    var key=p[0], meta=p[1];
+    var rec={url:meta.url,embeddedSha:meta.sha,doc:meta.doc,state:"EMBEDDED_SNAPSHOT",fetchedSha:null,match:null,error:null};
+    S.live.objs[key]=rec;
+    fetchTimeout(meta.url,7000).then(function(buf){
+      var bytes=new Uint8Array(buf);
+      var sha=sha256hex(bytes);
+      var txt=new TextDecoder("utf-8").decode(bytes);
+      rec.fetchedSha=sha; rec.state="LIVE";
+      try{rec.doc=JSON.parse(txt);}catch(e){rec.state="LIVE_PARSE_ERROR";}
+      rec.match=(sha===meta.sha);
+      ok++;
+    }).catch(function(err){
+      rec.state="CONNECTION_UNAVAILABLE";
+      rec.error=String((err&&err.message)||err||"fetch_failed");
+    })
+    .then(function(){
+      done++;
+      if(done===list.length){ finalizeLive(ok); }
+    });
+  });
+}
+function finalizeLive(ok){
+  var anyLive=ok>0;
+  S.live.state=anyLive?"LIVE":"CONNECTION_UNAVAILABLE";
+  renderStrip(); renderFooter(); renderInspector(); renderStage();
+  var note=$("#airgapNote");
+  if(note&&!anyLive){
+    note.textContent="Live-Statusabfragen nicht erreichbar — eingebetteter Snapshot (nicht autoritativ)";
+  }
+}
+
+/* =========================================================
+   Helpers
+   ========================================================= */
+function el(tag,cls,html){var e=document.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e;}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c];});}
+function statusOf(id){ return S.localStatus[id] || (CLAIMS.filter(function(c){return c.id===id;})[0]||{}).status || "PENDING"; }
+function shortSha(h){ return h? h.slice(0,12)+"…" : "—"; }
+function obj(key){ return (S.live.objs[key]&&S.live.objs[key].doc)||EMB[key].doc; }
+
+/* =========================================================
+   Header / Strip / Footer
+   ========================================================= */
+function renderStrip(){
+  var st=obj("status"), lv=obj("live"), mem=obj("memory");
+  var items=[
+    ["ceiling", st.claim_ceiling||"C1_DESCRIPTIVE_ONLY"],
+    ["promotion", String(st.promotion===undefined?false:st.promotion).toUpperCase()],
+    ["phase5", String(st.phase5_authorized===undefined?false:st.phase5_authorized).toUpperCase()],
+    ["live_class", lv.LIVE_CLASS||"—"],
+    ["canon", lv.CANONICAL_LIVE_VERSION||"—"],
+    ["evidence_allowed", (st.evidence_classes_allowed||[]).join(" / ")],
+    ["not_proven", String((st.not_proven||[]).length)+" Einträge"],
+    ["neg_results", String((mem.negative_results||[]).length)+" Einträge"],
+    ["last_verified", (lv.LAST_VERIFIED&&lv.LAST_VERIFIED.VERIFIED_AT)||"—"]
+  ];
+  var box=$("#statusStrip"); box.innerHTML="";
+  items.forEach(function(it){
+    box.appendChild(el("div","fs",'<span class="k">'+esc(it[0])+'</span><span class="v">'+esc(it[1])+'</span>'));
+  });
+  var chip=$("#liveChip");
+  if(!chip) return;
+  if(S.live.state==="LIVE"){ chip.className="chip is-ok"; chip.innerHTML='<span class="dot"></span>LIVE-FETCH · HASH BERECHNET'; }
+  else if(S.live.state==="CONNECTION_UNAVAILABLE"||S.live.state==="EMBEDDED_ONLY"){
+    chip.className="chip is-warn";
+    chip.innerHTML='<span class="dot"></span>OFFLINE / KEINE VERBINDUNG · EMBEDDED_SNAPSHOT';
+  }
+  else { chip.className="chip"; chip.innerHTML='<span class="dot"></span>LIVE · INIT'; }
+}
+function renderFooter(){
+  var rows=[["status",EMB.status],["live",EMB.live],["memory",EMB.memory]].map(function(p){
+    var r=S.live.objs[p[0]]||{};
+    var got=r.fetchedSha||null, exp=p[1].sha;
+    var verdict = got? (got===exp?"MATCH_EMBEDDED":"DIFFERS_FROM_EMBEDDED") : "NICHT_GEFETCHT·SNAPSHOT";
+    return esc(p[0].toUpperCase())+" "+esc(shortSha(exp))+" · "+esc(verdict);
+  });
+  $("#footHashes").innerHTML=rows.join("<br>");
+}
+
+/* =========================================================
+   Rail: Views, Projektion, Rotation, Radar
+   ========================================================= */
+var VIEWS=[
+  {id:"soft",label:"Soft",dc:"KÖRPER",icon:'<circle cx="12" cy="12" r="8"/>'},
+  {id:"hard",label:"Hard",dc:"EVIDENZ",icon:'<path d="M4 7h16M4 12h16M4 17h10"/>'},
+  {id:"dual",label:"Dual",dc:"LUFTSPALT",icon:'<path d="M12 3v18M5 7h4M5 12h4M5 17h4M15 7h4M15 12h4M15 17h4"/>'},
+  {id:"attack",label:"Angriff",dc:"RED-TEAM",icon:'<path d="M14 4l6 6-9 9H5v-6z"/>'}
+];
+function renderViewNav(){
+  var box=$("#viewNav"); box.innerHTML="";
+  VIEWS.forEach(function(v){
+    var b=el("button","viewbtn",'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">'+v.icon+'</svg><span class="lbl">'+esc(v.label)+'</span><span class="dc">'+esc(v.dc)+'</span>');
+    b.type="button"; b.setAttribute("aria-pressed", String(S.view===v.id));
+    b.addEventListener("click",function(){ setView(v.id); });
+    box.appendChild(b);
+  });
+}
+function renderProj(){
+  var box=$("#projBtns"); box.innerHTML="";
+  PROJ_MODES.forEach(function(m,i){
+    var b=el("button","mbtn",esc(PROJ_LABEL[m]));
+    b.type="button"; b.title=m; b.setAttribute("aria-pressed",String(S.proj===i));
+    b.addEventListener("click",function(){ S.proj=i; renderProj(); loopOnce(); });
+    box.appendChild(b);
+  });
+  var iso=$("#isoBtn"); iso.setAttribute("aria-pressed",String(S.iso));
+  iso.onclick=function(){ S.iso=!S.iso; renderProj(); if(S.iso)requestAnimationFrame(loopOnce); };
+}
+function renderRot(){
+  var box=$("#rotControls"); box.innerHTML="";
+  [["xy","XY"],["xz","XZ"],["xw","XW"],["yz","YZ"],["yw","YW"],["zw","ZW"]].forEach(function(p){
+    var wrap=el("div","ctl");
+    var lab=el("label",null,'<span>'+p[1]+"</span><span>"+S.rot[p[0]].toFixed(2)+" rad</span>");
+    var r=el("input"); r.type="range"; r.min="-3.15"; r.max="3.15"; r.step="0.01"; r.value=S.rot[p[0]];
+    r.setAttribute("aria-label","Rotation "+p[1]);
+    r.addEventListener("input",function(){ S.rot[p[0]]=parseFloat(r.value); lab.lastChild.textContent=S.rot[p[0]].toFixed(2)+" rad"; });
+    wrap.appendChild(lab); wrap.appendChild(r); box.appendChild(wrap);
+  });
+}
+
+/* Humility Score – messbare Metrik, transparente Inputs */
+function computeHumility(){
+  var st=obj("status"), mem=obj("memory");
+  var neg=(mem.negative_results||[]).length + (st.not_proven||[]).length;
+  var openU=(mem.open_uncertainties||[]).length;
+  var totalClaims=CLAIMS.length;
+  var machineFalsifiers=0; /* claim-index führt deskriptive Residuen, keine maschinenlesbaren Kriterien */
+  var metaIdentified=2; var metaInIndex=2;
+  var d1= neg+openU ? neg/(neg+openU) : 0;
+  var d2= totalClaims? 0/totalClaims : 0;   /* externe Reproduktions-Receipts: keine */
+  var d3= totalClaims? machineFalsifiers/totalClaims : 0;
+  var d4= metaIdentified? metaInIndex/metaIdentified : 0;
+  var d5= (st.claim_ceiling==="C1_DESCRIPTIVE_ONLY")?1:0;
+  return {dims:[
+      {name:"Negative-Evidence-Coverage",v:d1,hint:neg+" neg. / "+openU+" offen"},
+      {name:"Independent-Reproduction-Rate",v:d2,hint:"0 externe Receipts"},
+      {name:"Falsifiability-Index",v:d3,hint:"0 maschinenlesbare Kriterien"},
+      {name:"Meta-Attack-Surface",v:d4,hint:metaInIndex+" / "+metaIdentified+" im Index"},
+      {name:"Ceiling-Respect",v:d5,hint:"Ceiling unangetastet"}
+    ], mean:(d1+d2+d3+d4+d5)/5};
+}
+function renderRadar(){
+  var h=computeHumility(), svg=$("#radar");
+  var cx=100,cy=95,R=68, n=5, pts=[];
+  function pt(i,r){var ang=-Math.PI/2 + i*TAU/n; return [cx+Math.cos(ang)*r, cy+Math.sin(ang)*r];}
+  var s='';
+  [0.25,0.5,0.75,1].forEach(function(f){
+    var p=[]; for(var i=0;i<n;i++){var q=pt(i,R*f);p.push(q[0].toFixed(1)+","+q[1].toFixed(1));}
+    s+='<polygon points="'+p.join(" ")+'" fill="none" stroke="var(--border)" stroke-width="1"/>';
+  });
+  for(var i=0;i<n;i++){var q=pt(i,R); s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+q[0].toFixed(1)+'" y2="'+q[1].toFixed(1)+'" stroke="var(--border)" stroke-width="1"/>';}
+  var poly=[]; h.dims.forEach(function(d,i){var q=pt(i,R*Math.max(0.02,d.v)); poly.push(q[0].toFixed(1)+","+q[1].toFixed(1));});
+  s+='<polygon points="'+poly.join(" ")+'" fill="rgba(168,137,90,0.22)" stroke="var(--bronze)" stroke-width="1.4"/>';
+  h.dims.forEach(function(d,i){var q=pt(i,R*Math.max(0.02,d.v)); s+='<circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="2.2" fill="var(--accent)"/>';});
+  s+='<text x="'+cx+'" y="'+(cy+4)+'" text-anchor="middle" font-family="var(--mono)" font-size="17" fill="var(--fg)">'+h.mean.toFixed(2)+'</text>';
+  s+='<text x="'+cx+'" y="'+(cy+18)+'" text-anchor="middle" font-family="var(--mono)" font-size="7.5" letter-spacing="1.5" fill="var(--subtle)">MEAN · C1</text>';
+  svg.innerHTML=s;
+  var list=$("#dimList"); list.innerHTML="";
+  h.dims.forEach(function(d){
+    var row=el("div","dl",'<div><div>'+esc(d.name)+'</div><div class="bar"><i style="width:'+(d.v*100).toFixed(0)+'%"></i></div></div><div class="num">'+d.v.toFixed(2)+'</div>');
+    row.title=d.hint; list.appendChild(row);
+  });
+  $("#humNote").textContent="Vorschlags-Metrik · Inputs sichtbar · bewusst niedrig gehalten, solange externe Red-Teams und unabhängige Reproduktionen fehlen. Jede Aussage über den Score ist selbst angreifbar.";
+}
+
+/* =========================================================
+   Stage
+   ========================================================= */
+function setView(v){
+  S.view=v; renderViewNav(); renderStage(); renderInspector(); $("#projSec").style.display=(v==="soft"||v==="dual")?"":"none";
+}
+function renderStage(){
+  var body=$("#stageBody"); body.innerHTML="";
+  if(S.view==="soft"||S.view==="dual") buildCanvasView(body, S.view==="dual");
+  else if(S.view==="hard") buildHardView(body);
+  else buildAttackView(body);
+  var t={soft:["Soft-View","SYMBOLIC_SOFT_LAYER · NOT_EVIDENCE"],dual:["Dual-View","SOFT ↔ HARD · LUFTSPALT"],hard:["Hard-View","STATUSMASCHINE · EVIDENCE-GRAPH · CLAIM-INDEX"],attack:["Angriff / Red-Team","SLEDGEHAMMER · BLOW-ENGINE"]}[S.view];
+  $("#stageTitle").textContent=t[0]; $("#stageSub").textContent=t[1];
+}
+
+/* ----- Canvas: Tesserakt ----- */
+var cv,ctx,dpr,W=1,Hh=1;
+function buildCanvasView(body,dual){
+  var wrap=el("div"); wrap.style.position="absolute"; wrap.style.inset="0";
+  wrap.innerHTML='<canvas id="tess" role="img" aria-label="Tesserakt mit 8 Zellen als Humility-Achsen"></canvas>';
+  body.appendChild(wrap);
+  if(S.softLayer){
+    wrap.insertAdjacentHTML("beforeend",
+      '<div class="softlayer" aria-hidden="true">'+softFigure("anatomisch",false)+softFigure("digital-vernetzt",true)+
+      '<div class="cap">SYMBOLIC_SOFT_LAYER · NOT_EVIDENCE · Opacity ≤ 0.2</div></div>');
+  }
+  wrap.insertAdjacentHTML("beforeend",'<div class="projbadge" id="projBadge"></div>');
+  var lg='<div class="legend">';
+  AXIS_DEF.forEach(function(a){ lg+='<div class="li"><span class="sw2" style="background:'+a.plus.hue+'"></span>'+esc(a.plus.id)+" "+esc(a.minus.id)+" · "+esc(a.plus.dim.split(" ")[0])+"</div>"; });
+  lg+='</div>';
+  wrap.insertAdjacentHTML("beforeend",lg);
+  cv=$("#tess"); ctx=cv.getContext("2d");
+  resizeCanvas();
+  if(dual) buildDualPanel(body);
+  requestAnimationFrame(loopOnce);
+  bindCanvas();
+}
+function softFigure(label,digital){
+  var base='<path d="M100 40 v190 M100 66 C64 88 58 122 58 158 M100 66 C136 88 142 122 142 158 M100 132 L74 268 M100 132 L126 268" />';
+  var head='<circle cx="100" cy="34" r="19"/>';
+  if(digital){
+    var nodes="";
+    var pts=[[100,34],[100,70],[100,132],[58,158],[142,158],[74,268],[126,268]];
+    /* deterministisches Netzwerk statt Zufall (reproduzierbar) */
+    var conn=[[0,1],[1,2],[2,3],[2,4],[3,5],[4,6],[1,3],[1,4],[2,5],[2,6],[3,4]];
+    conn.forEach(function(c){ nodes+='<line x1="'+pts[c[0]][0]+'" y1="'+pts[c[0]][1]+'" x2="'+pts[c[1]][0]+'" y2="'+pts[c[1]][1]+'" opacity="0.35"/>'; });
+    pts.forEach(function(p){ nodes+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.2"/>'; });
+    return '<svg viewBox="0 0 200 300" fill="none" stroke="#cfc8b8" stroke-width="1.2">'+head+base+nodes+'</svg>';
+  }
+  return '<svg viewBox="0 0 200 300" fill="none" stroke="#cfc8b8" stroke-width="1.2">'+head+base+'<path d="M70 300 h60" opacity="0.4"/></svg>';
+}
+function resizeCanvas(){
+  if(!cv)return; var r=cv.getBoundingClientRect();
+  dpr=Math.min(window.devicePixelRatio||1,2);
+  W=Math.max(320,r.width); Hh=Math.max(320,r.height);
+  cv.width=W*dpr; cv.height=Hh*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+window.addEventListener("resize",function(){ resizeCanvas(); if(ctx)loopOnce(); });
+
+function projectPoint(v4){
+  var rotated=rotPlanes(v4,S.rot);
+  var p3=proj4to3(rotated,PROJ_MODES[S.proj]);
+  var p=orbit3(p3,S.cam);
+  var scale=Math.min(W,Hh)*0.16*S.zoom;
+  var persp=1/(1+0.16*(p[2]+0.6));
+  return [W/2+p[0]*scale*persp, Hh/2-p[1]*scale*persp, p[2]];
+}
+function depthAlpha(z,min,max){ var t=(z-min)/Math.max(0.0001,(max-min)); return 0.32+0.68*Math.max(0,Math.min(1,t)); }
+
+function loopOnce(){
+  if(!ctx) return;
+  if(S.iso){ S.rot.xy=(S.rot.xy+0.006)%TAU; S.rot.zw=(S.rot.zw+0.006)%TAU; }
+  ctx.clearRect(0,0,W,Hh);
+  /* projizierte Vertices */
+  var P=VERTS.map(projectPoint);
+  var zs=P.map(function(p){return p[2];});
+  var zmin=Math.min.apply(null,zs), zmax=Math.max.apply(null,zs);
+  /* Zellzentren */
+  var CC=CELLS.map(function(c){
+    var c4=[0,0,0,0]; c4[c.axis]=c.sign; return projectPoint(c4);
+  });
+  /* duale Paarlinien */
+  ctx.save(); ctx.setLineDash([3,4]); ctx.lineWidth=1; ctx.strokeStyle="rgba(154,152,144,0.35)";
+  PAIRS.forEach(function(pr){
+    var i=CELLS.indexOf(pr[0]), j=CELLS.indexOf(pr[1]);
+    ctx.beginPath(); ctx.moveTo(CC[i][0],CC[i][1]); ctx.lineTo(CC[j][0],CC[j][1]); ctx.stroke();
+  });
+  ctx.restore();
+  /* globale Tesserakt-Kanten (Ereignis-Übergänge) */
+  ctx.lineWidth=1;
+  TEDGES.forEach(function(e){
+    var a=P[e[0]], b=P[e[1]];
+    var al=depthAlpha((a[2]+b[2])/2,zmin,zmax);
+    ctx.strokeStyle="rgba(207,200,184,"+(0.10+0.22*al).toFixed(3)+")";
+    ctx.beginPath(); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); ctx.stroke();
+  });
+  /* Zell-Wireframes */
+  CELLS.forEach(function(c,ci){
+    var sel=(ci===S.sel), hov=(ci===S.hover);
+    var col=c.hue;
+    /* Flächen der gewählten Zelle füllen */
+    if(sel||hov){
+      var faces=cubeFaces(c);
+      ctx.globalAlpha = sel? 0.14 : 0.08;
+      ctx.fillStyle=col;
+      faces.forEach(function(f){
+        var q=f.map(function(k){return P[k];});
+        ctx.beginPath(); ctx.moveTo(q[0][0],q[0][1]); for(var t=1;t<4;t++)ctx.lineTo(q[t][0],q[t][1]); ctx.closePath(); ctx.fill();
+      });
+      ctx.globalAlpha=1;
+    }
+    ctx.lineWidth=sel?1.6:(hov?1.3:1);
+    ctx.strokeStyle=col;
+    ctx.globalAlpha=sel?0.95:(hov?0.6:0.16);
+    c.edges.forEach(function(e){
+      var a=P[e[0]], b=P[e[1]];
+      ctx.beginPath(); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); ctx.stroke();
+    });
+    ctx.globalAlpha=1;
+  });
+  /* Vertices = Events */
+  P.forEach(function(p){
+    var al=depthAlpha(p[2],zmin,zmax);
+    ctx.beginPath(); ctx.arc(p[0],p[1],1.6+1.4*al,0,TAU);
+    ctx.fillStyle="rgba(236,234,228,"+(0.25+0.55*al).toFixed(3)+")"; ctx.fill();
+  });
+  /* Label der gewählten Zelle */
+  var sc=CC[S.sel];
+  ctx.font="500 11px 'IBM Plex Mono', monospace";
+  var lbl=CELLS[S.sel].id+" · "+CELLS[S.sel].dim;
+  var tw=ctx.measureText(lbl).width;
+  ctx.fillStyle="rgba(12,12,11,0.72)";
+  ctx.fillRect(sc[0]+10,sc[1]-16,tw+12,18);
+  ctx.strokeStyle="#3a3932"; ctx.lineWidth=1; ctx.strokeRect(sc[0]+10,sc[1]-16,tw+12,18);
+  ctx.fillStyle="#cfc8b8"; ctx.fillText(lbl,sc[0]+16,sc[1]-3);
+  ctx.beginPath(); ctx.arc(sc[0],sc[1],3,0,TAU); ctx.fillStyle=CELLS[S.sel].hue; ctx.fill();
+  var badge=$("#projBadge");
+  if(badge) badge.textContent="PROJEKTION: "+PROJ_MODES[S.proj].toUpperCase()+" · PROJECTION_ONLY · NO_STATUS"+(S.iso?" · ISOKLIN":"");
+  if(S.iso) requestAnimationFrame(loopOnce);
+}
+function cubeFaces(c){
+  /* 6 Flächen der Zelle: je eine der drei freien Koordinaten auf ±1 fixiert */
+  var free=[0,1,2,3].filter(function(k){return k!==c.axis;});
+  var faces=[];
+  free.forEach(function(ax){
+    [1,-1].forEach(function(sgn){
+      var f=c.verts.filter(function(i){return VERTS[i][ax]===sgn;});
+      if(f.length===4){
+        /* Reihenfolge der 4 Vertices entlang der Kanten sortieren */
+        var order=[f[0]], rest=f.slice(1);
+        while(rest.length){
+          var cur=order[order.length-1], found=-1;
+          for(var t=0;t<rest.length;t++){var dd=cur^rest[t]; if((dd&(dd-1))===0){found=t;break;}}
+          if(found<0)break; order.push(rest.splice(found,1)[0]);
+        }
+        if(order.length===4)faces.push(order);
+      }
+    });
+  });
+  return faces;
+}
+function bindCanvas(){
+  var drag=false,lx=0,ly=0,moved=0;
+  cv.addEventListener("pointerdown",function(e){ drag=true; lx=e.clientX; ly=e.clientY; moved=0; if(cv.setPointerCapture&&e.pointerId!=null){try{cv.setPointerCapture(e.pointerId);}catch(_e){}} });
+  cv.addEventListener("pointermove",function(e){
+    var r=cv.getBoundingClientRect(), mx=e.clientX-r.left, my=e.clientY-r.top;
+    if(drag){
+      var dx=e.clientX-lx, dy=e.clientY-ly; lx=e.clientX; ly=e.clientY; moved+=Math.abs(dx)+Math.abs(dy);
+      S.cam.y+=dx*0.006; S.cam.x+=dy*0.006;
+      S.cam.x=Math.max(-1.4,Math.min(1.4,S.cam.x));
+      loopOnce(); return;
+    }
+    var best=-1,bd=1e9;
+    for(var i=0;i<CELLS.length;i++){
+      var c4=[0,0,0,0]; c4[CELLS[i].axis]=CELLS[i].sign;
+      var p=projectPoint(c4); var d=Math.hypot(p[0]-mx,p[1]-my);
+      if(d<bd){bd=d;best=i;}
+    }
+    var hv=(bd<34)?best:-1;
+    if(hv!==S.hover){ S.hover=hv; renderInspector(); }
+    cv.style.cursor=hv>=0?"pointer":"grab";
+  });
+  cv.addEventListener("pointerup",function(e){
+    drag=false;
+    if(moved>4) return;
+    var r=cv.getBoundingClientRect(), mx=e.clientX-r.left, my=e.clientY-r.top, best=-1,bd=1e9;
+    for(var i=0;i<CELLS.length;i++){
+      var c4=[0,0,0,0]; c4[CELLS[i].axis]=CELLS[i].sign;
+      var p=projectPoint(c4); var d=Math.hypot(p[0]-mx,p[1]-my);
+      if(d<bd){bd=d;best=i;}
+    }
+    if(bd<34 && best>=0){ S.sel=best; renderInspector(); loopOnce(); }
+  });
+  cv.addEventListener("wheel",function(e){ e.preventDefault(); S.zoom=Math.max(0.5,Math.min(2.6,S.zoom*(e.deltaY<0?1.08:0.93))); loopOnce(); },{passive:false});
+}
+function buildDualPanel(body){
+  var p=el("div","domwrap");
+  p.style.position="absolute"; p.style.right="12px"; p.style.top="12px";
+  p.style.width="min(320px, 86%)"; p.style.maxHeight="calc(100% - 24px)"; p.style.overflow="auto";
+  p.innerHTML='<div class="divider-air">LUFTSPALT · KEIN AUTOMATISCHER ÜBERGANG</div>'+
+    '<div class="panel"><h3>Hard-Seite (Projektion)</h3><p class="lead">Die Hard-Seite lädt aus dem Live-SOT. Soft benennt, Hard hält angreifbar.</p>'+
+    '<div class="kv" id="dualKv"></div></div>';
+  body.appendChild(p);
+  var kv=$("#dualKv");
+  var st=obj("status"), mem=obj("memory");
+  [["claim_ceiling",st.claim_ceiling],["promotion",String(st.promotion)],
+   ["evidence_allowed",(st.evidence_classes_allowed||[]).join(", ")],
+   ["negative_results",(mem.negative_results||[]).length+" explizit"],
+   ["epistemic_walls",String(((obj("live").EPISTEMIC_WALLS)||[]).length)+" aktiv"]].forEach(function(r){
+    kv.appendChild(el("div","r",'<span class="k">'+esc(r[0])+'</span><span class="v">'+esc(r[1])+'</span>'));
+  });
+}
+
+/* ----- Hard view ----- */
+function buildHardView(body){
+  cv=null;ctx=null;
+  var d=el("div","domwrap");
+  d.innerHTML=
+   '<section class="panel"><h3>Statusmaschine</h3><p class="lead">'+esc(KERNEL.rule)+' Kein impliziter Übergang. SOURCE_PRESENT ist nicht BUILD_VERIFIED. BUILD_VERIFIED ist nicht Wahrheit.</p>'+
+   '<div class="sm" id="smList"></div></section>'+
+   '<section class="panel"><h3>Evidence-Graph (Stemma)</h3><p class="lead">Append-only, content-addressed. Kanten behaupten keine bewiesene Priorität. Commentary promoviert nie automatisch.</p><div class="graphbox">'+graphSVG()+'</div></section>'+
+   '<section class="panel"><h3>Claim-Index</h3><p class="lead">Jeder Claim ist dem Hammer unterworfen. UNTOUCHABLE gilt nur für die Claim-Ceiling selbst.</p><div class="claims" id="claimListHard"></div></section>'+
+   '<section class="panel"><h3>Failure-Mode-Injektion</h3><p class="lead">Die Tests prüfen Claim-Drift, nicht mathematische Richtigkeit. 4/4 quarantiniert.</p><div class="row" id="fmCards"></div></section>';
+  body.appendChild(d);
+  var sm=$("#smList"), reached={}; KERNEL.reached.forEach(function(s){reached[s]=true;});
+  KERNEL.status_machine.forEach(function(s,i){
+    var on=!!reached[s];
+    sm.appendChild(el("div","smrow"+(on?" on":""),'<span class="n">'+String(i+1).padStart(2,"0")+'</span><span class="s">'+esc(s)+'</span><span class="st">'+(on?"GEBUNDEN":"NICHT BELEGT")+'</span>'));
+  });
+  var cl=$("#claimListHard");
+  CLAIMS.forEach(function(c){
+    var b=el("button","claim",'<span class="id">'+esc(c.id)+'</span><span class="tx">'+esc(c.text)+'</span><span class="tags"><span class="mk g-'+esc(c.grade)+'">'+esc(c.grade)+'</span><span class="mk s-'+esc(statusOf(c.id))+'">'+esc(statusOf(c.id))+'</span></span>');
+    b.type="button"; b.setAttribute("aria-pressed",String(S.selectedClaim===c.id));
+    b.addEventListener("click",function(){ S.selectedClaim=c.id; renderStage(); renderInspector(); });
+    cl.appendChild(b);
+  });
+  var fm=$("#fmCards");
+  KERNEL.failures.forEach(function(f){
+    fm.appendChild(el("div","lrow",'<div class="top"><span class="rid">'+esc(f.id)+'</span><span class="mk s-SURVIVED">PASS</span></div><div class="res mono">'+esc(f.obs)+'</div>'));
+  });
+}
+function graphSVG(){
+  var W2=720,H2=280;
+  var nodes={ "CÓRDOBA_MARTÍNEZ_ZOROA":[360,44], "W2_BUCKMASTER":[180,158], "W1_OPENAI":[540,158] };
+  var s='<svg viewBox="0 0 720 280" role="img" aria-label="Evidence-Graph W1 W2">';
+  GRAPH.edges.forEach(function(e){
+    var a=nodes[e.from], b=nodes[e.to]; if(!a||!b)return;
+    var contested=/contested/.test(e.status);
+    s+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="'+(contested?"var(--danger)":"var(--bronze)")+'" stroke-width="1.2"'+(contested?' stroke-dasharray="5 4"':"")+'/>';
+  });
+  s+='<line x1="360" y1="72" x2="180" y2="122" stroke="var(--line)" stroke-width="1"/>';
+  s+='<line x1="360" y1="72" x2="540" y2="122" stroke="var(--line)" stroke-width="1"/>';
+  s+='<line x1="180" y1="188" x2="180" y2="232" stroke="var(--line)"/>';
+  s+='<line x1="540" y1="188" x2="540" y2="232" stroke="var(--line)"/>';
+  var boxes={ "CÓRDOBA_MARTÍNEZ_ZOROA":[260,14,200,52,"Córdoba–Martínez-Zoroa","methodischer Vorläufer"],
+              "W2_BUCKMASTER":[70,118,220,70,"W2 Buckmaster / Alpège","forced Euler · STATIC_AUDIT"],
+              "W1_OPENAI":[430,118,220,70,"W1 OpenAI","mixed NS/Euler · STATIC_AUDIT"] };
+  Object.keys(boxes).forEach(function(k){
+    var b=boxes[k];
+    s+='<rect x="'+b[0]+'" y="'+b[1]+'" width="'+b[2]+'" height="'+b[3]+'" rx="8" fill="var(--elevated)" stroke="var(--line)"/>';
+    s+='<text x="'+(b[0]+b[2]/2)+'" y="'+(b[1]+24)+'" text-anchor="middle" fill="var(--fg)" font-size="12" font-family="IBM Plex Sans">'+esc(b[4])+'</text>';
+    s+='<text x="'+(b[0]+b[2]/2)+'" y="'+(b[1]+42)+'" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Mono">'+esc(b[5])+'</text>';
+  });
+  s+='<text x="360" y="150" text-anchor="middle" fill="var(--danger)" font-size="9" font-family="IBM Plex Mono">contested · not established</text>';
+  s+='<rect x="210" y="232" width="300" height="38" rx="8" fill="var(--surface)" stroke="var(--border)"/>';
+  s+='<text x="360" y="256" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans">Transmission · commits · toolchains · logs</text>';
+  s+='</svg>';
+  return s;
+}
+
+/* ----- Attack view ----- */
+function buildAttackView(body){
+  cv=null;ctx=null;
+  var d=el("div","domwrap");
+  d.innerHTML=
+   '<section class="panel"><h3>Schlag ausführen</h3><p class="lead">Der Hammer prüft Claim-Drift, erzeugt aber keinen Beweis. Grades H2–H4 erfordern <span class="mono">counter_evidence_complete</span>; H4 erfordert vorherige Blows gegen dasselbe Ziel.</p>'+
+   '<div class="field"><label for="claimSel">Ziel-Claim</label><select id="claimSel"></select></div>'+
+   '<div class="field"><label for="gradeSel">Blow-Grade</label><select id="gradeSel"><option>H1</option><option selected>H2</option><option>H3</option><option>H4</option></select></div>'+
+   '<button class="switch" id="ceBtn" aria-pressed="true" type="button"><span class="sw"></span><span class="tki">counter_evidence_complete</span></button>'+
+   '<div class="row" style="margin-top:12px"><button class="btn primary" id="runBlow">Schlag ausführen</button><button class="btn ghost" id="clearBlows">Ledger leeren</button></div>'+
+   '<div id="blowOut"></div></section>'+
+   '<section class="panel"><h3>Blow-Ledger (append-only)</h3><p class="lead">Lokale Simulation · dieses Artefakt autorisiert nichts. Receipts tragen keinen autoritativen Status.</p><div class="ledger" id="ledgerList"></div></section>';
+  body.appendChild(d);
+  var sel=$("#claimSel");
+  CLAIMS.forEach(function(c){ var o=el("option",null,esc(c.id)+" — "+esc(c.text.slice(0,58))); o.value=c.id; sel.appendChild(o); });
+  sel.value=S.selectedClaim; sel.addEventListener("change",function(){ S.selectedClaim=sel.value; renderInspector(); });
+  $("#gradeSel").value=S.grade; $("#gradeSel").addEventListener("change",function(){ S.grade=this.value; });
+  var ce=$("#ceBtn"); ce.setAttribute("aria-pressed",String(S.ceComplete));
+  ce.addEventListener("click",function(){ S.ceComplete=!S.ceComplete; ce.setAttribute("aria-pressed",String(S.ceComplete)); });
+  $("#runBlow").addEventListener("click",runBlow);
+  $("#clearBlows").addEventListener("click",function(){ S.blows=[]; S.localStatus={}; renderStage(); renderInspector(); });
+  renderLedger();
+}
+function validateBlow(claim,grade,ce){
+  var errs=[];
+  if(!claim)errs.push("Kein Ziel-Claim.");
+  if((grade==="H2"||grade==="H3"||grade==="H4")&&!ce)errs.push(grade+" erfordert counter_evidence_complete.");
+  if(grade==="H4"){ var prior=S.blows.filter(function(b){return b.claim_id===claim.id;}).length; if(!prior)errs.push("H4 ohne vorherigen H1–H3 gegen dasselbe Ziel (verboten außer Schutzobjekt-Verstoß)."); }
+  return errs;
+}
+function shakeStatus(current){
+  if(current==="UNTOUCHABLE")return "UNTOUCHABLE";
+  if(current==="SURVIVED")return "WEAKENED";
+  if(current==="WEAKENED")return "DESTROYED";
+  if(current==="DESTROYED")return "DESTROYED";
+  return "WEAKENED";
+}
+function runBlow(){
+  var claim=CLAIMS.filter(function(c){return c.id===S.selectedClaim;})[0];
+  var grade=S.grade, ce=S.ceComplete;
+  var errs=validateBlow(claim,grade,ce);
+  var out=$("#blowOut");
+  if(errs.length){
+    out.innerHTML='<div class="receipt"><b>BLOW REJECTED</b>\n'+errs.map(function(e){return "- "+esc(e);}).join("\n")+'\n\nclaim_status: '+esc(statusOf(claim.id))+'</div>';
+    return;
+  }
+  var cur=statusOf(claim.id);
+  var next = cur==="UNTOUCHABLE" ? "UNTOUCHABLE" : shakeStatus(cur);
+  var residue = cur==="UNTOUCHABLE"
+      ? "Schutzobjekt: Claim-Ceiling ist UNTOUCHABLE. Der Hammer darf die Ceiling nicht anheben – der Blow prallt ab."
+      : (claim.residue || "Kategorieprüfung: kein Status-Sprung ohne eigenen Evidence-Pointer.");
+  var rec={
+    object:"NEXUS_SLEDGEHAMMER_BLOW_20260904_R1",
+    blow_id:"BLOW-"+claim.id+"-R"+(S.blows.length+1),
+    timestamp:new Date().toISOString(),
+    target_claim:claim.text,
+    target_claim_hash:"sha256:"+sha256hex(bytesOf(claim.text)).slice(0,32),
+    claim_source:claim.src,
+    blow_grade:grade,
+    counter_evidence:[{type:"receipt",ref:claim.ev,sha256:"sha256:"+sha256hex(bytesOf(claim.ev)).slice(0,32)}],
+    counter_evidence_complete:ce,
+    residue:residue,
+    residue_hash:"sha256:"+sha256hex(bytesOf(residue)).slice(0,32),
+    claim_status:next,
+    claim_ceiling:"C1_DESCRIPTIVE_ONLY",
+    claim_id:claim.id,
+    local_simulation:true
+  };
+  S.blows.push(rec); S.localStatus[claim.id]=next;
+  out.innerHTML='<div class="receipt"><b>'+esc(rec.blow_id)+'</b>  ['+esc(rec.blow_grade)+']\n'+
+    'target: '+esc(claim.id)+'\n'+
+    'target_claim_hash: '+esc(rec.target_claim_hash)+'\n'+
+    'counter_evidence_complete: '+esc(String(ce))+'\n'+
+    'residue: '+esc(rec.residue)+'\n'+
+    'residue_hash: '+esc(rec.residue_hash)+'\n'+
+    'claim_status: '+esc(cur)+' → <b>'+esc(next)+'</b>\n'+
+    'claim_ceiling: C1_DESCRIPTIVE_ONLY · local_simulation: true</div>';
+  renderLedger(); renderInspector();
+}
+function renderLedger(){
+  var box=$("#ledgerList"); if(!box)return; box.innerHTML="";
+  if(!S.blows.length){ box.appendChild(el("div","empty","Kein Receipt. Der Hammer erzeugt keinen Beweis.")); return; }
+  S.blows.slice().reverse().forEach(function(b){
+    box.appendChild(el("div","lrow",'<div class="top"><span class="rid">'+esc(b.blow_id)+'</span><span class="mk g-'+esc(b.blow_grade)+'">'+esc(b.blow_grade)+'</span><span class="mk s-'+esc(b.claim_status)+'">'+esc(b.claim_status)+'</span></div><div class="res">'+esc(b.residue)+'</div>'));
+  });
+}
+
+/* =========================================================
+   Inspector (rechte Spalte)
+   ========================================================= */
+function renderInspector(){
+  var box=$("#inspector"); box.innerHTML="";
+  if(S.view==="soft"||S.view==="dual") inspSoft(box);
+  else if(S.view==="hard") inspHard(box);
+  else inspAttack(box);
+}
+function axisList(activeIdx){
+  var box=el("div","kv");
+  CELLS.forEach(function(c,i){
+    var b=el("button","axisrow",'<span class="chip2" style="background:'+c.hue+'"></span><span class="bid">'+esc(c.id)+'</span><span class="dim">'+esc(c.dim)+'</span>');
+    b.type="button"; b.setAttribute("aria-pressed",String(i===activeIdx));
+    b.addEventListener("click",function(){ S.sel=i; renderInspector(); if(cv)loopOnce(); });
+    box.appendChild(b);
+  });
+  return box;
+}
+function inspSoft(box){
+  var c=CELLS[S.sel];
+  box.appendChild(el("div",null,'<h2 class="tk" style="color:var(--subtle);margin:0 0 10px">Zelle / Humility-Achse</h2>'));
+  var kv=el("div","kv");
+  [["id",c.id],["dimension",c.dim],["funktion",c.fn],["JSON-Bindung",c.json],["dual", (function(){var pr=PAIRS[c.axis]; return pr[0].id+" ↔ "+pr[1].id;})()]]
+   .forEach(function(r){ kv.appendChild(el("div","r",'<span class="k">'+esc(r[0])+'</span><span class="v">'+esc(r[1])+'</span>')); });
+  box.appendChild(kv);
+  box.appendChild(el("p","note",esc(c.brief)));
+  box.appendChild(el("div","rule","Mapping ist strukturell-kombinatorisch, nicht kausal. Rotation/Projektion sind <span class=\"mono\">PROJECTION_ONLY</span> und erzeugen keinen Status."));
+  box.appendChild(el("h2","tk","<span style=\"color:var(--subtle)\">8 Zellen → 8 Achsen</span>"));
+  box.appendChild(axisList(S.sel));
+  var sw=el("button","switch",'<span class="sw"></span><span class="tki">SYMBOLIC_SOFT_LAYER anzeigen</span>');
+  sw.type="button"; sw.setAttribute("aria-pressed",String(S.softLayer));
+  sw.addEventListener("click",function(){ S.softLayer=!S.softLayer; renderStage(); renderInspector(); });
+  box.appendChild(sw);
+}
+function inspHard(box){
+  var c=CLAIMS.filter(function(x){return x.id===S.selectedClaim;})[0]||CLAIMS[0];
+  box.appendChild(el("h2","tk","<span style=\"color:var(--subtle)\">Claim-Detail</span>"));
+  box.appendChild(el("div","kv",
+    '<div class="r"><span class="k">id</span><span class="v">'+esc(c.id)+'</span></div>'+
+    '<div class="r"><span class="k">grade</span><span class="v"><span class="mk g-'+esc(c.grade)+'">'+esc(c.grade)+'</span></span></div>'+
+    '<div class="r"><span class="k">status</span><span class="v"><span class="mk s-'+esc(statusOf(c.id))+'">'+esc(statusOf(c.id))+'</span></span></div>'+
+    '<div class="r"><span class="k">source</span><span class="v">'+esc(c.src)+'</span></div>'+
+    '<div class="r"><span class="k">evidence</span><span class="v">'+esc(c.ev)+'</span></div>'));
+  box.appendChild(el("p","note","<b style=\"color:var(--muted)\">Claim:</b> "+esc(c.text)));
+  box.appendChild(el("p","note","<b style=\"color:var(--muted)\">Residue:</b> "+esc(c.residue)));
+  box.appendChild(el("h2","tk","<span style=\"color:var(--subtle)\">Witnesses</span>"));
+  Object.keys(WITNESSES).forEach(function(k){
+    var w=WITNESSES[k];
+    box.appendChild(el("div","panel","<h3>"+esc(k)+"</h3><div class=\"kv\"><div class=\"r\"><span class=\"k\">commit</span><span class=\"v\">"+esc(w.commit.slice(0,12))+"…</span></div><div class=\"r\"><span class=\"k\">toolchain</span><span class=\"v\">"+esc(w.toolchain)+"</span></div><div class=\"r\"><span class=\"k\">forcing</span><span class=\"v\">"+esc(w.forcing)+"</span></div><div class=\"r\"><span class=\"k\">status</span><span class=\"v\" style=\"color:var(--survive)\">"+esc(w.status)+"</span></div></div>"));
+  });
+  box.appendChild(el("p","note","Limitations: "+esc(KERNEL.limitations.join(" "))));
+}
+function inspAttack(box){
+  var c=CLAIMS.filter(function(x){return x.id===S.selectedClaim;})[0]||CLAIMS[0];
+  box.appendChild(el("h2","tk","<span style=\"color:var(--subtle)\">Ziel / Falsifikation</span>"));
+  box.appendChild(el("div","kv",
+    '<div class="r"><span class="k">claim</span><span class="v">'+esc(c.id)+'</span></div>'+
+    '<div class="r"><span class="k">status</span><span class="v"><span class="mk s-'+esc(statusOf(c.id))+'">'+esc(statusOf(c.id))+'</span></span></div>'+
+    '<div class="r"><span class="k">residue</span><span class="v">'+esc(c.residue)+'</span></div>'));
+  box.appendChild(el("div","rule","Falsifikationskriterium (deskriptiv): Wenn der gebundene Pointer <span class=\"mono\">"+esc(c.ev)+"</span> dem Claim widerspricht, ist der Claim DESTROYED. Negative Evidence (EI02) ist Pflichtfeld."));
+  box.appendChild(el("h2","tk","<span style=\"color:var(--subtle)\">Regeln</span>"));
+  box.appendChild(el("p","note","H2+ erfordert counter_evidence_complete. H4 erfordert einen vorherigen Blow gegen dasselbe Ziel. UNTOUCHABLE bleibt UNTOUCHABLE – nur für die Claim-Ceiling. Selbst-Bewertung ohne unabhängiges Receipt → REJECT_INDEPENDENT_VERIFICATION (FM3)."));
+}
+
+/* =========================================================
+   Keyboard + Init
+   ========================================================= */
+document.addEventListener("keydown",function(e){
+  if(e.target && /INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+  if(e.key==="p"||e.key==="P"){ S.proj=(S.proj+1)%PROJ_MODES.length; renderProj(); loopOnce(); }
+  if(e.key==="1")setView("soft");
+  if(e.key==="2")setView("hard");
+  if(e.key==="3")setView("dual");
+  if(e.key==="4")setView("attack");
+});
+
+function init(){
+  renderViewNav(); renderProj(); renderRot(); renderRadar();
+  renderStrip(); renderFooter();
+  setView("soft");
+  loadLive();
+  window.__NEXUS_BODYTWIN__={
+    object:"NEXUS_OMEGA_BODYTWIN_VIEWER_20260914_R0",
+    claim_ceiling:"C1_DESCRIPTIVE_ONLY",
+    promotion:"NO",
+    get state(){ return {view:S.view,proj:PROJ_MODES[S.proj],rot:JSON.parse(JSON.stringify(S.rot)),selectedCell:CELLS[S.sel].id,selectedClaim:S.selectedClaim,blows:S.blows.length,live:S.live.state}; },
+    humility:computeHumility,
+    cells:CELLS.map(function(c){return {id:c.id,axis:c.axis,sign:c.sign,dim:c.dim,json:c.json};}),
+    note:"Soft darf Hard orientieren. Kein Soft-Satz erzeugt Hard-Status. Hash-Match ≠ Wahrheit."
+  };
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init); else init();
+})();
+</script>
+</body>
+</html>
