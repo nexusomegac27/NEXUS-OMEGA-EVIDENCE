@@ -1,9 +1,8 @@
 /* NEXUS OMEGA Gate V2 · browser-only independent GET observations · C1 */
 import {
   CONTRACT, sourceUrl, liveUrl, validateReleaseManifest,
-  digest, parseGitHubContent, compareFile, classify, isC1Marked, statusIsStale
+  digest, parseGitHubContent, compareFile, classify, isC1Marked, statusIsStale, restOrRawPinned
 } from './gate-core.mjs';
-import {restOrRawPinned} from './gate-source-fallback.mjs';
 const $ = id => document.getElementById(id);
 const ORIGIN = location.origin;
 const API = 'https://api.github.com/repos/' + CONTRACT.repository;
