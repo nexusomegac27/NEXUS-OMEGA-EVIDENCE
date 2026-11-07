@@ -1,7 +1,7 @@
 /* NEXUS OMEGA Gate V2 · browser-only independent GET observations · C1 */
 import {
   CONTRACT, sourceUrl, liveUrl, validateReleaseManifest,
-  digest, parseGitHubContent, compareFile, classify, isC1Marked, statusIsStale
+  digest, parseGitHubContent, compareFile, classify, isC1Marked, statusIsStale, restOrRawPinned
 } from './gate-core.mjs';
 const $ = id => document.getElementById(id);
 const ORIGIN = location.origin;
@@ -25,7 +25,7 @@ async function timedGet(url, responseType, sameOrigin=false) {
   const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),DEADLINE_MS);
   try {
     const r=await fetch(url,{method:'GET',signal:ctl.signal,cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',headers:sameOrigin?{}:{Accept:'application/vnd.github+json'}});
-    if(!r.ok)throw Error('HTTP '+r.status);
+    if(!r.ok){const e=Error('HTTP '+r.status);e.status=r.status;e.rateRemaining=r.headers.get('x-ratelimit-remaining');e.retryAfter=r.headers.get('retry-after');throw e;}
     const size=Number(r.headers.get('Content-Length')||0);
     if(size>CONTRACT.maxBytes)throw Error('RESPONSE_TOO_LARGE');
     if(responseType==='json') {
@@ -42,8 +42,10 @@ async function getRelease(){
   return validateReleaseManifest(m);
 }
 async function getSource(file,ref){
-  const bytes=parseGitHubContent(await timedGet(sourceUrl(file,ref),'json'));
-  return {sha:await digest(bytes),bytes:bytes.length,raw:bytes};
+  return restOrRawPinned(file,ref,async(f,pin)=>{
+    const bytes=parseGitHubContent(await timedGet(sourceUrl(f,pin),'json'));
+    return {sha:await digest(bytes),bytes:bytes.length,raw:bytes};
+  });
 }
 async function getWWW(file){
   const bytes=await timedGet(liveUrl(file,ORIGIN),'bytes',true);
@@ -61,7 +63,7 @@ function renderRows(rows,refs){
     const item=el('article','file-row'),body=el('div');
     const a=el('a','',x.file);a.href='https://github.com/' + CONTRACT.repository + '/blob/' + refs + '/' + CONTRACT.sourceRoot + x.file;
     a.target='_blank';a.rel='noopener noreferrer';body.append(a);
-    body.append(el('p','',x.gh?'SOURCE · '+x.gh.sha.slice(0,16)+'… · '+x.gh.bytes+' B':'SOURCE · UNAVAILABLE'));
+    body.append(el('p','',x.gh?'SOURCE '+(x.gh.transport==='GITHUB_RAW_PINNED'?'[GITHUB RAW FALLBACK]':'[GITHUB REST]')+' · '+x.gh.sha.slice(0,16)+'… · '+x.gh.bytes+' B':'SOURCE · UNAVAILABLE'));
     body.append(el('p','',x.www?'WWW · '+x.www.sha.slice(0,16)+'… · '+x.www.bytes+' B':'WWW · UNAVAILABLE'));
     if(x.error)body.append(el('p','',String(x.error).slice(0,220)));
     item.append(body,el('span','file-state '+x.status.toLowerCase(),x.status));panel.append(item);
