@@ -1,0 +1,16 @@
+{
+  "object": "NEXUS_OMEGA_R11_PUBLIC_TEMPORAL_REFERENCE_20261106_R0",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "deployment_class": "PUBLIC_STATIC_REFERENCE_NOT_RUNTIME",
+  "clock_source_quality": "USER_DEVICE_UNVERIFIED",
+  "last_backend_witness_utc": null,
+  "witness_ttl_seconds": 1800,
+  "witness_validation": "NOT_ESTABLISHED",
+  "node_runtime_state": "NOT_ESTABLISHED",
+  "r10_fundament_state": "AWAITING_OPERATOR_SOURCE",
+  "n33_state": "OPEN",
+  "g11_state": "HOLD",
+  "claim_promotion": false,
+  "evidence_pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/320"
+}

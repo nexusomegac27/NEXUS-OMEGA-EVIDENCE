@@ -1,0 +1,4 @@
+# NEXUS Gate V2 R1 - MIME remount for temporal ES module (.mjs)
+# Byte-identical nexus-temporal-anchor-r11.mjs; AddType only; no redirect
+AddType application/javascript .mjs
+AddType text/javascript .mjs

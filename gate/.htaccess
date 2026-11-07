@@ -1,0 +1,4 @@
+# NEXUS Gate V2 - MIME remount for ES modules (Hostinger text/plain on .mjs)
+# Same class as R11 temporal remount; preserves pinned SHA of gate-core.mjs
+AddType application/javascript .mjs
+AddType text/javascript .mjs
