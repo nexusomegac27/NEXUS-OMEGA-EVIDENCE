@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+﻿#!/usr/bin/env php
 <?php
 /**
  * CLI-only: idempotent insert of Bodytwin live panel tags into ../index.html
@@ -14,7 +14,7 @@ if (PHP_SAPI !== 'cli') {
 
 $marker = 'NEXUS_BODYTWIN_LIVE_PANEL_V1';
 $css = '<link rel="stylesheet" href="/bodytwin/live/live-panel.css" data-nexus="' . $marker . '">';
-$js  = '<script type="module" src="/bodytwin/live/live-panel.mjs" data-nexus="' . $marker . '"></script>';
+$js  = '<script type="module" src="/bodytwin/live/live-panel.js" data-nexus="' . $marker . '"></script>';
 $block = "\n  <!-- {$marker} BEGIN -->\n  {$css}\n  {$js}\n  <!-- {$marker} END -->\n";
 
 $index = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'index.html';
