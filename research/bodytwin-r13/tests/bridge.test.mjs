@@ -1,0 +1,18 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {RULE,RESEARCH,validatePublicState,freshness} from '../site/bridge-core.mjs';
+const baseline=()=>({schema:RULE.schema,object:'BODYTWIN_PUBLIC_SURFACE',BODYTWIN:'RESEARCH_FOUNDATION_C1',BODYTWIN_VALIDATED:'NO',CONSENT_BIND:'OPEN',TRIAL_001:'DESIGNED_NOT_EXECUTED',layers:['L0','L1','L2','L3','UNKNOWN_UNOBSERVED'],pipeline:['Capture','Normalize','Align','Refine','Metrics'],invariants:['RAW_NE_REFINED','PHOTOREALISM_GAIN_MAY_CAUSE_IDENTITY_LOSS','NO_PRIVATE_HUMAN_REFERENCE_MEDIA'],claim_ceiling:'C1_DESCRIPTIVE_ONLY',claim_promotion:false});
+test('exact public schema accepted C1',()=>{const v=validatePublicState(baseline());assert.equal(v.validated,false);assert.equal(v.promotion,false)});
+const negatives=[['claim',x=>x.claim_ceiling='C2_PROVEN'],['promotion',x=>x.claim_promotion=true],['clinical',x=>x.BODYTWIN_VALIDATED='YES'],['runtime',x=>x.BODYTWIN='LIVE'],['consent',x=>x.CONSENT_BIND='GRANTED'],['trial',x=>x.TRIAL_001='EXECUTED'],['object',x=>x.object='OTHER'],['schema',x=>x.schema='v2'],['missing-key',x=>delete x.schema],['extra-key',x=>x.health='SECRET'],['duplicate-layer',x=>x.layers.push('L1')],['missing-layer',x=>x.layers.pop()],['invalid-layer',x=>x.layers[0]='L99'],['pipeline',x=>x.pipeline[0]='SEND'],['invariants',x=>x.invariants.pop()],['raw-mutation',x=>x.invariants[0]='RAW_EQUALS_REFINED'],['wrong-boolean',x=>x.claim_promotion='false'],['null-layers',x=>x.layers=null]];
+for(const [n,m] of negatives)test('fail-closed '+n,()=>{const x=baseline();m(x);assert.throws(()=>validatePublicState(x))});
+test('reject null',()=>assert.throws(()=>validatePublicState(null)));
+test('reject []',()=>assert.throws(()=>validatePublicState([])));
+test('reject text',()=>assert.throws(()=>validatePublicState('C1')));
+test('fresh status',()=>assert.equal(freshness({},500,false),'PUBLIC_STATUS_OBSERVED_C1'));
+test('no-source',()=>assert.equal(freshness(null,0,false),'SOURCE_GAP'));
+test('hidden stale',()=>assert.equal(freshness({},1,true),'STALE_UNVERIFIED'));
+test('age-boundary stale',()=>assert.equal(freshness({},RULE.maxAgeMs,false),'STALE_UNVERIFIED'));
+test('negative elapsed stale',()=>assert.equal(freshness({},-1,false),'STALE_UNVERIFIED'));
+test('nan stale',()=>assert.equal(freshness({},NaN,false),'STALE_UNVERIFIED'));
+test('no runtime',()=>assert.equal(RESEARCH.measurement,'NOT_EXECUTED'));
+test('A72 missing',()=>assert.equal(RESEARCH.a72,'SOURCE_GAP_ORIGINALS_MISSING'));
+test('public source is fixed same-origin path',()=>assert.equal(RULE.source,'/research/bodytwin/state.json'));
