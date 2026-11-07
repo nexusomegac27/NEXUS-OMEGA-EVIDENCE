@@ -3,7 +3,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {
  CONTRACT,sourcePath,sourceUrl,liveUrl,validateReleaseManifest,
- parseGitHubContent,digest,compareFile,classify,isC1Marked,statusIsStale
+ parseGitHubContent,digest,compareFile,classify,isC1Marked,statusIsStale,pinnedRawURL,restRateFailure,restOrRawPinned
 } from './gate-core.mjs';
 const GOOD='a'.repeat(40),BADSHA='b'.repeat(64),SHA='c'.repeat(64);
 function manifest(){return {schema:'nexus-gate-release-v2',claim_ceiling:'C1_DESCRIPTIVE_ONLY',target_root:'/forum/github-implant/',release_ref:GOOD,
@@ -72,3 +72,53 @@ test('fresh just before boundary',()=>assert.equal(statusIsStale(500,500+1799999
 test('background tab invalidates observation',()=>assert.equal(statusIsStale(500,501,true),true));
 test('clock epoch rollback invalidates observation',()=>assert.equal(statusIsStale(500,499,false),true));
 test('missing clock reading is stale',()=>assert.equal(statusIsStale(NaN,Infinity,false),true));
+
+test('R2 raw URL pins 40hex and fixed source path',()=>assert.equal(pinnedRawURL('index.html',GOOD),
+  'https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/'+GOOD+'/research/forum/github-implant-20261012/site/index.html'));
+test('R2 raw URL rejects moving ref',()=>assert.throws(()=>pinnedRawURL('index.html','main')));
+test('R2 raw URL rejects arbitrary file',()=>assert.throws(()=>pinnedRawURL('.env',GOOD)));
+test('R2 only REST 403 and 429 eligible for fallback',()=>{
+ assert.equal(restRateFailure(403),true);assert.equal(restRateFailure(429),true);
+ for(const s of [0,200,401,404,500])assert.equal(restRateFailure(s),false);
+});
+test('R2 403 allows bounded raw pinned read only',async()=>{
+ const err=Object.assign(new Error('HTTP 403'),{status:403});const calls=[];
+ const expected=new TextEncoder().encode('abc');
+ const result=await restOrRawPinned('index.html',GOOD,async()=>{throw err},async(url,opts)=>{
+  calls.push({url,opts});return {ok:true,headers:{get:()=>null},arrayBuffer:async()=>expected.buffer};
+ });
+ assert.equal(result.transport,'GITHUB_RAW_PINNED');assert.equal(result.sourceIndependence,false);
+ assert.equal(result.sha,'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+ assert.equal(calls.length,1);assert.ok(calls[0].url.includes(GOOD));
+ assert.equal(calls[0].opts.credentials,'omit');assert.equal(calls[0].opts.method,'GET');
+ assert.equal(calls[0].opts.redirect,'error');assert.equal(calls[0].opts.mode,'cors');
+});
+test('R2 429 permits one fallback',async()=>{
+ const err=Object.assign(new Error('HTTP 429'),{status:429});let calls=0;
+ await restOrRawPinned('index.html',GOOD,async()=>{throw err},async()=>{
+ calls++;return {ok:true,headers:{get:()=>null},arrayBuffer:async()=>new Uint8Array([1]).buffer};
+ });assert.equal(calls,1);
+});
+test('R2 404 fails closed without raw fallback',async()=>{
+ const err=Object.assign(new Error('HTTP 404'),{status:404});let calls=0;
+ await assert.rejects(restOrRawPinned('index.html',GOOD,async()=>{throw err},async()=>{calls++}),/404/);
+ assert.equal(calls,0);
+});
+test('R2 ordinary REST success never uses fallback',async()=>{
+ let calls=0;const result=await restOrRawPinned('index.html',GOOD,async()=>({sha:SHA,bytes:125}),async()=>{calls++;});
+ assert.equal(calls,0);assert.equal(result.transport,'GITHUB_REST_PINNED');
+ assert.equal(result.sourceIndependence,false);
+});
+test('R2 raw fallback 403 fails closed',async()=>{
+ const err=Object.assign(new Error('HTTP 403'),{status:403});let calls=0;
+ await assert.rejects(restOrRawPinned('index.html',GOOD,async()=>{throw err},async()=>{calls++;return {ok:false,status:403,headers:{get:()=>null}};}),/RAW_HTTP_403/);
+ assert.equal(calls,1);
+});
+test('R2 raw oversized response rejected',async()=>{
+ const err=Object.assign(new Error('HTTP 403'),{status:403});
+ await assert.rejects(restOrRawPinned('index.html',GOOD,async()=>{throw err},async()=>({ok:true,headers:{get:(k)=>k==='Content-Length'?'600001':null}})),/RAW_CONTENT_TOO_LARGE/);
+});
+test('R2 malformed digest never accepted as release match',()=>{
+ const r=compareFile('index.html',{sha256:SHA,bytes:125},{sha:BADSHA,bytes:125,transport:'GITHUB_RAW_PINNED'},{sha:SHA,bytes:125});
+ assert.equal(r.status,'RELEASE_SOURCE_MISMATCH');
+});
