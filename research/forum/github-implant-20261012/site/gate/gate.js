@@ -104,9 +104,9 @@ function evaluateFreshness(){
 }
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){hiddenSinceCheck=true;markStale('Browserseite nicht sichtbar; frühere Beobachtung nicht aktuell');}
-  else {evaluateFreshness();run(true);}
+  else {evaluateFreshness();run();}
 });
-window.addEventListener('pageshow',e=>{if(e.persisted){hiddenSinceCheck=true;markStale('Wiederhergestellte Seite braucht neue Prüfung');run(true);}});
+window.addEventListener('pageshow',e=>{if(e.persisted){hiddenSinceCheck=true;markStale('Wiederhergestellte Seite braucht neue Prüfung');run();}});
 $('run').addEventListener('click',()=>run());
 $('dock-open').addEventListener('click',()=>{$('dock').hidden=!$('dock').hidden;});
 $('dock-close').addEventListener('click',()=>{$('dock').hidden=true;});
@@ -129,4 +129,4 @@ drag.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;let
 drag.addEventListener('pointermove',e=>{if(!start)return;const d=$('dock');d.style.left=Math.max(0,Math.min(innerWidth-d.offsetWidth,start.l+e.clientX-start.x))+'px';d.style.top=Math.max(0,Math.min(innerHeight-d.offsetHeight,start.t+e.clientY-start.y))+'px';d.style.right='auto';d.style.bottom='auto';});
 drag.addEventListener('pointerup',()=>start=null);drag.addEventListener('pointercancel',()=>start=null);
 run(true);
-setInterval(()=>{evaluateFreshness();if(!document.hidden&&(!Number.isFinite(lastCompletedAt)||performance.now()-lastCompletedAt>=CONTRACT.freshnessMs))run(true);},5000);
+setInterval(()=>{evaluateFreshness();if(!document.hidden&&(hiddenSinceCheck||!Number.isFinite(lastCompletedAt)||performance.now()-lastCompletedAt>=CONTRACT.freshnessMs))run();},5000);
