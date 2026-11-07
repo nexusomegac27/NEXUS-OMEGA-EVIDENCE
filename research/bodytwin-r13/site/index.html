@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>NEXUS OMEGA — Bodytwin R13 Forschungsbrücke</title>
+<link rel="stylesheet" href="./bridge.css"><script type="module" src="./bridge.js"></script></head>
+<body><main>
+<header><div class="eyebrow">NEXUS OMEGA / BODYTWIN / R13 · C1</div>
+<h1>Vom Sensor zur belegbaren Aussage.</h1>
+<p class="lede">Eine öffentliche Forschungsbrücke zwischen der bestehenden Bodytwin-Visualisierung, dem IMU-Entwurf R13 und den Evidenzgrenzen von NEXUS OMEGA.</p>
+<div class="warning"><strong>C1_DESCRIPTIVE_ONLY.</strong> Keine Hardware-Messung, keine echte Sensorkalibrierung, keine personenbezogene Erfassung, keine klinische Aussage, keine autonome Claim-Promotion.</div>
+<nav aria-label="NEXUS Routen"><a href="/bodytwin/">4D-Bodytwin</a><a href="/research/">Forschung</a><a href="/forum/github-implant/">GitHub-Forum</a><a href="/status/">Status</a></nav>
+</header>
+<section><h2>Verifizierbarer öffentlicher Status — keine Sensor-Runtime</h2>
+<div class="grid">
+<article class="card"><div class="eyebrow">PUBLIC SOURCE</div><h3 id="source-state" aria-live="polite">NO_OBSERVATION</h3><p id="source-explainer">Noch nicht gegen das bekannte öffentliche JSON-Schema geprüft.</p><button id="refresh" type="button">Erneut abrufen</button><p class="small" id="observed-device">Nicht abgerufen</p></article>
+<article class="card"><div class="eyebrow">BODYTWIN</div><p class="mono" id="body-state">RESEARCH_FOUNDATION_C1 (Quelle, unbestätigt)</p><p>Kein Validierungs-, Mess- oder Gesundheitsstatus.</p></article>
+<article class="card"><div class="eyebrow">ETHIK & TRIAL</div><p>Consent: <strong id="consent-state">OPEN</strong></p><p>TRIAL_001: <strong id="trial-state">DESIGNED_NOT_EXECUTED</strong></p></article>
+</div></section>
+<section><h2>R13 — zwei getrennte Datenebenen</h2><ol class="steps">
+<li><strong>S0 / Physik</strong><span>IMU-Drift, Bias, Temperatur, Montage – nur Forschungsentwurf</span></li>
+<li><strong>S1 / RAW</strong><span>raw_accel, raw_gyro, timestamp_monotonic, sensor_id – Rohledger vorgesehen</span></li>
+<li><strong>GATE / AUDIT</strong><span>Vollständigkeit, Hash, Sequenz, Nullphasenrisiken – fail closed</span></li>
+<li><strong>S2 / SCHÄTZUNG</strong><span>Quaternion, Bias, Konfidenz; EKF/UKF als Kandidaten, nicht validiert</span></li>
+<li><strong>T4 / DARSTELLUNG</strong><span>Symbolische Zustandsprojektion – keine physische Wahrheit</span></li>
+</ol></section>
+<section><h2>R13-Quellstatus</h2><div class="grid">
+<article class="card"><div class="eyebrow">RESEARCH CHAIN</div><p class="mono" id="chain-status">FIVE_MARKDOWN_SOURCE_HASHES_MATCH</p><p>Fünf vorgelagerte Markdown-Dateien bytegeprüft. Designbefunde bleiben falsifizierbare Hypothesen.</p></article>
+<article class="card"><div class="eyebrow">QWEN PDF</div><p class="mono" id="pdf-status">ORIGINAL_13_PAGE_PDF_BYTE_BOUND_BY_AXIOM</p><p>Original-PDF liegt vor; die zuvor gemeldete 145-Byte-Stub-Lücke gilt nicht für diesen AXIOM-Intake.</p></article>
+<article class="card"><div class="eyebrow">A72 / MESH</div><p class="mono warn" id="a72-status">SOURCE_GAP_ORIGINALS_MISSING</p><p>BT_01–BT_06, source_registry.yaml und section_XI nicht byte-gebunden. Keine semantische Rekonstruktion.</p></article>
+</div></section>
+<section><h2>Wissenschaftliche Grenzen</h2>
+<p><strong>6-DoF-IMU ohne externe Referenz:</strong> keine absolute Yaw-Beobachtbarkeit. Ein Hash schützt die Konsistenz gespeicherter Bytes, nicht die Richtigkeit einer Messung. Nicht-Fuß-ZUPT und ROM-Annahmen sind hier weder individuell kalibriert noch empirisch geprüft.</p>
+<p>Der Forschungsgrundsatz <code>SENSOR_TRANSFORMAT ≠ STATE_MUTATION</code> hält Rohwerte und geschätzte Zustände auseinander. Die bestehende 4D-Ansicht bleibt <code>SYMBOLIC_SOFT_LAYER · NOT_EVIDENCE</code>.</p>
+<ul><li><a href="https://www.sciencedirect.com/science/article/pii/S240589632030690X">Lehmann et al. (2020) — ROM-Constraints</a></li>
+<li><a href="https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53084203">OpenSense — Voraussetzungen für IMU-Kinematik</a></li>
+<li><a href="https://www.mathworks.com/help/fusion/ug/introduction-to-estimation-filters.html">EKF/UKF — theoretische Grenzen</a></li></ul></section>
+<footer><p>NEXUS OMEGA · R13 · public-safe read-only GET · C1_DESCRIPTIVE_ONLY</p>
+<p>GitHub-Push ≠ Hostinger-Deploy ≠ laufende Sensoren ≠ wissenschaftlicher Nachweis.</p></footer>
+</main></body></html>
