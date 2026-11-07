@@ -1,0 +1,6 @@
+<!-- NEXUS OMEGA Bodytwin public live status; add ONCE to the existing /bodytwin/index.html. -->
+<!-- Inside <head>: -->
+<link rel="stylesheet" href="/bodytwin/live/live-panel.css">
+<!-- Before closing </body>: -->
+<script type="module" src="/bodytwin/live/live-panel.mjs"></script>
+<!-- Only these two link/script tags are permitted changes to existing parent HTML. -->
