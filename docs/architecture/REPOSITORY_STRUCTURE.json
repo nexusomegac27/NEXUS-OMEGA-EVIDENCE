@@ -231,6 +231,18 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r19r1-oppo-male-source-audit-20261108": {
+      "path": "research/r19/oppo-male-source-audit-20261108",
+      "state": "OWNER_RESEARCH_RECEIPT_ONLY_ORIGINAL_ZIP_LOCAL_CUSTODY",
+      "operator_authorized": true,
+      "predecessor_commit": "ee2e709df76b997ada5a26990b38ce7990e48c94",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_write_authority": false,
+      "oppo_real_capture_authorized": false,
+      "pixel9a_female": "RESERVED_NO_START",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {
