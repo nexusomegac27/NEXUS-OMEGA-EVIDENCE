@@ -1,0 +1,41 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_BODYTWIN_LIVE_PANEL_OVERLAP_SCOPED_REPAIR_20261108_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "local_node_tests": "PASS_15_OF_15",
+  "browser_witness": "NOT_EXECUTED_CHROMIUM_ERR_BLOCKED_BY_ADMINISTRATOR",
+  "public_hostinger": "NOT_EXECUTED",
+  "source_files": {
+    "README.md": {
+      "bytes": 1000,
+      "sha256": "f44a1864396202867a580f297a67664fd9db02f99ad30e1742bb94f8bed71e85"
+    },
+    "ops/CURSOR_SCOPED_PUBLIC_LAYOUT_REPAIR_20261108_R0.md": {
+      "bytes": 6316,
+      "sha256": "996beff143cb6738172d83a8a57d6ca08279dd74c8c2aa4ec60e2463fd9f84dc"
+    },
+    "tests/layout-fixture.html": {
+      "bytes": 1294,
+      "sha256": "e152004c650982c07834db5bec664d02117b1b1ba4d37fad647cd69466953bb6"
+    },
+    "tests/layout-contract.test.mjs": {
+      "bytes": 5656,
+      "sha256": "b322bf9a170908a3c24cb3d3f0237e2c0b8b987a7ae234002cdc6a0bf3620719"
+    },
+    "tests/layout-test-results.txt": {
+      "bytes": 2612,
+      "sha256": "a3d2576a13fa11ae128c192d09242321aba4b0e7aafbec9e8e4ffb1f08eb101c"
+    },
+    "tests/verify-layout.py": {
+      "bytes": 1637,
+      "sha256": "d84aa9fa5a68fef4a9e7a9f9405392f68bc76bf54c0873cc1141986a1e16d0f9"
+    },
+    "site/layout-hotfix-r0.css": {
+      "bytes": 1147,
+      "sha256": "8b5f6261e18ccc57e334f6b81063d363324322c975fe2ab3383861de7bce614f"
+    },
+    "site/layout-hotfix-r0.js": {
+      "bytes": 1943,
+      "sha256": "ed70f8aec81099ed180915ab1bceffb2cae6237c3a40418a3f1b89904241d25f"
+    }
+  }
+}
