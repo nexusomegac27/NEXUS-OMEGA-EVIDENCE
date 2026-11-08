@@ -1,0 +1,65 @@
+/* NEXUS OMEGA Bodytwin Q0 Viewer — Reference Styles
+   C1_DESCRIPTIVE_ONLY · Soft-View only · No clinical claims */
+
+:root {
+  --bg: #0f1419;
+  --fg: #e6edf3;
+  --accent: #58a6ff;
+  --warning: #f85149;
+  --soft: #7ee787;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+header, footer {
+  padding: 1rem 1.5rem;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+}
+footer { border-top: 1px solid #30363d; border-bottom: none; font-size: 0.85rem; opacity: 0.8; }
+
+h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+.meta { font-size: 0.85rem; color: var(--accent); }
+.warning { color: var(--warning); font-weight: 600; margin: 0.5rem 0 0; }
+
+main { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
+#viewer { text-align: center; margin: 1rem 0; }
+canvas {
+  background: #010409;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+}
+#status { margin-top: 0.5rem; font-family: ui-monospace, monospace; font-size: 0.9rem; color: var(--soft); }
+
+#controls { display: grid; gap: 1rem; margin: 1.5rem 0; }
+#plane-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; }
+label { display: flex; flex-direction: column; font-size: 0.85rem; }
+input[type="range"] { width: 100%; }
+
+button, select {
+  background: #21262d;
+  color: var(--fg);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+button:hover, select:hover { border-color: var(--accent); }
+
+.not-goals, .rules {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+#live-status { background: #010409; padding: 0.75rem; border-radius: 6px; overflow-x: auto; }
