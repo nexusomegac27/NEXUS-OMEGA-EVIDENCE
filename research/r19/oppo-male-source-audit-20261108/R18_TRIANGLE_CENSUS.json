@@ -1,0 +1,47 @@
+{
+  "object": "NEXUS_OMEGA_R19R1_R18_TRIANGLE_CENSUS_20261108_R0",
+  "source_zip_sha256": "e55f9fbde480b00dab225591b5227fa8bab1bb241bf1d3bac283df091f8b7421",
+  "method": "Parsed all 4 JS-layer mesh arrays and verified 32-bit decoded index buffer lengths; tris = sum(mesh.ic)/3",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_layers": [
+    {
+      "key": "skeleton",
+      "meshes": 203,
+      "triangles": 195122,
+      "bytes": 6945287,
+      "sha256": "937e21d33deb50cd979478d456b7921ec1d9150dd49831ad80946204aa3403d5"
+    },
+    {
+      "key": "muscles",
+      "meshes": 88,
+      "triangles": 130302,
+      "bytes": 5965076,
+      "sha256": "d915ba40685a3a5c85c495dafdda0769de51a94ccfa9573c91ce7f22a5525a1d"
+    },
+    {
+      "key": "organs_male",
+      "source_organs": 8,
+      "submeshes": 181,
+      "triangles": 211991,
+      "bytes": 7046328,
+      "sha256": "a330ee1798f6663a456bd855f68d37513b38115c851e6f538319ac504885054a"
+    },
+    {
+      "key": "organs_female",
+      "source_organs": 10,
+      "submeshes": 156,
+      "triangles": 172179,
+      "bytes": 5745988,
+      "sha256": "354e5c9409372c8a579e94dc88e6b76f8f6170956e8d6b5b37bce41c5d856e4a"
+    }
+  ],
+  "scene_denominators": {
+    "default_skeleton_plus_muscles": 325424,
+    "male_organ_active": 537415,
+    "female_organs_on_male_base": 497603,
+    "all_four_asset_files_sum_NOT_SINGLE_SCENE": 709594
+  },
+  "source_organ_overlay_mutual_exclusion": true,
+  "oppo_browser_benchmark": "NOT_EXECUTED",
+  "medical_validation": "NO"
+}
