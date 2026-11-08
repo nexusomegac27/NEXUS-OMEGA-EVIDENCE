@@ -1,0 +1,116 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R17_OPPO_BODYTWIN_EXTERNAL_FOUNDATION_MACHINE_STATE_20261108_R0",
+  "event_date": "2026-11-08",
+  "state": "C1_EXTERNAL_EXPERT_RESEARCH_FOUNDATION_SOURCE_IMPLEMENTED_NOT_RUNTIME",
+  "authority": "OPERATOR_ALEXANDER_VIA_AXIOM",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "research_only": true,
+  "provenance": {
+    "device_model": {
+      "value": "OPPO A74 CPH2219",
+      "class": "OPERATOR_HISTORY_PLUS_OFFICIAL_OPPO_SPEC",
+      "current_device_rehash": false
+    },
+    "app_package": {
+      "value": "com.nexusomega.maps",
+      "class": "HISTORICAL_REPORTED_ONLY",
+      "current_installed_build_verified": false
+    },
+    "native_capture_service": {
+      "value": "ScientificImuForegroundService",
+      "class": "HISTORICAL_REPORTED_ONLY",
+      "current_active": false
+    },
+    "earlier_capture": {
+      "approx_acc_samples": 41534,
+      "approx_gyro_samples": 36307,
+      "approx_duration_seconds": 415,
+      "class": "HISTORICAL_REPORTED_NOT_ORIGINAL_REHASHED_R17"
+    },
+    "bodytwin_www_layout": {
+      "state": "USER_AND_CURSOR_REPORTED_P0_MULTI_VIEWPORT_PASS",
+      "independent_r17_browser_cdp": false
+    },
+    "bodytwin_public_feed": {
+      "source_url": "https://www.nexus-mobile.de/bodytwin/live/current.json",
+      "last_read_utc": "2026-11-08T10:05:01Z",
+      "producer_seq": 161,
+      "source_changed": false,
+      "bodytwin_validated": "NO",
+      "consent": "OPEN",
+      "physical_imu": "NOT_AUTHORIZED",
+      "trust": "SELF_HOSTED_NOT_INDEPENDENT_WITNESS"
+    },
+    "live_android_sensor_to_bodytwin_transport": "NOT_ESTABLISHED",
+    "historical_relay_api": "SOURCE_GAP_CURRENT_IMPLEMENTATION",
+    "q0_physical_mapping": "NOT_ESTABLISHED",
+    "a72_originals": "SOURCE_GAP"
+  },
+  "planned": {
+    "expert_lanes": [
+      "AI-1",
+      "AI-2",
+      "AI-3",
+      "AI-4",
+      "AI-5",
+      "AI-6",
+      "AI-7",
+      "AI-8"
+    ],
+    "research_rounds": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10"
+    ],
+    "research_rounds_executed": 0,
+    "expert_provider_returns_received": 0,
+    "architecture_preference": "OFFLINE_REPLAY_FIRST_AUTHENTICATED_RELAY_SECOND_PENDING_ADJUDICATION",
+    "proposal_only_schemas": [
+      "nexus-imu-private-candidate/0",
+      "nexus-bodytwin-derived-motion-candidate/0"
+    ],
+    "no_automatic_4d_physical_claim": true,
+    "no_persistent_device_ids_in_public": true
+  },
+  "walls": {
+    "no_oppo_live_capture": true,
+    "no_pixel9a_admission": true,
+    "no_dual_imu_sync": true,
+    "no_imaging": true,
+    "no_public_raw_imu": true,
+    "no_hostinger_write": true,
+    "no_production_sensor_runtime": true,
+    "no_website_changes": true,
+    "no_github_merge": true,
+    "no_external_agent_write": true,
+    "no_consent_invention": true,
+    "no_claim_promotion": true,
+    "r11_r12_preserved": true,
+    "gate_v2_r9_hold_preserved": true,
+    "r13_stage_ii_hold_preserved": true,
+    "r16_p0_layout_preserved": true,
+    "bodytwin_validated": "NO",
+    "operator_authorization_needed_for_device_run": true
+  },
+  "sources": [
+    "https://www.oppo.com/sa-en/smartphones/series-a/a74/specs/",
+    "https://developer.android.com/reference/android/hardware/SensorEvent",
+    "https://developer.android.com/reference/android/hardware/SensorManager",
+    "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview",
+    "https://developer.android.com/develop/background-work/services/fgs/timeout",
+    "https://developer.android.com/topic/architecture/data-layer/offline-first",
+    "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53084203",
+    "https://vqf.readthedocs.io/en/stable/",
+    "https://borglab.github.io/gtsam/imufactor/",
+    "https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html"
+  ],
+  "next": "EXTERNAL_EXPERT_REVIEWS_AND_INDEPENDENT_CROSSCRITIQUE_BEFORE_ANY_RUNTIME_DISPOSITION"
+}
