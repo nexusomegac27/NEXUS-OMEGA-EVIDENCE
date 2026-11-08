@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="NEXUS OMEGA — wissenschaftliche C1-Referenzdarstellung anatomischer Bodytwin-Schichten. Nicht medizinisch validiert.">
+  <title>NEXUS OMEGA · Soft-Bodytwin · R18 / C1</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="data/joint_limits.js" defer></script>
+  <script src="assets/guard.js" defer></script>
+  <script src="assets/renderer.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="titleblock"><a class="back" href="/bodytwin/" aria-label="Zurück zur vorhandenen Bodytwin-Ansicht">← /bodytwin/</a>
+      <div class="eyebrow">NEXUS OMEGA <span class="sep">/</span> R18 · Soft-Visual</div>
+      <h1>Anatomischer Bodytwin <span class="notmedical">Referenzansicht</span></h1>
+    </div>
+    <div class="statusblock"><span class="statuspill">C1_DESCRIPTIVE_ONLY</span><span id="runtime-state" class="status-detail" aria-live="polite">Visualisierer wird initialisiert</span></div>
+  </header>
+  <main class="workbench">
+    <aside class="panel controls" aria-label="Schichten und Darstellung">
+      <section>
+        <h2>01 / Anatomische Schichten</h2>
+        <label class="option"><input id="l-skeleton" type="checkbox" checked><span class="indicator bone"></span><span>Skelett <small>203 BP3D-Strukturen</small></span></label>
+        <label class="option"><input id="l-muscles" type="checkbox" checked><span class="indicator muscle"></span><span>Muskulatur <small>88 BP3D-Strukturen</small></span></label>
+      </section>
+      <section>
+        <h2>02 / Organreferenzen</h2>
+        <p class="helper">Nur eine VH-Referenzlinie gleichzeitig. Die Grundanatomie bleibt eine männliche BP3D-Referenz.</p>
+        <label class="option"><input type="radio" name="organs" value="none" checked><span>Ohne Organ-Overlay</span></label>
+        <label class="option"><input type="radio" name="organs" value="organs_male"><span class="indicator organmale"></span><span>VH Male <small>8 HRA-Quellorgane</small></span></label>
+        <label class="option"><input type="radio" name="organs" value="organs_female"><span class="indicator organfemale"></span><span>VH Female <small>10 HRA-Quellorgane</small></span></label>
+      </section>
+      <section>
+        <h2>03 / Soft-Visual-Modus</h2>
+        <div class="buttonrow" role="group" aria-label="Darstellungsmodus">
+          <button id="mode-ref" class="mode active" type="button" aria-pressed="true">Anatomie</button>
+          <button id="mode-holo" class="mode" type="button" aria-pressed="false">Hologramm</button>
+        </div>
+        <p class="helper">Der Hologramm-/Laser-Effekt ist ausschließlich eine Bildschirmvisualisierung, keine physische Projektion.</p>
+      </section>
+      <section>
+        <h2>04 / Integritätsgrenze</h2>
+        <dl class="facts"><div><dt>Signal</dt><dd>Kein Live-Sensor angeschlossen</dd></div><div><dt>Pose</dt><dd>Statische anatomische Referenz</dd></div><div><dt>Feed & Cron</dt><dd>Bestandssystem unverändert</dd></div></dl>
+        <p class="helper">Ein einzelnes Smartphone-IMU liefert keine nachgewiesene Ganzkörperkinematik. Keine medizinische Diagnose.</p>
+      </section>
+    </aside>
+    <section class="scene" aria-label="3D-Anatomieansicht">
+      <div class="scene-top"><span class="scene-label">SOFT VISUAL CORPUS</span><span id="render-status" role="status">Prüfe WebGL…</span></div>
+      <canvas id="c" role="img" aria-label="Drehbare, zoombare anatomische 3D-Referenz"></canvas>
+      <div id="fallback" class="fallback" role="alert" hidden></div>
+      <div class="scene-bottom"><span>Mit Maus/Touch drehen · Mausrad/Pinch zoomen · Shift+Ziehen verschieben</span><button type="button" id="reset-camera">Kamera zurücksetzen</button></div>
+      <div id="mesh-stats" class="mesh-stats">R17.1-Referenzlayer · keine Sensorrekonstruktion</div>
+    </section>
+    <aside class="panel diagnostics" aria-label="Daten- und Quelleninformation">
+      <section>
+        <h2>05 / Datenstand</h2>
+        <dl class="facts"><div><dt>Quelle</dt><dd>R17 / R17.1, Lane A</dd></div><div><dt>Geometrie</dt><dd>BP3D + HuBMAP HRA</dd></div><div><dt>Segmentbezug</dt><dd>indikativ, kein Rig</dd></div><div><dt>Modell</dt><dd>Gait2392 · 23 DOF</dd></div></dl>
+      </section>
+      <section>
+        <details><summary>Gait2392: originale Koordinatengrenzen (23)</summary><div class="table-wrap"><table id="limits-table"><thead><tr><th>Koordinate</th><th>Min</th><th>Max</th><th>Einheit</th></tr></thead><tbody></tbody></table></div></details>
+        <p class="helper">Die Werte sind modellgebundene OpenSim-Koordinatenlimits; keine individuellen medizinischen Bewegungsgrenzen.</p>
+      </section>
+      <section>
+        <h2>06 / Präzise Interpretation</h2>
+        <p class="helper"><strong>Männliche BP3D-Gesamtreferenz</strong> mit getrennt wählbaren männlichen oder weiblichen HRA-Organen. Eine eigenständige weibliche Ganzkörper-Geometrie, ein dynamisches Rig und eine Validierung auf dem OPPO-Zielgerät sind nicht enthalten.</p>
+      </section>
+    </aside>
+  </main>
+  <footer class="attribution" id="attribution" aria-label="Verbindliche Urheber- und Quellenangaben">
+    <span><strong>Quellen &amp; Lizenzen (dauerhaft):</strong> <a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noopener noreferrer">BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International</a> ·
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Gait2392 / Delp, Loan, Hoy, Zajac, Topp, Rosen, Thelen, Anderson, Seth — <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a> · HuBMAP Human Reference Atlas / CCF 3D Reference Object Library — <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · <a href="https://www.nlm.nih.gov/research/visible/visible_human.html" target="_blank" rel="noopener noreferrer">NLM Visible Human Project</a>. Veränderte abgeleitete R17.1-R18-Visualisierung.</span>
+    <span class="legal">C1 · nicht klinisch validiert · kein Endprodukt · kein Live-Sensorbetrieb</span>
+  </footer>
+</body>
+</html>

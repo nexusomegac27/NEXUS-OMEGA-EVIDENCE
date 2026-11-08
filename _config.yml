@@ -1,7 +1,0 @@
-title: NEXUS OMEGA Evidence
-description: Public content-addressed C1 evidence for independent verification
-theme: minima
-exclude:
-  - tests
-  - scripts
-  - .github
