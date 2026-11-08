@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: existing panel moved OUTSIDE main into its following sibling slot
+ok 1 - existing panel moved OUTSIDE main into its following sibling slot
+  ---
+  duration_ms: 3.014848
+  type: 'test'
+  ...
+# Subtest: 4D original main children and identity preserved
+ok 2 - 4D original main children and identity preserved
+  ---
+  duration_ms: 1.731642
+  type: 'test'
+  ...
+# Subtest: layout isolated status observable in DOM
+ok 3 - layout isolated status observable in DOM
+  ---
+  duration_ms: 0.731443
+  type: 'test'
+  ...
+# Subtest: idempotent second invocation, not duplicated
+ok 4 - idempotent second invocation, not duplicated
+  ---
+  duration_ms: 1.554415
+  type: 'test'
+  ...
+# Subtest: no main: place before root footer, keep content
+ok 5 - no main: place before root footer, keep content
+  ---
+  duration_ms: 2.257455
+  type: 'test'
+  ...
+# Subtest: main with no footer: append after main
+ok 6 - main with no footer: append after main
+  ---
+  duration_ms: 0.844013
+  type: 'test'
+  ...
+# Subtest: late panel mounting by original module repaired via observer
+ok 7 - late panel mounting by original module repaired via observer
+  ---
+  duration_ms: 0.938656
+  type: 'test'
+  ...
+# Subtest: duplicate ID is a visible HARD HOLD, never silently removes modules
+ok 8 - duplicate ID is a visible HARD HOLD, never silently removes modules
+  ---
+  duration_ms: 0.710702
+  type: 'test'
+  ...
+# Subtest: no panel produces hold marker when load ends
+ok 9 - no panel produces hold marker when load ends
+  ---
+  duration_ms: 0.957294
+  type: 'test'
+  ...
+# Subtest: only panel-scoped CSS, no viewer selectors changed
+ok 10 - only panel-scoped CSS, no viewer selectors changed
+  ---
+  duration_ms: 0.479833
+  type: 'test'
+  ...
+# Subtest: grid/flex/position are isolated
+ok 11 - grid/flex/position are isolated
+  ---
+  duration_ms: 0.951756
+  type: 'test'
+  ...
+# Subtest: mobile adaptation exists
+ok 12 - mobile adaptation exists
+  ---
+  duration_ms: 0.083045
+  type: 'test'
+  ...
+# Subtest: no new network, timers, sensor or personal-data reads
+ok 13 - no new network, timers, sensor or personal-data reads
+  ---
+  duration_ms: 0.125089
+  type: 'test'
+  ...
+# Subtest: does not mutate textContent or any live C1 data fields
+ok 14 - does not mutate textContent or any live C1 data fields
+  ---
+  duration_ms: 0.070847
+  type: 'test'
+  ...
+# Subtest: script is syntax-valid in isolated JS context
+ok 15 - script is syntax-valid in isolated JS context
+  ---
+  duration_ms: 0.140693
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 79.091928
