@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R19R1_OPPO_MALE_SOURCE_AUDIT_TASK_ANCHOR_20261108_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OWNER_RESEARCH",
+    "recipient_role": "CURSOR_PRAXIS_READ_ONLY_RESEARCH",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_R19_SOFT_BODYTWIN_COLLECTIVE_RESEARCH_20261108_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "ee2e709df76b997ada5a26990b38ce7990e48c94",
+    "predecessor_path": "research/r19/bodytwin-soft-visual-collective-research-20261108/README.md",
+    "predecessor_bytes": 2642,
+    "predecessor_sha256": "8d95ce2f64c6ce5e875e89c21df3b586feb955d4659e9ab4c164af191234a24c"
+  },
+  "delegation": {
+    "scope": "Offline research and isolated design for OPPO male-first anatomical reference; Pixel female reserved",
+    "allowed_actions": [
+      "Rehash operator-provided original artifacts",
+      "Verify R18 anatomy and triangle counts",
+      "Research rights, coordinates and source-bound rendering",
+      "Test synthetic offline OPPO protocol"
+    ],
+    "prohibited_actions": [
+      "No Hostinger write or merge",
+      "No real sensor activation or medical claim",
+      "No external agent unregistered GitHub writes",
+      "No Pixel female activation",
+      "No node reset or historical rewrite"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "How to prepare a source-exact adult male anatomical reference Twin with bounded OPPO device segment mapping and no full-body inference?",
+    "deliverables": [
+      "Full original source exact evidence report",
+      "Male anatomy references and conflicts",
+      "Offline synthetic sensor contract and tests",
+      "Separate Pixel 9a reserved successor blueprint"
+    ],
+    "falsifiers": [
+      "Symbolic 203 bones incorrectly treated as BP3D mesh structures",
+      "All four alternative organ assets presented as one simultaneous scene",
+      "Unauthorized sensor data accepted as verified",
+      "BP3D license conflict suppressed"
+    ],
+    "acceptance_tests": [
+      "Original source hashes match",
+      "R17 and R17.1 manifests match",
+      "R18 exact triangles 325424 default and 709594 all assets reproduced",
+      "20 local synthetic device tests pass"
+    ],
+    "pause_conditions": [
+      "No real device authorization",
+      "No public mesh redistribution without file-level license clearance"
+    ],
+    "not_executed": [
+      "Actual OPPO capture or pairing",
+      "Pixel female activation",
+      "Real GPU browser performance",
+      "Production parent or Hostinger integration"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R19R1_OPPO_MALE_SOURCE_AUDIT_20261108_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Source bytes mismatch",
+      "Unauthorized device or website mutation",
+      "Misidentification of source anatomy"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "ee2e709df76b997ada5a26990b38ce7990e48c94",
+        "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/README.md",
+        "bytes": 2642,
+        "sha256": "8d95ce2f64c6ce5e875e89c21df3b586feb955d4659e9ab4c164af191234a24c",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "No actual personal health/sensor records; body mesh file licenses contested",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Source exact R18 geometry census",
+      "20 of 20 synthetic device guards PASS"
+    ],
+    "robustness_stability": [
+      "Real device input denied pending independent authorization",
+      "No deployment or external unregistered writes"
+    ],
+    "traceability_comprehensibility": [
+      "Pinned predecessor commit path bytes and hash",
+      "Local artifact handoff clearly separate from GitHub report"
+    ]
+  }
+}
