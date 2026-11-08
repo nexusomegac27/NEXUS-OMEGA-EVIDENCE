@@ -1,0 +1,93 @@
+{
+  "object": "NEXUS_OMEGA_R19_SOFT_BODYTWIN_COLLECTIVE_RESEARCH_PACKET_MANIFEST_R0",
+  "schema_version": "1.0.0",
+  "generated_date": "2026-11-08",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "base_commit": "dbbb7411271b5653bccab2aba9176ee2b34b3c91",
+  "root": "research/r19/bodytwin-soft-visual-collective-research-20261108",
+  "state": "OWNER_ISSUED_PACKET_FROZEN_AGENT_RETURNS_NOT_STARTED",
+  "self_hash_excluded": true,
+  "entries": [
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/00_CANONICAL_SOURCE_REGISTER.md",
+      "bytes": 4374,
+      "sha256": "24b058d9354e969f4248a416f3f040a65083313c252ebe5f358bc8aefd5b9935"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/01_PRE_RESEARCH_SYNTHESIS.md",
+      "bytes": 3453,
+      "sha256": "32530d96ae461761131d864aadf1127ffeb1d6f428ceaf944aca96abb53d6086"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/02_VISUAL_AND_TECHNICAL_BLUEPRINTS.md",
+      "bytes": 4326,
+      "sha256": "38a0ff0f96f15ae211fd20f72b36eacd1d56a8bc8ebdacf70b9b1584a08d0f38"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/03_PRE_REGISTERED_FALSIFICATION_AND_METRICS.md",
+      "bytes": 2741,
+      "sha256": "9fbd662a80dd1cc5b75963079946f32c40d4c5b5af1ca65785e44a6633a29c13"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/04_RETURN_PROTOCOL_AND_CROSS_VALIDATION.md",
+      "bytes": 2613,
+      "sha256": "620004607b6f49a1f960f7fac98e8bf12b91c6a92ccce8a3ca4c1cf6982a9b1c"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/README.md",
+      "bytes": 2642,
+      "sha256": "8d95ce2f64c6ce5e875e89c21df3b586feb955d4659e9ab4c164af191234a24c"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/TASK_ORDER_ANCHOR.json",
+      "bytes": 5275,
+      "sha256": "8256ec9a94360173df5fe068d7699f5b83435d78137d212819dd14a96ceee15e"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI01_GROK_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9291,
+      "sha256": "54b8d8bb76ad27033afd1a039fc532496d72dfbbdcfee5c3bd79011d6c039016"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI02_QWEN_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9133,
+      "sha256": "6ffe844abd306a4f03270a3946e09918629327937c5fc86c654b4221ccc10adc"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI03_MISTRAL_VIBE_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9083,
+      "sha256": "149ac066abe64c30c187aa114f7ee4f7a800d510d81ab48ed338ec9e5be0b419"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI04_GEMINI_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9155,
+      "sha256": "e895d99a982b14677fabd10d0a36e6b67dea8c854457c917f80ecb90a8fff4ee"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI05_PERPLEXITY_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9218,
+      "sha256": "b576fa3d4b51efd5b007b88e01b7cd269169f72b2b388719f5dadd395ad39da1"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI06_META_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9069,
+      "sha256": "24a538b0904448b7452acba8f46c630576c87364917f5e19fbecf6c7ec4f6099"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI07_DEEPSEEK_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9223,
+      "sha256": "0269b3aa040d9d761eb100fc59746fad26e266629a1efcbb3fadb8206f4b11d9"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/AI08_INDEPENDENT_EXPERT_FULL_RESEARCH_ORDER_R0.md",
+      "bytes": 9279,
+      "sha256": "349329b17e4a2c8bd0ddef3afe8805853d427f4497ac9c6f5d21288b1d711045"
+    },
+    {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108/orders/CURSOR_PRAXIS_READ_ONLY_ARCHITECTURE_CONSUMER_R0.md",
+      "bytes": 1422,
+      "sha256": "89772562148274135e7eaeeda6be347347dc3dcb564ed27df9181d89862150d7"
+    }
+  ]
+}
