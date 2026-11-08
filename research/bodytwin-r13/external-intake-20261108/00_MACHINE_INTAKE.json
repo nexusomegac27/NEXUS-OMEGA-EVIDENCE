@@ -1,0 +1,128 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_E1_E5_SOURCE_EXACT_INTAKE_AND_REFERENCE_FALSIFICATION_20261108_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "date": "2026-11-08",
+  "source_commit": "fc3e6234188ed51e4fd945b8202b205e7d94791c",
+  "operator_uploads": [
+    {
+      "name": "AXIOM_~2(3).MD",
+      "bytes": 3911,
+      "sha256": "5f7027bcd2636d45708cfeee5d52c936e7b5a13c3170cdab7fddae02e217cc95"
+    },
+    {
+      "name": "AXIOM_~1(5).MD",
+      "bytes": 3637,
+      "sha256": "b19da6b9d257e2674386da5f18700b491e3a27516c86e9e5604c2759a392c3fb"
+    },
+    {
+      "name": "E2-RET~1(1).MD",
+      "bytes": 2584,
+      "sha256": "b68ba8fb2317690fb1a4b99ed3ed3021d1e2f0079c59f06f37271694f76b38b3"
+    },
+    {
+      "name": "NEXUS-~1(20261108-064813).ZIP",
+      "bytes": 6358,
+      "sha256": "6360d3a48fc17cf04f93a731762a7170bf57b61e34ce2994f16f15e096bdae2a"
+    },
+    {
+      "name": "AXIOM4~1(1).MD",
+      "bytes": 3962,
+      "sha256": "44d49ae0811337ce625ca8d871bbcf2f1ae9cf5d6b535a02578f07bc09274a69"
+    },
+    {
+      "name": "NEXUS_~1(20261108-064820).MD",
+      "bytes": 20797,
+      "sha256": "924281be47b06b65e83f6b27310406231eb4c67560970f5588ff2d186e1cfa51"
+    },
+    {
+      "name": "NEXUS-~2(5).ZIP",
+      "bytes": 11181,
+      "sha256": "b3e43ae0dfa9b830e53098e33f66d0b48aabf635af49722a27ee25f768f03e06"
+    }
+  ],
+  "zip_integrity": {
+    "q0_reference": "PASS_5_ENTRIES",
+    "grok_handover": "PASS_5_ENTRIES",
+    "nested_reference_byte_identical": true
+  },
+  "q0_reference": {
+    "status": "RECONSTRUCTED_EXPERT_REFERENCE_NOT_PRODUCTION_SOURCE",
+    "bytes": 6358,
+    "sha256": "6360d3a48fc17cf04f93a731762a7170bf57b61e34ce2994f16f15e096bdae2a",
+    "source_files": [
+      {
+        "name": "README.md",
+        "bytes": 1594,
+        "sha256": "e46f93f8684187540026eb43d2795c00359d592e3e197d1ef65c4b8bcc701d17"
+      },
+      {
+        "name": "STATUS_RECEIPT_Q0_VIEWER_REFERENCE.json",
+        "bytes": 957,
+        "sha256": "17ffc4252d84f1630a87cd33cf80520aca46471ffd7b067c4b1446ed53a4482c"
+      },
+      {
+        "name": "index.html",
+        "bytes": 2452,
+        "sha256": "8940c5ba3d58439f92b6bb8800019f76e36f8740f2275abfde54aa41bf2a3044"
+      },
+      {
+        "name": "styles.css",
+        "bytes": 1832,
+        "sha256": "a61ae9d232a4e14e3caf51ef1d34daf7200e1f5ff62879f478ddbaa5853920c9"
+      },
+      {
+        "name": "viewer.js",
+        "bytes": 4818,
+        "sha256": "51a9a7fa7328187ab104fc387d8563a84e09eb71a10b031ca9568dfb10e41eaa"
+      }
+    ]
+  },
+  "e2_receipt": {
+    "bytes": 2584,
+    "sha256": "b68ba8fb2317690fb1a4b99ed3ed3021d1e2f0079c59f06f37271694f76b38b3",
+    "main_report_reported_bytes": 32883,
+    "main_report_reported_sha256": "3d09270dea994eb21aecf9ec71822a6fa399048441ecdafc961717092b8205f1",
+    "main_report_bytes_received": false,
+    "status": "RECEIPT_BOUND_MAIN_DOCUMENT_GAP"
+  },
+  "grok_cross_validation": {
+    "status": "ORIGINAL_REPORT_RECEIVED_SOURCE_EXACT",
+    "not_e5_final": true,
+    "material_erratum": "Claim all five projection modes have singularity guards contradicted by reference source"
+  },
+  "reference_node_tests": {
+    "platform": "linux",
+    "node": "v22.16.0",
+    "total": 18,
+    "positive_or_baseline_pass": 12,
+    "negative_assertions_failed": 6,
+    "status": "FAIL_EXPECTED_SIX_COUNTEREXAMPLES",
+    "counterexamples": [
+      "perspective_pole_w3",
+      "schlegel_pole_w2",
+      "double_perspective_pole_z3",
+      "stereographic_pole_w1_silent_orthographic_substitution",
+      "nonfinite_xy_rotation_accepted",
+      "toScreen_nonfinite_y_accepted"
+    ]
+  },
+  "external_lanes": {
+    "E1": "PENDING",
+    "E2": "RECEIPT_ONLY",
+    "E3": "PENDING",
+    "E4": "PENDING",
+    "E5": "GROK_PRELIMINARY_NOT_FINAL"
+  },
+  "production": {
+    "original_source_bound_here": false,
+    "hostinger_write": false,
+    "cursor_visual_execution": false,
+    "pr_merge": false,
+    "existing_4d_viewer_mutated": false,
+    "source_changed": false,
+    "bodytwin_validated": false,
+    "physical_imu_authorized": false,
+    "a72_originals": "SOURCE_GAP"
+  }
+}

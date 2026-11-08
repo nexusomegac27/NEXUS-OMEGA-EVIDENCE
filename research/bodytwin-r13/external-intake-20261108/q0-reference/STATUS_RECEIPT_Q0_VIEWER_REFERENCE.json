@@ -1,0 +1,21 @@
+{
+  "object": "NEXUS_OMEGA_BODYTWIN_Q0_VIEWER_SOURCE_PACKAGE_REFERENCE_20261108_R0",
+  "authority": "GROK_EXTERNAL_RESEARCH_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "timestamp_utc": "2026-11-08T03:51:00Z",
+  "status": "RECONSTRUCTED_EXPERT_REFERENCE",
+  "not_original_production_source": true,
+  "source_gap_note": "True Q0 production viewer bytes remain unavailable as public expert document. This package is an independent transparent reconstruction for expert evaluation only.",
+  "features_implemented": [
+    "Tesseract 16 vertices / 32 edges",
+    "SO(4) plane controls: XY XZ XW YZ YW ZW",
+    "Projection modes: perspective orthographic stereographic schlegel double-perspective",
+    "Soft-View governance language",
+    "Optional live feed read (graceful failure)",
+    "Pause / Reset / Accessibility-friendly controls"
+  ],
+  "external_write": "NONE",
+  "hostinger_write": false,
+  "cursor_excluded": true
+}

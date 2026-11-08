@@ -1,0 +1,19 @@
+{
+  "object": "NEXUS_OMEGA_GROK_CROSS_VALIDATION_E2_RECEIPT_BOUND_HANDOVER_R1",
+  "authority": "EXTERNAL_RESEARCH_ONLY_GROK",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "timestamp_utc": "2026-11-08T06:46:00Z",
+  "e2_receipt_sha256": "b68ba8fb2317690fb1a4b99ed3ed3021d1e2f0079c59f06f37271694f76b38b3",
+  "e2_receipt_bytes": 2584,
+  "e2_maindoc_status": "NOT_IN_HAND",
+  "e2_maindoc_reported_sha256": "3d09270dea994eb21aecf9ec71822a6fa399048441ecdafc961717092b8205f1",
+  "e2_maindoc_reported_bytes": 32883,
+  "q0_reference_zip_sha256": "6360d3a48fc17cf04f93a731762a7170bf57b61e34ce2994f16f15e096bdae2a",
+  "q0_status": "RECONSTRUCTED_EXPERT_REFERENCE_CONFIRMED",
+  "cross_validation_verdict": "PASS_WITH_MATERIAL_CAVEATS_C1",
+  "handover_target": "MISTRAL_VIBE_E2",
+  "next_required": "OPERATOR_RELAY_E2_MAINDOC_OR_CANONICAL_REFILE_TO_ISSUE_328",
+  "external_write": "NONE",
+  "hostinger_write": false,
+  "adjudication_blocked": true
+}
