@@ -231,6 +231,17 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r19-bodytwin-collective-research-20261108": {
+      "path": "research/r19/bodytwin-soft-visual-collective-research-20261108",
+      "state": "OWNER_ISSUED_CLOSED_RESEARCH_ORDER_ONLY_AGENT_RETURNS_NOT_STARTED",
+      "operator_authorized": true,
+      "github_research_base_commit": "dbbb7411271b5653bccab2aba9176ee2b34b3c91",
+      "predecessor_r18_package_sha256": "e55f9fbde480b00dab225591b5227fa8bab1bb241bf1d3bac283df091f8b7421",
+      "external_write_authority": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {

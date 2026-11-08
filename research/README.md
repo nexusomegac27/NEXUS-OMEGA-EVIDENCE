@@ -50,3 +50,7 @@ These paths are research/checkpoint surfaces only. They do not imply production 
 ## R27-E · Operator-owned external return slot
 
 `research/r27/www-extern-wake-isolation-20261011/returns/` is the first **preallocated** external-agent return slot. Its seven exact allowed filenames are registered in `docs/governance/EXTERNAL_AGENT_WRITE_SLOTS_V1.json`. Neither external agents nor website visitors may create a new phase, agent namespace, return subdirectory or internal control-plane path. External GitHub principals require explicit operator registration and a real required-check / review ruleset. Preintegration research remains descriptive C1, not an implementation.
+
+## R19 Bodytwin-Spezialforschung (owner-issued packet)
+
+- `research/r19/bodytwin-soft-visual-collective-research-20261108/` — acht unabhängige R19-Forschungslanes AI01–AI08, quellenkritische Pre-Research, visuelle Ziel-Blueprints, Falsifikationsdesign und Rückgabe-Manifest. Keine vorallokierten externen GitHub-Writes und keine Deployment-Autorisierung.

@@ -1,0 +1,13 @@
+# R19 · Unabhängige Agenten-Returns, Matrix, Empfänger
+## Vollständiger einzelner Agentenreturn
+Every research agent delivers a **self-contained original full evolution version**, not a critique-only note, with logical documents `00_EXECUTIVE_VERDICT.md` through `10_COMPLETE_MANUSCRIPT.md` and detached `RETURN_MANIFEST.json` as specified physically in each own order. Build all external research versions independently. Manuscript must contain a complete deployable-in-principle architecture and a competing alternative, component contracts, visually precise frame sketches, source matrix, falsification plan, operational rollback, licensing, and a hard list of `NOT_EXECUTED` checks.
+## Transport
+- External GitHub actor allowlist EMPTY. No external agent direct writes, branch creation, issue author spoofing or new return path.
+- `OPERATOR_TO_AXIOM_BRIDGE` with separately transferred candidate manuscript bytes and SHA-256 inventory. Passive issue #93 only if sender legitimately authenticated/authorized; an issue comment is not scientific reception proof.
+- Receiver independently checks source bytes, hashes, licenses and return scope. `ACK_PENDING` until explicitly observed. Later owner-side integration requires additional review and protected write rules.
+- Detached manifest excludes self hash. Use `schema/expert-hash-handshake-v1.schema.json` and `scripts/verify_expert_hash_handshake_v1.py` where applicable. Include all actual files in inventory with sha256 and bytes. Do not guess missing originals.
+## Cross-agent evaluation without consensus bias
+Each conclusion tested against source, independent reproduction, falsifier and competing explanation. Pairings: GROK vs DEEPSEEK (security/delivery); QWEN vs GEMINI (anatomical kinematics); META vs MISTRAL (renderer accessibility/performance); PERPLEXITY vs every asset source; INDEPENDENT_EXPERT challenges chosen common solution; AXIOM receives/adjudicates but does not self-certify.
+Use matrix `claim_id | supporting exact source | primary report | counter-source | test | replicability | unresolved | C1 ceiling | decision`. No vote aggregation, majority as truth, autonomous agent/worker claims, or operator authority escalation.
+## Definition of complete packet vs complete research
+`R19_ORDER_PACKET_CLOSED=YES` only once all owner-issued order bytes and detached manifest are sealed and GitHub tree-retrievable. `AGENT_RETURNS_RECEIVED=0` initially; `SCIENTIFIC_ADJUDICATION=NOT_STARTED`; `CURSOR_INTEGRATION=NOT_AUTHORIZED_BY_THIS_PACKET`; `HOSTINGER_WRITE=NO`. Separate GitHub transport commit != deployment != browser validation.
