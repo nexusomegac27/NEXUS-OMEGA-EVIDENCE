@@ -1,0 +1,33 @@
+{
+  "object": "NEXUS_OMEGA_R21_NEUTRAL_SINGLE_AGENT_RESEARCH_ORDER_MANIFEST_20261109_R1",
+  "schema_version": "1.0.0",
+  "root": "research/r21/oppo-neutral-complete-single-agent-20261109",
+  "source_commit": "73a186b08f4b96bdb221da5c43a46b56f4206905",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "self_excluded": true,
+  "single_agent": true,
+  "github_required_for_expert": false,
+  "old_pr350": "SUPERSEDED_FOR_NEW_DISPATCH_HISTORICAL_PRESERVED",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2911,
+      "sha256": "a54c5c58efb8a52196f0378b90520a24ce40a3086c87b972bbf49d6933145949"
+    },
+    {
+      "path": "orders/NEUTRAL_COMPLETE_SINGLE_AGENT_RESEARCH_ORDER_R1.md",
+      "bytes": 18267,
+      "sha256": "706bddf9755878bc12f4199a13e92cc944e5f99d162c79a3e8cb320b299d13d3"
+    },
+    {
+      "path": "QUALITY_EVIDENCE_ADJUDICATION.md",
+      "bytes": 2725,
+      "sha256": "c46cb0911483e38f240366e2a9d5e7c4c31e5841be71a977073549e59aa0ad71"
+    },
+    {
+      "path": "TASK_ORDER_ANCHOR.json",
+      "bytes": 6657,
+      "sha256": "99316094304be87f273927177117423b8aa4954c915eebf9174741d93db28241"
+    }
+  ]
+}
