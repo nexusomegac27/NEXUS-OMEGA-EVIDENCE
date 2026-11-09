@@ -318,3 +318,7 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+## R20 medical-scientific OPPO male-first research (C1, 2026-11-09)
+
+- [R20 research program and scoped R19 C1 seal](research/r20/oppo-male-medical-science-foundation-20261109/README.md) — source-bound closed snapshot; ten planned scientific rounds, six expert mandates, anatomy/license/biomechanics/IMU initial primary-source research. No new agent return, hardware activation, Hostinger or merge.

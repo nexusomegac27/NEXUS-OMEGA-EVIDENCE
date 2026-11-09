@@ -231,6 +231,19 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r20-oppo-male-medical-science-20261109": {
+      "path": "research/r20/oppo-male-medical-science-foundation-20261109",
+      "state": "OWNER_ISSUED_RESEARCH_PROGRAM_OPEN_SOURCES_PREVIEWED_EXPERT_RETURNS_NOT_STARTED",
+      "operator_authorized": true,
+      "predecessor_r19_order_commit": "ee2e709df76b997ada5a26990b38ce7990e48c94",
+      "predecessor_r19r1_audit_commit": "97df70651d7c5363543123d358e2d59e86dfc982",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_write_authority": false,
+      "oppo_real_sensor_authorized": false,
+      "pixel9a_female": "RESERVED_NO_START",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {
