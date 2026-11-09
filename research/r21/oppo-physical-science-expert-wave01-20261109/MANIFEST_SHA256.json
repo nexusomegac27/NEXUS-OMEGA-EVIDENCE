@@ -1,0 +1,99 @@
+{
+  "object": "NEXUS_OMEGA_R21_OPPO_PHYSICAL_SCIENCE_EXPERT_WAVE01_MANIFEST_20261109_R0",
+  "schema_version": "1.0.0",
+  "date": "2026-11-09",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r21-physical-science-expert-wave01-20261109",
+  "root": "research/r21/oppo-physical-science-expert-wave01-20261109",
+  "source_baseline_commit": "3c72a15c0f67baf20f88806a747337baf153ba12",
+  "self_hash_excluded": true,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "publication_class": "OWNER_RESEARCH_PAPER_MANDATES_NO_AGENT_RETURNS_OR_PRIVATE_SENSOR_DATA",
+  "entries": [
+    {
+      "path": "00_R21_PHYSICAL_SOURCE_REGISTER.md",
+      "bytes": 4965,
+      "sha256": "e1e72a14bac780c27919b02663efbc4544b21c5896522ca387b9245a72f28a6c"
+    },
+    {
+      "path": "01_PRIMARY_PHYSICS_SOURCES.md",
+      "bytes": 3854,
+      "sha256": "7236abaefc880b97ab0c3b09516ee76e1f2bf672fd04ef5d4e12adfcc49c822d"
+    },
+    {
+      "path": "02_METROLOGY_MATH_AND_GATES.md",
+      "bytes": 3694,
+      "sha256": "a7255b9b89ad6d8a53afd9cc0b83ed2d34369bbdfaf95a7617a6a6f25889a1ff"
+    },
+    {
+      "path": "03_PRE_REGISTERED_CONTROLS.md",
+      "bytes": 5521,
+      "sha256": "b4406c9b239f58e88418bf90b7ff7273af4961026db47ce57ca0064ef9a4b796"
+    },
+    {
+      "path": "04_AGENTS_RETURN_AND_CROSS_REVIEW.md",
+      "bytes": 4419,
+      "sha256": "30c9a959b6512470ee975df36a4744a548c2b5cc15807de0fe4d01eab7994b61"
+    },
+    {
+      "path": "05_CONFIRMATORY_DESIGN.md",
+      "bytes": 2400,
+      "sha256": "5dc19a00b79c1395f6a7eb4a2da644df8fc561110c1aded2c67c3704a4286962"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4312,
+      "sha256": "dbc8318262611d4874b87c39a97230111eff6d203d44a70f43c8c6ff79ffe6cf"
+    },
+    {
+      "path": "TASK_ORDER_ANCHOR.json",
+      "bytes": 6515,
+      "sha256": "b069bd076ffa39b32b7a3095a1e415e2d0c54878c42cfe42f3f947631b51621f"
+    },
+    {
+      "path": "orders/AI01_GROK_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4835,
+      "sha256": "783dd837482703dbbcb8b197ccf71d0a9c00cdd48112e9d6ecd9282c47712e8d"
+    },
+    {
+      "path": "orders/AI02_QWEN_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4905,
+      "sha256": "48d84e1ac60fe6d5ee1a11e1ad704c7764cef2b8e653cec5b33ed59b952e8879"
+    },
+    {
+      "path": "orders/AI03_MISTRAL_VIBE_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4933,
+      "sha256": "6028af1d92027745cf127afebdc6ee262a4bd675682def155c4af8967c0e8095"
+    },
+    {
+      "path": "orders/AI04_META_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4770,
+      "sha256": "90ec93edd1da0dc5f58cfbf63d70309f703b12f8eba77e3a8712fcc08b8edf45"
+    },
+    {
+      "path": "orders/AI05_PERPLEXITY_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4942,
+      "sha256": "1aa5de4c11e5984f89f54c12f5693e40d7373d22c3ededec4d653b04a8c4e370"
+    },
+    {
+      "path": "orders/AI06_DEEPSEEK_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4775,
+      "sha256": "24d24e782fa5ae99ed73bbee5d7a71a3e7f8677d886b4aae9cafd2316a57f96b"
+    },
+    {
+      "path": "orders/AI07_INDEPENDENT_BIOMECHANICS_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4801,
+      "sha256": "f19fee89fc01cb6796078ed13e39e7fdc02aba8ac2a5e146c7251137758d1b7b"
+    },
+    {
+      "path": "orders/AI08_INDEPENDENT_METROLOGY_FULL_PHYSICAL_RESEARCH_MANDATE_R0.md",
+      "bytes": 4938,
+      "sha256": "d4f1fa80c89bca491b5cd338f2dbbccc5f02902dc5c335d57d0723eaa6598598"
+    },
+    {
+      "path": "orders/CURSOR_R21_SOURCE_RECEIVER_READONLY_R0.md",
+      "bytes": 1458,
+      "sha256": "e5d627eef6dd30c7e08ae6b8e80858232f239e73ade348ce4b1f282003c756a1"
+    }
+  ]
+}
