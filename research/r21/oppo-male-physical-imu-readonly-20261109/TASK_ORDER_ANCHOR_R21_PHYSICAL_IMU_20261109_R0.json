@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_R21_OPPO_MALE_PHYSICAL_IMU_CAPTURE_MAXI_ORDER_20261109_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OPERATOR_DELEGATED_SOURCE_CAPTURE_ORDER",
+    "recipient_role": "CURSOR_PRAXIS_OPPO_APP_PHYSICAL_IMU_CAPTURE",
+    "verified_github_actor": "NEXUS_OWNER_SIDE_AUTHORITY_NOT_EXTERNAL_MODEL_ID",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_R20_FOUNDATION_ADJUDICATION_R21_OPPO_READONLY_PHYSICAL_20261109_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "1300dcb257e5dc75a7de9f011cda82951e676924",
+    "predecessor_path": "research/r21/oppo-male-physical-imu-readonly-20261109/README.md",
+    "predecessor_bytes": 3293,
+    "predecessor_sha256": "bbfa70cdf3647151a36e26bffde94ba895fb5c06d2392f18eae9cd931135fc59"
+  },
+  "delegation": {
+    "scope": "Operator-authorized Cursor control of bound OPPO NEXUS App for real local private physical IMU capture and offline source-exact validation, no autonomous agent execution",
+    "allowed_actions": [
+      "Read physical current OPPO and native app sensor capability",
+      "Start and stop scoped local NEXUS App sensor recording as directed by operator",
+      "Apply reversible local debug-only source logger only if app lacks export",
+      "Privately export immutable Android SensorEvent original data and independently hash",
+      "Run local QA tests and record measured device timestamps"
+    ],
+    "prohibited_actions": [
+      "No Pixel 9a activation",
+      "No Hostinger public deployment or GitHub merge",
+      "No raw sensor/PII data publication",
+      "No Root Android permissions or unrelated third party devices",
+      "No fabricated physical sample or whole body reconstruction",
+      "No history deletion or node reset"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Retrieve source-exact, physically measured OPPO accelerometer and gyro SensorEvents from the actual operator-controlled Nexus App and quantify real sampling without mislabeling simulations.",
+    "deliverables": [
+      "Current physical OPPO and app build inventory",
+      "Raw private accel gyro Android SensorEvent session at least 60 seconds if physically feasible",
+      "Exact SHA256 original bytes, timebase and session provenance",
+      "Measured quality and captured gaps with independent receipt",
+      "Rollback record and scoped AXIOM handoff"
+    ],
+    "falsifiers": [
+      "A synthetic JSON fixture passes for a physical Android sample",
+      "Device mismatch or wrong boot accepted",
+      "Global monotonic check falsely rejects interleaved types",
+      "Existing WRITE_INGEST falsely accepted as read-only GET",
+      "Original units or sensor types fabricated",
+      "Private traces published via public GitHub"
+    ],
+    "acceptance_tests": [
+      "At least one authentic device-sourced accel and gyro event before physical capture claim",
+      "A continuous measured baseline and empirically calculated actual event rates",
+      "Immutable private original byte SHA256 and independent receiver receipt",
+      "Zero R18 R19 R20 rewrites or public raw traces"
+    ],
+    "pause_conditions": [
+      "Actual device is not operator owned or authorized",
+      "Safe local capture requires unavailable physical human action",
+      "A valid private export route is unavailable without dangerous permissions"
+    ],
+    "not_executed": [
+      "No physical events were observed by AXIOM in the chat",
+      "No public deployment or private sensor release",
+      "No medical validation or Pixel female start"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_R21_OPPO_PHYSICAL_IMU_CAPTURE_20261109_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "OPPO identity changes",
+      "Capture original source SHA256 changes",
+      "Unapproved public IMU release"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "1300dcb257e5dc75a7de9f011cda82951e676924",
+        "path": "research/r21/oppo-male-physical-imu-readonly-20261109/README.md",
+        "bytes": 3293,
+        "sha256": "bbfa70cdf3647151a36e26bffde94ba895fb5c06d2392f18eae9cd931135fc59",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Private operator-owned IMU raw data must never be published and the anatomical R18 derivative rights remain open.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "At least one real, timed and device-attested private accel gyro event, otherwise source gap",
+      "Actual sampling rate measured from timestamps not requested rate"
+    ],
+    "robustness_stability": [
+      "Only scoped reversible local app operations and separate private raw evidence",
+      "No Hostinger and no public raw sensor data"
+    ],
+    "traceability_comprehensibility": [
+      "Exact R21 predecessor bytes and SHA256 with full commit pinned",
+      "Raw original byte hashes and measured device build provenance"
+    ]
+  }
+}

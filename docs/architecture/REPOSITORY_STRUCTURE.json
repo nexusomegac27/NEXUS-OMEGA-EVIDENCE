@@ -231,6 +231,21 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r21-oppo-male-physical-imu-readonly-20261109": {
+      "path": "research/r21/oppo-male-physical-imu-readonly-20261109",
+      "state": "OWNER_READONLY_SOURCE_RESEARCH_ONLY_REAL_SENSOR_EVENTS_ZERO_OBSERVED",
+      "operator_authorized": true,
+      "predecessor_r20_commit": "fdb0b4dbc8658dfa37f83605425bccb9fa0ea29f",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_write_authority": false,
+      "hardware_start_authorized": false,
+      "read_only_discovery_authorized": true,
+      "oppo_current_binding": "NOT_ESTABLISHED",
+      "pixel9a_female": "RESERVED_NO_START",
+      "hostinger_write": false,
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {
