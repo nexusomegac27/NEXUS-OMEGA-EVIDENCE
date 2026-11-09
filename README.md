@@ -318,3 +318,7 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+## R21 OPPO physical sensor read-only research (2026-11-09)
+
+- [R20 C1 checkpoint and R21 OPPO physical data source research](research/r21/oppo-male-physical-imu-readonly-20261109/README.md) — 313-asset rights audit, six expert papers, 30/30 synthetic-only pull tests; no observed real device data, no deployment.
