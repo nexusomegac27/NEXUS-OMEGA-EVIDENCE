@@ -318,3 +318,7 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+## R21 neutral single-agent complete physical-science order (C1, 2026-11-09)
+
+- [Neutral full-scope single-agent R21 physical research order](research/r21/oppo-neutral-complete-single-agent-20261109/README.md) — supersedes named model-specific PR #350 orders for future distribution. One agent self-declares identity and tools, no GitHub prerequisite, complete 00–10 paper, 28 falsifiers, 14 positives, strong rejection of fabricated unsupported material claims.

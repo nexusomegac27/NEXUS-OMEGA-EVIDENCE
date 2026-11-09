@@ -231,6 +231,23 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r21-neutral-complete-single-agent-20261109": {
+      "path": "research/r21/oppo-neutral-complete-single-agent-20261109",
+      "state": "OWNER_ISSUED_SINGLE_AGENT_NEUTRAL_MANDATE_R1_SUPERSEDES_NAMED_WAVE01_FOR_DISPATCH",
+      "operator_authorized": true,
+      "predecessor_pr": 350,
+      "predecessor_head": "9c58450ab03bdcf81534484cac8d5596ec403354",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_write_authority": false,
+      "github_access_required_for_agent": false,
+      "agent_self_identification_required": true,
+      "full_scope_single_agent": true,
+      "oppo_raw_originals_received": false,
+      "new_sensor_capture_authorized": false,
+      "pixel9a_female": "RESERVED_NO_START",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {
