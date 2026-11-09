@@ -231,6 +231,22 @@
       "new_runner_pipeline_created": false,
       "cursor_scope": "ONE_READONLY_VM_RUN_EXISTING_NEXUS_NODES",
       "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+    },
+    "r21-oppo-physical-science-expert-wave01-20261109": {
+      "path": "research/r21/oppo-physical-science-expert-wave01-20261109",
+      "state": "OWNER_ISSUED_CLOSED_PAPER_RESEARCH_PACKET_EXPERT_EXECUTION_PENDING",
+      "operator_authorized": true,
+      "predecessor_r21_branch_head": "1300dcb257e5dc75a7de9f011cda82951e676924",
+      "predecessor_physical_order_head": "033298ccf6375654f3783d819b0af012f4cc748e",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "external_write_authority": false,
+      "oppo_reported_events": 14018,
+      "original_bytes_in_git": false,
+      "independent_physical_rehash": false,
+      "oppo_new_capture_authorized_by_this_order": false,
+      "pixel9a_female": "RESERVED_NO_START",
+      "receiver": "NEXUS_OPERATOR_AXIOM",
+      "inbox_issue": 93
     }
   },
   "research_lane_contract": {

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R21_OPPO_PHYSICAL_SCIENCE_EXPERT_WAVE01_TASK_ANCHOR_20261109_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OWNER_RESEARCH_WAVE_ISSUER",
+    "recipient_role": "EIGHT_INDEPENDENT_PHYSICAL_EXPERTS",
+    "verified_github_actor": "NOT_ESTABLISHED_FOR_EXTERNAL_AGENTS",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_R20_FOUNDATION_ADJUDICATION_R21_OPPO_READONLY_PHYSICAL_20261109_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "1300dcb257e5dc75a7de9f011cda82951e676924",
+    "predecessor_path": "research/r21/oppo-male-physical-imu-readonly-20261109/README.md",
+    "predecessor_bytes": 3293,
+    "predecessor_sha256": "bbfa70cdf3647151a36e26bffde94ba895fb5c06d2392f18eae9cd931135fc59"
+  },
+  "delegation": {
+    "scope": "Independent source-critical expert paper research based on Cursor-reported 70.114-s physical OPPO capture, with source originals pending independent receipt",
+    "allowed_actions": [
+      "Primary-source desk research and independent formal method development",
+      "Create complete independent paper-version alternatives and falsification plans",
+      "Design synthetic negative controls without presenting them as physical data",
+      "Receive private raw data through authorized Operator-to-AXIOM custody if and only if available"
+    ],
+    "prohibited_actions": [
+      "No autonomous OPPO sensor start/stop or device mutation",
+      "No unregistered external GitHub writes or root path invention",
+      "No private raw sample public publication",
+      "No Pixel9a female start or Bodytwin medical claim",
+      "No GitHub merge, Hostinger write, node reset or historical source mutation"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "How can the Cursor-reported 14018 event 70.114-second OPPO physical IMU acquisition be independently verified and translated into falsifiable metrology and sensor-fusion research without exceeding evidence?",
+    "deliverables": [
+      "Eight independent complete technical research papers with distinct competing physical designs",
+      "Source register preserving missing original bytes and exact claimed hashes",
+      "Primary-source Android and smartphone IMU metrology review",
+      "Preregestistred at least 28 adversarial and 14 positive controls",
+      "Safe independent private receiver and conditional phase-B measurement designs"
+    ],
+    "falsifiers": [
+      "A single reported count is promoted to observed raw sensor truth",
+      "70 seconds called long term Allan bias stability",
+      "Android calibrated gyro called completely raw uncalibrated ADC",
+      "Phone orientation claimed whole body kinematics",
+      "Private raw sample published or Pixel lane started"
+    ],
+    "acceptance_tests": [
+      "Each paper includes its own 00–10 plus detached manifest and valid C1 provenance",
+      "Original R21 session original hashes independently checked before any measured scientific result",
+      "Positive and negative control designs state whether actually executed",
+      "No source-identity, rights, privacy, sensor authority or historical mutation"
+    ],
+    "pause_conditions": [
+      "Original R21 files not supplied; quantitative lanes remain open not faked",
+      "Independent physical ground truth unavailable; absolute accuracy remains unproved",
+      "No automatic new physical acquisition outside scope of prior single session"
+    ],
+    "not_executed": [
+      "Eight expert agent actual executions",
+      "Independent AXIOM byte rehash of 166349-byte ZIP and 166831-byte GZ",
+      "Any new OPPO sensor session",
+      "Any medical/whole-body validity claim"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R21_OPPO_PHYSICAL_EXPERT_WAVE01_20261109_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Original OPPO hash/session discrepancy",
+      "New physical capture attempt without specific operator authority",
+      "C1 promotion via producer return or majority vote"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "1300dcb257e5dc75a7de9f011cda82951e676924",
+        "path": "research/r21/oppo-male-physical-imu-readonly-20261109/README.md",
+        "bytes": 3293,
+        "sha256": "bbfa70cdf3647151a36e26bffde94ba895fb5c06d2392f18eae9cd931135fc59",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Actual OPPO SensorEvent originals remain private and require scoped custody; no patient records, location, secrets or raw samples in public GitHub.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Source exact private 14018 count original-event readback when available",
+      "Experts distinguish short-term 70-second statistics from long-term stability"
+    ],
+    "robustness_stability": [
+      "No new device capture or external writes by research mandate",
+      "Reference truth and uncertainty assumptions are explicit"
+    ],
+    "traceability_comprehensibility": [
+      "Pinned prior immutable repository commit/path/bytes/SHA",
+      "Original physical counts, duration and expected hashes remain report-level until rehash"
+    ]
+  }
+}

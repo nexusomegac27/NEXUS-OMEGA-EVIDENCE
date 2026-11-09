@@ -318,3 +318,7 @@ The [Continuity Guard V1](research/pipeline/CONTINUITY_GUARD_V1_20261013.md) pre
 ## NEXUS Repository Steward · C1 seedling · 2026-10-13
 
 The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_V1_20261013.md) performs a source-exact read-only inventory of the complete tracked Git tree (source commit, bytes, SHA-256, registered lanes, unsafe paths and review-only naming differences). It runs inside the **existing** repository-structure workflow on PRs/pushes and best-effort daily; it does **not** rename historic bound objects, perform live NEXUS_NODE_BUS discovery, or authorize a claim promotion. Prospective lower-case kebab-case naming is documented; legacy identities are preserved until an independently reviewed migration receipt.
+
+## R21 physical-science independent expert wave 01 (C1, 2026-11-09)
+
+- [R21 physical OPPO expert research packet](research/r21/oppo-physical-science-expert-wave01-20261109/README.md) — 8 complete independent metrology/Android/signal/IMU/biomechanics assignments. Reported Cursor 14018 events / 70114 ms; original sensor ZIP not yet independently received; no agent execution, new capture, public raw data or bodytwin claim.
