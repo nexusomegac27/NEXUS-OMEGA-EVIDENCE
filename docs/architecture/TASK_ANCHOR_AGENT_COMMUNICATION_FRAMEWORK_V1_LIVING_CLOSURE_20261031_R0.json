@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_AGENT_COMMUNICATION_FRAMEWORK_V1_LIVING_CLOSURE_TASK_ANCHOR_20261031_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR_PRAXIS_CONTINUITY",
+    "verified_github_actor": "NOT_ESTABLISHED_FROM_FORMAT",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_AGENT_COMMUNICATION_WWW_LIVE_REMOTE_BYTES_AND_ROUTER_P0_INDEPENDENT_ADJUDICATION_20261031_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "0e751b4f1d4ad76a036dd44af3b258977c9edc1c",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_AGENT_COMMUNICATION_WWW_LIVE_REMOTE_BYTES_AND_ROUTER_P0_INDEPENDENT_ADJUDICATION_20261031_R0.md",
+    "predecessor_bytes": 10492,
+    "predecessor_sha256": "8e2c844b520c83476ae715c9ab8368393474ef5711c10dbad24f56a52745274e"
+  },
+  "delegation": {
+    "scope": "Bind the completed Agent Communication V1 architecture and public read-only milestone as a stable living source reference. Continue independent P0 proof work only in versioned authorized successor PRs, preserving no-cutover and no-public-write status.",
+    "allowed_actions": [
+      "READ_PINNED_V1_FOUNDATION_AND_TWO_REPORTED_EXPERT_SUMMARIES",
+      "CANONICAL_APPEND_ONLY_CONTINUITY_INDEX",
+      "CREATE_SCOPED_VERSIONED_SUCCESSOR_ORDERS_WITH_NEW_TASK_ANCHOR",
+      "CONTINUE_GITHUB_ONLY_DOCUMENT_HANDOFF_ROUTING_UNDER_CURRENT_GATES",
+      "SEPARATE_OLD_PR185_GOVERNANCE_SPLIT_REPAIR_FROM_V1_CLOSURE",
+      "KEEP_PUBLIC_READ_ONLY_WWW_AND_ITS_BYTE_PROOF_PRESERVED"
+    ],
+    "prohibited_actions": [
+      "NODE_RESET",
+      "MEMORY_DELETION",
+      "CLAIM_PROMOTION",
+      "UNAUTHORIZED_EXTERNAL_WRITE",
+      "PUBLIC_POST_API_ACTIVATION",
+      "DECLARING_EXTERNAL_RECEIVER_ACK_WHEN_UNVERIFIED",
+      "DECLARING_PRODUCTION_CUTOVER_ACTIVE_WITHOUT_REAL_GATES",
+      "MERGING_PR185_WITH_FAILED_R27E_CHECK",
+      "WEAKENING_R27E_100_FILE_LIMIT",
+      "REWRITING_V1_EVIDENCE_OR_EXPERT_SOURCE_HISTORY",
+      "UNREVIEWED_PRIVATE_SOURCE_PUBLICATION",
+      "PARALLEL_AGENT_COMMUNICATION_FRAMEWORK"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can the Operator-approved Agent Communication Framework V1 be canonically closed as a published C1 read-only and living communication foundation while preserving all unverified transport/identity/PR gates as explicitly scoped future successors?",
+    "deliverables": [
+      "Source-bound living architecture foundation V1.0 C1 milestone report",
+      "Two external reported expert readbacks with uploaded attachment SHA256/byte census only",
+      "Machine-readable Task Anchor Norm V1 continuity",
+      "Separate compliance-sized review branch/PR independent of PR185",
+      "Future P0/WWW serving-variance/privacy/governance items marked as successors not completed",
+      "Clear status that no new public write, independent external ACK, private route or cutover is live"
+    ],
+    "falsifiers": [
+      "V1 milestone closure is misrepresented as full bidirectional production transport",
+      "An operator-mediated expert label is promoted to GitHub-authenticated receiver identity",
+      "GitHub signature or webhook HMAC is claimed to prove individual model-runtime identity",
+      "One client interstitial is asserted as confirmed universal 404/outage",
+      "PR185 102-file change limit ignored or R27E validator weakened",
+      "Source receipts or origin dates rewritten instead of append-only versioning"
+    ],
+    "acceptance_tests": [
+      "AXIOM independently hashes both operator-supplied new expert original files",
+      "Closure foundation GitHub original bytes/sha rehashed against immutable pin",
+      "Task Anchor Norm V1 JSON-schema validation PASS",
+      "Separate closure-only PR changes count remains at most 100",
+      "Public 3/3 HTML/STATUS/PROTOCOL remote SHA and GET/HEAD witness preserved",
+      "Published website remains read-only, cutover staged, external authenticated ACK absent",
+      "Scientific claims and contrary-source uncertainty retained C1 only"
+    ],
+    "pause_conditions": [
+      "Trusted source file/byte/hash mismatch: preserve source gap and do not reconstruct",
+      "New write/public API request: require separately scoped operator review",
+      "Closing artifact itself violates R27E or structure: do not merge and report exact failure",
+      "Private source/public license ambiguity: publish metadata only"
+    ],
+    "not_executed": [
+      "EXTERNAL_AUTHENTICATED_RECEIVER",
+      "PUBLIC_EXTERNAL_WRITE_API",
+      "PR185_MERGE_OR_CUTOVER",
+      "INDIVIDUAL_EXPERT_IDENTITY_ATTESTATION",
+      "MODEL_FAMILY_INDEPENDENCE_PROOF",
+      "NATIVE_APP_R3"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_AGENT_COMMUNICATION_FRAMEWORK_V1_LIVING_CLOSURE_TASK_ANCHOR_20261031_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "V1_ARCHITECTURE_BASELINE_OVERWRITTEN",
+      "SOURCE_HASH_MISMATCH",
+      "PUBLIC_WRITE_CLAIM_PROMOTION",
+      "EXTERNAL_ACK_INVENTED",
+      "PR185_UNREVIEWED_MERGE",
+      "PRIVATE_SOURCE_PUBLICATION"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "120eace7fb807552148cdecd52eeb07cc4fc9c3c",
+        "path": "docs/architecture/NEXUS_AGENT_COMMUNICATION_FRAMEWORK_V1_LIVING_FOUNDATION_20261031_R0.md",
+        "bytes": 8469,
+        "sha256": "c6c941991f870d8497427824b6b9afefe10f2ec945524be350d57810cbe438ef",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "0e751b4f1d4ad76a036dd44af3b258977c9edc1c",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_AGENT_COMMUNICATION_WWW_LIVE_REMOTE_BYTES_AND_ROUTER_P0_INDEPENDENT_ADJUDICATION_20261031_R0.md",
+        "bytes": 10492,
+        "sha256": "8e2c844b520c83476ae715c9ab8368393474ef5711c10dbad24f56a52745274e",
+        "source_status": "AXIOM_BYTES_MATCH"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "697d58a4dba53a4a440fbd0c9a92da832ef56320",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_AGENT_COMMUNICATION_PUBLIC_INTERFACE_V1.html",
+        "bytes": 13521,
+        "sha256": "1b9a7902b64bf8fd1059821d33bb7dab604194212ee14e2378090bd0ed1f6987",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "Expert original attachments held as operator-mediated private sources, only hashes and public-safe synthesis entered public repo. No unlicensed content or personal data republished.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "V1 architecture and public WWW read-only milestone distinctly closed C1",
+      "New material handoff intents use one existing framework facade with GitHub-only source transport",
+      "All unfinished direct return/cutover/private adapters remain scoped successor tasks"
+    ],
+    "robustness_stability": [
+      "Fail closed on unverified actor/receiver and caller-written authenticated/verified witness markers",
+      "R27E PR185 102>100 remains governance HOLD; closure isolated in new limited PR",
+      "No new public write, unreviewed private upload, Node R3 or framework fork"
+    ],
+    "traceability_comprehensibility": [
+      "Two uploaded expert input SHA256 and evidence classes independently preserved",
+      "Immutable source-hash V1 foundation, GitHub WWW remote byte CI witness",
+      "Versioned living roadmap and no false claim of production bidirectional completion"
+    ]
+  }
+}
