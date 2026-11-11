@@ -1,0 +1,148 @@
+{
+  "object": "NEXUS_OMEGA_OPPO_A74_METADATA_PIXEL_9A_PREINSTALL_GATE_20261016_R0",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "operator_authority": "OPPO_SINGLE_METADATA_READ_ONLY_AND_FUTURE_PIXEL_CONDITIONAL_DECISION",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "source_ref": "axiom/oppo-a74-metadata-pixel-evidence-gate-20261016",
+  "parent": {
+    "base_main_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+    "R9_predecessor_PR": 113,
+    "R9_predecessor_head": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+    "R9_context_PR": 114,
+    "R9_context_head_observed": "078dc08aea659a99959542fbe5637e635b08e612",
+    "AXIOM_local_adjudication_report_sha256": "cbac805d2f3ddbd39f052faaccb828ae41d3cba99202ce8b50533f49e84c4acb"
+  },
+  "target_device": "OPPO A74",
+  "comparison_device": "Google Pixel 9a",
+  "collection": {
+    "mode": "READ_ONLY_ONE_SHOT_ALREADY_AUTHORIZED_ACCESS_ONLY",
+    "device_connected": "NOT_OBSERVED_BY_AXIOM",
+    "private_archive_access": "NOT_OBSERVED_BY_AXIOM",
+    "capture_interrupt": false,
+    "new_worker": false,
+    "adb_install": false,
+    "adb_permissions_change": false,
+    "hostinger_write": false,
+    "pixel_install": false,
+    "privacy": "NO_RAW_SENSOR_DATA_OR_DEVICE_IDENTIFIERS_IN_PUBLIC_GITHUB",
+    "metadata_fields": [
+      "source_actor_method_timestamp_timebase",
+      "device_model_android_api_build_redacted",
+      "app_package_version_code_apk_sha256_signer",
+      "permissions_fgs_type_power_policy",
+      "sensor_name_vendor_type_frame_units_FIFO_requested_achieved_sample_period",
+      "monotonic_timestamp_delta_distribution_duplicate_gap_out_of_order",
+      "capture_sessions_accuracies_duty_cycle_restart_thermals_if_recorded",
+      "package_original_device_zip_byte_count_sha256_zip_crc",
+      "private_hostinger_stored_original_zip_byte_count_sha256_when_accessible",
+      "receipt_json_bytes_sha256_and_download_transport_provenance",
+      "still_nulls_ukf_nis_nees_covariance_omega_metadata_only_when_real_sources_exist"
+    ],
+    "forbidden_fields": [
+      "IMEI",
+      "SERIAL",
+      "GEOLOCATION",
+      "PATIENT_DATA",
+      "PASSWORD",
+      "TOKEN",
+      "PRIVATE_RAW_TIMESERIES"
+    ]
+  },
+  "reported_baseline": {
+    "type": "2026-10-15_CURSOR_REPORTED_NOT_FRESH_READOUT",
+    "elapsed_min_approx": 485,
+    "acc_hz_approx": 99.96,
+    "gyro_hz_approx": 100.36,
+    "foreground_service_at_snapshot": true,
+    "packages_reported": [
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008"
+    ],
+    "report_only_host_receipts": "8_OF_8",
+    "actual_device_payload_host_matches_reported": [
+      "0001",
+      "0005",
+      "0006",
+      "0007",
+      "0008"
+    ],
+    "missing_originals": [
+      "0002",
+      "0003",
+      "0004"
+    ],
+    "hostinger_list_extra": [
+      "0009",
+      "0010",
+      "0011"
+    ],
+    "full_device_host_zip_identity": "NOT_ESTABLISHED"
+  },
+  "science": {
+    "levels": [
+      "METADATA_READOUT_INTEGRITY",
+      "SENSOR_RECORD_FIDELITY",
+      "SCIENTIFIC_INFERENCE",
+      "PIXEL_SOFTWARE_COMPATIBILITY"
+    ],
+    "tests": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12"
+    ],
+    "test_execution_default": "NOT_EXECUTED",
+    "NEES_without_ground_truth": "NOT_COMPUTABLE",
+    "sampling_mean_not_proof_of_no_dropouts": true,
+    "null_and_oos_required_for_causal_claim": true,
+    "thresholds_predeclare_before_prospective_observation": true,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+  },
+  "pixel": {
+    "installed_by_this_order": false,
+    "installation_authorized": false,
+    "criteria": [
+      "OPPO_EVIDENCE_SOURCE_EXACT_AND_GAPS_DISCLOSED",
+      "LOCKED_SCIENTIFIC_ANALYSIS_AND_NEGATIVE_CONTROLS",
+      "APP_SIGNER_APK_HASH_AND_SOURCE_FLAVOR_KNOWN",
+      "PIXEL_ANDROID_SENSOR_CAPABILITY_AND_FGS_PERMISSIONS_COMPATIBILITY",
+      "BACKUP_AND_ROLLBACK_PLAN",
+      "SEPARATE_FUTURE_OPERATOR_ACK"
+    ],
+    "verdict_if_insufficient": "HOLD_EVIDENCE",
+    "cross_device_validation": "NOT_ESTABLISHED_BEFORE_PROSPECTIVE_PIXEL_DATA"
+  },
+  "return": {
+    "exact_authenticated_receiver": "NEXUS_OPERATOR_AXIOM",
+    "public_git_content": "SANITIZED_METADATA_ONLY",
+    "private_bytes": "EXISTING_AUTHORIZED_PRIVATE_CHANNEL_ONLY",
+    "mandatory": [
+      "EXECUTIVE",
+      "PROVENANCE_DEVICE_READBACK",
+      "SENSOR_QUALITY_METRICS",
+      "PACKAGE_BYTES_AND_GAPS",
+      "FALSIFIERS_AND_NULLS",
+      "SCIENCE_GATE_AND_PIXEL_READINESS",
+      "DETACHED_SHA256SUMS",
+      "HANDSHAKE"
+    ],
+    "cursor_receive_ack": "PENDING",
+    "independent_Axiom_rehash": "PENDING",
+    "no_operator_zip_courier": true
+  }
+}

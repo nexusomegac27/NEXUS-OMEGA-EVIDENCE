@@ -1,0 +1,47 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_OPPO_A74_METADATA_PIXEL_9A_GATE_DETACHED_MANIFEST_20261016_R0",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/oppo-a74-metadata-pixel-evidence-gate-20261016",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "original_main_base": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "parent_oppo_research_commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+  "parent_rehash": "MATCH",
+  "report_level_local_predecessor": {
+    "file": "NEXUS_OMEGA_AXIOM_ADJUDICATION_OPPO_A74_EXISTING_SOAK_20261015_R0.txt",
+    "bytes": 4101,
+    "sha256": "cbac805d2f3ddbd39f052faaccb828ae41d3cba99202ce8b50533f49e84c4acb",
+    "publicly_uploaded": false,
+    "source_class": "OPERATOR_SUPPLIED_REPORT"
+  },
+  "files": [
+    {
+      "path": "research/oppo-a74/metadata-pixel-evidence-gate-20261016/NEXUS_OMEGA_AXIOM_CURSOR_OPPO_A74_METADATA_CAUSAL_AUDIT_PIXEL_9A_CONDITIONAL_GATE_20261016_R0.md",
+      "bytes": 14561,
+      "sha256": "bce2df8640cb6cab8c94d21585b005204e278acf7f83b8daa55acb2d1ee581e1",
+      "git_blob_sha1": "c0e077231dc9397d29aeab2ba5f6af8c9fac0a2a"
+    },
+    {
+      "path": "research/oppo-a74/metadata-pixel-evidence-gate-20261016/OPPO_A74_SINGLE_SHOT_METADATA_PIXEL_9A_GATE_CONTRACT_20261016_R0.json",
+      "bytes": 4777,
+      "sha256": "db1660af4cdecff93b4c114990b7dc2ffc19703459314bbe74992350922ad91d",
+      "git_blob_sha1": "2d2fbaa9c772c4dfd4228049cc858eed2b88c33d"
+    },
+    {
+      "path": "research/oppo-a74/metadata-pixel-evidence-gate-20261016/TASK_ORDER_ANCHOR_V1.json",
+      "bytes": 6169,
+      "sha256": "84aa9004cdfe60d4ca0641999170aa219f38fa1189fc61189ac0c7a415a4b929",
+      "git_blob_sha1": "4291ab055e8b1cd75d255f236177774912451449"
+    },
+    {
+      "path": "research/oppo-a74/metadata-pixel-evidence-gate-20261016/README.md",
+      "bytes": 2084,
+      "sha256": "42d7cd9b33ed398bb859354396a61d77bed8c6adb6e8231f95e21eb2529dfa1f",
+      "git_blob_sha1": "9968d6d9524ccb8b04231c5df6f741f7d133b216"
+    }
+  ],
+  "file_count": 4,
+  "manifest_self_hash": "EXCLUDED",
+  "metadata_from_current_oppo": "NOT_YET_RETRIEVED",
+  "real_cursor_receive": "NOT_YET_CONFIRMED",
+  "pixel_install": "NOT_AUTHORIZED"
+}

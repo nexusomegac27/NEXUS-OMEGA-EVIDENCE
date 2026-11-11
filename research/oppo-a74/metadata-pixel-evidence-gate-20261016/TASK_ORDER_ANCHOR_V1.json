@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_OPPO_A74_METADATA_CAUSAL_AUDIT_PIXEL_9A_CONDITIONAL_GATE_20261016_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_DIRECT_OPPO_METADATA_ONESHOT_PIXEL_CONDITIONAL",
+    "issuer_role": "AXIOM_EPISTEMIC_AUDIT",
+    "recipient_role": "CURSOR_PRAXIS",
+    "verified_github_actor": "nexusomegac27",
+    "predecessor_object": "NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+    "predecessor_path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+    "predecessor_bytes": 22091,
+    "predecessor_sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba"
+  },
+  "delegation": {
+    "scope": "One-shot low-impact read-only OPPO A74 metadata audit and evidence-based Pixel 9a installation readiness design; no install or capture change.",
+    "allowed_actions": [
+      "Read already existing, authorized OPPO app-local or device metadata once",
+      "Read physically available existing private archived source bytes without access bypass",
+      "Compute actual per-source byte counts SHA256 and sample quality metrics",
+      "Run offline negative fixtures on already available data",
+      "Return source-exact summary with scoped evidence gaps"
+    ],
+    "prohibited_actions": [
+      "No new capture run or worker, restart, stop, permission change",
+      "No Pixel installation or app update",
+      "No public raw phone samples or private paths",
+      "No Hostinger write, access escalation or credential echo",
+      "No R3 reopen, R9 replace, R11 interference",
+      "No claim promotion beyond C1"
+    ],
+    "write_slot": "OWNER_RESEARCH_PR_ONLY",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Does the existing OPPO A74 capture possess independently checkable sensor/transport metadata and enough falsifiable evidence to consider the same application as a candidate on Google Pixel 9a?",
+    "deliverables": [
+      "Source exact OPPO metadata and timebase register",
+      "Sensor continuity estimates and quality intervals",
+      "Device ZIP vs Hostinger actual bytes and package gaps",
+      "Null/alternative hypothesis and executed fixture register",
+      "Conditional Pixel app/OS/sensor compatibility and separate-authorization gate",
+      "Detached SHA256SUMS plus real Cursor return handshake"
+    ],
+    "falsifiers": [
+      "Missing original payload despite receipt MATCH",
+      "Out-of-order or duplicate timestamp samples",
+      "Resampled synthetic stream falsely labeled physical 100 Hz",
+      "Changing app signer, permissions, API behavior",
+      "Invalid statistical NIS/NEES prerequisites",
+      "Cross-device confirmation asserted before Pixel prospective data"
+    ],
+    "acceptance_tests": [
+      "Real source bytes and acquisition method per observed field",
+      "Actual negative controls execution segregated from proposed",
+      "No OPPO capture interference, no Pixel install",
+      "Independent receiver rehash remains pending until performed"
+    ],
+    "pause_conditions": [
+      "Not actually connected to OPPO or private archive",
+      "Source missing for requested claim",
+      "OS/FGS permissions inaccessible",
+      "Privacy or credential risk"
+    ],
+    "not_executed": [
+      "Fresh OPPO read until Cursor actual receipt",
+      "Pixel installation",
+      "New Capture worker",
+      "Hostinger access bypass",
+      "Causal mechanism confirmation"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_OPPO_A74_METADATA_CAUSAL_AUDIT_PIXEL_9A_CONDITIONAL_GATE_20261016_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Hash mismatch",
+      "Private/public boundary breach",
+      "Unapproved install"
+    ],
+    "rebind_procedure": "APPEND_ONLY_RECEIPT_WITH_SOURCE_GAP",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "0e6f7c9d38c8074bb8e17395dd67844703681301",
+        "path": "research/oppo-a74/axiom-expert-maxi-20261015/NEXUS_OMEGA_AXIOM_GITHUB_EXTERNAL_EXPERT_MAXI_CONTINUATION_20261015_R0.md",
+        "bytes": 22091,
+        "sha256": "c581aeaf4c64ecf9899e7f0f897e847a3446321bb5d1484622c863dbc2f9c2ba",
+        "source_status": "GITHUB_PR_SOURCE_REFERENCED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NO_RECONSTRUCTION",
+    "copyright_privacy": "Private device source bytes remain only private; public safe sanitized summary.",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "EXISTING_AUTHENTICATED_CURSOR_PRIVATE_RETURN_AND_PUBLIC_SAFE_GITHUB_RECEIPT",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Real positive/negative read controls",
+      "Sampling rate, loss, jitter timebase honestly calculated"
+    ],
+    "robustness_stability": [
+      "No capture interrupt",
+      "Source gaps fail scoped"
+    ],
+    "traceability_comprehensibility": [
+      "Each value identified OBSERVED vs REPORTED vs INFERRED",
+      "Pixel gate separate from actual install"
+    ]
+  }
+}
