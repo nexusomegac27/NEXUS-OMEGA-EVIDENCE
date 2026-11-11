@@ -1,0 +1,31 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R26_NF05_NF06_PREREG_FREEZE_CANDIDATE_DETACHED_MANIFEST_20261011_R0",
+  "date": "2026-10-11",
+  "repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r26-nf05-nf06-armfix-prereg-20261011",
+  "base_main": "88e8e798d1cbe41e61202381803f2a150b83a214",
+  "parent_main_r26_chain": "8c37445c709986a39191fd46af8efe70d1150b9c",
+  "parent_objects": [
+    "PR #77 (Perplexity-Return + AXIOM-Adjudikation)",
+    "NEXUS_OMEGA_MISTRAL_VIBE_R26_TWO_PEAK_REPLAY_RETURN_20261011_R0 (PR #88)"
+  ],
+  "transport_label": "OPERATOR_TO_AXIOM_TRANSFER_NOT_AGENT_GITHUB_SEND",
+  "transport_note": "Push ueber die operator-eigene GitHub-API-Autorisierung (nexusomegac27); kein Agent-Self-Send, keine Rollenuebernahme, kein Merge durch den Produzenten.",
+  "children": [
+    {
+      "path": "research/r26/nf05-nf06-armfixation-prereg-20261011/NEXUS_OMEGA_MISTRAL_VIBE_R26_NF05_NF06_ARM_FIXATION_AND_PREREG_FREEZE_CANDIDATE_20261011_R0.md",
+      "bytes": 13593,
+      "sha256": "838329a0fd7290cdf1159ad2b20665613490859c2d73cbfe699f50c7b59e5650",
+      "git_blob_sha1": "cbc4196060bfe6f94028a4c41fe02dfc7e11c4ea",
+      "github_api_readback": {
+        "ref": "refs/heads/codex/r26-nf05-nf06-armfix-prereg-20261011",
+        "sha256_readback_recompute": "838329a0fd7290cdf1159ad2b20665613490859c2d73cbfe699f50c7b59e5650",
+        "bytes_readback": 13593,
+        "verify": "SHA256_BYTE_EXACT_MATCH"
+      }
+    }
+  ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "merge_by_producer": false,
+  "axiom_adjudication": "PENDING"
+}
