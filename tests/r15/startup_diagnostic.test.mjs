@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import {strict as assert} from 'node:assert';
+import {auditStartupBatch,classifyStartupEvidence} from '../../scripts/r15/startup_diagnostic.mjs';
+const base = {nodeId:'node-1', status:'STARTING_UP'};
+test('missing run cannot imply failed trigger',()=>assert.equal(classifyStartupEvidence(base).classification,'NO_PROVIDER_RUN_EVIDENCE'));
+test('actual progress with stale UI is a candidate only',()=>assert.equal(classifyStartupEvidence({...base,providerRunId:'r',progressEvents:true}).classification,'UI_STALE_CANDIDATE'));
+test('finish beats status label',()=>assert.equal(classifyStartupEvidence({...base,providerRunId:'r',executionFinished:true}).classification,'UI_STALE_CANDIDATE'));
+test('explicit dispatch wait is distinguished',()=>assert.equal(classifyStartupEvidence({...base,providerRunId:'r',bootstrapComplete:true,awaitingDispatch:true}).classification,'DISPATCH_WAIT_REPORTED'));
+test('no progress with run cannot assert deadlock',()=>assert.equal(classifyStartupEvidence({...base,providerRunId:'r'}).classification,'INIT_WITHOUT_PROGRESS_EVIDENCE'));
+test('nine node batch does not mutate anything',()=>{let a=auditStartupBatch(Array.from({length:9},(_,i)=>({...base,nodeId:'n'+i})));assert.equal(a.results.length,9);assert.equal(a.productionChanges,0);assert.equal(a.results.every(v=>v.restartAuthorized===false && v.rootCause==='NOT_ESTABLISHED'),true);});
+test('duplicate id blocked',()=>assert.throws(()=>auditStartupBatch([base,base]),/DUPLICATE_NODE_ID/));
+test('bounded batch',()=>assert.throws(()=>auditStartupBatch(Array.from({length:129},(_,i)=>({...base,nodeId:String(i)}))),/INVALID_BATCH/));
+test('unknown status rejected',()=>assert.throws(()=>classifyStartupEvidence({...base,status:'ZOMBIE'}),/INVALID_NODE_EVIDENCE/));
