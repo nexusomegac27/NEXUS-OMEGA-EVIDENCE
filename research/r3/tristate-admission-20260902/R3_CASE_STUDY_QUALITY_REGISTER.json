@@ -1,0 +1,100 @@
+{
+  "object": "R3_CASE_STUDY_QUALITY_REGISTER",
+  "source_bind": {
+    "path": "NEXUS_OMEGA_R3_CASE_STUDY_QUALITY_AND_CLAIM_REGISTER_20260902_R0.json",
+    "sha256": "c9e0fc5fbeaa7cf3958e9996f0a21b13ab94898a4482762e536858a5d5ca798d",
+    "bytes": 22573
+  },
+  "quality_counts": {
+    "HIGH": 2,
+    "MEDIUM": 3,
+    "LOW": 3
+  },
+  "case_quality": [
+    {
+      "case_study_id": "FS1",
+      "title": "Multidimensionale Normativität in der Geschlechteranalyse",
+      "resonance_quality": "LOW",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H1_WEAK",
+        "H2_WEAK"
+      ],
+      "reason": "Social norms and educational agency can be described structurally, but non-corruptible/final-authorization mapping is imposed by the NEXUS lens."
+    },
+    {
+      "case_study_id": "FS2",
+      "title": "Narrative Spannung zwischen binärer Grenze und trinärer Entscheidung im Anime Digimon",
+      "resonance_quality": "LOW",
+      "independence_class": "FICTIONAL_ANALOGY",
+      "h_links": [
+        "H1_REJECTED_AS_HARD_CONSTRAINT",
+        "H2_ANALOGICAL_ONLY"
+      ],
+      "reason": "Fictional narrative only; overcoming/ignoring the supposed hard limit conflicts with calling it non-corruptible."
+    },
+    {
+      "case_study_id": "FS3",
+      "title": "Kritik der \"Thermostat\"-Beobachter-Analogie als struktureller Übergang",
+      "resonance_quality": "HIGH",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H3_STRONG_ANALOGICAL"
+      ],
+      "reason": "Observer/interface and observation-as-event map naturally to a measurement boundary; not software provenance or quantum-consciousness evidence."
+    },
+    {
+      "case_study_id": "FS4",
+      "title": "Formale Definition eines minimalen Beobachters als analytisches Instrument",
+      "resonance_quality": "HIGH",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H3_STRONG_ANALOGICAL",
+        "H1_BOUNDARY_ONLY_NOT_NONCORRUPTIBLE"
+      ],
+      "reason": "Formal observer boundary is structurally useful; non-corruptibility and human final authorization remain additional NEXUS inferences."
+    },
+    {
+      "case_study_id": "FS5",
+      "title": "Praktische Implementierung nicht-konkurrierbarer Fähigkeiten in Frontier AI",
+      "resonance_quality": "MEDIUM",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H1_MEDIUM",
+        "H2_MEDIUM"
+      ],
+      "reason": "Constrained multi-provider architecture is relevant to capability composition, but the selected architecture is not intrinsically non-corruptible."
+    },
+    {
+      "case_study_id": "FS6",
+      "title": "Risiken menschlicher Autoritätsverlust in misalignierten KI-Systemen",
+      "resonance_quality": "MEDIUM",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H2_MEDIUM",
+        "H3_NO_STRONG_SUPPORT"
+      ],
+      "reason": "Misalignment directly concerns loss of human control; observer/own-reality language is an unnecessary anthropomorphic extension."
+    },
+    {
+      "case_study_id": "FS7",
+      "title": "Menschliche Agentur im Dialog mit Algorithmen bei GitLab und OpenAI",
+      "resonance_quality": "MEDIUM",
+      "independence_class": "NONFICTION_EXTERNAL_SOURCE",
+      "h_links": [
+        "H2_MEDIUM",
+        "H3_WEAK"
+      ],
+      "reason": "Human review of AI-generated work supports a final-authorization analogy but not measurement provenance by itself."
+    },
+    {
+      "case_study_id": "FS8",
+      "title": "Synthese und epistemische Limitationen der Fallstudienanalyse",
+      "resonance_quality": "LOW",
+      "independence_class": "DERIVED_SYNTHESIS_NOT_INDEPENDENT_CASE",
+      "h_links": [],
+      "reason": "FS8 summarizes FS1-FS7 and contributes no independent case evidence; exclude from independent saturation counts."
+    }
+  ],
+  "saturation_verdict": "EMPIRICAL_SATURATION_NOT_ESTABLISHED"
+}

@@ -1,0 +1,8 @@
+{"event": "AGENT_ENTRY", "admission_id": "ADM_CURSOR_TRISTATE_R3_0f150de6277d", "utc": "2026-09-02T17:49:36Z"}
+{"event": "ORDER_BIND", "order_sha256": "a931da326196705c369dbbd116668479c85b33583dda5f40f41047e5fc8594fe"}
+{"event": "SOURCE_INTAKE", "r2": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91", "r3": "eee6446cea5fea4a2086357f6acab822084feeb05a366c24fc952c682a8adb3c"}
+{"event": "TEMPORAL_OVERLAP_PRESERVED", "strict_succession": "NOT_ESTABLISHED"}
+{"event": "QWEN_ENTRY_ACK_GAP", "state": "NOT_PRESENT"}
+{"event": "TRI_STATE_FIXTURE_BATTERY", "count": 24, "pass": 24}
+{"event": "HYPOTHESIS_EVAL", "result": "SUPPORTED_DESCRIPTIVELY_UNDER_FIXTURE_BATTERY"}
+{"event": "TASK_CHECKPOINT", "phase": "local_complete"}

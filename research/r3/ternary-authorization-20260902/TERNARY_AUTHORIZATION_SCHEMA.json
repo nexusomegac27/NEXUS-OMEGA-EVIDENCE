@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS_TERNARY_AUTHORIZATION_DECISION_V1",
+  "type": "object",
+  "required": [
+    "identity",
+    "admission",
+    "action",
+    "decision",
+    "decision_receipt"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object"
+    },
+    "admission": {
+      "type": "object"
+    },
+    "capability_vector": {
+      "type": "object"
+    },
+    "action": {
+      "type": "string"
+    },
+    "resource": {
+      "type": "string"
+    },
+    "context": {
+      "type": "object"
+    },
+    "policy_set": {
+      "type": "array"
+    },
+    "decision": {
+      "enum": [
+        "DENY",
+        "ALLOW",
+        "DEFER_TO_HUMAN",
+        "HOLD"
+      ]
+    },
+    "decision_reason": {
+      "type": "string"
+    },
+    "human_required": {
+      "type": "boolean"
+    },
+    "decision_receipt": {
+      "type": "object"
+    }
+  }
+}

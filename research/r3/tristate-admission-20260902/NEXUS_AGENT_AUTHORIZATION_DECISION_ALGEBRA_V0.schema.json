@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nexus://agent/authorization-decision-algebra-v0",
+  "title": "NEXUS_AGENT_AUTHORIZATION_DECISION_ALGEBRA_V0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "action_id",
+    "reason_code",
+    "lane_scope",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "DENY",
+        "ALLOW",
+        "ESCALATE_TO_OPERATOR"
+      ]
+    },
+    "action_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reason_code": {
+      "type": "string"
+    },
+    "lane_scope": {
+      "type": "string"
+    },
+    "global_stop": {
+      "type": "boolean",
+      "const": false
+    },
+    "claim_ceiling": {
+      "type": "string",
+      "const": "C1"
+    },
+    "agent_non_mutable_constraint_invoked": {
+      "type": "boolean"
+    },
+    "receipt_required": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "object": "R3_INTAKE_RECEIPT",
+  "utc": "2026-09-02T17:49:36Z",
+  "order": {
+    "path": "NEXUS_OMEGA_CURSOR_R3_FULL_SYMBIOSIS_TRISTATE_ADMISSION_RESEARCH_IMPLEMENTATION_ORDER_20260902_R0.md",
+    "bytes": 6353,
+    "sha256": "a931da326196705c369dbbd116668479c85b33583dda5f40f41047e5fc8594fe",
+    "expected_sha256": "a931da326196705c369dbbd116668479c85b33583dda5f40f41047e5fc8594fe",
+    "match": true
+  },
+  "r2_return_archive": {
+    "path": "SHA256~1.zip",
+    "bytes": 12498,
+    "sha256": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91",
+    "expected": "89054b40b23c01584f7e76e527c2f772e16e65ba78791fe3b7871b6692b58d91",
+    "match": true,
+    "members": 10,
+    "sidecar_verify": {
+      "listed": 9,
+      "matched": 9,
+      "mismatched": [],
+      "bom": true
+    },
+    "utf8_bom_caveat": true,
+    "bom_preserved": true
+  },
+  "r3_archive": {
+    "path": "Layer 3.zip",
+    "bytes": 461541,
+    "sha256": "eee6446cea5fea4a2086357f6acab822084feeb05a366c24fc952c682a8adb3c",
+    "expected": "eee6446cea5fea4a2086357f6acab822084feeb05a366c24fc952c682a8adb3c",
+    "match": true,
+    "members": 10,
+    "archive_safety": {
+      "path_traversal": false,
+      "encryption": false,
+      "symlink_escape": false,
+      "verdict": "PASS"
+    },
+    "logical": {
+      "physical_files": 10,
+      "logical_research_objects_note": "PDF+TXT derivative pairs are dual representation; do not collapse to byte identity",
+      "derivative_pairs_not_byte_identical": true
+    }
+  },
+  "axiom_package": {
+    "path": "NEXUS_OMEGA_R3_FULL_AUTONOMOUS_PROCESSING_PACKAGE_20260902_R0.zip",
+    "bytes": 18566,
+    "sha256": "451c025aa4a922d317cb93053f160efb797bb0b85f67432a1c8d5b3c8d9a66a4",
+    "expected": "451c025aa4a922d317cb93053f160efb797bb0b85f67432a1c8d5b3c8d9a66a4",
+    "match": true
+  },
+  "claim_ceiling": "C1",
+  "foundation_promotion": "NO"
+}
