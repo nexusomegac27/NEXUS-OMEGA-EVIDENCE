@@ -1,125 +1,160 @@
 {
-  "object": "NEXUS_OMEGA_R27_SANDBOX_PUBLIC_RESEARCH_CATALOG_20261111_R0",
-  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
-  "public_metadata_only": true,
-  "private_research_bytes_present": false,
-  "github_write_from_experts": false,
-  "sandbox_execution_authorized": false,
-  "verified_live_hostinger": false,
-  "publication_state": "SOURCE_STAGE_UNTIL_MAIN_MERGE_AND_HTTP_READBACK",
-  "operator_approved_public_metadata": true,
-  "source_lineage": {
-    "r27_r1_zip_sha256": "f8af20820ca5eccdc52b7c5fd5b384598933b5936c5e85954992555601bcc0c8",
-    "r27_r2_repaired_private_zip_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
-    "r27_r2_private_manifest": "151/151_MATCH",
-    "original_final_order_sha256": "a888ed5f66bfeea662586d4ad8829eb480fcf6ca8a4809b1402e015b8e1f3923",
-    "original_grok_adjudication_sha256": "73673a98f5fcf397aa071919be07d5f473d29546f154674474b941deca3a58e3",
-    "r27_r0_original_missing": "PRESERVED"
+  "admission_policy": {
+    "fallback": "DENY_AND_QUARANTINE",
+    "isolation": "fragment not monolith",
+    "license": "per-version verified permissive for implementation candidates",
+    "security": "runtime not validated by static discovery",
+    "source": "retrievable pinned original"
   },
-  "research_segments": {
-    "A": "Append-only Ledger/CAS",
-    "B": "Deterministic State Machines and strict input guards",
-    "C": "Resilient offline-first ADB-free transport"
-  },
-  "admission": "SOURCE_PIN + VERSION_LICENSE + INDEPENDENT_COUNTERCLAIM + QUARANTINE; deny by default",
-  "expert_freedom": "No mandatory research role; self-identification; unrestricted hypothesis criticism; actions remain scoped",
   "candidates": [
     {
+      "evidence": "PyPI 2026-10-18 GPLv3+",
       "id": "A01",
-      "segment": "A",
+      "license": "GPL-3.0-or-later",
+      "limitation": "Nicht permissiv unter Q01-v2-Hard-Gate; alte MIT-Version nur mit konkretem Versions-/Lizenznachweis prüfbar. Kein Runtime-Audit.",
       "name": "pymerkle",
-      "version": "7.0.0",
-      "status": "REJECTED",
-      "license": "GPLv3+",
+      "segment": "A",
       "source": "https://pypi.org/project/pymerkle/7.0.0/",
-      "limitation": "PyPI license confirms GPLv3+; outside permissive-only adoption rule; no runtime security proof.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+      "status": "REJECTED",
+      "verified_field": "license_only",
+      "version": "7.0.0"
     },
     {
+      "evidence": "Offizielle PyPI-Lizenz MIT; Vorbericht hatte ein anderes automat-Paket verwechselt.",
       "id": "B01",
-      "segment": "B",
-      "name": "Automat (Glyph)",
-      "version": "25.4.16",
-      "status": "VALIDATED_STATIC",
       "license": "MIT",
+      "limitation": "Lizenz ist statisch bestätigt; Input-Guards, Isolation und Runtime-Sicherheit nicht getestet.",
+      "name": "Automat (Glyph)",
+      "segment": "B",
       "source": "https://pypi.org/project/Automat/25.4.16/",
-      "limitation": "MIT license confirmed only. Earlier Qwen GPL claim confused a separate package; runtime safety not tested.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+      "status": "VALIDATED_STATIC",
+      "verified_field": "license_only",
+      "version": "25.4.16"
     },
     {
+      "evidence": "Metadatenkandidat im R27-R1-Research, nicht eigenständig ausgeführt.",
       "id": "A02",
-      "segment": "A",
+      "license": "MIT_REPORTED",
+      "limitation": "Truncation-Erkennung nur relativ zu einem extern und unabhängig gehaltenen Checkpoint.",
       "name": "tamperlog",
-      "version": "0.1.0",
-      "status": "PARTIAL",
-      "license": "MIT_REPORTED",
-      "source": "https://pypi.org/project/tamperlog/",
-      "limitation": "Truncation evidence requires a separately retained externally witnessed checkpoint.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
-    },
-    {
-      "id": "B02",
-      "segment": "B",
-      "name": "StatePilot",
-      "version": "UNPINNED",
-      "status": "PARTIAL",
-      "license": "REVERIFY_PER_VERSION",
-      "source": "https://matthiasmeyer.tech/repos/statepilot",
-      "limitation": "Agent workflow guards do not establish universal payload NaN/Inf validation.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
-    },
-    {
-      "id": "C01",
-      "segment": "C",
-      "name": "resumable-upload",
-      "version": "0.3.1_REPORTED",
-      "status": "PARTIAL",
-      "license": "MIT_REPORTED",
-      "source": "https://pypi.org/project/resumable-upload/",
-      "limitation": "Resumable chunks do not certify identity, consent, replay resistance or server resource limits.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
-    },
-    {
-      "id": "A03",
       "segment": "A",
-      "name": "nexuscone",
-      "version": "0.2.1_REPORTED",
+      "source": "https://pypi.org/project/tamperlog/",
       "status": "PARTIAL",
-      "license": "Apache-2.0_REPORTED",
-      "source": "https://github.com/aperintelligence/nexuscone",
-      "limitation": "Namespace/brand collision and source/external dependency review required before adoption.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+      "verified_field": "source_description_only",
+      "version": "0.1.0"
     },
     {
-      "id": "B03",
+      "evidence": "Privat gehostete Primärprojektseite als Forschungshinweis.",
+      "id": "B02",
+      "license": "TO_REVERIFY_PER_VERSION",
+      "limitation": "Payload-NaN/Inf-Guard nicht belegt; agentische Workflow-Kontrolle ≠ beliebige Datenvalidierung.",
+      "name": "StatePilot",
       "segment": "B",
-      "name": "dpa-icsd",
-      "version": "DRAFT-01",
-      "status": "MISSING_EVIDENCE",
-      "license": "NOT_A_STANDARD",
-      "source": "https://datatracker.ietf.org/doc/draft-dpa-icsd/",
-      "limitation": "Research Internet-Draft is not endorsed IETF RFC and has no observed runtime implementation.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+      "source": "https://matthiasmeyer.tech/repos/statepilot",
+      "status": "PARTIAL",
+      "verified_field": "research_candidate_only",
+      "version": "VERSION_NOT_PINNED"
     },
     {
-      "id": "C02",
+      "evidence": "TUS-Implementierungs-Kandidat aus R27-R1-Material; Lizenzprüfung vor Adoption erforderlich.",
+      "id": "C01",
+      "license": "MIT_REPORTED",
+      "limitation": "Uploadfähigkeit ≠ tokengebundene Autorisierung, begrenzte Serverressourcen, Relay-/Nonce-Sicherheit oder Produktionsreife.",
+      "name": "resumable-upload",
       "segment": "C",
-      "name": "fastcdc",
-      "version": "UNPINNED",
+      "source": "https://pypi.org/project/resumable-upload/",
       "status": "PARTIAL",
-      "license": "REVERIFY_PER_VERSION",
+      "verified_field": "source_description_only",
+      "version": "0.3.1_REPORTED"
+    },
+    {
+      "evidence": "Projektkandidat R27, kommerzielle Produktfamilie mit Namensnähe.",
+      "id": "A03",
+      "license": "Apache-2.0_REPORTED",
+      "limitation": "Marken-/Namenskollision erst rechtlich und organisatorisch bewerten; keine Integration / keine Sicherheitspromotion.",
+      "name": "nexuscone",
+      "segment": "A",
+      "source": "https://github.com/aperintelligence/nexuscone",
+      "status": "PARTIAL",
+      "verified_field": "namespace_review_required",
+      "version": "0.2.1_REPORTED"
+    },
+    {
+      "evidence": "Individueller Internet-Draft, nicht veröffentlichter RFC-Standard.",
+      "id": "B03",
+      "license": "NOT_APPLICABLE_DRAFT",
+      "limitation": "Nicht vom IETF als Standard anerkannt; Aktualität, Ablauf und implementierte Tests offen.",
+      "name": "dpa-icsd",
+      "segment": "B",
+      "source": "https://datatracker.ietf.org/doc/draft-dpa-icsd/",
+      "status": "MISSING_EVIDENCE",
+      "verified_field": "concept_only",
+      "version": "draft-01"
+    },
+    {
+      "evidence": "Chunking-Fragment als Forschungsoption.",
+      "id": "C02",
+      "license": "TO_REVERIFY_PER_VERSION",
+      "limitation": "Content-defined chunk boundaries sind keine Ende-zu-Ende-Integrität, keine sichere Geräteauthentifizierung und keine Sitzungsbindung.",
+      "name": "fastcdc",
+      "segment": "C",
       "source": "https://github.com/kalbasit/fastcdc",
-      "limitation": "CDC boundary choice is not authenticated device upload or an independently verified CAS ACK.",
-      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+      "status": "PARTIAL",
+      "verified_field": "research_candidate_only",
+      "version": "VERSION_NOT_PINNED"
     }
   ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "expert_policy": {
+    "actions": "require independently authorized principal and scope",
+    "forced_research_roles": false,
+    "scientific_disagreement": "welcomed",
+    "self_identification": "actual provider/developer/model if independently verifiable"
+  },
+  "external_agent_write_authorized": false,
+  "fragment_runtime_execution": false,
+  "github_public_source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/tree/main/research/r27/sandbox-science-library-20261111",
+  "hostinger_deployment_observed": false,
+  "laboratory": {
+    "authorization": "OPERATOR_SCOPED",
+    "hypotheses": "FREE_RESEARCH_NOT_ROLE_ASSIGNED",
+    "inputs": "VERIFIED_READ_ONLY",
+    "no_auto_unlock": true,
+    "outputs": "QUARANTINE_ONLY",
+    "publish": "SEPARATE_PUBLIC_SAFE_REVIEW"
+  },
   "limitations": [
-    "No production runtime sandbox",
-    "No independent Hostinger HTTP parity",
-    "No new OPPO/Bodytwin science validation",
-    "No private original archives public",
-    "No R0 lost-byte restoration",
-    "No external agent write enrollment"
+    "No Hostinger deploy receipt",
+    "No live isolation/host authorization",
+    "No physical OPPO link or Bodytwin validation",
+    "R26 Stage1 H1 needs separate corrected preregistration",
+    "No R27 fragment runtime execution",
+    "Private 918621-byte R2 archive intentionally withheld"
   ],
-  "source_checked_on": "2026-11-11"
+  "object": "NEXUS_OMEGA_R27_SANDBOX_SCIENCE_LIBRARY_PUBLIC_C1_20261111_R0",
+  "operator_public_metadata_publication_authorized": true,
+  "parent_history": {
+    "R27_R0_G01_G04_POSTHASH": "ORIGINAL_CUSTODY_NOT_ESTABLISHED",
+    "R27_R1_WORKING_ZIP": "DERIVED_NOT_R0",
+    "R27_R1_WRONG_ORDER_AND_ADJUDICATION": "PRESERVED_HISTORICAL",
+    "R27_R2": "INDEPENDENT_REPAIR_OF_OPERATOR_ORIGINAL_BYTES"
+  },
+  "private_originals_public": false,
+  "public_endpoint_is_access_control_gate": false,
+  "published_surface": "PUBLIC_SAFE_RESEARCH_METADATA_ONLY",
+  "research_segments": {
+    "A": "append-only ledger, CAS, external checkpoint and audit",
+    "B": "state machines, strict input validation, observer patterns",
+    "C": "offline-first transport, resumable chunking and authorized receiver"
+  },
+  "sandbox_runtime_implemented": false,
+  "scientific_truth_claim": false,
+  "source_custody": {
+    "AXIOM_R27_R2_SOURCE_REPAIR_SHA256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
+    "CORRECT_FINAL_ORDER_SHA256": "a888ed5f66bfeea662586d4ad8829eb480fcf6ca8a4809b1402e015b8e1f3923",
+    "CORRECT_GROK_ADJUDICATION_SHA256": "73673a98f5fcf397aa071919be07d5f473d29546f154674474b941deca3a58e3",
+    "R27_R1_CORRECTED_ARCHIVE_SHA256": "f8af20820ca5eccdc52b7c5fd5b384598933b5936c5e85954992555601bcc0c8"
+  },
+  "sources_date": "2026-11-11",
+  "website_target": "https://www.nexus-mobile.de/forum/github-implant/gate/sandbox/"
 }

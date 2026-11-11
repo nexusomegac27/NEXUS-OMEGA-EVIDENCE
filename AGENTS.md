@@ -118,3 +118,8 @@ CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
 ```
 
 This trigger is **prospective**, does not reformat old source-bound orders, and does not mean the ChatGPT platform has persistent agent memory or privileged pre-inference injection. DIN-like internal format discipline is not DIN accreditation or certification. A valid schema/CI check means structural conformity only; every source rehash, actor authentication, scientific adjudication and execution authorization is a separate gate. When a new assignment's source is missing, preserve a scoped HOLD instead of replacing it with chat order. No non-owner external writer may alter this norm or invent return slots.
+
+
+## R27 public research sandbox: voluntary expertise, governed actions (2026-11-11)
+
+For the public R27 Sandbox Science Library, **research subject roles are not assigned**: all experts may freely investigate ledger/CAS (A), deterministic observer/state validation (B), mobile↔server transport (C), or competing hypotheses. A return declares its actual provider/developer/model/interface as self-reported unless attested; model identity does not prove capability, independence, or scientific truth. The full-spectrum neutral mandate is at `research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md`. Workflow permissions and the existing R27-E GitHub structural firewall remain separate, default-DENY, and unchanged. The public Gate catalogue cannot accept private research originals and never authorizes an action or Claim Promotion.

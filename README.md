@@ -324,3 +324,12 @@ The [existing-CI repository steward](docs/architecture/NEXUS_REPOSITORY_STEWARD_
 The operator-authorized R27 science sandbox is registered under [`research/r27/sandbox-science-library-20261111/`](research/r27/sandbox-science-library-20261111/README.md). Its **public** side contains a source-indexed metadata catalogue, independent C1 custody/errata, neutral unassigned expert mandate and quarantined release contract; full R27 derived/private ZIP files, Qwen PDF, OPPO and Bodytwin originals are intentionally not republished. The existing [Forum GitHub↔WWW Interface Gate](research/forum/github-implant-20261012/site/gate/index.html) adds a strictly static [`sandbox/`](research/forum/github-implant-20261012/site/gate/sandbox/index.html) leaf. GitHub source publication is **not** proof of Hostinger deployment or runtime isolation; separate browser/HTTP receipts are required. R0 original file losses and R27-R1 naming defects remain preserved.
 
 External experts self-identify provider/model/developer and independently critique all A/B/C research domains. No compulsory cognitive role; actual GitHub/Hostinger/device actions still require authenticated, operator-scoped authority and preserve the R27-E create-only firewall.
+
+
+## R27 Sandbox Science Library — public-safe C1 (2026-11-11)
+
+The Operator authorized a parallel GitHub and NEXUS Forum publication of a **public-safe static research catalogue**, not a public release of the private R27 sandbox sources. Research is unrestricted in thought, model/provider identity is self-declared, and no scientific research role is assigned by authority. Real actions remain permission-scoped and independently reviewable.
+
+Canonical owner branch path: [research/r27/sandbox-science-library-20261111/](research/r27/sandbox-science-library-20261111/). Forum leaf source: [research/forum/github-implant-20261012/site/gate/sandbox/](research/forum/github-implant-20261012/site/gate/sandbox/). Existing GitHub↔WWW Gate comparison of its three *original Implant* assets is unchanged. The new R27 static page does **not** imply a Hostinger deployment or security certification. `CLAIM_CEILING=C1_DESCRIPTIVE_ONLY`, `EXTERNAL_AGENT_ALLOWLIST=UNCHANGED`, `PRIVACY=PUBLIC_SAFE_METADATA_ONLY`, `FRAGMENT_RUNTIME=NOT_EXECUTED`.
+
+R27 R1 historical order/adjudication misbinding is preserved. Private R2 repair was independently sealed at 151/151 and remains **unpublished**. Pinned identifiers and scientific caveats are in the new research lane; these are integrity/provenance markers, not scientific proof.

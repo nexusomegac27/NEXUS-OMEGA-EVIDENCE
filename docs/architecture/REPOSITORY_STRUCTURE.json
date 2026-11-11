@@ -241,18 +241,13 @@
     },
     "r27-sandbox-science-library-public-20261111": {
       "path": "research/r27/sandbox-science-library-20261111",
-      "state": "PUBLIC_SAFE_C1_RESEARCH_CATALOG_SOURCE_PUSH_IN_PROGRESS_WWW_DEPLOY_NOT_ESTABLISHED",
-      "original_r27_r1_sha256": "f8af20820ca5eccdc52b7c5fd5b384598933b5936c5e85954992555601bcc0c8",
-      "independent_r27_r2_private_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
-      "source_identity_repair": "CORRECT_OPERATOR_FINAL_ORDER_AND_ADJUDICATION_BOUND_151_OF_151_PRIVATE",
-      "public_full_archive": false,
-      "public_private_separation": "METADATA_ONLY_PUBLIC_RAW_ORIGINALS_WITHHELD",
-      "expert_mandate": "research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md",
-      "website_target": "https://www.nexus-mobile.de/forum/github-implant/gate/sandbox/",
-      "website_hostinger_verification": "NOT_ESTABLISHED",
-      "external_agent_write_enabled": false,
-      "runtime_authorized": false,
-      "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+      "state": "PUBLIC_SAFE_C1_CATALOG_SOURCE_READY_WWW_DEPLOY_NOT_ESTABLISHED",
+      "source_r27_r2_zip_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
+      "private_r27_originals_public": false,
+      "public_gate_leaf": "research/forum/github-implant-20261012/site/gate/sandbox",
+      "external_write_authority": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "hostinger_deploy_receipt": false
     }
   },
   "research_lane_contract": {

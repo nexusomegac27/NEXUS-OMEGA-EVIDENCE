@@ -1,0 +1,44 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "files": {
+    "R27_PUBLIC_01_README.md": {
+      "bytes": 4437,
+      "sha256": "f8e7a6e4d0091516e044e7f257c3bbe9eef4ae5ea5745c9bda5832769168bf31"
+    },
+    "R27_PUBLIC_02_LIBRARY.json": {
+      "bytes": 6954,
+      "sha256": "5eaa8434b445825966932b8104110be04b1aab979948525b3336fc6b6bc18ef7"
+    },
+    "R27_PUBLIC_03_NEUTRAL_EXPERT_MANDATE.md": {
+      "bytes": 4241,
+      "sha256": "2268fe2c1905951facdf0fad35da6483ef76f148c9893b49b2efdb96a7650d16"
+    },
+    "R27_PUBLIC_04_SOURCE_CUSTODY_AUDIT.md": {
+      "bytes": 3563,
+      "sha256": "974a274e309af40c0a504ac542694f17724bd8b3d775e412664060041722867e"
+    },
+    "R27_PUBLIC_05_QUARANTINE_CONTRACT.md": {
+      "bytes": 2293,
+      "sha256": "2410b7f547160b54f4afee3332f09b65fab77fc88e46198bc8d2f83d56ce45aa"
+    },
+    "R27_PUBLIC_06_SITE_MOUNT_CONTRACT.md": {
+      "bytes": 3009,
+      "sha256": "3007e215e5d1866b84da23f3755366c90ca20f8509fae755836a42f99a62c8d3"
+    },
+    "R27_PUBLIC_07_SITE_SANDBOX_INDEX.html": {
+      "bytes": 5729,
+      "sha256": "a30edf370c571ada0c6491722c56b3a28b1af098157a6047c19dfbe6efff331d"
+    },
+    "R27_PUBLIC_08_SITE_SANDBOX_CSS.css": {
+      "bytes": 4241,
+      "sha256": "55010c990714319a3b2c1ab8783f7bb8fd821875c677027c1fa08624f765b6d3"
+    },
+    "R27_PUBLIC_09_SITE_SANDBOX_LIBRARY.json": {
+      "bytes": 6954,
+      "sha256": "5eaa8434b445825966932b8104110be04b1aab979948525b3336fc6b6bc18ef7"
+    }
+  },
+  "note": "No raw private ZIP uploaded; GitHub commit and WWW host proof are separate.",
+  "object": "NEXUS_OMEGA_R27_PUBLIC_SAFE_RELEASE_FILES_V1",
+  "source_private_zip_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b"
+}

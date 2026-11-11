@@ -59,3 +59,8 @@ GITHUB_ALL_BYTES_HOST_MIRROR = NOT_ESTABLISHED
 ## GitHub↔NEXUS Security & Science Gate (additive 2026-10-12)
 
 The existing Implant now links to a narrow, **read-only interface monitoring Node** under `site/gate/`. It verifies only the three canonical deployed Implant file bytes against GitHub main using WebCrypto SHA-256, recognizes the C1 marker and shows material source/WWW discrepancies. The [Gate scientific/technical contract](GATE_INTERFACE_CONTRACT_V1.md) describes scoped PASS/HOLD states, bounded source assumptions, rate limits and the PiP design; the [Hostinger one-shot mount](SITE_GATE_ONE_SHOT_MOUNT.txt) uses the existing public Hostinger site channel. Native Document-PiP is progressive enhancement; a draggable on-page floating status card works as fallback, without importing any third-party scripts. [13 local Node tests](tests/test_gate.mjs) passed in the receiver research environment, their source exactness must be rechecked after GitHub readback. Site live-mount and browser network test remain separate from source publication. This Node observes transport integrity; it is not a publishing blocker or scientific truth certifier.
+
+
+## R27 static Science Library leaf (additive, 2026-11-11)
+
+The gate now contains one additional read-only link to `site/gate/sandbox/index.html` with local `sandbox.css` and `library.json`. This does not alter `gate.css`, `gate.js`, `gate-core.mjs`, the original three-asset Implant comparator, or its verification scope. The source-only publication is `research/r27/sandbox-science-library-20261111/`. Do not claim live WWW until the authorized existing Hostinger deployment channel returns exact HTTP/SHA256 proof for all four gate/sandbox target paths. No private R27 ZIPs may be mirrored.

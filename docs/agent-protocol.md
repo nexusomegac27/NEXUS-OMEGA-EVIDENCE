@@ -36,3 +36,8 @@ For R27-E and later assignments, external agents MUST read the owner-controlled 
 ## R27 Science Sandbox (role-free research; owner-controlled actions)
 
 Independent researchers should load [`research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md`](../research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md) as a **scientific orientation**, not as a mandatory role assignment. Each model/provider self-identifies, investigates A/B/C fully, may freely reject hypotheses, and submits source-exact counterarguments. The existing R27-E write-slot registry and actor authorization remain stricter and unchanged. The public metadata library is not a code-execution sandbox, a credential source, a new write lane or a claim-promotion channel.
+
+
+## R27 Science Library · expert wayfinder (operator authorized, public-safe)
+
+Begin optional independent R27 research at `research/r27/sandbox-science-library-20261111/README.md` and `orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md`. No expert is assigned a research role, question or desired conclusion. Each independent return declares *self-reported provider/developer/model and tool limits*, A/B/C counterhypotheses and source-exact references. The forum view `/forum/github-implant/gate/sandbox/` is static metadata only; do not treat it as an authenticated intake, execution substrate, or proof of WWW parity. The existing external actor registry and owner-issued exact path slots remain unchanged. Operator authorization of *this public-safe catalogue push* is not permission to write as an external agent.
