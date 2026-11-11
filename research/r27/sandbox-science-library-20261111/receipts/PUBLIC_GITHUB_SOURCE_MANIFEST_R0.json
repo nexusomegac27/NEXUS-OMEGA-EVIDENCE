@@ -1,0 +1,82 @@
+{
+  "object": "NEXUS_OMEGA_R27_SANDBOX_SCIENCE_PUBLIC_SAFE_SOURCE_MANIFEST_20261111_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "authority": "OPERATOR_RELEASE_PUBLIC_SAFE_METADATA_ONLY",
+  "source_status": "GITHUB_BRANCH_PREPARED_NO_MAIN_MERGE_YET",
+  "source_generation": "NEXUS_OMEGA_R27_SANDBOX_AXIOM_CUSTODY_REPAIRED_20261111_R2",
+  "private_source_zip_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
+  "private_source_zip_bytes": 918621,
+  "private_source_manifest": "MATCH_151_OF_151",
+  "private_source_raw_zip_public": false,
+  "hostinger_live_verification": "NOT_EXECUTED",
+  "external_actor_write_authority": false,
+  "git_blob_sha1_semantics": "Object identity only; SHA1 Git blobs are not independent SHA256 original-byte receipts",
+  "files": [
+    {
+      "path": "research/r27/sandbox-science-library-20261111/README.md",
+      "expected_git_blob_sha1": "ba21b5d5312bb9f6fffc5524e5efe9a8ddc8b36f",
+      "source_local_sha256": "f8e7a6e4d0091516e044e7f257c3bbe9eef4ae5ea5745c9bda5832769168bf31",
+      "source_local_bytes": 4437
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md",
+      "expected_git_blob_sha1": "ea3413388876c747c5c4a3e182fe8117b8efe06d",
+      "source_local_sha256": "2268fe2c1905951facdf0fad35da6483ef76f148c9893b49b2efdb96a7650d16",
+      "source_local_bytes": 4241
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/receipts/SOURCE_EXACT_CUSTODY_AND_LIMITATIONS.md",
+      "expected_git_blob_sha1": "df0ff216f7c79ac671bbcd3e69b5565168678016",
+      "source_local_sha256": "974a274e309af40c0a504ac542694f17724bd8b3d775e412664060041722867e",
+      "source_local_bytes": 3563
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/governance/QUARANTINE_RELEASE_CONTRACT.md",
+      "expected_git_blob_sha1": "1d4cbb80fac448c622d6ec3292cce5b13af5f50f",
+      "source_local_sha256": "2410b7f547160b54f4afee3332f09b65fab77fc88e46198bc8d2f83d56ce45aa",
+      "source_local_bytes": 2293
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/receipts/GITHUB_WWW_SITE_MOUNT_AND_ROLLBACK.md",
+      "expected_git_blob_sha1": "e3e2d87ab37f6f16357d2751d72d2a8a4db341c1",
+      "source_local_sha256": "3007e215e5d1866b84da23f3755366c90ca20f8509fae755836a42f99a62c8d3",
+      "source_local_bytes": 3009
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/sandbox/index.html",
+      "expected_git_blob_sha1": "5642e486525819f1e2729a3d4b4304d5b9221032",
+      "source_local_sha256": "a30edf370c571ada0c6491722c56b3a28b1af098157a6047c19dfbe6efff331d",
+      "source_local_bytes": 5729
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/catalog/library.json",
+      "expected_git_blob_sha1": "4edc91fca6384289f694150266fb1cce00ea24c0",
+      "source_local_sha256": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT",
+      "source_local_bytes": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/sandbox/library.json",
+      "expected_git_blob_sha1": "4edc91fca6384289f694150266fb1cce00ea24c0",
+      "source_local_sha256": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT",
+      "source_local_bytes": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/sandbox/sandbox.css",
+      "expected_git_blob_sha1": "069247dd89982c387c81965835a3c97e89717894",
+      "source_local_sha256": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT",
+      "source_local_bytes": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/gate/index.html",
+      "expected_git_blob_sha1": "c85c3d01b0d35a33446330ad66feb5f5b396ac2e",
+      "source_local_sha256": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT",
+      "source_local_bytes": "NOT_COMPUTED_IN_THIS_TOOL_CONTEXT"
+    }
+  ],
+  "negative_history": [
+    "R27-R1 correct final order was missing",
+    "R27-R1 GROK adjudication copy was unrelated TCA-V2 bytes",
+    "R27-R2 repairs only by source-exact new versions; historic originals retained",
+    "R27-R0 lost original deliverables NOT RESTORED"
+  ]
+}

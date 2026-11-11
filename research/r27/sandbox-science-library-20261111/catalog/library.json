@@ -1,0 +1,125 @@
+{
+  "object": "NEXUS_OMEGA_R27_SANDBOX_PUBLIC_RESEARCH_CATALOG_20261111_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "public_metadata_only": true,
+  "private_research_bytes_present": false,
+  "github_write_from_experts": false,
+  "sandbox_execution_authorized": false,
+  "verified_live_hostinger": false,
+  "publication_state": "SOURCE_STAGE_UNTIL_MAIN_MERGE_AND_HTTP_READBACK",
+  "operator_approved_public_metadata": true,
+  "source_lineage": {
+    "r27_r1_zip_sha256": "f8af20820ca5eccdc52b7c5fd5b384598933b5936c5e85954992555601bcc0c8",
+    "r27_r2_repaired_private_zip_sha256": "7ee099dd9d6579a32bf358a20b55f766d49e299dd11a34eed68cf421f22f865b",
+    "r27_r2_private_manifest": "151/151_MATCH",
+    "original_final_order_sha256": "a888ed5f66bfeea662586d4ad8829eb480fcf6ca8a4809b1402e015b8e1f3923",
+    "original_grok_adjudication_sha256": "73673a98f5fcf397aa071919be07d5f473d29546f154674474b941deca3a58e3",
+    "r27_r0_original_missing": "PRESERVED"
+  },
+  "research_segments": {
+    "A": "Append-only Ledger/CAS",
+    "B": "Deterministic State Machines and strict input guards",
+    "C": "Resilient offline-first ADB-free transport"
+  },
+  "admission": "SOURCE_PIN + VERSION_LICENSE + INDEPENDENT_COUNTERCLAIM + QUARANTINE; deny by default",
+  "expert_freedom": "No mandatory research role; self-identification; unrestricted hypothesis criticism; actions remain scoped",
+  "candidates": [
+    {
+      "id": "A01",
+      "segment": "A",
+      "name": "pymerkle",
+      "version": "7.0.0",
+      "status": "REJECTED",
+      "license": "GPLv3+",
+      "source": "https://pypi.org/project/pymerkle/7.0.0/",
+      "limitation": "PyPI license confirms GPLv3+; outside permissive-only adoption rule; no runtime security proof.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "B01",
+      "segment": "B",
+      "name": "Automat (Glyph)",
+      "version": "25.4.16",
+      "status": "VALIDATED_STATIC",
+      "license": "MIT",
+      "source": "https://pypi.org/project/Automat/25.4.16/",
+      "limitation": "MIT license confirmed only. Earlier Qwen GPL claim confused a separate package; runtime safety not tested.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "A02",
+      "segment": "A",
+      "name": "tamperlog",
+      "version": "0.1.0",
+      "status": "PARTIAL",
+      "license": "MIT_REPORTED",
+      "source": "https://pypi.org/project/tamperlog/",
+      "limitation": "Truncation evidence requires a separately retained externally witnessed checkpoint.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "B02",
+      "segment": "B",
+      "name": "StatePilot",
+      "version": "UNPINNED",
+      "status": "PARTIAL",
+      "license": "REVERIFY_PER_VERSION",
+      "source": "https://matthiasmeyer.tech/repos/statepilot",
+      "limitation": "Agent workflow guards do not establish universal payload NaN/Inf validation.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "C01",
+      "segment": "C",
+      "name": "resumable-upload",
+      "version": "0.3.1_REPORTED",
+      "status": "PARTIAL",
+      "license": "MIT_REPORTED",
+      "source": "https://pypi.org/project/resumable-upload/",
+      "limitation": "Resumable chunks do not certify identity, consent, replay resistance or server resource limits.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "A03",
+      "segment": "A",
+      "name": "nexuscone",
+      "version": "0.2.1_REPORTED",
+      "status": "PARTIAL",
+      "license": "Apache-2.0_REPORTED",
+      "source": "https://github.com/aperintelligence/nexuscone",
+      "limitation": "Namespace/brand collision and source/external dependency review required before adoption.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "B03",
+      "segment": "B",
+      "name": "dpa-icsd",
+      "version": "DRAFT-01",
+      "status": "MISSING_EVIDENCE",
+      "license": "NOT_A_STANDARD",
+      "source": "https://datatracker.ietf.org/doc/draft-dpa-icsd/",
+      "limitation": "Research Internet-Draft is not endorsed IETF RFC and has no observed runtime implementation.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    },
+    {
+      "id": "C02",
+      "segment": "C",
+      "name": "fastcdc",
+      "version": "UNPINNED",
+      "status": "PARTIAL",
+      "license": "REVERIFY_PER_VERSION",
+      "source": "https://github.com/kalbasit/fastcdc",
+      "limitation": "CDC boundary choice is not authenticated device upload or an independently verified CAS ACK.",
+      "execution_evidence": "NOT_EXECUTED_BY_AXIOM_IN_THIS_R27_SANDBOX"
+    }
+  ],
+  "limitations": [
+    "No production runtime sandbox",
+    "No independent Hostinger HTTP parity",
+    "No new OPPO/Bodytwin science validation",
+    "No private original archives public",
+    "No R0 lost-byte restoration",
+    "No external agent write enrollment"
+  ],
+  "source_checked_on": "2026-11-11"
+}
