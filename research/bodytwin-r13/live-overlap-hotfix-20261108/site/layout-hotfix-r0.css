@@ -1,0 +1,38 @@
+/* Bodytwin LIVE C1: public-safe spatial separation of the existing status panel.
+ * No changes to Viewer controls, animation, API, or feed producer. */
+#nexus-bodytwin-live-c1 {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  z-index: 0 !important;
+  transform: none !important;
+  float: none !important;
+  clear: both !important;
+  grid-column: 1 / -1 !important;
+  grid-row: auto !important;
+  align-self: stretch !important;
+  justify-self: center !important;
+  flex: 0 1 auto !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  width: calc(100% - 24px) !important;
+  max-width: 1180px !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 24px auto 32px !important;
+  overflow-wrap: anywhere;
+  isolation: isolate;
+}
+#nexus-bodytwin-live-c1 .bt-live-grid,
+#nexus-bodytwin-live-c1 .bt-live-footer,
+#nexus-bodytwin-live-c1 .bt-live-header {
+  min-width: 0;
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  #nexus-bodytwin-live-c1 {
+    width: calc(100% - 16px) !important;
+    margin: 16px auto 24px !important;
+    padding: 14px !important;
+  }
+}
