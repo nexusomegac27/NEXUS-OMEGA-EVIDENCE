@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_OPPO_NATIVE_APP_INDEPENDENT_ADJUDICATION_AND_EVIDENCE_REPAIR_TASK_ANCHOR_20261101_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR",
+    "verified_github_actor": "NOT_ESTABLISHED_EXTERNAL_AGENT",
+    "predecessor_object": "NEXUS_OMEGA_CURSOR_OPPO_NATIVE_APP_COMMUNICATION_GATE_IMPLEMENTATION_RETURN_20261101_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "77f26c0d1cfaf18b9c1addfac2e47444c614478a",
+    "predecessor_path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_OMEGA_CURSOR_OPPO_NATIVE_APP_COMMUNICATION_GATE_IMPLEMENTATION_RETURN_20261101_R0/EXECUTIVE.md",
+    "predecessor_bytes": 1957,
+    "predecessor_sha256": "d5ff6fa1f2170f02044ae92c31624d94cfba01d9bea1543ff3a1fe2fb71142eb"
+  },
+  "delegation": {
+    "scope": "CURSOR_BOUNDED_APPEND_ONLY_OPPO_EVIDENCE_HASH_ERRATUM_PRIVACY_STOP_ACTION_AND_NATIVE_SOURCE_REVIEW_BEFORE_PIXEL9A_C1",
+    "allowed_actions": [
+      "READ_ONLY_REHASH_26_GITHUB_RETURN_ORIGINAL_BLOBS",
+      "COMPARE_LOCAL_PREPUSH_SOURCE_BYTES_VS_GITHUB_IMMUTABLE_BLOBS",
+      "CREATE_APPEND_ONLY_13_SHA_DISCREPANCY_ERRATUM_WITH_CAUSAL_PROOF",
+      "PRESERVE_OPPO_RAW_SESSIONS_SOURCE_AND_S1_S5_DIRTY_STATE",
+      "PATCH_UNKNOWN_ANDROID_STOP_ACTION_FAIL_CLOSED",
+      "RUN_NONDESTRUCTIVE_AUTHORIZED_OPPO_RETEST_IF_SAFE",
+      "REDACT_DEBUG_NETWORK_DEVICE_IDENTIFIERS_FROM_FUTURE_PUBLIC_RECEIPTS",
+      "PREPARE_PRIVACY_REVIEWED_ANDROID_SOURCE_ONLY_GITHUB_PR_IF_AUTHORIZED",
+      "RUN_INDEPENDENT_NATIVE_ANDROID_CODE_CI_AND_BUILD_TEST",
+      "REHASH_NATIVE_APP_BINARY_VIA_AUTHORIZED_PRIVATE_PROOF_IF_AVAILABLE",
+      "RETURN_SOURCE_EXACT_C1_WITH_HOLDS"
+    ],
+    "prohibited_actions": [
+      "CHANGE_ORIGINAL_GITHUB_SHA256SUMS_IN_PLACE",
+      "CLAIM_26_OF_26_SOURCE_MATCH",
+      "UNAUTHORIZED_GITHUB_HISTORY_REWRITE",
+      "PUBLIC_DEBUG_NETWORK_ENDPOINT_REPUBLICATION",
+      "RAW_SENSOR_OR_GPS_SOURCE_PUBLIC_GITHUB",
+      "UNREVIEWED_GITHUB_ANDROID_SOURCE_PUSH",
+      "UNAUTHORIZED_DEVICE_FACTORY_RESET_REINSTALL_DATA_CLEAR",
+      "UNAUTHORIZED_NEW_PRIVATE_OR_PUBLIC_WRITE_API",
+      "EXTERNAL_AGENT_ACK_FROM_OWNER_ACCOUNT",
+      "MERGE_PR263_259_260_WITHOUT_REVIEW",
+      "PIXEL9A_ACTION",
+      "NEW_AGENT_ACCOUNTS_TOKENS_OR_PERMISSIONS",
+      "CUTOVER_ACTIVE_NO_OWNER_PROOF",
+      "CLAIM_PROMOTION_ABOVE_C1"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can Cursor reconcile 13/26 independently verified raw GitHub return-hash discrepancies, repair unintended action-start behavior and public debug metadata, and provide a reproducible privacy-safe native Android source/build witness without disturbing real OPPO evidence?",
+    "deliverables": [
+      "APPEND_ONLY_SHA256SUMS_ERRATUM_13_MISMATCH_13_MATCH_WITH_ORIGINAL_EXACT_COMMIT",
+      "NO_REWRITE_OF_ORIGINAL_PUBLIC_RECEIPTS_OR_HISTORY",
+      "CAUSE_PROOF_FOR_ORIGINAL_VS_GITHUB_BYTE_DIFFERENCES_OR_EXPLICIT_SOURCE_GAP",
+      "FAIL_CLOSED_UNKNOWN_ANDROID_STOP_ACTION_PATCH_AND_NEGATIVE_TESTS",
+      "OPPO_CURRENT_DEVICE_DATA_BACKUP_AND_SAFE_DEBUG_SESSION_SECURITY",
+      "ANDROID_NATIVE_SOURCE_ONLY_GOVERNED_PR_OR_EXACT_CAPABILITY_HOLD",
+      "ANDROID_JVM_CI_AT_SOURCE_HEAD_AND_REPRODUCIBLE_APK_OR_HOLD",
+      "OPPO_ADB_DISCONNECTED_RAW_PRIVATE_RECEIPTS_IF_AUTHORIZED",
+      "REAL_OWNER_GITHUB_THREE_CANARY_PROOF_PRESERVED",
+      "PIXEL9A_HOLD_AND_C1_TERMINAL_RESULT"
+    ],
+    "falsifiers": [
+      "ANY_OF_13_BLOB_SHA_DISCREPANCIES_DENIED",
+      "APPEND_ONLY_ERRATUM_REWRITES_ORIGINAL_GIT_BLOB",
+      "UNKNOWN_STOP_ACTION_STILL_STARTS_CAPTURE",
+      "RAW_NETWORK_DEVICE_IP_OR_ADB_ID_PUBLISHED_AGAIN",
+      "ANDROID_JVM_CI_CLAIM_WITHOUT_REAL_ANDROID_SOURCE_CI",
+      "APK_SHA_DECLARED_REHASH_WITHOUT_ACTUAL_BINARY",
+      "PRIVATE_IMU_SESSION_UPLOAD_TO_PUBLIC_GITHUB",
+      "GITHUB_OWNER_COMMENT_PROMOTED_TO_EXTERNAL_INDEPENDENT_ACK",
+      "PIXEL9A_ACTION_BEFORE_SEPARATE_RELEASE"
+    ],
+    "acceptance_tests": [
+      "ALL_26_IMMUTABLE_BLOB_SHA256_RECOMPUTED_AND_CLASSIFIED",
+      "13_OF_26_MISMATCHES_ANCHORED_AS_OBSERVED_NOT_ERASED",
+      "REAL_ORIGINAL_LOCAL_BYTES_AND_GIT_TRANSFORM_VERIFIED_OR_HOLD",
+      "EXACT_UNKNOWN_STOP_INTENT_NEGATIVE_NO_NEW_SEGMENT",
+      "PUBLIC_NETWORK_DEVICE_DEBUG_METADATA_ABSENT_IN_NEW_RECEIPTS",
+      "NO_DESTRUCTIVE_APP_TEST_OR_HISTORY_LOSS",
+      "ANDROID_SOURCE_EXACT_REVIEWABLE_AND_CI_EXECUTED_OR_NOT_ESTABLISHED",
+      "OPPO_NO_ADB_INDEPENDENT_PRIVATE_BYTE_REHASH_OR_REPORTED_ONLY",
+      "OWNER_ONLY_THREE_CANARIES_VERIFIED_SEPARATE_FROM_AGENT_IDENTITY",
+      "PIXEL9A_NOT_ADMITTED_AND_GLOBAL_CUTOVER_NO"
+    ],
+    "pause_conditions": [
+      "UNKNOWN_OPERATOR_RELEASE_FOR_ANDROID_SOURCE_PUBLICATION",
+      "PRIVATE_SENSOR_BYTES_REQUIRED_FOR_VERIFICATION_BUT_PRIVATE_LANE_ABSENT",
+      "UNSAFE_REINSTALL_OR_SIGNING_MISMATCH",
+      "WLAN_DEBUG_OPERATOR_ACTION_REQUIRED",
+      "ANY_ACTION_ON_PIXEL9A"
+    ],
+    "not_executed": [
+      "AXIOM_INDEPENDENT_NATIVE_ANDROID_BUILD_AND_APK_REHASH",
+      "AXIOM_DIRECT_OPPO_ADB_RUNTIME_REEXECUTION",
+      "EXTERNAL_AGENT_ACK",
+      "PIXEL9A_A36A",
+      "GLOBAL_CUTOVER",
+      "PUBLIC_SENSOR_POST"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_OPPO_NATIVE_APP_INDEPENDENT_ADJUDICATION_AND_EVIDENCE_REPAIR_TASK_ANCHOR_20261101_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "SHA256SUMS_HISTORICAL_REWRITE",
+      "RAW_SENSOR_PUBLICATION",
+      "UNTRUSTED_APK_CLAIM_PROMOTION",
+      "UNKNOWN_STOP_ACTION_UNPATCHED",
+      "PIXEL9A_UNAUTHORIZED"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "ed1f0b24edc3c67e29b7714c827d05aafda7bd83",
+        "path": "research/communication/oppo-native-app-independent-audit-20261101/AXIOM_OPPO_NATIVE_APP_AND_COMMUNICATION_GATE_INDEPENDENT_ADJUDICATION_20261101_R0.md",
+        "bytes": 11573,
+        "sha256": "a683a231f5efb52f0fe97478850e7fc0ab33a6bbd2919a5e19d41dbe0ae9b4c2",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "77f26c0d1cfaf18b9c1addfac2e47444c614478a",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_OMEGA_CURSOR_OPPO_NATIVE_APP_COMMUNICATION_GATE_IMPLEMENTATION_RETURN_20261101_R0/EXECUTIVE.md",
+        "bytes": 1957,
+        "sha256": "d5ff6fa1f2170f02044ae92c31624d94cfba01d9bea1543ff3a1fe2fb71142eb",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "77f26c0d1cfaf18b9c1addfac2e47444c614478a",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_OMEGA_CURSOR_OPPO_NATIVE_APP_COMMUNICATION_GATE_IMPLEMENTATION_RETURN_20261101_R0/RECEIPTS/P9_CANARIES/CANARY_01.txt",
+        "bytes": 576,
+        "sha256": "f239f445c3d20aad60880df8cab6dcdd24e429d1d6f43a25fd42264c812dc175",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "77f26c0d1cfaf18b9c1addfac2e47444c614478a",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_OMEGA_CURSOR_OPPO_NATIVE_APP_COMMUNICATION_GATE_IMPLEMENTATION_RETURN_20261101_R0/RECEIPTS/NO_ADB_OPERATIONAL_TEST.txt",
+        "bytes": 2687,
+        "sha256": "ea013ac79e1d7eebd3f31b7d7510a2dbcf6b3e169f8c2b5613e551dad199fae4",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "DO_NOT_EXPOSE_PRIVATE_ADB_NETWORK_IP_DEVICE_DEBUG_IDENTIFIERS_OR_RAW_SENSORS; ORIGINAL_PUBLIC_RECEIPTS_UNCHANGED_AND_DISCREPANCIES_EVIDENCE_ONLY",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "GITHUB_OWNER_THREE_CANARIES_REAL_VERIFIED",
+      "OPPO_DEVICE_NATIVE_REPORT_LEVEL_C1",
+      "ANDROID_BUILD_NOT_INDEPENDENT_UNTIL_SOURCE_PRESENT"
+    ],
+    "robustness_stability": [
+      "26_FILE_HASH_CENSUS_13_MATCH_13_MISMATCH",
+      "UNKNOWN_STOP_ACTION_MUST_FAIL_CLOSED",
+      "PIXEL9A_NOT_ADMITTED",
+      "PRIVATE_DEVICE_SOURCE_NOT_PUBLIC"
+    ],
+    "traceability_comprehensibility": [
+      "SOURCE_PIN_GITHUB_77f26c0",
+      "AUDIT_PIN_ed1f0b24",
+      "CI_8_OF_8_EVIDENCE_NOT_NATIVE_BUILD",
+      "C1_DESCRIPTIVE_ONLY"
+    ]
+  }
+}
