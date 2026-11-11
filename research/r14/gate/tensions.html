@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spannungen · R14 Validierungsgate</title>
+<meta name="description" content="Spannungen der Vorvalidierung, FOCALE-Satz als überzogen markiert.">
+<link rel="stylesheet" href="assets/gate.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+<div class="top"><span class="brand">NEXUS//OMEGA</span><span class="tok">C1_DESCRIPTIVE_ONLY</span><span class="tok">TRUTH_AUTHORITY = NONE</span><span class="tok">PREVALIDATION_PASSED_WITH_KNOWN_GAPS_C1</span></div>
+<div class="wrap">
+<nav class="walk" aria-label="Gang durch das Validierungsgate"><a href="index.html">Tor</a> · <a href="precedent.html">Präzedenz</a> · <a href="terminology.html">Terminologie</a> · <a href="gaps.html">Lücken</a> · <a href="tensions.html" aria-current="page">Spannungen</a> · <a href="sources.html">Quellen</a> · <a href="bounds.html">Grenzen</a> · <a href="anchors.html">Anker</a> · <a href="manifest.json">manifest.json</a></nav>
+<main id="inhalt">
+<h1>Spannungen</h1>
+<h2 id="methode">Was die Vorvalidierung getan hat und was nicht</h2>
+<p>Die Computer-Vorvalidierung hat die drei Eingänge gelesen, öffentliche Spot-Checks zu Anderson 1972, Dijkstra 1974, FOCALE und der MAPE-K-Literatur gemacht und die Fit-Stufen gegen den Auftrag gelegt. Sie hat keinen vollen Kreuzvalidierungslauf gemacht, keinen Verifier erneut laufen lassen, keinen Sandbox-Code ausgeführt und keine neue Literatursuche über diese Spot-Checks hinaus unternommen. Diese Seite wiederholt die Spot-Checks nicht.</p>
+<h2 id="t1">Spannung 1 · Ein Regelkreis gegen vier Schleifen</h2>
+<p>MAPE-K modelliert einen Regelkreis. Das Arbeitsmodell von NEXUS nennt vier Schleifen: Homeostasis, Reflex, Adaptation und Self-Observation. Der Return sagt, die Literatur biete keine integrierte Theorie für mehrere Schleifen in einem Software-Knoten. Die Vorvalidierung sagt, die geprüfte Literatur zeige den Weg zu zwei Schleifen, nämlich FOCALE, und nicht systematisch zu vier.</p>
+<div class="callout" id="focale">
+<p><span class="tag warn">ÜBERZOGEN</span></p>
+<p>Die Kausalanalyse schreibt, die Existenz von FOCALE sei die erste wissenschaftliche Bestätigung einer Multi-Loop-Architektur und legitimierte damit den Ansatz, verschiedene Anpassungsprozesse als getrennte Vorgänge zu modellieren. Die Vorvalidierung, Abschnitt 03, nennt die Formulierung der ersten wissenschaftlichen Bestätigung überzogen. Zwei Schleifen, Wartung und Anpassung beziehungsweise Policy-Rekonfiguration, und die Motivation aus den Grenzen von MAPE-K bleiben nach diesem Spot-Check korrekt. Der Satz wird hier nicht als Fakt geführt.</p>
+<p>FOCALE ist im Return eine MAPE-K-Erweiterung für Netzwerke und keine der 34 Ledger-Zeilen. Der Name Strassner steht in der Vorvalidierung. Eine eigene Quellenkennung für FOCALE ist UNKNOWN.</p>
+</div>
+<h2 id="t2">Spannung 2 · Ein legitimer Zustand gegen mehrere Lebenszykluszustände</h2>
+<p>Selbststabilisierung, Dijkstra 1974, garantiert nach dem Return die Erreichbarkeit eines legitimen Zustands. Der NEXUS-Lebenszyklus im Return lautet BIRTH, ACTIVE, HOLD, DEGRADED, RECOVERING, RETIRED, SUPERSEDED und FAILED_BIRTH. Die Vorvalidierung bestätigt den Spot-Check: CACM, Band 17, Nummer 11, und die Grenze, dass das Modell nicht byzantinisch ist und einen legitimen Zustand kennt, wo NEXUS mehrere Zustände führt. Die Bandangabe steht in der Vorvalidierung. Im Ledger stehen Jahr, Venue CACM und der Identifikator 10.1145/361179.361202, nicht die Bandnummer.</p>
+<h2 id="t3">Spannung 3 · Autorität und Autonomie</h2>
+<p>Der Return hält fest, dass mehr operative Autonomie ohne mehr Autorität möglich sei, über bessere Wahrnehmung und Planung innerhalb fester Grenzen, und dass die Literatur zu genau diesem Tausch dünn bleibe. Die Vorvalidierung nennt Simplex und Shielding als Beleg dafür, dass operative Autonomie innerhalb fester Grenzen steigen kann, und nennt die Literatur zu einem Verbot der Autoritätsausweitung bei gleichzeitiger Anpassung dünn. Beides bleibt eine Beschreibung. Eine Regel wird hier nicht gewählt.</p>
+<h2 id="t4">Spannung 4 · Affirmativerer Ton der Kausalanalyse</h2>
+<p>Die Vorvalidierung sagt, die Kausalanalyse formuliere stellenweise affirmativer als der strengere Return. Als Beispiel dient der Satz, der den Ansatz legitimiere. Beide Texte bleiben nur dann innerhalb von C1, wenn keine Validierung behauptet wird. Der Schlussabschnitt der Kausalanalyse spricht so, als sei das Modell als Rahmen bestätigt. Diese Seite übernimmt diese Sprechweise nicht. Sie entscheidet auch nicht, welcher Ton der richtige ist. Sie hält die Decke C1_DESCRIPTIVE_ONLY.</p>
+
+<h2 id="h">Gegenhypothesen H1 bis H7</h2>
+<p>Der Return testet sieben Gegenhypothesen und erklärt keinen Gewinner. Die Vorvalidierung bestätigt, dass alle sieben geprüft wurden und kein Gewinner erklärt wurde. Die Argumente sind verkürzt aus dem Return, nicht neu gewichtet.</p>
+<div class="scroll"><table><thead><tr><th scope="col">Hypothese</th><th scope="col">Dafür, im Return</th><th scope="col">Dagegen, im Return</th></tr></thead><tbody>
+<tr><td>H1. Der generische Knoten ist ein ereignisgetriebener Dienst plus Beobachtbarkeit.</td><td>Die Bausteine haben Entsprechungen in üblichen Diensten.</td><td>Authority-Gate und Receipt-Kette sind dort nicht Standard.</td></tr>
+<tr><td>H2. Der generische Knoten ist ein Controller oder Reconciler.</td><td>MAPE-K und das Controller-Muster.</td><td>NEXUS hat mehrere Schleifen, nicht eine.</td></tr>
+<tr><td>H3. Der generische Knoten ist eine Zustandsmaschine.</td><td>Der Lebenszyklus ist eine Zustandsmaschine.</td><td>Autorität, Provenienz und Recovery fasst das nicht.</td></tr>
+<tr><td>H4. Der generische Knoten ist ein Actor unter Supervision.</td><td>Supervision Trees.</td><td>Das Actor-Modell hat keine explizite Autorität.</td></tr>
+<tr><td>H5. Der generische Knoten ist ein Kompositum.</td><td>Kein einzelnes Modell fasst alles.</td><td>Zu vage, keine Vorhersagekraft.</td></tr>
+<tr><td>H6. Biologische Sprache fügt keinen Wert hinzu.</td><td>Alle Mechanismen haben technische Namen.</td><td>Metaphern erleichtern die Kommunikation.</td></tr>
+<tr><td>H7. Autonomie sollte deterministisch bleiben.</td><td>Deterministische Systeme sind verifizierbar.</td><td>Manche Aufgaben erfordern Anpassung.</td></tr>
+</tbody></table></div>
+<h2 id="zahlen">Zahlenspannung im Return, keine neue Messung</h2>
+<p>Das Feld SCIENTIFIC_DOMAIN_COUNT ist zweimal auf 18 gesetzt. Die Methode spricht von einer Suche über acht Forschungsdomänen. Die Spalte Domäne im Ledger enthält 22 verschiedene Einträge, wenn man die geschriebenen Zeichenketten unterscheidet. Diese Seite erklärt keine der drei Zahlen zur richtigen Domänenzahl. Die geführte Feldzahl bleibt 18. Eine bereinigte Liste der 18 Domänen steht nicht im Return und ist deshalb UNKNOWN.</p>
+<p>Der Ledger nennt bei Anderson keinen Vornamen. Die Kausalanalyse schreibt Jerome H. Anderson. Die Vorvalidierung bestätigt das Reference-Monitor-Konzept von 1972 und entscheidet den Vornamen nicht. Der Vorname über die beiden Schreibweisen hinaus ist UNKNOWN.</p>
+<p>Weitere Widersprüche, die der Return in Abschnitt 56 selbst führt und die nicht schon in den vier Spannungen aufgegangen sind: Antifragilität bleibt ohne testbare Definition für Software. Das Free-Energy-Prinzip ist dort umstritten und nicht für Software ausgewiesen; klassische Kontrolltheorie wird als etabliert beschrieben. Frage 10 an AXIOM lässt offen, ob das Free-Energy-Prinzip als nicht relevant markiert werden soll.</p>
+</main>
+<footer class="site"><p>Deskriptiv. Keine Validierung. Keine Architekturentscheidung. Kein Deployment.</p><p>Datum 2026-10-01. Geschwisterseite: <a href="https://www.nexus-mobile.de/ai/agent-border/">Agent Border</a> auf <a href="https://www.nexus-mobile.de/">nexus-mobile.de</a>.</p></footer>
+</div>
+</body>
+</html>

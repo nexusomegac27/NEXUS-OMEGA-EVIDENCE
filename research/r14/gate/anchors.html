@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anker · R14 Validierungsgate</title>
+<meta name="description" content="SHA-256 der R14-Eingaben und Manifest des Validierungsgates.">
+<link rel="stylesheet" href="assets/gate.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+<div class="top"><span class="brand">NEXUS//OMEGA</span><span class="tok">C1_DESCRIPTIVE_ONLY</span><span class="tok">TRUTH_AUTHORITY = NONE</span><span class="tok">PREVALIDATION_PASSED_WITH_KNOWN_GAPS_C1</span></div>
+<div class="wrap">
+<nav class="walk" aria-label="Gang durch das Validierungsgate"><a href="index.html">Tor</a> · <a href="precedent.html">Präzedenz</a> · <a href="terminology.html">Terminologie</a> · <a href="gaps.html">Lücken</a> · <a href="tensions.html">Spannungen</a> · <a href="sources.html">Quellen</a> · <a href="bounds.html">Grenzen</a> · <a href="anchors.html" aria-current="page">Anker</a> · <a href="manifest.json">manifest.json</a></nav>
+<main id="inhalt">
+<h1>Anker</h1>
+<p>Die fünf SHA-256-Werte wurden mit sha256sum über die Eingabedateien berechnet. Sie stimmen mit den erwarteten Werten überein, die diesem Auftrag beilagen. Gezeigt wird der berechnete Wert. PDF und Text sind zwei Hashes derselben Kausalanalyse und zählen nicht als zwei unabhängige Quellen.</p>
+<h2 id="hashes">Eingaben</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Rolle</th><th scope="col">Datei</th><th scope="col">SHA-256</th><th scope="col">Objekt</th></tr></thead><tbody>
+<tr><td>order</td><td>cf75ec32000b0bac12076fabe3a52518e0d09179574a8c44b319682d7b21e561.txt</td><td>cf75ec32000b0bac12076fabe3a52518e0d09179574a8c44b319682d7b21e561</td><td>NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_ORDER_20261001_R0</td></tr>
+<tr><td>qwen_return</td><td>e79dfaddf2c03e0c429cb6eb3273da33f89d5a44ca6ca7b7912c5d52d7942855.txt</td><td>e79dfaddf2c03e0c429cb6eb3273da33f89d5a44ca6ca7b7912c5d52d7942855</td><td>NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_RETURN_20261001_R0</td></tr>
+<tr><td>causal_analysis_text</td><td>745a1e9c6d24cfc696e68f1b3cc2fe608b0a0156090a37dc5ac13e11adcec608.txt</td><td>745a1e9c6d24cfc696e68f1b3cc2fe608b0a0156090a37dc5ac13e11adcec608</td><td>Von der Analogie zur Invariante</td></tr>
+<tr><td>causal_analysis_pdf</td><td>7192ffa4ceb772ad9c3e5897736fedcfb0cf949c58200424b44cbf85a916e0f1.pdf</td><td>7192ffa4ceb772ad9c3e5897736fedcfb0cf949c58200424b44cbf85a916e0f1</td><td>Von der Analogie zur Invariante</td></tr>
+<tr><td>computer_prevalidation</td><td>f0b671a299c43c553b5c4a4e20d961acedbb1cbd99f3040344d627748b521531.txt</td><td>f0b671a299c43c553b5c4a4e20d961acedbb1cbd99f3040344d627748b521531</td><td>NEXUS_OMEGA_GROK_R14_COMPUTER_PREVALIDATION_GENERIC_NODE_SCIENTIFIC_FOUNDATION_20261001_R0</td></tr>
+</tbody></table></div>
+<h2 id="objekte">Objektnamen</h2>
+<ul class="clean">
+<li>Auftrag: NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_ORDER_20261001_R0.</li>
+<li>Return: NEXUS_OMEGA_QWEN_R14_DEEP_RESEARCH_GENERIC_NODE_REACTIVE_ADAPTIVE_CONTROL_SCIENTIFIC_FOUNDATION_RETURN_20261001_R0.</li>
+<li>Kausalanalyse, Text und PDF: Von der Analogie zur Invariante.</li>
+<li>Vorvalidierung: NEXUS_OMEGA_GROK_R14_COMPUTER_PREVALIDATION_GENERIC_NODE_SCIENTIFIC_FOUNDATION_20261001_R0. Status PREVALIDATION_PASSED_WITH_KNOWN_GAPS_C1.</li>
+<li>Dieses Artefakt: NEXUS_OMEGA_R14_VALIDATION_GATE_WEB_ARTIFACT_20261001_R0.</li>
+</ul>
+<h2 id="manifest">Manifest</h2>
+<p>Ein Agent kann <a href="manifest.json">manifest.json</a> lesen, ohne die Seiten zu parsen. Der vorgesehene Pfad, nicht ausgeliefert, lautet /ai/r14-gate/. Deployment ist NO.</p>
+<p>Der Anker der Familie bleibt der <a href="https://www.nexus-mobile.de/ai/agent-border/">Agent Border</a>. Diese Seite ersetzt ihn nicht.</p>
+
+</main>
+<footer class="site"><p>Deskriptiv. Keine Validierung. Keine Architekturentscheidung. Kein Deployment.</p><p>Datum 2026-10-01. Geschwisterseite: <a href="https://www.nexus-mobile.de/ai/agent-border/">Agent Border</a> auf <a href="https://www.nexus-mobile.de/">nexus-mobile.de</a>.</p></footer>
+</div>
+</body>
+</html>
