@@ -1,0 +1,97 @@
+{
+  "object": "NEXUS_OMEGA_R11_FORUM_GITHUB_IMPLANT_AUTOSYNC_MACHINE_CONTRACT_20261016_R0",
+  "authority": "OPERATOR_DIRECT_R11_VISUAL_SOFT_AND_SITE_REFRESH",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "state": "SOURCE_ONLY_HOST_RUNTIME_NOT_ESTABLISHED",
+  "source": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "branch_after_ruleset_merge": "main",
+    "branch_now": "axiom/r11-visuality-forum-pipeline-repair-20261016",
+    "existing_site_root": "research/forum/github-implant-20261012/site/",
+    "source_commit_binding": "PIN_ON_ACTUAL_TRIGGER",
+    "versioning": "IMMUTABLE_COMMIT_AND_SHA256"
+  },
+  "observable_clocks": [
+    "github_main_commit_time",
+    "github_pr_updated_at_metadata_time",
+    "hostinger_actual_leaf_asset_deployment_time",
+    "separate_www_http_receipt_time"
+  ],
+  "client_refresh": {
+    "endpoint": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pulls?state=all&sort=updated&direction=desc&per_page=20",
+    "initial_request": true,
+    "visible_tab_interval_ms": 300000,
+    "minimum_request_gap_ms": 60000,
+    "method": "GET",
+    "credentials": "omit",
+    "rate_limit_handling": "HTTP_403_429_DISPLAY_HOLD",
+    "cache_error_handling": "CACHE_LABEL_REQUIRED",
+    "semantic_limit": "PR_UPDATED_AT_NOT_MAIN_COMMIT_NOT_HOSTINGER_DEPLOY"
+  },
+  "host_sync": {
+    "status": "NOT_CONFIGURED_NOT_VERIFIED",
+    "trigger": "AFTER_AUTHORIZED_PROTECTED_MAIN_SOURCE_CHANGE_IN_THREE_LEAF_FILES_ONLY",
+    "allowlist": [
+      {
+        "source": "research/forum/github-implant-20261012/site/index.html",
+        "target": "/forum/github-implant/index.html"
+      },
+      {
+        "source": "research/forum/github-implant-20261012/site/assets/github-implant.css",
+        "target": "/forum/github-implant/assets/github-implant.css"
+      },
+      {
+        "source": "research/forum/github-implant-20261012/site/assets/github-implant.js",
+        "target": "/forum/github-implant/assets/github-implant.js"
+      }
+    ],
+    "separate_gate_assets": "EXISTING_CONTRACT_ONLY_DO_NOT_EXPAND_UNILATERALLY",
+    "site_scope": "ONLY_EXISTING_NEXUS_FORUM_GITHUB_IMPLANT_LEAF",
+    "site_auth": "NOT_OBSERVED",
+    "no_whole_evidence_repo_into_public_html": true,
+    "mirror": "PUBLIC_SAFE_FILTERED_ONLY",
+    "phases": [
+      "DISCOVER_ACTUAL_HOST_AND_AUTH",
+      "READ_PINNED_SOURCE_BYTES",
+      "TEST_AND_RIGHTS_REVIEW",
+      "STAGE_EXACT_LEAF_FILES",
+      "BACKUP_CURRENT_LIVE",
+      "ATOMIC_DEPLOY_IF_SUPPORTED",
+      "HTTPS_READBACK_3_ASSETS",
+      "HASH_COMPARE_AND_VERIFY_C1",
+      "APPEND_ONLY_RECEIPT_OR_ROLLBACK"
+    ],
+    "fail_state": "SCOPED_HOLD_LEAVE_OTHER_LANES_ALONE",
+    "rollback": "REQUIRED_BEFORE_LIVE_CLAIM"
+  },
+  "verification": {
+    "source_only_validation": "ON_EXISTING_VALIDATE_RESEARCH_PIPELINE_WORKFLOW",
+    "tests": [
+      "test_gate.mjs",
+      "test_implant_activity.mjs",
+      "test_public_mirror.py"
+    ],
+    "www_route": "https://www.nexus-mobile.de/forum/github-implant/",
+    "gate_route": "https://www.nexus-mobile.de/forum/github-implant/gate/",
+    "www_runtime_receipt": "NOT_ESTABLISHED",
+    "expected_site_files": 3,
+    "proofs": [
+      "PROTECTED_MAIN_SOURCE",
+      "HOSTINGER_SCOPED_DEPLOY_RECEIPT",
+      "INDEPENDENT_PUBLIC_HTTPS_SHA256_RECEIPT"
+    ]
+  },
+  "safety": {
+    "no_new_chatgpt_automation": true,
+    "no_new_sensor_worker": true,
+    "no_force_merge": true,
+    "no_secrets": true,
+    "no_clinical_or_imu_raw_publication": true,
+    "no_actual_https_claim_from_cache_miss": true,
+    "no_unauthorized_host_write": true,
+    "R3": "SEALED",
+    "R9": "OPEN_UNCHANGED",
+    "R10": "OPERATOR_CLOSED",
+    "claim_promotion": "NO"
+  }
+}

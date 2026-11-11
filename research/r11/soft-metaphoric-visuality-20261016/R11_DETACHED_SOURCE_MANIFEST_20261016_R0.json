@@ -1,0 +1,80 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R11_SOFT_VISUALITY_FORUM_RECOVERY_DETACHED_MANIFEST_20261016_R0",
+  "date": "2026-10-16",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r11-visuality-forum-pipeline-repair-20261016",
+  "immutable_parent_commit": "1336651ee0542ded131f0b421f83c6ccecd63b55",
+  "original_main_base": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "physical_operator_sources": [
+    {
+      "label": "R11 foundation text",
+      "bytes": 4922,
+      "sha256": "ffbba822e5572350185999b355a82f3cdd0e76784d259b3c39a371334ae33510",
+      "published_raw": false
+    },
+    {
+      "label": "workspace(2).tar",
+      "bytes": 151892,
+      "sha256": "123fbfc810568208efe65408d6a6f4a89f6aec6cddc554b06d52c3628a086c21",
+      "published_raw": false
+    },
+    {
+      "label": "JQYNLT~1.ZIP",
+      "bytes": 22155748,
+      "sha256": "b434721355f97383412f23fada31b705fa3a8f976e788e1054e7e6a776306ac4",
+      "published_raw": false
+    },
+    {
+      "label": "NO32TB~1.ZIP",
+      "bytes": 14987746,
+      "sha256": "532a77b698462109796b6cd453bec91180c17b14ddf3ecfed43b606bd8cebe6d",
+      "published_raw": false
+    }
+  ],
+  "public_files": [
+    {
+      "path": "research/forum/github-implant-20261012/site/index.html",
+      "bytes": 9940,
+      "sha256": "30384f7ff25f6983665051f1834bde80e172b529b66d8a8ac4faec4bf8c256e3",
+      "git_blob_sha1": "c5b0b7e0313715c9be00f2f181c03d95721efc16"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/site/assets/github-implant.js",
+      "bytes": 12644,
+      "sha256": "f8288e94d1715b742d729a983f19ca01ec2e16b124dd76af536a6f350b90a234",
+      "git_blob_sha1": "9990fd9bc1b0fd233c380774e73f3a05f0e9c329"
+    },
+    {
+      "path": "research/forum/github-implant-20261012/tests/test_implant_activity.mjs",
+      "bytes": 3352,
+      "sha256": "95af41de810f1f8853794ae1072b13776642d57d65b13f350cb676b9baa7f4ab",
+      "git_blob_sha1": "cb973b09e3abc609e3ca4038b9ea20d5a60dc739"
+    },
+    {
+      "path": ".github/workflows/validate-research-pipeline.yml",
+      "bytes": 2864,
+      "sha256": "197dd4ea09c4443abe4028aeccd5c5af4d93d5431137da80bdd865c4caa5b2d1",
+      "git_blob_sha1": "27469b7422cd1818bd311eb2e773376cb146d655"
+    },
+    {
+      "path": "research/r11/soft-metaphoric-visuality-20261016/NEXUS_OMEGA_AXIOM_CURSOR_R11_SOFT_VISUALITY_AND_FORUM_IMPLANT_RECOVERY_MAXI_ORDER_20261016_R0.md",
+      "bytes": 12230,
+      "sha256": "adf3c2f1ed1ebd30218a450462fa2719b982dbf4c400619b425985e1d67ebeba",
+      "git_blob_sha1": "639281fbd446b08a0bdb1c1b4447698833d3f847"
+    },
+    {
+      "path": "research/r11/soft-metaphoric-visuality-20261016/R11_FORUM_GITHUB_IMPLANT_AUTOSYNC_CONTRACT_20261016_R0.json",
+      "bytes": 3674,
+      "sha256": "6b722493a09a1b1cd122a3a2848140870519701417630b6c8a1e721a5025c296",
+      "git_blob_sha1": "1c0edc7f3676b09d5ec29f10eedab3786b447fcb"
+    }
+  ],
+  "file_count": 6,
+  "manifest_self_hash": "EXCLUDED",
+  "C1_status": "SOURCE_ONLY_PR_NOT_MERGED",
+  "www_publication": "NOT_ESTABLISHED",
+  "hostinger_auto_deploy": "NOT_CONFIGURED_VERIFIED",
+  "cursor_receipt": "PENDING",
+  "privacy": "RAW_OPERATOR_ARCHIVES_NOT_IN_PUBLIC_GITHUB"
+}
