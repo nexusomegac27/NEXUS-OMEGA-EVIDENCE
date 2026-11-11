@@ -1,0 +1,183 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN135_ISSUE93_HANDOFF_SCOPE_COMPLETENESS_AUDIT_20261025_R0",
+  "decision": "CONTRADICTION_APPEND_C1_MEASUREMENT_GAP_QUANTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "predecessor_issue93_comment_id": 6390941827,
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "source_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+  "source_api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93/comments?per_page=100",
+  "source_readback_at": "2026-10-25",
+  "source_comments_all": 81,
+  "scope": "Owner-authored AXIOM RUN101..RUN134 comment receipts, 30 distinct run numbers; not a project-wide handoff event inventory",
+  "selected_receipts": 30,
+  "source_actor": "nexusomegac27",
+  "independent_connector_readback_body_matches": "30_OF_30",
+  "per_event_required_explicit_boolean_fields": [
+    "HANDOFF_ROUTINE",
+    "HANDOFF_PUBLIC",
+    "HANDOFF_AUTHORIZED",
+    "HANDOFF_ACCESSIBLE",
+    "HANDOFF_AUTOMATED",
+    "HANDOFF_MANUAL_TRIGGER"
+  ],
+  "measurement": {
+    "baseline": "PROJECTWIDE_ELIGIBLE_DENOMINATOR_UNKNOWN",
+    "before_verified_scope_complete_receipts": "UNKNOWN_NOT_PREVIOUSLY_MEASURED",
+    "after_verified_scope_complete_receipts": "0_OF_30",
+    "missing_explicit_scope_receipts": 30,
+    "project_eligible_handoff_denominator": "NOT_COMPUTABLE",
+    "project_verified_automated_numerator": "NOT_COMPUTABLE",
+    "project_90_percent_automation": "NOT_ESTABLISHED",
+    "project_100_percent_readback": "NOT_ESTABLISHED",
+    "explanation": "Per-run 2/2 file-readback assertions are not per-event eligibility/trigger proofs and cannot be summed into a project-wide rate. This is a completeness audit, not evidence that zero handoffs occurred or that zero were automated."
+  },
+  "test": {
+    "first_parser": "exact uppercase key/value multi-map",
+    "second_parser": "independent exact-line equality",
+    "real_source_agreement": "30_OF_30",
+    "synthetic_fixtures": "6_OF_6_MATCH_EXPECTED_BOTH_PARSERS",
+    "positive_control": 1,
+    "negative_fixtures": 5,
+    "sha256_reference_vectors": "2_OF_2_PASS",
+    "separate_offline_python_evaluator": "6_OF_6_FIXTURES_PASS_LOCAL_NOT_PUBLICLY_VERSIONED",
+    "third_party_validation": "NOT_ESTABLISHED",
+    "falsifier": "Any selected body at the stated source version has all six unique exact TRUE/FALSE per-event fields, or the two independently fetched source bodies diverge, or the parser accepts a run-level 2_OF_2 summary as per-event evidence."
+  },
+  "source_comment_body_sha256": [
+    {
+      "id": 6364929943,
+      "sha256": "245e6a09bc19f7459f8e8357e127d67b70902a7a307cf0a765ef64b245523e4f"
+    },
+    {
+      "id": 6369120333,
+      "sha256": "c5994f41bfecd9b6744cad8cd019747d4c0cbbee32f6d05f0a02f2ed87660e98"
+    },
+    {
+      "id": 6369697023,
+      "sha256": "20b2365468304ac618fcd57d6036136c9a65d147b1ad34cff08fde5aea4811f1"
+    },
+    {
+      "id": 6371322616,
+      "sha256": "7f2f4000b1d88341e22d179a79480c53f4e6706133ae60ed7af2e7aae29cd337"
+    },
+    {
+      "id": 6372412873,
+      "sha256": "b928ad1508e8894c2bd81baf05b9b2bf37b4ea767b36b0f303c62450aa9e0840"
+    },
+    {
+      "id": 6373443608,
+      "sha256": "545d8639c414391eb6d50071718833ea4e6bbf68253f688d8e20be05cb4be4f2"
+    },
+    {
+      "id": 6373826379,
+      "sha256": "594607423712435461acc3cd4bc1abdf9dd5645fc37d4b9d09503dc3510a44e2"
+    },
+    {
+      "id": 6375112084,
+      "sha256": "40ad6b3db73f075045b9d7dd11b9630501f09984e08e66c7de7ef6a4759bba"
+    },
+    {
+      "id": 6377352117,
+      "sha256": "c5579a654b8c4a3e78242982c23928aacaebae4cbe1ed4f425d3a2b31971c886"
+    },
+    {
+      "id": 6378234519,
+      "sha256": "c612d70406f9a13ece2a34e8067c83cc17aeefb25712179ef7b18aa4c0790a8e"
+    },
+    {
+      "id": 6378991195,
+      "sha256": "728ec8019357344d5edc16092dd2ada97466df3e0a4dcedfe57b4457f63feab2"
+    },
+    {
+      "id": 6379209851,
+      "sha256": "649166e97fb96067e7e9a035ed42425c1818a9c85fc8540a1f39648bf7b4e221"
+    },
+    {
+      "id": 6380038225,
+      "sha256": "4f2cec6f055eeedfea2076f89d166074a668425beeefea4b9ef468823f5cc9f4"
+    },
+    {
+      "id": 6380203251,
+      "sha256": "ca6f629163b4fcae9743bc64bbaca6a8742daa5de46083a943c22361a3b3eed3"
+    },
+    {
+      "id": 6380793311,
+      "sha256": "21f1543d93a2a9d411a4031330d2ca946cd6a9d59d3fee94f2fa4e2d55115736"
+    },
+    {
+      "id": 6381558547,
+      "sha256": "e99af0cc7b7b6f1c8a413e0b87ee6fd27e1797f7bd25a5038467dd27c6f2c3e3"
+    },
+    {
+      "id": 6382110481,
+      "sha256": "4f6a5f9acec6aff106563465ca5c63a1a894a62011a10303111e015586d7351f"
+    },
+    {
+      "id": 6382558866,
+      "sha256": "ebae4cd572c476ec078161794f4880fbe3024e961889601867733cbf409bb822"
+    },
+    {
+      "id": 6382925607,
+      "sha256": "f154588c4afb37526e7fa11cf07fa6e664b992318dfdd9316e651f46b5b21963"
+    },
+    {
+      "id": 6383723897,
+      "sha256": "d86e646388148c68219decf453db7e5ca0a0e598296d9d9a24eb8e7fc3193f58"
+    },
+    {
+      "id": 6384742087,
+      "sha256": "7a37aab4f9bda98ea2a68824c282971fdf584503ae9ebafb0a534b608d2bfc20"
+    },
+    {
+      "id": 6385382706,
+      "sha256": "f3c73a25614b4750431fc79246d1e7f4eb9ab8e3f0595be607799466b427170c"
+    },
+    {
+      "id": 6386184971,
+      "sha256": "2d83c3232a80528e4bb46efe06171de38d506a750485d1efb9ffe17fb97c0ea3"
+    },
+    {
+      "id": 6387225127,
+      "sha256": "d6b86f2d598591f9c9df0804211c90d8edf31b3465256a0de7d489bd92828085"
+    },
+    {
+      "id": 6388171744,
+      "sha256": "3c5f9e81eaeea4775fc5b70ea45e2e2783c82e81ae09b7446660d46620f03c73"
+    },
+    {
+      "id": 6388377962,
+      "sha256": "7fd71bae351c57f2c4b79fdf7ed107e0992baae0afd42aaf622da00267212a88"
+    },
+    {
+      "id": 6389193037,
+      "sha256": "47f75a4d7136e667d3c088e4fd9b2102f879d19fd03308e435c9e31844705895"
+    },
+    {
+      "id": 6389755013,
+      "sha256": "68b05692112a8d4c6e610bd614a0d1cdaaf26c691b3b090bbeeaaf1e5dd15640"
+    },
+    {
+      "id": 6390570512,
+      "sha256": "2842635bde46f4e99d8cc14280bc71bcbbbf7c54cd2f22b70fbc92f8d3eaaa32"
+    },
+    {
+      "id": 6390941827,
+      "sha256": "93cd60a50ba480444622654055d15e7ad77bd4b3d9f713f2dac6fd69be06cb85"
+    }
+  ],
+  "r10_parallel_read_only": {
+    "pinned_pr115_head": "539d4bb33d2ba2c4895713c1bc437ece0743eeea",
+    "current_pr115_head": "dab7c59070d67e7e2a244bd6d05db9a4d37460e3",
+    "detached_manifest_bytes": 4588,
+    "detached_manifest_sha256": "7e026d579e4a0c6062203c3c6ca9b720301e5cf87b86a4c4052b0351233fd6cc",
+    "detached_manifest_git_blob": "0c2ca57a40f519da45ce60b565e8aadb4c9b95df",
+    "public_send": "OBSERVED",
+    "independent_receiver_ack": "NOT_ESTABLISHED",
+    "authenticated_external_actor": "NOT_ESTABLISHED",
+    "axiom_scientific_adjudication_new_return": "NOT_ESTABLISHED",
+    "expert_research_executed": "NOT_ESTABLISHED",
+    "new_expert_return": "SOURCE_NOT_PRESENT"
+  },
+  "restrictions": "NO_MERGE_NO_HOSTINGER_NO_RUNTIME_NO_EXTERNAL_ACTOR_REGISTRATION_NO_CLAIM_PROMOTION",
+  "next": "Future independent per-event eligible handoff inventory and readback required before computing 90% target. Preserve historical receipts append-only; do not reinterpret missing fields as false or success."
+}

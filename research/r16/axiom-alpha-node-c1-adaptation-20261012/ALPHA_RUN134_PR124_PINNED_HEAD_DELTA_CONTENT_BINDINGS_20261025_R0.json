@@ -1,0 +1,224 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN134_PR124_PINNED_HEAD_DELTA_CONTENT_BINDINGS_20261025_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "scope": "HISTORICAL_IMMUTABLE_PR124_SNAPSHOT_ONLY_NOT_CURRENT_HEAD_OR_PRODUCTION",
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "pinned_pr_head": "07f350a585ad609178f4f82e890616e7b2b5398d",
+  "predecessor_issue93_receipt": 6390570512,
+  "source_manifest_commit": "39555c14bb1a16a33fa24c65e0f715508fb3ce0e",
+  "source_manifest_path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_CONTENT_BINDINGS_20261024_R0.json",
+  "source_manifest_bytes": 18083,
+  "source_manifest_sha256": "f164583cb0dbd23845a79f64d9cebea222ef90ea958d0e0bf6840d179af22d42",
+  "source_manifest_git_blob_sha1": "cacf5d271ee9c99cc4168a016765d9a73b1a52fb",
+  "source_manifest_count": 54,
+  "source_pr_file_count": 87,
+  "delta_count": 33,
+  "combined_count": 87,
+  "evaluator_frozen_commit": "a6f362f0d22ecd8a465af4b0c77bd9abc7042c02",
+  "evaluator_path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_snapshot_delta_frozen_evaluator_v1_20261025.js",
+  "evaluator_sha256": "120ddc46893d9d385b41802c4a339969b432eff78e20d441a47c5e95999de3ff",
+  "evaluator_git_blob_sha1": "6a724918fc8d5c352c27769fd76b902cf5690ebf",
+  "source_readback": "33_OF_33_FILE_ENDPOINT_AND_SEPARATE_GIT_BLOB_BYTE_SHA256_MATCH",
+  "no_mutation_of_predecessor": true,
+  "files": [
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_crossrow_frozen_evaluator_v1_20261024.py",
+      "bytes": 3209,
+      "sha256": "0ac34decf73d05d1fa4ca2be5915ebbe86ceb44f14779a13d9f78a011cec97c0",
+      "git_blob_sha1": "2bc8f031c9134dd029e9ff0ba23540f048f46a88"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_decimal_exponent_frozen_evaluator_v1_20261024.py",
+      "bytes": 3106,
+      "sha256": "dcb9cf716b3672581f51b3179cbaf45cff6c1cbc00d14a331a3e61179b188d3c",
+      "git_blob_sha1": "cec8c5c2a3162b3119149fd91432178e6784bfcf"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_duplicate_key_frozen_evaluator_v1_20261024.py",
+      "bytes": 2895,
+      "sha256": "4ffcb412c076bf0a7c349feefa7e87a3bd55abc248b8dfd298c76792a17e7dc4",
+      "git_blob_sha1": "938ce9d97d6de40d9100b4b1f7d004d567848821"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_GIT_TREE_IDENTITY_CORRECTION_20261024_R0.json",
+      "bytes": 2051,
+      "sha256": "b11fd68d1665bbb8a64c9f421bafd8273505a26fc48406dd2d8b2c8be4564917",
+      "git_blob_sha1": "3c178f719ab53cc00b06b0a246b5ef6d309d1ee3"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_json_nesting_frozen_evaluator_v1_20261025.py",
+      "bytes": 2401,
+      "sha256": "629391729a01a19fbfe0a7fd91fbd61acce1fc5ac6c009de12eaca7574e28cc0",
+      "git_blob_sha1": "b8480243e5b9e3476d845a83b9d891ece355c1af"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v1_20261024.py",
+      "bytes": 2593,
+      "sha256": "b4f7cd648f6848e501309ef8dbec77cadf9f58217fa5101fd5b35acbbf9222b8",
+      "git_blob_sha1": "2ddd694ceaa4eed1ba8b279ce6596de8af5df97b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v2_20261024.py",
+      "bytes": 2899,
+      "sha256": "d2859a0cb2f361e2a7ce503101088ddebf60cf0fdbfb6c0a9482a7b14cd93fe7",
+      "git_blob_sha1": "fa6aab4b32b4583b5ded474ffad63e9659355b1a"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v3_20261024.py",
+      "bytes": 3212,
+      "sha256": "992e19c2e805c867df63a93fcf9c18f38bc542c245ef4e439dd263820873b306",
+      "git_blob_sha1": "025223e8e22ea5efd26e3e14238c09b3bb4804ba"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_safe_integer_guard_v4_20261024.py",
+      "bytes": 1256,
+      "sha256": "171d7e9bf93ab7e6df276d8754e8ccfece835f8a058c267d18a90d17fbfa44eb",
+      "git_blob_sha1": "5a2f2aa3a73e3890ff9b46dc2e63889e3f0d62cf"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_decimal_exponent_failclosed_guard_v7_20261024.py",
+      "bytes": 1289,
+      "sha256": "6718ba65ccfd809efdf9980f52b52725b91c97e7cc086cff78c9e67bb7a8af49",
+      "git_blob_sha1": "6bd94c2d40fce0a24dc25ab1aa76bea8dbb53d53"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_float_roundtrip_frozen_evaluator_v1_20261024.py",
+      "bytes": 2354,
+      "sha256": "b76d0ee7fb037af28343cc2a5a039dd7b4baa3137021afdd79e66797f1328ae0",
+      "git_blob_sha1": "7064f50903b055589368370461e88c908339835e"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_float_roundtrip_guard_v6_20261024.py",
+      "bytes": 1475,
+      "sha256": "8c9689b1d94458cf7bc6f19bde8580ad300deef024a0792b9c08e452da58cb0a",
+      "git_blob_sha1": "89de21908c8cff355ae99c7f875f892272bb1410"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_recursion_failclosed_guard_v8_20261025.py",
+      "bytes": 1296,
+      "sha256": "ce638fbb38f27293f9c3ceb1d56d1f5591fbcfbaf226e8f4425ce47f87bbaf0f",
+      "git_blob_sha1": "5c6bdb056008b8a84a6de05cf3814bc94bc6fb7b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_composed_guard_v5_20261024.py",
+      "bytes": 2137,
+      "sha256": "ff2fa8648552009654e987a059a4b81dbd8954dca8b170265c83c2d9ab8c4885",
+      "git_blob_sha1": "f80d5d3aba90c5bfaffa2c955f5fa998fae2547b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_composition_frozen_evaluator_v1_20261024.py",
+      "bytes": 1886,
+      "sha256": "35c338a2786fe8ed6432c0713201b2599fcd9b4cc3800d53332a0e28c3030cf1",
+      "git_blob_sha1": "71846e794e7a2007e8217bc771a0369223211c4e"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_FROZEN_FIXTURES_20261024_R0.json",
+      "bytes": 4268,
+      "sha256": "8bcefb5b5a3dc7fb635e06ef4241cf09d08621ad8f238b2216d11b44d8114111",
+      "git_blob_sha1": "31381e251efa98f45e20d59cb9ae5555cf166b85"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_portability_frozen_evaluator_v1_20261024.py",
+      "bytes": 3476,
+      "sha256": "8536a0edd94008ae1c469c5ed7bd0e68301360d5a8167ee57587592243a494ee",
+      "git_blob_sha1": "7421f01469908150ec250c7b1561bf7fba16de47"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_PORTABLE_PATH_SCHEMA_V3_20261024_R0.json",
+      "bytes": 1495,
+      "sha256": "0a26925950de9fc2bad680b66f8e4497fea63863adb8bcaf6ff6a27f4f16d6bd",
+      "git_blob_sha1": "6ea2e3c294fded5a6e58b959a5cfa33a5a8160cd"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_safe_integer_frozen_evaluator_v1_20261024.py",
+      "bytes": 2496,
+      "sha256": "9bab2c21e3355c3d2cb9af44253a5f9782f1db07c4ac889cb8d3586596fa6c66",
+      "git_blob_sha1": "664cff9aec2e93a4c22525422aad2dc8ab9cd364"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_SCHEMA_20261024_R0.json",
+      "bytes": 954,
+      "sha256": "9acaeb71a6e45e5de96138d2f382fc9b1ec005cb207529b1b21cc13828812496",
+      "git_blob_sha1": "be07afd32f8e9659f5fae6b35a8c3762aa97ac19"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_SCHEMA_SAFE_INTEGER_V2_20261024_R0.json",
+      "bytes": 1024,
+      "sha256": "8204b4f68e1c14473986b8bcd7f296904aabe013db8b1be0246c11ede70bfddd",
+      "git_blob_sha1": "b7dc516e84e8abca42a8ac1428ed8117f24e4ac7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_nonfinite_exponent_frozen_evaluator_v1_20261024.py",
+      "bytes": 4538,
+      "sha256": "e8a10349f378a8b0c23d9c61950cad87dfdd9a8a5a1e8944eb4bd957ae71086f",
+      "git_blob_sha1": "58e22fd354bb98e29c12b1d0c075e727c51bac7e"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_CONTENT_BINDINGS_20261024_R0.json",
+      "bytes": 18083,
+      "sha256": "f164583cb0dbd23845a79f64d9cebea222ef90ea958d0e0bf6840d179af22d42",
+      "git_blob_sha1": "cacf5d271ee9c99cc4168a016765d9a73b1a52fb"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_DISCOVERY_INDEX_20261024_R0.json",
+      "bytes": 8561,
+      "sha256": "45308605c40df5b868b28ba2befb7c50351eacbfc0497b02e4577e89b46c90e7",
+      "git_blob_sha1": "ef56ed01ad34a8ee44fd97ccb4a3ab0ad3589b38"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_safe_integer_frozen_evaluator_v1_20261024.py",
+      "bytes": 3487,
+      "sha256": "f8caa01685d3c829ae4be112ad6034336b8d5f7e1dfc20962ddfaefc82c29794",
+      "git_blob_sha1": "f01e2d6273e7402081f3eee913d122eb895b1b11"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_RUN119_REAL_SOURCE_REPLAY_20261024_R0.json",
+      "bytes": 5864,
+      "sha256": "77f9c72b1706040397a3ff2ac9dcfe95654ae6cce68e19b820b6cd339af76aee",
+      "git_blob_sha1": "6c2f8f9bc44569ca579318e3c88e7572d2629934"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_RUN131_EIGHT_RECEIPT_COHORT_INDEPENDENT_BYTE_READBACK_20261024_R0.json",
+      "bytes": 10615,
+      "sha256": "8acec7ca707a0b93a9de9f239918cce840a192a4f94f6a2d81b218a3ba7684b7",
+      "git_blob_sha1": "fa0e33594ce48fdf78c74a2ec67e8ad04f390da7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_RUN132_FILE_ENDPOINT_SHA256_COHORT_COVERAGE_CLOSURE_20261024_R0.json",
+      "bytes": 5629,
+      "sha256": "6c80ee2d77a9976db99cfda7beacb836833e711dae9adea0a40eeb5e76fab0ad",
+      "git_blob_sha1": "606a951dbf9322d623f6bf4c6bf759375eae0b16"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_tree_correction_resolver_v1_20261024.py",
+      "bytes": 5248,
+      "sha256": "6d2d061dfc11e0ba5ccf88ab618a74d8c9c1c811396a146bc1a4b76ba18dc7d8",
+      "git_blob_sha1": "4f247b7256cfcba22ac7c76efcb490f59d16ded3"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_tree_correction_resolver_v2_20261024.py",
+      "bytes": 5286,
+      "sha256": "59e6aece2c47ffc2c3a51a3bad0d83ee97095183a10e34aa83240912dd581625",
+      "git_blob_sha1": "5d0d97565aed38e600074bcb666e9c3920120769"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr124_content_binding_evaluator_v1_20261024.py",
+      "bytes": 4662,
+      "sha256": "2e0bf6f677a6012c60bcf0d7d07f4e3861b576d257367178e32d0057aa6a6cd7",
+      "git_blob_sha1": "8cb34fa4bae32d0b151c394a04c4538248464186"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_tree_correction_numeric_overflow_evaluator_v1_20261024.py",
+      "bytes": 4483,
+      "sha256": "fd857736acbad60578b500ca0f399c1afc7cd0cca599c76bcec3858cf45d1cd6",
+      "git_blob_sha1": "ece1a4bf6fff1979563ce95aa1a6607f44bbe82d"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_tree_correction_resolver_evaluator_v1_20261024.py",
+      "bytes": 5487,
+      "sha256": "46c5a0d945a534531837954f1ac4f68f1dca412dd2299119fd71748ac104d8b9",
+      "git_blob_sha1": "dbad2864344c641a54855da0d6af75a84e490a2b"
+    }
+  ],
+  "count": 33
+}

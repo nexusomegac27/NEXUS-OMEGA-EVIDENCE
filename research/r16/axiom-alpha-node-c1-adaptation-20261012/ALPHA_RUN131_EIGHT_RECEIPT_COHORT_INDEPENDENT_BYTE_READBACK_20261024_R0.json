@@ -1,0 +1,199 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN131_EIGHT_RECEIPT_SIXTEEN_ASSET_INDEPENDENT_COHORT_READBACK_20261024_R0",
+  "decision": "KNOWLEDGE_APPEND_C1_SOURCE_EXACT_COHORT_AUDIT",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "authority": "NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0",
+  "pinned_main_before": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "predecessor_pr124_head": "7648feb103d088e9ded054b7d2ee1f106e1bbf81",
+  "predecessor_issue93_receipt": 6388377962,
+  "scope": "Selected Run121/122/124/125/126/128/129/130 candidate and evaluator files; no Run123/127 successful public file handoffs included; not a project-wide census.",
+  "source": "Immutable GitHub commit paths, issue #93 receipts, independent GitHub file and git-blob endpoints.",
+  "negative_hypothesis": "At least one receipt-claimed public asset is unavailable or has a different SHA256, byte count or Git blob from its immutable commit.",
+  "isolated_evaluator": {
+    "language": "JavaScript separate from the published Python candidates",
+    "sha256_vectors": "3/3_PASS_empty_abc_UTF8_u_umlaut",
+    "synthetic_negative_fixtures": "5/5_FAIL_EXPECTED_bytes_sha256_blob_endpoint_missing",
+    "evaluator_source_persisted": "NO_EPHEMERAL_READ_ONLY",
+    "independent_third_party": "NOT_ESTABLISHED"
+  },
+  "measurements": {
+    "before_independently_rechecked_this_run": "0/16",
+    "after_git_blob_bytes_sha256": "16/16_MATCH",
+    "after_file_endpoint_bytes_git_blob": "16/16_MATCH",
+    "after_file_endpoint_independent_sha256": "15/16_MATCH_1_NOT_RECOMPUTED_AT_FILE_ENDPOINT",
+    "separate_blob_endpoint_sha256": "16/16_MATCH",
+    "eligible_audited_public_file_denominator": 16,
+    "verified_audited_public_file_numerator": 16,
+    "source_not_present_in_cohort": 0,
+    "projectwide_authorized_public_handoff_denominator": "UNKNOWN",
+    "projectwide_automated_without_operator_nudge_numerator": "NOT_ESTABLISHED",
+    "target_90_percent": "NOT_ESTABLISHED",
+    "all_published_changes_readback_100_percent": "NOT_ESTABLISHED"
+  },
+  "falsifier": "Refetch each listed file at its immutable commit and the separate Git blob; any mismatch in bytes, SHA256 or blob disproves the corresponding MATCH. A larger representative census can disprove cohort generalization.",
+  "evidence_rows": [
+    {
+      "receipt_id": 6382925607,
+      "role": "CANDIDATE",
+      "commit": "a21aea39c122708202ae68527ea102f4812cf900",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_SCHEMA_SAFE_INTEGER_V2_20261024_R0.json",
+      "bytes": 1024,
+      "sha256": "8204b4f68e1c14473986b8bcd7f296904aabe013db8b1be0246c11ede70bfddd",
+      "git_blob_sha1": "b7dc516e84e8abca42a8ac1428ed8117f24e4ac7",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6382925607,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "a21aea39c122708202ae68527ea102f4812cf900",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_safe_integer_frozen_evaluator_v1_20261024.py",
+      "bytes": 2496,
+      "sha256": "9bab2c21e3355c3d2cb9af44253a5f9782f1db07c4ac889cb8d3586596fa6c66",
+      "git_blob_sha1": "664cff9aec2e93a4c22525422aad2dc8ab9cd364",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6383723897,
+      "role": "CANDIDATE",
+      "commit": "dce5cb056fae4d25639c6097f33a6c05c7ab3ef8",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_MANIFEST_ROW_PORTABLE_PATH_SCHEMA_V3_20261024_R0.json",
+      "bytes": 1495,
+      "sha256": "0a26925950de9fc2bad680b66f8e4497fea63863adb8bcaf6ff6a27f4f16d6bd",
+      "git_blob_sha1": "6ea2e3c294fded5a6e58b959a5cfa33a5a8160cd",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6383723897,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "dce5cb056fae4d25639c6097f33a6c05c7ab3ef8",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_portability_frozen_evaluator_v1_20261024.py",
+      "bytes": 3476,
+      "sha256": "8536a0edd94008ae1c469c5ed7bd0e68301360d5a8167ee57587592243a494ee",
+      "git_blob_sha1": "7421f01469908150ec250c7b1561bf7fba16de47",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6384742087,
+      "role": "CANDIDATE",
+      "commit": "9678ca06bab41459178fef3cd83ed91fbfa3a69c",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v1_20261024.py",
+      "bytes": 2593,
+      "sha256": "b4f7cd648f6848e501309ef8dbec77cadf9f58217fa5101fd5b35acbbf9222b8",
+      "git_blob_sha1": "2ddd694ceaa4eed1ba8b279ce6596de8af5df97b",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6384742087,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "9678ca06bab41459178fef3cd83ed91fbfa3a69c",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_crossrow_frozen_evaluator_v1_20261024.py",
+      "bytes": 3209,
+      "sha256": "0ac34decf73d05d1fa4ca2be5915ebbe86ceb44f14779a13d9f78a011cec97c0",
+      "git_blob_sha1": "2bc8f031c9134dd029e9ff0ba23540f048f46a88",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6385382706,
+      "role": "CANDIDATE",
+      "commit": "798c9f3d866fdd4416be18bc914821ed28a7723c",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v2_20261024.py",
+      "bytes": 2899,
+      "sha256": "d2859a0cb2f361e2a7ce503101088ddebf60cf0fdbfb6c0a9482a7b14cd93fe7",
+      "git_blob_sha1": "fa6aab4b32b4583b5ded474ffad63e9659355b1a",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6385382706,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "798c9f3d866fdd4416be18bc914821ed28a7723c",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_duplicate_key_frozen_evaluator_v1_20261024.py",
+      "bytes": 2895,
+      "sha256": "4ffcb412c076bf0a7c349feefa7e87a3bd55abc248b8dfd298c76792a17e7dc4",
+      "git_blob_sha1": "938ce9d97d6de40d9100b4b1f7d004d567848821",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6386184971,
+      "role": "CANDIDATE",
+      "commit": "e819f91d30a13797027326a614a231eec0667e41",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_crossrow_path_guard_v3_20261024.py",
+      "bytes": 3212,
+      "sha256": "992e19c2e805c867df63a93fcf9c18f38bc542c245ef4e439dd263820873b306",
+      "git_blob_sha1": "025223e8e22ea5efd26e3e14238c09b3bb4804ba",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6386184971,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "e819f91d30a13797027326a614a231eec0667e41",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_nonfinite_exponent_frozen_evaluator_v1_20261024.py",
+      "bytes": 4538,
+      "sha256": "e8a10349f378a8b0c23d9c61950cad87dfdd9a8a5a1e8944eb4bd957ae71086f",
+      "git_blob_sha1": "58e22fd354bb98e29c12b1d0c075e727c51bac7e",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6387225127,
+      "role": "CANDIDATE",
+      "commit": "2f4fc74bb993cdf6f4ea1b8b633b15a56d3ae6e5",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_composed_guard_v5_20261024.py",
+      "bytes": 2137,
+      "sha256": "ff2fa8648552009654e987a059a4b81dbd8954dca8b170265c83c2d9ab8c4885",
+      "git_blob_sha1": "f80d5d3aba90c5bfaffa2c955f5fa998fae2547b",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6387225127,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "2f4fc74bb993cdf6f4ea1b8b633b15a56d3ae6e5",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_row_composition_frozen_evaluator_v1_20261024.py",
+      "bytes": 1886,
+      "sha256": "35c338a2786fe8ed6432c0713201b2599fcd9b4cc3800d53332a0e28c3030cf1",
+      "git_blob_sha1": "71846e794e7a2007e8217bc771a0369223211c4e",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6388171744,
+      "role": "CANDIDATE",
+      "commit": "49e6dabf3cd71fec29dfa7ebc2ab401c3738adde",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_float_roundtrip_guard_v6_20261024.py",
+      "bytes": 1475,
+      "sha256": "8c9689b1d94458cf7bc6f19bde8580ad300deef024a0792b9c08e452da58cb0a",
+      "git_blob_sha1": "89de21908c8cff355ae99c7f875f892272bb1410",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6388171744,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "49e6dabf3cd71fec29dfa7ebc2ab401c3738adde",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_float_roundtrip_frozen_evaluator_v1_20261024.py",
+      "bytes": 2354,
+      "sha256": "b76d0ee7fb037af28343cc2a5a039dd7b4baa3137021afdd79e66797f1328ae0",
+      "git_blob_sha1": "7064f50903b055589368370461e88c908339835e",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6388377962,
+      "role": "CANDIDATE",
+      "commit": "7648feb103d088e9ded054b7d2ee1f106e1bbf81",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_manifest_decimal_exponent_failclosed_guard_v7_20261024.py",
+      "bytes": 1289,
+      "sha256": "6718ba65ccfd809efdf9980f52b52725b91c97e7cc086cff78c9e67bb7a8af49",
+      "git_blob_sha1": "6bd94c2d40fce0a24dc25ab1aa76bea8dbb53d53",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    },
+    {
+      "receipt_id": 6388377962,
+      "role": "FROZEN_EVALUATOR",
+      "commit": "7648feb103d088e9ded054b7d2ee1f106e1bbf81",
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr124_decimal_exponent_frozen_evaluator_v1_20261024.py",
+      "bytes": 3106,
+      "sha256": "dcb9cf716b3672581f51b3179cbaf45cff6c1cbc00d14a331a3e61179b188d3c",
+      "git_blob_sha1": "cec8c5c2a3162b3119149fd91432178e6784bfcf",
+      "verification": "GITHUB_FILE_AND_BLOB_BYTE_REHASH_MATCH"
+    }
+  ],
+  "prohibitions": "NO_MERGE_NO_RUNTIME_NO_HOSTINGER_NO_NEW_WORKER_NO_EXTERNAL_ACTOR_REGISTRATION_NO_CLAIM_PROMOTION",
+  "publication_state": "DRAFT_PR_BRANCH_ONLY_PENDING_ACTUAL_READBACK",
+  "r10": "NO_NEW_AUTHENTICATED_INDEPENDENT_RECEIVER_ACK_IN_PR115_OR_ISSUE93_OBSERVED"
+}

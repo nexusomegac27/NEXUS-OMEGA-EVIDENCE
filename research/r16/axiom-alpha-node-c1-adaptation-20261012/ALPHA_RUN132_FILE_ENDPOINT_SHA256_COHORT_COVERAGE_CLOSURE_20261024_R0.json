@@ -1,0 +1,174 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN132_FILE_ENDPOINT_SHA256_COHORT_COVERAGE_CLOSURE_20261024_R0",
+  "date": "2026-10-24",
+  "decision": "KNOWLEDGE_APPEND_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "authority": "NEXUS_OMEGA_OPERATOR_DIRECT_C1_RESEARCH_PUBLICATION_20261012_R0",
+  "predecessor_issue93_receipt": 6389193037,
+  "predecessor_pr124_head": "fc00ac350ff411a57f4bbd8de83c262031fb0e77",
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "source": {
+    "commit": "fc00ac350ff411a57f4bbd8de83c262031fb0e77",
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_RUN131_EIGHT_RECEIPT_COHORT_INDEPENDENT_BYTE_READBACK_20261024_R0.json",
+    "bytes": 10615,
+    "sha256": "8acec7ca707a0b93a9de9f239918cce840a192a4f94f6a2d81b218a3ba7684b7",
+    "git_blob_sha1": "fa0e33594ce48fdf78c74a2ec67e8ad04f390da7"
+  },
+  "negative_hypothesis": "The one Run131 file-endpoint SHA256 not independently recomputed could conceal a mismatch.",
+  "method": "Fetch each of the 16 Run131 cohort files from the immutable commit named by its row, encode returned UTF-8 content without normalization, independently compute SHA256 with a separate ephemeral JavaScript SHA256 implementation, compare length, SHA256 and GitHub file blob SHA1. Do not treat Git blob SHA1 as SHA256.",
+  "independent_evaluator": {
+    "kind": "SEPARATE_EPHEMERAL_JS_SHA256_READ_ONLY",
+    "sha256_reference_vectors": "2/2_PASS",
+    "negative_fixtures": [
+      {
+        "name": "sha256_mutation",
+        "rejected": true
+      },
+      {
+        "name": "byte_count_mutation",
+        "rejected": true
+      },
+      {
+        "name": "git_blob_mutation",
+        "rejected": true
+      },
+      {
+        "name": "missing_source",
+        "rejected": true
+      }
+    ],
+    "third_party": "NOT_ESTABLISHED",
+    "evaluator_source_persisted": false
+  },
+  "measurements": {
+    "before_run131_file_endpoint_independent_sha256": "15/16",
+    "after_run132_file_endpoint_independent_sha256": "16/16",
+    "bytes_and_blob_id": "16/16",
+    "row_results": [
+      {
+        "index": 1,
+        "receipt_id": 6382925607,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 2,
+        "receipt_id": 6382925607,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 3,
+        "receipt_id": 6383723897,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 4,
+        "receipt_id": 6383723897,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 5,
+        "receipt_id": 6384742087,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 6,
+        "receipt_id": 6384742087,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 7,
+        "receipt_id": 6385382706,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 8,
+        "receipt_id": 6385382706,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 9,
+        "receipt_id": 6386184971,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 10,
+        "receipt_id": 6386184971,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 11,
+        "receipt_id": 6387225127,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 12,
+        "receipt_id": 6387225127,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 13,
+        "receipt_id": 6388171744,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 14,
+        "receipt_id": 6388171744,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 15,
+        "receipt_id": 6388377962,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      },
+      {
+        "index": 16,
+        "receipt_id": 6388377962,
+        "bytes_match": true,
+        "sha256_match": true,
+        "blob_id_match": true
+      }
+    ],
+    "projectwide_eligible_handoff_denominator": "UNKNOWN",
+    "projectwide_no_nudge_automated_numerator": "NOT_ESTABLISHED",
+    "projectwide_90pct": "NOT_ESTABLISHED",
+    "all_published_changes_readback": "NOT_ESTABLISHED"
+  },
+  "falsifier": "Any exact commit/path refetch with SHA256, bytes or Git blob ID different from the source row disproves the corresponding MATCH. Mutated expected hash, bytes, blob ID and missing source must fail closed.",
+  "limitations": [
+    "Only eight selected historical receipts and 16 public files, not a representative project census.",
+    "No fresh separate Git-blob endpoint read in this run; prior Run131 independently covered that lane.",
+    "No third-party adjudication, production integration, main merge, WWW parity or expert science validation."
+  ],
+  "r10": "NO_NEW_AUTHENTICATED_INDEPENDENT_EXPERT_RETURN_IN_PR115_OR_ISSUE93_OBSERVED",
+  "prohibitions": "NO_MERGE_NO_HOSTINGER_NO_RUNTIME_NO_WORKER_NO_ACTOR_REGISTRATION_NO_CLAIM_PROMOTION"
+}

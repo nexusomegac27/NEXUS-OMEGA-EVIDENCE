@@ -1,0 +1,308 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN113_PR124_PINNED_DISCOVERY_INDEX_20261024_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "predecessor_issue93_receipt": 6378234519,
+  "source": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "pr": 124,
+    "base_commit": "d355400dabed3c280e1fce5030cab69ea099428b",
+    "pinned_pre_index_head": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+    "pre_index_commits": 51,
+    "pre_index_changed_files": 54,
+    "source_endpoints": [
+      "GitHub PR changed filenames (paginated)",
+      "GitHub compare commits (separate API endpoint)"
+    ],
+    "path_prefix": "research/r16/axiom-alpha-node-c1-adaptation-20261012/"
+  },
+  "coverage": {
+    "entries": 54,
+    "path_set_sha256": "1763fee60d8c61e3e0a5ff80832d82635219ff23836d57c1f74ddc9402742533",
+    "kind_counts": {
+      "guard": 27,
+      "evaluator": 23,
+      "evidence": 4
+    }
+  },
+  "files": [
+    {
+      "name": "ALPHA_BYTE_CAPTURE_CONSISTENCY_GUARD_V1_20261021.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_BYTE_CAPTURE_FROZEN_EVALUATOR_V1_20261021.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_CAPTURE_JSON_NUMERIC_DOMAIN_GUARD_V2_20261021.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_CI_EVIDENCE_COVERAGE_FROZEN_EVALUATOR_V1_20261021.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_CI_EVIDENCE_COVERAGE_GUARD_V1_20261021.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_CI_EVIDENCE_COVERAGE_REPLAY_RECEIPT_20261021_R1.md",
+      "kind": "evidence",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_CI_EVIDENCE_COVERAGE_REPLAY_RESULT_20261021_R1.json",
+      "kind": "evidence",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_PINNED_FIXTURE_HYDRATION_REPLAY_C1_20261021_R0.md",
+      "kind": "evidence",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_PUBLICATION_PROOF_AND_DENOMINATOR_GUARD_20261021_R0.md",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "ALPHA_SAFE_INTEGER_PUBLIC_REPLAY_EVIDENCE_20261021_R0.json",
+      "kind": "evidence",
+      "status": "added"
+    },
+    {
+      "name": "alpha-json-safe-integer-frozen-evaluator-v1-20261021.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "alpha-json-safe-integer-guard-v3-20261021.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_handoff_denominator_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_handoff_inventory_completeness_guard_v2_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_handoff_source_bytes_guard_v3_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_handoff_unicode_scalar_guard_v4_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_manifest_pin_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_manifest_pin_guard_v2_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_manifest_pin_guard_v3_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_api_race_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_api_race_guard_v2_20261024.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_description_drift_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_description_drift_guard_v2_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_description_drift_guard_v3_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_inventory_completeness_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_publication_preflight_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_publication_preflight_guard_v2_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_publication_preflight_guard_v3_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_publication_preflight_guard_v4_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_scope_drift_frozen_evaluator_v2_20261022.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_scope_drift_guard_v3_20261022.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_scope_drift_guard_v4_20261022.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_scope_drift_guard_v5_20261022.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_pr_scope_drift_guard_v6_20261022.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "alpha_source_exactness_guard_v1_20261023.py",
+      "kind": "guard",
+      "status": "added"
+    },
+    {
+      "name": "frozen_claim_cardinality_evaluator_v1_20261022.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_dependency_integrity_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_file_change_kind_evaluator_v1_20261022.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_handoff_denominator_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_handoff_inventory_completeness_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_handoff_source_bytes_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_handoff_unicode_scalar_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_api_alias_evaluator_v1_20261024.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_api_race_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_description_drift_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_description_json_kind_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_file_inventory_completeness_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_pr_numeric_claim_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_scalar_type_preflight_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_source_exactness_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_timezone_preflight_evaluator_v1_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_unicode_path_evaluator_v1_20261022.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "frozen_v3_source_gap_evaluator_20261023.py",
+      "kind": "evaluator",
+      "status": "added"
+    },
+    {
+      "name": "heldout_path_scope_evaluator_v1_20261022.py",
+      "kind": "evaluator",
+      "status": "added"
+    }
+  ],
+  "scope": "HISTORICAL_PINNED_DISCOVERY_SNAPSHOT_ONLY_NOT_LIVE_PR_HEAD_AFTER_PUBLICATION",
+  "limitations": [
+    "Per-file content bytes are not rehashed by this path index",
+    "File kind is a filename heuristic, not scientific validation",
+    "Both read endpoints share GitHub trust; no third-party authentication",
+    "Dedicated evaluator CI, productive integration, main merge and WWW parity NOT_ESTABLISHED",
+    "Project-wide eligible handoff denominator NOT_ESTABLISHED"
+  ],
+  "falsifier": "A missing, duplicate, additional or out-of-scope path, wrong pinned head/base/count/status, or wrong path-set digest relative to the pinned compare result invalidates the index."
+}

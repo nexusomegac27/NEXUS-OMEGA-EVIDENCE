@@ -1,0 +1,350 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN114_PR124_PINNED_CONTENT_BINDINGS_20261024_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "predecessor_issue93_receipt": 6378991195,
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "pinned_source_head": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+  "pinned_source_tree": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+  "parent_index_commit": "78ddfe75c4fb8e0d76c44da6b7e59e171dbae564",
+  "parent_index_blob": "ef56ed01ad34a8ee44fd97ccb4a3ab0ad3589b38",
+  "parent_index_sha256": "45308605c40df5b868b28ba2befb7c50351eacbfc0497b02e4577e89b46c90e7",
+  "evaluator_commit": "123d13f5617dd969faad00a21a8dc6437a31d82d",
+  "evaluator_path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr124_content_binding_evaluator_v1_20261024.py",
+  "evaluator_sha256": "2e0bf6f677a6012c60bcf0d7d07f4e3861b576d257367178e32d0057aa6a6cd7",
+  "count": 54,
+  "files": [
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_BYTE_CAPTURE_CONSISTENCY_GUARD_V1_20261021.py",
+      "bytes": 3946,
+      "sha256": "3e82c8b7a23efd5268a2b6b45e83c14edddd077590df0d2c7e366714c78b48cc",
+      "git_blob_sha1": "b020ce4ed766a7c886ac75ebe9148bcf35eacf05"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_BYTE_CAPTURE_FROZEN_EVALUATOR_V1_20261021.py",
+      "bytes": 4095,
+      "sha256": "5162174ab161c1faa127d6d6c26ef4fff69a6ff20c88ea26199e862f33a8427b",
+      "git_blob_sha1": "f0d59a72248a6ba52c7edfc3488180a0356559c9"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_CAPTURE_JSON_NUMERIC_DOMAIN_GUARD_V2_20261021.py",
+      "bytes": 3520,
+      "sha256": "7e2423a67bd37d8f2071a9291904d24d0ce2abdd1d47ad49525603cc9c04f9da",
+      "git_blob_sha1": "7d4e15a7661d9747d9df89b7b5a1298bd851e0a3"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_CI_EVIDENCE_COVERAGE_FROZEN_EVALUATOR_V1_20261021.py",
+      "bytes": 3706,
+      "sha256": "3911141a004ab407b829129e9e42999fead0994277573f098b34b7856885c324",
+      "git_blob_sha1": "0f622a973e17d4c7c63f08e220221492d82ba7fc"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_CI_EVIDENCE_COVERAGE_GUARD_V1_20261021.py",
+      "bytes": 3066,
+      "sha256": "27e4ea850b63b234275e6a8b2bf89c87e47685bd8d8fc760f801a7f998f7ca9c",
+      "git_blob_sha1": "96b22aa303ebd5c16edcc5c8a8e29efb4b5fc7ee"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_CI_EVIDENCE_COVERAGE_REPLAY_RECEIPT_20261021_R1.md",
+      "bytes": 4288,
+      "sha256": "9e42e34058036f247b140e0409b408256e13ed98530ea717655667fa5d669b2a",
+      "git_blob_sha1": "21825763794f396e4cba693ea84aae974cb486a1"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_CI_EVIDENCE_COVERAGE_REPLAY_RESULT_20261021_R1.json",
+      "bytes": 3529,
+      "sha256": "44088457a9fc5e398956d115b8335e3c37f7cbdcc8590c9e5b121b9aa040a553",
+      "git_blob_sha1": "cd23ee890b01757f26de8660d8df5d469ad88352"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PINNED_FIXTURE_HYDRATION_REPLAY_C1_20261021_R0.md",
+      "bytes": 2418,
+      "sha256": "e59da6e3c1bf6af8f3cecd808967bb0fa6a515325da415ac82cd7613962d2a47",
+      "git_blob_sha1": "5dae97c9a2f2211e05fdcde1d14f9d7a19e96c63"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PUBLICATION_PROOF_AND_DENOMINATOR_GUARD_20261021_R0.md",
+      "bytes": 2070,
+      "sha256": "5e626c47ce63042c5156aacfe345784a78e719acd0a4f05cf4abe1ae736e21c7",
+      "git_blob_sha1": "edc5248e954472379bd63e06ae401857d10baa43"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_SAFE_INTEGER_PUBLIC_REPLAY_EVIDENCE_20261021_R0.json",
+      "bytes": 1996,
+      "sha256": "1dbc2b7d1a0c962503b7ac9a60f93a591e65ade2375eb8bcdbf89875e02c9f06",
+      "git_blob_sha1": "5f206f044a06a3501ce8b19ff842ee5b20c616da"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha-json-safe-integer-frozen-evaluator-v1-20261021.py",
+      "bytes": 3986,
+      "sha256": "f74e78624fca0649b6978c59374c7985ea95477df8012f26ea93370fc09e610c",
+      "git_blob_sha1": "5287b93767ccb8c7a8d85167364c917bb1f63695"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha-json-safe-integer-guard-v3-20261021.py",
+      "bytes": 4282,
+      "sha256": "3988de7dd2e19fe0f0985578b16a743d8aad4964db79de2468d0197ec38392db",
+      "git_blob_sha1": "7a06687806806954d0dbed585b8c098b33ac5069"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_denominator_guard_v1_20261023.py",
+      "bytes": 3313,
+      "sha256": "38ad809c61c86346b3b63bdea4fbad3f13c60dab08311cf155b5674632d54d95",
+      "git_blob_sha1": "bd3726b44088e72fe95fe4d03b10104e8c3f5b13"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_inventory_completeness_guard_v2_20261023.py",
+      "bytes": 4305,
+      "sha256": "2b3d33497df837267ac3d0a3f2a3080097ec784604b4940e2a217de34500ef72",
+      "git_blob_sha1": "ffde5bc9ce22106cc9ff3b21c699e370bf1839e1"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_source_bytes_guard_v3_20261023.py",
+      "bytes": 4128,
+      "sha256": "1a11635fc49c9787885fc55c220c91d5dd97fe82e24147238bba052501a8e728",
+      "git_blob_sha1": "ad2eb02f409fde71982bfc0c36f9a3d2ff26e444"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_handoff_unicode_scalar_guard_v4_20261023.py",
+      "bytes": 3113,
+      "sha256": "321630801d2ffcb59405211b4975df3d38927ec5737fdf9f36999037ca227a19",
+      "git_blob_sha1": "5d8f93ef5ccbb694ccb44dcaea2c12c8524007d7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_manifest_pin_guard_v1_20261023.py",
+      "bytes": 3861,
+      "sha256": "06a8d4e589390a67187fd14194d7e32cbb56f824e5bf694b8b20b16b404eeadb",
+      "git_blob_sha1": "b5f001b11cd5b2726737b9ea20e23f481c007c91"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_manifest_pin_guard_v2_20261023.py",
+      "bytes": 2235,
+      "sha256": "b8d3e1089a1f972408e51e7795074e8157a49b2ecbef372908f1fec07c0d72f1",
+      "git_blob_sha1": "66b1237d52bf59ebc9f4225739893cc63510e3b9"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_manifest_pin_guard_v3_20261023.py",
+      "bytes": 2052,
+      "sha256": "e48cc37c88a61bc4497f2002df39dd747a0a4044f494b16e8aef8e155db43c2a",
+      "git_blob_sha1": "8b2d0fc1c5084dd67d2a1c25d3757558e1bfa30f"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_api_race_guard_v1_20261023.py",
+      "bytes": 2886,
+      "sha256": "ec37870f94c187961cf684fa9a8bbce19668a87effaa11a5dd7141131a675d29",
+      "git_blob_sha1": "e0a1542d21a88ca7dc477557521c510331c3f7a5"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_api_race_guard_v2_20261024.py",
+      "bytes": 2238,
+      "sha256": "5e7c63da4f5b8c3304f69a045862b0fc5088b9907c1b5a50e7d1dce2ee494ce5",
+      "git_blob_sha1": "45c2aba31c1d85fd93cd1e3344b806d61bb7111a"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_description_drift_guard_v1_20261023.py",
+      "bytes": 3934,
+      "sha256": "03bc2ad34d81739376448646cc653fb669126d2717488175f0016cd528b8abab",
+      "git_blob_sha1": "e4fb52fc5802cb8af81a8991b16d49e5899a3bec"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_description_drift_guard_v2_20261023.py",
+      "bytes": 3929,
+      "sha256": "bf1f70e24e02e4441140eafd6badaad272011b4c8b5f39b353b050411248f479",
+      "git_blob_sha1": "f920bd5b1e969e947d93ac367331b257f72fd5b9"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_description_drift_guard_v3_20261023.py",
+      "bytes": 4515,
+      "sha256": "f1f4cede41576c64c44792f27a8caa8b2e38c28047d3225ef3cd9e35f9c94cfa",
+      "git_blob_sha1": "b2f43157910b1548a975456d183d0e5288afbbd7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_inventory_completeness_guard_v1_20261023.py",
+      "bytes": 2598,
+      "sha256": "7acd714f1d510662d4d0c09dafb57f884e1441f786573b165996739bbb516828",
+      "git_blob_sha1": "c4b66f2802d0fd4fd5b2fd7793c0cc75f7ec3aeb"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_publication_preflight_guard_v1_20261023.py",
+      "bytes": 3389,
+      "sha256": "920fc924070f92d835429613a85e1ffbd15061ba78f2a31d2749cf68ca5549c0",
+      "git_blob_sha1": "fb331590cfa65e3b6109a100535fe5505057b6c1"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_publication_preflight_guard_v2_20261023.py",
+      "bytes": 1183,
+      "sha256": "192664502c89ce1a9a2776a66e4ee472c735915345647f653710239c8226b6f0",
+      "git_blob_sha1": "30adf5eb476a9e4b1f5cf1ddf86d701b1a55df1b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_publication_preflight_guard_v3_20261023.py",
+      "bytes": 1340,
+      "sha256": "41993a0f087f36c9e8c8dbcc9195b1e75da2228b5a25594c87fe34d94295ef8e",
+      "git_blob_sha1": "70e2e38225f9c11457e5172836f819800a335873"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_publication_preflight_guard_v4_20261023.py",
+      "bytes": 2405,
+      "sha256": "8b501cc1f4f11f019c1731a16103fd606e162c3f6987afe55ab3b0b7c5334fe8",
+      "git_blob_sha1": "d26c45507b7f43870abfccbfbb2f83c439c55e07"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_scope_drift_frozen_evaluator_v2_20261022.py",
+      "bytes": 3259,
+      "sha256": "5eeff0be3b49e2d7340e8c69f4514a2fe93643b2f62ec0fad566df92cd2accb4",
+      "git_blob_sha1": "58e7d154a75c40097faab93f8243eacbfec52534"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_scope_drift_guard_v3_20261022.py",
+      "bytes": 3899,
+      "sha256": "6b3108cc77ccc2ad5f74c2ff50f4cc3a8676c7d735fb80328eb0d9f37d9bf635",
+      "git_blob_sha1": "d64bf2f175731392f2cf97280b68d1f3b5750429"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_scope_drift_guard_v4_20261022.py",
+      "bytes": 3983,
+      "sha256": "facf4d69a973095e883ec5d11329b99d378fb618c945872b9e4a341828aa19c8",
+      "git_blob_sha1": "a36c4df01c7d3b3f3952726d35c8dc8dab00d411"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_scope_drift_guard_v5_20261022.py",
+      "bytes": 4331,
+      "sha256": "5cc92f933dfabfc80a8ac97c3901bcd81de70ec25b425a2bae5eb2112ad5ad3f",
+      "git_blob_sha1": "f3324de04ff8d8eb50006a079965a88da2a4fd2b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_pr_scope_drift_guard_v6_20261022.py",
+      "bytes": 2595,
+      "sha256": "2b55a64ad45cec34c0828596ac024a2c79ec05e34ba223072dfbe9208446ba75",
+      "git_blob_sha1": "a389ebf26bf39fa253748add91b6cc7c04551238"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/alpha_source_exactness_guard_v1_20261023.py",
+      "bytes": 1138,
+      "sha256": "cfe29b397eeb1a17c666c27dc7682104cc21c72a3aee0c5062d057e5feef3084",
+      "git_blob_sha1": "815933cf00bd140488a94158e90efc72e0cf0b94"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_claim_cardinality_evaluator_v1_20261022.py",
+      "bytes": 3234,
+      "sha256": "eb204f8092780fa4942df116e62e9d31b685076ad46e2070bcf6ffc6114360d6",
+      "git_blob_sha1": "08ca56c1544ad842d3afd927e8705f1409dad609"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_dependency_integrity_evaluator_v1_20261023.py",
+      "bytes": 6534,
+      "sha256": "5745842a1142330a1fb62e4d5bfc1a94e0089426c8d57436699627b00da4f49a",
+      "git_blob_sha1": "42dc29047a8f883928e05eac2ef3fdbbb8c912b7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_file_change_kind_evaluator_v1_20261022.py",
+      "bytes": 3381,
+      "sha256": "8eb268a7d504aa65a8506d9485db951ecd446cb91a186148de4c88caefa18cdc",
+      "git_blob_sha1": "9bf296a441da629b72b41072d8e1f004f4e3a0e0"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_handoff_denominator_evaluator_v1_20261023.py",
+      "bytes": 3649,
+      "sha256": "ce2522c7362d553e910123c6df7b468a2946c3c6f6b3d255d45a98eb3baa2334",
+      "git_blob_sha1": "a6e9669df03f397f2160f366b2c24451faf69e86"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_handoff_inventory_completeness_evaluator_v1_20261023.py",
+      "bytes": 5273,
+      "sha256": "7568b34d7bab30074d9536fa8ef5b59210a26f189cd3dc698066cc6817c00529",
+      "git_blob_sha1": "5fcc53259e3d39d72f8ad10b10cb52d02c4be5d2"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_handoff_source_bytes_evaluator_v1_20261023.py",
+      "bytes": 6209,
+      "sha256": "c24fda1b9dd8b148882ef9654f112f780935aeedae17f3f1f734dcde818621fb",
+      "git_blob_sha1": "a25d2b9ce233ec619ed0bd3723628b73f33aa8c9"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_handoff_unicode_scalar_evaluator_v1_20261023.py",
+      "bytes": 5590,
+      "sha256": "031c43f2caf2f48ca4f1fe4741d60287b059e90b9562072ad65d189a06c98f84",
+      "git_blob_sha1": "4e25642d5b010f2dd0eb9573f45630c64aade53a"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_api_alias_evaluator_v1_20261024.py",
+      "bytes": 3414,
+      "sha256": "502e583aede2f058bd374595fe0c856b7d0e94f0776e82f75bd787092e7b8e7e",
+      "git_blob_sha1": "8d6f88f621207358eab43b2ff90f807892488322"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_api_race_evaluator_v1_20261023.py",
+      "bytes": 3331,
+      "sha256": "37c7e95ae8dc828bd8a6d7d5099a389cd443cdcdb41036d96b50ffc2c777fea0",
+      "git_blob_sha1": "22ff13ffb3fce9cf825e3a90a198c419d53198c7"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_description_drift_evaluator_v1_20261023.py",
+      "bytes": 4458,
+      "sha256": "8faf092a554cecb2c0fe392ff40f0604171198943c58b19e44c29a4ee80a16f9",
+      "git_blob_sha1": "f0908a0e02bb6f272651258b0ee118479168e77c"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_description_json_kind_evaluator_v1_20261023.py",
+      "bytes": 3859,
+      "sha256": "b96b8db434d0498d9aa5e09cebc21809f7669b7718b4493520808786e8617da2",
+      "git_blob_sha1": "1496ed10cea840a366ed4fd69cf7289be86c077c"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_file_inventory_completeness_evaluator_v1_20261023.py",
+      "bytes": 7803,
+      "sha256": "1a31fed6bd6e6e4838db897b204ce03d46f18e6d5c0f1a6fbc0f65f1b2427bf9",
+      "git_blob_sha1": "4c674382821ec862f7a0933fdc900a21b612ac61"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_pr_numeric_claim_evaluator_v1_20261023.py",
+      "bytes": 3245,
+      "sha256": "6db726600c09ad7adc68fa5f739bdc3bc8dbc9c6af8644d6ce887744cfc603c0",
+      "git_blob_sha1": "a1f24a5005ca6691b7e7dbd1d964df5144691928"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_scalar_type_preflight_evaluator_v1_20261023.py",
+      "bytes": 4162,
+      "sha256": "78634be4d43cda4b1666381c913d8035c74376f8fd9d3fd160c535f7982d30dc",
+      "git_blob_sha1": "c8c259e84e88e7a9b8745cb0c6b8655f0429d722"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_source_exactness_evaluator_v1_20261023.py",
+      "bytes": 2539,
+      "sha256": "6519831d161480bd87d6791b19bf7daaa25d86915ee7eb546f12fa17a0d2f5f9",
+      "git_blob_sha1": "894c1ab284939a60c56ca38db8b99f538484c6be"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_timezone_preflight_evaluator_v1_20261023.py",
+      "bytes": 4175,
+      "sha256": "8ee754569e58fc8ef9ff31d2dbc7c0ff5147d27201834eb9849517ae05f34fdd",
+      "git_blob_sha1": "aa310a00005bbf1d22f35076d3d7c0425ed8737b"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_unicode_path_evaluator_v1_20261022.py",
+      "bytes": 3223,
+      "sha256": "09812811b8a19f6def1bbd355153ab4a409c31113fa1c195a0db9a8c63212e14",
+      "git_blob_sha1": "a7f71919c486df3b9c358295fb5d0d21c2260262"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/frozen_v3_source_gap_evaluator_20261023.py",
+      "bytes": 5171,
+      "sha256": "1b3becf45612adcbbf7e31d7f60b875f050942aa06d9a6960be5faab6762a8e5",
+      "git_blob_sha1": "0a0e7f8a23d5b716ee65026bc79a078c3cf27662"
+    },
+    {
+      "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/heldout_path_scope_evaluator_v1_20261022.py",
+      "bytes": 2980,
+      "sha256": "86cc82f18ba4ba8719fa2d3f7c2fa8e67263465d9172c4bcc3c8cbc1afb788c3",
+      "git_blob_sha1": "d940fc9b2a8c1803184730f145a89262f3aa792c"
+    }
+  ],
+  "scope": "HISTORICAL_PINNED_PRE_INDEX_PR124_SNAPSHOT_NOT_CURRENT_HEAD",
+  "test_scope": "54 source files individually fetched as base64 and SHA256 computed from decoded source bytes; Git blob IDs and byte counts crosschecked against pinned Git tree; frozen evaluator 14/14 synthetic fixtures incl. 13 negatives",
+  "limitations": [
+    "Same GitHub platform trust; no independent third-party witness",
+    "No dedicated evaluator CI or productive integration",
+    "No main merge, runtime deployment or WWW parity",
+    "Project-wide eligible handoff denominator not established"
+  ],
+  "falsifier": "Any omitted/extra/duplicate path, altered source byte, SHA256/byte-count/Git-blob mismatch, or wrong pinned commit invalidates the binding."
+}

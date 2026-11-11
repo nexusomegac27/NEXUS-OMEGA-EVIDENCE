@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:alpha:pr124:manifest-file-row:v3",
+  "title": "NEXUS OMEGA PR124 historical manifest file-row portable path guard (research-only)",
+  "description": "C1 structural row gate, binary64-safe byte count and ASCII portable filename guard. Rejects Windows device basenames, trailing dot and basename >255 bytes. Row-level only: no casefold collision or actual bytes/authentication proof. V1/V2 immutable.",
+  "type": "object",
+  "required": [
+    "path",
+    "bytes",
+    "sha256",
+    "git_blob_sha1"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "type": "string",
+      "pattern": "^research/r16/axiom-alpha-node-c1-adaptation-20261012/[A-Za-z0-9][A-Za-z0-9_.-]*(?![\\s\\S])",
+      "maxLength": 308,
+      "allOf": [
+        {
+          "not": {
+            "pattern": "^research/r16/axiom-alpha-node-c1-adaptation-20261012/(?:[Cc][Oo][Nn]|[Pp][Rr][Nn]|[Aa][Uu][Xx]|[Nn][Uu][Ll]|[Cc][Oo][Mm][1-9]|[Ll][Pp][Tt][1-9])(?:\\.[A-Za-z0-9_.-]*)?(?![\\s\\S])"
+          }
+        },
+        {
+          "not": {
+            "pattern": "\\.(?![\\s\\S])"
+          }
+        }
+      ]
+    },
+    "bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "git_blob_sha1": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}(?![\\s\\S])"
+    }
+  }
+}

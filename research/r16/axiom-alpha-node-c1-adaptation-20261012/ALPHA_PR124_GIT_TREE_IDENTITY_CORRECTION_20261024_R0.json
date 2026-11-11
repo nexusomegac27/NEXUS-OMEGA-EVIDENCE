@@ -1,0 +1,36 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN116_PR124_GIT_TREE_IDENTITY_MACHINE_CORRECTION_20261024_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "correction_type": "APPEND_ONLY_SINGLE_FIELD_TREE_IDENTITY",
+  "predecessor_issue93_receipt": 6380038225,
+  "pinned_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "supersedes": {
+    "commit": "39555c14bb1a16a33fa24c65e0f715508fb3ce0e",
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_CONTENT_BINDINGS_20261024_R0.json",
+    "bytes": 18083,
+    "sha256": "f164583cb0dbd23845a79f64d9cebea222ef90ea958d0e0bf6840d179af22d42",
+    "git_blob_sha1": "cacf5d271ee9c99cc4168a016765d9a73b1a52fb"
+  },
+  "field": "pinned_source_tree",
+  "old_value": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+  "new_value": "a8f154ca5cfcf85d2f8402611ce5610453588f8e",
+  "source_commit": "e0b5d8e074593c0c13b07670aa90754dc4531fca",
+  "source_tree_api": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/git/trees/a8f154ca5cfcf85d2f8402611ce5610453588f8e",
+  "verification": {
+    "git_commit_tree_identity": "MATCH",
+    "pinned_manifest_git_tree_blob_and_size": "54/54_MATCH",
+    "git_tree_truncated": false,
+    "synthetic_evaluator": "14/14_PASS",
+    "frozen_evaluator_local_sha256": "9ce5ba8b6ef8b6432e26edae0428014ca2b553d7cb8efe7f0465012bb9b1136d",
+    "evaluator_published_to_repo": false
+  },
+  "limits": {
+    "full_source_sha256_replay": "NOT_EXECUTED_IN_THIS_CORRECTION",
+    "main_integration": "NOT_ESTABLISHED",
+    "independent_third_party_validation": "NOT_ESTABLISHED",
+    "r10_expert_authentication": "NOT_ESTABLISHED",
+    "www_parity": "NOT_ESTABLISHED"
+  },
+  "falsifier": "Pinned commit e0b5d8e... resolves to a Git tree other than a8f154ca... OR one of 54 pinned file blob IDs or byte lengths differs from the complete non-truncated pinned Git tree.",
+  "usage": "This additive record corrects exactly one field only when the original manifest byte/hash/blob binding matches; original immutable manifest and all other claims remain unchanged."
+}

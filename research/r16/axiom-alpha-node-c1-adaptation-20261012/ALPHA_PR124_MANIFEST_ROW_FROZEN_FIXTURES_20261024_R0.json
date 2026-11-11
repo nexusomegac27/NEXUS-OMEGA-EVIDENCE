@@ -1,0 +1,175 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_ALPHA_RUN120_FROZEN_ROW_FIXTURES_20261024_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_main": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "source_commit": "39555c14bb1a16a33fa24c65e0f715508fb3ce0e",
+  "source_manifest_blob": "cacf5d271ee9c99cc4168a016765d9a73b1a52fb",
+  "scope": "ISOLATED_STRUCTURAL_FILE_ROW_ONLY_NO_BYTE_AUTHENTICATION",
+  "base_row": {
+    "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/ALPHA_PR124_PINNED_DISCOVERY_INDEX_20261024_R0.json",
+    "bytes": 8561,
+    "sha256": "45308605c40df5b868b28ba2befb7c50351eacbfc0497b02e4577e89b46c90e7",
+    "git_blob_sha1": "ef56ed01ad34a8ee44fd97ccb4a3ab0ad3589b38"
+  },
+  "cases": [
+    {
+      "id": "valid_original",
+      "expected_valid": true,
+      "patch": {},
+      "remove": []
+    },
+    {
+      "id": "missing_sha",
+      "expected_valid": false,
+      "patch": {},
+      "remove": [
+        "sha256"
+      ]
+    },
+    {
+      "id": "uppercase_sha",
+      "expected_valid": false,
+      "patch": {
+        "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      "remove": []
+    },
+    {
+      "id": "short_sha",
+      "expected_valid": false,
+      "patch": {
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "remove": []
+    },
+    {
+      "id": "sha_trailing_newline",
+      "expected_valid": false,
+      "patch": {
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+      },
+      "remove": []
+    },
+    {
+      "id": "invalid_blob",
+      "expected_valid": false,
+      "patch": {
+        "git_blob_sha1": "gggggggggggggggggggggggggggggggggggggggg"
+      },
+      "remove": []
+    },
+    {
+      "id": "blob_trailing_newline",
+      "expected_valid": false,
+      "patch": {
+        "git_blob_sha1": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+      },
+      "remove": []
+    },
+    {
+      "id": "negative_bytes",
+      "expected_valid": false,
+      "patch": {
+        "bytes": -1
+      },
+      "remove": []
+    },
+    {
+      "id": "boolean_bytes",
+      "expected_valid": false,
+      "patch": {
+        "bytes": true
+      },
+      "remove": []
+    },
+    {
+      "id": "zero_bytes",
+      "expected_valid": false,
+      "patch": {
+        "bytes": 0
+      },
+      "remove": []
+    },
+    {
+      "id": "path_traversal",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/../escape.py"
+      },
+      "remove": []
+    },
+    {
+      "id": "wrong_lane",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r10/biocomputing-independent-experts-20261016/test.py"
+      },
+      "remove": []
+    },
+    {
+      "id": "surrogate_path",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/x\ud800.py"
+      },
+      "remove": []
+    },
+    {
+      "id": "trailing_newline_path",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/valid.py\n"
+      },
+      "remove": []
+    },
+    {
+      "id": "trailing_cr_path",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/valid.py\r"
+      },
+      "remove": []
+    },
+    {
+      "id": "extra_field",
+      "expected_valid": false,
+      "patch": {
+        "unexpected": "x"
+      },
+      "remove": []
+    },
+    {
+      "id": "empty_path",
+      "expected_valid": false,
+      "patch": {
+        "path": ""
+      },
+      "remove": []
+    },
+    {
+      "id": "nested_path",
+      "expected_valid": false,
+      "patch": {
+        "path": "research/r16/axiom-alpha-node-c1-adaptation-20261012/sub/file.py"
+      },
+      "remove": []
+    },
+    {
+      "id": "valid_minimum_bytes",
+      "expected_valid": true,
+      "patch": {
+        "bytes": 1
+      },
+      "remove": []
+    },
+    {
+      "id": "valid_lowercase_hash",
+      "expected_valid": true,
+      "patch": {
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "git_blob_sha1": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "remove": []
+    }
+  ]
+}

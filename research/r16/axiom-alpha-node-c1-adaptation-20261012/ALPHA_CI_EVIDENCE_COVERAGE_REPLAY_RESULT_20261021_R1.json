@@ -1,0 +1,150 @@
+{
+  "object": "NEXUS_OMEGA_ALPHA_CI_EVIDENCE_PUBLIC_REPLAY_R1",
+  "date": "2026-10-21",
+  "scope": "ISOLATED_LOCAL_SUBPROCESS_REPLAY_NOT_GITHUB_CI",
+  "source_parent_head": "5fb35be25870e3a8785f0b41a82bcba652b43088",
+  "candidate_sha256": "27e4ea850b63b234275e6a8b2bf89c87e47685bd8d8fc760f801a7f998f7ca9c",
+  "frozen_evaluator_sha256": "3911141a004ab407b829129e9e42999fead0994277573f098b34b7856885c324",
+  "run": {
+    "exit_code": 0,
+    "passed": 20,
+    "total": 20,
+    "positive": 1,
+    "negative": 19,
+    "cases": [
+      {
+        "name": "complete_positive",
+        "expected": "STRUCTURALLY_COVERED",
+        "observed": "STRUCTURALLY_COVERED",
+        "pass": true
+      },
+      {
+        "name": "real_pr124_only_markdown",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "missing_evaluator",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "missing_fixture",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "missing_result",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "bad_evaluator_hash",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "bad_fixture_hash",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "bad_result_hash",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "missing_readback",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "zero_byte_file",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "invalid_blob",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "missing_replay_ci",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "stale_replay_ci",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "failed_replay_ci",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "wrong_result_head",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "wrong_result_evaluator",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "failed_test",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "zero_test_denominator",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "duplicate_evidence_paths",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      },
+      {
+        "name": "invalid_head",
+        "expected": "GAP",
+        "observed": "GAP",
+        "pass": true
+      }
+    ]
+  },
+  "intentional_mutant": {
+    "description": "skip named same-head replay CI evidence check",
+    "passed": 17,
+    "total": 20,
+    "failed_expected_negative_cases": [
+      "missing_replay_ci",
+      "stale_replay_ci",
+      "failed_replay_ci"
+    ]
+  },
+  "independent_third_party_validation": "NOT_PERFORMED",
+  "ci_replay": "NOT_EXECUTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
