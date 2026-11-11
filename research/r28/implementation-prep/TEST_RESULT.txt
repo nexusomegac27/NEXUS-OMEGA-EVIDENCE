@@ -1,0 +1,27 @@
+OBJECT = NEXUS_OMEGA_R28_IMPLEMENTATION_PREP_LOCAL_TEST_RESULT_20261003_R0
+EXECUTOR = AXIOM_LOCAL_PYTHON_SESSION
+COMMAND = python -m unittest -v test_nexus_r28_reference.py
+EXIT_CODE = 0
+TEST_COUNT = 8
+RESULT = PASS
+SCOPE = LOCAL_DETERMINISTIC_REFERENCE_CANDIDATE_ONLY
+REAL_ONLINE_HANDSHAKE = NOT_TESTED
+ARCHITECTURE_FINAL = NO
+
+PASSING_TESTS =
+- test_capability_bundle_passes
+- test_capability_receipt_passes
+- test_local_handshake_passes
+- test_manifest_tamper_is_detected
+- test_missing_file_fails
+- test_modified_received_artifact_fails
+- test_tampered_payload_fails
+- test_wrong_challenge_receipt_fails
+
+CAVEAT =
+Python startup emitted an unrelated artifact_tool spreadsheet-runtime warmup warning before unittest discovery.
+The unittest process continued, all eight tests passed, and the process returned exit code 0.
+
+NOTE =
+This supersedes the earlier provisional placeholder test text on this branch.
+Git history preserves the prior object; no force-push or history rewrite was used.

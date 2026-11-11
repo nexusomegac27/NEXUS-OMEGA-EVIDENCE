@@ -1,0 +1,19 @@
+{
+  "object": "NEXUS_OMEGA_R28_IMPLEMENTATION_PREP_SOURCE_BINDINGS_20261003_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_class": "operator_supplied_session_files_rehashed_by_axiom",
+  "sources": [
+    {"name":"FUNDAM~1.TXT","bytes":36659,"sha256":"6129dbd9bb7fe610bf6ced05f3ec25d927023f6296fba72b55f54b1f67b23521"},
+    {"name":"META-K~1.MD","bytes":15083,"sha256":"c569b4c45d43f64074f3afa8146f001089d4493441850ce6be762325418e5cc1"},
+    {"name":"NEXUS_~1.TXT","bytes":37523,"sha256":"f4bbd0dd2b3fed0caf0c7d2460adf167666a0e5973f5bc77a8f744b05eab6c6a"},
+    {"name":"NEXUS_~2.ZIP","bytes":6006,"sha256":"aa161431e04b5969de098fed8c21b43967fba672527b59a419b3154d6044a9e5","role":"R28 closure handshake","internal_checksum_result":"3/3 MATCH"},
+    {"name":"NEXUS_~1.ZIP","bytes":9508,"sha256":"4f4dde03c9c772ec0cf2f7b1442e33b773232b8092242242ef28b84cf23db2d1","role":"R33 Grok third-instance cross-validation","internal_checksum_result":"8/8 MATCH"},
+    {"name":"NEXUS-~1.ZIP","bytes":62439,"sha256":"39867918f2f2185c3a3752acf07c2c9699f97047c8980c366b0164e287046b25","role":"R34 MANUS design-readiness package","manifest_result":"10/10 MATCH","receipt_chain_result":"9/9 MATCH","manifest_sha256":"ed6c7bfe71645b073bb9e659d9a9dd32310e25a04be33ce0e1bcfc1a776d393a"},
+    {"name":"R28_CA~1.TXT","bytes":3633,"sha256":"6998b687718bc0a915f640d14bb21036a46923b1e566d34c4e16cc3729f7ffca"},
+    {"name":"UNABHN~1.TXT","bytes":4834,"sha256":"292d857547a47ecd5ac6729ae34ceaa9e7192ac45228f5389ad4aa62ffa2e3d7"},
+    {"name":"VALIDI~1.MD","bytes":14350,"sha256":"e4ea130529eac1bdb46f147aed70be836e1fef1c9a0525dc2a9cc2e140795d22"},
+    {"name":"VOMVIR~1.PDF","bytes":106647,"sha256":"058dc7f2238bd2fa72897de6eb6dc173bb81e5557adb65d8dc511aaff2f7c344"}
+  ],
+  "publication_note": "Raw operator-supplied source files are not included in this public implementation-prep package. Only byte identities and bounded findings are carried forward.",
+  "truth_authority": "NONE"
+}

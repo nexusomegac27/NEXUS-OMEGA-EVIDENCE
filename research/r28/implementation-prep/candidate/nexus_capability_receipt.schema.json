@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:schema:capability-receipt:v1.1",
+  "title": "NEXUS Capability Challenge Receipt v1.1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "receipt_type", "challenge_id", "agent_id", "payload_size_bytes",
+    "payload_sha256", "manifest_match", "method", "test_vector_status",
+    "C1_byte_access", "C2_sha256_computation", "C3_verification",
+    "C4_response_format", "C5_integrity", "substrate_profile",
+    "timestamp_utc", "issuer"
+  ],
+  "properties": {
+    "receipt_type": {"const": "NEXUS_CAPABILITY_CHALLENGE_V1.1"},
+    "challenge_id": {"type": "string", "minLength": 8},
+    "agent_id": {"type": "string", "minLength": 1},
+    "payload_size_bytes": {"type": "integer", "minimum": 0},
+    "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "manifest_match": {"type": "boolean"},
+    "method": {"type": "string", "minLength": 1},
+    "test_vector_status": {"type": "string", "minLength": 1},
+    "C1_byte_access": {"enum": ["YES", "NO", "UNKNOWN"]},
+    "C2_sha256_computation": {"enum": ["YES", "NO", "UNKNOWN"]},
+    "C3_verification": {"enum": ["YES", "NO", "UNKNOWN"]},
+    "C4_response_format": {"enum": ["YES", "NO", "UNKNOWN"]},
+    "C5_integrity": {"enum": ["YES", "NO", "UNKNOWN"]},
+    "substrate_profile": {"type": "string", "minLength": 1},
+    "timestamp_utc": {"type": "string", "minLength": 1},
+    "issuer": {"type": "string", "minLength": 1}
+  }
+}

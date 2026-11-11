@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nexus-omega:schema:real-handshake-manifest:v1",
+  "title": "NEXUS Real Handshake Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "object_id", "size_bytes", "sha256", "media_type", "issuer", "created_at_utc", "challenge_id", "manifest_digest"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "object_id": {"type": "string", "minLength": 1},
+    "size_bytes": {"type": "integer", "minimum": 0},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "media_type": {"type": "string", "minLength": 1},
+    "issuer": {"type": "string", "minLength": 1},
+    "created_at_utc": {"type": "string", "minLength": 1},
+    "challenge_id": {"type": "string", "minLength": 8},
+    "manifest_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

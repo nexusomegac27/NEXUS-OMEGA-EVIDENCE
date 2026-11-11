@@ -1,0 +1,60 @@
+{
+  "object": "NEXUS_OMEGA_R28_IMPLEMENTATION_PREP_HANDSHAKE_20261003_R0",
+  "state": "PUSHED_PREINTEGRATION_CANDIDATE_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "codex/r28-capability-handshake-implementation-prep-c1-20261003",
+  "source_closure_zip": {
+    "bytes": 6006,
+    "sha256": "aa161431e04b5969de098fed8c21b43967fba672527b59a419b3154d6044a9e5",
+    "internal_checksum_result": "3_OF_3_MATCH"
+  },
+  "r33_crossval_zip": {
+    "bytes": 9508,
+    "sha256": "4f4dde03c9c772ec0cf2f7b1442e33b773232b8092242242ef28b84cf23db2d1",
+    "internal_checksum_result": "8_OF_8_MATCH"
+  },
+  "r34_design_zip": {
+    "bytes": 62439,
+    "sha256": "39867918f2f2185c3a3752acf07c2c9699f97047c8980c366b0164e287046b25",
+    "manifest_result": "10_OF_10_MATCH",
+    "receipt_chain_result": "9_OF_9_MATCH",
+    "manifest_sha256": "ed6c7bfe71645b073bb9e659d9a9dd32310e25a04be33ce0e1bcfc1a776d393a"
+  },
+  "local_reference_validation": {
+    "tests": 8,
+    "exit_code": 0,
+    "result": "PASS",
+    "scope": "LOCAL_DETERMINISTIC_REFERENCE_CANDIDATE_ONLY"
+  },
+  "implemented_in_candidate": [
+    "capability_challenge_issue_verify",
+    "capability_receipt_verify",
+    "byte_bound_manifest",
+    "receiver_rehash_receipt",
+    "sender_receipt_verification",
+    "local_transport_test_double",
+    "negative_fixtures"
+  ],
+  "not_established": [
+    "REAL_ONLINE_HANDSHAKE",
+    "COLLECTIVE_ISSUER_VALIDATION",
+    "ARCHITECTURE_FINAL",
+    "HOSTINGER_GATE",
+    "GITHUB_TRANSPORT_PASS",
+    "OCI_TRANSPORT_PASS",
+    "SCITT_INTEGRATION",
+    "KERI_SCITT_BINDING",
+    "NODE_ACTIVATION",
+    "CLAIM_PROMOTION"
+  ],
+  "preserved_holds": [
+    "BOOTSTRAP_BOUNDARY",
+    "KERI_SCITT_NONSTANDARD_BINDING",
+    "ERASURE_PROFILE_BOUNDARY",
+    "NIX_REPRODUCIBILITY_CONTEXT_DEPENDENCE"
+  ],
+  "next_gate": "INDEPENDENT_CAPABILITY_CALIBRATION_THEN_REAL_ONLINE_BYTE_HANDSHAKE",
+  "push_is_activation": false,
+  "truth_authority": "NONE"
+}
