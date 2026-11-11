@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEXUS · Open Neutral Check-in (Loopback)</title>
+  <style>
+    :root {
+      --bg: #0e1116;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --line: #2a3038;
+      --accent: #7aa2c7;
+      --warn: #c9a227;
+      --deny: #c45c5c;
+      --ok: #6a9a7a;
+      --font: "IBM Plex Sans", "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2230 0%, var(--bg) 55%);
+      color: var(--fg); font-family: var(--font);
+      line-height: 1.45;
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    h1 { font-size: 1.35rem; font-weight: 560; letter-spacing: 0.02em; margin: 0 0 0.35rem; }
+    .sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.25rem; }
+    .banner {
+      border: 1px solid var(--line); border-left: 3px solid var(--warn);
+      padding: 0.75rem 0.9rem; margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--muted);
+    }
+    label { display: block; font-size: 0.8rem; color: var(--muted); margin: 0.75rem 0 0.3rem; }
+    input, textarea {
+      width: 100%; background: #151a21; color: var(--fg);
+      border: 1px solid var(--line); border-radius: 2px;
+      padding: 0.55rem 0.65rem; font-family: var(--mono); font-size: 0.85rem;
+    }
+    textarea { min-height: 8rem; resize: vertical; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+    button {
+      margin-top: 1rem; background: transparent; color: var(--accent);
+      border: 1px solid var(--accent); padding: 0.55rem 1rem; cursor: pointer;
+      font-family: var(--font); font-size: 0.9rem;
+    }
+    button:hover { background: rgba(122, 162, 199, 0.08); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    pre {
+      margin-top: 1.25rem; padding: 0.85rem; background: #12161c;
+      border: 1px solid var(--line); overflow: auto; font-size: 0.78rem;
+      font-family: var(--mono); white-space: pre-wrap; word-break: break-word;
+    }
+    .status-STAGED_UNTRUSTED { color: var(--ok); }
+    .status-DENIED, .status-DUPLICATE { color: var(--deny); }
+    footer { margin-top: 2rem; font-size: 0.75rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>NEXUS Open Neutral Check-in</h1>
+    <p class="sub">Lokaler Loopback · anonym möglich · keine Plattformkonten · Beobachtung nur</p>
+    <div class="banner">
+      PUBLIC_EXTERNAL_WRITE_API = HOLD · Bind 127.0.0.1 only · CLAIM_CEILING = C1_DESCRIPTIVE_ONLY ·
+      AEGIS reuse · keine Privilegienübernahme · STAGED_UNTRUSTED ≠ VALIDATED
+    </div>
+    <form id="f" autocomplete="off">
+      <label for="interaction_id">interaction_id (pflicht)</label>
+      <input id="interaction_id" name="interaction_id" required maxlength="128" placeholder="anon-session-…" />
+      <div class="row">
+        <div>
+          <label for="provider">provider (optional)</label>
+          <input id="provider" name="provider" maxlength="64" placeholder="leer = anonym" />
+        </div>
+        <div>
+          <label for="model">model (optional)</label>
+          <input id="model" name="model" maxlength="64" placeholder="leer = anonym" />
+        </div>
+      </div>
+      <label for="content">content (pflicht)</label>
+      <textarea id="content" name="content" required maxlength="16384" placeholder="Fähigkeiten, Widerspruch, Ablehnung oder Beobachtung…"></textarea>
+      <button type="submit" id="go">Check-in senden</button>
+    </form>
+    <pre id="out" aria-live="polite">Bereit. Offline-Fallback: ohne Server keine Sendung — Formular bleibt lokal lesbar.</pre>
+    <footer>
+      Extends Agent Border plane · no parallel authority root · F10/F11/F12 preserved closed ·
+      EXTERNAL_AGENT_TESTS = NOT_THIS_ORDER
+    </footer>
+  </main>
+  <script>
+    const out = document.getElementById('out');
+    const form = document.getElementById('f');
+    function offlineNote() {
+      out.textContent = 'OFFLINE_FALLBACK: Server nicht erreichbar. Payload lokal gehalten; kein Public Write.';
+    }
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const payload = {
+        protocol: 'nexus-agent-checkin/1',
+        event_class: 'CHECKIN_OBSERVATION_ONLY',
+        claim_ceiling: 'C1_DESCRIPTIVE_ONLY',
+        interaction_id: document.getElementById('interaction_id').value.trim(),
+        content: document.getElementById('content').value,
+      };
+      const p = document.getElementById('provider').value.trim();
+      const m = document.getElementById('model').value.trim();
+      if (p) payload.provider = p;
+      if (m) payload.model = m;
+      out.textContent = 'Sende…';
+      try {
+        const res = await fetch('/checkin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        out.className = 'status-' + (data.status || '');
+        out.textContent = JSON.stringify(data, null, 2);
+      } catch {
+        offlineNote();
+      }
+    });
+  </script>
+</body>
+</html>

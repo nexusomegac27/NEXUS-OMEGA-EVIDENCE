@@ -1,0 +1,35 @@
+name: validate-open-neutral-checkin
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - 'examples/open-neutral-checkin/**'
+      - 'tests/open-neutral-checkin.test.mjs'
+      - '.github/workflows/validate-open-neutral-checkin.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-open-neutral-checkin:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact revision without third-party actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Node version
+        run: node --version
+      - name: Suite A00–A30 + F10–F12 (R1 local 32)
+        run: node tests/open-neutral-checkin.test.mjs
+      - name: C13–C19 targeted hard-close suite (original A00–A30 + HTTP + planes)
+        run: node examples/open-neutral-checkin/test_open_neutral_checkin.mjs
+      - name: G7 deterministic selftest (suite + loopback + UI markers + rollback)
+        run: node examples/open-neutral-checkin/selftest.mjs

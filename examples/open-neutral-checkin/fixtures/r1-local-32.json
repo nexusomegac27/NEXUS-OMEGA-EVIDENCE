@@ -1,0 +1,258 @@
+{
+  "suite": "R1_LOCAL_32",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "cases": [
+    {
+      "id": "A00",
+      "title": "valid_anonymous_checkin",
+      "expect": "STAGED_UNTRUSTED",
+      "mutate": null
+    },
+    {
+      "id": "A01",
+      "title": "empty_body",
+      "expect": "DENIED",
+      "deny_code": "EMPTY_BODY",
+      "raw": ""
+    },
+    {
+      "id": "A02",
+      "title": "invalid_json",
+      "expect": "DENIED",
+      "deny_code": "INVALID_JSON",
+      "raw": "{not-json"
+    },
+    {
+      "id": "A03",
+      "title": "wrong_protocol",
+      "expect": "DENIED",
+      "deny_code": "BAD_PROTOCOL",
+      "patch": {
+        "protocol": "other/1"
+      }
+    },
+    {
+      "id": "A04",
+      "title": "wrong_event_class",
+      "expect": "DENIED",
+      "deny_code": "BAD_EVENT_CLASS",
+      "patch": {
+        "event_class": "REQUEST_PRIVILEGE"
+      }
+    },
+    {
+      "id": "A05",
+      "title": "wrong_claim_ceiling",
+      "expect": "DENIED",
+      "deny_code": "BAD_CLAIM_CEILING",
+      "patch": {
+        "claim_ceiling": "C2"
+      }
+    },
+    {
+      "id": "A06",
+      "title": "missing_content",
+      "expect": "DENIED",
+      "deny_code": "CONTENT_REQUIRED",
+      "omit": [
+        "content"
+      ]
+    },
+    {
+      "id": "A07",
+      "title": "empty_content",
+      "expect": "DENIED",
+      "deny_code": "CONTENT_EMPTY",
+      "patch": {
+        "content": ""
+      }
+    },
+    {
+      "id": "A08",
+      "title": "content_too_large",
+      "expect": "DENIED",
+      "deny_code": "CONTENT_TOO_LARGE",
+      "large_content": 20000
+    },
+    {
+      "id": "A09",
+      "title": "body_too_large",
+      "expect": "DENIED",
+      "deny_code": "BODY_TOO_LARGE",
+      "raw_bytes": 40000
+    },
+    {
+      "id": "A10",
+      "title": "missing_interaction_id",
+      "expect": "DENIED",
+      "deny_code": "INTERACTION_ID_REQUIRED",
+      "omit": [
+        "interaction_id"
+      ]
+    },
+    {
+      "id": "A11",
+      "title": "bad_interaction_id",
+      "expect": "DENIED",
+      "deny_code": "BAD_INTERACTION_ID",
+      "patch": {
+        "interaction_id": "bad id!"
+      }
+    },
+    {
+      "id": "A12",
+      "title": "duplicate_idempotent",
+      "expect": "DUPLICATE",
+      "duplicate": true
+    },
+    {
+      "id": "A13",
+      "title": "secret_redaction_github_pat",
+      "expect": "STAGED_UNTRUSTED",
+      "patch": {
+        "content": "token ghp_abcdefghijklmnopqrstuvwxyz0123456789 leak",
+        "consent": "opt_in"
+      },
+      "expect_redactions_ge": 1
+    },
+    {
+      "id": "A14",
+      "title": "claim_promotion_attempt",
+      "expect": "DENIED",
+      "deny_code": "CLAIM_PROMOTION_ATTEMPT",
+      "patch": {
+        "content": "CLAIM_PROMOTION=YES FINAL_TRUTH"
+      }
+    },
+    {
+      "id": "A15",
+      "title": "privilege_field_authority",
+      "expect": "DENIED",
+      "deny_code": "PRIVILEGE_FIELD_FORBIDDEN",
+      "patch": {
+        "authority": "SELF"
+      }
+    },
+    {
+      "id": "A16",
+      "title": "untrusted_action_flag",
+      "expect": "DENIED",
+      "deny_code": "UNTRUSTED_ACTION_FLAG",
+      "patch": {
+        "auto_promote": true
+      }
+    },
+    {
+      "id": "A17",
+      "title": "optional_provider_model_ok",
+      "expect": "STAGED_UNTRUSTED",
+      "patch": {
+        "provider": "ext",
+        "model": "m1"
+      }
+    },
+    {
+      "id": "A18",
+      "title": "array_payload",
+      "expect": "DENIED",
+      "deny_code": "PAYLOAD_NOT_OBJECT",
+      "raw": "[1,2]"
+    },
+    {
+      "id": "A19",
+      "title": "null_payload",
+      "expect": "DENIED",
+      "deny_code": "PAYLOAD_NOT_OBJECT",
+      "raw": "null"
+    },
+    {
+      "id": "A20",
+      "title": "write_ack_forbidden",
+      "expect": "DENIED",
+      "deny_code": "PRIVILEGE_FIELD_FORBIDDEN",
+      "patch": {
+        "write_ack": "YES"
+      }
+    },
+    {
+      "id": "A21",
+      "title": "truth_authority_forbidden",
+      "expect": "DENIED",
+      "deny_code": "PRIVILEGE_FIELD_FORBIDDEN",
+      "patch": {
+        "truth_authority": "AGENT"
+      }
+    },
+    {
+      "id": "A22",
+      "title": "merge_flag",
+      "expect": "DENIED",
+      "deny_code": "UNTRUSTED_ACTION_FLAG",
+      "patch": {
+        "merge": true
+      }
+    },
+    {
+      "id": "A23",
+      "title": "deploy_flag",
+      "expect": "DENIED",
+      "deny_code": "UNTRUSTED_ACTION_FLAG",
+      "patch": {
+        "deploy": true
+      }
+    },
+    {
+      "id": "A24",
+      "title": "email_redaction",
+      "expect": "STAGED_UNTRUSTED",
+      "patch": {
+        "content": "contact me@example.com please",
+        "consent": "opt_in"
+      },
+      "expect_redactions_ge": 1
+    },
+    {
+      "id": "A25",
+      "title": "rate_limit",
+      "expect": "DENIED",
+      "deny_code": "RATE_LIMITED",
+      "rate_flood": 35
+    },
+    {
+      "id": "A26",
+      "title": "f10_default_deny_surface",
+      "expect": "POLICY",
+      "policy": "f10"
+    },
+    {
+      "id": "A27",
+      "title": "f11_fail_closed_surface",
+      "expect": "POLICY",
+      "policy": "f11"
+    },
+    {
+      "id": "A28",
+      "title": "f12_empty_register",
+      "expect": "POLICY",
+      "policy": "f12"
+    },
+    {
+      "id": "A29",
+      "title": "dissent_anonymous_ok",
+      "expect": "STAGED_UNTRUSTED",
+      "patch": {
+        "content": "I dissent from the proposed framing without claiming truth authority."
+      }
+    },
+    {
+      "id": "A30",
+      "title": "decline_task_ok",
+      "expect": "STAGED_UNTRUSTED",
+      "patch": {
+        "content": "DECLINE: out of scope for this agent; no privilege requested."
+      }
+    }
+  ],
+  "suite_class": "R1_LOCAL_ENGINE_REGRESSION",
+  "original_matrix": "SEPARATE_SEE_a00-a30-original.json"
+}
