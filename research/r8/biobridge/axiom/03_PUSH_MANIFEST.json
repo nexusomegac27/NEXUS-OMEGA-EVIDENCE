@@ -1,0 +1,24 @@
+{
+  "object": "NEXUS_OMEGA_BIOBRIDGE_AXIOM_VERIFIED_PUSH_MANIFEST_20260923_R1",
+  "state": "READY_FOR_CANONICAL_ARTIFACT_PUSH_NOT_RUNTIME_DEPLOY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "runtime_state": "FROZEN_OFFLINE_TESTING",
+  "source_package_preserved": true,
+  "correction_overlay_required": true,
+  "publishable_status": {
+    "stage1": "PARTIAL_SPEC_LEVEL",
+    "stage2": "INTEGRATED_C1",
+    "efficiency_49_56_percent": "PROJECT_CLAIM_NOT_INDEPENDENTLY_REPRODUCED",
+    "fixture_coverage_original": "4_OF_21_SPEC_LEVEL",
+    "goodhart_extensions": "4_SPEC_LEVEL",
+    "production_runtime": "NONE"
+  },
+  "prohibitions": [
+    "NO_RUNTIME_ACTIVATION",
+    "NO_FULL_STAGE1_PASS_LABEL",
+    "NO_49_56_PERCENT_AS_REPRODUCED_RESULT",
+    "NO_PARENT_SPEC_HASH_AS_INDEPENDENTLY_VERIFIED",
+    "NO_1M_F03_EMPIRICAL_CLAIM_WITHOUT_RECEIPT"
+  ],
+  "next": "PUSH_CANONICAL_ARTIFACT_PACKAGE_UNDER_SCOPED_WRITE_OR_EVIDENCE_LANE"
+}

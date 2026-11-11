@@ -1,0 +1,15 @@
+{
+  "schema": "nexus-research-biobridge/1",
+  "object": "NEXUS_OMEGA_BIOBRIDGE_AXIOM_VERIFIED_ARTIFACT_PUBLICATION_20260923_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "truth_authority": "NONE",
+  "stage1": "PARTIAL_SPEC_LEVEL",
+  "original_fixture_coverage": "4_OF_21_SPEC_LEVEL",
+  "goodhart_extensions": "4_SPEC_LEVEL",
+  "efficiency_49_56": "PROJECT_CLAIM_NOT_INDEPENDENTLY_REPRODUCED",
+  "runtime": "FROZEN_NOT_DEPLOYED",
+  "package_sha256": "1c629ff68de1a375a66038799b7d9a8582c638002b72f6891fc1ffb2e2a21a7e",
+  "package_bytes": 35016,
+  "source_archive_sha256": "d29e9586f11c68b52863aed3e4cd914886de8c2d49625d8471a94291a4282802"
+}
