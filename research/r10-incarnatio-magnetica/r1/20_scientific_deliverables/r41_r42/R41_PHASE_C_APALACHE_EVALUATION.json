@@ -1,0 +1,15 @@
+{
+  "artifact": "R41_PHASE_C_APALACHE_EVALUATION",
+  "tool": "Apalache",
+  "official_source": "https://github.com/apalache-mc/apalache",
+  "declared_capabilities": ["SMT-backed symbolic checking", "bounded safety", "inductive invariants for fixed or bounded parameters"],
+  "measured_availability": "UNAVAILABLE",
+  "installation": "NOT_ATTEMPTED",
+  "installation_reason": "STOP_BOUNDARY_14: keine Apalache-Installation ohne separate Operator-Autorisierung.",
+  "candidate_A": "NOT_RUN",
+  "candidate_B": "NOT_RUN",
+  "inductiveness_result": "NOT_ASSESSED",
+  "fairness_result": "NOT_ASSESSED",
+  "status": "REQUIRES_APALACHE_CAPABILITY_GAP",
+  "claim_boundary": "C1_DESCRIPTIVE_ONLY"
+}

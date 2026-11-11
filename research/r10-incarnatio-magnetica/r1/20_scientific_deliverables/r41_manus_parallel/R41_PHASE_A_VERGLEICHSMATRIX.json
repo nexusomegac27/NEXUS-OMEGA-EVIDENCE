@@ -1,0 +1,11 @@
+{
+  "artifact": "R41_PHASE_A_VERGLEICHSMATRIX",
+  "status": "BLOCKED_CAPABILITY_GAP",
+  "rows": [
+    {"candidate": "A", "tlc": "NOT_RUN", "InvW1_2": "NOT_ASSESSED", "deadlock": "NOT_ASSESSED", "liveness": "NOT_REQUESTED_FOR_A"},
+    {"candidate": "B", "tlc": "NOT_RUN", "InvW1_2": "NOT_ASSESSED", "deadlock": "NOT_ASSESSED", "liveness": "NOT_ASSESSED"}
+  ],
+  "selection": "NONE",
+  "basis": ["TLC_UNAVAILABLE", "CANDIDATE_SPECS_UNAVAILABLE"],
+  "interpretation": "No PASS, COUNTEREXAMPLE, DEADLOCK, or LIVENESS claim may be inferred from a non-run."
+}

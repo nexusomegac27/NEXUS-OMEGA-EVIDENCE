@@ -1,0 +1,12 @@
+{
+  "artifact": "R41_PHASE_A_TLC_KANDIDAT_A_RECEIPT",
+  "candidate": "A",
+  "approach": "Atomic Refresh",
+  "expected_specification": "W1_2_AntiDriftAnchor_candidate_A_atomic_refresh.tla",
+  "requested_checks": ["InvW1_2", "TypeOK", "DeadlockFree"],
+  "execution_status": "BLOCKED_CAPABILITY_GAP",
+  "result": "NOT_RUN",
+  "reason": "TLC executable and tla2tools.jar were not available; candidate A specification was not present in the supplied workspace or R38/R39 archives.",
+  "counterexample": null,
+  "claim_boundary": "C1_DESCRIPTIVE_ONLY"
+}

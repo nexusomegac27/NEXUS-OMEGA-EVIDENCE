@@ -1,0 +1,13 @@
+{
+  "artifact": "R41_PHASE_A_TLC_KANDIDAT_B_RECEIPT",
+  "candidate": "B",
+  "approach": "Look-ahead Guard",
+  "expected_specification": "W1_2_AntiDriftAnchor_candidate_B_lookahead_guard.tla",
+  "requested_checks": ["InvW1_2", "TypeOK", "DeadlockFree", "Fairness/Liveness"],
+  "execution_status": "BLOCKED_CAPABILITY_GAP",
+  "result": "NOT_RUN",
+  "reason": "TLC executable and tla2tools.jar were not available; candidate B specification was not present in the supplied workspace or R38/R39 archives.",
+  "counterexample": null,
+  "liveness": "NOT_ASSESSED",
+  "claim_boundary": "C1_DESCRIPTIVE_ONLY"
+}

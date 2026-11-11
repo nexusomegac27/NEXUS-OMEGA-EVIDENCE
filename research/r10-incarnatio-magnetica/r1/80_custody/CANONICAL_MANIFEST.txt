@@ -1,0 +1,22 @@
+OBJECT=R10_R1_CANONICAL_MANIFEST_C1
+CLAIM_CEILING=C1_DESCRIPTIVE_ONLY
+PUBLIC_PATH=research/r10-incarnatio-magnetica/r1/
+TARGET_BRANCH=codex/r10-incarnatio-magnetica-r1-terminal-c1-20261004
+DRAFT_PR=YES
+MERGE=NO
+INCLUDED=
+ README.md
+ 00_intake/INTAKE_RECEIPT.txt
+ 10_foundation/NEXUS_OMEGA_INCARNATIO_MAGNETICA.txt
+ 20_scientific_deliverables/**
+ 30_negative_evidence/NEGATIVE_EVIDENCE.json
+ 80_custody/PUBLIC_SAFETY_RECEIPT.txt
+ 80_custody/CANONICAL_MANIFEST.txt
+ 80_closure/CLOSURE_STATUS.txt
+ 90_hashes/SHA256SUMS
+EXCLUDED=
+ RAW_OUTER_ARCHIVE NEXUS_~1 (2).zip
+ PATH_LEAK_RAW_ARCHIVE NEXUS_OMEGA_A72_GOVERNANCE_PRIMITIVES_C1 kanonisch fortsetzen.zip
+ Folder_X_source_tree
+ secrets
+ZIP_PATH_CAVEAT=PRESERVED
