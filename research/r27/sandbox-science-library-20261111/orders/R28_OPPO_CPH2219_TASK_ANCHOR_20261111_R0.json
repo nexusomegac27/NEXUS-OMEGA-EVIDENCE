@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R28_OPPO_CPH2219_INDEPENDENT_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_20261111_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "INDEPENDENT_EXPERT_RESEARCH_NO_FIXED_PROVIDER_ROLE",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_R27_NEUTRAL_INDEPENDENT_EXPERT_SANDBOX_LIBRARY_MANDATE_20261111_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "a0851058f4bfcf4b376628f7f362b8cfdedab80d",
+    "predecessor_path": "research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md",
+    "predecessor_bytes": 4241,
+    "predecessor_sha256": "2268fe2c1905951facdf0fad35da6483ef76f148c9893b49b2efdb96a7650d16"
+  },
+  "delegation": {
+    "scope": "EXTERNAL_RESEARCH_ONLY_PUBLIC_SOURCES_R28_OPPO_CPH2219_FFP",
+    "allowed_actions": [
+      "READ_PINNED_PUBLIC_SOURCES",
+      "STATIC_A_B_C_D_INDEPENDENT_RESEARCH",
+      "WRITE_ONLY_OPERATOR_MEDIATED_RETURN_OUTSIDE_REPOSITORY"
+    ],
+    "prohibited_actions": [
+      "GITHUB_EXTERNAL_CREATE_OR_EDIT",
+      "CREATE_DIRECTORY_OR_SLOT",
+      "DEVICE_CAPTURE_OR_CALIBRATION",
+      "PRIVATE_ORIGINAL_PUBLIC_UPLOAD",
+      "NODE_RESET_OR_DESTRUCTIVE_CHANGE",
+      "HOSTINGER_OR_WWW_WRITE",
+      "CLAIM_PROMOTION",
+      "MERGE_OR_PRODUCTION_RELEASE"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Can OPPO CPH2219 IMU methods be defensibly fit for the intended NEXUS uses, and what evidence or counterexamples would disprove the proposition?",
+    "deliverables": [
+      "A_B_C_D_PRIMARY_SOURCE_AUDIT",
+      "COUNTERCLAIM_NEGATIVE_FIXTURES",
+      "UNCERTAINTY_AND_REFERENCES_GAP_REGISTER",
+      "PREREGISTERED_NONDESTRUCTIVE_LATER_DEVICE_PLAN",
+      "DETACHED_RETURN_HASH_MANIFEST"
+    ],
+    "falsifiers": [
+      "INCORRECT_UNITS_OR_SENSOR_IDENTITY",
+      "NON_MONOTONIC_SAMPLE_TIMESTAMPS",
+      "SIX_FACE_OVERFITTING",
+      "UNTRACEABLE_CALIBRATION_CLAIM",
+      "SESSION_OR_TEMPERATURE_DRIFT",
+      "CONSENT_REVOCATION_NOT_ENFORCED"
+    ],
+    "acceptance_tests": [
+      "ALL_CLAIMS_HAVE_SOURCE_AND_TIER",
+      "A_B_C_D_EVALUATED",
+      "DISSENT_RECORDED",
+      "MISSING_REAL_DEVICE_RECEIPT_NOT_OBSCURED",
+      "NO_C1_PROMOTION"
+    ],
+    "pause_conditions": [
+      "PRIVATE_DEVICE_SOURCE_NEEDED_FOR_EMPIRICAL_ASSERTION",
+      "EXTERNAL_WRITE_IDENTITY_NOT_REGISTERED",
+      "ANY_PHYSICAL_OR_IRREVERSIBLE_ACTION",
+      "MISSING_SOURCE_EXACT_PREDECESSOR"
+    ],
+    "not_executed": [
+      "REAL_OPPO_IMU_CALIBRATION",
+      "TYPE_C_WINDOWS_HOST_HANDSHAKE",
+      "ANDROID_ON_DEVICE_VALIDATION",
+      "EXTERNAL_EXPERT_RETURNS",
+      "HOSTINGER_DEPLOYMENT"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R28_OPPO_CPH2219_INDEPENDENT_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_20261111_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "SOURCE_HASH_MISMATCH",
+      "GITHUB_PATH_POLICY_DRIFT",
+      "UNREGISTERED_ACTOR",
+      "CLAIM_PROMOTION_ATTEMPT",
+      "PHYSICAL_HARDWARE_ACTION_WITHOUT_AUTH"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "a0851058f4bfcf4b376628f7f362b8cfdedab80d",
+        "path": "research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md",
+        "bytes": 4241,
+        "sha256": "2268fe2c1905951facdf0fad35da6483ef76f148c9893b49b2efdb96a7650d16",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_LINKS_ONLY_NO_PRIVATE_OPPO_SENSOR_BYTES_OR_THIRD_PARTY_FULLTEXT",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "ALL_FOUR_LANES_A_B_C_D_ANALYZED",
+      "GIVEN_COUNTEREXAMPLES_ARE_OBSERVABLE"
+    ],
+    "robustness_stability": [
+      "DENY_EXTERNAL_WRITE_WITHOUT_ACTOR_SLOT",
+      "PROTECT_SOURCE_AND_DEVICE_STATE",
+      "SCOPED_HOLD_ON_SOURCE_GAP"
+    ],
+    "traceability_comprehensibility": [
+      "EXACT_PARENT_COMMIT_BYTES_SHA256",
+      "INDEPENDENT_RECEIVER_REHASH",
+      "DISTINGUISH_REPORTED_FROM_ACTUALLY_EXECUTED"
+    ]
+  }
+}
