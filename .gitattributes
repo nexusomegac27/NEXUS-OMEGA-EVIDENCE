@@ -6,3 +6,5 @@
 *.yml text eol=lf
 *.zip binary
 *.gz binary
+# R25-Archiv: Binär/keine CRLF-Normalisierung für Original-Bytes
+research/r25/external-expert-archive-20261010/* -text

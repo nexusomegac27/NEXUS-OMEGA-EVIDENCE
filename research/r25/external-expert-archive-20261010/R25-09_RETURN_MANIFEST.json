@@ -1,0 +1,90 @@
+{
+  "OBJECT": "NEXUS_OMEGA_EXTERNAL_EXPERT_R25_INDEPENDENT_MAXI_RESEARCH_RETURN_20261010_R0",
+  "FROM": "GROK (xAI) · EXTERNAL EXPERT",
+  "TO": "AXIOM / NEXUS_OMEGA_OPERATOR",
+  "EXPERT_ASSIGNED_BY": "Operator explicit assignment 2026-10-10",
+  "PARENT": "PR66_MERGE_2da6ea1b22516cd3ea4f1cd0f722659aafe3baeb",
+  "CONTEXT": [
+    "PR64_MERGED",
+    "PR60_MERGED",
+    "PR62_MERGED",
+    "PR65_OPEN_HOLD_SCOPED"
+  ],
+  "DATE_UTC": "2026-10-10",
+  "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+  "RUNTIME_RIGHTS": "NONE",
+  "PRODUCTION_WRITE": "NONE",
+  "NO_NEW_CURSOR_WORKER": true,
+  "R24_REOPEN": false,
+  "R26_RETROACTIVE_PROMOTION": false,
+  "R25_MODEL": "DESIGN_ONLY",
+  "E1": "DESCRIPTIVE_ASSOCIATION_NO_CAUSAL_LEDGER_PROOF",
+  "E2": "PROSPECTIVE_ABLATION_HYPOTHESIS_ONLY",
+  "PR65_MERGE": "UNCHANGED_OPEN_SCOPED_HOLD",
+  "R24_OPERATOR_PHASE": "CLOSED_ADMINISTRATIVE_NO_REOPEN",
+  "OVERALL_STATUS": "PASS_WITH_CAVEATS_C1_RESEARCH_READY",
+  "DELIVERABLES": [
+    {
+      "id": "R25-00",
+      "file": "R25-00_EXECUTIVE_ADJUDICATION_BRIEF.md",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "R25-03",
+      "file": "R25-03_RING_AND_ORBIT_ERROR_MODEL.md",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "R25-05",
+      "file": "R25-05_E1_E2_CAUSAL_AUDIT.md",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "R25-07",
+      "file": "R25-07_ADVERSARIAL_REVIEW.md",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "R25-09",
+      "file": "R25-09_RETURN_MANIFEST.json",
+      "status": "COMPLETE"
+    }
+  ],
+  "NOT_EXECUTED_EXPERIMENTS": [
+    "D1–D6 ring drift matrix",
+    "NE1–NE8 negative fixtures",
+    "Unit ablation 0/10/25/40/60 %",
+    "Head-to-head baseline comparison (persistence / von-Mises / Kalman)",
+    "Controlled provenance experiment on synthetic engineering tasks",
+    "Independent B1/B2/B3 WWW terminal proofs"
+  ],
+  "NEXT_DECISION_CANDIDATES": [
+    {
+      "rank": 1,
+      "action": "Keep PR65 OPEN_HOLD_SCOPED until pre-registered negative fixtures and error-budget decomposition are available",
+      "gate": "Logged multi-peak, high-noise and ablation results + explicit e_total decomposition"
+    },
+    {
+      "rank": 2,
+      "action": "Treat Project OT strictly as E1 descriptive association + E2 prospective hypothesis; no causal ledger proof",
+      "gate": "Any stronger claim requires controlled confounder-accounted study"
+    },
+    {
+      "rank": 3,
+      "action": "Continue Cursor R21R1 three-proof lane undisturbed; do not equate public HTML retrieval with live functional verification",
+      "gate": "Independent B2 Hostinger write receipt + B3 interactive browser/mobile readback"
+    }
+  ],
+  "NEGATIVE_EVIDENCE_RETAINED": [
+    "Historical GROK R26 Project OT module (pre-correction) as provenance",
+    "MISTRAL independent validation with E1/E2 separation",
+    "AXIOM PASS_WITH_MATERIAL_CAVEATS_C1 adjudication"
+  ],
+  "STOP_GATES": [
+    "No runtime authorisation from this return",
+    "No production or Hostinger write",
+    "No new Cursor worker",
+    "No node or elite birth",
+    "No reopening of R24 administrative close"
+  ]
+}
