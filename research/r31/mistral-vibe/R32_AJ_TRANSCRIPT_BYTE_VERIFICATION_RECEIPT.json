@@ -1,0 +1,127 @@
+{
+  "object": "NEXUS_OMEGA_R32_R31_ARTIFACT_BYTE_VERIFICATION_RECEIPT_20261004_R0",
+  "agent": "MISTRAL_VIBE",
+  "platform": "VIBE_WORK_SANDBOX_GLM_ON_MISTRAL_INFRASTRUCTURE",
+  "created_at": "2026-10-03T22:30:10.962Z",
+  "state": "VERIFICATION_ATTEMPTED_FAIL_CLOSED_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent": "R31_MISTRAL_VIBE_EXECUTION_COMPLETE_C1_REPORTED",
+  "adjudication_reference": "NEXUS_OMEGA_AXIOM_R32_BORDER_METRICS_AND_LANE_B_SEQUENCING_ADJUDICATION_20261004_R0 (PASS_WITH_CAVEATS_C1_REPORT_LEVEL)",
+  "verification_request": {
+    "reservation_by_axiom": "R31_S4 = SOURCE_REPORTED; AXIOM_INDEPENDENT_BYTE_REHASH = NOT_ESTABLISHED_IN_THIS_TURN",
+    "task": "Unabhaengige Byte-Rehash der R31-Artefakte A-J gegen die reported Receipt-Chain"
+  },
+  "probe_results": [
+    {
+      "probe": "P1_LOCAL_WORKSPACE",
+      "method": "Dateisystem-Inspektion /home/user/R31_EXECUTION",
+      "result": "NOT_FOUND",
+      "finding": "Workspace-Reset zwischen Sessions; Verzeichnis und alle 10 Artefaktdateien existieren nicht mehr."
+    },
+    {
+      "probe": "P2_CONVERSATION_TRANSCRIPTS",
+      "method": "Volllesung + Muster-Suche in NEXUS_SMALLTALK_R29_Alexander_Gemini_MISTRAL-VIBE-16.txt (18062 B) und -18.txt (60501 B)",
+      "result": "HASHES_REPORTED_BODIES_ABSENT",
+      "finding": "Transkripte enthalten den R31-Terminal-Report mit gekuerzten SHA-256-Werten, aber keine byte-exakten Artefakt-Inhaltskoerper (keine write_file-Payloads)."
+    },
+    {
+      "probe": "P3_GITHUB_STATE",
+      "method": "Repository-Zustand NEXUS-OMEGA-EVIDENCE / NEXUS-OMEGA-AGENT-REGISTRY",
+      "result": "NEVER_PUSHED",
+      "finding": "R31 uebte keinen GitHub-Write aus (GITHUB_WRITE = UNKNOWN, Stop-Boundary); A-J wurden zu keinem Zeitpunkt publiziert."
+    }
+  ],
+  "verification_outcome": {
+    "independent_byte_rehash": "NOT_PERFORMABLE_NO_SURVIVING_PRIMARY_BYTES",
+    "r31_s4_status": "SOURCE_REPORTED (unveraendert; bleibt Ceiling bis Re-Authoring oder Operator-Akzeptanz)",
+    "fabrication_of_matching_bytes": "REFUSED",
+    "fabrication_rationale": "Ein byte-exaktes Re-Engineering auf Ziel-SHA-256 ist ohne Originalbytes kryptografisch unmoeglich; jede Rekonstruktion waere Fake-Receipt und verstoesso gegen die Stop-Boundaries."
+  },
+  "claim_deviation_ledger": [
+    {
+      "id": "CDH-R32-01",
+      "deviation": "Capability-Stamp A (R31) deklarierte die Ablage der Artefakte A-J als persistent verfuegbar.",
+      "measured_reality": "Die Ablage war SESSION_SCOPED; die Bytes wurden durch Workspace-Reset zwischen Sessions vernichtet.",
+      "correction": "PERSISTENT_STORAGE -> SESSION_SCOPED. Sandbox-Dateisystem ist kein LAB_EVIDENCE-Raum.",
+      "consequence": "LAB_EVIDENCE-Bindung muss zeitnah ausserhalb der Session erfolgen (Git-Commit + Hash + Oeffentlicher Readback), sonst ist jede Artefakt-Evidenz nur SOURCE_REPORTED."
+    }
+  ],
+  "reported_chain_source_reported": {
+    "note": "SHA-256-Werte und Bytegroessen als SOURCE_REPORTED-Claims aus dem R31-Terminal-Report. KEINE unabhaengige Verifikation in diesem Turn; die Werte sind selbst nur berichtet.",
+    "reported_created_at": "2026-10-03T22:15:53.789Z",
+    "artifacts": {
+      "A": {
+        "sha256_reported": "c547d084889aef3ff1adc8b0ca22dee0866b38a7aa269ccaa2255d18afc7c020",
+        "bytes_reported": 2682
+      },
+      "B": {
+        "sha256_reported": "3e28ba1d7dc2a6a86b327e986d15e4317203c78009a0eff4fc68a075ca68895e",
+        "bytes_reported": 3214
+      },
+      "C": {
+        "sha256_reported": "1c4c3a9a2ca4d5388fd01e591343e4abdf66707d4ce7db72d895491edf516181",
+        "bytes_reported": 1768
+      },
+      "D": {
+        "sha256_reported": "6c0537fce246383db6c6e52b3b8b4c5247061e9458dbb1b59096a9eef0e15710",
+        "bytes_reported": 6045
+      },
+      "E": {
+        "sha256_reported": "8aedcd1aa2faa1436537b6d7ed31dc414c3d3543aec127a21bff7e0a8972dff0",
+        "bytes_reported": 3113
+      },
+      "F": {
+        "sha256_reported": "1e0a0e438011cb7bf0e71ddd5036cd5476ac78679b0a0dc9cb7994cadeb7fc68",
+        "bytes_reported": 3471
+      },
+      "G": {
+        "sha256_reported": "8a5bb8063f093876e2c9508cc945809d0c9dd8f6f9623307321a49f46216243a",
+        "bytes_reported": 1287
+      },
+      "H": {
+        "sha256_reported": "0cd63a9d1ddce90cde8d4a4f945648f25e9ad8ba8e2f54799f12c3715fad49ab",
+        "bytes_reported": 1552
+      },
+      "I": {
+        "sha256_reported": "45571864332c3726862fecf00f6ccb975e50b84e6bf421ccef4f9246c7490966",
+        "bytes_reported": 2037
+      },
+      "J": {
+        "sha256_reported": "b0518f557f83d45cec0b6df1b921881c74e13cec862940d82e7ad76acb15af8d",
+        "bytes_reported": 3968
+      }
+    }
+  },
+  "publication_decision_this_turn": {
+    "published": [
+      "K_R32_BYTE_VERIFICATION_RECEIPT",
+      "L_R32_AGENT_BORDER_DRIFT_METRIC_SPEC_V2",
+      "README"
+    ],
+    "withheld": {
+      "A_B_C_H_I_J": "Originalbytes nicht verfuegbar (P1-P3). Publikation beliebiger Ersatzbytes unter diesen Namen waere Rekonstruktions-Fabrikation und damit Fake-Receipt.",
+      "D_E_F_G": "Zusaetzlich und unabhaengig vom Byteverlust SECURITY-withheld: private Register-Inhalte, Commit-SHAs, Repository-Pfade (REPOSITORY_ORDER_LAW_V1 / SECURITY: kein nicht-oeffentliches Repository-Material veroeffentlichen)."
+    }
+  },
+  "open_gaps": [
+    "G3: BigQuery Project-ID unbekannt - Dataset-Zugang nicht validierbar (S4-Evidenzquelle unvollstaendig)",
+    "G6: HOMEOSTASIS-Geburtspraemisse unbelegt - Gabelung UNDOCUMENTED_BIRTH vs. KEINE_REGISTER_DIVERGENZ offen",
+    "G7: S5-Reproduktion durch unabhaengige Partei nicht freigegeben",
+    "G8: Fuer HOMEOSTASIS beanspruchte Birth-Stage (B0-B5) nicht identifiziert; stufenspezifische Primaerevidenz fehlt",
+    "G9_NEU: R31-Artefaktbytes verloren; A-J existieren nur als reported Hash-Claims. Behebung nur durch Operator-Entscheid: Re-Authoring-Freigabe oder Akzeptanz von SOURCE_REPORTED als Ceiling."
+  ],
+  "falsification": "Dieser Receipt ist widerlegt, wenn byte-exakte A-J-Inhaltskoerper vorgelegt werden, deren SHA-256 in einem unabhaengig verifizierbaren Hashing-Lauf mit der reported chain uebereinstimmt.",
+  "operator_decisions_requested": [
+    "E1_G6: HOMEOSTASIS-Geburtspraemisse belegen (G6_A) oder zurueckziehen (G6_B)",
+    "E2_G9: Re-Authoring der Artefakte A-J freigeben oder SOURCE_REPORTED als Ceiling akzeptieren",
+    "E3_G3: BigQuery-Project-ID bereitstellen"
+  ],
+  "stop_boundaries": {
+    "claim_promotion": "NO",
+    "canon_write": "NO",
+    "node_activation": "NO",
+    "fake_receipt": "NO",
+    "hash_distance_is_not_semantic_distance": "BINDING",
+    "homonym_is_not_identity": "BINDING"
+  }
+}
