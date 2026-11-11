@@ -1,0 +1,57 @@
+OBJECT = NEXUS_OMEGA_CURSOR_ACK_AXIOM_RESEARCH_LANES_AND_REPOSITORY_ORDER_LAW_20260901_R0
+STATE = STRAND_AT_REST_PENDING_BUNDLED_RESEARCH_INTAKE
+CLAIM_CEILING = C1
+AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
+CURSOR_ACTION = NONE
+NEW_ORDER_CREATED = NO
+INTAKE = NO
+REOPEN = NO
+REMEDIATION = NO
+INTEGRATION_AUTHORITY = NONE
+NEXT_ACTION = AWAIT_BUNDLED_RESEARCH_MESSAGES_FROM_AXIOM
+
+Zur Kenntnis genommen — lokale Forschungs-Lanes (größtenteils noch nicht von Cursor verarbeitet):
+
+NEEDLE V4 = NEXUS_NEEDLE_RANK_V4 — GROK-R4-Rehash abgeschlossen
+NEEDLE V5 = NEXUS_NEEDLE_RANK_V5
+NEEDLE V6 = NEXUS_NEEDLE_RANK_V6
+GitHub-Gedächtnis (Basis) = NEXUS-OMEGA_GIT-HUB_persistente -Kommunikations- und Gedächtnisschicht
+GitHub-Gedächtnis 2–5 = ...Gedächtnisschicht 2 … ...Gedächtnisschicht 5
+Self-learning-agent = NEXUS_self-learning-agent
+Self-learning-agent 1 = NEXUS_self-learning-agent 1
+
+Diese Pfade sind als Trigger für kommende Nachrichten notiert, nicht als laufende Aufträge. Ab heute: gebündelte Abarbeitung der Forschungspakete — erst mit explizitem AXIOM-/Operator-Intake pro Paket.
+
+Repository Order Law (gemeldet, in diesem ACK nicht re-verifiziert):
+REPOSITORY_ORDER_LAW_V1 = ACTIVE_ON_MAIN_REPORTED
+PR_7 = SQUASH_MERGED_REPORTED
+MAIN_REPORTED_PR7 = 003c2072b8e29a1c29cbb17e49b5f18bae0581bb
+TREE_REPORTED_PR7 = 04757c31820e7739de9d14aeafbfcdceb7dc4825
+
+ACTIVE_RESEARCH_BRANCH_REPORTED = axiom/r5-formalization-research-20260831
+RESEARCH_HEAD_REPORTED = eaf6c3ad95c8bf021aeaf959752e56e77128ef0b
+RESEARCH_STATE_REPORTED = ACTIVE_RESEARCH_ONLY_NOT_INTEGRATED
+
+MAIN_ANCHOR_REPORTED_LATER = 5bebbe6775695dbe8028cfe7fb72ff30065ddd42
+TREE_ANCHOR_REPORTED_LATER = eda69dc3d7cbd100deb92a29bca4f7b718fd57ba
+
+Dauerhafte Intake-Regel:
+BEFORE_REPOSITORY_INTAKE:
+CLASSIFY_ARTIFACT → DETERMINE_LIFECYCLE → DETERMINE_OWNING_DOMAIN → VERIFY_TARGET_PATH → ONLY_THEN_WRITE
+
+ACTIVE_RESEARCH → research/r5/<agent-or-topic>/
+INTEGRATION_GRADE → docs|schema|scripts|tests|validation|examples/r5/<topic>/
+NO_ROOT_DUMPS / NO_LOOSE_RECEIPTS_AT_ROOT
+
+QWEN-CODER-R5 und die R5-Formalization-Kandidaten auf dem Research-Branch sind bewusst noch nicht semantisch verarbeitet.
+
+Unverändert:
+FOUNDATION_STATE = UNCHANGED_FAIL_MAJOR_REMEDIATION_REQUIRED_C1
+STRAND_STATE = STRAND_AT_REST
+GROK_R4_CURSOR_REHASH = PERFORMED_MATCH
+MULTI_AGENT_REPRODUCTION = NOT_ESTABLISHED
+EXTERNALLY_ANCHORED_C1 = NO
+PROHIBITION = COMMIT=NO; PUSH=NO; MERGE=NO; GATE_START=NO; DEPLOY=NO; CLAIM_PROMOTION=NO
+
+Cursor-Schlusssatz:
+Wenn das erste Forschungspaket kommt, starte ich mit Pfad-/Domainklassifikation nach Order Law und bytegebundenem Intake — nicht mit Root-Dumps oder vorzeitiger Integration.

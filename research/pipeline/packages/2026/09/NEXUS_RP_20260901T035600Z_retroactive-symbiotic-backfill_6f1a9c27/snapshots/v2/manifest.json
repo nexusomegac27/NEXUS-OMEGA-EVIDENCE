@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "NEXUS_RP_20260901T035600Z_retroactive-symbiotic-backfill_6f1a9c27",
+  "snapshot": "v2",
+  "state": "READY_FOR_CURSOR",
+  "claim_ceiling": "C1",
+  "predecessor_snapshot": "v1",
+  "files": [
+    "CURSOR_HANDOFF.md",
+    "CURSOR_FULL_BUNDLED_ORDER.md",
+    "GITHUB_BRIDGE_PROTOCOL.md",
+    "CURSOR_ACK_INPUT.txt",
+    "A90_PLAN_BINDING.md",
+    "A90_AXIOM_COMPLETION_STATE.json",
+    "items.json",
+    "provenance.json",
+    "manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "cursor_action": "START",
+  "github_live_transport": "PR_CONVERSATION",
+  "canonical_state_store": "research/pipeline/",
+  "integration_authority": "CONDITIONAL_AND_PATH_SCOPED",
+  "claim_promotion": false,
+  "a90_full_plan_physical_copy": false,
+  "a90_full_plan_binding": {
+    "bytes": 24350,
+    "sha256": "483b18845cf39357ff399e6c16d0a79eb8fe992bd19c971d27c52d35382ddfb7",
+    "digest_domain": "SHA256_RAW_BYTES_V1"
+  }
+}
