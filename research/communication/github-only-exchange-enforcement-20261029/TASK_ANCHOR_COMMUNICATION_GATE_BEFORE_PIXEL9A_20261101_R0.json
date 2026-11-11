@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_COMMUNICATION_GATE_SOFTWARE_FOUNDATION_BEFORE_PIXEL9A_TWIN_20261101_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM",
+    "recipient_role": "CURSOR",
+    "verified_github_actor": "NOT_ESTABLISHED_EXTERNAL_AGENT",
+    "predecessor_object": "NEXUS_OMEGA_CURSOR_MISTRAL_P0_ORIGINAL_PYTHON_HARD_REPAIR_RETURN_20261101_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "9330c2c55886488e8ffd05843937e96265219893",
+    "predecessor_path": "scripts/nexus_document_router.py",
+    "predecessor_bytes": 54371,
+    "predecessor_sha256": "db249a8827421549b09e6c5a11ac8d9c7a69bb9d486dbc71bb06a53421c11fec"
+  },
+  "delegation": {
+    "scope": "IMPLEMENT_GATE_A_B_C_D_WITH_ACTUAL_PROVIDER_RECEIPT_TRUSTED_SOURCE_AND_ROLLBACK_BEFORE_PIXEL9A_PREFLIGHT_C1",
+    "allowed_actions": [
+      "INDEPENDENT_REHASH_PR259_SOURCE_ORIGINAL",
+      "INTEGRATE_COMMUNICATION_GATE_C1_POLICY_VALIDATOR_IN_EXISTING_ROUTER_CI",
+      "IMPLEMENT_TRUE_VERIFIER_OWNED_SOURCE_AND_RETURN_BYTE_HASH",
+      "IMPLEMENT_REAL_AUTHORIZED_GITHUB_OWNER_DOCUMENT_API_RECEIPT",
+      "REPAIR_UNTRUSTED_RECEIPT_FALSE_PROMOTION",
+      "FIX_SQLITE_ATOMIC_RECEIPT_STATE_IDEMPOTENCY_RECOVERY",
+      "ADD_REAL_NEGATIVE_ADVERSARIAL_AND_CRASH_TESTS",
+      "EXECUTE_THREE_OWNER_SAFE_DOCUMENT_E2E_IF_AUTHORIZED",
+      "MEASURE_MANUAL_TRANSFERS_WITH_DENOMINATOR",
+      "WRITE_FULL_CANONICAL_GITHUB_RETURN_AND_TASK_ANCHOR",
+      "PIXEL9A_OPPO_FIRST_READ_ONLY_PRE_ADMISSION_CENSUS",
+      "RUN_ACTUAL_CI_EXACT_TIP_NO_MERGE"
+    ],
+    "prohibited_actions": [
+      "UNAUTHORIZED_GITHUB_PR_MERGE",
+      "PUBLIC_EXTERNAL_WRITE_API_ENABLE",
+      "UNAUTHORIZED_GITHUB_APPS_OR_NEW_ACCOUNTS_TOKENS",
+      "PRIVATE_SENSOR_MEDICAL_PII_PUBLIC_SOURCE",
+      "UNVERIFIED_ACK_CUTOVER_ACTIVE",
+      "NATIVE_APP_R3_ACTIVATION",
+      "PIXEL9A_DEVICE_CONNECT_ADB_SENSOR_LIVE_DATA_CAPTURE",
+      "PIXEL9A_DUAL_SYNC_OR_RELAY_POST",
+      "OPPO_DEVICE_DESTRUCTIVE_MUTATION",
+      "UNREVIEWED_HOSTINGER_WWW_WRITE",
+      "PARALLEL_COMMUNICATION_FRAMEWORK",
+      "R27E_VALIDATOR_WEAKENING",
+      "CLAIM_PROMOTION_ABOVE_C1"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Implement and evidence a single source-bound software communication gate across public read, owner GitHub document transport, independent external receiver and operator/privacy authorizations before preparing the second Pixel 9a twin without touching the device.",
+    "deliverables": [
+      "COMMUNICATION_GATE_A_TO_D_RUNTIME_INTEGRATION_EXISTING_ROUTER",
+      "INDEPENDENT_GITHUB_SOURCE_AND_RETURN_BYTES_WITNESSES_OR_SCOPED_HOLD",
+      "OWNER_ONLY_GITHUB_PROVIDER_TRANSPORT_E2E_OR_SCOPED_HOLD",
+      "ROUTER_RECEIPT_FALSE_PROMOTION_NEGATIVE_FIX",
+      "SQLITE_OUTBOX_RETRY_ROLLBACK_CRASH_TESTS",
+      "THREE_PUBLIC_SAFE_PACKETS_WITH_ACTUAL_API_RECEIPTS_WHEN_POSSIBLE",
+      "MANUAL_FILE_FERRY_METRICS_ACTUAL_COUNTS",
+      "PIXEL9A_OPPO_FIRST_READ_ONLY_SOURCE_GAP_REPORT",
+      "CI_SOURCE_HASH_AND_GITHUB_ONLY_RECEIPTS",
+      "FRAMEWORK_V1_CLOSED_LIVING_PRESERVED"
+    ],
+    "falsifiers": [
+      "RECEIVED_BYTES_VERIFIED_FROM_UNTRUSTED_RECEIPT_SHA",
+      "GITHUB_ACCOUNT_SELF_LABEL_AS_AUTONOMOUS_AGENT_IDENTITY",
+      "CUTOVER_FROM_SELF_ATTESTED_CONFIG",
+      "PUBLIC_WRITE_POST_ENABLED",
+      "PRIVATE_SOURCE_PUBLIC_GITHUB_LEAK",
+      "DISPATCHED_FROM_LOCAL_JOURNAL_ONLY",
+      "REPLAY_DUPLICATE_WITH_NEW_PROMOTION",
+      "DOCUMENT_RECEIPT_AND_STATE_PARTIAL_UNRECOVERED",
+      "PIXEL_ADMITTED_WITHOUT_OPPO_FIRST_AND_CONSENT",
+      "CI_OR_WWW_CLAIM_FROM_UNEXECUTED_TEST"
+    ],
+    "acceptance_tests": [
+      "23_OF_23_C1_PREENTRY_VALIDATOR_CI_BASELINE_PASS_41285675546",
+      "NEW_ROUTER_P0_TESTS_AT_FINAL_ACTUAL_SOURCE_COMMIT",
+      "UNTRUSTED_RECEIPT_MUST_NOT_ADVANCE_FETCH_OR_BYTES",
+      "TRUE_GITHUB_PROVIDER_SOURCE_AND_RETURN_BYTES_WITNESSED_OR_HOLD",
+      "ACTUAL_OWNER_PROTECTED_APPROVAL_AND_ROLLBACK_OR_HOLD",
+      "CORRECT_REPLAY_IDEMPOTENCY_AND_CRASH_INJECTION",
+      "REAL_PROVIDER_API_RECEIPT_OR_QUEUED_STATE_ONLY",
+      "OPPO_FIRST_PIXEL_HOLD_ENFORCED_WITHOUT_DEVICE_ACTION",
+      "REAL_MEASURED_MANUAL_FERRY_METRIC_OR_NOT_ESTABLISHED",
+      "NO_NEW_PRIVATE_PUBLIC_WRITE"
+    ],
+    "pause_conditions": [
+      "UNPROVEN_GITHUB_CREDENTIAL_OR_ACCOUNT",
+      "MISSING_REAL_EXTERNAL_RECEIVER",
+      "MISSING_OPPO_RESTORE_OR_CONNECTIVITY_PROVENANCE",
+      "UNREVIEWED_PRIVATE_RIGHTS",
+      "WWW_WRITE_NOT_SCOPED",
+      "PIXEL_DEVICE_ACTION_NOT_AUTHORIZED"
+    ],
+    "not_executed": [
+      "PIXEL9A_A36A_A36B",
+      "SECOND_TWIN_DUAL_SYNC",
+      "HOSTINGER_PUBLIC_POST",
+      "GITHUB_PR259_MERGE",
+      "REAL_INDEPENDENT_EXTERNAL_AGENT_RUNTIME_ACK",
+      "CLOUD_SENSOR_RAW_UPLOAD"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_AXIOM_CURSOR_COMMUNICATION_GATE_SOFTWARE_FOUNDATION_BEFORE_PIXEL9A_TWIN_20261101_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "PUB_POST_ON",
+      "PIXEL9A_ACTION_BEFORE_OPPO_PROOF",
+      "RECEIPT_SHA_UNTRUSTED_PROMOTED",
+      "R27E_WEAKENED",
+      "PRIVATE_SOURCE_EXFIL",
+      "FALSE_CUTOVER_ACTIVE"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "71d6aedbf7cbcb754029151921fe080647aa5f87",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/AXIOM_CURSOR_COMMUNICATION_GATE_SOFTWARE_FOUNDATION_BEFORE_PIXEL9A_TWIN_ORDER_20261101_R0.md",
+        "bytes": 10567,
+        "sha256": "e94b9513c43fb028b17d782a93839fca2aa7b5172646a6ebd970d04ce14c0387",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "3b233e6c8c8f4058b20948c2e3a47449b07aef55",
+        "path": "research/communication/github-only-exchange-enforcement-20261029/NEXUS_COMMUNICATION_GATE_ADMISSION_STATE_V1_20261101.json",
+        "bytes": 2894,
+        "sha256": "a0ba5b2eb6028f7ac43b73eafa98adeb32c130c52cbb7cddd490ef76d0168c32",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "912e29a52bca3d8b13b06dacd42846f8e72725a9",
+        "path": "scripts/validate_nexus_communication_gate_admission.py",
+        "bytes": 6876,
+        "sha256": "b0771092819b99462b472f56867808f0214eab75550aba9ade28140e22037175",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "76695ed946cb16746d930d46282ae6c62e8a82a3",
+        "path": "tests/test_nexus_communication_gate_admission.py",
+        "bytes": 4980,
+        "sha256": "2b57920ea37a1034890f491e97fa6bf4a9cc547e7af6286dbe194cb3989c1fa3",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "9330c2c55886488e8ffd05843937e96265219893",
+        "path": ".github/workflows/validate-mistral-p0-hard-repair.yml",
+        "bytes": 2654,
+        "sha256": "7c79305e69e6ef0126a42bfb11cf2623067c6d6da935ecbeca659041105bb881",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      },
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "9330c2c55886488e8ffd05843937e96265219893",
+        "path": "scripts/nexus_document_router.py",
+        "bytes": 54371,
+        "sha256": "db249a8827421549b09e6c5a11ac8d9c7a69bb9d486dbc71bb06a53421c11fec",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "SOURCE_SAFE_ARTIFACTS_ONLY_NO_RAW_MEDICAL_OR_SENSOR_DATA_AND_NO_PRIVATE_UPLOAD",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "23_OF_23_C1_RELEASE_POLICY_CI_PASS",
+      "THREE_ACTUAL_OWNER_ONLY_DOCUMENTS_OR_NOT_ESTABLISHED",
+      "REAL_END_TO_END_RECEIVER_SEPARATE_FROM_GITHUB_CI_GREEN"
+    ],
+    "robustness_stability": [
+      "CUTOVER_ACTIVE_NO",
+      "PUBLIC_POST_OFF",
+      "PIXEL9A_NOT_ADMITTED",
+      "OPPO_FIRST_REQUIRED",
+      "NOT_AUTHORIZED_PRIVATE_PUBLIC"
+    ],
+    "traceability_comprehensibility": [
+      "FULL_SHA256_IMMUTABLE_SOURCE",
+      "INDEPENDENT_PR259_CHECKRUNS_16_OF_16_SUCCESS",
+      "POLICY_CI_RUN_41285675546",
+      "SEPARATE_LIVING_FOUNDATION_AND_TWIN_ADMISSION"
+    ]
+  }
+}

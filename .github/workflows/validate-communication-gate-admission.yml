@@ -1,0 +1,34 @@
+name: Validate Communication Gate C1 Admission Policy
+
+on:
+  push:
+    branches:
+      - "codex/axiom-communication-gate-software-foundation-before-pixel-20261101"
+    paths:
+      - ".github/workflows/validate-communication-gate-admission.yml"
+      - "scripts/validate_nexus_communication_gate_admission.py"
+      - "tests/test_nexus_communication_gate_admission.py"
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_COMMUNICATION_GATE_ADMISSION_STATE_V1_20261101.json"
+  pull_request:
+    paths:
+      - ".github/workflows/validate-communication-gate-admission.yml"
+      - "scripts/validate_nexus_communication_gate_admission.py"
+      - "tests/test_nexus_communication_gate_admission.py"
+      - "research/communication/github-only-exchange-enforcement-20261029/NEXUS_COMMUNICATION_GATE_ADMISSION_STATE_V1_20261101.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  c1-preentry-no-activation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run fail-closed no-write policy tests
+        run: python3 -m unittest discover -s tests -p 'test_nexus_communication_gate_admission.py' -v
+      - name: Validate current C1 staged status (does NOT perform a cutover)
+        run: python3 scripts/validate_nexus_communication_gate_admission.py
