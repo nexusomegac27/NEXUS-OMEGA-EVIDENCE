@@ -1,0 +1,10 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_Q0_RECONSTRUCTED_VIEWER_R1_FAIL_CLOSED_TEST_SUITE_20261108_R0",
+  "node": "v22.16.0",
+  "pass": 20,
+  "total": 20,
+  "failed": [],
+  "remediation_order": "AXIOM_REMEDIATION_SPEC_20261108_R1",
+  "claims": "REVISED_REFERENCE_R1_ONLY_NOT_PRODUCTION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}

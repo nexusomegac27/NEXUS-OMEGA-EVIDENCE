@@ -1,0 +1,32 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R16_Q0_R1_REFERENCE_NODE_VM_HARNESS_PORTABILITY_20261108_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "original_node_replay": "17_OF_20",
+  "corrected_node_replay": "20_OF_20",
+  "platform": "NODE_V22_16_0_LINUX",
+  "viewer_source": "RECONSTRUCTED_R1_NOT_PRODUCTION",
+  "hostinger_write": "NO",
+  "claim_promotion": "NO",
+  "files": {
+    "README.md": {
+      "bytes": 1983,
+      "sha256": "7628b7a7c3b6c9f31047a16464fd4405be9e78076a5db3164df2748b243ba6dc"
+    },
+    "evidence/AXIOM_NODE_R16_Q0_R1_TEST_RECEIPT.json": {
+      "bytes": 324,
+      "sha256": "33988e3b8c8b6c3a1ed4c0b8bf7491cdfe1548c921c56690f56ae1bbe5598801"
+    },
+    "tests/audit-q0-reference-r1.as-received.mjs": {
+      "bytes": 7756,
+      "sha256": "1bb562bc87506ebed82708930d11ee36b97843e55f33cb47aa0bafe738cddbf6"
+    },
+    "tests/audit-q0-reference-r1.mjs": {
+      "bytes": 7793,
+      "sha256": "dc4260e266b9b496edf870b6ddb37e35db79767579c69101ee32b836a121aa6e"
+    },
+    "q0-reference-r1/viewer.js": {
+      "bytes": 9116,
+      "sha256": "e03e6664c312f2f50081e6dc0fb8d03210e847ef5bf67d895688b20a10d8ebea"
+    }
+  }
+}
