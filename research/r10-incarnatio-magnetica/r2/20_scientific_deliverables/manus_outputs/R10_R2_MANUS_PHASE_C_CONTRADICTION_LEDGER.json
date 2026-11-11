@@ -1,0 +1,41 @@
+{
+  "artifact": "R10_R2_MANUS_PHASE_C_CONTRADICTION_LEDGER",
+  "contradictions": [
+    {
+      "contradiction_id": "C1",
+      "source_a": "Mistral/Vibe: ITF for TLC traces",
+      "source_b": "GROK: ITF primarily Apalache",
+      "likely_reason": "Confusion between TLA+ ecosystem traces and tool-specific producers.",
+      "resolution": "GROK is better supported: ITF is documented for Apalache/Quint; TLC has its own formats. Preserve the contradiction for the TLC claim."
+    },
+    {
+      "contradiction_id": "C2",
+      "source_a": "Mistral/GROK: DSSE envelope + SCITT Signed Statement",
+      "source_b": "RFC 9943: SCITT Signed Statements are COSE_Sign1",
+      "likely_reason": "Both are content/signature ecosystems but have different wire envelopes.",
+      "resolution": "Not directly compatible by default. Require an explicit COSE_Sign1 representation or a tested bridge; do not call direct interoperability confirmed."
+    },
+    {
+      "contradiction_id": "C3",
+      "source_a": "Mistral: custom TLC predicate",
+      "source_b": "GROK: no TLC standard",
+      "likely_reason": "A private C1 predicate was conflated with a published standard.",
+      "resolution": "Both can be true: a custom schema may be design-valid while no public TLC standard exists."
+    },
+    {
+      "contradiction_id": "C4",
+      "source_a": "GROK: Lacuna SOURCE_GAP",
+      "source_b": "Zenodo record 22063353: reachable v0.6",
+      "likely_reason": "Temporal drift after the GROK search date or an incorrect record-resolution assumption.",
+      "resolution": "GROK claim is stale/wrong as of 2026-10-04; replace SOURCE_GAP with SOURCE_FOUND_NONSTANDARD and record the new version."
+    },
+    {
+      "contradiction_id": "C5",
+      "source_a": "GROK: no material drift",
+      "source_b": "Current primary pages: SLSA v1.2 current/retired page, TUF 1.0.36, Lacuna v0.6",
+      "likely_reason": "The source ledger froze an earlier snapshot and did not re-open all URLs at the current date.",
+      "resolution": "Preserve DRIFT_FLAGGED; re-pin versions and dates before any downstream claim."
+    }
+  ],
+  "status": "CONTRADICTIONS_PRESERVED_AND_PARTIALLY_RESOLVED"
+}

@@ -1,0 +1,25 @@
+{
+  "artifact": "R10_R2_MANUS_NON_FINDING_CERTIFICATES",
+  "certificates": [
+    {
+      "id": "NF-01",
+      "statement": "No claim of implementation, node activation, claim promotion, architecture finalization, or auto-follow-up was made.",
+      "basis": "Task stop boundaries."
+    },
+    {
+      "id": "NF-02",
+      "statement": "No independent recomputation of dab75cff... was claimed.",
+      "basis": "Original Mistral/Vibe ZIP bytes are not present as a separate accessible input."
+    },
+    {
+      "id": "NF-03",
+      "statement": "No assertion that a C1 custom predicate is a published TLC standard was made.",
+      "basis": "G3/G7 distinction."
+    },
+    {
+      "id": "NF-04",
+      "statement": "No assertion that Lacuna v0.6 is a standards-track standard was made.",
+      "basis": "Zenodo record explicitly says specification, not standard."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "artifact": "R10_R2_MANUS_MANIFEST",
+  "created_on": "2026-10-04",
+  "artifacts": [
+    {
+      "name": "R10_R2_MANUS_CAPABILITY_STAMP.json",
+      "bytes": 709,
+      "sha256": "326d2de6d7d13b2d3066a57ff430132bc7d0761786b743081d63b23c99990771"
+    },
+    {
+      "name": "R10_R2_MANUS_EMPFEHLUNG.md",
+      "bytes": 3385,
+      "sha256": "3d2fa0988c26c9cf963f94b1148336bb077b4e70f7c64b657d1ba6762d8370fa"
+    },
+    {
+      "name": "R10_R2_MANUS_NON_FINDING_CERTIFICATES.json",
+      "bytes": 901,
+      "sha256": "929a6deacf497bc61a9cd444477d981c1e652948e60cf67f42146f1770802caa"
+    },
+    {
+      "name": "R10_R2_MANUS_PHASE_A_ZIP_META_VERIFICATION.json",
+      "bytes": 8198,
+      "sha256": "cd3c50be43892f1e2dc93134de68dfe349038efa250bb1bf6dbc411101f8ce5f"
+    },
+    {
+      "name": "R10_R2_MANUS_PHASE_B_GROK_CLAIM_RECHECK.json",
+      "bytes": 6376,
+      "sha256": "9e9e1ee5ddb63c79921e25e8b2ede793b3db3fcb39104aa1677ded628a966b0c"
+    },
+    {
+      "name": "R10_R2_MANUS_PHASE_C_CONTRADICTION_LEDGER.json",
+      "bytes": 2212,
+      "sha256": "8f1c161e2db0f7045fffa7790191aed7304860966596baf6cca88e3c2bc3a066"
+    },
+    {
+      "name": "R10_R2_MANUS_PHASE_D_DRIFT_LEDGER.json",
+      "bytes": 3053,
+      "sha256": "43cfec8496e7f4b6323727d057af9a795f1108158372dbe3301fd0737add84e7"
+    },
+    {
+      "name": "R10_R2_MANUS_PHASE_E_GAP_ANALYSIS.json",
+      "bytes": 2212,
+      "sha256": "65aab0ee1eed4faec69a1eeab1d56e74417e70e9f5cb3951cad33f83ebd8fbb4"
+    },
+    {
+      "name": "R10_R2_MANUS_TERMINAL_HANDSHAKE.json",
+      "bytes": 885,
+      "sha256": "9243955483f17b89eb544b6a8fdc3118fe28eeb031470bc0a6ceebeafa6728c5"
+    }
+  ],
+  "zip_stack": "R10_R2_MANUS_META_VERIFICATION_ZIP_STACK_20261004.zip",
+  "zip_self_hash_note": "Final ZIP hash is reported in terminal handshake and chat; embedding it here would create a circular hash."
+}

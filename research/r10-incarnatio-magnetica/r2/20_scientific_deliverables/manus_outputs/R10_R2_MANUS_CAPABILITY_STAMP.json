@@ -1,0 +1,24 @@
+{
+  "artifact": "R10_R2_MANUS_CAPABILITY_STAMP",
+  "agent_id": "MANUS",
+  "session_reference": "R10_R2_META_VERIFICATION",
+  "measured_on": "2026-10-04",
+  "capabilities": {
+    "WEB_SEARCH": "YES",
+    "DIRECT_URL_FETCH": "YES",
+    "PRIMARY_SOURCE_ACCESS": "YES",
+    "GITHUB_READ": "YES",
+    "FILE_INPUT": "YES",
+    "FILE_BYTE_ACCESS": "YES",
+    "ARCHIVE_INSPECTION": "YES",
+    "BYTE_HASHING": "YES",
+    "CODE_EXECUTION": "YES",
+    "PYTHON_SANDBOX": "YES",
+    "ZIP_INSPECTION": "YES",
+    "NETWORK_EGRESS": "YES"
+  },
+  "capability_status": "MEASURED",
+  "notes": [
+    "ZIP and extracted entries were locally inspected; online sources were fetched from primary URLs."
+  ]
+}
