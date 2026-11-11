@@ -1,0 +1,11 @@
+{
+  "status": "BOUND_ACTIVE_C1",
+  "checks": [
+    "BIRTH_RECEIPT_PRESENT",
+    "GENESIS_HASH_FROZEN",
+    "LIFE_RECEIPT_000001_PRESENT",
+    "REGISTRY_BIND",
+    "TIMER_ACTIVE"
+  ],
+  "verified_at_utc": "2026-09-30T16:01:52Z"
+}

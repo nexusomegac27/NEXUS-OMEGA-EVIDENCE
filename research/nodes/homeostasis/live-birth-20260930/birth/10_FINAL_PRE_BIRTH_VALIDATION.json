@@ -1,0 +1,13 @@
+{
+  "package_rehash": "e32849c5f63edc3c0d15ad597530aecd2843c0cb0c90558b53ee8904c559e8d1",
+  "package_match": true,
+  "manifest_file_sha256": "cf0d00e0270b059c87a63168268a179bf748a7163ea52d3855d82a91eafd2dfa",
+  "order_sha256": "ff7ed55687579cdc04d9a66aee3b1803ff15b0c7031ea6785887d211a9e527ab",
+  "order_bytes": 11610,
+  "order_match_declared": true,
+  "g20": "GRANTED",
+  "g21": "GRANTED",
+  "integrity": "PASS",
+  "fake_birth": false,
+  "partial_birth": false
+}

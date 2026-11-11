@@ -1,0 +1,18 @@
+{
+  "chain": [
+    "PREPARE",
+    "ACTIVATE_SERVICE",
+    "FIRST_HEARTBEAT",
+    "VERIFY_IDENTITY",
+    "COMMIT_BIRTH_RECEIPT",
+    "FREEZE_GENESIS_HASH",
+    "START_BIRTH_TIMER",
+    "CREATE_LIFE_RECEIPT_000001",
+    "REGISTER_NODE",
+    "VERIFY_WATCHDOG",
+    "VERIFY_REMOTE_STATE"
+  ],
+  "status": "EXECUTED_LOCAL_CANONICAL_PENDING_REMOTE_VERIFY",
+  "canonical_birth": "B3",
+  "birth_timestamp_utc": "2026-09-30T16:01:52Z"
+}

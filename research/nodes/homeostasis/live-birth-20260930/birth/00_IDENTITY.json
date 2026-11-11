@@ -1,0 +1,20 @@
+{
+  "node_name": "NEXUS_NODE_HOMEOSTASIS",
+  "node_urn": "urn:nexus-omega:node:homeostasis:v1",
+  "node_class": "INTERNAL_OPERATIONAL_CONTINUITY_AND_RECONCILIATION_NODE",
+  "hierarchy_class": "ELITE",
+  "role": "OPERATIONAL_CONTINUITY_AND_RECONCILIATION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "authority_class": "CONTROL_PLANE_BOUNDED",
+  "self_certified_birth": false,
+  "operator_authorization": {
+    "g20": "GRANTED",
+    "g21": "GRANTED",
+    "order": "NEXUS_OMEGA_AXIOM_HOMEOSTASIS_LIVE_BIRTH_ACTIVATION_AND_PUBLIC_NODE_REGISTRY_ORDER_20260930_R0",
+    "order_sha256": "ff7ed55687579cdc04d9a66aee3b1803ff15b0c7031ea6785887d211a9e527ab",
+    "order_bytes": 11610
+  },
+  "parent_shadow_package_sha256": "e32849c5f63edc3c0d15ad597530aecd2843c0cb0c90558b53ee8904c559e8d1",
+  "parent_shadow_executive_sha256": "8d74a3dcbc0a5d454033b8f76f465484f5fadc0a62a6ac6a7e2d59904b255869"
+}

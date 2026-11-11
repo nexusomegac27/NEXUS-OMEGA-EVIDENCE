@@ -1,0 +1,14 @@
+{
+  "object": "NEXUS_NODE_LIFE_RECEIPT_V1",
+  "life_sequence": 1,
+  "life_receipt_id": "LIFE_RECEIPT_000001",
+  "node_urn": "urn:nexus-omega:node:homeostasis:v1",
+  "genesis_hash": "0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1",
+  "birth_receipt_sha256": "0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1",
+  "birth_timestamp_utc": "2026-09-30T16:01:52Z",
+  "recorded_at_utc": "2026-09-30T16:01:52Z",
+  "event": "CANONICAL_BIRTH_B3_COMMIT",
+  "continuity_prev": null,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "life_receipt_sha256": "46a04c6474ff2112cc3e271b23458c36a21cf106deef1a4c6cb60274a5ec92de"
+}

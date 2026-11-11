@@ -1,0 +1,60 @@
+{
+  "object": "NEXUS_NODE_BIRTH_AND_LIFECYCLE_REGISTRY_V1",
+  "version": "1.0.0",
+  "updated_at_utc": "2026-09-30T16:01:52Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "born_nodes": [
+    {
+      "node_name": "NEXUS_NODE_HOMEOSTASIS",
+      "node_urn": "urn:nexus-omega:node:homeostasis:v1",
+      "node_class": "INTERNAL_OPERATIONAL_CONTINUITY_AND_RECONCILIATION_NODE",
+      "hierarchy_class": "ELITE",
+      "role": "OPERATIONAL_CONTINUITY_AND_RECONCILIATION",
+      "birth_timestamp_utc": "2026-09-30T16:01:52Z",
+      "lifecycle_state": "BORN",
+      "liveness_state": "LIVE_C1_EVENT_DRIVEN",
+      "continuity_state": "RECEIPT_CHAIN_ACTIVE",
+      "current_version": "v1",
+      "genesis_hash": "0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1",
+      "current_life_sequence": 1,
+      "current_life_receipt_digest": "46a04c6474ff2112cc3e271b23458c36a21cf106deef1a4c6cb60274a5ec92de",
+      "birth_receipt_sha256": "0937f0252fb474ff4f4579ba71e59e6f67b49814cea2152d51210fc5cbdc2fa1",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "authority_class": "CONTROL_PLANE_BOUNDED",
+      "last_validated_event": "CANONICAL_BIRTH_B3_COMMIT",
+      "last_canonical_push": "PENDING_THIS_RETURN",
+      "last_deploy": "PENDING_HOSTINGER",
+      "open_caveats_count": 2,
+      "negative_evidence_count": 1,
+      "source_provenance": {
+        "order_sha256": "ff7ed55687579cdc04d9a66aee3b1803ff15b0c7031ea6785887d211a9e527ab",
+        "parent_shadow_package_sha256": "e32849c5f63edc3c0d15ad597530aecd2843c0cb0c90558b53ee8904c559e8d1"
+      },
+      "public_receipt_reference": "/nodes/homeostasis/",
+      "relations": [
+        {
+          "type": "WATCHES",
+          "target": "NEXUS_PUBLIC_DEPLOYMENT_SURFACE"
+        },
+        {
+          "type": "VALIDATES",
+          "target": "NEXUS_LIFE_RECEIPT_CHAIN"
+        },
+        {
+          "type": "RECOVERS",
+          "target": "NEXUS_OPERATIONAL_CONTINUITY"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_born_nodes": 1,
+    "currently_live": 1,
+    "degraded": 0,
+    "hold": 0,
+    "retired": 0,
+    "latest_birth": "NEXUS_NODE_HOMEOSTASIS",
+    "current_homeostasis_status": "BORN_LIVE_C1_EVENT_DRIVEN"
+  }
+}

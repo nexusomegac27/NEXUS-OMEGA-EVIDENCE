@@ -1,0 +1,18 @@
+{
+  "object": "NEXUS_NODE_HOMEOSTASIS",
+  "urn": "urn:nexus-omega:node:homeostasis:v1",
+  "canonical_birth_stage": "B3",
+  "birth_status": "B3_CANONICAL_BIRTH_COMMITTED_AND_PUBLICLY_REGISTERED",
+  "birth_timestamp_utc": "2026-09-30T16:01:52Z",
+  "verify_remote_state": "PASS",
+  "verify_timestamp_utc": "2026-09-30T16:14:16Z",
+  "public_route": "https://www.nexus-mobile.de/nodes/",
+  "hostinger_deploy": "EXECUTED_SCOPED_NODES_ONLY",
+  "public_routes_verified": 12,
+  "seal_updated_utc": "2026-09-30T16:14:16Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "parent_package_sha256": "e32849c5f63edc3c0d15ad597530aecd2843c0cb0c90558b53ee8904c559e8d1",
+  "parent_exec_sha256": "8d74a3dcbc0a5d454033b8f76f465484f5fadc0a62a6ac6a7e2d59904b255869",
+  "order_sha256": "ff7ed55687579cdc04d9a66aee3b1803ff15b0c7031ea6785887d211a9e527ab"
+}
