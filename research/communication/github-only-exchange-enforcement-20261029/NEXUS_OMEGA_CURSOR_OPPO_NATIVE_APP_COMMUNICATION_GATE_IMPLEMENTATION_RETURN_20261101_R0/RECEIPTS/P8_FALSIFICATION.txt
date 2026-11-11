@@ -1,0 +1,50 @@
+﻿OBJECT=P8_FALSIFICATION_AND_STABILITY
+CLAIM_CEILING=C1_DESCRIPTIVE_ONLY
+DEVICE=OPPO_A74_CPH2219
+SERIAL=10.72.252.1:40087
+
+NEG_01_STARTSERVICE_NOT_EXPORTED=PASS_EXPECTED_FAIL
+NEG_01_OUTPUT=Starting service: Intent { act=com.nexusomega.maps.action.SCIENTIFIC_IMU_STOP cmp=com.nexusomega.maps/.sensor.ScientificImuForegroundService }
+adb : Error: Requires permission not exported from uid 10309
+In Zeile:8 Zeichen:9
++ $neg1 = adb -s $dev shell 'am startservice -n com.nexusomega.maps/.se ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error: Requires... from uid 10309:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+NEG_02_WRONG_STOP_ACTION_MISSING_DOT_ACTION=PASS_DOCUMENTED
+NEG_02_WRONG_ACTION=com.nexusomega.maps.SCIENTIFIC_IMU_STOP
+NEG_02_EFFECT=LaunchActivity_else_branch_STARTS_capture
+NEG_02_RUNTIME_SNIPPET=adb : cat: files/scientific_imu/runtime_status.json: No such file or directory
+In Zeile:12 Zeichen:12
++ $wrongRt = adb -s $dev shell 'run-as com.nexusomega.maps cat files/sc ...
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (cat: files/scie...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCo
+NEG_02_REMEDIATION=use_com.nexusomega.maps.action.SCIENTIFIC_IMU_STOP
+NEG_02_CORRECT_STOP_AFTER=PASS
+NEG_02_AFTER_STOP=adb : cat: files/scientific_imu/runtime_status.json: No such file or directory
+In Zeile:16 Zeichen:14
++ ... afterStop = adb -s $dev shell 'run-as com.nexusomega.maps cat files/s ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (cat: files/scie...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+NEG_02_SERVICE_SNIPPET=* ServiceRecord{4a8eb7 u0 com.nexusomega.maps/.sensor.ScientificImuForegroundService}
+    intent={act=com.nexusomega.maps.action.SCIENTIFIC_IMU_STOP 
+cmp=com.nexusomega.maps/.sensor.ScientificImuForegroundService}
+
+NEG_03_CONSENT_ABSENT_HOLD_TRANSFER=PASS_JVM_SUITE
+NEG_03_REF=NativeTransferR2SuiteTest gate_consent_absent_holds_transfer
+NEG_03_EXTERNAL_ACK_INVENTED=NO
+
+NEG_04_MOCK_RECEIVER_NE_EXTERNAL_ACK=PASS_CODE_BOUND
+NEG_04_PUBLIC_WRITE_API=OFF
+
+POS_01_VC11_INSTALL_NONDESTRUCTIVE=PASS
+POS_02_IMU_CAPTURE_SEAL=PASS
+POS_03_NO_ADB_CAPTURE_AND_STOP=PASS
+POS_04_HOST_HARVEST_SHA_MATCH=PASS
+POS_05_JVM_SUITE_28_OF_28=PASS
+
+HARD_FAILS=0
+VERDICT=PASS_WITH_CAVEATS_C1_P8
