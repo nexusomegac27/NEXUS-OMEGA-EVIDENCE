@@ -1,0 +1,96 @@
+{
+  "object": "NEXUS_OMEGA_EXTERNAL_EXPERT_R26_FUNDAMENTAL_MAXI_RETURN_MANIFEST_20261010_R0",
+  "generated_by": "MISTRAL/VIBE (External Expert R26 execution track)",
+  "generated_utc": "2026-10-10",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_order": {
+    "path": "research/r26/axiom-fundamental-api-handshake-20261010/NEXUS_OMEGA_AXIOM_R26_FUNDAMENTAL_MAXI_RESEARCH_ORDER_20261010_R0.md",
+    "bytes": 35117,
+    "sha256": "4fc40bdc1898ab308617e736b6e9d0aa7eff33ff64e8964e6edc5b2b601d64d9",
+    "git_blob_sha1": "4253e84c08954ed7b832b29d1f14bb2c9a2c144c"
+  },
+  "strategy_frame_reference": {
+    "issuer": "GROK (xAI), External Expert R26 strategy lane",
+    "handoff_note_sha256": "68612a236e974868cfc2bc3d40b5f9e4172077011352e5432cf7f7e805b0617c",
+    "pdf_sha256_claimed": "b1b8d3f6e9951afd697a8b4a22179ec4f6f1fb39606e17705903151e6f4ac420",
+    "github_publication_status": "PENDING_OPERATOR_PUBLICATION (no canonical GitHub object yet; MISTRAL/VIBE RECEIVE_ACK for the strategy package therefore still open)"
+  },
+  "asset_source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+  "self_hash_policy": "This manifest deliberately contains no SHA-256 of itself; its hash is recorded in R26-15_R26_SEND_RECEIPT.md and in the PR #70 send-receipt comment (transport law: an object must not embed its own hash).",
+  "assets": [
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-00_EXECUTIVE_DECISION_BRIEF.md",
+      "bytes": 6398,
+      "sha256": "f115d4325c8fee2b871f33e8b1d713c1a612da8f5abad3f66b0beffae1ae0b13",
+      "git_blob_sha1": "f0fae3dea0defdc06de3c0b08914aef678271cc5",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-01_CAUSAL_SOURCE_LEDGER.json",
+      "bytes": 6419,
+      "sha256": "3db72425190970ba523f445c3cc9d9d10f83632cfeeaec55fba8a4d6118e3f80",
+      "git_blob_sha1": "fc1ceea643fe45943e8d30edf671b286b8085b4a",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-03_PERIODIC_RING_KERNEL_AND_STABILITY_AUDIT.md",
+      "bytes": 11138,
+      "sha256": "8ef2bef21d98880bf56836bc76ffc237d9d9b78de77a0f5660091866884ee889",
+      "git_blob_sha1": "0bdcb6e8faacc2203c8970e4736ac371e5800421",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-04_RING_ORBIT_SOURCE_ERROR_BUDGET.md",
+      "bytes": 6281,
+      "sha256": "8a7b3b32e477129f5f224896e266a9d478f223eb1c39fce752b1ccae585ee501",
+      "git_blob_sha1": "ec5214689dfe3d3754a13872a8d8efb40f74ee35",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-05_PREREG_FREEZE_CANDIDATE.json",
+      "bytes": 7657,
+      "sha256": "c40b1d9a0ca306b09924f4702b9ab4e3fdc05488468b79155b8168aca5b7fcf5",
+      "git_blob_sha1": "dbf4003b95193f7ad4639b1b66c55b96a40c8c11",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-06_NF05_NF06_D1_D6_NE1_NE8_MATRIX.json",
+      "bytes": 8099,
+      "sha256": "0e3b403e057100b989fc44314e441531ebdf9bd84846beb0a9f7883457e227ff",
+      "git_blob_sha1": "2727186b00b0b254f75341af1a64f041d87e4260",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-12_EXPERIMENTS_NOT_EXECUTED_LEDGER.md",
+      "bytes": 1831,
+      "sha256": "0010913f738aad2b866d7c6ccdae1e65acf0c661f1214934174ddc5bb392f4a3",
+      "git_blob_sha1": "cb0d67c7dd8e87c3572289a6381a45cd668e0594",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    },
+    {
+      "path": "research/r26/mistral-vibe-priority-tracks-20261010/R26-13_PRIORITIZED_NEXT_ACTIONS.md",
+      "bytes": 3362,
+      "sha256": "8abceb9009d9ca82e673755f1fecc91f81708b22386e44173914cc59953e1297",
+      "git_blob_sha1": "84202f2ef2bb43f2f952ffda66a7194926829a31",
+      "source_commit": "07b658f10b2895bd0828310b5e4e302f00dcc2b6",
+      "status": "SOURCE_EXACT_VERIFIED",
+      "independently_read_back": true
+    }
+  ],
+  "asset_count": 8,
+  "delivery_note": "After this push 10 of 16 MAXI asset slots are populated (8 deliverable assets + R26-14 manifest + R26-15 terminal receipt). R26-02/07/08/09/10/11 are deferred as subordinate and documented with rationale in R26-13_PRIORITIZED_NEXT_ACTIONS.md."
+}
