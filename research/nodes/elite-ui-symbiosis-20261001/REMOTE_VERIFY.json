@@ -1,0 +1,36 @@
+{
+  "OBJECT": "NEXUS_OMEGA_R13_R14_ELITE_NODE_UI_REMOTE_VERIFY_20261001_R0",
+  "LIVE_URLS": {
+    "nodes": "https://www.nexus-mobile.de/nodes/",
+    "elite_js": "https://www.nexus-mobile.de/nodes/elite.js",
+    "registry": "https://www.nexus-mobile.de/nodes/registry.json",
+    "homepage": "https://www.nexus-mobile.de/"
+  },
+  "REMOTE_HTTP": {
+    "elite_js": 200,
+    "nodes_index": 200,
+    "homepage": 200,
+    "registry": 200
+  },
+  "REMOTE_BYTES": {
+    "elite_js": 5008,
+    "nodes_index": 4773,
+    "homepage": 40898,
+    "registry": 3251
+  },
+  "REMOTE_SHA256": {
+    "elite_js": "b7636d03eec2786832a754aa172adede21e043a89357ce69ee3424fe2aab5204",
+    "homepage": "81ec92810bd31a475e81d4037e5947a4808beb5699498c1a67464c2c83d3f3df",
+    "registry": "e215f1a6d1fcad613d1cbcd51d9d7cf4e4221f275dc1b82a15747e9e50715d84"
+  },
+  "STAGED_MATCH": {
+    "elite_js": true,
+    "homepage": true,
+    "registry": true
+  },
+  "HAS_ELITE_NODES_SECTION": true,
+  "HAS_ELITE_JS_REF": true,
+  "HOSTINGER_UPLOADS_OK": 12,
+  "HOSTINGER_UPLOADS_FAIL": 0,
+  "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY"
+}

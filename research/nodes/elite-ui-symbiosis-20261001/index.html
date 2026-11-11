@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEXUS OMEGA — Public Node Registry</title>
+<meta name="description" content="Public derivative of NEXUS_NODE_BIRTH_AND_LIFECYCLE_REGISTRY_V1. Elite UI V1. C1 descriptive only." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/nodes/nodes.css" />
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">NEXUS//OMEGA · PUBLIC NODE REGISTRY · ELITE UI V1</div>
+  <h1>Born Nodes</h1>
+  <p class="lead">Public presentation layer over the canonical birth and lifecycle registry. This page is a derivative surface — not the source of scientific truth. The node owns its state; the UI never defines the node.</p>
+  <div>
+    <span class="badge">SOURCE = NEXUS_NODE_BIRTH_AND_LIFECYCLE_REGISTRY_V1</span>
+    <span class="badge warn">CLAIM_CEILING = C1</span>
+    <span class="badge warn">TRUTH_AUTHORITY = NONE</span>
+    <span class="badge warn">ELITE ≠ TRUTH RANK</span>
+  </div>
+
+  <div class="summary-grid" id="registry-summary" aria-live="polite">
+    <div class="summary-cell"><span class="k">BORN</span><span class="v" data-born>1</span></div>
+    <div class="summary-cell"><span class="k">LIVE</span><span class="v" data-live>1</span></div>
+    <div class="summary-cell"><span class="k">LATEST_BIRTH</span><span class="v" data-latest>NEXUS_NODE_HOMEOSTASIS</span></div>
+    <div class="summary-cell"><span class="k">HOMEOSTASIS</span><span class="v" data-status>BORN_LIVE_C1_EVENT_DRIVEN</span></div>
+  </div>
+
+  <section class="section">
+    <h2>Network (registry-derived)</h2>
+    <div class="graph-wrap">
+      <svg class="graph-svg" id="network-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <ul class="rel-fallback" id="network-list" aria-label="Accessible relation list"></ul>
+  </section>
+
+  <section class="section">
+    <h2>Nodes</h2>
+    <ul id="node-list">
+      <li><a href="/nodes/homeostasis/">NEXUS_NODE_HOMEOSTASIS</a> — operational continuity and reconciliation (ELITE taxonomy, not truth rank)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Machine JSON</h2>
+    <ul>
+      <li><a href="/nodes/registry.json">/nodes/registry.json</a></li>
+      <li><a href="/nodes/homeostasis/state.json">/nodes/homeostasis/state.json</a></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Epistemic legend</h2>
+    <ul>
+      <li>TECHNICAL_FACT — observable system event or receipt presence</li>
+      <li>VALIDATED_RESULT — independently rehashed / gate-passed result</li>
+      <li>INTERPRETATION — human framing; not claim promotion</li>
+      <li>NEGATIVE_EVIDENCE / CAVEAT — preserved limitations</li>
+      <li>ELITE — hierarchy / responsibility class; not scientific superiority</li>
+    </ul>
+  </section>
+
+  <p class="symbiosis-note">Symbiosis law: the node maintains its presentation; presentation never defines the node. Public ≠ canon. Hash match ≠ scientific truth.</p>
+  <p class="nav"><a href="/">← nexus-mobile.de</a> · <a href="/#elite-nodes">homepage elite section</a> · <a href="/research/">research</a></p>
+  <footer class="footer">Updated from registry.json · PUBLIC ≠ CANON · HASH_MATCH ≠ SCIENTIFIC_TRUTH · AUGENHOEHE</footer>
+</main>
+<script src="/nodes/elite.js"></script>
+<script>
+(async function () {
+  try {
+    var reg = await NexusElite.loadJson("/nodes/registry.json");
+    NexusElite.fillSummary(document.getElementById("registry-summary"), reg);
+    var node = (reg.nodes && reg.nodes[0]) || null;
+    NexusElite.renderRelationGraph(
+      document.getElementById("network-svg"),
+      document.getElementById("network-list"),
+      node
+    );
+    if (node && Array.isArray(reg.nodes)) {
+      var ul = document.getElementById("node-list");
+      ul.innerHTML = reg.nodes.map(function (n) {
+        var href = n.public_receipt_reference || "#";
+        return "<li><a href=\"" + NexusElite.escapeHtml(href) + "\">" +
+          NexusElite.escapeHtml(n.node_name) + "</a> — " +
+          NexusElite.escapeHtml(n.role || n.node_class || "") +
+          " <span class=\"badge warn\">" + NexusElite.escapeHtml(n.hierarchy_class || "") + "</span></li>";
+      }).join("");
+    }
+  } catch (e) {
+    var list = document.getElementById("network-list");
+    if (list) list.innerHTML = "<li>Registry load failed (static fallback above remains).</li>";
+  }
+})();
+</script>
+</body>
+</html>
