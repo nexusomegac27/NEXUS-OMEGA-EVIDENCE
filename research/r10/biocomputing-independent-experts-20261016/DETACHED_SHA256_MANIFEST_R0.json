@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10_EXPERT_ORDER_DETACHED_MANIFEST_20261016_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "self_hash": "EXCLUDED",
+  "source_files": [
+    {
+      "source_filename": "NEXUS_~1(20261016-040058).TXT",
+      "role": "GROK_R10_REPORT",
+      "bytes": 12696,
+      "sha256": "12b8cf7f04ad8835db20aa90265ac813572475f92ef1e5c377f03560ab99875e",
+      "status": "AXIOM_PHYSICAL_BYTE_REHASH"
+    },
+    {
+      "source_filename": "XENOKO~1.MD",
+      "role": "XENOCORTICATION_ADJUDICATION",
+      "bytes": 18049,
+      "sha256": "bb3fc9a9dc38608cfe889520392560c2c586b17c36e952c7081da8b7d838b932",
+      "status": "AXIOM_PHYSICAL_BYTE_REHASH"
+    },
+    {
+      "source_filename": "KIMI_N~1.TXT",
+      "role": "KIMI_R10_CRITIQUE",
+      "bytes": 10636,
+      "sha256": "dc1b875df367730d286c4ea29697b588386f236da204781d3ca86ac6e4364079",
+      "status": "AXIOM_PHYSICAL_BYTE_REHASH"
+    }
+  ],
+  "output_files": [
+    {
+      "filename": "NEXUS_OMEGA_AXIOM_R10_INDEPENDENT_EXPERT_MAXI_ORDER_20261016_R0.md",
+      "bytes": 18073,
+      "sha256": "050706bdda52b16840995d02a44ce7ba933ab64099dc279c0bb775cf2d26df17"
+    }
+  ],
+  "expert_dispatch": "NOT_DISPATCHED",
+  "cursor_action": "NONE",
+  "private_origin_files_published": "NO",
+  "evidence_verdict": "ORDER_PREPARED_RESEARCH_ONLY"
+}

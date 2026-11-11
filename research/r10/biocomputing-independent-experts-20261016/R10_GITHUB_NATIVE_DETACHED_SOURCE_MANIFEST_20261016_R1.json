@@ -1,0 +1,89 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R10_GITHUB_NATIVE_SOURCE_EXACT_DETACHED_MANIFEST_20261016_R1",
+  "created_at_date": "2026-10-16",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r10-native-handshake-research-20261016",
+  "immutable_assets_parent_commit": "b90fcd900df9d17c17611858ce8363b3593b7ed8",
+  "main_base_sha": "d355400dabed3c280e1fce5030cab69ea099428b",
+  "scientific_order_object": "NEXUS_OMEGA_AXIOM_R10_BIOCOMPUTING_SOVEREIGN_SYMBIOSIS_EXPERT_MAXI_ORDER_20261016_R0",
+  "transport_correction": "NEXUS_OMEGA_AXIOM_R10_GITHUB_NATIVE_HANDSHAKE_REPAIR_20261016_R1",
+  "original_detached_manifest_sha256": "a91048cae480dde11fa4d6ae572d3de175656fb602c93fad57054efc0511789b",
+  "original_manifest_unmodified": true,
+  "original_prepublication_status": "PRIVATE_ORIGIN_NOT_PUBLISHED_AT_R0",
+  "successor_publication_status": "THREE_ORIGINAL_EXPERT_RESEARCH_TEXTS_NOW_IN_OWNER_GITHUB_BRANCH",
+  "files": [
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/sources/NEXUS_~1(20261016-040058).TXT",
+      "bytes": 12696,
+      "sha256": "12b8cf7f04ad8835db20aa90265ac813572475f92ef1e5c377f03560ab99875e",
+      "git_blob_sha1": "28ee547beb166bad28ad75661aeb14022cc51d01",
+      "line_endings": "CRLF",
+      "source_scope": "OPERATOR_UPLOADED_EXTERNAL_EXPERT_REPORT",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/sources/XENOKO~1.MD",
+      "bytes": 18049,
+      "sha256": "bb3fc9a9dc38608cfe889520392560c2c586b17c36e952c7081da8b7d838b932",
+      "git_blob_sha1": "475bf9bdc9f632e8f5aca983a6199d62022ade60",
+      "line_endings": "LF",
+      "source_scope": "OPERATOR_UPLOADED_EXTERNAL_EXPERT_REPORT",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/sources/KIMI_N~1.TXT",
+      "bytes": 10636,
+      "sha256": "dc1b875df367730d286c4ea29697b588386f236da204781d3ca86ac6e4364079",
+      "git_blob_sha1": "cd5912d327189531e8b865dd73d44dad42d82685",
+      "line_endings": "CRLF",
+      "source_scope": "OPERATOR_UPLOADED_EXTERNAL_EXPERT_REPORT",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/NEXUS_OMEGA_AXIOM_R10_INDEPENDENT_EXPERT_MAXI_ORDER_20261016_R0.md",
+      "bytes": 18073,
+      "sha256": "050706bdda52b16840995d02a44ce7ba933ab64099dc279c0bb775cf2d26df17",
+      "git_blob_sha1": "53080584827400cf7f9ee20f8ab958e85a8df294",
+      "line_endings": "LF",
+      "source_scope": "OWNER_AUTHORED_PUBLIC_SAFE_RESEARCH",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/DETACHED_SHA256_MANIFEST_R0.json",
+      "bytes": 1313,
+      "sha256": "a91048cae480dde11fa4d6ae572d3de175656fb602c93fad57054efc0511789b",
+      "git_blob_sha1": "4d6b70477cc400b2414497e33a4d235fbfcd2b92",
+      "line_endings": "LF",
+      "source_scope": "OWNER_AUTHORED_PUBLIC_SAFE_RESEARCH",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/NEXUS_OMEGA_AXIOM_R10_GITHUB_NATIVE_HANDSHAKE_REPAIR_20261016_R1.md",
+      "bytes": 6826,
+      "sha256": "4e8356ef93e9a05bc8a5354270e3eb33d12eebc2931203e02e0375388ffcf27e",
+      "git_blob_sha1": "d697eaafc4969cd822fe99a91ca2d3bec6136b64",
+      "line_endings": "LF",
+      "source_scope": "OWNER_AUTHORED_PUBLIC_SAFE_RESEARCH",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    },
+    {
+      "path": "research/r10/biocomputing-independent-experts-20261016/README.md",
+      "bytes": 2276,
+      "sha256": "22e22221a286b3c94a8342689bed86474a8ed8b41a572c7e180cc24af7be966a",
+      "git_blob_sha1": "080923c713e9fe6b36490c0973d5f626f5408176",
+      "line_endings": "LF",
+      "source_scope": "OWNER_AUTHORED_PUBLIC_SAFE_RESEARCH",
+      "verified_by": "AXIOM_LOCAL_ORIGINAL_BYTES_AND_GITHUB_BLOB_ORACLE"
+    }
+  ],
+  "manifest_self_hash": "EXCLUDED",
+  "task_order_anchor_status": "NOT_PUBLISHED_PLATFORM_WRITE_BLOCKED",
+  "expert_actor_allowlist": "EMPTY",
+  "expert_delivery_status": "PUBLIC_PULL_AVAILABLE_NOT_INDEPENDENTLY_RECEIVED",
+  "expert_return_status": "PENDING",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "cursor_action": "NONE",
+  "r9": "OPEN_UNCHANGED",
+  "r3": "SEALED_PRESERVED",
+  "scientific_results": "NOT_ESTABLISHED_BY_HASHES"
+}
