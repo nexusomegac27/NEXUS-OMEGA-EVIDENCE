@@ -1,0 +1,44 @@
+{
+  "object": "NEXUS_OMEGA_R29_SCIENCE_SANDBOX_OWNER_DETACHED_READBACK_MANIFEST_20261112_R0",
+  "date_utc": "2026-11-12",
+  "state": "OWNER_SOURCE_READBACK_MATCH_C1_NOT_INDEPENDENT_RECEIVER_ACK",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "branch": "axiom/r29-nexus-science-sandbox-expert-tesseract8-20261112-r0",
+  "predecessor_r28_cursor_pr_head": "96d2f16da7749ee212cf52f26e3af49105665c29",
+  "files": [
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R29_NEUTRAL_EXTERNAL_EXPERT_TESSERACT8_SANDBOX_RESEARCH_MAXI_ORDER_20261112_R0.md",
+      "bytes": 15707,
+      "sha256": "8bdfed37568a52c94ee4a1ac52b8e47f1d4d82150c5e07c9514af22c41bc3fc9",
+      "git_blob_sha1": "006a8c6033bd91320c315a7ab397db829cab5abd",
+      "readback": "OWNER_MATCH"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R29_F01_F26_ADVERSARIAL_RESEARCH_FIXTURES_AND_METRICS_20261112_R0.md",
+      "bytes": 8947,
+      "sha256": "908b4b0e632eadaf095ff5b4516cde6694fb3907fbd292ab9ea752e53a8453fa",
+      "git_blob_sha1": "e9abc2443393619b03cf8e125c40c46b25597c81",
+      "readback": "OWNER_MATCH"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R29_NEXUS_SCIENCE_SANDBOX_TASK_ANCHOR_20261112_R0.json",
+      "bytes": 6894,
+      "sha256": "7200e7524ad71ebe164ef04b980df647a32ee5ed54ec837f7730bce13e27aa2e",
+      "git_blob_sha1": "2fb07c7885f949fc75cf8a6dd4c99e9895a026d7",
+      "readback": "OWNER_MATCH"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/receipts/R29_AXIOM_INDEPENDENT_R28_INTAKE_AND_RESEARCH_BOUNDARIES_20261112_R0.md",
+      "bytes": 4046,
+      "sha256": "72f9373eef5d8c3573a72ed6045eb9e99b820b5ecd283b1e46ae863ec0d67fa0",
+      "git_blob_sha1": "8107352a6ad2ef3cb5600b57938dcc039c0a98a6",
+      "readback": "OWNER_MATCH"
+    }
+  ],
+  "manifest_self_sha256": "EXCLUDED_TO_AVOID_CIRCULARITY",
+  "independent_receiver_ack": "PENDING_AXIOM_SECOND_PARTY_REHASH",
+  "publication": "GITHUB_DRAFT_NOT_MERGED",
+  "runtime_claim": "NOT_EXECUTED",
+  "device_claim": "NOT_CAPTURED",
+  "no_external_write": true
+}
