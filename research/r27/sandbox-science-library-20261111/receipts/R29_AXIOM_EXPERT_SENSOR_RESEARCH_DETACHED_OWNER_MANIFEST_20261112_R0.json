@@ -1,0 +1,39 @@
+{
+  "object": "NEXUS_OMEGA_R29_GROK_AXIOM_SENSOR_PIPELINE_OWNER_READBACK_MANIFEST_20261112_R0",
+  "date_utc": "2026-11-12",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "branch": "axiom/r29-expert-adjudication-sensor-pipeline-alignment-20261112-r0",
+  "children": [
+    {
+      "path": "research/r27/sandbox-science-library-20261111/receipts/R29_AXIOM_GROK_EXPERT_REVIEW_AND_SANDBOX_VALIDATION_20261112_R0.md",
+      "bytes": 5279,
+      "sha256": "065b8bb62ecef08bb820fc0b9450a5b4ce32deaa76e0da4327fa45f02c9b69f9",
+      "git_blob_sha1": "517af5568186a51b129078c3d42568ea1014fe5d",
+      "readback": "MATCH_OWNER_SOURCE"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R29_CURSOR_SENSOR_PIPELINE_SCIENTIFIC_ALIGNMENT_AND_EXPERT_REPAIR_20261112_R0.md",
+      "bytes": 6253,
+      "sha256": "5ac5797f5d31e552b3462db0b5b8bdd1399f78ca0ff61ea5d6913e05eb8e78c7",
+      "git_blob_sha1": "9c8916cbad71964110f5c44ef2288ed2a3bf0857",
+      "readback": "MATCH_OWNER_SOURCE"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R29_AXIOM_CURSOR_EXPERT_SENSOR_PIPELINE_TASK_ANCHOR_20261112_R0.json",
+      "bytes": 7059,
+      "sha256": "7b5db2599b841aceaba11a8f18e19e132ceb30db542dd4186448ac774e7a1821",
+      "git_blob_sha1": "11283f8a8123738057022de63da93d7539f33cd1",
+      "readback": "MATCH_OWNER_SOURCE"
+    }
+  ],
+  "operator_uploaded_external_grok_zip": {
+    "bytes": 12701,
+    "sha256": "c56b82f4fff82c580c3d422b5ab78489322aa71d941909cdc920746a46b85d72",
+    "copied_to_public_github": false
+  },
+  "baseline_source_r29_commit": "21b6fd71bc34034badce24b83476678835f43e86",
+  "app_sync": "SOURCE_DESIGN_ONLY_NO_DEVICE_RECEIPT",
+  "science_status": "SOURCE_MATCH_CONTRACT_CAVEATS",
+  "independent_second_receiver_ack": "PENDING",
+  "manifest_self_sha256": "EXCLUDED_TO_AVOID_CIRCULARITY"
+}
