@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R29_NEXUS_SCIENCE_SANDBOX_NEUTRAL_EXPERT_TASK_ANCHOR_20261112_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OPERATOR_AUTHORIZED",
+    "recipient_role": "SELF_DECLARED_EXTERNAL_RESEARCH_EXPERT",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_R28_OPPO_CPH2219_INDEPENDENT_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_20261111_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "2bc47b4d52338afed41049008d8047b054fda9d2",
+    "predecessor_path": "research/r27/sandbox-science-library-20261111/orders/R28_OPPO_CPH2219_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_ORDER_20261111_R0.md",
+    "predecessor_bytes": 15213,
+    "predecessor_sha256": "298b79ffa255fd4010ac167428a372a845100caee7d570bfc1864d7966178c60"
+  },
+  "delegation": {
+    "scope": "EXTERNAL_RESEARCH_ONLY_PUBLISHED_PUBLIC_SAFE_READONLY_NEXUS_SCIENCE_SANDBOX_R29",
+    "allowed_actions": [
+      "Read public pinned sources and search independent original standards",
+      "Analyze and falsify competing Sandbox/TESSERACT architectures",
+      "Produce quarantined expert research returns through operator bridge",
+      "Run synthetic offline tests only within separately authorized own environment"
+    ],
+    "prohibited_actions": [
+      "Write or create folders in governed public GitHub repository",
+      "Connect to OPPO or run sensors, ADB, Type-C host actions, recording or calibration",
+      "Merge PR355 PR356 or current R29 draft and deploy Hostinger",
+      "Reuse unregistered R27E write slots or create agents and permissions",
+      "Quote or reconstruct unobserved private source bytes",
+      "Promote C1 science to C2, assert truth or fake independent receiver ACK"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Under independent formal, provenance and adversarial tests does a typed TESSERACT-8 research graph genuinely outperform simpler alternatives while preserving C1 and actor/real device hard gates?",
+    "deliverables": [
+      "E01 SELF_DECLARATION_AND_SOURCE_REGISTER",
+      "E02 INDEPENDENT_FORMAL_CRITIQUE",
+      "E03 SANDBOX_V1_V2_COMPARATIVE_REVIEW",
+      "E04 TESSERACT8_OR_ALTERNATIVE_CONTRACT",
+      "E05 NEGATIVE_26_TEST_MATRIX_AND_RECEIPTS",
+      "E06 CLAIM_DISSENT_AND_UNCERTAINTY_REGISTER",
+      "E07 DETACHED_SHA256_MANIFEST_AND_TRANSPORT"
+    ],
+    "falsifiers": [
+      "N12 rank proof known vs unknown gravity inputs",
+      "F01-F26 predeclared adversarial and positive control matrix",
+      "Common model/provider/source path shows false independence",
+      "Clock-domain and consent failure prevents false physical run",
+      "TESSERACT-8 has unmeasured overhead or more false positives than minimal Task Anchor baseline"
+    ],
+    "acceptance_tests": [
+      "All sources source-exact or evidence-limited declared",
+      "All planned tests separated from actually executed offline tests",
+      "Formal known-orientation rank-12 positive control accompanied by unknown-pose counterclaim",
+      "No unsupported performance percentage or C2 claim",
+      "Independent receiver rehash required before authority label"
+    ],
+    "pause_conditions": [
+      "Private source required for claim but unavailable",
+      "Unregistered actor attempts GitHub write",
+      "Real device receipt/host consent absent and physical test proposed",
+      "Source contains secret personal data or unlicensed full text"
+    ],
+    "not_executed": [
+      "R29 external expert returns",
+      "R29 26-fixture executable implementation on actual target environment",
+      "Physical sensor capture OPPO CPH2219",
+      "NEXUS isolated external-agent runtime qualification",
+      "Any merge or WWW Hostinger deploy"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R29_NEXUS_SCIENCE_SANDBOX_NEUTRAL_EXPERT_TASK_ANCHOR_20261112_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Origin hash/source substituted",
+      "Authority scope claimed beyond read-only research",
+      "Model family falsely counted independently",
+      "Static test falsely upgraded to real sensor observation",
+      "Claim promotion without source and authorization",
+      "History rewritten instead of append-only successor"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "2bc47b4d52338afed41049008d8047b054fda9d2",
+        "path": "research/r27/sandbox-science-library-20261111/orders/R28_OPPO_CPH2219_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_ORDER_20261111_R0.md",
+        "bytes": 15213,
+        "sha256": "298b79ffa255fd4010ac167428a372a845100caee7d570bfc1864d7966178c60",
+        "source_status": "GITHUB_SOURCE_VERIFIED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SAFE_METADATA_ONLY; NO_PRIVATE_R28_ZIPS_RAW_SENSOR_FILES_LOCAL_HOST_PATHS_SECRETS_OR_COPYRIGHT_FULLTEXT",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Formal rank and counterexample reproducibility",
+      "Comparative performance with prespecified denominator and source-exact run logs",
+      "F01-F26 test execution transparently separated from design coverage"
+    ],
+    "robustness_stability": [
+      "Runtime and actor scope fail-closed",
+      "Immutable predecessor and no destructive reset",
+      "Independence/topology adversarial fixtures"
+    ],
+    "traceability_comprehensibility": [
+      "Pinned commit and complete SHA256 with detached manifest",
+      "W3C PROV/SLSA/OpenLineage only as reference adapters",
+      "Explicit uncertainty, dissents, missing evidence and receiver pending"
+    ]
+  }
+}
