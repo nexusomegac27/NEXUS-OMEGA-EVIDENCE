@@ -1,0 +1,46 @@
+{
+  "object": "NEXUS_OMEGA_R28_OPPO_CPH2219_FFP_EXPERT_ORDER_OWNER_READBACK_MANIFEST_20261111_R0",
+  "schema_version": "1.0.0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "branch": "axiom/r28-oppo-independent-ffp-experts-sandbox-20261111-r0",
+  "source_base_commit": "a0851058f4bfcf4b376628f7f362b8cfdedab80d",
+  "parent_object": "NEXUS_OMEGA_R27_NEUTRAL_INDEPENDENT_EXPERT_SANDBOX_LIBRARY_MANDATE_20261111_R0",
+  "parent_path": "research/r27/sandbox-science-library-20261111/orders/NEUTRAL_EXPERT_RESEARCH_MANDATE.md",
+  "parent_bytes": 4241,
+  "parent_sha256": "2268fe2c1905951facdf0fad35da6483ef76f148c9893b49b2efdb96a7650d16",
+  "children": [
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R28_OPPO_CPH2219_FITNESS_FOR_PURPOSE_EXPERT_RESEARCH_ORDER_20261111_R0.md",
+      "bytes": 15213,
+      "sha256": "298b79ffa255fd4010ac167428a372a845100caee7d570bfc1864d7966178c60",
+      "git_blob_sha1": "b61decd8cb7e994108bc2ead6a2b2774bbd69d27",
+      "owner_readback": "MATCH"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R28_OPPO_CPH2219_PRIMARY_SOURCES_AND_FALSIFIERS_20261111_R0.md",
+      "bytes": 5487,
+      "sha256": "e5e08f43c29f9de6b346b77bdd8054485be1f64ab0f5bb25ee5c46b3655fb23c",
+      "git_blob_sha1": "27119c14c2a53e7b32c2f30de8dd935e06a183a3",
+      "owner_readback": "MATCH"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R28_OPPO_CPH2219_TASK_ANCHOR_20261111_R0.json",
+      "bytes": 5382,
+      "sha256": "d39350e56df0431f797d9450d8cf80e03a9ac35eb64241983c16ed5b636e233a",
+      "git_blob_sha1": "ff71b53ecbd616874e685d1b1e34fc3860bf2172",
+      "owner_readback": "MATCH"
+    }
+  ],
+  "manifest_self_hash": "EXCLUDED_TO_AVOID_CIRCULARITY",
+  "owner_file_readback": "3_OF_3_MATCH",
+  "independent_receiver_rehash": "PENDING",
+  "schema_validation": "TASK_ANCHOR_BASIC_GUARDS_ONLY_NOT_FULL_OFFLINE_VALIDATOR",
+  "external_agents_execution": "NOT_STARTED",
+  "github_external_write_slot": "NOT_ALLOCATED",
+  "pr_merge": "NOT_AUTHORIZED",
+  "private_device_capture": "NOT_INCLUDED",
+  "operator_custody_R28": "CHAT_REPORTED_NOT_SOURCE_EXACT_PUBLIC",
+  "return_inbox": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+  "next": "WAIT_INDEPENDENT_DESK_RESEARCH_RETURNS; KEEP_HARD_DEVICE_TYPE_C_GATE_SEPARATE"
+}
