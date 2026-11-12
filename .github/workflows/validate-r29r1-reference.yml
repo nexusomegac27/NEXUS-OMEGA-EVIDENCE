@@ -1,0 +1,69 @@
+name: R29R1 synthetic reference F01-F26 (not target sandbox)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/r29_reference_f01_f26.py'
+      - 'scripts/r29_reference_mutations.py'
+      - '.github/workflows/validate-r29r1-reference.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  r29r1-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify original source identities before running
+        shell: bash
+        run: |
+          printf '%s  %s\n' \
+            662a6e4d626e67b6f7fcdc14ecc211421c4b8ef762e6e25a0105592b03b39f2e scripts/r29_reference_f01_f26.py \
+            aaeac633f3d9a5f41ab51114aa18cce88b1e3bb251f2a4171d25b4a294e01917 scripts/r29_reference_mutations.py \
+          | sha256sum --check --status
+      - name: Install isolated-reference numerical dependency
+        run: python -m pip install --disable-pip-version-check --no-cache-dir --only-binary=:all: 'numpy==2.3.5'
+      - name: Run original F01-F26 synthetic reference
+        shell: bash
+        run: |
+          python scripts/r29_reference_f01_f26.py > "$RUNNER_TEMP/r29r1_reference_result.json"
+          python - "$RUNNER_TEMP/r29r1_reference_result.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["pass_count"] == 26 and d["expected_count"] == 26
+          assert d["positive_twin_pass"] == 25 and d["positive_twin_expected"] == 25
+          assert d["sandbox_runtime_validated"] is False
+          assert d["device_captured"] is False
+          print("REFERENCE_F01_F26=26/26; POSITIVE_TWINS=25/25; TARGET_RUNTIME=NOT_EXECUTED")
+          PY
+          sha256sum "$RUNNER_TEMP/r29r1_reference_result.json"
+      - name: Run anti-degenerate mutations
+        shell: bash
+        run: |
+          python scripts/r29_reference_mutations.py > "$RUNNER_TEMP/r29r1_mutation_result.json"
+          python - "$RUNNER_TEMP/r29r1_mutation_result.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["baseline"]=={"primary_pass":26,"positive_pass":25}
+          assert d["always_deny"]["positive_pass"]==0
+          assert d["always_accept"]["primary_pass"]==1
+          assert d["target_sandbox"]=="NOT_EXECUTED"
+          print("MUTATIONS_EXPECTED; TARGET_RUNTIME=NOT_EXECUTED")
+          PY
+          sha256sum "$RUNNER_TEMP/r29r1_mutation_result.json"
+      - name: Explicit claim ceiling in job summary
+        if: always()
+        shell: bash
+        run: |
+          printf '%s\n' \
+            '### NEXUS R29R1 · Reference-only receipt (C1)' \
+            'This job executes published synthetic reference policy checks in GitHub Actions.' \
+            '**It is NOT the NEXUS target sandbox, a device recording, an isolated runtime qualification, or a promotion of scientific claims.**' \
+            'Do not infer any Android/OPPO synchronization from CI success.' \
+            >> "$GITHUB_STEP_SUMMARY"
