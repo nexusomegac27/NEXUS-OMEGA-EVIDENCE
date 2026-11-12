@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R29_AXIOM_CURSOR_EXPERT_SENSOR_PIPELINE_TASK_ANCHOR_20261112_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OPERATOR_VIA_RESEARCH",
+    "recipient_role": "CURSOR_PRAXIS_PRIVATE_IMPLEMENTATION",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_R29_NEXUS_SCIENCE_SANDBOX_NEUTRAL_EXTERNAL_EXPERT_RESEARCH_MAXI_ORDER_20261112_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "21b6fd71bc34034badce24b83476678835f43e86",
+    "predecessor_path": "research/r27/sandbox-science-library-20261111/orders/R29_NEUTRAL_EXTERNAL_EXPERT_TESSERACT8_SANDBOX_RESEARCH_MAXI_ORDER_20261112_R0.md",
+    "predecessor_bytes": 15707,
+    "predecessor_sha256": "8bdfed37568a52c94ee4a1ac52b8e47f1d4d82150c5e07c9514af22c41bc3fc9"
+  },
+  "delegation": {
+    "scope": "READ_ONLY_R29_EXPERT_SOURCE_ALIGNMENT_AND_PRIVATE_OPPO_APP_SENSOR_PREFLIGHT_NO_REAL_DEVICE_ACTION",
+    "allowed_actions": [
+      "Audit source-exact expert return and append scientific corrections",
+      "Implement/validate offline synthetic contract tests in separately authorized private workspace",
+      "Review actual native Android app and host source when legitimately available",
+      "Prepare bounded stationary capture prerequisites without starting capture"
+    ],
+    "prohibited_actions": [
+      "Capture real OPPO sensor data without separate actual device consent receipt",
+      "Upload private raw data or keys to public GitHub or Hostinger",
+      "Merge any pending PR or deploy public/private production code automatically",
+      "Grant external GitHub writers or reuse frozen R27E slot",
+      "Erase predecessor, invent receiver acknowledgement or promote C1 to C2"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "How can Grok R29 audited C1 research and source-contract gaps be converted into reproducible Sandbox validators and an explicitly gated OPPO private sensor-pipeline source readiness sync without falsely claiming physical execution?",
+    "deliverables": [
+      "Scoped scientific R29 Grok expert intake receipt",
+      "E04/E05/E07 machine contract successor and actual offline test evidence if implemented",
+      "A/B minimal-core-versus-TESSERACT8 benchmark plan with unknown baseline",
+      "Explicit R28_STATIONARY_CAPTURE and PRIVATE_OPPO_BRIDGE gate namespace ledger",
+      "Read-only Android app source/host preflight and optional private implementation changes on separately authorized branch",
+      "Sealed private return with independent receiver ACK pending"
+    ],
+    "falsifiers": [
+      "Failure to distinguish GLM source rehash from independent full expert science",
+      "False E04/E05/E07 JSON completeness PASS",
+      "Bare gate name G0 transfers authorization across R28 and private PR33",
+      "Capture started when current device/host/consent receipt missing",
+      "Claimed runtime Sandbox efficacy without paired actual logs"
+    ],
+    "acceptance_tests": [
+      "Source-package ZIP 12701 bytes and 8/8 child SHA256 rehashed independently",
+      "Schema valid and negatives fail deterministically at tested local offline scope",
+      "Missing real sensor receipt never converted to fabricated observations",
+      "Private raw samples never in public source repo",
+      "No merge/Hostinger or external authority upgrade"
+    ],
+    "pause_conditions": [
+      "Device/host app not available and physical action requested",
+      "Untrusted or private original missing",
+      "Machine contract not truly executable",
+      "Unregistered writes or secrets/privacy leak proposed"
+    ],
+    "not_executed": [
+      "Real OPPO sensor acquisition",
+      "Actual private signed release installation",
+      "Independent live private server CAS receipt",
+      "Full NEXUS sandbox runtime qualification",
+      "Any Hostinger or WWW deployment"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R29_AXIOM_CURSOR_EXPERT_SENSOR_PIPELINE_TASK_ANCHOR_20261112_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "Unversioned G0 state used across R28 and private OPPO Bridge",
+      "Material E04/E05/E07 contract gap silently reclassified PASS",
+      "Model producer identity presented as independent attestated peer",
+      "Simulated evidence reclassified as real device data",
+      "Unapproved writer or capture action requested"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "21b6fd71bc34034badce24b83476678835f43e86",
+        "path": "research/r27/sandbox-science-library-20261111/orders/R29_NEUTRAL_EXTERNAL_EXPERT_TESSERACT8_SANDBOX_RESEARCH_MAXI_ORDER_20261112_R0.md",
+        "bytes": 15707,
+        "sha256": "8bdfed37568a52c94ee4a1ac52b8e47f1d4d82150c5e07c9514af22c41bc3fc9",
+        "source_status": "AXIOM_BYTES_MATCH"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SCIENTIFIC_DERIVATIVE_AND_METADATA_ONLY; PRIVATE_GROK_ORIGINAL_AND_OPPO_RAW_REMAIN_IN_OPERATOR_OR_PRIVATE_CUSTODY",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Actual local validator outputs/exit code preserved",
+      "Offline N12 rank known-input positive and unknown-pose negative control",
+      "No efficiency improvement claim without actual comparative A/B run logs"
+    ],
+    "robustness_stability": [
+      "Fail closed device and unregistered actor gates",
+      "No unnamed G0 authorization mapping",
+      "Privacy and no unsigned physical release"
+    ],
+    "traceability_comprehensibility": [
+      "Original Grok ZIP SHA256 and its scoped scientific caveats bound",
+      "Pinned R29 public parent with exact SHA256 and bytes",
+      "Versioned private PR33 source pointer without public private bytes"
+    ]
+  }
+}
