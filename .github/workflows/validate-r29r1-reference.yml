@@ -28,7 +28,8 @@ jobs:
             aaeac633f3d9a5f41ab51114aa18cce88b1e3bb251f2a4171d25b4a294e01917 scripts/r29_reference_mutations.py \
           | sha256sum --check --status
       - name: Install isolated-reference numerical dependency
-        run: python -m pip install --disable-pip-version-check --no-cache-dir --only-binary=:all: 'numpy==2.3.5'
+        run: |
+          python -m pip install --disable-pip-version-check --no-cache-dir --only-binary=:all: 'numpy==2.3.5'
       - name: Run original F01-F26 synthetic reference
         shell: bash
         run: |
