@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "object": "NEXUS_OMEGA_R30_NEUTRAL_SINGLE_EXPERT_FALSIFICATION_TASK_ANCHOR_20261114_R0",
+  "norm_id": "NEXUS_OMEGA_TASK_ANCHOR_NORM_V1",
+  "norm_class": "NEXUS_INTERNAL_BINDING_TECHNICAL_SPECIFICATION",
+  "din_status": "DIN_SPEC_92001_1_INSPIRED_NOT_DIN_ISSUED_NOT_CERTIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "origin": {
+    "operator_authority": "OPERATOR_GOVERNED_ONLY",
+    "issuer_role": "AXIOM_OPERATOR_VIA_RESEARCH",
+    "recipient_role": "ONE_INDEPENDENT_EXTERNAL_EXPERT_SELF_IDENTIFIED",
+    "verified_github_actor": "NOT_ESTABLISHED",
+    "predecessor_object": "NEXUS_OMEGA_CURSOR_R29R1_BOUNDED_TARGET_RUNTIME_RECEIPT_RETURN_20261112_R0",
+    "predecessor_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "predecessor_commit": "625b026ef5f67273fb2dc752d58028ddd0af4b27",
+    "predecessor_path": "research/r27/sandbox-science-library-20261111/orders/R29R1_CURSOR_SINGLE_PATH_SOURCE_GAP_CLOSURE_AND_TARGET_SANDBOX_TEST_20261112_R0.md",
+    "predecessor_bytes": 7608,
+    "predecessor_sha256": "0cea98c4656f9f2ddad8d784403ef001405f7d28f8189722399c22055e7a39db"
+  },
+  "delegation": {
+    "scope": "ONE_EXPERT_READ_ONLY_R30_BOUNDED_RUNTIME_ADVERSARIAL_REVIEW_WITH_SOURCE_INTENSITY_GATED_BY_ACTUAL_BYTES",
+    "allowed_actions": [
+      "Analyze the exact R29 C1 checkpoint and public read-only sources",
+      "Request exact three runtime source originals via Operator/AXIOM, not via public private-data uploads",
+      "Form counterhypotheses and testable isolation/custody controls",
+      "If actual bytes are authorized and received: independently rehash and rerun safe offline controlled fixtures",
+      "Submit exactly one bounded E01-E07 review with negative results as valid"
+    ],
+    "prohibited_actions": [
+      "Autonomously create GitHub external write slots or merge pull requests",
+      "Invent or reconstruct absent bounded source bytes from hash",
+      "Conflate Python -I with OS sandbox or source import absence with denied network",
+      "Capture OPPO IMU, access private host/server or install applications",
+      "Publish private raw sensor/source secrets; execute attacker code without authorization",
+      "Promote C1 to C2 or claim NEXUS full sandbox validation"
+    ],
+    "write_slot": "NOT_ALLOCATED",
+    "runtime_authorized": false,
+    "node_reset_authorized": false,
+    "claim_promotion_authorized": false
+  },
+  "mission": {
+    "question": "Does the R29R1 bounded Python test runner provide source-verifiable reproducible fixture decisions and which real OS/security isolation guarantees, if any, can be independently falsified or established under a single limited expert review?",
+    "deliverables": [
+      "E01 self-identified independence and conflicts",
+      "E02 exact three-source original rehash/reproduction JSON or explicit NOT_RECEIVED",
+      "E03 isolation/egress/authority threat audit",
+      "E04 R30-F01-F20 20-row evidence matrix with NOT_RUN where blocked",
+      "E05 minimal core versus TESSERACT8 paired benchmark plan",
+      "E06 dissent plus one bounded engineering recommendation",
+      "E07 detached own-return hashes, one ZIP and sidecar via operator bridge"
+    ],
+    "falsifiers": [
+      "Only receipt summary exists while source-level PASS is claimed",
+      "python -I or no network imports treated as OS-enforced network/FS isolation",
+      "Target and harness secretly share reference oracle or post-hoc threshold",
+      "All-accept mutation not detected or all-deny passes every positive control",
+      "External GitHub user/test fixture promoted to real writer",
+      "Opposite sensor gate namespace yields unauthorized device capture"
+    ],
+    "acceptance_tests": [
+      "Source-level PASS requires exact target/harness/receipt originals with matching SHA256 and independent reproduction",
+      "Every one of 20 R30 designs has fixed ID, oracle, target and a truthful execution status",
+      "Missing originals cause INCONCLUSIVE_SOURCE_GAP for source-level claims, not fabricated tests",
+      "Independent actor and return artifact hash manifest with detached contents",
+      "No two-round reviewer loop, no public/private or C1 claim promotion"
+    ],
+    "pause_conditions": [
+      "Original bounded runtime files absent or untrusted",
+      "A test requires unauthorized private host, actual OPPO capture, or outward egress",
+      "Required independent runtime boundary cannot be observed",
+      "Security/privacy incident, secret source discovery, or request to grant write authority"
+    ],
+    "not_executed": [
+      "Actual external expert review by AXIOM",
+      "Independent target or harness rerun by AXIOM",
+      "Real OS-enforced network and filesystem isolation validation",
+      "R30-F01-F20 adversarial trials",
+      "OPPO device capture/real private synchronization",
+      "Merge, Hostinger deployment, WWW write"
+    ]
+  },
+  "continuity": {
+    "anchor_id": "NEXUS_OMEGA_R30_NEUTRAL_SINGLE_EXPERT_FALSIFICATION_TASK_ANCHOR_20261114_R0",
+    "rebind_mode": "DRIFT_RESET_ONLY",
+    "node_reset_prohibited": true,
+    "history_preserved": true,
+    "source_bytes_preserved": true,
+    "observations_preserved": true,
+    "checkpoints_preserved": true,
+    "runtime_state_preserved": true,
+    "drift_triggers": [
+      "R29 checkpoint treated as full sandbox validation",
+      "Missing bounded source bytes marked independently rehashed",
+      "Two reviews of the same unchanged claims are created as a new research loop",
+      "Sensor R28 and private OPPO bridge gates conflated",
+      "External actor given writing permission from research task",
+      "SHA256 matching claimed to prove scientific correctness"
+    ],
+    "rebind_procedure": "RELOAD_VERIFIED_ANCHOR_APPEND_DIFFERENCE_WITNESS_NO_DELETION",
+    "correction_policy": "APPEND_ONLY_SUCCESSOR"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+        "commit": "625b026ef5f67273fb2dc752d58028ddd0af4b27",
+        "path": "research/r27/sandbox-science-library-20261111/orders/R29R1_CURSOR_SINGLE_PATH_SOURCE_GAP_CLOSURE_AND_TARGET_SANDBOX_TEST_20261112_R0.md",
+        "bytes": 7608,
+        "sha256": "0cea98c4656f9f2ddad8d784403ef001405f7d28f8189722399c22055e7a39db",
+        "source_status": "OPERATOR_REPORTED"
+      }
+    ],
+    "missing_source_policy": "HOLD_SCOPED_NOT_RECONSTRUCT",
+    "copyright_privacy": "PUBLIC_SCIENTIFIC_METADATA_ONLY_PRIVATE_BOUNDED_SOURCE_NOT_INCLUDED",
+    "independent_rehash_required": true
+  },
+  "return_contract": {
+    "recipient": "NEXUS_OPERATOR_AXIOM",
+    "inbox_issue_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/93",
+    "transport_class": "OPERATOR_TO_AXIOM_BRIDGE",
+    "manifest_schema": "schema/expert-hash-handshake-v1.schema.json",
+    "receiver_ack": "PENDING_AXIOM_INDEPENDENT_REHASH",
+    "scientific_adjudication_separate": true
+  },
+  "quality_gates": {
+    "functionality_performance": [
+      "Freeze source identities and executable fixture oracles before reviewer testing",
+      "A single bounded review with negative controls and positive examples",
+      "No efficiency percentage without paired measured benchmark"
+    ],
+    "robustness_stability": [
+      "Explicit unverified OS isolation and network-denial limits",
+      "Fail-closed when original target/harness/receipt bytes missing",
+      "No external write or private sensor action"
+    ],
+    "traceability_comprehensibility": [
+      "R29 closed C1 checkpoint append-only link",
+      "A source-reported claim is not an independent measured result",
+      "W3C PROV and SLSA used as methodological patterns, no certification claim"
+    ]
+  }
+}

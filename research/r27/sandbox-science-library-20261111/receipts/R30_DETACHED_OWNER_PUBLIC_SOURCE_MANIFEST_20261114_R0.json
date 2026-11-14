@@ -1,0 +1,46 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R30_DETACHED_OWNER_READBACK_MANIFEST_20261114_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "science_phase": "R30",
+  "predecessor_phase": "R29_CHECKPOINT_CLOSED_C1",
+  "public_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "public_parent_main_commit": "a0851058f4bfcf4b376628f7f362b8cfdedab80d",
+  "pending_pr_head": "NOT_YET_BOUND_AT_MANIFEST_CREATION",
+  "sources": [
+    {
+      "path": "research/r27/sandbox-science-library-20261111/receipts/R29_C1_CHECKPOINT_INDEPENDENT_RECEIVER_AND_CLOSURE_20261114_R0.md",
+      "bytes": 4227,
+      "sha256": "56d5012963f78cfdb425f624453ad3fba9d84898b020d675c5eb99f9dba2e92e",
+      "git_blob_sha1": "8e302519d9e1dee6f0c84d3c0af7c40899dd31ee",
+      "status": "LOCAL_SHA256_CALCULATED_GITHUB_READBACK_PENDING"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R30_NEUTRAL_SINGLE_EXPERT_INDEPENDENT_FALSIFICATION_MAXI_ORDER_20261114_R0.md",
+      "bytes": 12271,
+      "sha256": "4ddc9d52ce73e161bec80b286111408ac543ff9c65348f492fbeb9d9ccb5178d",
+      "git_blob_sha1": "86b72d7999d3d5f975c38847f49d3f5e8fde9924",
+      "status": "LOCAL_SHA256_CALCULATED_GITHUB_READBACK_PENDING"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R30_NEUTRAL_SINGLE_EXPERT_TASK_ANCHOR_20261114_R0.json",
+      "bytes": 7695,
+      "sha256": "bca14aef825a0c31b6e1794efeae5d98b837d8af72d17ddaac05da57eb175149",
+      "git_blob_sha1": "b8591d33bf3b13e1b1357078114b0d6ab9da83fd",
+      "status": "LOCAL_SHA256_CALCULATED_GITHUB_READBACK_PENDING"
+    },
+    {
+      "path": "research/r27/sandbox-science-library-20261111/orders/R30_F01_F20_ADVERSARIAL_FALSIFICATION_PREREG_DESIGN_20261114_R0.json",
+      "bytes": 19607,
+      "sha256": "c35478df3664d40ac402ebf08d4fa0aae038e64d5151593dd3775265b22d725a",
+      "git_blob_sha1": "b9aab8732be2971c11cd7e2db8fdde8611a6f2c4",
+      "status": "LOCAL_SHA256_CALCULATED_GITHUB_READBACK_PENDING"
+    }
+  ],
+  "runtime_originals_in_axiom_custody": false,
+  "source_verification_only": true,
+  "external_peer_return": "NOT_RECEIVED",
+  "expert_count_this_turn": 0,
+  "r30_fixture_executions": 0,
+  "independent_second_receiver_ack": "PENDING",
+  "self_digest": "EXCLUDED_DETACHED"
+}
