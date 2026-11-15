@@ -1,0 +1,39 @@
+name: bodytwin-progress-c1-20261115
+on:
+  pull_request:
+    paths:
+      - 'research/bodytwin-r13/public-progress-20261115/**'
+      - '.github/workflows/bodytwin-progress-20261115-c1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bodytwin-progress-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Deterministic C1 public progress tests without site access
+        run: |
+          python -m unittest discover -s research/bodytwin-r13/public-progress-20261115/tests -p 'test_*.py' -v
+      - name: Check public C1 ledger structure, no sensor elevation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          b = Path("research/bodytwin-r13/public-progress-20261115/site/updates/events.json")
+          obj = json.loads(b.read_text(encoding="utf-8"))
+          assert obj["claim_ceiling"] == "C1_DESCRIPTIVE_ONLY"
+          assert obj["claim_promotion"] is False
+          assert obj["bodytwin"]["validated"] == "NO"
+          assert obj["bodytwin"]["physical_imu"] == "NOT_AUTHORIZED"
+          assert obj["published_live"] is False
+          assert len(obj["events"]) == 5
+          assert all(x["scientific_result"] is False for x in obj["events"])
+          print("BODYTWIN_PUBLIC_PROGRESS=SOURCE_ONLY_C1; EVENTS=5; WWW_DEPLOY=NOT_EXECUTED_IN_CI")
+          PY
