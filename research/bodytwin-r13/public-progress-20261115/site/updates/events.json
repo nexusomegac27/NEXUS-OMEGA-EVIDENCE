@@ -1,0 +1,96 @@
+{
+  "schema": "nexus-omega-bodytwin-public-progress/1",
+  "object": "NEXUS_OMEGA_AXIOM_BODYTWIN_PUBLIC_PROGRESS_LEDGER_20261115_R0",
+  "version": "2026-11-15-r0",
+  "published_live": false,
+  "release_status": "PUBLICATION_CANDIDATE_NOT_HOSTINGER_VERIFIED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "truth_authority": "NONE",
+  "target_route": "/bodytwin/",
+  "detail_route": "/bodytwin/updates/",
+  "snapshot_date": "2026-11-15",
+  "site_snapshot_previous": "NEXUS_OMEGA_BODYTWIN_VIEWER_20260914_R0",
+  "last_verified_historical": "2026-09-12T07:57:00+02:00",
+  "bodytwin": {
+    "status": "RESEARCH_FOUNDATION_C1",
+    "validated": "NO",
+    "consent_bind": "OPEN",
+    "trial_001": "DESIGNED_NOT_EXECUTED",
+    "physical_imu": "NOT_AUTHORIZED"
+  },
+  "current_feed_observation": {
+    "source_url": "https://www.nexus-mobile.de/bodytwin/live/current.json",
+    "observation_date": "2026-11-15",
+    "last_observed_run_utc": "2026-11-15T07:50:02Z",
+    "sequence": 2150,
+    "interval_seconds": 300,
+    "source_changed": false,
+    "last_change_utc": "2026-11-07T20:50:02Z",
+    "trust": "SELF_HOSTED_PUBLIC_C1_NOT_INDEPENDENT_WITNESS",
+    "note": "This is a historical GET snapshot. Feed ticks do not imply scientific source changes."
+  },
+  "events": [
+    {
+      "id": "BT-20260914-VIEWER",
+      "date": "2026-09-14",
+      "title": "Symbolic 4D viewer baseline",
+      "class": "HISTORICAL_BASELINE",
+      "evidence": "PUBLIC_VIEWER_UI_CRAWL",
+      "scientific_result": false,
+      "source_url": "https://www.nexus-mobile.de/bodytwin/"
+    },
+    {
+      "id": "BT-20261107-FEED",
+      "date": "2026-11-07",
+      "title": "C1 periodic status feed",
+      "class": "PUBLIC_ENDPOINT_OBSERVED_20261115",
+      "evidence": "SAME_ORIGIN_HTTP_JSON_OBSERVED",
+      "scientific_result": false,
+      "source_url": "https://www.nexus-mobile.de/bodytwin/live/current.json",
+      "implementation_pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/324"
+    },
+    {
+      "id": "BT-20261108-VISUAL",
+      "date": "2026-11-08",
+      "title": "Status-panel layout repair and external 4D review mandates",
+      "class": "CODE_CANDIDATE_AND_SCOPED_REPORTED_REPAIR",
+      "evidence": "PUBLIC_GITHUB_PR_OWNER_CLAIM",
+      "scientific_result": false,
+      "source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/333",
+      "review_source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/325"
+    },
+    {
+      "id": "BT-20261108-OPPO",
+      "date": "2026-11-08",
+      "title": "OPPO A74 / 4D BodyTwin staged offline-first research protocol",
+      "class": "RESEARCH_DESIGN_ONLY",
+      "evidence": "PUBLIC_GITHUB_PR_AND_MACHINE_BASELINE",
+      "scientific_result": false,
+      "expert_lanes_proposed": 8,
+      "rounds_designed": 10,
+      "rounds_executed": 0,
+      "source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/335"
+    },
+    {
+      "id": "BT-20261114-R30",
+      "date": "2026-11-14",
+      "title": "R30 bounded source custody, shared research infrastructure only",
+      "class": "RELATED_INFRASTRUCTURE_NOT_BODYTWIN_VALIDATION",
+      "evidence": "INDEPENDENT_SOURCE_DIGEST_RECEIPT_C1",
+      "scientific_result": false,
+      "bodytwin_runtime_evidence": false,
+      "executed_r30_target_trials": 0,
+      "source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/360"
+    }
+  ],
+  "fences": [
+    "NO_CLINICAL_VALIDITY",
+    "NO_BIOMETRIC_IDENTITY_CLAIM",
+    "NO_OPPO_CAPTURE",
+    "NO_AUTOMATIC_C2_PROMOTION",
+    "NO_PRIVATE_SENSOR_MEDIA",
+    "NO_EXPERT_DISCLOSURE_OF_PRIVATE_SOURCE"
+  ],
+  "source_note": "Date-stamped public-safe curation, not automatic website or source synchronization; publication_verified only after actual Hostinger HTTP+DOM receipts."
+}
