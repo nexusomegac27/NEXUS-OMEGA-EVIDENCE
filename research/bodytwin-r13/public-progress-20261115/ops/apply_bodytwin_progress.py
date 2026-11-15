@@ -72,6 +72,8 @@ def run(web_root: Path, site_source: Path, apply: bool, acknowledgement: str, ba
         raise ValueError("LEDGER_MUST_REMAIN_PREDEPLOY_CANDIDATE")
     assets = {"progress.css": css.read_bytes(), "index.html": standalone.read_bytes(), "events.json": ledger.read_bytes()}
     new_dir = web_root / "bodytwin" / "updates"
+    if new_dir.is_symlink():
+        raise ValueError("UNTRUSTED_UPDATES_DIRECTORY_SYMLINK")
     for name, raw in assets.items():
         target = new_dir / name
         if target.exists() and (target.is_symlink() or target.read_bytes() != raw):
@@ -88,6 +90,9 @@ def run(web_root: Path, site_source: Path, apply: bool, acknowledgement: str, ba
         "bodytwin_validated": "NO", "oppo_capture": False, "hostinger_http_observed": False,
     }
     if not apply:
+        return receipt
+    if state == "ALREADY_PRESENT":
+        receipt["mode"] = "ALREADY_DEPLOYED_LOCAL_FILES_NOT_HTTP_VERIFIED"
         return receipt
     if acknowledgement != RELEASE:
         raise ValueError("EXPLICIT_OPERATOR_PUBLICATION_ACK_REQUIRED")
