@@ -1,0 +1,802 @@
+{
+  "schema": "nexus-omega-r31-expert-protocol-design/1",
+  "object": "NEXUS_OMEGA_AXIOM_R31_EXTERNAL_EXPERT_NEGATIVE_POSITIVE_PREREG_DESIGN_20261116_R0",
+  "created_date": "2026-11-16",
+  "status": "SOURCE_ONLY_DESIGN_NO_RUNTIME_EXECUTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "source_object": "NEXUS_OMEGA_CURSOR_R31_JOINT_ADJUDICATION_BIND_RETURN_20261116_R2",
+  "source_zip_sha256": "34fa422148df6a90657c84f82fdbb438bbb195da2ea501516e35b825ae629bfc",
+  "historical_staging_private_head": "f58e142cf7a11316c518229464c962a676fb70e0",
+  "historical_r31_f01_f20_hostinger_executed": 0,
+  "design_counts": {
+    "negative": 36,
+    "positive": 12,
+    "total": 48
+  },
+  "disclosure": "PUBLIC_SAFE_DESIGNS_ONLY_NO_PRIVATE_ORIGINALS",
+  "pre_registration_status": "PROSPECTIVE_PLAN_AUTHORED_AFTER_DISCOVERY_OF_OLD_OUTBOX_BUG_NOT_HISTORIC_BLIND_PREREG",
+  "freeze_rule": "TO_BE_SEALED_BY_EACH_EXPERT_BEFORE_ANY_NEW_TEST_EXECUTION",
+  "evidence_rule": "SOURCE_BYTES_MATCH_NE_SCIENTIFIC_TRUTH; PASS_WITH_CAVEATS_NE_PRODUCTION_AUTOPUBLISH; NO_GREEN_IF_ANY_REQUIRED_ROUTE_HOLD",
+  "prohibited": [
+    "PRODUCTION_WWW_WRITE",
+    "REPAIR_AUTO_START",
+    "EXTERNAL_AGENTS_GITHUB_WRITE",
+    "PR_MERGE",
+    "C2_PROMOTION",
+    "OPPO_NEW_CAPTURE",
+    "PUBLIC_RAW_SENSOR"
+  ],
+  "negative_controls": [
+    {
+      "id": "ER31-N01",
+      "kind": "NEGATIVE",
+      "focus": "Global UNIQUE on notification_outbox.event_id reused on four destinations",
+      "stimulus": "4 registered surfaces; one event; old exact schema",
+      "required_oracle": "Expected old: 0 releases+0 deliveries and FAIL; proposed repair must commit 1+4; never PASS on constraint failure",
+      "mandates": [
+        "E01",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N02",
+      "kind": "NEGATIVE",
+      "focus": "False dedupe PASS after failed initial enqueue",
+      "stimulus": "First multi-target enqueue aborts; retry returns general constraint status",
+      "required_oracle": "FAIL false-positive oracle, require proven prior committed 1+4 and matching digests before DUPLICATE_NOOP",
+      "mandates": [
+        "E01",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N03",
+      "kind": "NEGATIVE",
+      "focus": "Event ID reused with altered content digest",
+      "stimulus": "Same logical event ID and release sequence, new payload SHA",
+      "required_oracle": "HOLD_EQUIVOCATION; no old/new merge, no claimed idempotence",
+      "mandates": [
+        "E01",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N04",
+      "kind": "NEGATIVE",
+      "focus": "Same event ID reused with different subscriber set",
+      "stimulus": "Same event, new or missing target routes",
+      "required_oracle": "HOLD_TARGET_SET_EQUIVOCATION absent explicit new authorized release",
+      "mandates": [
+        "E01",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N05",
+      "kind": "NEGATIVE",
+      "focus": "Crash after release parent, before first child",
+      "stimulus": "Inject controlled failure before child insertion",
+      "required_oracle": "0 committed release, 0 child rows on fresh disposable DB; no external effect",
+      "mandates": [
+        "E01",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N06",
+      "kind": "NEGATIVE",
+      "focus": "Crash after second of four child rows",
+      "stimulus": "Inject controlled failure mid-fanout",
+      "required_oracle": "0 parent, 0 child committed; no external effect or false PASSED_ON_ROLLBACK",
+      "mandates": [
+        "E01",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N07",
+      "kind": "NEGATIVE",
+      "focus": "External effect emitted before DB commit",
+      "stimulus": "Simulate send before commit then forced rollback",
+      "required_oracle": "REJECT architecture violating outbox isolation; no external effect before durable enqueue",
+      "mandates": [
+        "E02",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N08",
+      "kind": "NEGATIVE",
+      "focus": "Broken FK enforcement or ghost child",
+      "stimulus": "Connection foreign_keys OFF; dangling delivery",
+      "required_oracle": "Detect mismatch with foreign_key_check + invariants; no success",
+      "mandates": [
+        "E01",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N09",
+      "kind": "NEGATIVE",
+      "focus": "INSERT OR IGNORE masks a broken initial delivery",
+      "stimulus": "Collision handling ignores unexpected constraint on first enqueue",
+      "required_oracle": "Explicit first-attempt FAIL; not success with fewer than expected deliveries",
+      "mandates": [
+        "E01",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N10",
+      "kind": "NEGATIVE",
+      "focus": "REPLACE silently deletes old row and audit history",
+      "stimulus": "Use INSERT OR REPLACE on existing delivery",
+      "required_oracle": "Reject lost original receipt/side effect or implicit deletion; preserve append-only semantics",
+      "mandates": [
+        "E01",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N11",
+      "kind": "NEGATIVE",
+      "focus": "Delivery accepted, ACK lost; message resent",
+      "stimulus": "Send completed; cut ACK; resend same delivery ID",
+      "required_oracle": "At-least-once transport, exactly one observable effect per route in bounded model",
+      "mandates": [
+        "E02",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N12",
+      "kind": "NEGATIVE",
+      "focus": "Two workers lease same delivery concurrently",
+      "stimulus": "Parallel worker acquisition on same DB and target",
+      "required_oracle": "Only one owns lease/apply; no duplicate external effects, or explicit HOLD",
+      "mandates": [
+        "E02",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N13",
+      "kind": "NEGATIVE",
+      "focus": "Out-of-order release sequences",
+      "stimulus": "Deliver seq 12 before seq 11 to one surface",
+      "required_oracle": "No rollback to 11; monotonic observed version and explicit stale classification",
+      "mandates": [
+        "E02",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N14",
+      "kind": "NEGATIVE",
+      "focus": "DB crash and WAL recovery under backlog",
+      "stimulus": "Worker restart with pending WAL + durable queue",
+      "required_oracle": "Integrity+FK checks, complete replay or explicit HOLD, no disappearance",
+      "mandates": [
+        "E01",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N15",
+      "kind": "NEGATIVE",
+      "focus": "Release source stale while producer timer advances",
+      "stimulus": "Feed ticks 300 seconds, source digest unchanged",
+      "required_oracle": "NO_NEW_SCIENCE_RELEASE; no false success/staleness reset",
+      "mandates": [
+        "E05",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N16",
+      "kind": "NEGATIVE",
+      "focus": "Webhook invalid signature with correct-looking payload",
+      "stimulus": "Wrong raw-payload HMAC or tampered whitespace bytes",
+      "required_oracle": "Reject before queue; no side effects",
+      "mandates": [
+        "E04",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N17",
+      "kind": "NEGATIVE",
+      "focus": "Webhook delivery ID replay",
+      "stimulus": "Same X-GitHub-Delivery resent after ACK outage",
+      "required_oracle": "Deduplicate delivery while preserving valid outstanding release, no unauthorized extra publish",
+      "mandates": [
+        "E02",
+        "E04"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N18",
+      "kind": "NEGATIVE",
+      "focus": "Expired/revoked standing operator policy",
+      "stimulus": "Well-formed grant with TTL exceeded or revoked key",
+      "required_oracle": "HOLD_NO_AUTHORIZED_OPERATOR; no default-to-fixture key",
+      "mandates": [
+        "E04",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N19",
+      "kind": "NEGATIVE",
+      "focus": "Role spoof by self-declared external agent",
+      "stimulus": "Signer field says operator but proof is absent or unknown key",
+      "required_oracle": "Reject; role string alone is not authenticator",
+      "mandates": [
+        "E04",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N20",
+      "kind": "NEGATIVE",
+      "focus": "WWW observer same principal as publisher",
+      "stimulus": "Same signing key controls deploy and witness",
+      "required_oracle": "Observer independence NOT_ESTABLISHED; no fully reconciled claim",
+      "mandates": [
+        "E04",
+        "E05"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N21",
+      "kind": "NEGATIVE",
+      "focus": "HTTP 200 serves different content or wrong MIME",
+      "stimulus": "HTTP success response with wrong entity sha or HTML fallback to JSON",
+      "required_oracle": "HOLD_WWW_MISMATCH, no version acceptance",
+      "mandates": [
+        "E05",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N22",
+      "kind": "NEGATIVE",
+      "focus": "Compressed representation digest confusion",
+      "stimulus": "gzip/identity variants produce different wire bytes",
+      "required_oracle": "Digest compare defined decoded entity representation with bound encoding and documented raw capture",
+      "mandates": [
+        "E05",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N23",
+      "kind": "NEGATIVE",
+      "focus": "Old science JSON candidate flag remains after publish",
+      "stimulus": "Public science route observed, static author-time candidate flag false",
+      "required_oracle": "Separate signed post-deploy witness; do not rewrite historic author-time, do not call ALL_RECONCILED on drift",
+      "mandates": [
+        "E05",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N24",
+      "kind": "NEGATIVE",
+      "focus": "Old cache / CDN epoch served",
+      "stimulus": "Signed new release, public CDN serves old version",
+      "required_oracle": "HOLD_STALE_PUBLIC_CONTENT, no false successful witness",
+      "mandates": [
+        "E05",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N25",
+      "kind": "NEGATIVE",
+      "focus": "New science root link breaks symbolic 4D viewer",
+      "stimulus": "Inject additive root navigation with collision at 320/390/768/1280",
+      "required_oracle": "Browser regression FAIL and byte-exact rollback, no effect on five projections/six rotations",
+      "mandates": [
+        "E05",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N26",
+      "kind": "NEGATIVE",
+      "focus": "Private OPPO IMU samples enter metadata event",
+      "stimulus": "Raw sensor trace or biometric patient marker in public payload",
+      "required_oracle": "DLP hard reject; no shared-source disclosure or public write",
+      "mandates": [
+        "E08",
+        "E04"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N27",
+      "kind": "NEGATIVE",
+      "focus": "Unverified anatomy derivative license",
+      "stimulus": "Asset rights incomplete for BodyParts3D derivative",
+      "required_oracle": "HOLD_LICENSE_ASSET; metadata-only explanation admissible",
+      "mandates": [
+        "E08",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N28",
+      "kind": "NEGATIVE",
+      "focus": "Code/installer masquerades as science text",
+      "stimulus": "Executable content hidden in permitted metadata route",
+      "required_oracle": "HOLD_WRONG_RELEASE_CLASS; independent code gate required",
+      "mandates": [
+        "E09",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N29",
+      "kind": "NEGATIVE",
+      "focus": "Three of four WWW surfaces succeed, global all-green reported",
+      "stimulus": "One destination remote 503, three valid witnesses",
+      "required_oracle": "PARTIAL_OR_HOLD; no compensatory aggregate",
+      "mandates": [
+        "E03",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N30",
+      "kind": "NEGATIVE",
+      "focus": "Unrelated route subscription receives BodyTwin release",
+      "stimulus": "Forum/Astra route not registered for this event",
+      "required_oracle": "No fanout to unrelated surface; explicit HOLD_UNRELATED_SURFACE",
+      "mandates": [
+        "E02",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N31",
+      "kind": "NEGATIVE",
+      "focus": "Future timestamp and observer clock skew",
+      "stimulus": "Witness time beyond allowable signed window",
+      "required_oracle": "HOLD_TIMEBASE_OR_REPLAY; record clock uncertainty",
+      "mandates": [
+        "E04",
+        "E05"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N32",
+      "kind": "NEGATIVE",
+      "focus": "Cross-language JSON canonicalization mismatch",
+      "stimulus": "Unicode, floats, object key order, duplicate keys",
+      "required_oracle": "No false signature verification; define RFC8785 vs proprietary canonicalizer accurately",
+      "mandates": [
+        "E04",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N33",
+      "kind": "NEGATIVE",
+      "focus": "Moving PR head misidentified as frozen historic source",
+      "stimulus": "Old commit digest vs newer draft branch tip",
+      "required_oracle": "HOLD_PROVENANCE_VERSION_LABEL; keep historic commit unchanged",
+      "mandates": [
+        "E07",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N34",
+      "kind": "NEGATIVE",
+      "focus": "Secrets leaked through diagnostics",
+      "stimulus": "Exception logs include webhook signing secret or bearer URL",
+      "required_oracle": "DLP/log check FAIL; revoke/rotate exposed secret; nonpublic receipt",
+      "mandates": [
+        "E04",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N35",
+      "kind": "NEGATIVE",
+      "focus": "Scheduler silently stops while page remains visible",
+      "stimulus": "No working cron/worker, old page continues to serve 200",
+      "required_oracle": "No claim LIVE_SYNC; stale-without-trigger alarm from independent observer",
+      "mandates": [
+        "E06",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-N36",
+      "kind": "NEGATIVE",
+      "focus": "Push happens without actual owner policy grant",
+      "stimulus": "Repository PR and green CI, but no signed standing release policy",
+      "required_oracle": "NO_AUTOPUBLISH; awaiting scoped policy, no automatic PR merge or web write",
+      "mandates": [
+        "E04",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    }
+  ],
+  "positive_controls": [
+    {
+      "id": "ER31-P01",
+      "kind": "POSITIVE",
+      "focus": "One target valid release",
+      "stimulus": "Authenticated synthetic test release -> single allowed route",
+      "required_oracle": "1 release + 1 distinct delivery committed; independent witness requires separate gate",
+      "mandates": [
+        "E01",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P02",
+      "kind": "POSITIVE",
+      "focus": "Four target valid release",
+      "stimulus": "One release with four permitted topic-matched surfaces",
+      "required_oracle": "Exactly 1 release + 4 delivery rows atomically, each uniquely addressed",
+      "mandates": [
+        "E01",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P03",
+      "kind": "POSITIVE",
+      "focus": "Idempotent replay of already committed multi-target release",
+      "stimulus": "Same release/event/digest/target set repeated",
+      "required_oracle": "UNCHANGED 1+4, NOOP_DUPLICATE_VERIFIED, no extra effect",
+      "mandates": [
+        "E01",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P04",
+      "kind": "POSITIVE",
+      "focus": "Atomic crash rollback on mid-batch",
+      "stimulus": "Crash before commit on 4-target attempt",
+      "required_oracle": "0+0 visible on new DB and no external effects",
+      "mandates": [
+        "E01",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P05",
+      "kind": "POSITIVE",
+      "focus": "Transient one-route delivery failure and recovery",
+      "stimulus": "1 target first 503 then 200",
+      "required_oracle": "Pending route retried, others stable; later all independently observed",
+      "mandates": [
+        "E02",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P06",
+      "kind": "POSITIVE",
+      "focus": "Webhook lost; anti-entropy recovers",
+      "stimulus": "Suppress primary webhook, keep approved manifest accessible",
+      "required_oracle": "Bounded polling discovers same authorized release, dedupe preserved",
+      "mandates": [
+        "E06",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P07",
+      "kind": "POSITIVE",
+      "focus": "Worker restart after committed outbox",
+      "stimulus": "Stop worker; restart on durable ledger with queued work",
+      "required_oracle": "No missing or duplicate consumer effects; status measured",
+      "mandates": [
+        "E06",
+        "E02"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P08",
+      "kind": "POSITIVE",
+      "focus": "WWW witness success plus drift remains visible",
+      "stimulus": "Valid remote hash and historic author-time published_live false",
+      "required_oracle": "Route observed but overall WWW_OBSERVED_METADATA_DRIFT_OPEN until separate receipt state bound",
+      "mandates": [
+        "E05",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P09",
+      "kind": "POSITIVE",
+      "focus": "Unchanged R14 strict v1 feed and existing 4D viewer",
+      "stimulus": "Science-only release with root controls active",
+      "required_oracle": "No schema change or 4D regression, independent browser/byte witness",
+      "mandates": [
+        "E05",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P10",
+      "kind": "POSITIVE",
+      "focus": "Public science provenance correctly classed",
+      "stimulus": "Nine source-linked entries including R21 report-only",
+      "required_oracle": "C1-only, no private data, sensor/clinical validity remains NO",
+      "mandates": [
+        "E07",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P11",
+      "kind": "POSITIVE",
+      "focus": "Two genuine preauthorized C1 metadata releases without per-event manual trigger",
+      "stimulus": "Two distinct independently approved source digests under one valid standing policy",
+      "required_oracle": "Both automatically delivered and externally observed; one-time authorization separated from per-release review",
+      "mandates": [
+        "E04",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    },
+    {
+      "id": "ER31-P12",
+      "kind": "POSITIVE",
+      "focus": "Unknown/forbidden release class safely held",
+      "stimulus": "Signed event for unregistered private route or module",
+      "required_oracle": "Public content unchanged; explicit HOLD and notified authorized operator",
+      "mandates": [
+        "E08",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN_RESEARCH_DESIGN_ONLY",
+      "observed": null,
+      "executor": null,
+      "attestation": null,
+      "uncertainty": "NOT_MEASURED"
+    }
+  ]
+}
