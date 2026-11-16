@@ -1,0 +1,162 @@
+{
+  "schema": "nexus-omega-r31-publication-graph/1",
+  "object": "NEXUS_OMEGA_R31_FRAMEWORK_PUBLICATION_GATE_CONTRACT_20261116_R0",
+  "date": "2026-11-16",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "execution_class": "SOURCE_ONLY_OFFLINE_CANDIDATE",
+  "authority": "OPERATOR_VIA_AXIOM",
+  "r30": "CLOSED_C1_HISTORICAL",
+  "state_model": [
+    "DISCOVERED",
+    "SOURCE_BOUND",
+    "REVIEWED_C1",
+    "OWNER_AUTHORIZED",
+    "DEPLOYED_REPORTED",
+    "WWW_OBSERVED",
+    "RECONCILED"
+  ],
+  "holds": [
+    "HOLD_PRIVATE",
+    "HOLD_UNVERIFIED_SOURCE",
+    "HOLD_NO_VERIFIED_OPERATOR_GRANT",
+    "HOLD_ROLLBACK",
+    "HOLD_SEQUENCE_EQUIVOCATION",
+    "HOLD_WWW_WITNESS_UNVERIFIED_OR_MISMATCH",
+    "HOLD_CONFLICTING_WWW_WITNESS",
+    "HOLD_STALE_STATIC_METADATA",
+    "HOLD_NO_SUBSCRIPTION"
+  ],
+  "source_classes": {
+    "read_only_science": "C1_VERIFIED_PUBLIC_SAFE",
+    "private_sensors": "NOT_PUBLICATION_ELIGIBLE",
+    "metadata": "PUBLIC_METADATA_ONLY"
+  },
+  "public_visibility": "public_metadata_only",
+  "signer_identity_policy": {
+    "operator_release_signer": "EXTERNALLY_MANAGED_AUTHENTICATED_KEY_OR_IDENTITY_REQUIRED",
+    "independent_witness": "SEPARATE_TRUST_PRINCIPAL_REQUIRED",
+    "adapter": "HMAC_OFFLINE_TEST_DEMO_ONLY_NO_PRODUCTION_AUTHORITY",
+    "require_expiry_and_revocation_in_operational_successor": true
+  },
+  "routing": {
+    "bodytwin_progress": {
+      "route": "/bodytwin/updates/",
+      "topics": [
+        "bodytwin",
+        "publication-science"
+      ],
+      "visibility": "public_metadata_only",
+      "baseline_public_url": "https://www.nexus-mobile.de/bodytwin/updates/",
+      "status": "WWW_VISIBLE_CONTENT_OBSERVED_NO_EXACT_REMOTE_REHASH"
+    },
+    "bodytwin_events": {
+      "route": "/bodytwin/updates/events.json",
+      "topics": [
+        "bodytwin"
+      ],
+      "visibility": "public_metadata_only",
+      "baseline_public_url": "https://www.nexus-mobile.de/bodytwin/updates/events.json",
+      "status": "WWW_VISIBLE_WITH_STATIC_PUBLISHED_FALSE_DRIFT"
+    },
+    "bodytwin_live": {
+      "route": "/bodytwin/live/current.json",
+      "topics": [
+        "bodytwin"
+      ],
+      "visibility": "public_metadata_only",
+      "status": "HEARTBEAT_SEPARATE_FROM_SOURCE_CHANGE"
+    },
+    "homepage": {
+      "route": "/",
+      "topics": [
+        "homepage",
+        "nexus-global-public"
+      ],
+      "visibility": "public_metadata_only",
+      "status": "REGISTER_FOR_REVIEW_NOT_AUTO_ENROLLED"
+    },
+    "research_bodytwin": {
+      "route": "/research/bodytwin/",
+      "topics": [
+        "bodytwin"
+      ],
+      "visibility": "public_metadata_only",
+      "status": "REGISTER_FOR_REVIEW_NOT_AUTO_ENROLLED"
+    },
+    "forum": {
+      "route": null,
+      "topics": [
+        "forum"
+      ],
+      "visibility": "public_metadata_only",
+      "status": "ROUTE_NOT_VERIFIED_NO_AUTO_WRITE"
+    },
+    "astra_orbis": {
+      "route": null,
+      "topics": [
+        "astra",
+        "orbis"
+      ],
+      "visibility": "public_metadata_only",
+      "status": "ROUTE_NOT_VERIFIED_NO_AUTO_WRITE"
+    },
+    "internal_memory": {
+      "route": null,
+      "topics": [
+        "internal"
+      ],
+      "visibility": "private_internal",
+      "status": "EXCLUDED_FROM_PUBLIC_FANOUT"
+    }
+  },
+  "rollout_policy": "NEVER_AUTO_WRITE_UNLESS_OPERATOR_SCOPED_GRANT_AND_DETACHED_WITNESS_ARE_VERIFIABLE",
+  "webhook_policy": {
+    "delivery_id_dedupe": true,
+    "raw_hmac_verification": true,
+    "ack_then_enqueue": true,
+    "outbox_and_anti_entropy": true,
+    "source_changed_check": true
+  },
+  "cadence": {
+    "anti_entropy_seconds_candidate": 300,
+    "measured": false
+  },
+  "expected_witness": {
+    "independent_http_bytes_sha256": true,
+    "http_status": 200,
+    "mime_validated": true,
+    "dom_test_before_www_pass": true,
+    "previous_version_retained": true
+  },
+  "live_baseline": {
+    "observation_class": "INDEPENDENT_CONTENT_FETCH_WITHOUT_INDEPENDENT_HTTP_BYTES_REHASH",
+    "fetched_on": "2026-11-16",
+    "bodytwin_updates": "PRESENT",
+    "events_count": 5,
+    "events_published_live": false,
+    "events_release_status": "PUBLICATION_CANDIDATE_NOT_HOSTINGER_VERIFIED",
+    "feed_seq": 2405,
+    "feed_run_utc": "2026-11-16T05:05:03Z",
+    "feed_source_changed": false,
+    "bodytwin_validated": "NO",
+    "bodytwin_consent": "OPEN"
+  },
+  "metrics": {
+    "complete_surface_coverage": "NOT_MEASURED",
+    "false_public_promotion": "NOT_MEASURED",
+    "p95_authorization_to_www": "NOT_MEASURED",
+    "suggested_pilot_detection_seconds": 300,
+    "suggested_pilot_p95_delivery_seconds": 900
+  },
+  "prohibitions": [
+    "RAW_OPPO_SENSOR_UPLOAD",
+    "AUTO_C2_PROMOTION",
+    "AGENT_EXTERNAL_WRITE_SLOT",
+    "UNSCOPED_WWW_CHANGE",
+    "REOPEN_R30",
+    "REAL_SENSOR_CAPTURE",
+    "AUTO_GITHUB_MERGE"
+  ],
+  "compatibility_note": "Route graph is a prospective contract; only confirmed exact routes are eligible for any future implementation; PR and evidence statuses never silently self-elevate."
+}
