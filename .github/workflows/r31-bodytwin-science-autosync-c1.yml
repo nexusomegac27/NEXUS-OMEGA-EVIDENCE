@@ -1,0 +1,41 @@
+name: r31-bodytwin-science-c1-offline-contract
+on:
+  pull_request:
+    paths:
+      - 'research/r31/bodytwin-science-autosync-20261116/**'
+      - '.github/workflows/r31-bodytwin-science-autosync-c1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  science-snapshot-c1-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify source-locked C1, private-data fences, deterministic renderer
+        run: python -m unittest discover -s research/r31/bodytwin-science-autosync-20261116/tests -p 'test_*.py' -v
+      - name: Build offline-only public-safe staging files and prove deterministic hashes
+        run: |
+          set -eu
+          ROOT=research/r31/bodytwin-science-autosync-20261116
+          mkdir -p "$RUNNER_TEMP/science-a" "$RUNNER_TEMP/science-b"
+          python "$ROOT/src/render_science_snapshot.py" --input "$ROOT/data/bodytwin_science_source_census_20261116_R0.json" --output-dir "$RUNNER_TEMP/science-a"
+          python "$ROOT/src/render_science_snapshot.py" --input "$ROOT/data/bodytwin_science_source_census_20261116_R0.json" --output-dir "$RUNNER_TEMP/science-b"
+          cmp "$RUNNER_TEMP/science-a/index.html" "$RUNNER_TEMP/science-b/index.html"
+          cmp "$RUNNER_TEMP/science-a/current.json" "$RUNNER_TEMP/science-b/current.json"
+          python - <<'PY'
+          import json, os, pathlib
+          p=pathlib.Path(os.environ["RUNNER_TEMP"])/"science-a"/"current.json"
+          j=json.loads(p.read_text(encoding="utf-8"))
+          assert j["claim_ceiling"]=="C1_DESCRIPTIVE_ONLY"
+          assert j["publication_status"]=="CANDIDATE_NOT_WWW_WITNESSED"
+          assert j["event_count"]==9
+          assert j["bodytwin_validated"]=="NO"
+          print("R31_BODYTWIN_SCIENCE=OFFLINE_DETERMINISTIC_C1; WWW_WRITE=NO; SCIENCE_PROMOTION=NO")
+          PY
