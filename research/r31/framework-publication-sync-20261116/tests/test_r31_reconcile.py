@@ -76,6 +76,28 @@ class R31ScienceTests(unittest.TestCase):
     def test_02_stale_static_published_flag_detected(self):
         self.assertEqual(self.status(static_flags={ROUTE: False}), "RECONCILED_WITH_STATIC_METADATA_DRIFT")
 
+    def test_35_aggregate_drift_never_full_pass(self):
+        # AXIOM self-falsification: previously all(RECONCILED*) counted drift as ALL_RECONCILED.
+        result = R.reconcile(self.event, self.grant, [self.witness],
+                             self.registry, {}, self.keys, {ROUTE: False})
+        self.assertEqual(result["surfaces"][ROUTE]["state"], "RECONCILED_WITH_STATIC_METADATA_DRIFT")
+        self.assertEqual(result["state"], "WWW_OBSERVED_METADATA_DRIFT_OPEN")
+        self.assertEqual(result["metadata_drift_routes"], [ROUTE])
+        self.assertNotEqual(result["state"], "ALL_RECONCILED")
+
+    def test_36_hold_plus_drift_cannot_promote_to_overall_success(self):
+        result = R.reconcile(self.event, self.grant, [],
+                             self.registry, {}, self.keys, {ROUTE: False})
+        self.assertEqual(result["state"], "PARTIAL_OR_HOLD")
+        self.assertEqual(result["metadata_drift_routes"], [])
+
+    def test_37_clean_observed_route_retains_scoped_success(self):
+        result = R.reconcile(self.event, self.grant, [self.witness],
+                             self.registry, {}, self.keys, {ROUTE: True})
+        self.assertEqual(result["state"], "ALL_RECONCILED")
+        self.assertEqual(result["metadata_drift_routes"], [])
+        self.assertFalse(result["www_write_performed"])
+
     def test_03_no_witness_pending_not_published(self):
         self.assertEqual(self.status(witnesses=[]), "PENDING_INDEPENDENT_WWW_WITNESS")
 
