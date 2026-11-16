@@ -1,0 +1,115 @@
+{
+  "bodytwin_validated": "NO",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "consent_bind": "OPEN",
+  "event_count": 9,
+  "events": [
+    {
+      "bodytwin_science": false,
+      "class": "HISTORICAL_PUBLIC_VIEWER",
+      "date": "2026-09-14",
+      "evidence": "PUBLIC_CONTENT_OBSERVED_ONLY",
+      "id": "BT-SCI-20260914-VIEWER",
+      "source": "https://www.nexus-mobile.de/bodytwin/",
+      "summary": "Die vorhandene interaktive Darstellung ist ein mathematisch-symbolischer Viewer, keine Körpermessung, Anatomie- oder klinische Validierung.",
+      "title": "Symbolischer SO(4)-BodyTwin-Ausgangsviewer"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "RESEARCH_SOURCE_AUDIT_C1",
+      "date": "2026-11-07",
+      "evidence": "PUBLIC_GITHUB_SOURCE_AND_REPORT_CAVEATS",
+      "id": "BT-SCI-20261107-R13",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/3eb7c0dcd353609a219cac31f54e8732096b02b7/research/bodytwin-r13/AXIOM_R13_SCIENTIFIC_ADJUDICATION_20261107_R0.md",
+      "summary": "C1-Schema und quellgebundene Forschungshülle sind vorbereitet. Die A72-/Body_Twin_Mesh-Originalquellen fehlen und R13 Stage II ist nicht als live deployt nachgewiesen.",
+      "title": "R13: Quellengebundene Forschungsbrücke"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "REFERENCE_TEST_ONLY",
+      "date": "2026-11-08",
+      "evidence": "PUBLIC_RECONSTRUCTED_SOURCE_RECEIPT",
+      "id": "BT-SCI-20261108-R16",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/853adeb6ba09ceb87249785ff31e1d9448fed90b/research/bodytwin-r13/q0-r16-r1-harness-intake-20261108/00_MACHINE_RECEIPT.json",
+      "summary": "Das korrigierte Node-vm-Referenzharness meldet 20/20 Prüffälle statt ursprünglich 17/20. Der rekonstruierte Referenzviewer ist nicht die Hostinger-Produktionsquelle.",
+      "title": "R16/Q0: Referenz-Harness portiert"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "ARCHITECTURE_RESEARCH_ONLY",
+      "date": "2026-11-08",
+      "evidence": "PUBLIC_GITHUB_SOURCE_REPORT",
+      "id": "BT-SCI-20261108-R17",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/894bc073c402e919bc655cc13823cd8d62c80c92/research/bodytwin-r17/oppo-coupling-20261108/04_R17_MACHINE_BASELINE.json",
+      "summary": "Offline-Replay zuerst und authentisierte Relay-Anbindung nur als spätere Option. Acht Expertenbereiche und zehn Forschungsdesigns sind eine Planung, keine durchgeführten Körper- oder Sensorexperimente.",
+      "title": "R17: OPPO-IMU und BodyTwin – Architekturgrundlage"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "LOCAL_ASSET_REPORT_WITH_GAPS",
+      "date": "2026-11-08",
+      "evidence": "R19_REGISTER_OF_R18_LOCAL_RECEIPT_NOT_INDEPENDENT_LIVE_ASSET",
+      "id": "BT-SCI-20261108-R18",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/ee2e709df76b997ada5a26990b38ce7990e48c94/research/r19/bodytwin-soft-visual-collective-research-20261108/00_CANONICAL_SOURCE_REGISTER.md",
+      "summary": "Ein gesondertes anatomisches Add-on und Layer wurden lokal als Quellenpaket beschrieben; der Elternviewer ist nicht als integriert bestätigt. HTTP-Asset-Transformation, Browser-GPU und Lizenzkette bleiben offen.",
+      "title": "R18: Anatomisches Add-on als statische Forschungsreferenz"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "RESEARCH_PROGRAM_C1",
+      "date": "2026-11-08",
+      "evidence": "PUBLIC_RESEARCH_SYNTHESIS",
+      "id": "BT-SCI-20261108-R19",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/ee2e709df76b997ada5a26990b38ce7990e48c94/research/r19/bodytwin-soft-visual-collective-research-20261108/01_PRE_RESEARCH_SYNTHESIS.md",
+      "summary": "Die Vorrecherche trennt medizinische Referenzgeometrien von Messungen und prüft Registrierung, Sichtbarkeit und Darstellungsgrenzen. Ein geschlossenes Forschungspaket ersetzt keine abgeschlossenen acht Fachgutachten.",
+      "title": "R19: Anatomie, Biomechanik und SO(4)-Falsifikation"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "RESEARCH_SOURCE_FOUNDATION_C1",
+      "date": "2026-11-09",
+      "evidence": "GITHUB_PR_RESEARCH_REPORT",
+      "id": "BT-SCI-20261109-R20",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/347",
+      "summary": "Anatomische Rechte-, Ontologie- und biomechanische Fragen werden mit VQF/UKF/SR-UKF-Forschung verbunden. Die Rechte älterer BodyParts3D-Derivate und die tatsächliche physische Validierung sind weiterhin ungeklärt.",
+      "title": "R20: Quellenrechte und metrologische Forschungsarchitektur"
+    },
+    {
+      "bodytwin_science": true,
+      "class": "PHYSICAL_CAPTURE_PRODUCER_REPORTED_NOT_SECOND_PARTY",
+      "date": "2026-11-09",
+      "evidence": "CURSOR_REPORTED_ORIGINAL_BYTES_NOT_IN_AXIM_CUSTODY",
+      "id": "BT-SCI-20261109-R21",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/351",
+      "summary": "Cursor berichtete 14.018 Ereignisse in rund 70,1 Sekunden. Die ursprünglichen Rohdaten wurden hier nicht unabhängig rehashed; weder vollständige Körperpose noch aktuelle Live-Sensoranbindung sind dadurch belegt.",
+      "title": "R21: OPPO-IMU-Lauf als Cursor-Bericht – Originaldaten offen"
+    },
+    {
+      "bodytwin_science": false,
+      "class": "SCIENTIFIC_PUBLICATION_INFRASTRUCTURE_C1",
+      "date": "2026-11-16",
+      "evidence": "GITHUB_CI_AND_EXTERNAL_STATIC_REVIEW_NOT_RUNTIME",
+      "id": "BT-SCI-20261116-R31",
+      "source": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/362",
+      "summary": "Der korrigierte reine Offline-Reconciler hat 37/37 Tests und der gepinnte PR-Stand 9/9 CI-Checks bestanden; externe statische Prüfer bestätigten die Drift-Korrektur. Eine laufende frameworkweite Auto-Synchronisierung ist nicht etabliert.",
+      "title": "R31: Wissenschaftlicher Veröffentlichungsabgleich"
+    }
+  ],
+  "object": "NEXUS_OMEGA_AXIOM_BODYTWIN_SCIENTIFIC_C1_SOURCE_CENSUS_20261116_R0",
+  "open_gates": [
+    "A72_ORIGINAL_SOURCE_GAP",
+    "R13_STAGE_II_DEPLOY_GAP",
+    "BODYTWIN_VALIDATED_NO",
+    "PHYSICAL_IMU_TO_BODYTWIN_NOT_ESTABLISHED",
+    "CONSENT_BIND_OPEN",
+    "R31_PRODUCTION_OUTBOX_NOT_ESTABLISHED",
+    "ANATOMICAL_DERIVATIVE_RIGHTS_NOT_CLEARED"
+  ],
+  "publication_status": "CANDIDATE_NOT_WWW_WITNESSED",
+  "release_id": "BT-SCIENCE-C1-20261116-R0",
+  "schema": "nexus-bodytwin-public-science-candidate/1",
+  "source_date": "2026-11-16",
+  "source_ledger_note": "C1 source summary; not a signed publication or independently witnessed deployment.",
+  "trial_001": "DESIGNED_NOT_EXECUTED"
+}
