@@ -193,7 +193,18 @@ def reconcile(event: dict, grant: dict | None, witnesses: list, registry: dict,
         "event_sha256": event_sha,
         "release_id": data["release_id"],
         "source_digest_bound": data["source_sha256"],
-        "state": "ALL_RECONCILED" if results and all(x["state"].startswith("RECONCILED") for x in results.values()) else "PARTIAL_OR_HOLD",
+        "state": (
+            "ALL_RECONCILED"
+            if results and all(x["state"] == "RECONCILED" for x in results.values())
+            else "WWW_OBSERVED_METADATA_DRIFT_OPEN"
+            if results and all(x["state"] in ("RECONCILED", "RECONCILED_WITH_STATIC_METADATA_DRIFT") for x in results.values())
+            else "PARTIAL_OR_HOLD"
+        ),
+        "metadata_drift_routes": sorted(
+            route for route, state in results.items()
+            if state["state"] == "RECONCILED_WITH_STATIC_METADATA_DRIFT"
+        ),
+        "self_audit_note": "Observed WWW bytes and publication metadata are distinct. A detected drift prevents ALL_RECONCILED.",
         "surfaces": results,
         "www_write_performed": False,
         "claim_promotion": False,
