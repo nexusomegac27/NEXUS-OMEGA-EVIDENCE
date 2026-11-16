@@ -1,0 +1,118 @@
+{
+  "schema": "nexus-omega-r31-bodytwin-automatic-science-publication-policy/1",
+  "object": "NEXUS_OMEGA_AXIOM_R31_BODYTWIN_SCOPED_AUTOPUBLISH_POLICY_CANDIDATE_20261116_R0",
+  "version": "2026-11-16-r0",
+  "state": "CANDIDATE_NOT_ACTIVE_NO_INSTALL",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "operator_scoped_grant": "REQUIRED_ONCE_FOR_SERVICE_ROLE_AND_ROUTE_ALLOWLIST_NOT_PROVIDED_BY_THIS_FILE",
+  "allow_auto_after_one_time_bootstrap": true,
+  "publication_lanes": {
+    "science_metadata": {
+      "auto_publish_after_authenticated_adjudication": true,
+      "release_must_be_public_safe": true,
+      "requires_operator_each_release": false,
+      "requires_two_distinct_evidence_roles": true,
+      "requires_original_or_authoritatively_bound_source": true,
+      "report_level_items_must_remain_explicitly_report_only": true,
+      "immutable_event_id": true
+    },
+    "code_module": {
+      "auto_deploy_only_for_preapproved_reversible_whitelist": true,
+      "ci_and_adversarial_and_license_and_rollback_required": true,
+      "otherwise": "HOLD_OPERATOR_ADJUDICATION",
+      "no_automatic_scope_expansion": true
+    },
+    "physical_sensitive": {
+      "auto_publish": false,
+      "auto_deploy": false,
+      "status": "HARD_HOLD_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION"
+    }
+  },
+  "source_authority": {
+    "validity": "SOURCE_HASH_PLUS_REVIEW_NOT_GITHUB_PR_ALONE",
+    "review_receipt": "AUTHENTICATED_INDEPENDENT_ADJUDICATOR_REQUIRED",
+    "source_commit": "IMMUTABLE_FULL_SHA_REQUIRED",
+    "subject_sha256": "RAW_BYTES_SHA256_REQUIRED",
+    "keys": "EXTERNAL_OPERATOR_CONTROLLED_SECRET_STORE_NO_FIXTURE_KEYS",
+    "webhook": "VERIFY_RAW_PAYLOAD_X_HUB_SIGNATURE_256_AND_DELIVERY_ID",
+    "timestamp": "MAX_AGE_CLOCK_SKEW_AND_EXPIRY_TBD_IN_CURSOR_ENV_PREFLIGHT",
+    "replay_protection": "PER_RELEASE_SEQUENCE_AND_PREVIOUS_DIGEST_AND_DEDUP_EVENT_ID"
+  },
+  "trigger": {
+    "primary": "AUTHENTICATED_RELEASE_EVENT_AFTER_EVIDENCE_VERIFICATION",
+    "secondary": "300_SECOND_ANTI_ENTROPY_CENSUS",
+    "scheduled_github": "READ_ONLY_SECONDARY_ALERT_NOT_PRIMARY_RELEASE_SOURCE",
+    "source_tick_is_publication": false,
+    "sha_change_requires_review": true
+  },
+  "hostinger": {
+    "existing_v1_feed": "PRESERVE_EXACT_DO_NOT_MODIFY_STRICT_SCHEMA_OR_CRON",
+    "new_science_surface": "/bodytwin/science/",
+    "new_science_current": "/bodytwin/science/current.json",
+    "new_versioned_prefix": "/bodytwin/science/releases/",
+    "root_one_time_insertion": "ONE_ADDITIVE_ACCESSIBLE_LINK_OR_READ_ONLY_COMPONENT_ONLY",
+    "allowlist_stable_paths": [
+      "/bodytwin/science/index.html",
+      "/bodytwin/science/current.json"
+    ],
+    "content_addressed_release_paths": true,
+    "atomic_pointer_switch_last": true,
+    "previous_good_preserved": true,
+    "rollback_on_failed_witness": true,
+    "no_private_hosting_write": false
+  },
+  "subscriptions": {
+    "bodytwin": [
+      "bodytwin",
+      "science.bodytwin",
+      "publication-science"
+    ],
+    "homepage": "NOT_ENROLLED",
+    "forum": "NOT_ENROLLED",
+    "astra_orbis": "NOT_ENROLLED",
+    "internal": "NEVER_PUBLIC"
+  },
+  "observer": {
+    "separate_trust_principal": true,
+    "http_status_mime_and_raw_sha256": true,
+    "live_DOM_required_initial_bootstrap": true,
+    "browser_mobile_widths": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "same_principal_cannot_self_attest": true,
+    "clock_skew_bounded": true,
+    "witness_rechecks_static_release_not_dynamic_heartbeat": true
+  },
+  "staleness": {
+    "measurement": "time_since_last_authentic_content_change_not_last_cron_run",
+    "heartbeat_unchanged_does_not_publish": true,
+    "anti_entropy_poll_seconds_candidate": 300,
+    "alert_after_unreconciled_seconds_candidate": 900,
+    "experimental_not_proven_sla": true
+  },
+  "defenses": [
+    "SECRET_SCAN_AND_DLP_BEFORE_TRANSFER",
+    "APPEND_ONLY_EVENT_LEDGER",
+    "NO_HISTORICAL_PUBLISHED_LIVE_REWRITE",
+    "NO_RAW_IMU_IN_PUBLIC",
+    "NO_PATIENT_OR_PERSON_ID",
+    "NO_NEW_DEVICE_RUNTIME",
+    "NO_CLINICAL_OR_FULL_BODY_VALIDITY",
+    "NO_AUTO_C2",
+    "NO_AUTO_GITHUB_MERGE",
+    "NO_UNREVIEWED_REFERENCES",
+    "NO_WWW_AUTOROUTE_ADDITION"
+  ],
+  "not_executed": [
+    "HOSTINGER_BACKGROUND_WATCHER_INSTALL",
+    "WEBHOOK_HANDLER_INSTALL",
+    "PRODUCTION_SCIENCE_RELEASE_DEPLOY",
+    "AUTOMATIC_MODULE_DEPLOY",
+    "R31_F01_F20_HOSTINGER_RUNTIME"
+  ],
+  "next": "ONE_CURSOR_SCOPED_BOOTSTRAP_AND_AUTONOMOUS_PUBLIC_METADATA_PILOT_WITH_REAL_INDEPENDENT_WITNESS"
+}
