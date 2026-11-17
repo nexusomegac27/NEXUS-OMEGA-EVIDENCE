@@ -1,0 +1,51 @@
+{
+  "schema": "nexus-omega-r34-external-terminal-return/v1",
+  "required": [
+    "object",
+    "reviewer_role",
+    "identity_status",
+    "source_exposure",
+    "source_pins",
+    "primary_sources",
+    "claims",
+    "counterexamples",
+    "independent_run",
+    "open_gates",
+    "privacy_review",
+    "sha256_manifest"
+  ],
+  "properties": {
+    "object": "unique return id",
+    "reviewer_role": "E01-E08 or independent clearly scoped reviewer",
+    "identity_status": "VERIFIED or SELF_DECLARED_UNVERIFIED",
+    "source_exposure": "BLINDED_STAGE0 or PREEXPOSED",
+    "source_pins": "array: exact commit SHA and original raw SHA256 or SOURCE_GAP",
+    "primary_sources": "array: first-party sources with dated version URL/DOI",
+    "claims": "array: statement/assumptions/evidence_class/actual_status/limitations",
+    "counterexamples": "array: independent fixture, expected vs observed, domain, log hash",
+    "independent_run": "null unless actual env, version/binary digest, command, exit, timestamp, outputs, witness supplied",
+    "open_gates": "array: no invented PASS; distinguish HOLD, NOT_RUN, SOURCE_GAP",
+    "privacy_review": "PASS only if actual scan; never raw IMU/identifiers/secrets/private paths",
+    "sha256_manifest": "sha256 for submitted original files, computed from actual bytes"
+  },
+  "permitted_evidence_classes": [
+    "FIRST_PARTY_PRIMARY",
+    "ORIGINAL_SOURCE_REHASH",
+    "INDEPENDENT_RUNTIME_REPLAY",
+    "FORMAL_PROOF_REPLAY",
+    "PRODUCER_REPORT",
+    "EXTERNAL_WWW_WITNESS",
+    "DESIGN_ONLY",
+    "SOURCE_GAP",
+    "UNKNOWN"
+  ],
+  "forbidden": [
+    "CLAIM_PROMOTION",
+    "UNVERIFIED_AGENT_AUTHENTICATION",
+    "AUTOMATIC_GITHUB_WRITE",
+    "HOSTINGER_DEPLOY",
+    "CLINICAL_VALIDATED",
+    "MERGE"
+  ],
+  "return_type": "one reviewer one terminal original with negative evidence retained"
+}
