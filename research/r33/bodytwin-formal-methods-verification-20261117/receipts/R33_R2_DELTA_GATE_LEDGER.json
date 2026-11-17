@@ -1,0 +1,56 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R33_R2_DELTA_GATE_LEDGER_20261117_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "consent_bind": "OPEN",
+  "pr369_head_bind": "d1d51475467ba246aea852248888879e95dbfdb6",
+  "pr363_head_bind": "0bda421b27ca5494548753fca4f5f31730a703ea",
+  "recorded_utc": "2026-11-17T18:52:42Z",
+  "gates": [
+    {
+      "id": "F01",
+      "finding": "HTML_ESCAPING_MISSING",
+      "status": "REMEDIATED",
+      "evidence": "src/render_methods_offline.py html.escape"
+    },
+    {
+      "id": "F02",
+      "finding": "INPUT_NOT_FAIL_CLOSED",
+      "status": "REMEDIATED",
+      "evidence": "object_pairs_hook + parse_constant + blocked fields"
+    },
+    {
+      "id": "F03",
+      "finding": "NEGATIVES_INSUFFICIENT_7_OF_7",
+      "status": "REMEDIATED",
+      "evidence": "B01-B12 PASS_14_OF_14"
+    },
+    {
+      "id": "F04",
+      "finding": "PR363_SUITE_PATH_MISMATCH",
+      "status": "CLOSED_LOCATED_EXECUTED",
+      "evidence": "research/r31/.../test_science_snapshot.py PASS_28_OF_28"
+    },
+    {
+      "id": "F05",
+      "finding": "ABSOLUTE_HOST_PATH_IN_PUBLIC_RECEIPT",
+      "status": "REMEDIATED_NEW_HEAD",
+      "evidence": "relative paths; PUBLIC_HISTORY_REVIEW_PENDING"
+    }
+  ],
+  "regression": {
+    "r31_baselines": "PASS_28_OF_28",
+    "b01_b12": "PASS_14_OF_14",
+    "renderer_double_pass": "PASS"
+  },
+  "holds": {
+    "PUBLIC_SAFE_RELEASE": "HOLD_PENDING_AXIOM_ADJUDICATION",
+    "PR_MERGE": "NO",
+    "HOSTINGER_WRITE": "NO",
+    "BODYTWIN_VALIDATED": "NO",
+    "LEAN_KERNEL_REPLAY": "NOT_RUN",
+    "JCS_VENDOR_RUNTIME": "NOT_VERIFIED",
+    "E99_HOLD": "PRESERVED",
+    "A_PRIME_CF01_CF09": "OPEN"
+  }
+}
