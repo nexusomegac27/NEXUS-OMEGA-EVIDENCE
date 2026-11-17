@@ -1,0 +1,429 @@
+{
+  "schema": "nexus-omega-r31-open-innovation-falsification-registry/1",
+  "object": "NEXUS_OMEGA_R31_OPEN_INNOVATION_FALSIFICATION_REGISTRY_20261117_R0",
+  "research_date": "2026-11-17",
+  "state": "PUBLIC_SAFE_RESEARCH_CONTROL_DESIGNS_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "epistemic_fences": [
+    "HISTORICAL_CF_ARE_ALREADY_KNOWN_NOT_NEW_BLIND_EXPERT_DISCOVERIES",
+    "PROSPECTIVE_DESIGNS_PRECOMMITTED_BY_AXIOM_AFTER_KNOWN_A_PRIME_BUGS",
+    "CONTROL_DESIGN_IS_NOT_TEST_EXECUTION",
+    "EXTERNAL_SYNTHETIC_SELF_RUN_NOT_NEXUS_RUNTIME",
+    "NO_F01_F20_HOSTINGER_EXECUTION"
+  ],
+  "privacy": "NO_PRIVATE_R31_ORIGINAL_BYTES_INCLUDED",
+  "reference_objects": [
+    "NEXUS_OMEGA_AXIOM_R31_VERIFICATION_FRAMEWORK_RESEARCH_BIND_SECOND_PARTY_INTAKE_20261117_R0",
+    "NEXUS_OMEGA_AXIOM_R31_A_PRIME_THREE_ORIGINALS_INDEPENDENT_REHASH_REPLAY_AND_TERMINAL_LAB_ADJUDICATION_20261117_R0"
+  ],
+  "control_counts": {
+    "historical_known": 10,
+    "new_negative_designs": 16,
+    "new_positive_designs": 6,
+    "executed_by_this_packet": 0
+  },
+  "historical_known_R31_CF": [
+    {
+      "id": "CF01",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "INVALID_LEASE_AND_LOST_ACK",
+      "reported_observation": "Invalid worker+lease token under lost_ack_replay bypassed and applied effect appeared",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF02",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "CHILD_PAYLOAD_DIGEST_TAMPER",
+      "reported_observation": "Changed stored child payload digest still returned NOOP_DUPLICATE_VERIFIED",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF03",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "EVENT_SEQUENCE_EQUIVOCATION",
+      "reported_observation": "Changed release_seq for same event returned NOOP_DUPLICATE_VERIFIED",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF04",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "CHILD_TARGET_URI_TAMPER",
+      "reported_observation": "Changed persisted target URI still returned NOOP_DUPLICATE_VERIFIED",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF05",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "FK_VIOLATION_NOT_GLOBAL_FAIL_CLOSED",
+      "reported_observation": "After orphan row, integrity report noticed violation but enqueue reported PASS_FIRST_COMMIT",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF06",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "FIXTURE_POLICY_PREFIX_NOT_AUTHORITY",
+      "reported_observation": "Test fixture prefix accepted forged/expired-looking scope; no real signed authority",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF07",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "NONPOSITIVE_RELEASE_SEQUENCE",
+      "reported_observation": "Negative release sequence accepted by lab candidate",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF08",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "TARGET_URI_NOT_BOUND_TO_ALLOWLIST",
+      "reported_observation": "Allowed class plus out-of-scope target URI accepted",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF09",
+      "kind": "HISTORICAL_COUNTEREXAMPLE",
+      "code": "REPEATED_ACK_LOSS_ATTEMPT_COLLISION",
+      "reported_observation": "Second lost-ACK duplicate produced APPLY_FAIL instead of stable idempotent no-op",
+      "source_evidence_class": "EVIDENCED_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    },
+    {
+      "id": "CF10",
+      "kind": "HISTORICAL_POSITIVE",
+      "code": "FIRST_FAILURE_THEN_VALID_RETRY",
+      "reported_observation": "Failed first 0+0 then authentic retry 1+4 behaved correctly",
+      "source_evidence_class": "SAFE_POSITIVE_PREVIOUS_AXIOM_OFFLINE",
+      "reexecute_for_this_wave": false,
+      "execution_status_this_wave": "NOT_RUN",
+      "interpretation": "A previous AXIOM isolated offline test, not production/Hostinger runtime; do not count as newly blind discovered."
+    }
+  ],
+  "prospective_new_negatives": [
+    {
+      "id": "NC01",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Independent oracle rejects same status-string with different DB rows",
+      "stimulus": "Same SUT status PASS or NOOP with two different raw parent/child/side-effect states",
+      "minimum_oracle": "Oracle checks all fields and material safety properties, not message string",
+      "topics": [
+        "E04",
+        "E01"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC02",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Wrong owner/observer is self-authorized",
+      "stimulus": "Owner and witness are same unauthenticated actor",
+      "minimum_oracle": "No independent/publication claim without distinct authenticated roles",
+      "topics": [
+        "E05",
+        "E12"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC03",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Signed but stale scientific content",
+      "stimulus": "Valid signature on expired source/release digest",
+      "minimum_oracle": "Reject freeze/replay despite green signature verification",
+      "topics": [
+        "E05",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC04",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Cross-surface epoch split",
+      "stimulus": "Three of four destinations show new release, fourth old",
+      "minimum_oracle": "Global success false; preserve partial outcome",
+      "topics": [
+        "E02",
+        "E06"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC05",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "304 validator from unknown previous body",
+      "stimulus": "Observer receives 304 without prior entity SHA bound to validator",
+      "minimum_oracle": "WWW content still UNKNOWN; not fresh witness",
+      "topics": [
+        "E06",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC06",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Heartbeat ahead of scientific source",
+      "stimulus": "Producer increases seq, source SHA unchanged",
+      "minimum_oracle": "No new scientific release promoted",
+      "topics": [
+        "E06",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC07",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Mutation removes child target SHA validation",
+      "stimulus": "New candidate returns positive despite changed child destination",
+      "minimum_oracle": "Mutation detected by independent oracle",
+      "topics": [
+        "E04",
+        "E10"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC08",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Model counts effects as set, not occurrences",
+      "stimulus": "One delivery applied twice under identical ID",
+      "minimum_oracle": "Double effect detected in ordered trace/counter",
+      "topics": [
+        "E03",
+        "E12"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC09",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "No licence to re-host anatomy derivative",
+      "stimulus": "Research metadata allowed, actual 3D asset licence missing",
+      "minimum_oracle": "Asset HOLD, public descriptive metadata can remain C1",
+      "topics": [
+        "E08",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC10",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Signer policy narrower than science request",
+      "stimulus": "Scientifically adjudicated evidence requests forbidden private route",
+      "minimum_oracle": "No route write despite good science",
+      "topics": [
+        "E05",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC11",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Worker crashes at DB external-effect boundary",
+      "stimulus": "Commit before effect vs effect before ACK with retry",
+      "minimum_oracle": "No false all-green; no duplicated effect under specified idempotence contract",
+      "topics": [
+        "E02",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC12",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Trial metrics promote source reporter to physical validation",
+      "stimulus": "Synthetic tests pass yet raw sensor originals absent",
+      "minimum_oracle": "BODYTWIN_VALIDATED=NO remains",
+      "topics": [
+        "E07",
+        "E08"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC13",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Policy roles based on unverified model names",
+      "stimulus": "External agent claims operator by identity string",
+      "minimum_oracle": "No authentication, no write capability",
+      "topics": [
+        "E05",
+        "E12"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC14",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Source originality and reviewer independence conflated",
+      "stimulus": "Several manuscripts from same tool/provider with shared prompt",
+      "minimum_oracle": "Reviewer count not multiplied; correlated errors acknowledged",
+      "topics": [
+        "E12",
+        "E07"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC15",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Negative reliability estimate from heterogeneous checks",
+      "stimulus": "18/18 diverse checks used to claim low failure rate",
+      "minimum_oracle": "Reject confidence claim absent defined sampling and operational exposure",
+      "topics": [
+        "E07",
+        "E09"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    },
+    {
+      "id": "NC16",
+      "kind": "PROSPECTIVE_DESIGN_ONLY_NOT_BLINDED",
+      "hypothesis": "Defective oracle mutated alongside SUT",
+      "stimulus": "SUT and checker share a bug or code path",
+      "minimum_oracle": "Cross-language or independent formal check detects discrepancy",
+      "topics": [
+        "E04",
+        "E03"
+      ],
+      "execution_status": "NOT_RUN",
+      "source_data": null,
+      "actual_result": null
+    }
+  ],
+  "prospective_new_positives": [
+    {
+      "id": "PC01",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "First valid one-target scientific metadata release",
+      "stimulus": "One authorized release and one valid subscriber",
+      "minimum_oracle": "Precisely one parent and one addressed child, not external delivery success",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    },
+    {
+      "id": "PC02",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "First valid four-target atomic enqueue",
+      "stimulus": "Four subscribed allowed surfaces",
+      "minimum_oracle": "One release, four unique children, exact source/digest/route bindings",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    },
+    {
+      "id": "PC03",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "Duplicate benign retries",
+      "stimulus": "Same immutable release and subscriber set resent repeatedly",
+      "minimum_oracle": "No new effects/rows; stable idempotent state",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    },
+    {
+      "id": "PC04",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "Recovery after process restart",
+      "stimulus": "Durable pending queue and independently restarted worker",
+      "minimum_oracle": "Pending destinations recover without double effects; actual process restart observed",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    },
+    {
+      "id": "PC05",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "Adjudicated C1 metadata release public witness",
+      "stimulus": "Authorized synthetic end-to-end pilot when later separately approved",
+      "minimum_oracle": "External observer binds entity SHA/version/time distinct from deploy",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    },
+    {
+      "id": "PC06",
+      "kind": "PROSPECTIVE_POSITIVE_DESIGN_ONLY",
+      "scenario": "Offline fallback / continuity after dependency outage",
+      "stimulus": "Versioned locally pinned release and unavailable third-party service",
+      "minimum_oracle": "Safe last-good, explicit degraded status, no unauthorized publication",
+      "execution_status": "NOT_RUN",
+      "actual_result": null
+    }
+  ],
+  "independent_innovation_expansion_schema": {
+    "innovation_id": "INV-R31-REVIEWER-001",
+    "title": "Reviewer-defined original problem",
+    "own_hypothesis": "TEXT_REQUIRED",
+    "strongest_refuter": "TEXT_REQUIRED",
+    "source_scope": "PUBLIC_SAFE_OR_PRIVATE_NOT_ACCESSED",
+    "claim_scope": "C1_DESCRIPTIVE_ONLY",
+    "artifact_paths": [],
+    "tool_versions": [],
+    "deps_and_licenses": [],
+    "expected_evidence_class": "DESIGN_ONLY_OR_EXTERNAL_SYNTHETIC_SELF_RUN",
+    "source_originality_risk": "DISCLOSE",
+    "falsification_controls": [],
+    "primary_sources_read": [],
+    "counterarguments": [],
+    "next": "INDEPENDENT_EXPERT_REPORT_ONLY"
+  },
+  "no_executed_nexus_controls": true,
+  "hostinger_F01_F20_actual_executed": 0
+}
