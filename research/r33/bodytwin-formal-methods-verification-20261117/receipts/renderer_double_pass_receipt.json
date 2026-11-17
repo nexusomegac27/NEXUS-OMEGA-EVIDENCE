@@ -1,0 +1,26 @@
+{
+  "absolute_host_paths": false,
+  "bodytwin_validated": "NO",
+  "capsule_bytes": 8730,
+  "capsule_path": "data/07_BODYTWIN_R33_METHODS_CAPSULE.json",
+  "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "consent_bind": "OPEN",
+  "double_pass": "PASS",
+  "generated_utc": "2026-11-17T18:53:49Z",
+  "object": "NEXUS_OMEGA_R33_METHODS_RENDERER_DOUBLE_PASS_RECEIPT_20261117_R2",
+  "public_history_review": "PUBLIC_HISTORY_REVIEW_PENDING",
+  "schema_report": {
+    "jsonschema_version": "4.26.0",
+    "result": "PASS",
+    "schema_available": true,
+    "schema_path": "data/02_BODYTWIN_R33_METHODS_RECORD_SCHEMA.json"
+  },
+  "view_html_bytes": 2315,
+  "view_html_path": "candidate_offline/methods_assurance.html",
+  "view_html_sha256": "b6ab12d3b9b82802bc14d41df2489532da22465915747dced1b9d4e5c980a713",
+  "view_json_bytes": 8731,
+  "view_json_path": "candidate_offline/methods_assurance.json",
+  "view_json_sha256": "9a984ccddfdcaa0d313323d648e766ce7fcd9f072399f826997e4cf943ecea2c"
+}

@@ -1,0 +1,73 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R33_R2_B01_B12_NEGATIVES_20261117_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "consent_bind": "OPEN",
+  "capsule_bytes": 8730,
+  "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+  "suite": "tests/test_negatives_r1.py",
+  "matrix": "B01-B12",
+  "passed": 14,
+  "total": 14,
+  "verdict": "PASS_14_OF_14",
+  "recorded_utc": "2026-11-17T18:52:42Z",
+  "results": [
+    {
+      "id": "test_b01_duplicate_json_key_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b02_nan_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b03_html_injection_escaped",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b04_bodytwin_validated_yes_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b05_clinical_validated_true_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b06_consent_bind_closed_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b07_claim_ceiling_substring_trap",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b08_claim_promotion_true_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b09_private_topology_path_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b10_invalid_utf8_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b11_measurement_claim_true_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_b12_physical_and_whole_body_pose_fail",
+      "status": "PASS"
+    },
+    {
+      "id": "test_positive_exact_claim_ceiling",
+      "status": "PASS"
+    },
+    {
+      "id": "test_positive_render_once_and_relative_receipt",
+      "status": "PASS"
+    }
+  ],
+  "prior_n01_n07": "SUPERSEDED_FOR_TIP_ONLY_PRESERVED_AS_HISTORY"
+}

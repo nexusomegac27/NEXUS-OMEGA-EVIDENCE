@@ -1,0 +1,215 @@
+{
+  "object": "NEXUS_OMEGA_BODYTWIN_R33_METHODS_VERIFY_20261117_R0",
+  "schema": "nexus-bodytwin-r33-methods-assurance/1",
+  "created_utc": "2026-11-17T17:09:28Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "bodytwin_validated": "NO",
+  "clinical_validated": false,
+  "whole_body_pose_validated": false,
+  "physical_measurement_validated": false,
+  "consent_bind": "OPEN",
+  "trial_001": "DESIGNED_NOT_EXECUTED",
+  "historical_nine_event_source_unchanged": true,
+  "r30": "CLOSED_C1_PRESERVED",
+  "r32_source_mutation": false,
+  "publication_status": "OFFLINE_CANDIDATE_NOT_WWW_WITNESSED",
+  "www_witness": null,
+  "new_methods": [
+    {
+      "id": "BT-R33-METHOD-JCS-VERSION-GATE-R3",
+      "title": "JCS R3 version-gate probes (missing/unknown/mismatch Exit 3)",
+      "science_scope": "JSON_CANONICALIZATION",
+      "evidence_class": "CURSOR_INDEPENDENT_OFFLINE_RUN",
+      "status": "INDEPENDENT_REPLAY_PASS",
+      "source": {
+        "source_object": "NEXUS_OMEGA_GROK_R33_JCS_CLASSIFIER_REMEDIATION_R3_RETURN_STACK_20261117_R0.zip",
+        "git_commit": "ff83305854f448902e1d190d568bfb0da94014b1",
+        "source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/367",
+        "raw_sha256": "9a2d613a40bc65e945f4c4986b458cadacaae17ccafee00c0b204699f0e3a3d6",
+        "raw_bytes": 9403,
+        "source_available_to_executor": true
+      },
+      "observed": {
+        "execution_occurred": true,
+        "tool_version": "Python 3.12.10; jcs_classify_r3.py --selftest; rfc8785 ABSENT",
+        "original_source_unchanged": true,
+        "test_ids": [
+          "GATE_MISSING_BACKEND",
+          "GATE_VERSION_UNKNOWN",
+          "GATE_VERSION_MISMATCH"
+        ],
+        "actual_result": "ALL_GATE_PROBES_PASS_EXIT3_HOLD; FUNCTIONAL_BACKEND=NOT_AVAILABLE; WHEEL_RUNTIME=NOT_INSTALLED",
+        "actual_log_sha256": "18536ac4082467d2180c55a7b0cec534cd25ab0d41fd82872b93d54e6c467d49"
+      },
+      "unknowns": [
+        "AUTHENTIC_VENDOR_WHEEL_RUNTIME_NOT_VERIFIED",
+        "SYNTHETIC_VERSION_STRING_ALONE_NOT_INSTALL_PROOF",
+        "FULL_JCS_CONFORMANCE_NOT_ESTABLISHED"
+      ],
+      "bodytwin_measurement_claim": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "independent_oracle": "Cursor local selftest against SOURCE_EXACT R3 ZIP",
+      "counterexample": "Synthetic module claiming __version__=0.1.4 without RFC-conformant canonicalize accepted by R3 label path — authenticity gap preserved",
+      "axiom_scope": "VERSION_GATE_ONLY_NOT_VENDOR_AUTHENTICITY",
+      "target_www_witness": null,
+      "ip_licence_status": "PUBLIC_SAFE_RESEARCH_C1"
+    },
+    {
+      "id": "BT-R33-METHOD-LEAN-KERNEL-REPLAY",
+      "title": "Lean 4.36.0 pinned kernel independent replay of original GREEN source",
+      "science_scope": "FORMAL_SOFTWARE_ASSURANCE",
+      "evidence_class": "ACTUAL_ORIGINAL_SOURCE_REHASH",
+      "status": "NOT_RUN",
+      "source": {
+        "source_object": "NEXUS_R31_GREEN.lean",
+        "git_commit": null,
+        "source_url": null,
+        "raw_sha256": "70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+        "raw_bytes": 7230,
+        "source_available_to_executor": true
+      },
+      "observed": {
+        "execution_occurred": false,
+        "tool_version": null,
+        "original_source_unchanged": true,
+        "test_ids": [
+          "LEAN_4_36_0_KERNEL_REPLAY"
+        ],
+        "actual_result": "TOOLCHAIN_ABSENT_LEAN_ELAN_LAKE; KERNEL_REPLAY=NOT_RUN_TOOLCHAIN_GAP; ORIGINAL_REHASH=MATCH",
+        "actual_log_sha256": null
+      },
+      "unknowns": [
+        "KERNEL_REPLAY_PENDING_PINNED_4_36_0",
+        "AXIOM_AUDIT_NOT_RUN",
+        "THEOREM_WORLD_CORRESPONDENCE_NOT_MAPPED"
+      ],
+      "bodytwin_measurement_claim": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "independent_oracle": null,
+      "counterexample": null,
+      "axiom_scope": "ORIGINAL_BYTES_PRESERVED_REPLAY_PENDING",
+      "target_www_witness": null,
+      "ip_licence_status": "PUBLIC_SAFE_RESEARCH_C1"
+    },
+    {
+      "id": "BT-R33-METHOD-VENDOR-WHEEL-PROVENANCE",
+      "title": "RFC-8785 authentic pinned wheel hash vs runtime import",
+      "science_scope": "SOURCE_PROVENANCE",
+      "evidence_class": "SOURCE_GAP",
+      "status": "HOLD_SOURCE_GAP",
+      "source": {
+        "source_object": "PyPI rfc8785==0.1.4 wheel digest (order-bound)",
+        "git_commit": null,
+        "source_url": "https://pypi.org/project/rfc8785/0.1.4/",
+        "raw_sha256": "520d690b448ecf0703691c76e1a34a24ddcd4fc5bc41d589cb7c58ec651bcd48",
+        "raw_bytes": null,
+        "source_available_to_executor": false
+      },
+      "observed": {
+        "execution_occurred": false,
+        "tool_version": null,
+        "original_source_unchanged": true,
+        "test_ids": [
+          "WHEEL_SHA256_RUNTIME_COMPARE"
+        ],
+        "actual_result": "rfc8785 ModuleNotFoundError; WHEEL_PROVENANCE_VERIFIED_AT_RUNTIME=NO",
+        "actual_log_sha256": "18536ac4082467d2180c55a7b0cec534cd25ab0d41fd82872b93d54e6c467d49"
+      },
+      "unknowns": [
+        "AUTHENTIC_PINNED_BACKEND_REPLAY_NOT_RUN",
+        "INSTALLED_DISTRIBUTION_BYTES_ABSENT"
+      ],
+      "bodytwin_measurement_claim": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "independent_oracle": null,
+      "counterexample": null,
+      "axiom_scope": "HASH_DOCUMENTED_NOT_COMPARED_TO_INSTALLED_DISTRIBUTION",
+      "target_www_witness": null,
+      "ip_licence_status": "PUBLIC_SAFE_RESEARCH_C1"
+    },
+    {
+      "id": "BT-R33-METHOD-EPISTEMIC-WALLS-BIND",
+      "title": "Methods walls: proof/hash/CI/web != BodyTwin physical validity",
+      "science_scope": "METROLOGY_METHOD_DESIGN",
+      "evidence_class": "DESIGN_ONLY",
+      "status": "DESIGN_ONLY",
+      "source": {
+        "source_object": "03_SCIENCE_VERIFICATION_AND_BODYTWIN_GATE_MATRIX.json proof_walls",
+        "git_commit": "45da086813684a126bb2fc2317d75aa96695f91d",
+        "source_url": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/368",
+        "raw_sha256": "5ae063acbb5ab6c571c0c1fe57d9d12b887c3021a4b23898bc2c6e37ea58bcd3",
+        "raw_bytes": 13856,
+        "source_available_to_executor": true
+      },
+      "observed": {
+        "execution_occurred": false,
+        "tool_version": null,
+        "original_source_unchanged": true,
+        "test_ids": [
+          "PROOF_WALLS_BIND"
+        ],
+        "actual_result": "WALLS_BOUND_C1_NO_PHYSICAL_PROMOTION",
+        "actual_log_sha256": null
+      },
+      "unknowns": [
+        "INDEPENDENT_LEAN_REPLAY_OPEN",
+        "A_PRIME_CF01_CF09_OPEN",
+        "GROK_MODEL_ADEQUACY_OUTSTANDING",
+        "E99_HOLD_PRESERVED"
+      ],
+      "bodytwin_measurement_claim": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "independent_oracle": null,
+      "counterexample": null,
+      "axiom_scope": "METHODS_ASSURANCE_ONLY",
+      "target_www_witness": null,
+      "ip_licence_status": "PUBLIC_SAFE_RESEARCH_C1"
+    },
+    {
+      "id": "BT-R33-METHOD-WWW-SCIENCE-WITNESS",
+      "title": "Independent WWW witness of existing /bodytwin/science/ surface",
+      "science_scope": "PUBLICATION_WITNESS",
+      "evidence_class": "DESIGN_ONLY",
+      "status": "HOLD_SOURCE_GAP",
+      "source": {
+        "source_object": "Prior Cursor BodyTwin science live return (not reobserved this turn)",
+        "git_commit": null,
+        "source_url": "https://www.nexus-mobile.de/bodytwin/science/",
+        "raw_sha256": "5b17defcb836db1256bdb6d0d8ece9a345a3b0a020fcca7fc91840e99e6c4aa8",
+        "raw_bytes": null,
+        "source_available_to_executor": false
+      },
+      "observed": {
+        "execution_occurred": false,
+        "tool_version": null,
+        "original_source_unchanged": true,
+        "test_ids": [
+          "WWW_INDEPENDENT_WITNESS"
+        ],
+        "actual_result": "WWW_HOLD; NO_SECOND_SCIENCE_SITE; NO_SCOPED_OWNER_WRITE_THIS_BIND",
+        "actual_log_sha256": null
+      },
+      "unknowns": [
+        "CURRENT_INDEPENDENT_WWW_WITNESS_ABSENT",
+        "AUTOPUBLISH_NOT_PROVEN"
+      ],
+      "bodytwin_measurement_claim": false,
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "independent_oracle": null,
+      "counterexample": null,
+      "axiom_scope": "PRESERVE_EXISTING_SCIENCE_SURFACE_ONLY",
+      "target_www_witness": "PENDING_INDEPENDENT_EXTERNAL_WITNESS",
+      "ip_licence_status": "PUBLIC_SAFE_RESEARCH_C1"
+    }
+  ],
+  "pending_claim_gates": [
+    "AUTHENTIC_PINNED_BACKEND_REPLAY",
+    "INDEPENDENT_LEAN_4_36_0_KERNEL_REPLAY",
+    "INDEPENDENT_WWW_WITNESS_OR_OFFLINE_HOLD",
+    "A_PRIME_CF01_CF09_SOURCE_REPLAY",
+    "E99_HOLD_PRESERVED_UNTIL_ORIGINAL_PAIR",
+    "NO_BODYTWIN_VALIDATED_PROMOTION",
+    "NO_CLINICAL_OR_PHYSICAL_POSE_CLAIM"
+  ]
+}

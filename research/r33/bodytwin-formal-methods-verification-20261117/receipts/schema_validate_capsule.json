@@ -1,0 +1,13 @@
+{
+  "bodytwin_validated_observed": "NO",
+  "capsule_bytes": 8730,
+  "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+  "consent_bind_observed": "OPEN",
+  "detail": {
+    "error_count": 0
+  },
+  "object": "NEXUS_OMEGA_CURSOR_R33_RESIDUAL_SCHEMA_VALIDATE_CAPSULE_20261117_R1",
+  "schema_bytes": 9414,
+  "schema_sha256": "9bca5163730cbc198252b1575d5f71975eed88a9a614dc854e5a9094c10cac06",
+  "status": "PASS"
+}
