@@ -1,0 +1,298 @@
+{
+  "schema_version": "NEXUS_R33_LEAN_ASSURANCE_OBLIGATIONS_V1",
+  "object": "NEXUS_OMEGA_AXIOM_R33_LEAN_FORMAL_ASSURANCE_OBLIGATION_REGISTRY_20261117_R0",
+  "status": "C1_DESIGN_AND_BOUND_R31_ORIGINAL_REFERENCES",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "truth_authority": "NONE",
+  "claim_promotion": false,
+  "source_integrity": {
+    "workspace2_sha256": "fdcd737e1620071d40081d3108e8a06f7fe0a9a150b834a4b2508c1ceadb92c3",
+    "workspace2_manifest": "14_OF_14_MATCH",
+    "workspace3_sha256": "fbe39c591c8e561348a7216ff311075b25cb9d98afbb960627c00ef241d7fc05",
+    "workspace3_manifest": "24_OF_24_MATCH",
+    "qwen_lean_source": {
+      "bytes": 7230,
+      "sha256": "70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "status": "SOURCE_EXACT_AXIM_REHASH"
+    },
+    "qwen_lean_report_log": {
+      "bytes": 379,
+      "sha256": "704e4097fde88ceccc266b90801aa2de920d0ef0470131de6094c1f11a719bf7",
+      "producer_reported_compiler": "LEAN_4_36_0_EXIT0",
+      "axim_compiler_replayed": false
+    },
+    "r32_host_original_directory_inventory": "PENDING"
+  },
+  "proof_hygiene": {
+    "source_original_mutation_allowed": false,
+    "policy": "NO_SORRY_AX_NO_UNREVIEWED_AXIOMS_NO_UNJUSTIFIED_NATIVE_DECIDE",
+    "core_standard_axioms_observed_in_qwen_log": [
+      "propext",
+      "Quot.sound"
+    ],
+    "independent_formal_check": "NOT_EXECUTED_AXIM"
+  },
+  "known_evidence": [
+    {
+      "id": "P01",
+      "claim": "QWEN_LEAN_SOURCE_RAW_BYTES",
+      "precise_obligation": "Read exact Qwen 7230B Lean file, compare SHA256",
+      "evidence_class": "SOURCE_BYTES_INDEPENDENTLY_REHASHED",
+      "status": "PASS_SOURCE_INTEGRITY",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P02",
+      "claim": "QWEN_LEAN_PRODUCER_CHECK_LOG",
+      "precise_obligation": "Qwen Lean v4.36.0 EXIT=0 and #print axioms output",
+      "evidence_class": "PRODUCER_REPORTED_RUN_LOG_RAW_SHA_MATCH",
+      "status": "PASS_LOG_CUSTODY_NOT_OWN_COMPILER",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P03",
+      "claim": "CX1_ONE_HONEST_ONE_COMPROMISED",
+      "precise_obligation": "GREEN yes yet not every authorized receiver delivered",
+      "evidence_class": "FORMAL_CANDIDATE_IN_QWEN_SOURCE",
+      "status": "CHECK_REPORTED_NOT_AXIM_REPLAYED",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P04",
+      "claim": "CX2_EMPTY_TARGET_VACUITY",
+      "precise_obligation": "GREEN true for empty recipient set when current>=N",
+      "evidence_class": "FORMAL_CANDIDATE_IN_QWEN_SOURCE",
+      "status": "CHECK_REPORTED_NOT_AXIM_REPLAYED",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P05",
+      "claim": "Q_CX4_TARGET_SET_NARROWING",
+      "precise_obligation": "GREEN antitone in recipient set; narrowed B falsely green",
+      "evidence_class": "FORMAL_CANDIDATE_IN_QWEN_SOURCE",
+      "status": "CHECK_REPORTED_NOT_AXIM_REPLAYED",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P06",
+      "claim": "Q_CX5_ZERO_WINDOW",
+      "precise_obligation": "N=0 makes every GREEN trivially true",
+      "evidence_class": "FORMAL_CANDIDATE_IN_QWEN_SOURCE",
+      "status": "CHECK_REPORTED_NOT_AXIM_REPLAYED",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P07",
+      "claim": "EXISTENTIAL_SALVAGE",
+      "precise_obligation": "GREEN plus sound Ack from designated honest recipient shows existence only",
+      "evidence_class": "CONDITIONAL_LEAN_THEOREM_IN_SOURCE",
+      "status": "REQUIRES_REAL_ACK_SOUNDNESS_EVIDENCE",
+      "source_ref": "NEXUS_R31_GREEN.lean@70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P08",
+      "claim": "OLD_A_PRIME_CF01_CF09",
+      "precise_obligation": "Existing unauthorized effect, false noop, bad lease, bad retry behavior",
+      "evidence_class": "INDEPENDENT_EARLIER_OFFLINE_PY_REPLAY",
+      "status": "STILL_OPEN_NOT_REMEDIATED",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P09",
+      "claim": "E99_DZSE_SOURCE_MISMATCH",
+      "precise_obligation": "14174 B actual result digest diverges from E99 manifest digest",
+      "evidence_class": "SOURCE_CUSTODY_MISMATCH_INDEPENDENT",
+      "status": "HOLD",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P10",
+      "claim": "PUBLIC_WWW_WITNESS",
+      "precise_obligation": "Independent per-target observer raw entity SHA, cache semantics, tri-state",
+      "evidence_class": "DESIGN_ONLY",
+      "status": "NOT_RUN",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P11",
+      "claim": "REAL_BODYTWIN_VALIDITY",
+      "precise_obligation": "Scientific/medical/physical measurement validity separate",
+      "evidence_class": "NOT_TESTED",
+      "status": "NOT_RUN",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    },
+    {
+      "id": "P12",
+      "claim": "R32_HOST_DIRECTORY_CENSUS",
+      "precise_obligation": "Actual R32 Windows folder path/files/bytes/SHA / privacy labels",
+      "evidence_class": "OPERATOR_REPORTED_EXISTS",
+      "status": "PENDING_SOURCE_CENSUS",
+      "source_ref": null,
+      "independent_axim_lean_kernel_replay": false
+    }
+  ],
+  "new_r33_obligations": [
+    {
+      "id": "F01_NONEMPTY_TARGETS",
+      "claim": "B is nonempty for any success state",
+      "contract": "NEXUS_MODEL_PRECONDITION",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F02_POSITIVE_N",
+      "claim": "N >= 1 for any success state",
+      "contract": "NEXUS_MODEL_PRECONDITION",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F03_EXACT_INTENT_TARGET_BIND",
+      "claim": "B equals ALL originally authorized destinations in the content-addressed signed release intent, not a proper subset",
+      "contract": "FORMAL_AND_AUTHENTICATION_BIND",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F04_EXPLICIT_SOURCE_EPOCH",
+      "claim": "All matching entities and ACKs bind exact source blob hash, source epoch and target URI",
+      "contract": "FORMAL_AND_EMPIRICAL",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F05_NO_UNAUTHORIZED_EFFECT",
+      "claim": "Invalid lease, actor, grant, URL or revocation cannot produce applied effect",
+      "contract": "FORMAL_AND_RUNTIME",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F06_NO_FALSE_DUPLICATE",
+      "claim": "Any changed persisted child content/URI/digest/seq results HOLD, not NOOP_VERIFIED",
+      "contract": "FORMAL_AND_RUNTIME",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F07_TRISTATE_WITNESS",
+      "claim": "MATCH/MISMATCH/UNKNOWN; UNKNOWN never promotes global green; stale cache and 304 are not fresh witnessed bytes",
+      "contract": "FORMAL_AND_EMPIRICAL",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F08_DURABLE_RECOVERY",
+      "claim": "First fail 0+0, retry 1+n; repeated lost ACK and process restart preserve idempotence",
+      "contract": "RUNTIME_AND_SIMULATION",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F09_FORMAL_TO_RUNTIME_REFINEMENT",
+      "claim": "Executable host behavior traces refine trusted Lean predicates rather than only demonstrating a model's internal logic",
+      "contract": "REFINEMENT_CONTRACT",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    },
+    {
+      "id": "F10_NO_SCIENTIFIC_CLAIM_INFLATION",
+      "claim": "Formal proof, build source, live publication and physical validity remain separate",
+      "contract": "EPISTEMIC_GOVERNANCE",
+      "stage": "CURRENT_NOT_PROVED",
+      "formal_statement_sha256": null,
+      "assumption_classes": [],
+      "proof_file": null,
+      "toolchain_pin": "leanprover/lean4:v4.36.0_PROPOSED",
+      "axim_executed": false,
+      "expected_first_outcome": "DESIGN_ONLY_UNTIL_REPLAY_AND_ADJUDICATION"
+    }
+  ],
+  "noncompensatory_walls": [
+    "FORMAL_PROOF_NOT_LIVE_NETWORK_EVIDENCE",
+    "LIVE_NETWORK_NOT_SCIENTIFIC_MEASUREMENT_VALIDITY",
+    "SIGNED_HASH_NOT_TRUTH_OR_OWNER_AUTHORITY",
+    "MULTIPLE_REVIEWER_NAMES_NOT_INDEPENDENT_PROOF",
+    "C1_DESCRIPTIVE_ONLY_ALWAYS"
+  ],
+  "proposed_dependencies": [
+    "LEAN_CORE_PINNED",
+    "ELAN_PINNED",
+    "LAKE_BUILD_DESCRIPTOR_PINNED",
+    "BUILTIN_LEANCHECKER_OPTIONAL_RECHECK"
+  ],
+  "optional_when_justified": [
+    "MATHLIB4_PINNED",
+    "TLA_TLC",
+    "ALLOY",
+    "HYPOTHESIS",
+    "MUTMUT",
+    "LEAN_DOJO_V2_QUARANTINED"
+  ],
+  "execution": {
+    "hostinger": false,
+    "github_merge": false,
+    "autopublish": false,
+    "bodytwin_validated": false,
+    "r30_closed": true,
+    "r32_full_census": false,
+    "r33_prepared": true,
+    "cursor_autostart": false
+  }
+}
