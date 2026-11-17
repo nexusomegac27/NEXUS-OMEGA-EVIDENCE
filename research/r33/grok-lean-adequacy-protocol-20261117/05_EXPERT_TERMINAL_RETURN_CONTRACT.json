@@ -1,0 +1,477 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/research/r33/grok-lean-adequacy-protocol-20261117/05_EXPERT_TERMINAL_RETURN_CONTRACT.json",
+  "title": "R33 evidence-bound independent formal-vs-world-adequacy expert terminal return",
+  "description": "A schema is a research artifact not actual test execution or authenticated identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object",
+    "parent_order",
+    "reviewer",
+    "independence",
+    "original_idea",
+    "research_sources",
+    "architectures",
+    "innovations",
+    "formal_adequacy_mapping",
+    "counterexamples",
+    "actual_tests",
+    "evidence_walls",
+    "conclusion",
+    "governance"
+  ],
+  "properties": {
+    "object": {
+      "type": "string",
+      "pattern": "^NEXUS_OMEGA_EXTERNAL_R33_"
+    },
+    "parent_order": {
+      "const": "NEXUS_OMEGA_AXIOM_R33_OPEN_EXPERT_FORMAL_PROOF_REAL_WORLD_ADEQUACY_MAXI_ORDER_20261117_R0"
+    },
+    "reviewer": {
+      "type": "object",
+      "required": [
+        "self_declared_id",
+        "model_or_expertise",
+        "source_access"
+      ],
+      "properties": {
+        "self_declared_id": {
+          "type": "string"
+        },
+        "model_or_expertise": {
+          "type": "string"
+        },
+        "source_access": {
+          "enum": [
+            "PUBLIC_ONLY",
+            "PRIVATE_READ_AUTHORIZED_AND_VERIFIED",
+            "NO_SOURCE",
+            "PARTIAL_PUBLIC"
+          ]
+        },
+        "actual_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conflicts": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "independence": {
+      "type": "object",
+      "required": [
+        "identity_authentication",
+        "preexposure",
+        "real_independent_kernel"
+      ],
+      "properties": {
+        "identity_authentication": {
+          "enum": [
+            "SELF_REPORTED_ONLY",
+            "AUTHENTICATED_PRINCIPAL_EVIDENCE_PRESENT",
+            "UNKNOWN"
+          ]
+        },
+        "preexposure": {
+          "enum": [
+            "NONE_CONFIRMED",
+            "PRIOR_R33_CONTEXT",
+            "PRIOR_EXPERT_WORK",
+            "DISCLOSED_OTHER"
+          ]
+        },
+        "real_independent_kernel": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "original_idea": {
+      "type": "object",
+      "required": [
+        "hypothesis",
+        "independent_design",
+        "strongest_self_falsifier",
+        "stage"
+      ],
+      "properties": {
+        "hypothesis": {
+          "type": "string"
+        },
+        "independent_design": {
+          "type": "string"
+        },
+        "strongest_self_falsifier": {
+          "type": "string"
+        },
+        "stage": {
+          "enum": [
+            "FIXED_BEFORE_SOURCES",
+            "PREEXPOSED",
+            "NOT_DONE"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "research_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "access",
+          "claim"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "access": {
+            "enum": [
+              "DIRECTLY_READ",
+              "PARTIALLY_READ",
+              "NOT_READ",
+              "ACCESS_DENIED"
+            ]
+          },
+          "version_or_commit": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "counter_source": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "architectures": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "design",
+          "assumptions",
+          "refuter"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "design": {
+            "type": "string"
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "refuter": {
+            "type": "string"
+          },
+          "dependencies_and_licence": {
+            "type": "string"
+          },
+          "offline_and_rollback": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "innovations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "novelty_limit",
+          "artifact_kind",
+          "strongest_refuter",
+          "licence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^INV-R33-"
+          },
+          "novelty_limit": {
+            "type": "string"
+          },
+          "artifact_kind": {
+            "enum": [
+              "LEAN_PROOF",
+              "TLA_MODEL",
+              "INDEPENDENT_ORACLE",
+              "MEASUREMENT_DESIGN",
+              "PROVENANCE_GRAPH",
+              "IDENTITY_MODEL",
+              "ALTERNATIVE_ARCHITECTURE",
+              "NEGATIVE_INNOVATION_NO_NEW_DEPENDENCY",
+              "OTHER"
+            ]
+          },
+          "actual_path": {
+            "type": "string"
+          },
+          "actual_sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "execution": {
+            "enum": [
+              "DESIGN_ONLY",
+              "EXTERNAL_SYNTHETIC_SELF_RUN",
+              "SOURCE_REVIEW_ONLY",
+              "NOT_RUN"
+            ]
+          },
+          "strongest_refuter": {
+            "type": "string"
+          },
+          "licence": {
+            "type": "string"
+          },
+          "risks": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "formal_adequacy_mapping": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "formal_term",
+          "intended_world_term",
+          "witness_status",
+          "claim_limit"
+        ],
+        "properties": {
+          "formal_term": {
+            "type": "string"
+          },
+          "intended_world_term": {
+            "type": "string"
+          },
+          "observation_or_oracle": {
+            "type": "string"
+          },
+          "witness_status": {
+            "enum": [
+              "OBSERVED_IN_SELF_SYNTHETIC",
+              "SOURCE_REPORTED",
+              "DESIGN_ONLY",
+              "UNKNOWN"
+            ]
+          },
+          "claim_limit": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "counterexamples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "stimulus",
+          "independent_expected",
+          "observed_status",
+          "precommit"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "stimulus": {
+            "type": "string"
+          },
+          "independent_expected": {
+            "type": "string"
+          },
+          "observed_status": {
+            "enum": [
+              "PASS_EXECUTED_SYNTHETIC",
+              "FAIL_EXECUTED_SYNTHETIC",
+              "DESIGN_ONLY",
+              "NOT_RUN",
+              "SOURCE_GAP"
+            ]
+          },
+          "precommit": {
+            "enum": [
+              "HISTORICAL_KNOWN",
+              "PREDECLARED_BEFORE_SELF_RUN",
+              "POST_HOC"
+            ]
+          },
+          "actual_evidence_sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "actual_tests": {
+      "type": "object",
+      "required": [
+        "lean_kernel_runs",
+        "tla_model_runs",
+        "nexus_private_runtime",
+        "hostinger_f01_f20",
+        "artifact_manifest"
+      ],
+      "properties": {
+        "lean_kernel_runs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tla_model_runs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nexus_private_runtime": {
+          "const": 0
+        },
+        "hostinger_f01_f20": {
+          "const": 0
+        },
+        "artifact_manifest": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "bytes",
+              "sha256",
+              "licence"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sha256": {
+                "$ref": "#/$defs/hash"
+              },
+              "licence": {
+                "type": "string"
+              },
+              "provenance": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "not_executed_reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_walls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "conclusion": {
+      "enum": [
+        "SUPPORTS_SCOPED_DESIGN",
+        "INDEPENDENT_ALTERNATIVE_PREFERRED",
+        "REJECTS_SOURCE_HYPOTHESIS",
+        "HOLD_MATERIAL_GAP",
+        "INCONCLUSIVE"
+      ]
+    },
+    "one_next_decision": {
+      "type": "string"
+    },
+    "governance": {
+      "type": "object",
+      "required": [
+        "claim_ceiling",
+        "claim_promotion",
+        "r30",
+        "r32_originals_mutated",
+        "external_git_write",
+        "hostinger_write",
+        "autopublish_proven",
+        "bodytwin_validated",
+        "pr_merge"
+      ],
+      "properties": {
+        "claim_ceiling": {
+          "const": "C1_DESCRIPTIVE_ONLY"
+        },
+        "claim_promotion": {
+          "const": false
+        },
+        "r30": {
+          "const": "CLOSED_C1_PRESERVED"
+        },
+        "r32_originals_mutated": {
+          "const": false
+        },
+        "external_git_write": {
+          "const": false
+        },
+        "hostinger_write": {
+          "const": false
+        },
+        "autopublish_proven": {
+          "const": false
+        },
+        "bodytwin_validated": {
+          "const": false
+        },
+        "pr_merge": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

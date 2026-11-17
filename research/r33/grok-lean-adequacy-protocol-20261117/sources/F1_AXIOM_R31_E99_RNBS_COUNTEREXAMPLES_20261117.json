@@ -1,0 +1,48 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R31_E99_RNBS_INDEPENDENT_FORMULA_COUNTEREXAMPLES_20261117_R0",
+  "source_original_sha256": "b6035527bc3feb72c8c01fb8ee0aecdf14b70719d3bc4f58632745d60a7afc77",
+  "method": "independent pure set-comprehension evaluating GREEN in uploaded formal model Section 4; synthetic closed finite 2-recipient / 3-period example; not original E99 SUT script",
+  "tests": [
+    {
+      "case": "RNBS_AXIOM_CX1_HONEST_QUORUM_NOT_SUFFICIENT",
+      "recipient_set": [
+        "E1",
+        "E2"
+      ],
+      "genuine_deliveries": [
+        "E1:0",
+        "E1:1",
+        "E1:2"
+      ],
+      "attested_acks": [
+        "E1:0",
+        "E1:1",
+        "E1:2",
+        "E2:0",
+        "E2:1",
+        "E2:2"
+      ],
+      "compromised_recipient": [
+        "E2"
+      ],
+      "honest_recipient": [
+        "E1"
+      ],
+      "revokes": [],
+      "green_result": true,
+      "universal_delivered": false,
+      "limitation": "One honest E1, compromised E2 forges Ack in all 3 periods; GREEN but E2 never received. Hence >=1 honest does not prove all-recipient delivery."
+    },
+    {
+      "case": "RNBS_AXIOM_CX2_EMPTY_TARGET_SET_VACUOUS_GREEN",
+      "recipient_set": [],
+      "green_result": true,
+      "recognized_as_valid_target_set_by_spec": "Undefined; B subset R includes empty B unless explicitly ruled out",
+      "limitation": "At p>=N, universal quantifier over B=empty is true; require nonempty authorized B."
+    }
+  ],
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "nexus_runtime": false,
+  "hostinger": false,
+  "r32": false
+}
