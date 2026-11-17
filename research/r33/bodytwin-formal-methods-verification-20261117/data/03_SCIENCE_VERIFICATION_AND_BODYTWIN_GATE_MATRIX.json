@@ -1,0 +1,390 @@
+{
+  "schema": "nexus-omega-r33-cursor-science-bodytwin-gates/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R33_CURSOR_VERIFICATION_GATE_MATRIX_20261117_R0",
+  "date": "2026-11-17",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_baselines": {
+    "pr363_head": "0bda421b27ca5494548753fca4f5f31730a703ea",
+    "pr366_head": "b2d37f9ac82f34df1cebda0a0b61f73d228e7be1",
+    "pr367_head": "ff83305854f448902e1d190d568bfb0da94014b1",
+    "qwen_lean_sha256": "70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+    "r3_zip_sha256": "9a2d613a40bc65e945f4c4986b458cadacaae17ccafee00c0b204699f0e3a3d6",
+    "bodytwin_live_return_sha256": "5b17defcb836db1256bdb6d0d8ece9a345a3b0a020fcca7fc91840e99e6c4aa8"
+  },
+  "proof_walls": [
+    "LEAN_KERNEL_PROOF_NE_WORLD_WITNESS",
+    "JSON_CANONICALIZATION_NE_AUTHOR_TRUTH",
+    "SIGNATURE_NE_OPERATOR_AUTH_WITHOUT_VALID_BIND",
+    "SOURCE_HASH_NE_MEASUREMENT_ACCURACY",
+    "PR_CI_NE_WWW_PUBLICATION",
+    "WEB_PUBLICATION_NE_BODYTWIN_VALIDITY",
+    "BODYTWIN_METHODS_NE_PHYSICAL_POSE",
+    "NO_HARDFAIL_COMPENSATION"
+  ],
+  "baseline_claims": {
+    "r30": "CLOSED_C1_PRESERVED",
+    "bodytwin_validated": "NO",
+    "consent_bind": "OPEN",
+    "trial": "DESIGNED_NOT_EXECUTED",
+    "auto_publish": "NOT_PROVEN",
+    "r32_mutation": false
+  },
+  "gates": [
+    {
+      "id": "G00",
+      "name": "ORIGINAL_SOURCE_CHAIN",
+      "domain": "CUSTODY",
+      "criterion": "R33/PR363/366/367 pin; raw SHA + origin + source receipt; no mutation",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN_NEW_CURSOR",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G01",
+      "name": "LEAN_KERNEL_REPLAY",
+      "domain": "FORMAL",
+      "criterion": "Exactly original 7230 B Lean; verified 4.36.0 toolchain; actual exit and full theorem axioms",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G02",
+      "name": "LEAN_STATEMENT_ADEQUACY",
+      "domain": "ADEQUACY",
+      "criterion": "Crossmap model constructs to independent real world; CX1 CX2 Q-CX4 and E99 N domain",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G03",
+      "name": "INDEPENDENT_NONLEAN_ORACLE",
+      "domain": "FALSIFICATION",
+      "criterion": "Independent evaluator; minimum 3 known negatives and 1 positive; raw synthetic fixtures",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G04",
+      "name": "JCS_VENDOR_PROVENANCE",
+      "domain": "DEPENDENCY",
+      "criterion": "Exact wheel provenance not just __version__; RFC test; E99 pair HOLD",
+      "kind": "OPTIONAL_PARALLEL",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G05",
+      "name": "TLA_FINITE_PROTOCOL",
+      "domain": "MODEL",
+      "criterion": "Finite bounded interleavings or design-only alternative; fairness scope",
+      "kind": "OPTIONAL_PARALLEL",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G06",
+      "name": "A_PRIME_NEGATIVE_SOURCE_REPLAY",
+      "domain": "IMPLEMENTATION",
+      "criterion": "CF01–CF09 original source if real custody; avoid frozen original mutation",
+      "kind": "CONDITIONAL_SOURCE",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G07",
+      "name": "BODYTWIN_ORIGINAL_9_EVENTS",
+      "domain": "BODYTWIN_CUSTODY",
+      "criterion": "Original R31 nine records + renderer+28 tests exact baseline",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN_NEW_CURSOR",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G08",
+      "name": "BODYTWIN_METHODS_MEASUREMENT_WALL",
+      "domain": "MEASUREMENT",
+      "criterion": "No measured full-body or clinical claim; GUM uncertainties UNKNOWN absent originals",
+      "kind": "REQUIRED",
+      "current": "DESIGN_ONLY",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G09",
+      "name": "BODYTWIN_METHODS_SCHEMA",
+      "domain": "INTEGRATION",
+      "criterion": "Versioned C1 metadata-only record new branch, no changing historical event source",
+      "kind": "REQUIRED",
+      "current": "DESIGN_ONLY",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G10",
+      "name": "BODYTWIN_RENDER_TESTS",
+      "domain": "INTEGRATION",
+      "criterion": "Double render, no XSS/private records, nonfinite/double keys, negative claim gate",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G11",
+      "name": "SOURCE_LICENSE_DLP",
+      "domain": "GOVERNANCE",
+      "criterion": "Token scan, raw IMU/patient/rights, actual source permission",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G12",
+      "name": "BODYTWIN_V1_DO_NOT_CHANGE",
+      "domain": "REGRESSION",
+      "criterion": "Original v1 feed 300s and author-time updates unchanged, viewer unaffected",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G13",
+      "name": "HOSTINGER_OWNER_DEPLOY_AUTH",
+      "domain": "AUTHORITY",
+      "criterion": "Actual scoped owner role, path allowlist, backup/rollback; never imply from PR",
+      "kind": "RELEASE_ONLY",
+      "current": "PENDING_AUTHORITY",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G14",
+      "name": "WWW_INDEPENDENT_WITNESS",
+      "domain": "WWW",
+      "criterion": "Actual raw entity SHA, HTTP MIME, epoch, cache 304, different observer, DOM widths",
+      "kind": "RELEASE_ONLY",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G15",
+      "name": "SOURCE_EVENT_STATUS_CORRECT",
+      "domain": "EPISTEMIC",
+      "criterion": "No pass if source gap; no clinical truth; no code green from test string",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G16",
+      "name": "PUBLIC_SAFE_GIT_DRAFT",
+      "domain": "GIT",
+      "criterion": "New codex branch and draft, no PR363/366/367 merge or modification",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G17",
+      "name": "PRIVATE_SOURCE_AIR_GAP",
+      "domain": "GOVERNANCE",
+      "criterion": "No raw OPPO/IMEI/patient/private SQL/code in public deliverables",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G18",
+      "name": "ONE_TERMINAL_RETURN",
+      "domain": "HANDOFF",
+      "criterion": "ZIP+sidecar manifest, actual logs, issue-level no unverified status",
+      "kind": "REQUIRED",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    },
+    {
+      "id": "G19",
+      "name": "AXIOM_SECOND_PARTY_REHASH",
+      "domain": "INDEPENDENCE",
+      "criterion": "Independent AXIOM source hash/replay after Cursor terminal, not preclaimed",
+      "kind": "FUTURE",
+      "current": "NOT_RUN",
+      "actual_run_id": null,
+      "actual_source_sha256": null,
+      "evidence_url": null,
+      "gate_status": "NOT_RUN",
+      "next": "CURSOR_SCOPED_VERIFICATION"
+    }
+  ],
+  "known_falsifiers": [
+    {
+      "id": "A_CF01_CF09",
+      "refuter": "Known material A-prime invalid lease/false no-op/dedup/retry/oracle source defects",
+      "default_status": "HARD_OPEN_UNTIL_SOURCE_REPLAY_AND_SEPARATELY_AUTHORIZED_REPAIR",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "RNBS_CX1",
+      "refuter": "1 honest, 1 compromised fake ACK yields false all-received green",
+      "default_status": "PROVEN_SYNTHETIC_NOT_REAL_NETWORK",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "RNBS_CX2",
+      "refuter": "Empty authorized B vacuous success",
+      "default_status": "PROVEN_SYNTHETIC_NOT_REAL_NETWORK",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "RNBS_QCX4",
+      "refuter": "Nonempty narrowed target B falsely allows green while intended target missing",
+      "default_status": "SOURCE_EXACT_QWEN_FORMAL_COUNTEREXAMPLE",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "RNBS_QCX5",
+      "refuter": "N=0 vacuous in unrestricted Lean, original E99 N>=1",
+      "default_status": "FORMAL_DOMAIN_GAP_NOT_VALID_E99_INPUT",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "JCS_R3_VERSION",
+      "refuter": "3/3 absent/unknown/mismatch verified but same-version fake backend possible",
+      "default_status": "VERSION_STRING_GATE_PASS_VENDOR_PROVENANCE_HOLD",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "JCS_E99_PAIR",
+      "refuter": "Second source version absent; 14174 B first mismatch source manifest",
+      "default_status": "HOLD_SOURCE_CUSTODY",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "BODYTWIN_R21",
+      "refuter": "14018 events 70.114 sec Cursor-reported private original not independently checked",
+      "default_status": "HOLD_PHYSICAL_BODY_VALIDATION",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "BODYTWIN_RIGHTS",
+      "refuter": "R18/R20 anatomy rights and BodyParts3D derivatives unclear",
+      "default_status": "HOLD_UNLICENSED_ASSET_USE",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "BODYTWIN_CONSENT",
+      "refuter": "CONSENT_OPEN TRIAL_001_DESIGNED_NOT_EXECUTED",
+      "default_status": "HARD_NO_PHYSICAL_OR_MEDICAL_PROMOTION",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "BODYTWIN_PUBLISH",
+      "refuter": "2026-11-16 static science WWW Cursor reported, current independent web fail",
+      "default_status": "WWW_UNKNOWN_UNTIL_NEW_OBSERVER",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    },
+    {
+      "id": "AUTOPUBLISH",
+      "refuter": "Standing signed policy, durable outbox, independent E2E not established",
+      "default_status": "NOT_PROVEN",
+      "independent_test_in_new_order": "NOT_RUN",
+      "bodytwin_claim_effect": "NO_PHYSICAL_PROMOTION"
+    }
+  ],
+  "accepted_endstates": [
+    "PASS_C1_METHODS_OFFLINE_CANDIDATE_FORMAL_REPLAY_PASS",
+    "PASS_WITH_CAVEATS_C1_METHODS_SOURCE_BOUND_FORMAL_REPLAY_HOLD",
+    "HOLD_C1_SOURCE_SECURITY_OR_AUTHORIZATION",
+    "PASS_C1_WWW_METADATA_ONLY_INDEPENDENTLY_WITNESSED",
+    "REJECT_C1_MATERIAL_INVALID"
+  ],
+  "actual_executions_this_order": 0,
+  "authorization": "OPERATOR_ONCE_SCOPED_READONLY_AND_OFFLINE_METHODS; LIVE_WWW_REQUIRES_SEPARATE_ACTUAL_OWNER_AUTHORITY",
+  "baseline_events_immutable": 9
+}

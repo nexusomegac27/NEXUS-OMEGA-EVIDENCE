@@ -1,0 +1,29 @@
+{
+  "bodytwin_validated": false,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "consent_bind": "OPEN",
+  "double_render_match": true,
+  "object": "NEXUS_OMEGA_CURSOR_R33_RESIDUAL_C_RENDERER_RECEIPT_20261117_R1",
+  "pass1": {
+    "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+    "html_bytes": 1455,
+    "html_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R33_RESIDUAL_GATES_R1_WORKER_20261117_R0\\STAGE_C_CANDIDATE\\receipts\\methods_view_pass1.html",
+    "html_sha256": "e81579b28a7d9933f3ebfcfdeefbe234e730f0f4c560fa44dd7327b4e10cc69c",
+    "tag": "pass1",
+    "view_bytes": 8731,
+    "view_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R33_RESIDUAL_GATES_R1_WORKER_20261117_R0\\STAGE_C_CANDIDATE\\receipts\\methods_view_pass1.json",
+    "view_sha256": "9a984ccddfdcaa0d313323d648e766ce7fcd9f072399f826997e4cf943ecea2c"
+  },
+  "pass2": {
+    "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+    "html_bytes": 1455,
+    "html_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R33_RESIDUAL_GATES_R1_WORKER_20261117_R0\\STAGE_C_CANDIDATE\\receipts\\methods_view_pass2.html",
+    "html_sha256": "e81579b28a7d9933f3ebfcfdeefbe234e730f0f4c560fa44dd7327b4e10cc69c",
+    "tag": "pass2",
+    "view_bytes": 8731,
+    "view_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R33_RESIDUAL_GATES_R1_WORKER_20261117_R0\\STAGE_C_CANDIDATE\\receipts\\methods_view_pass2.json",
+    "view_sha256": "9a984ccddfdcaa0d313323d648e766ce7fcd9f072399f826997e4cf943ecea2c"
+  },
+  "recorded_utc": "2026-11-17T17:39:45Z",
+  "verdict": "PASS"
+}

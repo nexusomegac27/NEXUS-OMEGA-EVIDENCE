@@ -1,0 +1,41 @@
+{
+  "bodytwin_validated": false,
+  "capsule_bytes": 8730,
+  "capsule_sha256": "e5448d0cdea5ed37798ff74f6e67ed9416db5756bd5dc40b3bf773c5bf88574c",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "consent_bind": "OPEN",
+  "object": "NEXUS_OMEGA_CURSOR_R33_RESIDUAL_STAGE_C_NEGATIVES_20261117_R1",
+  "passed": 7,
+  "results": [
+    {
+      "id": "test_n01_bodytwin_validated_must_be_no",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n02_consent_bind_open",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n03_claim_ceiling_c1",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n04_double_pass_deterministic",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n05_mutant_validated_yes_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n06_capsule_sha_source_exact",
+      "status": "PASS"
+    },
+    {
+      "id": "test_n07_no_second_science_site_marker",
+      "status": "PASS"
+    }
+  ],
+  "total": 7,
+  "verdict": "PASS"
+}
