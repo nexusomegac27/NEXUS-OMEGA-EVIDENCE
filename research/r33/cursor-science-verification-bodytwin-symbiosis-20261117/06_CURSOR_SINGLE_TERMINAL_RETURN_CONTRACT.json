@@ -1,0 +1,544 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/research/r33/cursor-science-verification-bodytwin-symbiosis-20261117/06_CURSOR_SINGLE_TERMINAL_RETURN_CONTRACT.json",
+  "title": "R33 Cursor Independent Scientific Replay and BodyTwin Symbiosis Terminal Return",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object",
+    "parent_order",
+    "recorded_utc",
+    "role",
+    "claim_ceiling",
+    "claim_promotion",
+    "originals",
+    "toolchains",
+    "gates",
+    "lean",
+    "jcs",
+    "formal_adequacy",
+    "bodytwin",
+    "artifacts",
+    "decision",
+    "governance"
+  ],
+  "properties": {
+    "object": {
+      "type": "string",
+      "pattern": "^NEXUS_OMEGA_CURSOR_R33_SCIENTIFIC_VERIFICATION_BODYTWIN_SYMBIOSIS_"
+    },
+    "parent_order": {
+      "const": "NEXUS_OMEGA_AXIOM_CURSOR_R33_INDEPENDENT_SCIENTIFIC_REPLAY_ADVERSARIAL_CROSSCHECK_AND_BODYTWIN_METHODS_SYMBIOSIS_MAXI_ORDER_20261117_R0"
+    },
+    "recorded_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "role": {
+      "const": "CURSOR_OPERATIONAL_FIRST_PARTY_AXIM_SECOND_PARTY_PENDING"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "claim_promotion": {
+      "const": false
+    },
+    "originals": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "object",
+          "source_location",
+          "bytes",
+          "sha256",
+          "rehash",
+          "independent_execution"
+        ],
+        "properties": {
+          "object": {
+            "type": "string"
+          },
+          "source_location": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "rehash": {
+            "enum": [
+              "MATCH",
+              "MISMATCH",
+              "NOT_AVAILABLE"
+            ]
+          },
+          "independent_execution": {
+            "type": "boolean"
+          },
+          "source_git_pin": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "source_rights": {
+            "enum": [
+              "PUBLIC_SAFE",
+              "PRIVATE_READ_ONLY",
+              "UNKNOWN",
+              "RIGHTS_HOLD"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "toolchains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "version",
+          "binary_digest_observed",
+          "origin_witnessed"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "binary_digest_observed": {
+            "type": "boolean"
+          },
+          "actual_binary_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "origin_witnessed": {
+            "type": "boolean"
+          },
+          "observed_path_redacted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^G[0-9][0-9]$"
+          },
+          "status": {
+            "enum": [
+              "PASS_EXECUTED",
+              "FAIL_EXECUTED",
+              "NOT_RUN",
+              "DESIGN_ONLY",
+              "SOURCE_GAP",
+              "HOLD_AUTHORIZATION",
+              "HOLD_SECURITY",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "log_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "evidence_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "lean": {
+      "type": "object",
+      "required": [
+        "original_sha256",
+        "kernel_replay_status",
+        "axiom_audit_status",
+        "theorem_count",
+        "actual_log_sha256",
+        "model_world_correspondence"
+      ],
+      "properties": {
+        "original_sha256": {
+          "const": "70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16"
+        },
+        "kernel_replay_status": {
+          "enum": [
+            "PASS_EXECUTED",
+            "FAIL_EXECUTED",
+            "NOT_RUN_TOOLCHAIN_GAP",
+            "NOT_RUN_SOURCE_GAP"
+          ]
+        },
+        "axiom_audit_status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PARTIAL",
+            "NOT_RUN"
+          ]
+        },
+        "theorem_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "actual_log_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "model_world_correspondence": {
+          "enum": [
+            "DESIGN_ONLY",
+            "PARTIALLY_OBSERVED",
+            "INDEPENDENTLY_MAPPED_WITH_CAVEATS",
+            "NOT_RUN"
+          ]
+        },
+        "source_mutated": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "jcs": {
+      "type": "object",
+      "required": [
+        "original_zip_sha256",
+        "authentic_wheel_status",
+        "original_pair",
+        "version_gate",
+        "functional_vectors",
+        "result"
+      ],
+      "properties": {
+        "original_zip_sha256": {
+          "const": "9a2d613a40bc65e945f4c4986b458cadacaae17ccafee00c0b204699f0e3a3d6"
+        },
+        "authentic_wheel_status": {
+          "enum": [
+            "HASH_AND_IMPORT_VERIFIED",
+            "NOT_INSTALLED",
+            "MISMATCH",
+            "SOURCE_GAP"
+          ]
+        },
+        "wheel_sha256": {
+          "const": "520d690b448ecf0703691c76e1a34a24ddcd4fc5bc41d589cb7c58ec651bcd48"
+        },
+        "original_pair": {
+          "enum": [
+            "TWO_RAW_VERSIONS_HASH_BOUND",
+            "ONE_RAW_VERSION_ONLY",
+            "NO_SOURCE"
+          ]
+        },
+        "version_gate": {
+          "enum": [
+            "PASS_EXECUTED",
+            "FAIL_EXECUTED",
+            "NOT_RUN"
+          ]
+        },
+        "functional_vectors": {
+          "enum": [
+            "PASS_EXECUTED",
+            "FAIL_EXECUTED",
+            "NOT_RUN"
+          ]
+        },
+        "result": {
+          "enum": [
+            "REPRODUCED_SCOPED_C1",
+            "MATERIAL_FAIL",
+            "HOLD_VENDOR_WHEEL",
+            "HOLD_E99_ORIGINAL_PAIR",
+            "NOT_RUN"
+          ]
+        },
+        "actual_log_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "formal_adequacy": {
+      "type": "object",
+      "required": [
+        "cx1",
+        "cx2",
+        "qcx4",
+        "n0_original_domain",
+        "b_set_exact",
+        "ack_delivery_distinction"
+      ],
+      "properties": {
+        "cx1": {
+          "enum": [
+            "PASS_COUNTEREXAMPLE",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "cx2": {
+          "enum": [
+            "PASS_COUNTEREXAMPLE",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "qcx4": {
+          "enum": [
+            "PASS_COUNTEREXAMPLE",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "n0_original_domain": {
+          "const": "ORIGINAL_E99_N_GE_1_LEAN_UNRESTRICTED_GAP"
+        },
+        "b_set_exact": {
+          "enum": [
+            "DESIGN_ONLY",
+            "COUNTEREXAMPLE_PASS",
+            "INDEPENDENTLY_RUNTIME_CONFIRMED",
+            "NOT_RUN"
+          ]
+        },
+        "ack_delivery_distinction": {
+          "enum": [
+            "DESIGN_ONLY",
+            "SYNTHETIC_COUNTEREXAMPLE_PASS",
+            "REAL_INDEPENDENT_OBSERVED",
+            "NOT_RUN"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "bodytwin": {
+      "type": "object",
+      "required": [
+        "source_events_original",
+        "original_events_mutated",
+        "baseline_unit_tests",
+        "method_capsule_created",
+        "bodytwin_validated",
+        "consent_bind",
+        "trial_001",
+        "whole_body_pose_validated",
+        "clinical_validated",
+        "science_website",
+        "autopublish_proven",
+        "live_feed_v1_mutated",
+        "private_raw_public_transfer"
+      ],
+      "properties": {
+        "source_events_original": {
+          "const": 9
+        },
+        "original_events_mutated": {
+          "const": false
+        },
+        "baseline_unit_tests": {
+          "enum": [
+            "PASS_28_OF_28_EXECUTED",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "method_capsule_created": {
+          "type": "boolean"
+        },
+        "capsule_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bodytwin_validated": {
+          "const": "NO"
+        },
+        "consent_bind": {
+          "const": "OPEN"
+        },
+        "trial_001": {
+          "const": "DESIGNED_NOT_EXECUTED"
+        },
+        "whole_body_pose_validated": {
+          "const": false
+        },
+        "clinical_validated": {
+          "const": false
+        },
+        "science_website": {
+          "enum": [
+            "CURSOR_PREVIOUSLY_REPORTED_LIVE_NOT_REOBSERVED",
+            "NEW_EXTERNAL_WITNESS_MATCH",
+            "NEW_EXTERNAL_WITNESS_MISMATCH",
+            "WWW_HOLD",
+            "NOT_RUN"
+          ]
+        },
+        "autopublish_proven": {
+          "const": false
+        },
+        "live_feed_v1_mutated": {
+          "const": false
+        },
+        "private_raw_public_transfer": {
+          "const": false
+        },
+        "public_method_release_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "bytes",
+          "sha256",
+          "privacy",
+          "actual_created"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "privacy": {
+            "enum": [
+              "PUBLIC_SAFE",
+              "PRIVATE_EXCLUDED",
+              "DLP_HOLD"
+            ]
+          },
+          "actual_created": {
+            "type": "boolean"
+          },
+          "license": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "decision": {
+      "enum": [
+        "PASS_C1_METHODS_OFFLINE_CANDIDATE_FORMAL_REPLAY_PASS",
+        "PASS_WITH_CAVEATS_C1_METHODS_SOURCE_BOUND_FORMAL_PENDING",
+        "HOLD_C1_SOURCE_SECURITY_OR_AUTHORIZATION",
+        "PASS_C1_WWW_METADATA_ONLY_INDEPENDENTLY_WITNESSED",
+        "REJECT_C1_MATERIAL_INVALID"
+      ]
+    },
+    "one_next_step": {
+      "type": "string"
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "r30",
+        "r32_mutation",
+        "claim_promotion",
+        "pr_merge",
+        "hostinger_write_outside_scoped_rights",
+        "clinical_or_physical_promotion",
+        "auto_cursor_restart"
+      ],
+      "properties": {
+        "r30": {
+          "const": "CLOSED_C1_PRESERVED"
+        },
+        "r32_mutation": {
+          "const": false
+        },
+        "claim_promotion": {
+          "const": false
+        },
+        "pr_merge": {
+          "const": false
+        },
+        "hostinger_write_outside_scoped_rights": {
+          "const": false
+        },
+        "clinical_or_physical_promotion": {
+          "const": false
+        },
+        "auto_cursor_restart": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

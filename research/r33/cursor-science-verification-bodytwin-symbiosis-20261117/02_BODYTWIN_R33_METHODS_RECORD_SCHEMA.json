@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/research/r33/cursor-science-verification-bodytwin-symbiosis-20261117/02_BODYTWIN_R33_METHODS_RECORD_SCHEMA.json",
+  "title": "NEXUS OMEGA R33 BodyTwin method-only independent verification events",
+  "description": "C1 methods-assurance record only. Schema validation and original source hashes never establish measurement, patient, physical pose, live website or formal proof truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object",
+    "schema",
+    "created_utc",
+    "claim_ceiling",
+    "claim_promotion",
+    "bodytwin_validated",
+    "clinical_validated",
+    "whole_body_pose_validated",
+    "physical_measurement_validated",
+    "consent_bind",
+    "trial_001",
+    "historical_nine_event_source_unchanged",
+    "r30",
+    "r32_source_mutation",
+    "publication_status",
+    "new_methods",
+    "pending_claim_gates"
+  ],
+  "properties": {
+    "object": {
+      "type": "string",
+      "pattern": "^NEXUS_OMEGA_BODYTWIN_R33_METHODS_VERIFY_"
+    },
+    "schema": {
+      "const": "nexus-bodytwin-r33-methods-assurance/1"
+    },
+    "created_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    },
+    "claim_promotion": {
+      "const": false
+    },
+    "bodytwin_validated": {
+      "const": "NO"
+    },
+    "clinical_validated": {
+      "const": false
+    },
+    "whole_body_pose_validated": {
+      "const": false
+    },
+    "physical_measurement_validated": {
+      "const": false
+    },
+    "consent_bind": {
+      "const": "OPEN"
+    },
+    "trial_001": {
+      "const": "DESIGNED_NOT_EXECUTED"
+    },
+    "historical_nine_event_source_unchanged": {
+      "const": true
+    },
+    "r30": {
+      "const": "CLOSED_C1_PRESERVED"
+    },
+    "r32_source_mutation": {
+      "const": false
+    },
+    "publication_status": {
+      "enum": [
+        "OFFLINE_CANDIDATE_NOT_WWW_WITNESSED",
+        "OWNER_AUTHORIZED_DEPLOY_WITH_EXTERNAL_WITNESS",
+        "SCOPED_WWW_HOLD",
+        "ROLLED_BACK_FAIL_CLOSED"
+      ]
+    },
+    "new_methods": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "science_scope",
+          "evidence_class",
+          "status",
+          "source",
+          "observed",
+          "unknowns",
+          "bodytwin_measurement_claim",
+          "claim_ceiling"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^BT-R33-METHOD-[A-Z0-9-]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 140
+          },
+          "science_scope": {
+            "enum": [
+              "FORMAL_SOFTWARE_ASSURANCE",
+              "JSON_CANONICALIZATION",
+              "PROTOCOL_MODEL_CHECKING",
+              "SOURCE_PROVENANCE",
+              "NEGATIVE_CONTROL",
+              "METROLOGY_METHOD_DESIGN",
+              "PUBLICATION_WITNESS"
+            ]
+          },
+          "evidence_class": {
+            "enum": [
+              "ACTUAL_ORIGINAL_SOURCE_REHASH",
+              "PREVIOUS_PRODUCER_REPORT",
+              "CURSOR_INDEPENDENT_OFFLINE_RUN",
+              "INDEPENDENT_SECOND_PARTY_REHASH",
+              "DESIGN_ONLY",
+              "EXTERNAL_WWW_WITNESS",
+              "SOURCE_GAP"
+            ]
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXACT_ONLY",
+              "PRODUCER_REPORTED",
+              "INDEPENDENT_REPLAY_PASS",
+              "INDEPENDENT_REPLAY_FAIL",
+              "DESIGN_ONLY",
+              "HOLD_SOURCE_GAP",
+              "HOLD_SECURITY",
+              "NOT_RUN",
+              "UNKNOWN"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_object",
+              "git_commit",
+              "source_url",
+              "raw_sha256",
+              "raw_bytes"
+            ],
+            "properties": {
+              "source_object": {
+                "type": "string",
+                "minLength": 1
+              },
+              "git_commit": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "source_url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri"
+              },
+              "raw_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "raw_bytes": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "source_available_to_executor": {
+                "type": "boolean"
+              }
+            }
+          },
+          "observed": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "execution_occurred",
+              "tool_version",
+              "original_source_unchanged",
+              "test_ids",
+              "actual_result",
+              "actual_log_sha256"
+            ],
+            "properties": {
+              "execution_occurred": {
+                "type": "boolean"
+              },
+              "tool_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "original_source_unchanged": {
+                "type": "boolean"
+              },
+              "test_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "actual_result": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "actual_log_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "bodytwin_measurement_claim": {
+            "const": false
+          },
+          "claim_ceiling": {
+            "const": "C1_DESCRIPTIVE_ONLY"
+          },
+          "independent_oracle": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "counterexample": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "axiom_scope": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "target_www_witness": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ip_licence_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "pending_claim_gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "www_witness": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "witness_role",
+        "time_utc",
+        "source_release_sha256",
+        "observed_entity_sha256",
+        "http_status",
+        "status"
+      ],
+      "properties": {
+        "witness_role": {
+          "type": "string"
+        },
+        "time_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_release_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "observed_entity_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "http_status": {
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "MATCH",
+            "MISMATCH",
+            "UNKNOWN"
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "publication_status": {
+            "const": "OFFLINE_CANDIDATE_NOT_WWW_WITNESSED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "www_witness": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "new_methods": {
+          "items": {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "INDEPENDENT_REPLAY_PASS"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "observed": {
+                  "properties": {
+                    "execution_occurred": {
+                      "const": true
+                    },
+                    "original_source_unchanged": {
+                      "const": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
