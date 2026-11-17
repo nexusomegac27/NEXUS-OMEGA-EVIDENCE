@@ -1,0 +1,125 @@
+{
+  "schema": "nexus-omega-r34-c1-evidence-gate-ledger/v1",
+  "object": "NEXUS_OMEGA_R34_SCIENTIFIC_FINAL_VALIDATION_GATE_LEDGER_20261117_R0",
+  "date": "2026-11-17",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "bodytwin_validated": false,
+  "r30": "CLOSED_C1_PRESERVED",
+  "r33": "SOURCE_BOUND_WITH_OPEN_EXECUTION_GATES",
+  "r34": "SOURCE_BOUND_RESEARCH_NO_RUNTIME_PROMOTION",
+  "e99_hold": true,
+  "a_prime_cf01_cf09": "OPEN",
+  "pr_merge": false,
+  "hostinger_write": false,
+  "gates": [
+    {
+      "id": "CUSTODY_R33_R2",
+      "status": "PASS_SECOND_PARTY_ZIP",
+      "source": "9564 bytes bdabf9864d6abc02ab54855adbc1e8d68d06b91c86a0b3220273e710413afbb3",
+      "closure": "Integrity of current custody only"
+    },
+    {
+      "id": "PR369_HEAD",
+      "status": "PASS_GITHUB_METADATA",
+      "source": "1fb3a10a5f73ef334fc20f4ba373384270c9486f",
+      "closure": "PR open draft, not merged"
+    },
+    {
+      "id": "HTML_ESCAPE_R33_R2",
+      "status": "SOURCE_IMPLEMENTED_CURSOR_TEST_REPORTED",
+      "source": "html.escape and B01 fixture",
+      "closure": "Independent exact-source negative replay"
+    },
+    {
+      "id": "JSON_FAIL_CLOSED",
+      "status": "PARTIAL_MATERIAL_GAP",
+      "source": "duplicate keys and nonfinite rejected; schema absence skips",
+      "closure": "Missing jsonschema must fail before any output"
+    },
+    {
+      "id": "TEST_RECEIPT_SOURCE_BIND",
+      "status": "HOLD_DISCREPANCY",
+      "source": "published receipt test names do not match source head names",
+      "closure": "Rerun exact source at pinned commit and bind automated raw outputs"
+    },
+    {
+      "id": "CROSS_RUN_REPRODUCIBILITY",
+      "status": "HOLD_TIMESTAMP",
+      "source": "generated_utc sampled during each invocation",
+      "closure": "freeze timestamp as input or remove from content; 2 process/clock independent runs"
+    },
+    {
+      "id": "R31_TESTS",
+      "status": "CURSOR_REPORTED_28_OF_28",
+      "source": "PR363 exact original source",
+      "closure": "Second-party run and raw log with manifest"
+    },
+    {
+      "id": "R33_TESTS",
+      "status": "CURSOR_REPORTED_14_OF_14",
+      "source": "PR369 source and tests receipt name mismatch",
+      "closure": "Second-party run actual 14 test IDs and output"
+    },
+    {
+      "id": "PUBLIC_RECEIPT_TOPOLOGY",
+      "status": "HOLD_PUBLIC_REVIEW",
+      "source": "absolute sandbox path remains in C4_PR363_SUITE_LOCATED_EXECUTED.txt",
+      "closure": "bounded DLP review of all reachable commits, redaction with history policy"
+    },
+    {
+      "id": "LEAN_KERNEL",
+      "status": "NOT_RUN_TOOLCHAIN_GAP",
+      "source": "PR366 original Lean SHA256 70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "closure": "actual authorized pinned 4.36.0 executable, axioms, command logs"
+    },
+    {
+      "id": "LEAN_MODEL_ADEQUACY",
+      "status": "OPEN_GROK_RESEARCH",
+      "source": "N=0 unrestricted domain but original E99 N>=1; B empty/narrowed",
+      "closure": "map predicates to signed intended source+targets & real observation"
+    },
+    {
+      "id": "JCS_VENDOR",
+      "status": "NOT_VERIFIED",
+      "source": "rfc8785 0.1.4 official metadata digest is not imported wheel",
+      "closure": "runtime wheel hash/import path/independent vectors"
+    },
+    {
+      "id": "E99_TWO_ORIGINALS",
+      "status": "HOLD_SOURCE_CUSTODY",
+      "source": "second distinct source original unavailable",
+      "closure": "two original byte streams with provenance and exact classifier"
+    },
+    {
+      "id": "A_PRIME_CF01_CF09",
+      "status": "OPEN_MATERIAL",
+      "source": "known counterexamples not hardened by PR369",
+      "closure": "private scoped original replay with expected RED preserved"
+    },
+    {
+      "id": "BODYTWIN_PHYSICAL",
+      "status": "NOT_VALIDATED",
+      "source": "consent OPEN; Trial001 designed not run; ground truth/rights absent",
+      "closure": "ethics/rights + originals+calibration+reference+uncertainty prereg"
+    },
+    {
+      "id": "WWW_WITNESS",
+      "status": "NOT_ESTABLISHED_CURRENT",
+      "source": "Nov16 Cursor old site report not current independent witness",
+      "closure": "owner authority+reversible release+distinct observer+entity hash"
+    },
+    {
+      "id": "EXTERNAL_GROK",
+      "status": "REPORT_LEVEL_ONLY",
+      "source": "latest GROK report received as pasted chat content",
+      "closure": "actual original custody + independent model adequacy dossier"
+    },
+    {
+      "id": "PUBLICATION",
+      "status": "HOLD_NO_MERGE_NO_HOSTINGER",
+      "source": "R34 only open GitHub research draft",
+      "closure": "independent safety/rights/owner and separate release gate"
+    }
+  ]
+}
