@@ -1,0 +1,52 @@
+{
+  "schema": "nexus-omega-r35-review-terminal/v1",
+  "required": [
+    "object",
+    "mandate_id",
+    "self_declared_identity",
+    "exposure",
+    "source_manifest",
+    "concepts",
+    "alternatives",
+    "self_falsification",
+    "test_evidence",
+    "uncertainty",
+    "privacy",
+    "limitations",
+    "open_gates",
+    "decision"
+  ],
+  "rules": {
+    "mandate_id": "E01-E10; one or more only if independently separated",
+    "self_declared_identity": "SELF_DECLARED_UNVERIFIED without independent identity attestation",
+    "exposure": "BLINDED_WITH_EVIDENCE or PREEXPOSED",
+    "source_manifest": "immutable source references, original sha, article DOI/version; SOURCE_GAP if unavailable",
+    "concepts": "two alternatives minimum for OPPO/BodyTwin measurement architecture; one null model",
+    "alternatives": "cost, assumption, falsifiability, offline/rollback",
+    "self_falsification": "strongest counterexample, positive control, physical DESIGN_ONLY reference, preregistered stop condition",
+    "test_evidence": "either actual source+binary+command+exit+trace hashes or NOT_RUN/DESIGN_ONLY",
+    "uncertainty": "units, frames, time sync, independent reference, GUM budget where applicable",
+    "privacy": "NO_RAW_PRIVATE_OPPO_ON_PUBLIC_GITHUB; consent/rights evaluation",
+    "limitations": "must include things reviewer is unwilling to claim",
+    "open_gates": "list of noncompensatory gates",
+    "decision": "CONCEPT_CANDIDATE or REJECTED or HOLD; never automatic promotion"
+  },
+  "evidence_classes": [
+    "PRIMARY_SOURCE_READ",
+    "CANDIDATE_FEED_HEADLINE",
+    "INDEPENDENT_ORIGINAL_REHASH",
+    "REPLAYED_EXACT_SOURCE",
+    "REPORTED_ONLY",
+    "DESIGN_ONLY",
+    "NOT_RUN",
+    "SOURCE_GAP"
+  ],
+  "prohibitions": [
+    "REAL_HUMAN_BODY_TWIN_VALIDATION",
+    "SECRET_PUBLICATION",
+    "EXTERNAL_GITHUB_AUTOWRITE",
+    "UNAUTHORIZED_PHYSICAL_CAPTURE",
+    "HOSTINGER_DEPLOY",
+    "AUTOMATIC_MERGE"
+  ]
+}

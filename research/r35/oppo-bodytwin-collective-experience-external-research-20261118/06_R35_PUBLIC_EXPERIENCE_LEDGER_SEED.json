@@ -1,0 +1,222 @@
+{
+  "schema": "nexus-omega-experience-ledger-seed/v1",
+  "object": "NEXUS_OMEGA_R35_PUBLIC_METADATA_EXPERIENCE_SEED_20261118_R0",
+  "status": "DESIGN_PROTOTYPE_SEED_NOT_AN_OPERATIONAL_AUTHORITY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "privacy": "PUBLIC_METADATA_ONLY_NO_RAW_OPPO_DATA",
+  "version": 1,
+  "record_count": 12,
+  "records": [
+    {
+      "id": "R35:OPPO_SENSOR_ORIGINALS",
+      "gate_id": "OPPO_ORIGINAL_BYTES",
+      "topic": "oppo-bodytwin",
+      "status": "SOURCE_GAP_ORIGINALS_NOT_IN_PUBLIC_R35",
+      "evidence_class": "SOURCE_GAP",
+      "source_object": "NEXUS_R35_PRELIMINARY_INPUT_CENSUS",
+      "source_sha256": null,
+      "source_ref": "PRIVATE_SCIENCE_PRIVATE_CUSTODY_ONLY",
+      "open_gates": [
+        "SENSOR_CENSUS",
+        "TIMESTAMP_ALIGNMENT",
+        "CALIBRATED_REFERENCE"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "NEEDS_PRIVATE_SOURCE_RECEIVER_AND_INDEPENDENT_REHASH",
+      "scope": "No original sensor bytes in this public R35 packet"
+    },
+    {
+      "id": "R35:BODYTWIN_PHYSICAL",
+      "gate_id": "BODYTWIN_VALIDATED",
+      "topic": "oppo-bodytwin",
+      "status": "NO",
+      "evidence_class": "ADJUDICATED_C1_SOURCE_RECORD",
+      "source_object": "NEXUS_OMEGA_AXIOM_R34_STAGE0_FOUNDATION_INTAKE_AND_CROSSADJUDICATION_20261118_R0",
+      "source_sha256": null,
+      "source_ref": "PR372@b3a8e694d9a717622a83f2dcfbbbcde5aa1db9d1",
+      "open_gates": [
+        "CONSENT_BIND",
+        "TRIAL_001",
+        "GROUND_TRUTH",
+        "UNCERTAINTY_BUDGET"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "NO_PHYSICAL_OR_CLINICAL_VALIDATION",
+      "scope": "software/rendering claim is not sensor measured body pose"
+    },
+    {
+      "id": "R35:SETBACK_PRINCIPLE",
+      "gate_id": "EPISTEMIC_SETBACK",
+      "topic": "governance",
+      "status": "BOUND_C1_PROCESS_PRINCIPLE",
+      "evidence_class": "ADJUDICATED_NORMATIVE",
+      "source_object": "NEXUS_OMEGA_AXIOM_R34_EPISTEMIC_SETBACK_TO_VALIDATED_PROGRESS_PRINCIPLE_20261118_R0",
+      "source_sha256": "9a759b373ef8d3a1095e6f9001b0ac4bc0a3624fa46ec75d0e4a5c6c4f58f84d",
+      "source_ref": "PR372@b3a8e694d9a717622a83f2dcfbbbcde5aa1db9d1",
+      "open_gates": [
+        "RUNTIME_LEARNING_GAIN_NOT_MEASURED"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "FAILURE_TO_EVIDENCE_TO_REPAIR_TO_INDEPENDENT_REPLAY",
+      "scope": "normative research method, not experimentally observed improvement"
+    },
+    {
+      "id": "R35:R34_CURSOR_BIND",
+      "gate_id": "R34_BIND_CUSTODY",
+      "topic": "provenance",
+      "status": "SHA256_CRC_AND_5_OF_5_MATCH",
+      "evidence_class": "INDEPENDENT_ORIGINAL_BYTES_REHASH",
+      "source_object": "NEXUS_OMEGA_CURSOR_R34_EPISTEMIC_SETBACK_TO_VALIDATED_PROGRESS_BIND_RETURN_20261118_R0",
+      "source_sha256": "f2a5444bf91b495dbade60c87a5d6cd8d143c655b9afcb497715d3bd79a893af",
+      "source_ref": "OPERATOR_RECEIVED_PRIVATE_ZIP_UNPUBLISHED",
+      "open_gates": [
+        "EXTERNAL_AUTHOR_IDENTITY_UNVERIFIED"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "CUSTODY_PASS_NOT_RUNTIME_PROOF",
+      "scope": "3618 bytes and 5 internal content hashes"
+    },
+    {
+      "id": "R35:R33_JSONSCHEMA",
+      "gate_id": "JSON_FAIL_CLOSED",
+      "topic": "software-security",
+      "status": "OPEN_STATIC_BUG",
+      "evidence_class": "INDEPENDENT_STATIC_SOURCE_AUDIT",
+      "source_object": "PR369 R33-R2 offline renderer",
+      "source_sha256": null,
+      "source_ref": "PR369@1fb3a10a5f73ef334fc20f4ba373384270c9486f",
+      "open_gates": [
+        "SCHEMA_ABSENT_HARD_FAIL",
+        "SECOND_PARTY_TEST"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "REQUIRE_FAIL_CLOSED_BEFORE_RELEASE",
+      "scope": "jsonschema missing returns SKIPPED, renderer continues"
+    },
+    {
+      "id": "R35:R33_TEST_BIND",
+      "gate_id": "TEST_RECEIPT_SOURCE_BIND",
+      "topic": "software-security",
+      "status": "OPEN_MISMATCH",
+      "evidence_class": "INDEPENDENT_STATIC_SOURCE_AUDIT",
+      "source_object": "PR369 R33-R2 negative matrix",
+      "source_sha256": null,
+      "source_ref": "PR369@1fb3a10a5f73ef334fc20f4ba373384270c9486f",
+      "open_gates": [
+        "RAW_RUNNER_RECEIPT",
+        "EXACT_TEST_IDS",
+        "SOURCE_HASHES"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "NO_SECOND_PARTY_RUNTIME_PASS",
+      "scope": "B01 B02 B03 labels differ"
+    },
+    {
+      "id": "R35:LEAN_KERNEL",
+      "gate_id": "LEAN_KERNEL",
+      "topic": "formal-science",
+      "status": "NOT_RUN",
+      "evidence_class": "SOURCE_GAP",
+      "source_object": "PR366 original Lean GREEN",
+      "source_sha256": "70820997285f1bb83d211afbc3cb18f3663790f399d4bce1c506dbd910e5be16",
+      "source_ref": "PR366@b2d37f9ac82f34df1cebda0a0b61f73d228e7be1",
+      "open_gates": [
+        "LEAN_4_36_0_BINARY",
+        "INDEPENDENT_KERNEL_LOG",
+        "MODEL_ADEQUACY_B_N"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "PRESERVE_NOT_RUN",
+      "scope": "toolchain execution absent"
+    },
+    {
+      "id": "R35:JCS_VENDOR",
+      "gate_id": "JCS_VENDOR",
+      "topic": "formal-science",
+      "status": "NOT_VERIFIED",
+      "evidence_class": "SOURCE_GAP",
+      "source_object": "RFC8785 version-pinned wheel",
+      "source_sha256": null,
+      "source_ref": "PR367_REF_PIN_REQUIRED",
+      "open_gates": [
+        "AUTHENTIC_WHEEL_BYTES",
+        "RUNTIME_IMPORT",
+        "DIFFERENTIAL_TEST"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "PRESERVE_HOLD",
+      "scope": "metadata is not imported vendor wheel"
+    },
+    {
+      "id": "R35:E99_HOLD",
+      "gate_id": "E99_HOLD",
+      "topic": "formal-science",
+      "status": "HOLD",
+      "evidence_class": "ADJUDICATED_C1_SOURCE_RECORD",
+      "source_object": "R34 source-bound gate ledger",
+      "source_sha256": null,
+      "source_ref": "PR370@410cb1139d84cd483f76960ae81b8866cf20a47e",
+      "open_gates": [
+        "TWO_DISTINCT_ORIGINALS",
+        "JCS_VENDOR",
+        "MODEL_ADEQUACY"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "PRESERVE_HOLD",
+      "scope": "no invented second original"
+    },
+    {
+      "id": "R35:FEED_WIRE",
+      "gate_id": "RESEARCH_WIRE_AVAILABILITY",
+      "topic": "feed",
+      "status": "HTTP_404_OBSERVED_IN_BROWSER_PANEL",
+      "evidence_class": "BROWSER_PAGE_OBSERVATION",
+      "source_object": "NEXUS HOMEPAGE 2026-11-18",
+      "source_sha256": null,
+      "source_ref": "https://www.nexus-mobile.de/",
+      "open_gates": [
+        "DIRECT_ENDPOINT_HTTP_WITNESS",
+        "RAW_RESPONSE_SHA"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "DO_NOT_ASSUME_LIVE_WIRE",
+      "scope": "homepage panel text, not direct server HTTP response"
+    },
+    {
+      "id": "R35:FEED_PREPRINTS",
+      "gate_id": "EXTERNAL_FEED_PROVENANCE",
+      "topic": "feed",
+      "status": "12_LISTINGS_OBSERVED_NOT_AUDITED",
+      "evidence_class": "BROWSER_PAGE_OBSERVATION",
+      "source_object": "Science & Open Source 2026-11-18",
+      "source_sha256": null,
+      "source_ref": "https://www.nexus-mobile.de/",
+      "open_gates": [
+        "PRIMARY_ARTICLE_READ",
+        "SOURCE_LICENSE",
+        "RELEVANCE_OPPO",
+        "INDEPENDENT_CHALLENGE"
+      ],
+      "visibility": "PUBLIC",
+      "decision": "CANDIDATE_ONLY",
+      "scope": "page declares preprints are not NEXUS validated"
+    },
+    {
+      "id": "R35:EXTERNAL_STAGE0",
+      "gate_id": "EXTERNAL_AGENT_IDENTITY",
+      "topic": "provenance",
+      "status": "SELF_DECLARED_UNVERIFIED",
+      "evidence_class": "SOURCE_REPORTED",
+      "source_object": "GROK R35 2026-11-18 note",
+      "source_sha256": "8d3c93894006ce2936dfdb4d66e69ff5d47efd828380b4cafc20f0e3c2401ba4",
+      "source_ref": "OPERATOR_UPLOADED_TEXT_UNPUBLISHED",
+      "open_gates": [
+        "INDEPENDENT_AUTHOR_SIGNATURE",
+        "EXPERT_ORIGINAL_RECEIPT"
+      ],
+      "visibility": "PUBLIC_METADATA_ONLY",
+      "decision": "DO_NOT_COUNT_AS_AUTHENTICATED_AGENT",
+      "scope": "Source bytes receipt only, no external author validation"
+    }
+  ]
+}
