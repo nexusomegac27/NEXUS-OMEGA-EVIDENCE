@@ -1,0 +1,70 @@
+{
+  "schema": "nexus-omega/r36-gap-aware-causal-thread/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R36_GAP_AWARE_CAUSAL_CONTEXT_CONTRACT_20261119_R0",
+  "issued_at": "2026-11-19",
+  "scope": "DESIGN_ONLY_NOT_PRODUCTION_VALIDATION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "parent_cursor_return": {
+    "bytes": 5555,
+    "sha256": "423e6ead845cd00ca12234ec3a0981fd90c61ea67ce6de19f3fad98eab70c2c4",
+    "zip_crc": "PASS",
+    "internal_manifest": "5_OF_5_MATCH",
+    "role": "RECEIVER_CUSTODY_NOT_DEVICE_ACTIVATION"
+  },
+  "core_distinction": {
+    "context_route_known": "A route explicitly represented by verified plus candidate/gap edges; this is narrative structure, NOT causal proof",
+    "evidence_chain_closed": "ONLY evidence-bound edges and independently source-verified nodes, scoped to original receipt and relation",
+    "implicit_missing_filler": "FORBIDDEN",
+    "authorization_from_context": "FORBIDDEN"
+  },
+  "allowed_node_statuses": [
+    "ORIGINAL_VERIFIED",
+    "OBSERVED_RUNTIME",
+    "DEVICE_OBSERVED",
+    "REPORTED_ONLY",
+    "NOT_IN_CUSTODY",
+    "NOT_FOUND_BOUNDED",
+    "ACCESS_RESTRICTED",
+    "CONFLICTED",
+    "HYPOTHETICAL_BRIDGE",
+    "REFUTED_BY_EVIDENCE",
+    "UNKNOWN",
+    "NOT_RUN"
+  ],
+  "allowed_edge_statuses": [
+    "EVIDENCE_BOUND",
+    "REPORTED_ONLY",
+    "HYPOTHETICAL_BRIDGE",
+    "UNKNOWN_LINK",
+    "REFUTES",
+    "CORRECTS",
+    "SUPERSEDES",
+    "REQUIRES"
+  ],
+  "gate_policy": {
+    "missing_source": "KEEP_PARENT_CONTINUITY_MARK_GAP_NO_IMPUTATION",
+    "conflicting_sources": "KEEP_BOTH_NEGATIVES_NO_LAST_WRITE_WINS",
+    "restricted_private": "NO_PUBLIC_HASH_NO_UNAUTHORIZED_SOURCE_RETRIEVAL",
+    "missing_not_false": true,
+    "unknown_not_approved": true,
+    "independent_unblocked_work": "ALLOWED_WITHOUT_PRETENDING_DEPENDENT_GATE_CLOSED",
+    "recursive_search": "BOUND_EXACT_PROBES_THEN_SOURCE_GAP",
+    "claimed_device_approval": "REQUIRE_ACTUAL_OPERATOR_AND_ON_DEVICE_RECEIPTS"
+  },
+  "r36_oppo_example": {
+    "enrollment": "NOT_ESTABLISHED",
+    "private_transport": "NOT_EXECUTED",
+    "measurement": "NOT_AUTHORIZED",
+    "bodytwin_validated": false,
+    "consent": "OPEN",
+    "r21_original": "NOT_IN_CURRENT_INTAKE",
+    "continuity_maintained": "RESEARCH_METHOD_AND_NEXT_SCOPE_ONLY"
+  },
+  "expected_adversarial_tests": 10,
+  "test_status": "SYNTHETIC_FROZEN_PROTOTYPE_RUN_ONLY",
+  "live_graph_validated": false,
+  "automation_created": false,
+  "github_merge": false,
+  "hostinger_write": false
+}
