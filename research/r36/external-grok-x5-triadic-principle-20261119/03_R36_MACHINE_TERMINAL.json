@@ -1,0 +1,45 @@
+{
+  "schema": "nexus-omega-r36-grok-gemini-addendum/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R36_GROK_X5_TRIADIC_CONCEPT_CROSSADJUDICATION_20261119_R0",
+  "state": "PASS_WITH_MATERIAL_CAVEATS_C1",
+  "source_archive": {
+    "file_count": 6,
+    "zip_members": 9,
+    "zip_bytes": 14321,
+    "zip_sha256": "96d0991b1a78671cbdf1b70e980622f73a0bb44ea7df024ecb70fca75c324dfd",
+    "crc": "PASS",
+    "manifest_match": "6_OF_6"
+  },
+  "original_x5_sha256": "54d18bb0f1106275d66eced28866967a984e84e94d8abd452f07611538d70ad5",
+  "grok_repro": {
+    "source_sha256": "1d3a5bee29895a5e0847a4b6b523fcac94a03f3ed835b5e76ec099992906436a",
+    "status": "SYNTAX_ERROR_LINE_23_EXIT_1"
+  },
+  "independent_ax_repro": {
+    "report_sha256": "c53e4bded4a5852de728888d59bd6723b2f79632449c52b0a6d9d11af04ac515",
+    "harness_sha256": "7c3e528d8619da67aaba76e280c5ef13e63eeb7135bc12773b0f7951ac62d5d2",
+    "original_x5_unchanged": true,
+    "status_label_spoof": true,
+    "authority_string_spoof": true,
+    "logical_reads_per_query": 6,
+    "design_read_target": 3
+  },
+  "gemini_triade": {
+    "class": "OPERATOR_SUPPLIED_NORMATIVE_EXTERNAL_MEMO",
+    "operational_status": "DESIGN_CANDIDATE_ONLY",
+    "air_gap": "NOT_PROVEN",
+    "validated_process_gain": "NOT_MEASURED"
+  },
+  "video": {
+    "url": "https://www.youtube.com/watch?v=VZsAkLQM2ns",
+    "transcript_verified": false,
+    "openai_20261006_722_manuscripts_372_families": "PRIMARY_SOURCE_CONFIRMED",
+    "physics_claims": "CLAIM_SCOPE_RESTRICTED"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "oppo_bodytwin_validated": false,
+  "merges": false,
+  "hostinger_write": false,
+  "private_raw_written": false,
+  "next": "EXPERT_EXACT_REPRO_REPAIR_AND_SCOPED_MEMORY_AUTHORITY_REMEDIATION_PENDING_SEPARATE_ORDER"
+}
