@@ -1,0 +1,186 @@
+{
+  "schema": "nexus-omega/r36-readonly-expert-navigation/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R36_EXTERNAL_EXPERT_NAV_INDEX_20261119_R0",
+  "generated_date": "2026-11-19",
+  "state": "R36_OPEN_RESEARCH_NAVIGATION_ONLY",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "production_deployed": false,
+  "bodytwin_validated": false,
+  "permission_policy": {
+    "external_agent_write": false,
+    "external_agent_new_namespace": false,
+    "private_original_access": "AUTHORIZED_PRIVATE_LANE_ONLY",
+    "pr_merge": false,
+    "hostinger_write": false,
+    "device_capture": false,
+    "authoritative_claims_from_nav": false
+  },
+  "source_repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "source_pr": 375,
+  "initial_scientific_head": "6d49c733dc9a0b0fb0b7e3000c28a9b44f239a34",
+  "navigation_root": "research/r36/",
+  "primary_research": "OPPO_CPH2219_BODYTWIN",
+  "canonical_order": [
+    {
+      "step": 0,
+      "id": "START",
+      "path": "research/r36/README.md",
+      "state": "NAVIGATION"
+    },
+    {
+      "step": 1,
+      "id": "R36_FOUNDATION",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/00_R36_AXIOM_CANONICAL_FOUNDATION_AND_CUSTODY.md",
+      "state": "SOURCE_RECORD"
+    },
+    {
+      "step": 2,
+      "id": "CONTRADICTIONS",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/01_R36_MATERIAL_CONTRADICTIONS_AND_CORRECTIONS.md",
+      "state": "OPEN_GATE_LEDGER"
+    },
+    {
+      "step": 3,
+      "id": "OPPO_PREREG",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/02_R36_OPPO_BODYTWIN_MEASUREMENT_PREREGISTRATION.md",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "step": 4,
+      "id": "EXPERT_MANDATES",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/03_R36_INDEPENDENT_EXPERT_MAXI_ORDER_E01_E10.md",
+      "state": "RESEARCH_ONLY"
+    },
+    {
+      "step": 5,
+      "id": "REVIEWER_RETURN",
+      "path": "research/r36/navigation/03_EXTERNAL_REVIEWER_HANDOFF_AND_RETURN_CONTRACT.md",
+      "state": "EXTERNAL_READ_ONLY"
+    },
+    {
+      "step": 6,
+      "id": "PARENT_GRAPH",
+      "path": "research/r36/navigation/01_CAUSAL_SOURCE_GRAPH_AND_PR_INDEX.md",
+      "state": "NAVIGATION"
+    }
+  ],
+  "lanes": [
+    {
+      "id": "HARD_OPPO",
+      "rank": 1,
+      "mandates": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "open_gates": [
+        "ON_DEVICE_CENSUS",
+        "R21_PRIVATE_ORIGINAL_RECEIVER",
+        "INDEPENDENT_REFERENCE",
+        "TIMESTAMP_IDENTIFIABILITY",
+        "CONSENT_BIND",
+        "BODY_FRAME_CALIBRATION"
+      ]
+    },
+    {
+      "id": "SOFT_MEMORY",
+      "rank": 2,
+      "mandates": [
+        "E06",
+        "E08",
+        "E09"
+      ],
+      "open_gates": [
+        "X5_AUTHORITY",
+        "X5_STATUS",
+        "X5_QUERY_BUDGET",
+        "X6_KNOWN_SOURCE_SECRET",
+        "PUBLIC_PRIVATE_CAS"
+      ]
+    },
+    {
+      "id": "PUBLICATION_ARCHIVE",
+      "rank": 3,
+      "mandates": [
+        "E07",
+        "E10"
+      ],
+      "open_gates": [
+        "CURRENT_OPEN_ARCHIVE_NOT_DEPLOYED",
+        "FEED_ARTICLE_SOURCE_AUDIT"
+      ]
+    },
+    {
+      "id": "CONCEPTUAL_HYPOTHESIS",
+      "rank": 4,
+      "mandates": [
+        "E08",
+        "E10"
+      ],
+      "open_gates": [
+        "TERNARY_BINARY_HOLD_COUNTERMODEL",
+        "AIRGAP_NOT_ATTESTED"
+      ],
+      "claim_class": "DESIGN_ONLY"
+    }
+  ],
+  "incoming_20261119": [
+    {
+      "id": "A",
+      "kind": "MACHINE_RECEIPT_COPY",
+      "source_class": "DUPLICATE_NOT_INDEPENDENT"
+    },
+    {
+      "id": "B",
+      "kind": "EXTERNAL_CONCEPT_ZIP",
+      "source_class": "UNVALIDATED_DESIGN",
+      "source_manifest": "2_OF_2_MATCH"
+    },
+    {
+      "id": "C",
+      "kind": "RECONC_AND_S1_ZIP",
+      "source_class": "PRODUCER_REPORTED",
+      "top_level_manifest": "40_OF_40_MATCH",
+      "nested_manifest": "6_OF_7_MATCH_MANIFEST_JSON_MISMATCH"
+    },
+    {
+      "id": "D",
+      "kind": "OPPO_HARD_DOCUMENT",
+      "source_class": "UNSIGNED_PREREG_CANDIDATE_A",
+      "custody": "OPERATOR_PRIVATE"
+    },
+    {
+      "id": "E",
+      "kind": "OPPO_HARD_PDF",
+      "source_class": "SAME_FAMILY_DISTINCT_PRESENTATION_NOT_INDEPENDENT",
+      "custody": "OPERATOR_PRIVATE"
+    }
+  ],
+  "preregistration_fork": {
+    "variant_a": "30MIN_PAIR_PLUS_GATED_NIS_INVALID_PRIMARY",
+    "variant_b": "5X3X2_PROFILES_ENCODER_ORIENTATION_RMSE",
+    "chosen": "NONE",
+    "status": "INDEPENDENT_METHOD_ADJUDICATION_REQUIRED"
+  },
+  "noncompensatory_holds": [
+    "OPPO_PHYSICAL_REFERENCE_NOT_ESTABLISHED",
+    "BODYTWIN_VALIDATED_NO",
+    "CONSENT_BIND_OPEN",
+    "C2_PROMOTION_NO",
+    "REPRO_SOURCE_EXACT_OPEN",
+    "TWO_VARIANT_PROTOCOL_CONFLICT_OPEN",
+    "LEAN_KERNEL_NOT_RUN",
+    "E99_HOLD"
+  ],
+  "integrity_rules": [
+    "SOURCE_SHA_DOES_NOT_IMPLY_EXECUTION",
+    "CURSOR_BIND_OLDER_HEAD_NOT_NEW_NAV_READBACK",
+    "EXTERNAL_RETURN_ACK_NOT_PROOF_OF_INDEPENDENT_IDENTITY",
+    "ARCHIVE_OLD_WHEN_SUPERSEDED_NOT_ACTIVE_NEGATIVE",
+    "PRIVATE_HASHES_NEVER_PUBLIC"
+  ],
+  "next": "R36_P1_PRIVATE_SOURCE_RECEIVER_AND_INDEPENDENT_METHODOLOGY_ADJUDICATION"
+}
