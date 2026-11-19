@@ -8,6 +8,18 @@ BODYTWIN_VALIDATED = NO
 AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
 EXTERNAL_WRITER = NOT_AUTHORIZED
 
+## Official OPPO activation / live source prevalidation (19 Nov 2026)
+
+**First scientific priority:** [Official OPPO enrollment, private transport and separately authorized measurement gates](oppo-bodytwin-foundation-20261118/11_R36_OPPO_OFFICIAL_ACTIVATION_AND_SYSTEM_SYMBIOSIS_PROTOCOL_20261119_R0.md). A GitHub draft, Cursor knowledge bind or heartbeat cannot certify an active OPPO device.
+
+**Current verified source and process optimization:** [Math/physics/Android/agent-security source audit and bounded live validation](oppo-bodytwin-foundation-20261118/12_R36_LIVE_SCIENCE_SOURCE_PREVALIDATION_AND_SELF_OPTIMIZATION_20261119_R0.md). No continuous worker or unauthorized AI feed command has been started.
+
+**Next Cursor handoff:** [P0/P1 scoped source-readiness order — PREPARED, NOT EXECUTION AUTHORIZED](oppo-bodytwin-foundation-20261118/13_R36_CURSOR_SCOPED_OPPO_P0_P1_PREPARE_ONLY_MAXI_ORDER_20261119_R0.md).
+
+**Machine-checkable scientific gates:** [OPPO activation status JSON](oppo-bodytwin-foundation-20261118/14_R36_OPPO_ACTIVATION_MACHINE_GATES_20261119_R0.json).
+
+The original five-file R36 NAV manifest is an immutable snapshot for its previous head; after this README and navigation-index update, use the separately added R1 navigation manifest for current source checks. Never retroactively treat the earlier Cursor ACK as an ACK of the new HEAD.
+
 ## A 60-second orientation for new external experts
 
 **Read-only start in this order:**
