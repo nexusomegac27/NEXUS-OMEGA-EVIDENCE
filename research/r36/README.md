@@ -8,6 +8,14 @@ BODYTWIN_VALIDATED = NO
 AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
 EXTERNAL_WRITER = NOT_AUTHORIZED
 
+## R36 continuation law — retain the thread despite source gaps (19 Nov 2026)
+
+**Operator-bound rule:** Missing, not-in-custody, restricted, contradictory or only reported fragments may interrupt an EVIDENCE CHAIN, but must not erase the known causal research context or block unrelated permitted investigation. Reconstruct a possible continuity path explicitly as HYPOTHESIS/UNKNOWN_LINK, never as a verified missing event or authorized action.
+
+Read [canonical gap-continuity doctrine](navigation/05_R36_CAUSAL_THREAD_UNDER_MISSING_FRAGMENTS_DOCTRINE_20261119_R0.md), [machine-readable dual-context/evidence contract](navigation/06_R36_GAP_AWARE_CAUSAL_GRAPH_CONTRACT_20261119_R0.json), [10-test bounded synthetic guard source](navigation/07_R36_CAUSAL_THREAD_GAP_GUARD_NEGATIVE_TESTS_20261119_R0.py), and [source-hash-bound synthetic replay receipt](navigation/08_R36_CAUSAL_THREAD_GAP_GUARD_INDEPENDENT_TEST_RECEIPT_20261119_R0.json).
+
+Two separately visible fields are mandatory: CONTEXT_ROUTE_KNOWN (possibly hypothetical) and EVIDENCE_CHAIN_CLOSED (only source-exact). A possible path cannot be used to set OPPO_ENROLLED, TRANSPORT_ACKED, MEASUREMENT_AUTHORIZED or BODYTWIN_VALIDATED. Old Cursor HEAD binds and earlier navigation-manifest revisions remain historical originals; the newest research files require an independent new receiver ACK.
+
 ## Official OPPO activation / live source prevalidation (19 Nov 2026)
 
 **First scientific priority:** [Official OPPO enrollment, private transport and separately authorized measurement gates](oppo-bodytwin-foundation-20261118/11_R36_OPPO_OFFICIAL_ACTIVATION_AND_SYSTEM_SYMBIOSIS_PROTOCOL_20261119_R0.md). A GitHub draft, Cursor knowledge bind or heartbeat cannot certify an active OPPO device.
