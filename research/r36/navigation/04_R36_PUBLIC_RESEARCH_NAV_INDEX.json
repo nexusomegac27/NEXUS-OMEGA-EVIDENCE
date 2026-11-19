@@ -1,6 +1,6 @@
 {
   "schema": "nexus-omega/r36-readonly-expert-navigation/v1",
-  "object": "NEXUS_OMEGA_AXIOM_R36_EXTERNAL_EXPERT_NAV_INDEX_20261119_R0",
+  "object": "NEXUS_OMEGA_AXIOM_R36_PUBLIC_RESEARCH_NAV_INDEX_R1_20261119",
   "generated_date": "2026-11-19",
   "state": "R36_OPEN_RESEARCH_NAVIGATION_ONLY",
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
@@ -63,6 +63,30 @@
       "id": "PARENT_GRAPH",
       "path": "research/r36/navigation/01_CAUSAL_SOURCE_GRAPH_AND_PR_INDEX.md",
       "state": "NAVIGATION"
+    },
+    {
+      "step": 7,
+      "id": "OPPO_OFFICIAL_ARMING",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/11_R36_OPPO_OFFICIAL_ACTIVATION_AND_SYSTEM_SYMBIOSIS_PROTOCOL_20261119_R0.md",
+      "state": "PREPARED_NO_EXEC"
+    },
+    {
+      "step": 8,
+      "id": "LIVE_SCIENCE_SAFETY",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/12_R36_LIVE_SCIENCE_SOURCE_PREVALIDATION_AND_SELF_OPTIMIZATION_20261119_R0.md",
+      "state": "RESEARCH_SOURCES_ONLY"
+    },
+    {
+      "step": 9,
+      "id": "CURSOR_P0_P1_ORDER",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/13_R36_CURSOR_SCOPED_OPPO_P0_P1_PREPARE_ONLY_MAXI_ORDER_20261119_R0.md",
+      "state": "NOT_EXECUTION_AUTHORIZED"
+    },
+    {
+      "step": 10,
+      "id": "OPPO_MACHINE_GATES",
+      "path": "research/r36/oppo-bodytwin-foundation-20261118/14_R36_OPPO_ACTIVATION_MACHINE_GATES_20261119_R0.json",
+      "state": "DEVICE_NOT_ARMED"
     }
   ],
   "lanes": [
@@ -182,5 +206,10 @@
     "ARCHIVE_OLD_WHEN_SUPERSEDED_NOT_ACTIVE_NEGATIVE",
     "PRIVATE_HASHES_NEVER_PUBLIC"
   ],
-  "next": "R36_P1_PRIVATE_SOURCE_RECEIVER_AND_INDEPENDENT_METHODOLOGY_ADJUDICATION"
+  "next": "R36_P1_PRIVATE_SOURCE_RECEIVER_AND_INDEPENDENT_METHODOLOGY_ADJUDICATION",
+  "last_changed": "2026-11-19",
+  "current_pr_head_after_change": "TO_BE_PINNED_IN_R1_MANIFEST",
+  "status_note": "Original R0 NAV snapshot remains valid at historical Cursor-bound HEAD c50c195... only; use new R1 manifest on this branch, future Cursor rebind required",
+  "source_watch_mode": "BOUNDED_ON_DEMAND_NOT_AUTOMATION",
+  "activation_status": "NOT_ESTABLISHED"
 }
