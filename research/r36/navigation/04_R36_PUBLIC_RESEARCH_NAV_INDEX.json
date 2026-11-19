@@ -1,6 +1,6 @@
 {
   "schema": "nexus-omega/r36-readonly-expert-navigation/v1",
-  "object": "NEXUS_OMEGA_AXIOM_R36_PUBLIC_RESEARCH_NAV_INDEX_R1_20261119",
+  "object": "NEXUS_OMEGA_AXIOM_R36_PUBLIC_RESEARCH_NAV_INDEX_R2_20261119",
   "generated_date": "2026-11-19",
   "state": "R36_OPEN_RESEARCH_NAVIGATION_ONLY",
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
@@ -87,6 +87,30 @@
       "id": "OPPO_MACHINE_GATES",
       "path": "research/r36/oppo-bodytwin-foundation-20261118/14_R36_OPPO_ACTIVATION_MACHINE_GATES_20261119_R0.json",
       "state": "DEVICE_NOT_ARMED"
+    },
+    {
+      "step": 11,
+      "id": "CAUSAL_THREAD_DOCTRINE",
+      "path": "research/r36/navigation/05_R36_CAUSAL_THREAD_UNDER_MISSING_FRAGMENTS_DOCTRINE_20261119_R0.md",
+      "state": "NORMATIVE_DESIGN_C1"
+    },
+    {
+      "step": 12,
+      "id": "GAP_AWARE_MACHINE_CONTRACT",
+      "path": "research/r36/navigation/06_R36_GAP_AWARE_CAUSAL_GRAPH_CONTRACT_20261119_R0.json",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "step": 13,
+      "id": "GAP_NEGATIVE_HARNESS",
+      "path": "research/r36/navigation/07_R36_CAUSAL_THREAD_GAP_GUARD_NEGATIVE_TESTS_20261119_R0.py",
+      "state": "INDEPENDENT_SYNTHETIC_REPLAY_10_OF_10"
+    },
+    {
+      "step": 14,
+      "id": "GAP_REPLAY_RECEIPT",
+      "path": "research/r36/navigation/08_R36_CAUSAL_THREAD_GAP_GUARD_INDEPENDENT_TEST_RECEIPT_20261119_R0.json",
+      "state": "SYNTHETIC_RECEIPT"
     }
   ],
   "lanes": [
@@ -211,5 +235,17 @@
   "current_pr_head_after_change": "TO_BE_PINNED_IN_R1_MANIFEST",
   "status_note": "Original R0 NAV snapshot remains valid at historical Cursor-bound HEAD c50c195... only; use new R1 manifest on this branch, future Cursor rebind required",
   "source_watch_mode": "BOUNDED_ON_DEMAND_NOT_AUTOMATION",
-  "activation_status": "NOT_ESTABLISHED"
+  "activation_status": "NOT_ESTABLISHED",
+  "r36_phase": "OPEN",
+  "causal_continuity_law": {
+    "status": "NORMATIVE_RULE_C1",
+    "context_reconstruction": "ALLOW_EXPLICIT_HYPOTHESIS",
+    "evidence_closure": "REQUIRE_AUTHENTIC_SOURCE_BOUND_EDGES",
+    "unknown_fragment": "OPEN_NOT_FALSE_NOT_VERIFIED",
+    "private_access": "NEVER_BYPASS",
+    "synthetic_tests": "10_OF_10_PASS_GUARD_ONLY",
+    "live_system_proof": false
+  },
+  "previous_cursor_navigation_bind": "PR375@52fc446b69bf01b6b49bc7d2657f84c074204a1d",
+  "new_cursor_readback_required": true
 }
