@@ -1,0 +1,46 @@
+# R36 — START HERE | NEXUS OMEGA scientific research navigation
+
+OBJECT = NEXUS_OMEGA_AXIOM_R36_EXPERT_ENTRY_AND_NAVIGATION_20261119_R0
+STATE = R36_OPEN_RESEARCH; NOT_DEPLOYED; NOT_MERGED
+PRIMARY = OPPO CPH2219 / dual-smartphone IMU / BodyTwin scientific falsification
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+BODYTWIN_VALIDATED = NO
+AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
+EXTERNAL_WRITER = NOT_AUTHORIZED
+
+## A 60-second orientation for new external experts
+
+**Read-only start in this order:**
+1. [What is the current R36 scientific foundation?](oppo-bodytwin-foundation-20261118/00_R36_AXIOM_CANONICAL_FOUNDATION_AND_CUSTODY.md)
+2. [Which claims were contradicted and which remain open?](oppo-bodytwin-foundation-20261118/01_R36_MATERIAL_CONTRADICTIONS_AND_CORRECTIONS.md)
+3. [Which OPPO/BodyTwin measurements would actually discriminate models?](oppo-bodytwin-foundation-20261118/02_R36_OPPO_BODYTWIN_MEASUREMENT_PREREGISTRATION.md)
+4. [What can my external expert mandate contribute?](oppo-bodytwin-foundation-20261118/03_R36_INDEPENDENT_EXPERT_MAXI_ORDER_E01_E10.md)
+5. [How do I submit an independently falsified design proposal?](navigation/03_EXTERNAL_REVIEWER_HANDOFF_AND_RETURN_CONTRACT.md)
+
+## One navigation surface, four bounded views
+
+| View | Location | Meaning |
+| --- | --- | --- |
+| CAUSAL LINEAGE | [navigation/01](navigation/01_CAUSAL_SOURCE_GRAPH_AND_PR_INDEX.md) | Parent PR and immutable commit; no conflation of reports, execution or deploy |
+| OPEN GATES | [navigation/02](navigation/02_R36_INTAKE_DISAGREEMENTS_AND_SCIENCE_GATES.md) | Unresolved physical, metrological, privacy, execution and author-identity questions |
+| EXPERT ROUTES | [navigation/03](navigation/03_EXTERNAL_REVIEWER_HANDOFF_AND_RETURN_CONTRACT.md) | What an E01–E10 reviewer reads, may test and must return |
+| MACHINE INDEX | [navigation/04](navigation/04_R36_PUBLIC_RESEARCH_NAV_INDEX.json) | Read-only fixed paths and status fields, not an API or authority |
+
+## Working lanes
+
+- **HARD/SCIENCE**: OPPO original source and on-device census, monotonic timestamps, independent reference/uncertainty, rigid device-to-body transforms, filter nulls and reference error. This has highest priority.
+- **MEMORY/SAFETY**: collective ledger and source-exact replay; X5 authority/status/read-budget and X4B/X6 private CAS remain OPEN, as in [R36 memory gates](oppo-bodytwin-foundation-20261118/04_R36_COLLECTIVE_MEMORY_SECURITY_AND_LEARNING_GATES.md).
+- **SOFT/KNOWLEDGE**: exploratory hypotheses including the Grok triadic/ternary memo, strictly labelled DESIGN_ONLY; must pass countermodel before acceptance.
+- **WWW/PUBLICATION**: CURRENT / OPEN / HISTORICAL_ARCHIVE, as in [publication lane](oppo-bodytwin-foundation-20261118/05_R36_WWW_ENTRY_ARCHIVE_AND_LIVE_FEED_SUPPORT_LANE.md). No homepage mutation from a research PR.
+
+## Repositories and privacy boundary
+
+This is the public research DRAFT, not the NEXUS homepage or executable runtime. The first OPPO HARD custody work belongs to a separately permissioned private repository; it may ONLY be requested through authorized AXIOM/Operator/registered Cursor custody. Do not copy private original bytes, private CAS hashes, identifiers, participant data, raw URLs or secret receipts to public Markdown, indexes, issues, PR comments or GitHub Actions logs.
+
+## Navigation invariant
+
+Immutable parent PR commits remain the evidence source; THIS README is a navigational projection. If a pointer breaks, mark LINK_GAP rather than searching unboundedly or replacing it with a similarly named unverified file. Every original, negative and superseded claim remains available in its authorized archive; current open contradictions are NOT archived merely because they are negative.
+
+Read-only experts may propose genuinely novel architectures and self-falsify them. External agents have NO implicit GitHub write, new folder, deployment, physical-capture, merge, attestation or authoritative adjudication privilege. A reviewer label is not proof of its identity.
+
+R36 status = OPEN. Synthetic data != independent OPPO measurement. No C2, no BodyTwin clinical claim.
