@@ -12,6 +12,14 @@ CONSENT_BIND = OPEN_FOR_HUMAN/BODY_DATA
 PRIVATE_TRANSPORT = NOT_EXECUTED
 HOSTINGER_WRITE = NO | PR_MERGE = NO | WWW_WRITE = NO
 
+## R37 first actual sensor-return update — 20 Nov 2026 (append-only)
+
+**Current observed-in-upload status:** the later Cursor return now contains a locally sealed accel/gyro segment, independently rehashed, unpacked and numerically analyzed by AXIOM. The original frozen R37 prereg and its pre-capture status remain historical below and are NOT retroactively changed.
+
+[NEW R37 independent C1 scientific sensor-source adjudication](06_R37_AXIOM_INDEPENDENT_REAL_SENSOR_DATA_ADJUDICATION_20261120_R0.md) records the source-safe findings: 6,374 accelerometer + 6,366 gyro events, ~100.185 Hz event-clock sample rate, accel vector norm median 9.81855m/s² and gyro norm median 0.00204rad/s, consistent with a mostly static phone. The original is ~63.6s long, NOT exact 60s: 363 events per channel occur after the locally declared app stop deadline. Actual requested sampling was 100Hz, not the preceding 50Hz research design. Local source_build in the seal is empty, the exact owner approval receipt was not provided and original-source hardware attestation is unproven.
+
+**The central BodyTwin semantic falsification has NOT RUN:** No connected BodyTwin UI/API output or zero-input baseline is in the return; status is BODYTWIN_INTEGRATION_NOT_TESTED, not PASS. Next step is an offline read-only three-way test on the EXISTING original: NO_SENSOR input vs <= deadline static window vs full archived static stream, plus code/owner approval and deadline audit. NO NEW DEVICE CAPTURE from this update. Private full hashes, device identifiers and original bytes are never added to this public file.
+
 ## First question, before any extra analogy
 QWEN/operator-supplied R36R2 principle: "Der billigste echte Fortschritt ist nicht die fünfte Analogie, sondern ein Telefon, das 60 Sekunden still liegt — und die Frage, ob BodyTwin dann behauptet, einen Körper zu messen."
 R37 tests a NON-HUMAN, stationary physical smartphone reference; no person wears or handles the phone during the measurement window. The on-device sensor data is physical, but the BODY/JOINT outcome is a NEGATIVE control and must not be mislabeled as measured anatomy. No user-visible 60-second capture has yet been witnessed.
