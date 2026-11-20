@@ -1,0 +1,60 @@
+{
+  "schema": "nexus-omega-r36-preparation/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R36_PREPARATION_AND_FALSIFICATION_SOURCE_AUDIT_20261118_R0",
+  "state": "RESEARCH_PREPARED_C1_NO_RUNTIME_AUTHORIZATION",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_census": {
+    "mounted_files": 37,
+    "zip_archives": 15,
+    "tar_archives": 1,
+    "zip_crc_pass": 15,
+    "zip_sha_manifests": 13,
+    "embedded_sha256_matched": 120,
+    "external_sidecars_matched": 8,
+    "leaf_inventory_hash_rows": 569
+  },
+  "parents": {
+    "public_pr369": "1fb3a10a5f73ef334fc20f4ba373384270c9486f",
+    "public_pr370": "410cb1139d84cd483f76960ae81b8866cf20a47e",
+    "public_pr372": "b3a8e694d9a717622a83f2dcfbbbcde5aa1db9d1",
+    "public_pr373": "ce2cf13fc73073a19694148444dea04db8f89102",
+    "public_pr374": "f0bac10c11d15b7242c05b9267811de50db2e7eb",
+    "private_oppo_custody": "EXISTS_READ_ONLY_NO_PRIVATE_SOURCE_COPIED_TO_PUBLIC_PR"
+  },
+  "open_gates": [
+    "PRIVATE_R21_ORIGINAL_REHASH",
+    "ON_DEVICE_SENSOR_CENSUS",
+    "CLOCK_REFERENCE",
+    "INDEPENDENT_MOTION_REFERENCE",
+    "BODYTWIN_MAPPING",
+    "CONSENT_BIND",
+    "LEAN_KERNEL",
+    "RFC8785_AUTHENTIC_VENDOR",
+    "E99_HOLD",
+    "A_PRIME_CF01_CF09",
+    "X5_AUTHORITY_AND_BUDGET",
+    "X6_PRIVATE_CAS_PRIVACY",
+    "RECONC_ROOT_MANIFEST",
+    "EXPERT_E03_E06_EXECUTABLES"
+  ],
+  "new_independent_negative_receipts": [
+    {
+      "object": "R36_X5_AUTHORITY_BUDGET",
+      "sha256": "1403aaa97d264e979d6993f299006da5e2e990a8e9a860599b7bce5610d8ccb5"
+    },
+    {
+      "object": "R36_X6_KNOWN_KEY_ORACLE",
+      "sha256": "b10ee1ce2f81442fa814ff155e1225fd6529f9ced5aad36c02335aaa90788402"
+    }
+  ],
+  "prohibitions": [
+    "NO_PR_MERGE",
+    "NO_HOSTINGER",
+    "NO_WWW_WRITE",
+    "NO_AUTONOMOUS_DEVICE_CAPTURE",
+    "NO_PRIVATE_RAW_PUBLICATION",
+    "NO_CLAIM_PROMOTION",
+    "NO_BODYTWIN_VALIDATED_YES"
+  ],
+  "next": "PRIVATE_RECEIVER_RECONCILIATION_THEN_NEUTRAL_EXPERT_FALSIFICATION_THEN_SCOPED_PREREGISTRATION_NOT_AUTOSTART"
+}

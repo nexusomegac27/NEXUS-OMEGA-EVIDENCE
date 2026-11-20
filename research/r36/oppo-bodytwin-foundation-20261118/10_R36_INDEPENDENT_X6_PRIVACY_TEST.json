@@ -1,0 +1,11 @@
+{
+  "candidate": "synthetic_only",
+  "key_source": "original_python_default_parameter_readable_in_archived_source",
+  "object": "R36_INDEPENDENT_RECONC_X6_KNOWN_CODE_ADVERSARY",
+  "oracle_ref_equals_recomputed": true,
+  "privacy_pass_is_unsupported_for_attacker_with_published_code": true,
+  "scope": "RECONC X6 prototype; not deployed NEXUS",
+  "source_bytes": 5109,
+  "source_sha256": "005ac3f7295c95415475d564f2e67204484d7b1f3be3145cb4a5d7c6044b86c6",
+  "x6_simple_attacker_omitted_key_aware_check": true
+}

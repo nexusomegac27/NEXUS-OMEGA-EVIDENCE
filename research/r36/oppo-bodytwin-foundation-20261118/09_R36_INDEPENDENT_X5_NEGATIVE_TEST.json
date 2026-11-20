@@ -1,0 +1,22 @@
+{
+  "authority_string_spoof": {
+    "event_type": "ADJUDICATED",
+    "unauthenticated_asserted_authority_passed": true
+  },
+  "four_tagged_records": {
+    "budget_enforced": false,
+    "declared_target_max_reads_per_query": 3,
+    "index_probes": 1,
+    "logical_reads_this_single_query": 4,
+    "result_count": 4
+  },
+  "object": "R36_INDEPENDENT_ADVERSARIAL_TEST_ON_RECONC_X5_SYNTHETIC_PROTOTYPE",
+  "scope": "synthetic locally imported RECONC x5_memory_ledger.py; not production NEXUS",
+  "source_sha256": "54d18bb0f1106275d66eced28866967a984e84e94d8abd452f07611538d70ad5",
+  "source_size": 16361,
+  "status_label_spoof": {
+    "event_type": "PROPOSED",
+    "status": "ADJUDICATED",
+    "unauthenticated_proposed_event_emits_adjudicated_status": true
+  }
+}

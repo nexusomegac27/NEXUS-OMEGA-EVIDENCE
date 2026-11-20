@@ -1,0 +1,117 @@
+{
+  "schema": "nexus-omega-r36-oppo-arming/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R36_OPPO_ARMING_GATE_MATRIX_20261119_R0",
+  "timestamp_date": "2026-11-19",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "r36": "OPEN",
+  "production": false,
+  "claim_promotion": false,
+  "bodytwin_validated": false,
+  "source_parent": {
+    "public_pr": 375,
+    "initial_head": "6d49c733dc9a0b0fb0b7e3000c28a9b44f239a34",
+    "cursor_nav_head": "c50c1952338c95c05144e2dc65cdee542d1e9093",
+    "cursor_bind_sha256": "5545a5bd5194ba0b14f2876e7b451a7cfa4f9894a5a8e8759434cc6b719d9104",
+    "private_pr": 35
+  },
+  "switches": [
+    {
+      "id": "DEVICE_ENROLLMENT",
+      "state": "NOT_ESTABLISHED",
+      "required": [
+        "APP_SOURCE_ORIGINAL",
+        "APP_BINARY_SIGNATURE",
+        "ON_DEVICE_CENSUS",
+        "TRUSTED_KEY_OR_EXPLICIT_LOWER_ASSURANCE",
+        "OPERATOR_SCOPE"
+      ]
+    },
+    {
+      "id": "PRIVATE_TRANSPORT_HANDSHAKE",
+      "state": "NOT_EXECUTED",
+      "required": [
+        "ALLOWED_PRIVATE_ENDPOINT",
+        "ONE_TIME_NONCE",
+        "AUTHENTICATED_RECEIVER",
+        "DURABLE_ACK",
+        "DEVICE_INDEPENDENT_ACK"
+      ]
+    },
+    {
+      "id": "REAL_MEASUREMENT",
+      "state": "NOT_AUTHORIZED",
+      "required": [
+        "PRE_REG_VARIANT_C",
+        "REFERENCE_U_REF",
+        "CONSENT_IF_HUMAN",
+        "APP_SCOPE",
+        "OPERATOR_APPROVAL",
+        "USER_VISIBLE_STOP",
+        "HELDOUT_NEGATIVE_TESTS"
+      ]
+    },
+    {
+      "id": "BODYTWIN_PHYSICAL_VALIDATION",
+      "state": "NO",
+      "required": [
+        "RIGID_PHONE_TO_SEGMENT_MAPPING",
+        "INDEPENDENT_BIOMECHANICAL_REFERENCE",
+        "CONSENT",
+        "REPLICATION",
+        "UNCERTAINTY"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "O0_PRIVATE_ORIGINAL",
+      "status": "SOURCE_GAP_NEEDS_PRIVATE_RECEIVER"
+    },
+    {
+      "id": "O1_ON_DEVICE_CENSUS",
+      "status": "NOT_OBSERVED"
+    },
+    {
+      "id": "O2_ATTESTATION",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "id": "O3_DIAGNOSTIC_PING",
+      "status": "NOT_AUTHORIZED_NOT_RUN"
+    },
+    {
+      "id": "O4_CONSENT_AND_PREREG",
+      "status": "OPEN"
+    },
+    {
+      "id": "O5_CLOCK_AND_REFERENCE",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "O6_NIS_AND_MODEL",
+      "status": "INVALID_GATED_NIS_PASS_REQUIRE_CORRECTION"
+    },
+    {
+      "id": "O7_C1_PUBLIC_RELEASE",
+      "status": "NOT_AUTHORIZED"
+    }
+  ],
+  "source_watch": {
+    "status": "PROTOCOL_ONLY_NOT_AUTOMATION",
+    "max_sources_per_pass": 8,
+    "max_attempts_per_source": 2,
+    "max_fulltext_candidates": 3,
+    "on_gap": "SOURCE_GAP_STOP",
+    "external_instruction_authority": false
+  },
+  "prohibitions": [
+    "NO_GITHUB_MERGE",
+    "NO_HOSTINGER_WRITE",
+    "NO_WWW_WRITE",
+    "NO_DEVICE_CAPTURE",
+    "NO_PRIVATE_RAW_HASH_IN_PUBLIC_METADATA",
+    "NO_AI_FEED_SELF_MODIFYING_CONTROL_PLANE",
+    "NO_C2"
+  ],
+  "next_action": "PRIVATE_SOURCE_CENSUS_AND_INDEPENDENT_METHOD_ADJUDICATION_FIRST"
+}
