@@ -1,6 +1,6 @@
 {
   "schema": "nexus-omega/r36-readonly-expert-navigation/v1",
-  "object": "NEXUS_OMEGA_AXIOM_R36_PUBLIC_RESEARCH_NAV_INDEX_R2_20261119",
+  "object": "NEXUS_OMEGA_AXIOM_R36_PUBLIC_RESEARCH_NAV_INDEX_R3_20261120",
   "generated_date": "2026-11-19",
   "state": "R36_OPEN_RESEARCH_NAVIGATION_ONLY",
   "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
@@ -111,6 +111,36 @@
       "id": "GAP_REPLAY_RECEIPT",
       "path": "research/r36/navigation/08_R36_CAUSAL_THREAD_GAP_GUARD_INDEPENDENT_TEST_RECEIPT_20261119_R0.json",
       "state": "SYNTHETIC_RECEIPT"
+    },
+    {
+      "step": 15,
+      "id": "EXTERNAL_GITHUB_MISSION",
+      "path": "research/r36/external-expert-program-20261120/00_START_HERE_R36_EXPERT_GITHUB_ONLY.md",
+      "state": "PREPARED_NOT_ACKED"
+    },
+    {
+      "step": 16,
+      "id": "E01_E16_MAXI_ORDER",
+      "path": "research/r36/external-expert-program-20261120/02_E01_E16_INDEPENDENT_MAXI_ORDER_AND_PRIORITY.md",
+      "state": "EXTERNAL_RESEARCH_ONLY"
+    },
+    {
+      "step": 17,
+      "id": "GEMINI_SOURCE_REGISTER",
+      "path": "research/r36/external-expert-program-20261120/03_PRIMARY_SCIENCE_SOURCE_REGISTER_AND_GEMINI_BOUNDARIES.md",
+      "state": "CANDIDATE_REVIEWED_SOURCE_SCOPE"
+    },
+    {
+      "step": 18,
+      "id": "EXPERT_RETURN_JSON",
+      "path": "research/r36/external-expert-program-20261120/05_EXPERT_RETURN_JSON_CONTRACT.json",
+      "state": "TEMPLATE_NOT_ACTUAL_RETURN"
+    },
+    {
+      "step": 19,
+      "id": "GITHUB_ONLY_INTAKE",
+      "path": "research/r36/external-expert-program-20261120/06_GITHUB_ONLY_EXPERT_INTAKE_AND_RECEIPT_PROTOCOL.md",
+      "state": "GITHUB_REGISTERED_RECEIPT_REQUIRED"
     }
   ],
   "lanes": [
@@ -231,7 +261,7 @@
     "PRIVATE_HASHES_NEVER_PUBLIC"
   ],
   "next": "R36_P1_PRIVATE_SOURCE_RECEIVER_AND_INDEPENDENT_METHODOLOGY_ADJUDICATION",
-  "last_changed": "2026-11-19",
+  "last_changed": "2026-11-20",
   "current_pr_head_after_change": "TO_BE_PINNED_IN_R1_MANIFEST",
   "status_note": "Original R0 NAV snapshot remains valid at historical Cursor-bound HEAD c50c195... only; use new R1 manifest on this branch, future Cursor rebind required",
   "source_watch_mode": "BOUNDED_ON_DEMAND_NOT_AUTOMATION",
@@ -247,5 +277,16 @@
     "live_system_proof": false
   },
   "previous_cursor_navigation_bind": "PR375@52fc446b69bf01b6b49bc7d2657f84c074204a1d",
-  "new_cursor_readback_required": true
+  "new_cursor_readback_required": true,
+  "external_experts": {
+    "github_only": true,
+    "registration_pending": true,
+    "dispatch_ack": "NOT_ESTABLISHED",
+    "neutral_stage0_first": true,
+    "oppo_physical_priority": "HIGHEST",
+    "video_full_transcript": "NOT_PROVIDED",
+    "source_lineage_collision_check": "REQUIRED",
+    "previous_pr375_cursor_head": "8bc54162d0e3852a5846d05f790ae27ce0459cf0",
+    "new_cursor_rebind_required": true
+  }
 }
