@@ -1,0 +1,108 @@
+{
+  "schema": "nexus-omega/r36-external-expert-github-return/v1",
+  "object": "NEXUS_OMEGA_R36_E##_INDEPENDENT_EXPERT_RETURN_<UNIQUE_RUN_ID>",
+  "status": "TEMPLATE_NO_ACTUAL_EXPERT_ACK",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "source_parent": {
+    "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "pr": 375,
+    "frozen_head": "REPLACE_WITH_FULL_EXACT_40_HEX_SHA_AFTER_PR_REVIEW",
+    "r36": "OPEN",
+    "private_originals_attached": false
+  },
+  "mandate": {
+    "expert_id": "E01",
+    "scope": "RESEARCH_ONLY",
+    "question": "REPLACE",
+    "independent_lineage": "SELF_DECLARED_UNVERIFIED",
+    "exposure": "PREEXPOSED_OR_BLINDED_WITH_PROOF",
+    "reviewed_gemini_analogies": false
+  },
+  "sources": [
+    {
+      "original_uri": "REPLACE_WITH_ACTUAL_SOURCE_URL_OR_PRIVATE_AUTHORIZED_REF",
+      "kind": "ORIGINAL_FULLTEXT_OR_ABSTRACT_ONLY_OR_USER_MEMO_OR_SOURCE_GAP",
+      "document_revision": "REPLACE_OR_UNKNOWN",
+      "published_at": "REPLACE_OR_UNKNOWN",
+      "retrieved_at": "REPLACE_OR_NOT_RUN",
+      "bytes_sha256": "ONLY_IF_ACTUALLY_OBSERVED_ORIGINAL_BYTES_ELSE_NULL",
+      "source_lineage_id": "REPLACE_OR_UNKNOWN",
+      "license_checked": false,
+      "prohibited_private_data": false
+    }
+  ],
+  "concept": {
+    "hypothesis": "REPLACE_EXPLICIT_FALSIFIABLE",
+    "null_model": "REPLACE",
+    "alternative": "REPLACE",
+    "units_frames_timebases": "REPLACE",
+    "identifiability": "REPLACE",
+    "assumptions": [],
+    "scope_limitations": [],
+    "self_rejection_condition": "REPLACE"
+  },
+  "self_validation": {
+    "positive_fixture": {
+      "id": "E##_P1",
+      "state": "DESIGN_ONLY",
+      "expected": "REPLACE",
+      "actual": "NOT_RUN"
+    },
+    "strong_negative_fixture": {
+      "id": "E##_N1",
+      "state": "DESIGN_ONLY",
+      "expected": "REJECTED_OR_HOLD",
+      "actual": "NOT_RUN"
+    },
+    "strongest_countermodel": "REPLACE",
+    "source_exact_runner": {
+      "file_sha256": null,
+      "command": null,
+      "toolchain": null,
+      "run_id": null,
+      "exit_code": null,
+      "result_sha256": null,
+      "stderr_sha256": null,
+      "second_party_witness": null
+    },
+    "evidence_class": "DESIGN_ONLY"
+  },
+  "causal_gap": {
+    "context_route_known": "DESIGN_ONLY",
+    "evidence_chain_closed": false,
+    "missing_fragments": [],
+    "reported_only": [],
+    "independent_closed_edges": [],
+    "hypothetical_edges": [],
+    "private_access_denied": false,
+    "source_substitution": false
+  },
+  "receiver": {
+    "git_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+    "git_pr_or_issue": "PENDING_AUTHORIZED_GITHUB_INTAKE",
+    "git_commit_sha": null,
+    "authorized_uploader": "PENDING",
+    "readback_sha256": null,
+    "original_expert_bytes_sha256": null,
+    "second_party_ack": "NOT_RECEIVED",
+    "expert_receipt_not_approval": true
+  },
+  "claims_not_made": [
+    "NO_REAL_OPPO_DEVICE_OBSERVATION",
+    "NO_BODYTWIN_VALIDATION",
+    "NO_C2",
+    "NO_WWW_DEPLOY",
+    "NO_EXTERNAL_GITHUB_WRITER_PERMISSION"
+  ],
+  "gates": {
+    "oppo_enrollment": "NOT_ESTABLISHED",
+    "private_transport": "NOT_EXECUTED",
+    "real_measurement": "NOT_AUTHORIZED",
+    "bodytwin_validated": false,
+    "consent": "OPEN",
+    "e99": "HOLD",
+    "x5_status_spoof": "OPEN",
+    "x6_private_cas": "OPEN"
+  },
+  "next_scoped_action": "ONE_SOURCE_BOUND_RESEARCH_STEP_NOT_AN_AUTOMATIC_EXECUTION"
+}
