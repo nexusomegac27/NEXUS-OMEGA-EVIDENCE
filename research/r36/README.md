@@ -8,6 +8,19 @@ BODYTWIN_VALIDATED = NO
 AUTHORITY = OPERATOR_ALEXANDER_VIA_AXIOM
 EXTERNAL_WRITER = NOT_AUTHORIZED
 
+## 20 Nov 2026 — ONLY GitHub expert research interface
+
+**Mission entry:** [R36 EXTERNAL EXPERTS: START HERE](external-expert-program-20261120/00_START_HERE_R36_EXPERT_GITHUB_ONLY.md). This operator-directed read-only research programme is an APPEND-ONLY addition to PR375, NOT R37. Its first, source-neutral Stage-0 focuses on the actual OPPO / BodyTwin metrology question; afterward, source-audited GEMINI analogies about Setun/balanced ternary, robot physical learning, Schrödinger boundary eigenmodes and Quantum Darwinism are challenged as design hypotheses.
+
+- [Neutral Stage-0 OPPO/BodyTwin hypothesis and null models](external-expert-program-20261120/01_NEUTRAL_STAGE0_OPPO_BODYTWIN_BEFORE_ANALOGIES.md)
+- [Independent specialist mandates E01–E16 (E15/E16 optional)](external-expert-program-20261120/02_E01_E16_INDEPENDENT_MAXI_ORDER_AND_PRIORITY.md)
+- [Primary literature and video's unavailable original-transcript boundaries](external-expert-program-20261120/03_PRIMARY_SCIENCE_SOURCE_REGISTER_AND_GEMINI_BOUNDARIES.md)
+- [Adversarial test matrix, including N copies != N independent sources](external-expert-program-20261120/04_INDEPENDENT_FALSIFICATION_AND_COPIED_RECORD_ATTACKS.md)
+- [Machine expert return contract](external-expert-program-20261120/05_EXPERT_RETURN_JSON_CONTRACT.json)
+- [GitHub-only and registration-limited delivery/readback](external-expert-program-20261120/06_GITHUB_ONLY_EXPERT_INTAKE_AND_RECEIPT_PROTOCOL.md)
+
+**Note:** the previous Cursor receiver is pinned to prior PR375 HEAD 8bc54162d0e3852a5846d05f790ae27ce0459cf0 and PRIVATE PR35 HEAD 16f50bf15bd112736c0c111cd9fbd8b44c9c853a. Adding this programme does NOT retroactively extend that ACK to this latest HEAD. External specialist ACK, dispatch and registered GitHub write permissions remain NOT_ESTABLISHED until separately evidenced. No direct OPPO/BodyTwin capture, deployment or claim promotion.
+
 ## R36 continuation law — retain the thread despite source gaps (19 Nov 2026)
 
 **Operator-bound rule:** Missing, not-in-custody, restricted, contradictory or only reported fragments may interrupt an EVIDENCE CHAIN, but must not erase the known causal research context or block unrelated permitted investigation. Reconstruct a possible continuity path explicitly as HYPOTHESIS/UNKNOWN_LINK, never as a verified missing event or authorized action.
