@@ -1,0 +1,172 @@
+{
+  "schema": "nexus-omega/r37-independent-model-challenge-registry/v1",
+  "object": "NEXUS_OMEGA_R37_BODYTWIN_EXPERT_MODEL_PROGRAM_REGISTRY_20261120_R0",
+  "snapshot_date": "2026-11-20",
+  "state": "MISSION_PREPARED_NO_AUTHENTICATED_EXPERT_RETURNS",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "r36": "OPEN",
+  "r37": "OPEN_DRAFT",
+  "physical_body_reference": "NOT_AUTHORIZED",
+  "bodytwin_validated": false,
+  "canonical_parents": {
+    "public_r37": {
+      "repository": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+      "pr": 378,
+      "head": "ba76a4d81d58d0ba5205ca08ea1537d98efd3e69",
+      "manifest_sha256": "c0ab35d85bda2f0988a55c29c1a5170f192a715c3d20b88ed03b09c4ea6d3c99"
+    },
+    "private_r37": {
+      "repository": "nexusomegac27/NEXUS-OMEGA-PRIVATE-SCIENCE-CUSTODY",
+      "pr": 36,
+      "head": "1d08b2fc8beee47d0e45d601ebbaf2308eb1a59f",
+      "visibility": "PRIVATE",
+      "original_bytes_in_public": false
+    },
+    "r36_pr375": "1147d390e90886771ab1b3462f29683d4abc98d3"
+  },
+  "models": [
+    {
+      "id": "M01",
+      "title": "PhoneTwin/null device",
+      "status": "PENDING",
+      "expert_github_actor": null,
+      "stage0_commit": null,
+      "original_source_sha256": null,
+      "executed_synthetic_tests": 0,
+      "public_dataset_validated": false,
+      "real_oppo_replay": false,
+      "body_reference_validated": false,
+      "independent_second_party": false,
+      "claims_allowed": [
+        "DESIGN_ONLY_UNTIL_RETURN"
+      ]
+    },
+    {
+      "id": "M02",
+      "title": "Calibrated two-segment relative geometry",
+      "status": "PENDING",
+      "expert_github_actor": null,
+      "stage0_commit": null,
+      "original_source_sha256": null,
+      "executed_synthetic_tests": 0,
+      "public_dataset_validated": false,
+      "real_oppo_replay": false,
+      "body_reference_validated": false,
+      "independent_second_party": false,
+      "claims_allowed": [
+        "DESIGN_ONLY_UNTIL_RETURN"
+      ]
+    },
+    {
+      "id": "M03",
+      "title": "Learned sparse IMU prior",
+      "status": "PENDING",
+      "expert_github_actor": null,
+      "stage0_commit": null,
+      "original_source_sha256": null,
+      "executed_synthetic_tests": 0,
+      "public_dataset_validated": false,
+      "real_oppo_replay": false,
+      "body_reference_validated": false,
+      "independent_second_party": false,
+      "claims_allowed": [
+        "DESIGN_ONLY_UNTIL_RETURN"
+      ]
+    },
+    {
+      "id": "M04",
+      "title": "Physics-informed hybrid",
+      "status": "PENDING",
+      "expert_github_actor": null,
+      "stage0_commit": null,
+      "original_source_sha256": null,
+      "executed_synthetic_tests": 0,
+      "public_dataset_validated": false,
+      "real_oppo_replay": false,
+      "body_reference_validated": false,
+      "independent_second_party": false,
+      "claims_allowed": [
+        "DESIGN_ONLY_UNTIL_RETURN"
+      ]
+    },
+    {
+      "id": "M05",
+      "title": "Independent novel model alternative",
+      "status": "PENDING",
+      "expert_github_actor": null,
+      "stage0_commit": null,
+      "original_source_sha256": null,
+      "executed_synthetic_tests": 0,
+      "public_dataset_validated": false,
+      "real_oppo_replay": false,
+      "body_reference_validated": false,
+      "independent_second_party": false,
+      "claims_allowed": [
+        "DESIGN_ONLY_UNTIL_RETURN"
+      ]
+    }
+  ],
+  "independent_challengers": [
+    {
+      "id": "M06_GUM",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M07_OBSERVABILITY",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M08_SECURITY_LICENSE",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M09_CLOCK_EXTRINSICS",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M10_OPEN_BASELINES",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M11_SEMANTIC",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    },
+    {
+      "id": "M12_INDEPENDENT_ADJUDICATION",
+      "status": "NOT_DISPATCHED_OR_ACKED",
+      "actor": null,
+      "return": null
+    }
+  ],
+  "success_condition": {
+    "minimum_independent_runnable_full_model_count": 2,
+    "basic_null_baseline_required": true,
+    "all_models_compared_on_common_30_fixture_suite": true,
+    "min_self_falsifiers_per_model": 5,
+    "zero_unqualified_human_body_claims_on_static_input": true,
+    "physical_claim_promotion": false,
+    "receipt_requires_independent_source_and_actor": true
+  },
+  "stop_conditions": [
+    "NO_OWNER_AUTHORIZATION_FOR_NEW_HARDWARE",
+    "NO_ON_BODY_CALIBRATED_REFERENCE",
+    "NO_PRIVACY_OR_LICENSE_VIOLATION",
+    "NO_UNKNOWN_MODEL_EXECUTION_ON_PRIVILEGED_SYSTEM",
+    "NO_UNAUTHORIZED_EXTERNAL_GITHUB_WRITE",
+    "NO_WWW_DEPLOY_OR_MERGE"
+  ],
+  "next": "REGISTER_REVIEWER_ACTORS_AND_PUBLISH_EXACT_HEAD_THEN_RECEIVE_STAGE0_GITHUB_ONLY"
+}
