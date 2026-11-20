@@ -1,0 +1,397 @@
+{
+  "schema": "nexus-omega/r37-bodytwin-benchmark-candidate-interchange/v1",
+  "object": "NEXUS_OMEGA_R37_BODYTWIN_MODEL_30_FIXTURE_EXCHANGE_20261120_R0",
+  "status": "PROTOCOL_DESIGN_30_TESTS_NOT_EXECUTED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "model_id": "M##_REPLACE",
+  "source_commit_sha": null,
+  "source_sha256": null,
+  "r37_parent_commit": "ba76a4d81d58d0ba5205ca08ea1537d98efd3e69",
+  "actual_private_oppo_attached": false,
+  "source_event_schema": {
+    "fields": [
+      "run_id",
+      "source_type",
+      "sensor_type",
+      "event_timestamp_ns",
+      "source_clock_id",
+      "x",
+      "y",
+      "z",
+      "units",
+      "sensor_frame_id",
+      "app_build_ref",
+      "source_class"
+    ],
+    "sensor_types": [
+      "TYPE_ACCELEROMETER",
+      "TYPE_GYROSCOPE"
+    ],
+    "source_classes": [
+      "SYNTHETIC",
+      "PUBLIC_LICENSED_DATASET",
+      "PRIVATE_REAL_OPPO_OWNER_APPROVED"
+    ],
+    "public_export_private_digest": null
+  },
+  "model_output_schema": {
+    "fields": [
+      "model_commit",
+      "input_source_class",
+      "target_physical_entity",
+      "time_window_ns",
+      "prediction_distribution_or_abstain",
+      "coordinate_frame",
+      "units",
+      "observability_status",
+      "uncertainty_kind",
+      "claim_class",
+      "ground_truth_reference",
+      "training_data_exposure",
+      "run_id"
+    ],
+    "claim_classes": [
+      "SENSOR_OBSERVED",
+      "DEVICE_STATE_ESTIMATED",
+      "SEGMENT_STATE_ESTIMATED_REFERENCE_BOUND",
+      "HUMAN_BODY_POSE_PRIOR_GENERATED",
+      "BODY_MEASURED_REFERENCE_BOUND",
+      "UNKNOWN",
+      "REFUTED",
+      "NOT_CONNECTED"
+    ],
+    "forbidden_from_one_unmounted_table_phone": [
+      "BODY_MEASURED_REFERENCE_BOUND",
+      "JOINT_ANGLE_MEASURED",
+      "BODYTWIN_VALIDATED"
+    ],
+    "failure_semantics": "ABSTAIN_OR_TYPED_FAIL_NO_FAKE_BODY_OBSERVATION"
+  },
+  "fixtures": [
+    {
+      "id": "Q00",
+      "name": "NO_SENSOR_INPUT",
+      "expected": "NO_HUMAN_MEASURED",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q01",
+      "name": "STATIONARY_UNWORN_PHONE_SYNTHETIC",
+      "expected": "PHONE_STATIC_CANDIDATE_NO_BODY",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q02",
+      "name": "FULL_STREAM_POST_DEADLINE",
+      "expected": "DURATION_PROTOCOL_FAIL",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q03",
+      "name": "DUPLICATE_TIMESTAMP",
+      "expected": "SOURCE_INPUT_FAIL",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q04",
+      "name": "NEGATIVE_EVENT_DELTA",
+      "expected": "SOURCE_INPUT_FAIL",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q05",
+      "name": "100HZ_WHEN_FROZEN_REQUEST_50HZ",
+      "expected": "PROTOCOL_MISMATCH",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q06",
+      "name": "MISSING_GYROSCOPE",
+      "expected": "HOLD_SENSOR_GAP",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q07",
+      "name": "WRONG_ACCELEROMETER_TYPE",
+      "expected": "HOLD_TYPE_MISMATCH",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q08",
+      "name": "AXIS_HANDEDNESS_MISMATCH",
+      "expected": "HOLD_FRAME_MISMATCH",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q09",
+      "name": "ACC_G_VS_SI",
+      "expected": "HOLD_UNIT_MISMATCH",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q10",
+      "name": "GYRO_DEG_S_VS_RAD_S",
+      "expected": "HOLD_UNIT_MISMATCH",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q11",
+      "name": "EMPTY_SOURCE_BUILD",
+      "expected": "SOURCE_BUILD_GAP",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q12",
+      "name": "SINGLE_AXIS_OBSERVABILITY",
+      "expected": "UNOBSERVABLE_DOF_EXPLICIT",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q13",
+      "name": "UNKNOWN_SENSOR_TO_SEGMENT_MOUNT",
+      "expected": "NO_BODY_MEASURED",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q14",
+      "name": "STRAP_SLIP",
+      "expected": "UNCERTAINTY_WIDENS_OR_ABSTAINS",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q15",
+      "name": "TWO_PHONE_CLOCK_OFFSET",
+      "expected": "NO_SYNC_PRETENSE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q16",
+      "name": "SKEW_AND_TIMESTAMP_RESET",
+      "expected": "DETECT_TIME_GAP",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q17",
+      "name": "NONFINITE_VALUES",
+      "expected": "SOURCE_INPUT_FAIL",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q18",
+      "name": "LONG_DROPOUT",
+      "expected": "UNCERTAINTY_OR_ABSTAIN",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q19",
+      "name": "CORRELATED_NOISE",
+      "expected": "MODEL_ASSUMPTION_DISCLOSED",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q20",
+      "name": "DYNAMIC_ACCEL_UNDER_GRAVITY",
+      "expected": "NO_FALSE_TILT_REFERENCE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q21",
+      "name": "GYRO_BIAS_STATIONARY",
+      "expected": "NO_PERSON_MOTION_INFERENCE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q22",
+      "name": "MAGNETOMETER_MISSING_INTERFERENCE",
+      "expected": "YAW_UNOBSERVABLE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q23",
+      "name": "ZERO_VS_STATIC_IDENTICAL_PRIOR_POSE",
+      "expected": "PRIOR_DERIVED_NOT_BODY_MEASURED",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q24",
+      "name": "UNOBSERVABLE_IK_GAUGE",
+      "expected": "MULTIHYPOTHESIS_OR_REFUSE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q25",
+      "name": "DUPLICATED_EXPERT_RECEIPT",
+      "expected": "N_EFF_SOURCE_LINEAGE_1",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q26",
+      "name": "SPOOFED_AUTHORITY_STRING",
+      "expected": "NO_PERMISSION_ESCALATION",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q27",
+      "name": "PRIVATE_HASH_PUBLIC_CAS_CORRELATION",
+      "expected": "PRIVACY_FAIL",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q28",
+      "name": "UNKNOWN_OUTPUT_OR_NO_CONSUMER",
+      "expected": "NOT_CONNECTED_OR_FAIL_SCHEMA",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    },
+    {
+      "id": "Q29",
+      "name": "WALKING_BODY_WITH_UNCHANGED_PHONE",
+      "expected": "BODY_MOTION_UNIDENTIFIABLE",
+      "run_state": "NOT_RUN",
+      "observed": null,
+      "input_sha256": null,
+      "model_output_sha256": null,
+      "second_party_receipt": null
+    }
+  ],
+  "required_second_party": {
+    "identity": "NOT_VERIFIED",
+    "source_rehash": "NOT_RUN",
+    "negative_runner": "NOT_RUN"
+  },
+  "scoring": {
+    "first_gate": "NO_UNSUPPORTED_BODY_CLAIMS_ON_ZERO_AND_STATIC_PHONE",
+    "more_tests_do_not_compensate": false,
+    "pose_metric_requires_independent_gt": true,
+    "privacy_mismatch_blocks_claim": true,
+    "license_conflict_blocks_deploy": true
+  },
+  "physical_test_status": {
+    "live_body_reference": "NOT_AUTHORIZED",
+    "oppo_60s_archive": "PRIVATE_ACCESS_ONLY",
+    "old_bodytwin_consumer": "NOT_CONNECTED_AS_OF_CURRENT_SOURCE",
+    "fresh_sensor_capture": "NOT_AUTHORIZED"
+  },
+  "no_actions": [
+    "NO_DEVICE_CAPTURE",
+    "NO_HOSTINGER_WRITE",
+    "NO_PR_MERGE",
+    "NO_PRIVATE_SOURCE_HASH_IN_PUBLIC",
+    "NO_MODEL_SELF_PROMOTION"
+  ]
+}
