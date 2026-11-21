@@ -1,0 +1,22 @@
+# R38 original source intake, M01/M02 repair and independent reproducibility record
+OBJECT = NEXUS_OMEGA_AXIOM_R38_R37_SOURCE_DEFECT_TRANSFER_AND_MODEL_REPAIR_PLAN_20261121_R0
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+ORIGINAL_R37_STAGE0_SEAL = FAIL_2_FILES_OF_16
+INDEPENDENT_M01_SYNTHETIC_REPLAY = 8_8_UNIT_AND_10_10_FIXTURE_PASS
+ACTUAL_REAL_BODYTWIN_CONSUMER = NOT_TESTED
+
+R37 Stage0 operator upload ZIP bytes=127368 SHA256=35895a55f1a7fea35dab49de5c9dbd58665b2415a68dd034bd1251d54a1388a1, CRC PASS, 20 entries. Externally self-reported expert role and ACK; no registered GitHub actor return and no separate independent second-party source attestations. Manifest files=16, 14/16 exact. Two M02 artifacts are incorrect in original manifest and SHA256SUMS:
+- M02_GeometricBodyTwin/results/m02_oppo_assessment.json actual 1800 bytes / 091c37241de95105c153166137d7fb060913d072768d23eeae87a40933e60fb9 versus declared 1781 / 9d5e0720892a39a27568907c2a510ccb160420dc1fc469e0f4ee1f57b034ea77.
+- M02_GeometricBodyTwin/results/m02_oppo_report.txt actual 1776 bytes / 6cc28be669e06c4c03d3e1b630db0b6b35c8850e1f65ef700c0ea1be41085adb versus declared 1757 / 6c8b6f4edfd33dbfef74500b9926efd2be0752b77ed03a005a24d0a7e6986c4d.
+A separately uploaded JSON and TXT match actual M02 files, not original manifest claimed hashes. Any reconstructed corrected source must be ADDITIVE_R38_SUCCESSOR with exact parent, cause and new source hash; original R37 ZIP remains immutable and terminally FAIL_SOURCED.
+
+M02 genuine technical error: distinct sensor-name values report two channels (icm4x6xx ACC+GYRO) but code derives imu_count=len(distinct_sensors)=2. Correct source metadata must distinguish IMU assembly/source device ID and its colocated measurement channels; one physical OPPO = one IMU assembly unless independent second module shown. The 'min 3 IMUs universal' is unjustified; rank/observability depends on kinematic model/excitation, joint topology, sensor mounting, reference and motion. The no-pose verdict remains correct on nonworn desk input independently of that erroneous threshold.
+
+M01 original source imported only numpy and Python stdlib. AXIOM source-only isolated Python -I -B reran original 8 tests and benchmark original ten synthetic cases; 8/8 and 10/10 PASS. That is a new experimental result on these inputs with output timing allowed to vary, not proof actual OPPO source authenticated, no 30/30 common suite pass or calibrated 0.041° accuracy. Manual review of M01 filter: model noise sigma_g=1e-3 rad/s/sqrt(Hz), sigma_bg=2e-5, sigma_a=0.05m/s2 are assumed; tilt posterior sigma and reported yaw distribution are MODEL_CONDITIONAL. Validate error-state Jacobians/signs, PSD/Joseph covariance, initialization, timestamp pairing, dynamic-acceleration gating, magnetometer absence, note scalar degrees of freedom. M01 original uses body_claim_made=False, a safe label but only source code scope.
+Uploaded .PYC is CPython 3.12 timestamp-based 29277B, source size metadata 20896B; it was NEVER imported or executed and is an untrusted binary compiled by another system. Cursor must not execute it as an authoritative scientific source.
+
+R37 external review return ZIP 9289B CRC PASS but original 2 manifest-referenced Python scripts absent, so it was not independently replayable as delivered; do not treat CLAIMED as EXECUTED. Older R35/36 STACK 844429B SHA256 27db83fc810b3295d720e856ea14c6f761dd24e6bf1107991edc9c245393f3d2 is previously sealed, does not contain R37 private raw original. workspace.tar(5).gz 56902B SHA256 5f5660b8cb4d9181f136e775e9fcfae85b510359d8f6829e67dd68a674d0b6b6 holds research docs/source copies not private original.
+
+Physical OPPO desk result from earlier direct source analysis: 6374 ACC,6366 GYRO events, approx 100.185Hz on sensor timestamps, 63.6s, 363 postdeadline samples per channel, accel norm median ~9.81855m/s2, gyro median norm .002037rad/s. SOURCE_BUILD empty, explicit owner permission witness missing, private source original not uploaded to GitHub private receiver, actual existing BodyTwin real A/B/C not observed. Physical truth of BODY_3D_POSE not supported.
+
+R38 repair evidence is not a source substitution: R37 original is source_exact + materially failed seal; R38 new code has its own manifest, independently verified replay, causal parent to failed hash and explanation. Two copies of one original do not constitute two source-independent witnesses.
