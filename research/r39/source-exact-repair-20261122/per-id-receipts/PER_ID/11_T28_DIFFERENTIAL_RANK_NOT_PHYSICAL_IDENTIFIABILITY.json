@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  11,
+    "id":  "T28_DIFFERENTIAL_RANK_NOT_PHYSICAL_IDENTIFIABILITY",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_EXPECTED_IF_TOY_RANK_CLAIMED_AS_PHYSICAL_BODY",
+    "actual_result":  "full_system_validation=False; bodytwin_validated=False; existing_bodytwin_connected=False",
+    "failure_label":  null,
+    "note":  null,
+    "evidence_ref":  "03_OFFLINE_TESTS/_extract_04_MACHINE.json#r38",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

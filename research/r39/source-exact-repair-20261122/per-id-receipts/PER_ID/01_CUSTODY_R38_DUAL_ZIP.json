@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  1,
+    "id":  "CUSTODY_R38_DUAL_ZIP",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "TWO_DISTINCT_R38_RETURNS_PRESENT_MATCH",
+    "actual_result":  "prior=1522183b2ae99c9f… entries=6 crc=PASS; term=999afe1a4b1fb376… entries=6 crc=PASS; distinct=True",
+    "failure_label":  null,
+    "note":  "prior_sha256=1522183b2ae99c9f2bbaba0c1e86a1cf177275c17d25a95df95ad4e8acffa780; terminal_sha256=999afe1a4b1fb376631f742daf2d86ce1c635a2385044d975e1ce37a84204f34",
+    "evidence_ref":  "01_SOURCES/R38_PRIOR_HANDOFF_6106.zip + R38_TERMINAL_6519.zip",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

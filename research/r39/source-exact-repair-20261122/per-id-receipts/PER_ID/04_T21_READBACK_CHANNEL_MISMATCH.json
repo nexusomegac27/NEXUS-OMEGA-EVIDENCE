@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  4,
+    "id":  "T21_READBACK_CHANNEL_MISMATCH",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_EXPECTED_WHEN_CHAT_SAYS_OPEN_RAW_SAYS_CLOSED_OR_INVERSE",
+    "actual_result":  "OFFLINE_PROXY: machine.r39.status=NOT_STARTED and this_ack t21_to_t28=false; no invented R39-executed claim present in bound MACHINE JSON.",
+    "failure_label":  null,
+    "note":  "Analytic: absence of false R39-executed claim is the positive offline check.",
+    "evidence_ref":  "03_OFFLINE_TESTS/_extract_04_MACHINE.json",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

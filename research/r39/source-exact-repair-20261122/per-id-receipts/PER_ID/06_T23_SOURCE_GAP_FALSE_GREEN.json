@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  6,
+    "id":  "T23_SOURCE_GAP_FALSE_GREEN",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_EXPECTED_IF_MISSING_FIXTURE_COUNTED_GREEN",
+    "actual_result":  "OFFLINE: F00–F31 physical fixtures ABSENT locally; suite marks SOURCE_GAP/NOT_RUN, not green.",
+    "failure_label":  null,
+    "note":  "Policy enforced in this runner: device fixtures cannot PASS.",
+    "evidence_ref":  "04_R39_FALSIFICATION_PLAN.md + this suite policy",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

@@ -1,0 +1,341 @@
+{
+  "schema": "nexus-omega/r38/symbiotic-validation-kernel/contract/v1",
+  "object": "NEXUS_OMEGA_R38_SYMBIOTIC_VALIDATION_KERNEL_MACHINE_CONTRACT_20261121_R0",
+  "state": "SPEC_ONLY_NOT_EXECUTED_BY_CURSOR",
+  "issued_date": "2026-11-21",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "r37_phase": "CLOSED_WITH_CARRIED_GATES_C1",
+  "r38": "OPEN_IMPLEMENTATION_DRAFT",
+  "bodytwin_validated": false,
+  "owner_approval_for_new_hardware": false,
+  "private_oppo_original_uploaded_to_public": false,
+  "real_existing_consumer_source_verified": false,
+  "roles": {
+    "human": "OPERATOR_APPROVAL_OR_VETO_EXACT_SCOPED",
+    "machine": "DETERMINISTIC_SOURCE_UNIT_TIME_FRAME_CLAIM_GATES",
+    "independent_challenger": "REGISTERED_DISTINCT_LINEAGE_NO_SELF_PERMISSIONS"
+  },
+  "epistemic_states": [
+    "OBSERVED",
+    "REPORTED_ONLY",
+    "INFERRED",
+    "UNKNOWN",
+    "REFUTED",
+    "NOT_CONNECTED",
+    "SOURCE_GAP"
+  ],
+  "claim_classes": [
+    "SENSOR_OBSERVED",
+    "DEVICE_STATE_ESTIMATED",
+    "SEGMENT_ESTIMATE_REFERENCE_SCOPED",
+    "GENERATIVE_BODY_PRIOR",
+    "BODY_MEASURED_REFERENCE_BOUND",
+    "UNKNOWN",
+    "REFUTED",
+    "NOT_CONNECTED"
+  ],
+  "source_classes": [
+    "PRIVATE_ORIGINAL",
+    "SYNTHETIC",
+    "PUBLIC_LICENSED_DATASET",
+    "EXTERNAL_SELF_DECLARED_REPORT",
+    "PUBLIC_SOURCE_MANIFEST",
+    "PRIVATE_SOURCE_MANIFEST"
+  ],
+  "legacy_consumer": {
+    "implementation_found": false,
+    "source_build": null,
+    "code_commit": null,
+    "actual_A_B_C_result": "NOT_RUN",
+    "replacement_with_research_model_forbidden": true
+  },
+  "models": {
+    "M01": {
+      "kind": "NEW_RESEARCH_CANDIDATE",
+      "prior_original_unit_tests_pass": 8,
+      "prior_original_synthetic_tests_pass": 10,
+      "shared_required": 30,
+      "self_falsifiers_required": 5,
+      "real_phone_body_validated": false
+    },
+    "M02": {
+      "kind": "BOUNDARY_PROTOTYPE",
+      "historical_manifest_match": 14,
+      "historical_manifest_entries": 16,
+      "defect_paths": [
+        "M02_GeometricBodyTwin/results/m02_oppo_assessment.json",
+        "M02_GeometricBodyTwin/results/m02_oppo_report.txt"
+      ],
+      "channels_are_independent_imus": false,
+      "body_pose_estimable_from_unmounted_phone": false
+    },
+    "M03_M05": {
+      "kind": "PENDING_INDEPENDENT_MODEL_SOURCE",
+      "status": "NOT_RECEIVED"
+    }
+  },
+  "abc": {
+    "A": {
+      "input": "NO_SENSOR",
+      "original_hardware_required": false,
+      "expected_body_claim": "NONE",
+      "executed": false
+    },
+    "B": {
+      "input": "REAL_OPPO_PREDEADLINE",
+      "source_private_only": true,
+      "operator_private_read_scope_required": true,
+      "sensor_counts_reported": {
+        "acc": 6011,
+        "gyro": 6003
+      },
+      "counts_must_be_rederived_from_original": true,
+      "executed": false
+    },
+    "C": {
+      "input": "REAL_OPPO_FULL_ORIGINAL",
+      "source_private_only": true,
+      "operator_private_read_scope_required": true,
+      "sensor_counts_reported": {
+        "acc": 6374,
+        "gyro": 6366
+      },
+      "postdeadline_per_sensor_reported": 363,
+      "full_run_conforms_to_60s": false,
+      "executed": false
+    }
+  },
+  "gates": {
+    "source": "PENDING",
+    "hardware_provenance": "OPEN",
+    "human_scope": "OPEN",
+    "physical_body_reference": "ABSENT",
+    "timestamp_deadline": "FAIL_ORIGINAL_FULL_DURATION",
+    "body_measurement_allowed": false,
+    "private_source_access": "REQUIRES_EXPLICIT_SCOPE",
+    "publication": "SEPARATE_AUTH",
+    "production": "DENY"
+  },
+  "targeted_tests": [
+    {
+      "id": "T01",
+      "fixture": "CHANNELS_AS_TWO_INDEPENDENT_IMUS",
+      "expected": "FAIL_IMU_INVENTORY",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T02",
+      "fixture": "HISTORIC_M02_MANIFEST_TWO_MISMATCHES",
+      "expected": "FAIL_ORIGINAL_SOURCE_INTEGRITY",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T03",
+      "fixture": "NEW_MODEL_SUBSTITUTES_EXISTING_CONSUMER",
+      "expected": "EXISTING_CONSUMER_NOT_CONNECTED",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T04",
+      "fixture": "NO_SENSOR_GENERATES_ANIMATION",
+      "expected": "GENERATIVE_PRIOR_NOT_MEASURED",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T05",
+      "fixture": "DESK_PHONE_OUTPUT_BODY_MEASURED",
+      "expected": "FAIL_UNSUPPORTED_ANATOMY",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T06",
+      "fixture": "POST_DEADLINE_TAIL_COUNTED_AS_60S",
+      "expected": "FAIL_DURATION_PROTOCOL",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T07",
+      "fixture": "REQUESTED_50HZ_ACTUAL_100HZ_SILENT_MATCH",
+      "expected": "FAIL_RATE_BINDING",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T08",
+      "fixture": "EMPTY_SOURCE_BUILD_DECLARED_SIGNED",
+      "expected": "FAIL_SOURCE_ATTESTATION",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T09",
+      "fixture": "OWNER_SCOPE_MISSING_CAPTURE_ALLOWED",
+      "expected": "FAIL_OWNER_AUTHORIZATION",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T10",
+      "fixture": "PUBLIC_PRIVATE_CAS_SAME_DIGEST_POINTER",
+      "expected": "FAIL_PRIVACY_LEAK",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T11",
+      "fixture": "AGENT_TEXT_CLAIMS_AXIOM_APPROVED",
+      "expected": "FAIL_SELF_AUTHORITY",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T12",
+      "fixture": "NONFINITE_DUPLICATE_JSON_KEY_OR_UNKNOWN_TYPE",
+      "expected": "FAIL_INPUT_CONTRACT",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T13",
+      "fixture": "LOGICAL_READ_BUDGET_5_OVER_MAX3",
+      "expected": "FAIL_QUERY_BUDGET",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T14",
+      "fixture": "TEN_COPIED_RECEIPTS_N_EFF10",
+      "expected": "FAIL_INDEPENDENCE",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T15",
+      "fixture": "OPERATOR_REVOKES_CAPTURE_PERMISSION",
+      "expected": "STOP_CAPTURE",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T16",
+      "fixture": "REPLAYED_RUN_UUID_GRANTS_NEW_PRIVILEGE",
+      "expected": "FAIL_REPLAY_AUTH",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T17",
+      "fixture": "SOURCE_MUTATES_AFTER_HASH_CHECK",
+      "expected": "FAIL_TOCTOU",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T18",
+      "fixture": "TRAINED_WEIGHTS_NO_LICENSE",
+      "expected": "HOLD_RIGHTS_GAP",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T19",
+      "fixture": "NO_BODY_MOUNTING_BUT_ACCURATE_SYNTHETIC_POSE",
+      "expected": "NO_BODY_MEASURED",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    },
+    {
+      "id": "T20",
+      "fixture": "MIN_3_IMUS_ASSERTED_AS_UNIVERSAL_LAW",
+      "expected": "FAIL_OVERGENERALIZATION",
+      "actual": null,
+      "run_status": "NOT_RUN",
+      "fixture_source_sha256": null,
+      "second_party_rehash": null
+    }
+  ],
+  "shared_r37_test_count": 30,
+  "self_falsification_minimum_per_model": 5,
+  "per_result_record_fields": [
+    "test_id",
+    "expected",
+    "observed",
+    "run_id",
+    "model_version",
+    "source_hash",
+    "actor",
+    "evidence_uri",
+    "execution_class",
+    "reason",
+    "independent_rehash"
+  ],
+  "required_return": [
+    "r38_github_code_pr",
+    "source_exact_readback",
+    "actual_runtime_execute_receipt",
+    "new_30_shared_fixture_results",
+    "new_20_R38_regression_results",
+    "new_self_falsifier_results",
+    "independent_crosscheck",
+    "actual_consumer_found",
+    "actual_A_B_C_status",
+    "m02_repair_new_manifest",
+    "privacy_audit",
+    "next_scoped_action"
+  ],
+  "prohibitions": [
+    "NO_PR_MERGE",
+    "NO_HOSTINGER_WRITE",
+    "NO_WWW_WRITE",
+    "NO_NEW_DEVICE_CAPTURE",
+    "NO_PUBLIC_PRIVATE_ORIGINAL_DIGEST",
+    "NO_BODYTWIN_VALIDATED",
+    "NO_SELF_AUTHORIZATION",
+    "NO_SILENT_SOURCE_SUBSTITUTION"
+  ]
+}

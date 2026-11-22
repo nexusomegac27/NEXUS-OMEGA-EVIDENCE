@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  35,
+    "id":  "F17_BODYTWIN_SUBSTITUTION",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_SUBSTITUTION",
+    "actual_result":  "existing_bodytwin_connected=False; bodytwin_validated=False",
+    "failure_label":  null,
+    "note":  "Positive control: real-consumer absent yields NOT_CONNECTED / no BODYTWIN_VALIDATED.",
+    "evidence_ref":  "03_OFFLINE_TESTS/_extract_04_MACHINE.json",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}
