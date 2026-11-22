@@ -1,0 +1,84 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R42_CLOSEOUT_IMPLEMENTATION_MACHINE_CONTRACT_20261122_R0",
+  "state": "GITHUB_R42_ORDER_SOURCE_READY_NO_CURSOR_ACK",
+  "r41_closure": "ADMINISTRATIVE_ONLY_CLOSED_BY_OPERATOR",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "prohibitions": {
+    "physical_capture": true,
+    "adb_sensor_start": true,
+    "apk_install": true,
+    "pr_merge": true,
+    "hostinger_write": true,
+    "www_write": true,
+    "claim_promotion": true,
+    "unregistered_expert_direct_write": true
+  },
+  "parents": {
+    "r41_issue": 395,
+    "r41_source_pr": 396,
+    "r41_source_head": "ba3f187daa1949c712bba9b822ab6005d0ae6363",
+    "bodytwin_w1_issue": 397,
+    "stage2_issue": 398,
+    "stage2_pr": 399,
+    "stage2_head": "cc79821533b0344ae9d91181f59445749c8e2e5d"
+  },
+  "received": {
+    "expert_stage2": {
+      "zip_bytes": 43037,
+      "sha256": "d4c8e08a97a5c147089394c3acec568cd1acac382c598c92e2f2a877b4dc1ff2",
+      "crc": "PASS",
+      "listed": 16,
+      "contained_and_matching": 7,
+      "missing_scripts": 9,
+      "independent_replay": "NOT_ESTABLISHED"
+    },
+    "autoclaw_x16": {
+      "zip_bytes": 58337,
+      "sha256": "c84fe2ebc417adcdbffc4df56785ae77ecad1ab23c334a727486b171579c4814",
+      "crc": "PASS",
+      "internal_manifest": "5_OF_5_MATCH",
+      "independently_executed": "SYNTHETIC_X16_ONLY_EXIT_0",
+      "e17": "10_OF_10",
+      "e18": "8_OF_8",
+      "e19": "12_OF_12",
+      "w1": "12_OF_12",
+      "crlf_normalized_replay_sha256": "7e09c0778d066d73dadfd3031db03ebfec9b82f14f98be1666d7903487b9ce29"
+    }
+  },
+  "risks": {
+    "original_x15_per_sample_ledger": "SOURCE_GAP",
+    "x16_6001_6000": "ONLY_SYNTHETIC_EXACT_BOUNDARY",
+    "r41_gate_four_pass": "PRODUCER_BOUND_UNVERIFIED_SOFTWARE_CLAIMS",
+    "fc2_integrated": "NO",
+    "gradle_tested": "NO",
+    "e18_m3_reference": "NOT_ESTABLISHED",
+    "bodytwin_status_embedded": "DRIFT_REPORTED_ROOT_CAUSE_OPEN",
+    "bodytwin_raw_http_witness": "NOT_ESTABLISHED",
+    "actor_quorum": "NOT_ESTABLISHED",
+    "preregistration": "NOT_ESTABLISHED"
+  },
+  "gates": {
+    "physical_hard_gates_total": 14,
+    "physical_pass_claim": false,
+    "one_shot_operator_approval": false,
+    "bodytwin_validated": false,
+    "consent_bind": "OPEN",
+    "alt_d_do_not_run_active": true
+  },
+  "r42_lanes": [
+    "P0_INTAKE_CUSTODY",
+    "P1_EVENT_ORIGIN_DELIVERY_DRAIN",
+    "P2_FC2_SOURCE_AUTH",
+    "P3_GUM_MC_M3",
+    "P4_LEDGER_AND_ROLLBACK",
+    "P5_W1_PUBLIC_RAW_WITNESS",
+    "P6_GENUINE_INDEPENDENT_ACTORS",
+    "P7_RETURN_SOURCE_EXACT"
+  ],
+  "r42_acceptance": {
+    "offline_software": "NOT_ESTABLISHED",
+    "public_witness": "NOT_ESTABLISHED",
+    "physical_ready_for_operator": "NOT_ESTABLISHED"
+  },
+  "next": "CURSOR_R42_OFFLINE_IMPLEMENTATION_RETURN_THEN_AXIOM_CROSSADJUDICATION"
+}
