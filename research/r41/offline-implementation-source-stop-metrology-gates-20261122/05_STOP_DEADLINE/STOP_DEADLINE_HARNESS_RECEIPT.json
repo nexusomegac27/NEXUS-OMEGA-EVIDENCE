@@ -1,0 +1,36 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R41_STOP_DEADLINE_OFFLINE_HARNESS_20261122_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "physical": "ALT_D_DO_NOT_RUN_ACTIVE",
+  "device_capture": false,
+  "utc": "2026-11-22T19:17:24.138739+00:00",
+  "parameters": {
+    "deadline_ns": 60000000000,
+    "period_ns": 10000000,
+    "pre_samples": 5990,
+    "post_samples": 363,
+    "r37_tail_span_ns_reference": 3622217000
+  },
+  "counts": {
+    "repaired_pre_accepted": 5990,
+    "repaired_post_accepted": 0,
+    "historical_post_accepted": 363,
+    "mutant_post_accepted": 363
+  },
+  "checks": {
+    "repaired_pre_all_accepted": true,
+    "repaired_post_all_rejected": true,
+    "historical_post_all_accepted_defect": true,
+    "mutant_post_accepts_defect": true,
+    "exact_deadline_rejected": true,
+    "deadline_reached_at_exact": true,
+    "negative_mutant_diverges": true
+  },
+  "hard_fails": [],
+  "verdict": "PASS",
+  "epistemic_walls": [
+    "OFFLINE_HARNESS_PASS != PHYSICAL_OPPO_PASS",
+    "REPAIRED_GATE != BODYTWIN_VALIDATED",
+    "SYNTHETIC_363_TAIL != DEVICE_CAPTURE"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "object": "R41_14_GATE_ENGINE_RECEIPT",
+  "recorded_utc": "2026-11-22T19:19:05Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "physical": "ALT_D_DO_NOT_RUN_ACTIVE",
+  "device_capture": false,
+  "total": 14,
+  "passed_offline_c1": 4,
+  "hold_physical_or_operator": 4,
+  "open_or_hold_remaining": 10,
+  "physical_auto_clear": false,
+  "full_14_pass_claim": false,
+  "fail_closed": true,
+  "gates": [
+    {
+      "id": "SOURCE_BUILD_SIGNED",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "OWNER_ONE_SHOT_APPROVAL",
+      "status": "HOLD",
+      "passed": false,
+      "reason": "PHYSICAL_OR_OPERATOR_OR_EXTERNAL_REQUIRED"
+    },
+    {
+      "id": "STOP_DEADLINE_REPAIR",
+      "status": "PASS_OFFLINE_C1",
+      "passed": true,
+      "reason": "SOURCE_EXACT_OFFLINE_EVIDENCE",
+      "evidence_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R41_OFFLINE_IMPLEMENTATION_WORKER_20261122_R0\\05_STOP_DEADLINE\\STOP_DEADLINE_HARNESS_RECEIPT.json",
+      "evidence_sha256": "c2a07216361bab5ca1c34fcd1601d88974d243197b8f8d4524becddf8d96217e"
+    },
+    {
+      "id": "INDEPENDENT_ANGLE_REFERENCE",
+      "status": "PASS_OFFLINE_C1",
+      "passed": true,
+      "reason": "SOURCE_EXACT_OFFLINE_EVIDENCE",
+      "evidence_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R41_OFFLINE_IMPLEMENTATION_WORKER_20261122_R0\\06_METROLOGY\\METROLOGY_OFFLINE_RECEIPT.json",
+      "evidence_sha256": "c53d43c5e7d4cc296e6f58ba369fba38e16e51d099a8697cd2c83c5eedfff8a8"
+    },
+    {
+      "id": "SENSOR_FRAME_AND_UNITS",
+      "status": "PASS_OFFLINE_C1",
+      "passed": true,
+      "reason": "SOURCE_EXACT_OFFLINE_EVIDENCE",
+      "evidence_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R41_OFFLINE_IMPLEMENTATION_WORKER_20261122_R0\\06_METROLOGY\\METROLOGY_OFFLINE_RECEIPT.json",
+      "evidence_sha256": "c53d43c5e7d4cc296e6f58ba369fba38e16e51d099a8697cd2c83c5eedfff8a8"
+    },
+    {
+      "id": "MONOTONIC_EVENT_CLOCK",
+      "status": "PASS_OFFLINE_C1",
+      "passed": true,
+      "reason": "SOURCE_EXACT_OFFLINE_EVIDENCE",
+      "evidence_path": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\20_TO_CURSOR\\R41_OFFLINE_IMPLEMENTATION_WORKER_20261122_R0\\05_STOP_DEADLINE\\STOP_DEADLINE_HARNESS_RECEIPT.json",
+      "evidence_sha256": "c2a07216361bab5ca1c34fcd1601d88974d243197b8f8d4524becddf8d96217e"
+    },
+    {
+      "id": "RATE_REQUESTED_VS_ACTUAL",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "PRIVATE_ORIGINAL_RECEIVER",
+      "status": "HOLD",
+      "passed": false,
+      "reason": "PHYSICAL_OR_OPERATOR_OR_EXTERNAL_REQUIRED"
+    },
+    {
+      "id": "INDEPENDENT_SECOND_SOURCE",
+      "status": "HOLD",
+      "passed": false,
+      "reason": "PHYSICAL_OR_OPERATOR_OR_EXTERNAL_REQUIRED"
+    },
+    {
+      "id": "NO_HUMAN_BODY_CLAIMS",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "status": "OPEN_OR_HOLD",
+      "passed": false,
+      "reason": "NO_OFFLINE_EVIDENCE_BOUND"
+    },
+    {
+      "id": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "status": "HOLD",
+      "passed": false,
+      "reason": "PHYSICAL_OR_OPERATOR_OR_EXTERNAL_REQUIRED"
+    }
+  ],
+  "verdict": "PASS_ENGINE_FAIL_CLOSED"
+}

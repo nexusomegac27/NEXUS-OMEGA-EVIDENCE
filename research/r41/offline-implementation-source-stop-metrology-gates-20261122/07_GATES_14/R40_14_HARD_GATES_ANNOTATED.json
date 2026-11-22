@@ -1,0 +1,82 @@
+{
+  "object": "R40_14_HARD_GATES_ANNOTATED",
+  "recorded_utc": "2026-11-22T17:50:07Z",
+  "total": 14,
+  "open_or_hold": 14,
+  "passed": 0,
+  "lifted": 0,
+  "gates": [
+    {
+      "id": "SOURCE_BUILD_SIGNED",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "OWNER_ONE_SHOT_APPROVAL",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "STOP_DEADLINE_REPAIR",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "INDEPENDENT_ANGLE_REFERENCE",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "SENSOR_FRAME_AND_UNITS",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "MONOTONIC_EVENT_CLOCK",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "RATE_REQUESTED_VS_ACTUAL",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "PRIVATE_ORIGINAL_RECEIVER",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "INDEPENDENT_SECOND_SOURCE",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "NO_HUMAN_BODY_CLAIMS",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    },
+    {
+      "id": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "status": "OPEN_OR_HOLD",
+      "passed": false
+    }
+  ],
+  "claim": "ALL_14_REMAIN_OPEN_OR_HOLD",
+  "expert_designs_do_not_close_gates": true
+}

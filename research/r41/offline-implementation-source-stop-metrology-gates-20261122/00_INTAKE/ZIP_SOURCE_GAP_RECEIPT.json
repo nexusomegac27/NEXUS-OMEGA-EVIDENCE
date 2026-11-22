@@ -1,0 +1,11 @@
+{
+  "claimed_zip_bytes": 15516,
+  "claimed_zip_sha256": "a903a4598bb2b0a5482d20f06694b7687a51058ee078e98250fe39cbb4dbdbc5",
+  "local_status": "ABSENT",
+  "hunt_scope": "Folder_X_R40_R41 + TRANSFER_20_TO_CURSOR + TRANSFER_10_TO_AXIOM scoped",
+  "invention": "NO",
+  "source_gap": "PRESERVED",
+  "authority_fallback": "GitHub_Issue_395_body_sufficient_for_P0_scope",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "recorded_utc": "2026-11-22T19:00:00Z"
+}

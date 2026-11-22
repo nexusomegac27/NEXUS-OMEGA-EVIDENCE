@@ -1,0 +1,20 @@
+{
+  "r40_state": "CLOSED_BY_OPERATOR",
+  "r40_return_zip_sha256": "4efd19df",
+  "r40_artifacts_readonly": true,
+  "native_73_bytes": 7932,
+  "native_73_sha256": "7a79b721",
+  "native_73_status": "MATCH_COPIED_TO_02_DUAL_MANIFEST",
+  "dual_manifest": "PRESENT_UNDER_02",
+  "ledger_65": "PRESENT_UNDER_03",
+  "x13_r1": "PRESENT_UNDER_04_INCLUDING_REPLAY_OUTPUT_20261122_R0",
+  "gates_14_annotated": "PRESENT_UNDER_07",
+  "physical": "ALT_D_DO_NOT_RUN_ACTIVE",
+  "device_capture": "NO",
+  "apk_install": "NO",
+  "hostinger_write": "NO",
+  "www_write": "NO",
+  "pr_merge": "NO",
+  "bodytwin_validated": "NO",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
