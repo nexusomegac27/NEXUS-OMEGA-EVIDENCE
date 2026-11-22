@@ -1,0 +1,202 @@
+{
+  "schema": "nexus-omega/r40/stage1-independent-metrology-gate/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R40_STAGE1_INDEPENDENT_EXPERT_RIG_READINESS_CONTRACT_20261122_R0",
+  "state": "RESEARCH_MISSION_ONLY_NO_AUTHENTICATED_EXPERT_RETURN",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "source_parent_head": "1b72776c699fdaf87b3f70785072cad14fa2b026",
+  "cursor_original_return": {
+    "bytes": 6262,
+    "sha256": "4efd19dfd52463bac2c50688be0a29205ba48acc0c550010fd5ea7cf058f078e",
+    "archive_crc": "PASS",
+    "manifest": "5_OF_5_MATCH",
+    "independent_runtime_source_replay": "NOT_ESTABLISHED"
+  },
+  "cursor_reported_suite": {
+    "original_code_executed": 3,
+    "synthetic_analytic_executed": 12,
+    "desk_policy_checked": 11,
+    "reference_or_hardware_not_run": 39,
+    "total": 65,
+    "not_an_independent_hard_test_pass": true
+  },
+  "external_experts": [
+    {
+      "track": "E01",
+      "topic": "independent physical angle metrology, calibration, mounting slip",
+      "registered_actor": null,
+      "stage1_commit": null,
+      "original_manifest": null,
+      "independence_status": "NOT_ESTABLISHED",
+      "measurements": "NOT_RUN",
+      "ack": "NOT_RECEIVED"
+    },
+    {
+      "track": "E05",
+      "topic": "yaw-gauge boundary only, no yaw approval",
+      "registered_actor": null,
+      "stage1_commit": null,
+      "original_manifest": null,
+      "independence_status": "NOT_ESTABLISHED",
+      "measurements": "NOT_RUN",
+      "ack": "NOT_RECEIVED"
+    },
+    {
+      "track": "E06",
+      "topic": "Android timebase/reference mapping and deadline",
+      "registered_actor": null,
+      "stage1_commit": null,
+      "original_manifest": null,
+      "independence_status": "NOT_ESTABLISHED",
+      "measurements": "NOT_RUN",
+      "ack": "NOT_RECEIVED"
+    },
+    {
+      "track": "E08",
+      "topic": "GUM uncertainty/correlated model errors",
+      "registered_actor": null,
+      "stage1_commit": null,
+      "original_manifest": null,
+      "independence_status": "NOT_ESTABLISHED",
+      "measurements": "NOT_RUN",
+      "ack": "NOT_RECEIVED"
+    },
+    {
+      "track": "E16",
+      "topic": "independent physical methodology veto and DO_NOT_RUN",
+      "registered_actor": null,
+      "stage1_commit": null,
+      "original_manifest": null,
+      "independence_status": "NOT_ESTABLISHED",
+      "measurements": "NOT_RUN",
+      "ack": "NOT_RECEIVED"
+    }
+  ],
+  "hard_gates": [
+    {
+      "id": "SOURCE_BUILD_SIGNED",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "OWNER_ONE_SHOT_APPROVAL",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "STOP_DEADLINE_REPAIR",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "INDEPENDENT_ANGLE_REFERENCE",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "SENSOR_FRAME_AND_UNITS",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "MONOTONIC_EVENT_CLOCK",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "RATE_REQUESTED_VS_ACTUAL",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "PRIVATE_ORIGINAL_RECEIVER",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "INDEPENDENT_SECOND_SOURCE",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "NO_HUMAN_BODY_CLAIMS",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    },
+    {
+      "id": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "status": "OPEN_OR_HOLD",
+      "verified": false,
+      "evidence_sha": null
+    }
+  ],
+  "method_candidates": [
+    {
+      "name": "ALT_D_NO_RUN",
+      "status": "CURRENT"
+    },
+    {
+      "name": "ALT_A_RIGID_ROLL_0_45_90_0",
+      "status": "CONDITIONAL_NOT_AUTHORIZED"
+    },
+    {
+      "name": "ALT_B_YAW_PLUS_MINUS_LEG",
+      "status": "DEFERRED_NOT_AUTHORIZED"
+    }
+  ],
+  "physical_reference": {
+    "device": "CPH2219_REPORTED",
+    "real_reference_calibration": null,
+    "angle_uncertainty_deg": null,
+    "external_time_mapping_uncertainty_ms": null,
+    "phone_fixture_slip_distribution": null,
+    "printed_angle_reference_certified": false,
+    "operator_one_shot_approved": false,
+    "actual_phone_capture": false,
+    "human_body_observed": false
+  },
+  "actor_independence": {
+    "min_distinct_protocol_family_authors_for_independent_e16": 3,
+    "verified_distinct_authors": 0,
+    "virtual_panel_not_quorum": true
+  },
+  "prohibitions": [
+    "NO_NEW_PHONE_CAPTURE",
+    "NO_OWNER_APPROVAL_INFERRED",
+    "NO_GITHUB_MERGE",
+    "NO_APK_INSTALL",
+    "NO_HOSTINGER_WRITE",
+    "NO_WWW_WRITE",
+    "NO_PRIVATE_SENSOR_HASH_PUBLIC",
+    "NO_ANATOMICAL_BODY_MEASUREMENT"
+  ],
+  "next": "GITHUB_REGISTERED_STAGE1_ACTUAL_RETURNS_PLUS_CURSOR_SOURCE_BUILD_STOP_RECEIPTS_THEN_AXIOM_ADJUDICATION"
+}
