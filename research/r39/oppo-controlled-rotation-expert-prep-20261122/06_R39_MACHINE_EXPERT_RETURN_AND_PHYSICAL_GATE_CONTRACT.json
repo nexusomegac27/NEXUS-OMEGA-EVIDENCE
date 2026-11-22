@@ -1,0 +1,357 @@
+{
+  "schema": "nexus-omega/r39/oppo-physical-test-preparation/v1",
+  "object": "NEXUS_OMEGA_R39_OPPO_RIG_PHYSICAL_REFERENCE_EXPERT_RESEARCH_CONTRACT_20261122_R0",
+  "state": "SOURCE_ONLY_PREREG_NO_CAPTURE_AUTH",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "bodytwin_validated": false,
+  "r39_phase": "EXPERT_PREPARATION",
+  "r38_parent_public_commit": "fae125563d1abb79a7ddd388708a59b52dd68a63",
+  "r38_cursor": {
+    "reported_later_return": {
+      "bytes": 6519,
+      "sha256": "999afe1a4b1fb376631f742daf2d86ce1c635a2385044d975e1ce37a84204f34",
+      "original_bytes_received_with_current_upload": false
+    },
+    "actual_uploaded_older_return": {
+      "bytes": 6106,
+      "sha256": "1522183b2ae99c9f2bbaba0c1e86a1cf177275c17d25a95df95ad4e8acffa780",
+      "zip_crc": "PASS",
+      "manifest": "5_OF_5_MATCH",
+      "class": "R37_TO_R38_SOURCE_READBACK_ACK_NOT_G0_G10_EXECUTION"
+    },
+    "r38_T21_T28_executed": false,
+    "real_existing_bodytwin_source_verified": false
+  },
+  "device": {
+    "model": "CPH2219_REPORTED_HISTORICAL_SOURCE",
+    "signed_apk_build_sha256": null,
+    "app_source_commit": null,
+    "physical_imu_count_verified": null,
+    "channels_requested": [
+      "TYPE_ACCELEROMETER",
+      "TYPE_GYROSCOPE"
+    ],
+    "sample_rate_target_hz": null,
+    "stop_deadline_repair_verified": false,
+    "reference_mounting": "RIG_NOT_HUMAN",
+    "new_capture_allowed": false
+  },
+  "proposal": {
+    "test_type": "CONTROLLED_PHONE_RIG_GRAVITY_ROLL_AND_YAW_CANDIDATE",
+    "nominal_reference_angle_deg": 90,
+    "reference_angle_calibrated": false,
+    "reference_uncertainty_deg": null,
+    "reference_time_sync_uncertainty_ms": null,
+    "rig_security_witness": null,
+    "trial_durations_seconds": null,
+    "operator_one_shot_approval": null,
+    "physical_execution_status": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "human_body_observed": false,
+    "absolute_yaw_claim_allowed": false,
+    "anatomical_pose_measured_allowed": false
+  },
+  "hard_gate_status": [
+    {
+      "gate": "SOURCE_BUILD_SIGNED",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "OWNER_ONE_SHOT_APPROVAL",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "STOP_DEADLINE_REPAIR",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "INDEPENDENT_ANGLE_REFERENCE",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "SENSOR_FRAME_AND_UNITS",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "MONOTONIC_EVENT_CLOCK",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "RATE_REQUESTED_VS_ACTUAL",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "PRIVATE_ORIGINAL_RECEIVER",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "INDEPENDENT_SECOND_SOURCE",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "NO_HUMAN_BODY_CLAIMS",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    },
+    {
+      "gate": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "verified": false,
+      "evidence": null,
+      "decision": "OPEN_OR_HOLD"
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "ALT_A",
+      "description": "stationary-controlled-roll-stationary-return",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "ALT_B",
+      "description": "stationary-yaw-about-gravity-stationary-return",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "ALT_C",
+      "description": "two independently timestamped separate roll and yaw trials",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "ALT_D",
+      "description": "no new physical recording until missing source and consent gates repaired",
+      "status": "CANDIDATE"
+    }
+  ],
+  "external_experts": [
+    {
+      "id": "E01_RIG_REFERENCE_METROLOGY",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E02_ANDROID_SOURCE_HAL_TIMING",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E03_GYRO_ERROR_STATE",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E04_GRAVITY_TILT",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E05_YAW_GAUGE",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E06_REFERENCE_TIMEBASE",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E07_BODYTWIN_SEMANTICS",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E08_GUM_UKF_NIS_NEES",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E09_STOP_AND_CANCEL",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E10_OWNER_PRIVACY",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E11_ADVERSARIAL_DESIGN",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E12_PRIMARY_2026_SOURCES",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E13_PRIVATE_PROVENANCE",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E14_HUMAN_FACTORS",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E15_ALTERNATIVE_BASELINE",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    },
+    {
+      "id": "E16_INDEPENDENT_ADJUDICATION",
+      "actor_registered": false,
+      "stage0_source_commit": null,
+      "blinded_or_preexposed": null,
+      "independent_source_lineage": null,
+      "protocol_return": "NOT_RECEIVED",
+      "original_falsifiers_count": 0,
+      "replay_status": "NOT_RUN"
+    }
+  ],
+  "adversarial_regression": {
+    "new_r39_fixture_count": 32,
+    "new_r39_test_status": "NOT_EXECUTED",
+    "requires_r38_source_reconciliation": true,
+    "legacy_r38_sources_are_not_r39_pass": true,
+    "source_gap_is_green": false
+  },
+  "private_receipt": {
+    "real_raw_oppo_original_in_new_github_pr": false,
+    "authorized_receiver_actor": null,
+    "private_original_sha256": null,
+    "second_witness": null,
+    "public_original_digest_prohibited": true
+  },
+  "status_transitions": [
+    "P0_SOURCE_AND_CAPABILITY_AUDIT",
+    "P1_INDEPENDENT_EXPERT_PREREG",
+    "P2_FIXTURE_AND_PERMISSION_REVIEW",
+    "P3_SEPARATE_OPERATOR_AUTHORIZED_PHYSICAL_TEST",
+    "P4_PRIVATE_SOURCE_EXACT_CROSSVALIDATION",
+    "P5_C1_SCIENTIFIC_ADJUDICATION"
+  ],
+  "next": "E01_E16_RESEARCH_AND_CURSOR_G0_G12_PREPARATION_ONLY",
+  "no_actions": [
+    "NO_DEVICE_CAPTURE",
+    "NO_APK_INSTALL",
+    "NO_PRIVATE_RAW_PUBLIC_EXPORT",
+    "NO_WWW_WRITE",
+    "NO_HOSTINGER_WRITE",
+    "NO_GITHUB_PR_MERGE",
+    "NO_EXTERNAL_AUTONOMOUS_TRIGGER",
+    "NO_BODYTWIN_VALIDATED"
+  ]
+}
