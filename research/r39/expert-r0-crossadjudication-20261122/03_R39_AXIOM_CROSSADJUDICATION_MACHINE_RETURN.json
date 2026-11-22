@@ -1,0 +1,126 @@
+{
+  "schema": "nexus-omega/r39/axiom-independent-r0-expert-crossadjudication/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R39_NINE_SOURCE_ORIGINALS_X13_CROSS_ADJUDICATION_20261122_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "bodytwin_validated": false,
+  "source_upload_count": 9,
+  "public_source_parent": {
+    "pr": 385,
+    "head": "3514578f2b31510dbdca49640661c76e70bc541d",
+    "state": "OPEN_DRAFT_NOT_MERGED",
+    "source_manifest_match": "9_OF_9",
+    "manifest_sha256": "7480464bdc318c9fcc543396166fc0a232457e3d0e5f9c839d6c566e55eb4dc5"
+  },
+  "private_original_receipts": "PRIVATE_SUCCESSOR_ONLY",
+  "autoclaw": {
+    "zip_bytes": 57770,
+    "archive_sha256_private": "NOT_IN_PUBLIC_REGISTRY",
+    "zip_crc": "PASS",
+    "manifest": "6_OF_6_MATCH",
+    "sha256sums": "5_OF_5_MATCH",
+    "test": "X13_SYNTHETIC",
+    "source_replay": "EXECUTED_SOURCE_ONLY_ISOLATED",
+    "numeric_high_level": "REPRODUCED",
+    "json_byte_identical": false,
+    "small_float_differences": 4,
+    "original_archive_line_endings": "CRLF",
+    "local_replay_line_endings": "LF",
+    "original_code_license": "UNKNOWN",
+    "actor_authentication": "SELF_DECLARED_NOT_REGISTERED",
+    "expert_id_claim": "AUTOCLAW-R39-01",
+    "preexposure": "PREEXPOSED_PARTIAL",
+    "second_party": "NOT_AUTHENTICATED"
+  },
+  "receiver_sidecar": {
+    "listed_files": 8,
+    "uploaded_matched_files": 2,
+    "missing_script_files": 6,
+    "complete_source_receiver_replay": false
+  },
+  "new_material_hypotheses": [
+    {
+      "id": "R39_X13_YAW_LEG_REFERENCE",
+      "status": "ORIGINAL_REPORT_MATH_ERROR",
+      "physics": "Aplus=L(1+s)+bT/2; Aminus=-L(1+s)+bT/2; s=(Aplus-Aminus)/(2L)-1",
+      "original_code_leg_angle_deg": 45
+    },
+    {
+      "id": "R39_X13_ROLL_90_DEGENERACY",
+      "status": "ORIGINAL_REPORT_REFUTED_FOR_PURE_ROLL_MODEL",
+      "physics": "phi=atan2(ay,-az), gradient norm = 1/g for ay=g*sin(phi),az=-g*cos(phi) at 0,45,90"
+    },
+    {
+      "id": "R39_X13_PRE_REST_BIAS",
+      "status": "ERRONEOUS_REFERENCE_CLASS",
+      "physics": "After static bias subtraction, later reversal bias estimator estimates residual, not raw original"
+    },
+    {
+      "id": "R39_X13_INTEGRATION_WINDOW",
+      "status": "OFF_BY_ONE_PARTIAL_INTERVAL",
+      "physics": "cumsum difference uses ang[half]-ang[0], omits first interval; independently sum both halves with exact time ticks"
+    },
+    {
+      "id": "R39_X13_COMPARATIVE_NOISE",
+      "status": "METHODOLOGY_CONFOUNDER",
+      "physics": "four synthetic configurations use sequential RNG noise draws, use paired common random numbers"
+    }
+  ],
+  "independent_analytic_fixture": {
+    "source_path": "02_R39_X13_INDEPENDENT_ANALYTIC_COUNTEREXAMPLES.py",
+    "status": "PASS_SYNTHETIC_ANALYTIC_ONLY",
+    "python_command": "python -I -B 02_R39_X13_INDEPENDENT_ANALYTIC_COUNTEREXAMPLES.py",
+    "source_integrity": "GITHUB_CONTENT_READBACK_MATCH",
+    "leg_angle_deg": 45,
+    "observed_positive_deg": 46.95,
+    "observed_negative_deg": -43.95,
+    "bias_estimated_dps": 0.05,
+    "scale_estimated": 0.01,
+    "incorrect_formula_scale": 1.02,
+    "roll_atan2_jacobian_norm_rad_per_mps2": 0.10197162129779283,
+    "real_sensor_capture": false
+  },
+  "r38": {
+    "two_cursor_originals": "DIFFERENT",
+    "older_original_return_reported_bytes": 6106,
+    "newer_original_return_reported_bytes": 6519,
+    "independent_receiver_has_both": false,
+    "source_manifest_historical": "25_OF_27",
+    "archived_fails": "Q14_Q19_SF_WS01_4",
+    "current_79_synthetic": "UNSEALED",
+    "t21_t28_cursor_ack": false
+  },
+  "navigation_delta": {
+    "r39_00_reads_09_file_missing": true,
+    "manifest_9_of_9_unchanged": true,
+    "classification": "DOCUMENTATION_MISMATCH_ONLY"
+  },
+  "r39_gate_state": {
+    "original_hard_gate_count": 14,
+    "all_verified": false,
+    "expert_actor_registrations_authenticated": 0,
+    "operator_relayed_scientific_x13_candidate": 1,
+    "r39_F00_F31_executed": false,
+    "real_oppo_capture": false,
+    "independent_angle_reference": false,
+    "physical_trial_approval": false
+  },
+  "next": [
+    "CURSOR_READBACK_SOURCE_AND_RECEIVER",
+    "REPAIR_X13_FORMULA_NAMING_AND_INTEGRATION",
+    "VALIDATE_R38_T21_T28_SOURCE",
+    "RUN_R39_F00_F31_OFFLINE",
+    "INDEPENDENT_E01_E16_STAGE0_DESIGNS",
+    "REVIEW_ANGLE_REFERENCE_UNCERTAINTY",
+    "OBTAIN_EXPLICIT_SEPARATE_OWNER_AUTH_ONLY_IF_GATES_PASS"
+  ],
+  "prohibitions": [
+    "NO_NEW_CAPTURE",
+    "NO_PR_MERGE",
+    "NO_HOSTINGER",
+    "NO_WWW",
+    "NO_PUBLIC_PRIVATE_ORIGINAL_DIGEST",
+    "NO_BODYTWIN_VALIDATED",
+    "NO_AUTO_DEVICE_ARM"
+  ]
+}
