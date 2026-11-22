@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  3,
+    "id":  "X13_ORIGINAL_DEFECT_SIGNAL",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "ORIGINAL_PRESERVED_WITH_KNOWN_MATH_DEFECTS",
+    "actual_result":  "true_angle_deg=90.0; reversal_final_deg=3.0232139224929058; orig_py=c25417b91b5a16aa…; orig_json=6edb3611a73caebb…",
+    "failure_label":  null,
+    "note":  "Original immutable; defect demonstrated, not repaired in place.",
+    "evidence_ref":  "01_SOURCES/01_AUTOCLAW_X13_ORIGINAL_SOURCE_UNMODIFIED.py",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

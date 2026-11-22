@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  8,
+    "id":  "T25_RUNTIME_MUTATES_SOURCE_SEAL",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_EXPECTED_IF_ORIGINAL_BYTES_MUTATED",
+    "actual_result":  "X13 original still 6237 bytes sha=c25417b91b5a16aa5739e7470c43fadf55b597d38c44fee22dd9520f2661c782; R1 successor separate sha=7f7a0f1402ddfda2f57a2916315a9448d520b7dcd8d92046607688709c92c725; original_mutation=NO",
+    "failure_label":  null,
+    "note":  null,
+    "evidence_ref":  "01_SOURCES/01_AUTOCLAW_X13_ORIGINAL_SOURCE_UNMODIFIED.py",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

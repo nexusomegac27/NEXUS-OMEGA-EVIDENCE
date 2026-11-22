@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  33,
+    "id":  "F07_YAW_ABSOLUTE_HEADING",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_YAW_OBSERVABILITY",
+    "actual_result":  "OFFLINE_POSITIVE: X13 R1 / original treat yaw as relative integration; no absolute compass claim; physical_oppo_claimed=false.",
+    "failure_label":  null,
+    "note":  "Positive control: synthetic yaw no absolute compass claim.",
+    "evidence_ref":  "02_X13_REPAIR/03_X13_R1_RESULTS.json",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

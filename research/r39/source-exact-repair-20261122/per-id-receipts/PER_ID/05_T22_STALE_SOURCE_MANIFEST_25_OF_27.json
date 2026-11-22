@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  5,
+    "id":  "T22_STALE_SOURCE_MANIFEST_25_OF_27",
+    "status":  "PASSED_EXPECTED",
+    "run_status":  "PASSED_EXPECTED",
+    "expected_result":  "FAIL_EXPECTED_IF_25_27_TREATED_AS_27_27_WITHOUT_PRESERVE",
+    "actual_result":  "svk_original_manifest=25_OF_27; unexpected_failures=[\u0027Q14\u0027, \u0027Q19\u0027, \u0027SF-WS01-4\u0027]; source_version_reconciliation_required=True",
+    "failure_label":  null,
+    "note":  "Stale 25/27 preserved; not rewritten to 27/27.",
+    "evidence_ref":  "03_OFFLINE_TESTS/_extract_04_MACHINE.json#independent_replay_axiom_stated",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}

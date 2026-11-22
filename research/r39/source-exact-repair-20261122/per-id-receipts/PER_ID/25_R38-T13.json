@@ -1,0 +1,18 @@
+{
+    "schema":  "NEXUS_OMEGA_R39_OFFLINE_PER_ID_RECEIPT_PUBLIC_SAFE_V1",
+    "object_id":  "NEXUS_OMEGA_CURSOR_R39_SOURCE_EXACT_REPAIR_PER_ID_20261122_R0",
+    "result_index":  25,
+    "id":  "R38-T13",
+    "status":  "SOURCE_GAP",
+    "run_status":  "SOURCE_GAP",
+    "expected_result":  "FAIL_BUDGET",
+    "actual_result":  "NO_OFFLINE_DEVICE_FIXTURE_BOUND",
+    "failure_label":  "READ_BUDGET_EXCEEDED",
+    "note":  "Expected verdict bound; execution requires separate physical gate.",
+    "evidence_ref":  "03_R38_HARD_NEGATIVES.md",
+    "actor":  "CURSOR_LOCAL_OFFLINE",
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated":  false,
+    "physical_oppo":  false,
+    "exported_at_utc":  "2026-11-22T16:33:53Z"
+}
