@@ -1,0 +1,85 @@
+{
+  "atan2_roll_cases": [
+    {
+      "ay": -0.0,
+      "az": -9.80665,
+      "false_singularity_at_az0_ay_nonzero": false,
+      "grad_norm_1_over_g": 0.10197162129779283,
+      "phi_deg": 0.0,
+      "roll_est_deg": -0.0,
+      "singular": false
+    },
+    {
+      "ay": -6.934348715723057,
+      "az": -6.934348715723057,
+      "false_singularity_at_az0_ay_nonzero": false,
+      "grad_norm_1_over_g": 0.10197162129779283,
+      "phi_deg": 45.0,
+      "roll_est_deg": -45.0,
+      "singular": false
+    },
+    {
+      "ay": -9.80665,
+      "az": -6.004841266429195e-16,
+      "false_singularity_at_az0_ay_nonzero": true,
+      "grad_norm_1_over_g": 0.10197162129779283,
+      "phi_deg": 90.0,
+      "roll_est_deg": -90.0,
+      "singular": false
+    }
+  ],
+  "body_measured": false,
+  "bodytwin_validated": false,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "closed_form": {
+    "A_minus_deg": -43.95,
+    "A_plus_deg": 46.95,
+    "b_hat_dps": 0.05,
+    "s_hat": 0.010000000000000009,
+    "wrong_scale_over_L": 1.02
+  },
+  "gum_style_uncertainty": {
+    "expanded_U_deg": 0.02000099997500125,
+    "gyro_0_0001_dps_claim": "NOT_CLAIMED",
+    "k_coverage": 2.0,
+    "note": "SYNTHETIC_GUM_STYLE_NOT_OPPO_MEASURED",
+    "oppo_0_650_deg_claim": "NOT_CLAIMED",
+    "u_A_deg": 0.0001,
+    "u_B_deg": 0.01,
+    "u_C_combined_deg": 0.010000499987500624
+  },
+  "l_leg_deg": 45.0,
+  "numpy_version": "2.5.4",
+  "object": "NEXUS_OMEGA_CURSOR_R39_X13_R1_SUCCESSOR_20261122_R0",
+  "original_mutation": "NO",
+  "original_over_L_failure": {
+    "correct_s": 0.010000000000000009,
+    "expected_wrong_s": 1.02,
+    "independent_failure_of_over_L": true,
+    "wrong_s_over_L": 1.02
+  },
+  "physical_oppo_claimed": false,
+  "pre_rest_bias_split": {
+    "raw_bias_hat_dps": 0.049999723013192256,
+    "raw_error_vs_true": 2.769868077470705e-07,
+    "residual_bias_after_pre_rest_dps": 1.1057397134775507e-18,
+    "residual_vs_zero": 1.1057397134775507e-18,
+    "true_bias_dps": 0.05
+  },
+  "predecessor_original_json_sha256": "6edb3611a73caebb46a6118e59433ecdc64e0b8450288c8f4be2704038f666c9",
+  "predecessor_original_py_sha256": "c25417b91b5a16aa5739e7470c43fadf55b597d38c44fee22dd9520f2661c782",
+  "seed": 20261122,
+  "simulated_equal_leg": {
+    "A_minus_deg": -43.95001373924199,
+    "A_plus_deg": 46.94996558891595,
+    "b_hat_dps": 0.04999919749456604,
+    "dt": 0.01,
+    "half": 3000,
+    "n": 6000,
+    "s_hat": 0.00999977031286603,
+    "wrong_scale_over_L": 1.019999540625732
+  },
+  "t_sec": 60.0,
+  "two_l_deg": 90.0,
+  "verdict": "PASS_C1_X13_R1_OFFLINE_ANALYTIC"
+}

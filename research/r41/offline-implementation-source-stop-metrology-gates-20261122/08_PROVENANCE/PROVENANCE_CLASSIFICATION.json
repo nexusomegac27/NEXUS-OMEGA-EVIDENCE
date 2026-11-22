@@ -1,0 +1,68 @@
+{
+  "object": "R41_PROVENANCE_CLASSIFICATION",
+  "recorded_utc": "2026-11-22T19:19:06Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "independent_expert_quorum": false,
+  "quorum_eligible_count": 0,
+  "records": [
+    {
+      "source": "Stage-1_E01_E16",
+      "auth_class": "PARTIAL_MANIFEST_REFERENCE",
+      "independence": "NOT_INDEPENDENTLY_REGISTERED",
+      "quorum_eligible": false,
+      "status": "3_OF_14_REFERENCED_MANIFEST_FILES_PRESENT_AND_CHECKED",
+      "scientific_role": "METHODS_CONTRIBUTION_ONLY",
+      "caveat": "DOES_NOT_FORM_EXPERT_QUORUM"
+    },
+    {
+      "source": "AutoClaw_X14",
+      "auth_class": "ZIP_CRC_AND_FILE_HASH_MATCH_REPORTED",
+      "independence": "OFFLINE_SIMULATION_AND_COUNTEREXAMPLES",
+      "quorum_eligible": false,
+      "status": "ZIP_CRC_PASS_6_OF_6_FILEHASH_MATCH_AXIOM_STATED",
+      "scientific_role": "OFFLINE_SIMULATION_COUNTEREXAMPLES",
+      "caveat": "DOES_NOT_FORM_EXPERT_QUORUM"
+    },
+    {
+      "source": "Grok",
+      "auth_class": "ADVISORY_CROSSVALIDATION_REPORT_RECEIVED",
+      "independence": "ADVISORY_ONLY",
+      "quorum_eligible": false,
+      "status": "REPORT_RECEIVED",
+      "scientific_role": "ADVISORY_SOURCE_AND_METHOD_CONTROL",
+      "caveat": "DOES_NOT_FORM_EXPERT_QUORUM"
+    },
+    {
+      "source": "Mistral_Vibe",
+      "auth_class": "READBACK_REPORT_RECEIVED",
+      "independence": "GITHUB_CONTINUITY_CONTROL_ONLY",
+      "quorum_eligible": false,
+      "status": "READBACK_REPORT_RECEIVED",
+      "scientific_role": "GITHUB_CONTINUITY_CONTROL",
+      "caveat": "DOES_NOT_FORM_EXPERT_QUORUM"
+    },
+    {
+      "source": "R41_MAXI_ZIP_CLAIMED",
+      "auth_class": "CLAIMED_PACKAGE",
+      "independence": "N_A",
+      "quorum_eligible": false,
+      "status": "SOURCE_GAP",
+      "claimed_bytes": 15516,
+      "claimed_sha256": "a903a4598bb2b0a5482d20f06694b7687a51058ee078e98250fe39cbb4dbdbc5",
+      "local_status": "ABSENT_AT_CURSOR_INTAKE",
+      "scientific_role": "ORDER_TRANSPORT_CLAIM",
+      "caveat": "ISSUE_395_ALONE_AUTHORIZES_P0_SCOPE_ZIP_BYTES_NOT_INVENTED"
+    },
+    {
+      "source": "GitHub_Issue_395",
+      "auth_class": "PUBLIC_ISSUE_OPEN_READBACK",
+      "independence": "OPERATOR_AXIOM_ORDER_SURFACE",
+      "quorum_eligible": false,
+      "status": "OPEN_VERIFIED_RECEIPT",
+      "scientific_role": "SOURCE_AUTHORITY_FOR_R41_IMPLEMENTATION_ORDER",
+      "caveat": "NOT_PHYSICAL_CLEARANCE"
+    }
+  ],
+  "law": "UNREGISTERED_OR_COPIED_CONTRIBUTIONS_DO_NOT_FORM_QUORUM",
+  "verdict": "PASS_CLASSIFICATION_NO_QUORUM_CLAIM"
+}

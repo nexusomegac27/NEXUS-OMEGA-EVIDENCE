@@ -1,0 +1,41 @@
+{
+  "object": "R41_NEGATIVE_FIXTURES_RECEIPT",
+  "recorded_utc": "2026-11-22T19:19:06Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "total": 6,
+  "pass": 6,
+  "fail": 0,
+  "fixtures": [
+    {
+      "name": "exact_deadline_reject",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    },
+    {
+      "name": "after_deadline_reject",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    },
+    {
+      "name": "tail_363_all_reject",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    },
+    {
+      "name": "mutant_leq_documented",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    },
+    {
+      "name": "zero_deadline_accepts",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    },
+    {
+      "name": "gate_engine_fail_closed",
+      "status": "PASS_EXPECTED_REJECT",
+      "detail": "rejected_as_designed"
+    }
+  ],
+  "verdict": "PASS"
+}

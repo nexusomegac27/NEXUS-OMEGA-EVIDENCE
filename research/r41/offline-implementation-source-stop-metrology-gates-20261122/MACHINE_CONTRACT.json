@@ -1,0 +1,22 @@
+{
+    "negative_fixtures":  "PASS_6_OF_6",
+    "apk_install":  false,
+    "pr_merge":  false,
+    "next":  "AXIOM_INDEPENDENT_R41_IMPLEMENTATION_ADJUDICATION",
+    "gate_engine_verdict":  "PASS_ENGINE_FAIL_CLOSED",
+    "bodytwin_validated":  false,
+    "open_or_hold_remaining":  10,
+    "local_maxi_zip_a903a459":  "SOURCE_GAP",
+    "claim_promotion":  false,
+    "passed_offline_c1":  4,
+    "issue":  395,
+    "device_capture":  false,
+    "hostinger_write":  false,
+    "provenance":  "PASS_CLASSIFICATION_NO_QUORUM",
+    "full_14_pass_claim":  false,
+    "gradle_unit_test":  "NOT_ESTABLISHED_OR_TIMEOUT",
+    "object":  "NEXUS_OMEGA_AXIOM_CURSOR_R41_OFFLINE_IMPLEMENTATION_SOURCE_STOP_METROLOGY_GATES_ORDER_20261122_R0",
+    "www_write":  false,
+    "claim_ceiling":  "C1_DESCRIPTIVE_ONLY",
+    "physical":  "ALT_D_DO_NOT_RUN_ACTIVE"
+}

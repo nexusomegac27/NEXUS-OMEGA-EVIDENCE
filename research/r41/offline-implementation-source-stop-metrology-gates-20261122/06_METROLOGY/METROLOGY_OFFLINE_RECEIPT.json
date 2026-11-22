@@ -1,0 +1,55 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R41_METROLOGY_OFFLINE_SUITE_20261122_R0",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "physical": "ALT_D_DO_NOT_RUN_ACTIVE",
+  "utc": "2026-11-22T19:17:24.886951+00:00",
+  "mount": {
+    "roll_deg": 2.0,
+    "pitch_deg": -1.5,
+    "yaw_deg": 0.5
+  },
+  "gravity_body": {
+    "x": -0.25355538983821463,
+    "y": -0.34447292592130335,
+    "z": 9.797317606880528
+  },
+  "gum_combined_std_deg": 0.07348469228349536,
+  "monte_carlo": {
+    "n": 2000,
+    "seed": 41,
+    "true_deg": 45.0,
+    "noise_std_deg": 0.3,
+    "mean_deg": 44.99894365845847,
+    "std_deg": 0.30242295383697543,
+    "bias_deg": -0.0010563415415276722
+  },
+  "common_mode_suspect": {
+    "status": "OK",
+    "pearson": 0.9999415012639131,
+    "threshold": 0.98,
+    "flag": true,
+    "interpretation": "COMMON_MODE_SUSPECT"
+  },
+  "common_mode_control": {
+    "status": "OK",
+    "pearson": -0.025654899344765305,
+    "threshold": 0.98,
+    "flag": false,
+    "interpretation": "OK"
+  },
+  "checks": {
+    "mount_rotation_norm_ok": true,
+    "gum_positive": true,
+    "mc_std_near_noise": true,
+    "common_mode_flagged": true,
+    "independent_not_flagged": true,
+    "clock_map_monotonic": true
+  },
+  "hard_fails": [],
+  "verdict": "PASS",
+  "epistemic_walls": [
+    "OFFLINE_METROLOGY_PASS != PHYSICAL_CALIBRATION",
+    "MC_SYNTHETIC != OPPO_SENSOR_CERTIFICATE",
+    "GUM_MODEL != EMPIRICAL_UNCERTAINTY"
+  ]
+}
