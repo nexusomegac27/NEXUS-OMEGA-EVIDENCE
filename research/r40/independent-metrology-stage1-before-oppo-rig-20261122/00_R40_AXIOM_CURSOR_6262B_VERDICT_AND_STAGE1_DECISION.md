@@ -1,0 +1,21 @@
+# R40 AXIOM adjudication — last independent expert review BEFORE any next OPPO capture
+OBJECT = NEXUS_OMEGA_AXIOM_R40_CURSOR_6262B_RETURN_STAGE1_EXPERT_THRESHOLD_20261122_R0
+STATE = PASS_C1_CURSOR_SOURCE_RECEIPT_WITH_MATERIAL_HARD_GATES_OPEN
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+BODYTWIN_VALIDATED = NO | NEW_PHYSICAL_OPPO = NOT_AUTHORIZED
+CLAIM_PROMOTION = NO | PR_MERGE = NO | HOSTINGER = NO | WWW = NO | DEVICE_SENSOR_START = NO
+CAUSAL_PARENT = Public PR #391 HEAD 1b72776c699fdaf87b3f70785072cad14fa2b026
+
+## Independent original return verification
+The operator uploaded the exact Cursor R40 return ZIP (6,262B) SHA256 4efd19dfd52463bac2c50688be0a29205ba48acc0c550010fd5ea7cf058f078e, independently rehashed in AXIOM's container. External sidecar 153B SHA256 7e272cc9baf5e4039592530cafdfa586ca61f8fa07bb075bb33844dee5056f53 CONTENT_MATCH. ZIP CRC PASS; 6 entries and 5/5 internal hash manifest MATCH. Machine JSON parses. This proves RETURN integrity and its source claims, not independent full runtime source execution.
+Cursor reports CRLF original 73-file manifest (8005B, e975345fd4c3c741f8b831ff2f6a12fbd847c3ec78eda131f24b7d5064117a25) plus new GitHub native 73-file manifest (7932B, SHA256 7a79b721b5f1b831df97b8bfc4c1c2d7b6c04a32fc6e60ffa5453a6d41e7c4d9), 2 original native matches +71 LF/CRLF recovered, no unexplained content drift. The NEW native manifest original BYTES are not packaged in this ZIP, cannot independently rehash from this return; do not equate claimed new manifest with historic GitHub-original SHA256SUMS file (previously native hash 8022476e...). The old source exact GitHub check 2/73 native/71 transformed remains upheld.
+Cursor reports corrected original AXIOM offline thaw comment ID 7081290152. This was OFFLINE scope, not permission for a phone experiment.
+Cursor reports X13 R1 analytic-only +/-45 legs: +46.95deg, -43.95deg, wrong scale over L=1.02, PHYSICAL_NOT_RUN. Exact executable R1 and actual rerun receipt are not inside this 6262-byte return; earlier original code available at R39 PR390. Source-level replay independently of Cursor remains OPEN.
+Cursor reports 65 cases: 3 original code executed, 12 synthetic analytically executed, 11 desk policy controls, 39 physical/reference not run. Total 65 and positive source labels 26 are consistent, no claim that 26 were fully executed real adversarial runtime tests. This ZIP lacks individual per-case execution details; classification is RECEIPT_REPORTED_ONLY.
+Cursor reports five E01/E05/E06/E08/E16 Stage0 drafts from one SELF_DECLARED_UNREGISTERED_PREEXPOSED_PARTIAL source. No registered independent actor ACK. All 14 frozen R39 hard gates OPEN_OR_HOLD (0 passed). ALT-D DO_NOT_RUN current, ALT-A roll ladder conditional, ALT-B yaw later separate trial. BODYTWIN_VALIDATED=NO.
+
+## AXIOM science decision
+YES — a scoped INDEPENDENT Stage1 metrology review is appropriate BEFORE any next physical OPPO test. Not another broad round of synthetic X13 work. It must genuinely reduce uncertainty about rigid-device angle reference, timing, mounting, correlation and preregistered thresholds. In parallel, Cursor handles source/native-manifest transfer, actual signed app/build, stop-tail regression, privacy receiver, exact owner scope, and software-only adversarial fixtures; no metrologist should be tasked with fixing 73 file hashes.
+E01 angular reference, E06 timestamp and stopped-capture proof, E08 correlated GUM uncertainty and E16 truly independent protocol selection are first-wave; E05 yaw/ACC+GYRO gauge/magnetometer exclusion is a boundary reviewer but not a mandate to execute yaw. At least three genuinely actor-distinct reference/protocol families before E16 receives independent panel weight (or mark INDEPENDENCE_GAP); copied documents or another single AI roleplay is not quorum.
+Physical choice now ALT-D, later only if all hard gates individually source-proven, operator may separately approve ONE exact rigid-device 0/45/90/0 roll experiment with external reference, no human body, no claim promotion.
+Primary methodological sources: https://developer.android.com/reference/android/hardware/SensorEvent ; https://developer.android.com/reference/android/hardware/SensorManager ; https://www.bipm.org/en/doi/10.59161/jcgm100-2008e .
