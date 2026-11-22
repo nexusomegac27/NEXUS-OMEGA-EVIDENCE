@@ -1,0 +1,213 @@
+{
+  "schema": "nexus-omega/r40/r39-cursor390-stage0-science-crossadjudication/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R40_R39_EXPERT_STAGE0_CURSOR390_SCIENCE_AND_SOURCE_MACHINE_RETURN_20261122_R0",
+  "date": "2026-11-22",
+  "state": "PASS_WITH_MATERIAL_CAVEATS_C1_SOURCE_AND_STAGE0_DESIGN_INTAKE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "claim_promotion": false,
+  "truth_authority": "NONE",
+  "bodytwin_validated": false,
+  "physical_oppo_capture": "NOT_AUTHORIZED",
+  "github": {
+    "parent_r39_repair_pr": 390,
+    "parent_head": "05d89c378f32aaefc47fce429ee9ecb44b229858",
+    "parent_state": "OPEN_DRAFT_NOT_MERGED",
+    "pr_base": "main",
+    "pr_changed_files": 129,
+    "source_folder_new_files": 74,
+    "ancestor_in_diff": 55
+  },
+  "cursor_archive": {
+    "bytes": 5341,
+    "sha256": "2a6a0dceebdc28611dc14055ee47072221ba5f0d0c3ceb017c8457cdb7e7bf98",
+    "sidecar_bytes": 132,
+    "sidecar_match": true,
+    "zip_crc": "PASS",
+    "inner_manifest": "5_OF_5_MATCH",
+    "source_only": true
+  },
+  "stage0_experts": {
+    "archive_bytes": 32956,
+    "archive_sha256": "PRIVATE_INTAKE_LEDGER",
+    "zip_crc": "PASS",
+    "zip_entries": 11,
+    "internal_manifest_entries": 10,
+    "internal_manifest_match": 10,
+    "source_actor_count": 1,
+    "actor_registered": false,
+    "preexposure": "PREEXPOSED_PARTIAL",
+    "lanes": [
+      "E01",
+      "E05",
+      "E06",
+      "E08",
+      "E16"
+    ],
+    "n_effective_registered_independent": 0,
+    "external_original_phone_bytes_in_package": false,
+    "derived_data_class": "PACKAGE_INTERNAL_R37_DERIVATIVE",
+    "actual_phys_measurement": "NOT_RUN"
+  },
+  "r39_pr390_manifest": {
+    "declared_file_hashes": 73,
+    "github_native_direct_sha256_match": 2,
+    "github_native_direct_sha256_mismatch": 71,
+    "explicit_LF_to_CRLF_reconstruction_of_mismatch": 71,
+    "unexplained_mismatch": 0,
+    "status": "TRANSPORT_NORMALIZED_NOT_BYTE_IDENTICAL",
+    "x13_successor_native_py_sha256_match": true,
+    "x13_successor_result_native_bytes": 2560,
+    "x13_successor_result_original_windows_bytes": 2645,
+    "github_native_manifest_required": true,
+    "original_windows_manifest_preserved": true
+  },
+  "r39_suite": {
+    "case_files": 65,
+    "machine_cases": 65,
+    "machine_passed_expected": 26,
+    "machine_source_gap": 39,
+    "machine_unexpected_fail": 0,
+    "index_matches_source_counts": true,
+    "original_test_fixture_execution_26": "NOT_INDEPENDENTLY_REPLAYED",
+    "positive_desk_checks_are_not_all_runtime_tests": true,
+    "gaps_not_physical_failures": true
+  },
+  "authorizing_comment": {
+    "github_issue": 387,
+    "source_exact_comment_id": "7081290152",
+    "cursor_latest_reported_wrong_comment_id": "7081295152",
+    "older_wrong_comment_id": "7081297152",
+    "status": "SOURCE_ID_CONTRADICTION_REQUIRES_APPEND_ONLY_REPAIR"
+  },
+  "expert_numeric_recheck": {
+    "source": "PACKAGE_INTERNAL_R37_DERIVATIVE_ONLY",
+    "acc_samples": 6374,
+    "gyro_samples": 6366,
+    "event_rate_acc_hz": 100.18503711035422,
+    "event_rate_gyro_hz": 100.18506872473418,
+    "gyro_y_bias_dps_derived": 0.098731,
+    "drift_over_15s_deg_derived": 1.48096,
+    "uncertainty_M1_k2_deg_from_illustrative_terms": 0.54221767,
+    "uncertainty_M2_k2_deg_from_illustrative_terms": 0.47592016,
+    "physical_calibration_certified": false,
+    "clock_utc_alignment_independent": false,
+    "statics_u_time_zero_proven": false
+  },
+  "hard_gates": [
+    {
+      "id": "SOURCE_BUILD_SIGNED",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "OWNER_ONE_SHOT_APPROVAL",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "STOP_DEADLINE_REPAIR",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "INDEPENDENT_ANGLE_REFERENCE",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "SENSOR_FRAME_AND_UNITS",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "MONOTONIC_EVENT_CLOCK",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "RATE_REQUESTED_VS_ACTUAL",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "PRIVATE_ORIGINAL_RECEIVER",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "INDEPENDENT_SECOND_SOURCE",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "NO_HUMAN_BODY_CLAIMS",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    },
+    {
+      "id": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "decision": "OPEN_OR_HOLD",
+      "passed": false,
+      "evidence": null
+    }
+  ],
+  "physical_trial_choice": {
+    "current": "ALT_D_DO_NOT_RUN",
+    "future_candidates": [
+      "ALT_A_ROLL_0_45_90_0",
+      "ALT_B_YAW_TWO_LEG_AFTER_ALT_A"
+    ],
+    "preregistered_final_protocol": false,
+    "operator_one_shot_approval": false
+  },
+  "required_cursor_return": [
+    "GITHUB_NATIVE_SHA256SUMS_ALL_73",
+    "ORIGINAL_CRLF_SHA256SUMS_UNCHANGED",
+    "LIVE_GITHUB_COMMENT_7081290152_REBIND",
+    "X13_R1_IMMUTABLE_INDEPENDENT_REPLAY",
+    "65_CASE_EXECUTION_CLASS_PER_ID",
+    "EXPERT_ORIGINAL_PRIVATE_REHASH_IF_OPERATOR_AUTHORIZED",
+    "TRUE_DISTINCT_REGISTERED_ACTORS_OR_NONE",
+    "R40_14_GATE_STATUS_ANNOTATED",
+    "CLEAR_GIT_PR_STACK_BASE",
+    "NO_DEVICE_ACTION"
+  ],
+  "prohibitions": [
+    "NO_PHYSICAL_CAPTURE",
+    "NO_APP_INSTALL",
+    "NO_PR_MERGE",
+    "NO_HOSTINGER_WRITE",
+    "NO_WWW_WRITE",
+    "NO_PUBLIC_PRIVATE_RAW_DIGEST",
+    "NO_BODYTWIN_VALIDATED",
+    "NO_C1_CLAIM_PROMOTION"
+  ]
+}
