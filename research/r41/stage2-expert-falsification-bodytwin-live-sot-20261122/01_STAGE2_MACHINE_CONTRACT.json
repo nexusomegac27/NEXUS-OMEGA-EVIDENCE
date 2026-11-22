@@ -1,0 +1,98 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R41_STAGE2_EXPERT_RETURN_CONTRACT_20261122_R0",
+  "state": "GITHUB_SOURCE_POSTED_NOT_PROVIDER_ACKNOWLEDGED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent_cursor_return": {
+    "zip_bytes": 4966,
+    "sha256": "2e050df80d825b039d0848c67b7be8becca971a27d2c32381c0ef2032a431436",
+    "sha256sums": "5_OF_5_MATCH",
+    "sidecar_sha256": "84ff96db155c9c95aa60c181661c572b28297aa18e5fda2693b1045bae89fcd3"
+  },
+  "github": {
+    "source_issue": 398,
+    "implementation_issue": 395,
+    "implementation_pr": 396,
+    "implementation_head": "ba3f187daa1949c712bba9b822ab6005d0ae6363",
+    "public_sot_issue": 397,
+    "prior_expert_issue": 394
+  },
+  "expert_lanes": {
+    "E17": {
+      "ack": "NOT_RECEIVED",
+      "registered_actor": null,
+      "independent_rehash": "NOT_ESTABLISHED",
+      "physical_authorization": false
+    },
+    "E18": {
+      "ack": "NOT_RECEIVED",
+      "registered_actor": null,
+      "independent_rehash": "NOT_ESTABLISHED",
+      "physical_authorization": false
+    },
+    "E19": {
+      "ack": "NOT_RECEIVED",
+      "registered_actor": null,
+      "independent_rehash": "NOT_ESTABLISHED",
+      "physical_authorization": false
+    },
+    "E20": {
+      "ack": "NOT_RECEIVED",
+      "registered_actor": null,
+      "independent_rehash": "NOT_ESTABLISHED",
+      "physical_authorization": false
+    },
+    "W1": {
+      "ack": "NOT_RECEIVED",
+      "registered_actor": null,
+      "independent_rehash": "NOT_ESTABLISHED",
+      "physical_authorization": false
+    }
+  },
+  "quorum": {
+    "required_actor_distinct_protocol_families": 3,
+    "authenticated_actor_distinct_families": 0,
+    "status": "NOT_ESTABLISHED"
+  },
+  "scientific": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "consent_bind": "OPEN",
+    "gradle_runtime": "NOT_ESTABLISHED",
+    "capture_authorized": false,
+    "physical_gate_state": "ALT_D_DO_NOT_RUN_ACTIVE",
+    "physical_14_gate_promotion": false
+  },
+  "public_sot": {
+    "cursor_http_report_level": true,
+    "axiom_raw_http_rehash": "NOT_ESTABLISHED",
+    "source_changed": false,
+    "source_last_changed_utc": "2026-11-07T20:50:02Z",
+    "feed_generated_at": "2026-11-22T20:55:02Z",
+    "reducer_seq": 4320,
+    "current_json_sha256": "a6eb83752e9c5d606cd904e29f0f88afc8b16c0930ca813a75427ebdc89a04f4",
+    "status_vs_embedded": "DIFFERS_FROM_EMBEDDED",
+    "live_vs_embedded": "MATCH_EMBEDDED",
+    "memory_vs_embedded": "MATCH_EMBEDDED"
+  },
+  "falsifiers": {
+    "e17": "DEADLINE_LE_0_FAIL_OPEN",
+    "x15": {
+      "created_in_window": 6001,
+      "accepted_by_eventtime_drain": 6000,
+      "unreconciled": 1
+    },
+    "e18": "SYNTHETIC_COVERAGE_NOT_OPPO_DEVICE",
+    "e19": "REFERENCE_5_BLOCKED_NOT_ACTUAL_R41_REPLAY",
+    "w1": "STATUS_MISMATCH_DIAGNOSTIC_NOT_CORRUPTION_PROOF"
+  },
+  "prohibitions": {
+    "public_write": false,
+    "hostinger_write": false,
+    "pr_merge": false,
+    "apk_install": false,
+    "device_capture": false,
+    "claim_promotion": false,
+    "actor_write_grant": false
+  },
+  "next": "EXPERT_ACTOR_REGISTRATION_OR_OPERATOR_RELAY_SOURCE_EXACT_RETURNS_THEN_AXIOM_ADJUDICATION"
+}
