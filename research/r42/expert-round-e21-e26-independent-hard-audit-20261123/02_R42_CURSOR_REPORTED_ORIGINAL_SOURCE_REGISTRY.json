@@ -1,0 +1,77 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R42_E21_E26_REPORTED_SOURCE_REGISTRY_20261123_R0",
+  "status": "PRODUCER_REPORTED_BYTES_NOT_IN_R42_4686B_RETURN",
+  "return_zip": {
+    "name": "NEXUS_OMEGA_CURSOR_R41_TO_R42_CUSTODY_HANDOFF_RETURN_20261123_R0.zip",
+    "bytes": 4686,
+    "sha256": "7082d8ed3192a9d99d157654b51b0ca2af4548b9f329d8ac24903f962a30f6bb",
+    "sidecar": "MATCH",
+    "internal_manifest": "5_OF_5_MATCH",
+    "crc": "PASS",
+    "stamp_utc": "2026-11-22T23:44:42Z"
+  },
+  "original_artifacts": {
+    "ScientificImuStopDeadlineGate.kt": {
+      "bytes": 4842,
+      "sha256": "d07e86c897d9897e6270a77a190ee856ca87c90ff77e48dcc89f5fdf1df695ac",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "ScientificImuCaptureEngine.kt": {
+      "bytes": 14540,
+      "sha256": "7c9457f972b5cb5e60ef468f6f7b9e5332f20b4176fd65d9495a392868108d17",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "ScientificImuForegroundService.kt": {
+      "bytes": 36049,
+      "sha256": "65c57f547e6f322860ecdb5b39c3c0bfb23409d7e43379e8fb6344b07d4d9b63",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "ScientificImuStopDeadlineGateTest.kt": {
+      "bytes": 7529,
+      "sha256": "0564b43ca59bed7d570b322be19b3f5c37eef10fe3fbee389db68380e9a4eb8b",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "stop_deadline_gate.py": {
+      "bytes": 4450,
+      "sha256": "a48a2f10f98fef02490f8c4c9b5fe5fc7392c91883713d1241807b1548bc560e",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "fc2_gate_engine.py": {
+      "bytes": 14348,
+      "sha256": "3983e9f166a6c3cbeb29d76c2ee5ab8a9b64d44783e4ebf63f23cc452f12da3f",
+      "source_class": "CURSOR_REPORTED_ONLY"
+    },
+    "FC2_GATE_ENGINE_RECEIPT.json": {
+      "bytes": 8082,
+      "sha256": "83b587f320a07851f777f50736f145ec72364c317009df04b926f60e6e1da074",
+      "source_class": "CURSOR_REPORTED_ONLY",
+      "assertions": "12_NEG_6_POS"
+    },
+    "W1_RAW_HTTP_WITNESS_RECEIPT.json": {
+      "bytes": 12499,
+      "sha256": "d2e1a313b83fc6e03ca241d9e27076698664a0376eb6d36cf979a4ebe2fb9a29",
+      "source_class": "CURSOR_REPORTED_ONLY",
+      "assertions": "8_OF_8_OBSERVED_C1_REPORT_LEVEL"
+    }
+  },
+  "git": {
+    "issue": 402,
+    "parent_implementation_issue": 400,
+    "foundation_pr": 401,
+    "foundation_head": "21db4552d91f39cb42ab54523537fd0aa4f8f136",
+    "r41_implementation_pr": 396,
+    "r41_stage2_pr": 399,
+    "bodytwin_witness_issue": 397
+  },
+  "independent_source_bytes_verified": 0,
+  "app_integration_build": "NOT_ESTABLISHED",
+  "x15_per_sample": "OPEN",
+  "physical_gates": {
+    "total": 14,
+    "pass": 0,
+    "alt_d_do_not_run_active": true
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "provider_ack": "NOT_RECEIVED",
+  "bodytwin_validated": "NO"
+}
