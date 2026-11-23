@@ -1,0 +1,95 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_3_EVIDENCE_SOURCE_CLASS_LEDGER_20261123_R0",
+  "entries": [
+    {
+      "id": "L1",
+      "object": "R43-2 FOUNDATION #408/#409",
+      "class": "CHECKPOINT_DOCUMENTATION",
+      "status": "BOUND_FOLLOWUP",
+      "delta": "No science closure; state token S01 canonical",
+      "owner": "AXIOM",
+      "source": "git HEAD 6799d042002278ab770c66f15ed03dbd45f52739"
+    },
+    {
+      "id": "L2",
+      "object": "E23 Public Redacted V2",
+      "class": "RAW_ARCHIVE_INDEPENDENT_REHASH",
+      "status": "CRC_AND_46_46_MATCH",
+      "delta": "old 45/48 defect addressed by new 46-entry manifest",
+      "owner": "E29",
+      "source": "ZIP sha c5b6ced5c8ef36713f58200635dcc77269cfe1d630d35117ddb2784925b4751d"
+    },
+    {
+      "id": "L3",
+      "object": "E23 public disclosure privacy",
+      "class": "SECURITY_REVIEW",
+      "status": "HOLD",
+      "delta": "remaining Cookie/Set-Cookie header fields need inspection/redaction; no public-safe seal asserted",
+      "owner": "E29",
+      "source": "CTRL_GITHUB.headers x2 within private derivative"
+    },
+    {
+      "id": "L4",
+      "object": "R43-2 offchain expert return",
+      "class": "RAW_ARCHIVE_REHASH",
+      "status": "OUTER_CRC_NESTED_10_10_PASS",
+      "delta": "Original scripts and standalone research receipts delivered; actor self-declared n_eff not quorum",
+      "owner": "E28/E33",
+      "source": "outer 41045B sha 9cb58dcb8d10d3fbe18ca57e50aade74bf04b8e5ae3a87b80e6af37534e84219"
+    },
+    {
+      "id": "L5",
+      "object": "E28 DSSE Ed25519 v2",
+      "class": "INDEPENDENT_SYNTHETIC_SCRIPT_REPLAY",
+      "status": "1_CRYPTO_POS_3_CRYPTO_NEG_PASS_LABEL_MOCK",
+      "delta": "exit 0 against original script with output path changed only; production signer absent",
+      "owner": "E28",
+      "source": "source sha b7028c2d15b20a522530602a8bc54a88a2b98683956ff3debbc5109ec9c00275"
+    },
+    {
+      "id": "L6",
+      "object": "E33 C5 rho-fm receipt",
+      "class": "PRODUCER_REPORTED_SYNTHETIC_ANALYTICAL",
+      "status": "SOURCE_SCRIPT_MISSING",
+      "delta": "rho<=0 threshold and closed-form/MC figures need original executable model and independent check",
+      "owner": "E33",
+      "source": "r43_2_c5_null_model_receipt.json"
+    },
+    {
+      "id": "L7",
+      "object": "R43-2 causal canonical binding",
+      "class": "SOURCE_REHASH",
+      "status": "6_6_SUMS_7_7_MANIFEST_MATCH",
+      "delta": "lineage/aliases fixed without historical overwrite or gate promotion",
+      "owner": "E34",
+      "source": "ZIP sha 6926cde565996d72069d5fc6c117aaa9145ae7eb304bdc1ad2b892481aa45bf9"
+    },
+    {
+      "id": "L8",
+      "object": "W1 public 2x4 BODY200 evidence",
+      "class": "INDEPENDENT_WITNESS",
+      "status": "OPEN",
+      "delta": "Vantage variants 200/403/timeout/404, HTTP header-body proof >= cadence still absent",
+      "owner": "E29",
+      "source": "Issue #397"
+    },
+    {
+      "id": "L9",
+      "object": "ten substantive passes / actor independence",
+      "class": "GOVERNANCE",
+      "status": "0_10_AND_0_3",
+      "delta": "Readback and model count not independent actor family",
+      "owner": "E27–E34",
+      "source": "Issue #406 / #408"
+    },
+    {
+      "id": "L10",
+      "object": "Cursor handoff",
+      "class": "PROHIBITION",
+      "status": "NOT_SENT",
+      "delta": "Operator instruction explicitly forbids R43-3 handoff",
+      "owner": "AXIOM",
+      "source": "Operator request 2026-11-23"
+    }
+  ]
+}
