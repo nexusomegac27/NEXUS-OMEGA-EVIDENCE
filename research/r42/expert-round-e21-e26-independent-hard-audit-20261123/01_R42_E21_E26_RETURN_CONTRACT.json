@@ -1,0 +1,99 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R42_E21_E26_EXPERT_RETURN_CONTRACT_20261123_R0",
+  "source_issue": 402,
+  "state": "INVITATION_POSTED_NO_AUTHENTICATED_EXPERT_ACK",
+  "expert_quorum": {
+    "required_actor_distinct_protocol_families": 3,
+    "verified": 0,
+    "status": "NOT_ESTABLISHED"
+  },
+  "lanes": {
+    "E21": {
+      "priority": "P0",
+      "topic": "ANDROID_EVENTTIME_RUNTIME",
+      "required_negatives": 16,
+      "required_positives": 4,
+      "original_kt_source": "NOT_RECEIVED"
+    },
+    "E22": {
+      "priority": "P0",
+      "topic": "FC2_AUTH_GOVERNANCE",
+      "required_negatives": 20,
+      "required_positives": 6,
+      "original_fc2_source": "NOT_RECEIVED"
+    },
+    "E23": {
+      "priority": "P0",
+      "topic": "BODYTWIN_W1_RAW_PUBLIC_WITNESS",
+      "required_negatives": 14,
+      "required_positives": 4,
+      "raw_http_witness": "NOT_INDEPENDENTLY_ESTABLISHED"
+    },
+    "E24": {
+      "priority": "P1",
+      "topic": "CORRELATED_GUM_MC_IDENTIFIABILITY",
+      "required_negatives": 10,
+      "required_positives": 4
+    },
+    "E25": {
+      "priority": "P1",
+      "topic": "REPRO_BUILD_SOURCE_CUSTODY",
+      "required_negatives": 10,
+      "required_positives": 4
+    },
+    "E26": {
+      "priority": "P1",
+      "topic": "OPEN_ARCHITECTURE_COMPETITION",
+      "required_alternatives": 3
+    }
+  },
+  "authorized_actions": {
+    "independent_research": true,
+    "read_only_public_witness": true,
+    "git_read": true,
+    "independent_source_replay_after_verified_custody": true,
+    "external_direct_write": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "merge": false,
+    "apk_install": false,
+    "physical_capture": false,
+    "claim_promotion": false
+  },
+  "machine_return_required_fields": [
+    "object",
+    "lane",
+    "actor_id",
+    "auth_method",
+    "registration",
+    "preexposed",
+    "source_ref",
+    "source_commit",
+    "source_path",
+    "expected_sha256",
+    "observed_sha256",
+    "source_class",
+    "runner",
+    "run_id",
+    "exit_code",
+    "negative_results",
+    "positive_results",
+    "baseline_fail_repaired_pass",
+    "independence",
+    "uncertainty",
+    "source_gaps",
+    "claim_ceiling",
+    "14_physical_gates",
+    "bodytwin_validated",
+    "zip_sha256",
+    "manifest_selfhash"
+  ],
+  "accepted_claim_classes": [
+    "R42_EXPERT_DESK_SOURCE_VERIFIED",
+    "R42_EXPERT_SYNTHETIC_REPLAY_VERIFIED",
+    "R42_APP_JVM_INTEGRATION_VERIFIED",
+    "R42_PUBLIC_WITNESS_VERIFIED"
+  ],
+  "acceptance": "SOFTWARE_PUBLICATION_PHYSICAL_NONCOMPENSATORY",
+  "next": "REGISTERED_EXPERT_ACK_AND_OR_OPERATOR_RELAY_SOURCE_EXACT_RETURN_TO_AXIOM"
+}
