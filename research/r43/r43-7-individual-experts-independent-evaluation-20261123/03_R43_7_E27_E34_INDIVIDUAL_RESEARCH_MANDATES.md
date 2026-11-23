@@ -1,0 +1,16 @@
+# R43-7 · Independent individualized expert creative research responsibilities
+
+Eight independent E27–E34 mandates remain. The user specifically prioritizes **individual expert scientific reasoning and adaptive research**. Distinct scientific perspectives are encouraged; the research claim is warranted by original evidence, not by a forced identical agent script or aliases of one model.
+
+- E27: choose new legitimate original-source custody paths (Kotlin, Gradle, FC2, W1 receipt, X15) from independent Git/ZIP/private authorized operator relay; falsify source substitutions, file version drift and missing execution. Source gap can remain candidly open; do not assign Cursor work.
+- E28: independently examine Ed25519/DSSE Unicode bytes vs character count, PAE types, real role-bound signed ACK and true nonce race under source-exact trust store. Existing R43-6 demo broken-vs-locked 32/1 is not production FC2 validation.
+- E29: optimize lawful read-only BodyTwin W1 evidence gathering, not volume of GETs. Report 403/timeout as vantage, require 2×4 true 200 status/body/header including browser/HTML parity and independent registered witness; preserve private headers and no CAPTCHA bypass.
+- E30: seek one legal optical or IMU reference with actual signal+ground truth, unit/clock/frame calibration and mounting slippage negatives. Do not demand a fixed OpenSim/OpenCap architecture; favor independent alternatives when evidence warrants.
+- E31: retrieve >=3 independently licensed, primary-versioned scientific artifacts that are genuinely new vs NEXUS registry; score portability, rights, source hash, clock traceability and real offline reproducer. A repeated license text is not a new benchmark.
+- E32: fix mathematical estimand and conditional vs marginal uncertainty, full covariance/Monte-Carlo, evaluate 20-session uncertainty honestly and add reference-only plus cost-matched two-arm baselines. Optimize both WIS and independent real-source validity; no physiological/clinical implication.
+- E33: seek original C5 code with source hash/runner; if unavailable, adversarial classical nulls with matched costs: single/averaged/differential/optical reference/permutation, anti-correlated mount and asynchronous clock. Do not conflate prior model families.
+- E34: independently authenticate external evaluator actor and signed ACK on exact bytes; design non-overlapping fresh holdout and protected labels with ACL; prove forged nonempty signer and partial-overlap negative FAIL, full positive valid signed actor PASS. Compare actual resource costs and verified science yield. **E34 cannot self-certify or self-register.**
+
+Each lane shall supply independent v0 and subsequent strategy changes, a preregistered hypothesis, at least two nonredundant search/falsification methods, a real source and provenance/DOI and legal status, independent runtime or explicit NOT_RUN, true positive and negative, false-claim and uncertainty record, actual cost, rehash receipts and actor credentials. Negative or inconclusive outcome is acceptable. No repetition of R43-6 documentation as new discovery. 0/10 original scientific passes and 0/3 actor quorum at entry.
+
+No user named Cursor execution, no Hostinger/www, no human device or APK, no public hidden labels. Decisions return to AXIOM then separately to operator.
