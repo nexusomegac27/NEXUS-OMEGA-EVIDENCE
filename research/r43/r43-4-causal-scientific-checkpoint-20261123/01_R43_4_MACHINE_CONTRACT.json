@@ -1,0 +1,188 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_3_TO_R43_4_MACHINE_RESEARCH_CHECKPOINT_20261123_R0",
+  "state": "R43_3_RESEARCH_CHECKPOINT_ADMIN_CLOSED_C1_R43_4_RESEARCH_SOURCE_BOUND",
+  "source_issue_412": true,
+  "parent_issue_410": 410,
+  "parent_pr_411": {
+    "head": "7a576c8d2dfb2b8570807ea0bb79c016247949be",
+    "manifest_sha256": "cc4c4dc8ec303bf83bf2465a6115f77cdb3de79b1227fced24d5ea4af7728997",
+    "status": "FROZEN_OPEN_DRAFT"
+  },
+  "root_ancestors": {
+    "r43_issue_406": 406,
+    "r43_pr_407": 407,
+    "r43_2_issue_408": 408,
+    "r43_2_pr_409": 409
+  },
+  "original_submitted": {
+    "offchain_outer": {
+      "bytes": 35086,
+      "sha256": "5fc2b0b5d0a574a58c4fed822fdcb17106991bba50c6d6ae1764dea9cb73e440",
+      "crc": "PASS",
+      "inner_bytes": 26667,
+      "inner_sha256": "4e6ce96cdffe50f92e8e916466c43100d55bf3bf4a5b87a765480132b1887a2c",
+      "inner_manifest": "9_OF_9_MATCH"
+    },
+    "research_outer": {
+      "bytes": 422032,
+      "sha256": "04bb2ae11e0e05b578fa333c20d8b3dc44da999077ebcefbce41ddbb6cab71fd",
+      "inner_bytes": 197473,
+      "inner_sha256": "41dcb49b0520ff90305fbbed46855fb3556687056b6c2ff45798c52affdc06f9",
+      "inner_manifest": "16_OF_16_MATCH",
+      "crc": "PASS"
+    },
+    "privacy_v3": {
+      "bytes": 241746,
+      "sha256": "07eed5ca1f5dfa5d76941fc83d321336cfc7adb0fd2c72d2e4ad18c65eaedf06",
+      "manifest": "44_OF_44_MATCH",
+      "members": 45,
+      "crc": "PASS",
+      "sensitive_header_key_scan": "NO_CREDENTIAL_HEADER_KEYS_FOUND_IN_REMAINING_HEADERS",
+      "public_release": "HOLD_OPERATOR_PRIVACY_APPROVAL"
+    },
+    "source_registry_bundle": {
+      "bytes": 232890,
+      "sha256": "60f44604994e7bb285658e1e89d80eb9d72328e54ff5a7d33e62c8a2ee78e69b",
+      "manifest": "15_OF_15_MATCH",
+      "inner_derivative_bytes": 118223,
+      "inner_derivative_sha256": "8b42ffb2b9f8ff21cd316f29111d08ced28fdebc2695e459a29be3c70e9030f2",
+      "original_ancestor_bytes": 118799,
+      "original_ancestor_sha256": "6926cde565996d72069d5fc6c117aaa9145ae7eb304bdc1ad2b892481aa45bf9",
+      "same_binary": false
+    },
+    "p04_outer": {
+      "bytes": 135990,
+      "sha256": "62973ad55161c939b9916316e1a4ec4a770c9aa35c24fa4183a88e09018f0459",
+      "inner_bytes": 70866,
+      "inner_sha256": "d89a47bcce2dc2e416f124f6bb04939826ebcb961eee71f48cd4af1098015430",
+      "manifest": "17_OF_17_MATCH",
+      "crc": "PASS"
+    }
+  },
+  "independent_replays": {
+    "offchain_e28_standard_pae": {
+      "source": "r43_3_e28v3_signer_script.py + runner_script.py + verifier_script.py",
+      "required_order": "SIGNER_GENERATE_PUBKEY_THEN_RUNNER",
+      "actual_run": "EXIT_0_AFTER_PREREQ",
+      "cases": 11,
+      "positive": 2,
+      "negative": 9,
+      "match": 11,
+      "registered_actor": "NO",
+      "production_root": "NO",
+      "nonce_concurrency": "NOT_ESTABLISHED",
+      "claim": "PASS_LIMITED_RESEARCH_CRYPTO"
+    },
+    "zai_e28_custom_pae": {
+      "source": "code/r43_3_e28_dsse_policy_verifier_v3.py",
+      "actual_run": "EXIT_0",
+      "cases": 6,
+      "positive": 1,
+      "negative": 5,
+      "match": 6,
+      "pae_format": "DSSE_v1_SPACE_PLUS_LE32_BINARY_LENGTHS",
+      "official_dsse_pae": "DSSEv1_ASCII_DECIMAL_SPACES",
+      "dsse_interoperability": "FAILED_BY_SOURCE_SYNTAX_NOT_STANDARD_COMPLIANT",
+      "claim": "ED25519_CUSTOM_PAE_ENGINE_RESEARCH_ONLY"
+    },
+    "e32_gum_mc": {
+      "source": "code/r43_3_e32e33_gum_montecarlo.py",
+      "runner": "EXIT_0",
+      "configs": 36,
+      "montecarlo_per_config": 200000,
+      "seed": 20261123,
+      "results_and_thresholds": "EXACT_MACHINE_FIELDS_MATCH",
+      "produced_at_changes": "EXPECTED",
+      "coverage_true_rho_neg09_assumed_pos09": 0.385,
+      "model_limitation": "x_ik=Delta+s_i+eps_ik_IN_BOTH_ARMS_BUT_D=mean(x1)-mean(x2)_CANCELS_COMMON_DELTA",
+      "identifiability": "NOT_ESTABLISHED"
+    },
+    "p04_http": {
+      "rounds": 2,
+      "endpoint_count": 4,
+      "bodies": 8,
+      "headers": 8,
+      "body_sha256": "17_OF_17_IN_PACKAGE_MANIFEST_MATCH",
+      "headers_no_status_line": true,
+      "http200": "RUNNER_REPORTED",
+      "header_date_delta_seconds": 324,
+      "producer_run_delta_seconds": 301,
+      "runner_report_round_spacing_seconds": 328,
+      "feed_seq": [
+        4476,
+        4477
+      ],
+      "source_changed": false,
+      "raw_state_sha256": "93e24636dc980c16096c632630cf5ed3dd24eed8ea7857d1d7b0ed76cf245d81",
+      "content_encoding": "br",
+      "body_representation": "DECOMPRESSED_ENTITY_BYTES",
+      "browser_render_parity": "NOT_OBSERVED",
+      "independent_actor_auth": "NOT_ESTABLISHED",
+      "w1_full_second_party_gate": "OPEN"
+    }
+  },
+  "gate_set": {
+    "r43_3_checkpoint": "CLOSED_AS_DOCUMENTARY_ONLY",
+    "r43_4_research": "OPEN",
+    "e27_kotlin_fc2_gradle_original": "SOURCE_GAP",
+    "e28_standard_dsse_interop": "OPEN_FAILING_CROSS_IMPLEMENTATION",
+    "e28_fc2_production_authority": "NOT_ESTABLISHED",
+    "e29_two_round_raw_entity_headers": "RECEIVED_REHASHED",
+    "e29_http200_status_line": "NOT_VERIFIED",
+    "e29_browser_parity": "NOT_VERIFIED",
+    "e29_independent_actor": "NOT_ESTABLISHED",
+    "e29_second_party_w1": "OPEN",
+    "e23_privacy_v3_integrity": "44_OF_44_MATCH",
+    "e23_public_release": "HOLD",
+    "e31_lawful_original_dataset_benchmark": "NOT_ESTABLISHED",
+    "e32_gum_mc_synthetic_model": "REPLAYED_LIMITED",
+    "e32_identifiability": "OPEN",
+    "e33_c5_original": "SOURCE_GAP",
+    "x15_original_ledger": "OPEN",
+    "substantive_research_passes": "0_OF_10",
+    "authenticated_actor_quorum": "0_OF_3",
+    "physical_14_gates": "HOLD"
+  },
+  "controls": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "consent": "OPEN",
+    "alt_d_do_not_run": true,
+    "cursor_implementation_order_sent": false,
+    "external_direct_write": "DENY_PENDING_REGISTRATION",
+    "hostinger_write": false,
+    "www_write": false,
+    "merge": false,
+    "capture": false,
+    "apk_install": false,
+    "captcha_bypass": false,
+    "claim_promotion": false,
+    "public_private_file_upload": false
+  },
+  "return_fields": [
+    "lane",
+    "actor_id",
+    "registration",
+    "preexposure",
+    "source_sha256",
+    "git_blob_sha1",
+    "source_license",
+    "privacy_clearance",
+    "runner_version",
+    "runner_exit",
+    "source_class",
+    "H0_H1_estimand",
+    "negative_controls",
+    "positive_controls",
+    "independent_execution",
+    "w1_status_line",
+    "w1_body_entity_hash",
+    "w1_header_hash",
+    "w1_client_utc_start_end",
+    "browser_render_parity",
+    "source_gaps",
+    "uncertainty",
+    "complete_pass_status"
+  ],
+  "next": "R43_4_SOURCE_EXACT_E27_E34_RESEARCH_RETURNS_TO_AXIOM_NO_CURSOR"
+}
