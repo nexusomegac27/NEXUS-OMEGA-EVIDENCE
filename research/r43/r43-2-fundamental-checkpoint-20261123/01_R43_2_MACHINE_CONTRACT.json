@@ -1,0 +1,150 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_1_R43_2_FOUNDATIONAL_MACHINE_CHECKPOINT_20261123_R0",
+  "state": "CHECKPOINT_RESEARCH_SOURCE_READY_WITH_MATERIAL_CAVEATS_C1",
+  "predecessor": {
+    "r43_expert_issue": 406,
+    "r43_draft_pr": 407,
+    "r43_draft_sha": "d226c7807b9ce76ea9b97b1033b88883a86f81c6",
+    "r42_cursor_report_zip_bytes": 6055,
+    "r42_cursor_report_sha256": "2cf901eaab21a8e9d4d93706159e71c67d8b02fa83db15357be698e3f33ecc4c"
+  },
+  "sources": {
+    "autoclaw_x19": {
+      "original_filename": "AUTOCL~1.ZIP",
+      "zip_bytes": 51319,
+      "sha256": "98ca470d3dec367d61679520d77289f039bd43b3a4e4084bc352748c3e24cce3",
+      "crc": "PASS",
+      "manifest": "5_OF_5_MATCH",
+      "code_name": "artifacts/x19_r43_reference.py",
+      "code_sha256": "fa5502e7ff00b7a3bd697eae36eb864ce194cd677412c089aa8dc41d260f5058",
+      "original_json_sha256": "743db517304c53a9966521efd3d05ea29086951bfd985edcf5a9a3860fa43a33",
+      "replayed_json_sha256_lf": "fd6007a405345d4650eb6826014e5aca827b07cda5c31ba80fce1754eefb3807",
+      "original_crlf_count": 116,
+      "replay_lf_count": 116,
+      "normalized_byte_match": true,
+      "replay_exit": 0,
+      "classification": "INDEPENDENTLY_REPLAYED_SYNTHETIC_ONLY"
+    },
+    "offchain_receiver": {
+      "original_filename": "R43_AN~1.ZIP",
+      "outer_bytes": 32559,
+      "outer_sha256": "8296380ceca9b9e21fce5330cfbf0675b159895d2acb34a05d4dee479848fce1",
+      "nested_zip_bytes": 20932,
+      "nested_sha256": "0287f98d2fa5d71ffa2a0cbf82159b3da382d5cae7cbb6ff8df74efa25eafed9",
+      "sidecar": "MATCH",
+      "nested_manifest": "8_OF_8_MATCH",
+      "crc": "PASS",
+      "actor": "SELF_DECLARED_UNREGISTERED_N_EFF_ONE_FAMILY",
+      "classification": "RECEIPT_AND_DESK_CUSTODY_ONLY"
+    },
+    "e23_e29_redacted": {
+      "original_filename": "E23_W1~1(1).ZIP",
+      "bytes": 248727,
+      "sha256": "87b0f829fb538a6b62a37d654a83e4d736349dbeb870b8b0cb1ae6f9f0e802b3",
+      "zip_entries": 47,
+      "zip_crc": "PASS",
+      "old_manifest_entries": 48,
+      "remaining_old_entries_matching": 45,
+      "old_manifest_removed_entries": [
+        "browser_artifacts/browser_cookies.json",
+        "browser_artifacts/stage2_bot_verification.png",
+        "browser_artifacts/after_checkbox_click_captcha.png"
+      ],
+      "new_entry": "REDACTION_NOTICE.md",
+      "new_archive_manifest_self_consistent": false,
+      "classification": "REDACTED_SOURCE_HASH_VALID_BUT_RESEAL_REQUIRED_PRIVATE_QUARANTINE"
+    }
+  },
+  "scientific": {
+    "x19": {
+      "sample_count_per_case": 50000,
+      "seed": 20261123,
+      "simulated_mounting_correlation_rho": [
+        1,
+        0.5,
+        0,
+        -1
+      ],
+      "single_to_diff_sd_ratio": [
+        5.90582027994162,
+        1.9836020464319477,
+        1.443643866133144,
+        1.0450378813901389
+      ],
+      "applicability": "CONDITIONAL_CLASSICAL_MODEL_NOT_PHONE_EVIDENCE"
+    },
+    "e28": {
+      "scheme": "Ed25519+DSSE-v1-PAE",
+      "producer_reported_positive": "1/1",
+      "producer_reported_negative": "4/4",
+      "source_script_received": false,
+      "production_trust_root": false,
+      "independent_execution": "NOT_ESTABLISHED"
+    },
+    "e29": {
+      "timed_dual_probe_seconds": 310,
+      "allowlisted_endpoints": 4,
+      "total_get": 8,
+      "http_200_payloads": 0,
+      "http_code": "000_TIMEOUT",
+      "egress_control": "HTTP_200",
+      "second_party_body_witness": "NOT_VERIFIED",
+      "separate_pinned_edge": "403_HCDN_CHALLENGE",
+      "cdn_down": "NOT_PROVEN"
+    },
+    "datasets": {
+      "catalogue_families": 14,
+      "artifact_landing_git_license_desk_pins": "PARTIAL",
+      "actual_benchmark_dataset_bytes_verified_by_axiom": 0,
+      "dual_phone_independent_ground_truth_validated": false
+    },
+    "v3_ladder": {
+      "technical": "PARTIAL",
+      "analytical": "NOT_ESTABLISHED",
+      "clinical": "NOT_ATTEMPTED",
+      "usability": "NOT_ATTEMPTED"
+    },
+    "expert_quorum": {
+      "authenticated_distinct_families_verified": 0,
+      "required": 3,
+      "status": "NOT_ESTABLISHED"
+    },
+    "required_research_passes": 10,
+    "substantively_complete_passes": 0
+  },
+  "inherited_uncertainty": {
+    "kotlin_actual_app_original": "NOT_RECEIVED",
+    "fc2_actual_original": "NOT_RECEIVED",
+    "gradle_xml_original": "NOT_RECEIVED",
+    "w1_original_12499b": "NOT_RECEIVED",
+    "x15_per_sample": "OPEN",
+    "gum_covariance_mc": "NOT_ESTABLISHED",
+    "physical_imu": "NOT_AUTHORIZED"
+  },
+  "gates": {
+    "r43_2_source_custody": "OPEN",
+    "r43_2_redacted_archive_reseal": "OPEN",
+    "r43_2_offline_crypto_independent_replay": "OPEN",
+    "r43_2_independent_public_w1_http200": "OPEN",
+    "r43_2_benchmark_license_data": "OPEN",
+    "r43_2_metrology_reference": "OPEN",
+    "r43_2_ten_complete_passes": "0_OF_10",
+    "r43_2_actor_quorum": "0_OF_3"
+  },
+  "governance": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "alt_d_do_not_run": true,
+    "physical_gates_hold": 14,
+    "operator_one_shot_approval": false,
+    "external_direct_writes": false,
+    "cursor_implementation_order_sent": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "merge": false,
+    "apk_install": false,
+    "capture": false,
+    "claim_promotion": false
+  },
+  "next": "E27_E34_SOURCE_EXACT_R43_2_RETURNS_AND_REDACTION_RESEAL_THEN_AXIOM_R43_2_CLOSURE_THEN_OPERATOR_AUTHORIZED_CURSOR_IMPLEMENTATION_HANDOFF"
+}
