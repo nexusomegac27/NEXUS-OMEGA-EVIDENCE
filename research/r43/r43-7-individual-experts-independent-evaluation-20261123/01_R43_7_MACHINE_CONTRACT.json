@@ -1,0 +1,228 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_6_TO_R43_7_MACHINE_RESEARCH_CHECKPOINT_20261123_R0",
+  "state": "R43_6_LOCAL_REPLAY_PASS_EVAL_AUTH_HOLDOUT_AND_COST_GAPS_R43_7_INDEPENDENT_EXPERT_RESEARCH_ONLY_C1",
+  "predecessor": {
+    "issue": 416,
+    "pr": 417,
+    "head": "4480fc5129023c421af40204abc6e786b074f24c",
+    "manifest_sha256": "7a68eaf461abd8528a4161f0dbbe87fcd3dd7f4c38de810c333b06f15515aaeb",
+    "canonical_chain": "ISSUE_406_PR_407_TO_416_PR_417_APPEND_ONLY",
+    "cursor_implementation": "NOT_SENT"
+  },
+  "original_sources": {
+    "zai_outer": {
+      "path_upload": "R43_6_~2.ZIP",
+      "bytes": 83648,
+      "sha256": "adf3d6cd571615ef7c59013780eb6b73ea7364da5d16256f4d9190581a634896",
+      "crc": "PASS",
+      "inner_bytes": 87138,
+      "inner_sha256": "af6a41ac283cc95e3b04fa5c5ae2eb1694f5e4c3b31aef89cc1b0845386116d8",
+      "inner_manifest": "83_OF_83_MATCH",
+      "sidecar": "MATCH"
+    },
+    "offchain_outer": {
+      "path_upload": "R43_6_~1.ZIP",
+      "bytes": 59942,
+      "sha256": "bbbca9bc497f6e68cb1dfeb1c71378c33169494699df37bfa2f88301528c6743",
+      "crc": "PASS",
+      "inner_bytes": 49064,
+      "inner_sha256": "d8222dd97f3e43e79181fa0e48271558508a232b84b959ae67c064443b13b67e",
+      "inner_manifest": "12_OF_12_MATCH",
+      "actor": "SELF_DECLARED_UNREGISTERED_N_EFF_ONE_ADVISORY"
+    },
+    "source_binding": {
+      "path_upload": "subagent_02.zip",
+      "bytes": 1361161,
+      "sha256": "939f12b8ab9cdd7365bff6ec602b2c42a8e781a98357ecca5a95cbca799eccff",
+      "crc": "PASS",
+      "manifest": "14_OF_14_MATCH",
+      "source_dupes": "6_OF_6_MATCH_EACH_NOT_INDEPENDENT_ACTORS",
+      "scientific_newness": "DOCUMENTARY"
+    },
+    "advisory_readbacks": [
+      {
+        "path_upload": "NEXUS-~1(20261123-141657).MD",
+        "bytes": 17844,
+        "sha256": "3c343447964c27120bbc2a398c42c2635114fc7a35650d2290ff7e605889ec50"
+      },
+      {
+        "path_upload": "Mistral_Return.txt",
+        "bytes": 25215,
+        "sha256": "e3ab3cd7e8b9aa4d2af1740a6170efb10eaf3e0f578a5e379f34d95a2abaa046"
+      },
+      {
+        "path_upload": "NEXUS_~1(20261123-141702).MD",
+        "bytes": 8910,
+        "sha256": "3500f3ef90053e35d93ac6f06b5a5693c2e1fd6dcac01968b10b6e83fef6730e"
+      }
+    ]
+  },
+  "independent_replays": {
+    "evaluator": {
+      "original_code_sha256": "375ecedf7d1bae9184d713c641e30c8996c89bada9a7ca066e5312a6c1062fc4",
+      "frozen_code_sha256": "375ecedf7d1bae9184d713c641e30c8996c89bada9a7ca066e5312a6c1062fc4",
+      "exit": 0,
+      "execution": "UNTRUSTED_ARCHIVE_READ_ONLY_ISOLATED_SCRIPT_PYTHON_MINUS_I_MINUS_S_NETWORK_NOT_USED",
+      "components_match": true,
+      "resource_ledger_match": true,
+      "integrity_selftests_match": true,
+      "verdict_match": false,
+      "verdict_difference": "ORIGINAL_RECEIPT_CREATED_BEFORE_FINAL_EVALUATION_TIMELINE_EVENT_REPLAYED_AFTER_FINAL_EVENT"
+    },
+    "e32": {
+      "sessions": 20,
+      "model": "SYNTHETIC_NOT_PHYSICAL",
+      "coverage": {
+        "v0": 0.7,
+        "v1": 0.7,
+        "v2": 1,
+        "b_wide": 1
+      },
+      "mean_halfwidth": {
+        "v0": 7.1022,
+        "v1": 7.1022,
+        "v2": 2.7914,
+        "b_wide": 1000
+      },
+      "wis_mean": {
+        "v0": 4.5434,
+        "v1": 4.5434,
+        "v2": 1.3289,
+        "b_wide": 97.356
+      },
+      "coverage_v2_binomial_exact_two_sided_95_percent_lower": 0.8315665290169145,
+      "independent_truth": false,
+      "reference_only_baseline": "NOT_RUN"
+    },
+    "dsse": {
+      "test_root": "PUBLIC_DETERMINISTIC_ONLY",
+      "nonascii_type_chars": 43,
+      "nonascii_type_utf8_bytes": 44,
+      "independent_raw_publickey_verification": "PASS",
+      "u1_char_signed_normative": "REJECT",
+      "u2_utf8_bytes_signed_normative": "ACCEPT",
+      "u1_charsigned_custom": "ACCEPT",
+      "u2_standard_signed_chars": "REJECT",
+      "be32_signed_be32": "ACCEPT_ONLY_BE32",
+      "le32_signed_le32": "ACCEPT_ONLY_LE32",
+      "fc2_production_root": "NOT_ESTABLISHED"
+    },
+    "race": {
+      "original_source": "freeze/race_engines.py",
+      "independent_local_runs": 3,
+      "thread_count": 32,
+      "broken_accept_count_each": 32,
+      "fixed_accept_count_each": 1,
+      "scope": "INTENTIONALLY_SLEPT_BROKEN_SIMULATION_NOT_REAL_FC2"
+    },
+    "resources": {
+      "v0": {
+        "wall_s": 33.45,
+        "network_bytes": 0,
+        "tool_calls": 0
+      },
+      "v1": {
+        "wall_s": 135.72,
+        "network_bytes": 372394,
+        "tool_calls": 1
+      },
+      "v2": {
+        "wall_s": 135.38,
+        "network_bytes": 372389,
+        "tool_calls": 1
+      },
+      "b_wide": {
+        "wall_s": 38.32,
+        "network_bytes": 0,
+        "tool_calls": 0
+      },
+      "normalizer_cpu_s_all": 1.2,
+      "tokens": "NOT_INSTRUMENTED",
+      "full_budget_parity": false
+    },
+    "new_adversarial_failures": [
+      {
+        "test": "UNREGISTERED_ACTOR_WITH_GARBAGE_NONEMPTY_SIGNATURE",
+        "original_function": "check_integrity",
+        "observed": [
+          true,
+          "CLEAN"
+        ],
+        "expected": "FAIL",
+        "severity": "HARD"
+      },
+      {
+        "test": "PARTIAL_FEEDBACK_AND_EVAL_ID_OVERLAP",
+        "original_function": "check_integrity",
+        "observed": [
+          true,
+          "CLEAN"
+        ],
+        "expected": "FAIL",
+        "severity": "HARD"
+      }
+    ],
+    "chronology": {
+      "producer_local_sequence": "PRESENT",
+      "separate_actor_timestamp": "NOT_ESTABLISHED",
+      "original_evaluator_receipt": "PENDING_FINAL_EVALUATION",
+      "replayed": "FINAL_EVENT_PRESENT"
+    }
+  },
+  "gate_set": {
+    "r43_7_real_authenticated_actor": "NOT_ESTABLISHED",
+    "r43_7_real_crypto_ack_authority": "FAIL_ON_FORGED_NONEMPTY_SIGNATURE_MUTATION",
+    "r43_7_partial_holdout_nonoverlap": "FAIL_ON_PARTIAL_OVERLAP_MUTATION",
+    "r43_7_original_evaluator_same_byte": "PASS_LOCAL",
+    "r43_7_external_evaluator_acl": "NOT_ESTABLISHED",
+    "r43_7_budget_parity": "FAIL_REPORTED_FULL_RESOURCES",
+    "r43_7_causal_feedback_external_timestamp": "NOT_ESTABLISHED",
+    "r43_7_20session_synthetic_wis": "REPRODUCED_LOCAL",
+    "r43_7_independent_real_source_gain": "NOT_ESTABLISHED",
+    "r43_7_fc2_runtime_and_physical": "NOT_ESTABLISHED",
+    "r43_7_w1_full": "OPEN",
+    "r43_7_privacy_release": "HOLD",
+    "r43_7_full_substantive_passes": "0_OF_10",
+    "r43_7_authenticated_quorum": "0_OF_3"
+  },
+  "expert_lanes": [
+    "E27_ORIGINAL_KOTLIN_FC2_W1_CUSTODY",
+    "E28_DSSE_REAL_AUTH_AND_CONCURRENCY",
+    "E29_BODYTWIN_W1_EXTERNAL_WITNESS",
+    "E30_BIOMECHANICAL_REFERENCE",
+    "E31_INDEPENDENT_SOURCE_ARTIFACTS",
+    "E32_METROLOGY_SHARPNESS_AND_REFERENCES",
+    "E33_CLASSICAL_NULL_AND_C5",
+    "E34_EXTERNAL_AUTHENTICATED_EVALUATOR"
+  ],
+  "original_ten_science_passes": [
+    "P01_ORIGINAL_SOURCES",
+    "P02_ANDROID_TIME_STOP",
+    "P03_FC2_SIGNING",
+    "P04_W1_EXTERNAL",
+    "P05_PRIVACY",
+    "P06_BIOMECHANICS_DATA",
+    "P07_GUM_MC",
+    "P08_HUMAN_DIGITAL_TWIN_CLAIMS",
+    "P09_DIFFERENTIAL_NULL_C5",
+    "P10_AUTHENTICATED_QUORUM"
+  ],
+  "governance": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "alt_d_do_not_run": true,
+    "physical_14_hold": true,
+    "external_github_write": "DENY_PENDING_REGISTRATION",
+    "cursor_implementation_sent": false,
+    "merge": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "capture": false,
+    "apk": false,
+    "captcha_bypass": false,
+    "claim_promotion": false
+  },
+  "actor_ack": "NONE_VERIFIED",
+  "scientific_self_optimization": "NOT_PROVEN",
+  "next": "R43_7_EXPERT_ORIGINAL_SOURCE_FALSIFICATION_INDEPENDENT_VALIDATOR_RETURNS_TO_AXIOM_ONLY"
+}
