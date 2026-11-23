@@ -1,0 +1,96 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R42_R2_CURSOR_IMPLEMENTATION_MACHINE_CONTRACT_20261123_R0",
+  "parent_issue": 400,
+  "expert_mission_issue": 402,
+  "implementation_issue": 404,
+  "r42_foundation_pr": 401,
+  "expert_foundation_pr": 403,
+  "status": "ORDER_SOURCE_BOUND_CURSOR_ACK_PENDING",
+  "r41": "ADMIN_CLOSED_WITH_MATERIAL_GAPS",
+  "r42": "IMPLEMENTATION_NOT_YET_ATTESTED",
+  "r43": "NOT_STARTED_WAIT_CURSOR_RETURN",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "consent": "OPEN",
+  "physical": {
+    "gates": 14,
+    "pass": 0,
+    "alt_d_do_not_run": true,
+    "owner_one_shot": false
+  },
+  "original_eight_cursor_sources": {
+    "reported": 8,
+    "independently_received": 0,
+    "verification": "REQUIRED_PRIOR_TO_RUNTIME_PASS"
+  },
+  "expert_r2": {
+    "outer_zip_bytes": 83998,
+    "outer_zip_sha256": "398c00f818152ba494a412332ab911c9493e4dbe6159e446ef099dd82d61034a",
+    "inner_zip_bytes": 68361,
+    "inner_zip_sha256": "03710ce73288a6bb82217ea99322972a36a6e8669faf2e3a7eb3748ec202257d",
+    "inner_manifest": "16_OF_16_MATCH",
+    "scripts": 9,
+    "crc": "PASS",
+    "independently_reexecuted_offline": {
+      "e21": "16_NEG_SPEC_GREEN_13_LEGACY_RED_4_POS",
+      "e22": "20_NEG_BLOCKED_6_POS",
+      "e24": "10_NEG_DETECTED_4_POS",
+      "e25": "10_NEG_DETECTED_4_POS",
+      "e26": "3_ALTERNATIVES_FALSIFIER_EXECUTED"
+    },
+    "e23": "NETWORK_PROBE_NOT_REEXECUTED_BY_AXIOM",
+    "actor": "OPERATOR_RELAY_UNREGISTERED",
+    "quorum": "NOT_ESTABLISHED"
+  },
+  "autoclaw_x18": {
+    "zip_bytes": 55911,
+    "sha256": "3fde6979f36fc8a6371bdd781885272e94535fff6ee2da5d6ed5f640330e27f0",
+    "manifest": "7_OF_7_MATCH",
+    "crc": "PASS",
+    "independently_reexecuted_synthetic": "E21_20_20_E22_26_26_E23_18_18_E24_14_14",
+    "authority": "DEMO_ONLY_NOT_ORIGINAL_RUNTIME"
+  },
+  "e23_vantage": {
+    "zip_bytes": 397270,
+    "sha256": "eefb73a343c7897e0942797d463c49fe374de0308efd94ed11dd8a1dba42784a",
+    "manifest": "48_OF_48_MATCH",
+    "crc": "PASS",
+    "http_200_payloads": 0,
+    "http_403_challenge_bytes": 5768,
+    "http_403_challenge_sha256": "69eacef2f355c22ff53745adb39ff0076d2093a767a72e38070ca83c7c5569df",
+    "tcp_external_success_11_of_12": true,
+    "snapshots_seconds_apart": 271,
+    "nominal_feed_seconds": 300,
+    "captcha_bypass_authorized": false,
+    "cookie_artifacts": "PRIVATE_QUARANTINE_ONLY",
+    "root_cause": "NOT_ESTABLISHED"
+  },
+  "source_regression_tests": [
+    "N42-R2-01_EXPECTED_TYPED_ABORT_NOT_GENERIC_EXCEPTION",
+    "N42-R2-02_DUPLICATE_SAMPLE_ID_PRESERVE_INGRESS_COUNT",
+    "N42-R2-03_IDEMPOTENT_STOP_ACK_NO_REPEATED_SIDE_EFFECT",
+    "N42-R2-04_CRYPTO_AUTHENTICATOR_NOT_SIGNER_STRING",
+    "N42-R2-05_W1_SNAPSHOT_INTERVAL_GTE_REAL_FEED_CADENCE",
+    "N42-R2-06_EVENT_ORIGIN_CLOCK_MAPPING_NOT_TRUSTED_LABEL"
+  ],
+  "required_real_path_evidence": {
+    "immutable_source_hash": "NOT_ESTABLISHED",
+    "red_old_green_new": "NOT_ESTABLISHED",
+    "app_jvm_gradle": "NOT_ESTABLISHED",
+    "fc2_signer_verification": "NOT_ESTABLISHED",
+    "w1_independent_http_payload": "NOT_ESTABLISHED",
+    "x15_original_per_sample": "OPEN"
+  },
+  "prohibitions": {
+    "capture": true,
+    "adb_sensor_start": true,
+    "apk_install": true,
+    "pr_merge": true,
+    "hostinger_write": true,
+    "www_write": true,
+    "claim_promotion": true,
+    "automatic_captcha_bypass": true,
+    "public_private_cookie_upload": true
+  },
+  "next": "CURSOR_R42_IMPLEMENTATION_RETURN_WITH_ACTUAL_SOURCE_TESTS_THEN_AXIOM_ADJUDICATION_THEN_R43_ORDER"
+}
