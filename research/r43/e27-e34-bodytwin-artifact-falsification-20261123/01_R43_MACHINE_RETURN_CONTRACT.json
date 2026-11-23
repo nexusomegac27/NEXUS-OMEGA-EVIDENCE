@@ -1,0 +1,146 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_E27_E34_RESEARCH_MACHINE_RETURN_CONTRACT_20261123_R0",
+  "state": "EXPERT_RESEARCH_SOURCE_ISSUED_PROVIDER_ACK_PENDING",
+  "parent_return": {
+    "object": "NEXUS_OMEGA_CURSOR_R42_R2_IMPLEMENTATION_RETURN_20261123_R0",
+    "zip_bytes": 6055,
+    "sha256": "2cf901eaab21a8e9d4d93706159e71c67d8b02fa83db15357be698e3f33ecc4c",
+    "sidecar": "MATCH",
+    "crc": "PASS",
+    "internal_reports": "5_OF_5_MATCH",
+    "source_grade": "REPORT_LEVEL_ONLY"
+  },
+  "canonical": {
+    "r41": "ADMIN_CLOSED_WITH_GAPS",
+    "r42": "CURSOR_IMPLEMENTATION_RETURN_REHASHED_RECEIPT_ONLY",
+    "r43": "RESEARCH_ONLY_NOT_RUNTIME"
+  },
+  "historic_refs": {
+    "r42_implementation_issue": 404,
+    "r42_implementation_pr": 405,
+    "r42_experts_issue": 402,
+    "r42_experts_pr": 403,
+    "bodytwin_w1_issue": 397,
+    "r43_expert_issue": 406
+  },
+  "inherited_gaps": {
+    "gradle_report_original": "NOT_RECEIVED",
+    "kotlin_source_original": "NOT_RECEIVED",
+    "fc2_engine_original": "NOT_RECEIVED",
+    "fc2_production_auth": "NOT_ESTABLISHED",
+    "w1_12499b_receipt_original": "NOT_RECEIVED",
+    "w1_independent_http200_headers": "NOT_ESTABLISHED",
+    "w1_ge_300s": "NOT_VERIFIED",
+    "gum_monte_carlo": "NOT_ESTABLISHED",
+    "x15_per_event": "OPEN",
+    "independent_quorum": "NOT_ESTABLISHED"
+  },
+  "lanes": {
+    "E27": {
+      "priority": "P0",
+      "category": "REAL_APP_EVENT_TIME_AND_CLOCK",
+      "accepted_scope": "READ_ONLY_AND_VERIFIED_OFFLINE"
+    },
+    "E28": {
+      "priority": "P0",
+      "category": "FC2_AUTHENTICATED_CRYPTO_AND_BUILD_PROVENANCE",
+      "accepted_scope": "RESEARCH_AND_QUARANTINED_OFFLINE"
+    },
+    "E29": {
+      "priority": "P0",
+      "category": "INDEPENDENT_BODYTWIN_PUBLIC_W1_AND_HDT_CLAIM",
+      "accepted_scope": "FOUR_ALLOWLIST_URLS_READ_ONLY"
+    },
+    "E30": {
+      "priority": "P1",
+      "category": "OPENSENSE_OPENCAP_BIOMECHANICAL_REFERENCES"
+    },
+    "E31": {
+      "priority": "P1",
+      "category": "PUBLIC_DATASET_ARTIFACT_LICENSE_AND_BENCHMARKS"
+    },
+    "E32": {
+      "priority": "P1",
+      "category": "EDITH_V3_FHIR_HUMAN_TWIN_DEFINITIONS"
+    },
+    "E33": {
+      "priority": "P1",
+      "category": "QUANTUM_GALILEO_EXPERIMENTAL_METHOD_NULL_MODEL_ONLY"
+    },
+    "E34": {
+      "priority": "P1",
+      "category": "INDEPENDENT_ADVERSARIAL_CROSSREVIEW_AND_ARCHITECTURE"
+    }
+  },
+  "required_research_passes": 10,
+  "artifact_fields": [
+    "candidate_id",
+    "artifact_type",
+    "title",
+    "official_url",
+    "doi",
+    "immutable_git_commit_or_release",
+    "source_sha256_or_not_obtained",
+    "license_or_unknown",
+    "access_or_auth_terms",
+    "sensitive_data_risk",
+    "technical_dependency",
+    "independent_reference_grade",
+    "dual_phone_transferability",
+    "r43_claim_ceiling",
+    "negative_falsifier",
+    "positive_control",
+    "recommended_action",
+    "owner_actor",
+    "original_file_received",
+    "independently_rehashed"
+  ],
+  "return_fields": [
+    "object",
+    "actor_id",
+    "registered_actor",
+    "independence_preexposure",
+    "lane",
+    "protocol_family",
+    "original_source_pins",
+    "artifacts_manifest",
+    "source_type",
+    "test_command",
+    "exit_status",
+    "negative_tests",
+    "positive_controls",
+    "uncertainty",
+    "privacy_license_review",
+    "open_gaps",
+    "rejected_claims",
+    "claim_ceiling"
+  ],
+  "quorum": {
+    "required_genuine_actor_distinct_protocol_families": 3,
+    "verified": 0,
+    "status": "NOT_ESTABLISHED"
+  },
+  "actions": {
+    "external_research": true,
+    "source_read": true,
+    "public_w1_read_only": true,
+    "independent_external_artifact_search": true,
+    "quarantine_first": true,
+    "external_github_direct_write": false,
+    "apk_install": false,
+    "sensor_capture": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "merge": false,
+    "claim_promotion": false,
+    "captcha_bypass": false
+  },
+  "scientific": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": "NO",
+    "physical_hard_gates": "14_HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "clinical_validation": "NOT_ESTABLISHED"
+  },
+  "next": "AUTHENTICATED_SOURCE_EXACT_EXPERT_RESEARCH_RETURNS_THEN_AXIOM_ADJUDICATION"
+}
