@@ -1,0 +1,149 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_3_MACHINE_RESEARCH_CHECKPOINT_20261123_R0",
+  "status": "FOLLOWUP_R43_2_BOUND_R43_3_FALSIFICATION_ACTIVE_C1_NO_CURSOR",
+  "canonical_chain": {
+    "r43_base_issue": 406,
+    "r43_base_draft_pr": 407,
+    "r43_base_head": "d226c7807b9ce76ea9b97b1033b88883a86f81c6",
+    "r43_2_issue": 408,
+    "r43_2_pr": 409,
+    "r43_2_head": "6799d042002278ab770c66f15ed03dbd45f52739",
+    "r43_2_machine_state": "CHECKPOINT_RESEARCH_SOURCE_READY_WITH_MATERIAL_CAVEATS_C1",
+    "r43_3_issue": 410,
+    "r43_2_classification": "FOLGECHECKPOINT_ONLY_NOT_SCIENCE_TERMINAL",
+    "cursor_target_issue_404": "DO_NOT_DISPATCH"
+  },
+  "source_evidence": {
+    "e23_v2": {
+      "archive_bytes": 246311,
+      "archive_sha256": "c5b6ced5c8ef36713f58200635dcc77269cfe1d630d35117ddb2784925b4751d",
+      "archive_crc": "PASS",
+      "archive_entries": 47,
+      "manifest_name": "SHA256SUMS_SEALED.txt",
+      "manifest_sha256": "764c25635424644ea6ed9f53a5c207bec009eee91e6f363bffe7028831bdc07b",
+      "manifest_entries": 46,
+      "independent_manifest_matches": 46,
+      "remaining_original_files": 45,
+      "exclusions": 3,
+      "privacy_release": "HOLD_UNREVIEWED_COOKIE_HEADER_FIELDS",
+      "w1_application_http200_witness": "NOT_ESTABLISHED"
+    },
+    "e28_offchain": {
+      "outer_zip_bytes": 41045,
+      "outer_sha256": "9cb58dcb8d10d3fbe18ca57e50aade74bf04b8e5ae3a87b80e6af37534e84219",
+      "outer_crc": "PASS",
+      "inner_zip_bytes": 30412,
+      "inner_sha256": "ecb934d3931864869fba56a8349651ed3b81953fe0b2e5081c1d76cc67e27e74",
+      "inner_sidecar": "MATCH",
+      "inner_manifest": "10_OF_10_MATCH",
+      "actor": "SELF_DECLARED_UNREGISTERED_PREEXPOSED",
+      "independence_quorum_contribution": 0
+    },
+    "e28_v2_independent_replay": {
+      "source_path": "r43_2_anschluss/r43_2_e28_poc_v2_deterministic_script.py",
+      "sha256": "b7028c2d15b20a522530602a8bc54a88a2b98683956ff3debbc5109ec9c00275",
+      "replay": "EXIT_0_ISOLATED_TEMP_OUTPUT_PATH_ONLY_MODIFIED",
+      "cryptographic_valid_positive": "1_OF_1_PASS",
+      "cryptographic_invalid_negative": "3_OF_3_REJECTED",
+      "forged_signer_policy": "MOCKED_CONSTANT_TRUE_NOT_ACTUAL_AUTHORIZATION_VERIFICATION",
+      "reported_total_negatives": "4_OF_4_INCLUDING_MOCKED_POLICY",
+      "receipt_result_fields_match": true,
+      "fc2_production_trust_root": "NOT_ESTABLISHED"
+    },
+    "r43_2_causal_binding": {
+      "zip_bytes": 118799,
+      "sha256": "6926cde565996d72069d5fc6c117aaa9145ae7eb304bdc1ad2b892481aa45bf9",
+      "crc": "PASS",
+      "sha256sums": "6_OF_6_MATCH",
+      "manifest_json": "7_OF_7_FILES_SHA_AND_BYTES_MATCH",
+      "canonicalization_caveat": "OLD_STATE_ALIASES_ONLY_S01_CANONICAL"
+    },
+    "e33_c5": {
+      "report_path": "r43_2_anschluss/r43_2_c5_null_model_receipt.json",
+      "simulation_script_received": false,
+      "producer_reported_seed": 20261124,
+      "producer_reported_samples_per_scenario": 50000,
+      "claimed_mc_max_rel_deviation": 0.006926308239462562,
+      "rho": [
+        1,
+        0.5,
+        0,
+        -1
+      ],
+      "mount_fraction": [
+        0.9,
+        0.5
+      ],
+      "theoretical_threshold": "R_DIFF_OVER_R_AVG_LE_HALF_FOR_RHO_LE_ZERO_CONDITIONAL_UNVERIFIED",
+      "status": "PRODUCER_RECEIPT_DESK_MODEL_NOT_REPLAYED"
+    },
+    "e31_artifacts": {
+      "license_blob_rehash": "PRODUCER_REPORTED",
+      "datasets_downloaded_and_independently_verified": 0,
+      "eligible_candidates": "DESK_PINNED_ONLY",
+      "actual_dual_phone_transferability": "NOT_ESTABLISHED"
+    }
+  },
+  "gates": {
+    "parent_r43_2_checkpoint": "BOUND_ONLY",
+    "e23_v2_resealed_integrity": "46_OF_46_PASS",
+    "e23_v2_privacy_release": "HOLD",
+    "e28_crypto_demo_signature": "PASS_LIMITED",
+    "e28_forged_signer_policy": "NOT_ESTABLISHED",
+    "e28_fc2_production": "NOT_ESTABLISHED",
+    "e29_w1_independent_dual_http200": "OPEN",
+    "e27_original_app": "SOURCE_GAP",
+    "e33_c5_independent_source": "SOURCE_GAP",
+    "e31_benchmark_data": "NOT_OBTAINED",
+    "gum_monte_carlo": "NOT_ESTABLISHED",
+    "ten_substantive_passes": "0_OF_10",
+    "actor_distinct_quorum": "0_OF_3"
+  },
+  "governance": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "physical_hard_gates_hold": 14,
+    "alt_d_do_not_run": true,
+    "consent_bind": "OPEN",
+    "cursor_implementation_order_sent": false,
+    "external_github_write_permission": "DENY_PENDING_REGISTRATION",
+    "pr_merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "capture": false,
+    "adb": false,
+    "apk_install": false,
+    "claim_promotion": false,
+    "captcha_bypass": false,
+    "public_private_zip_upload": false
+  },
+  "research_lanes": [
+    "E27_ANDROID_SOURCE",
+    "E28_FC2_TRUST",
+    "E29_PUBLIC_W1",
+    "E30_IMU_BIOMECHANICS",
+    "E31_BENCHMARK_ARTIFACTS",
+    "E32_HDT_VVUQ_GUM",
+    "E33_CORRELATION_NULL_MODELS",
+    "E34_INDEPENDENT_CROSSREVIEW"
+  ],
+  "machine_return_fields": [
+    "actor",
+    "registration",
+    "source_immutable_pins",
+    "source_sha256",
+    "license",
+    "privacy_review",
+    "hypothesis_H0",
+    "hypothesis_H1",
+    "negative_controls",
+    "positive_controls",
+    "observed_execution",
+    "runner_digest",
+    "uncertainty",
+    "pass_complete_or_partial",
+    "falsification_result",
+    "remaining_source_gaps"
+  ],
+  "next": "R43_3_E27_E34_INDEPENDENT_RESEARCH_RETURNS_TO_AXIOM_THEN_SEPARATE_OPERATOR_DECISION_RE_CURSOR"
+}
