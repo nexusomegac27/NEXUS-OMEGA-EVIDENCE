@@ -1,0 +1,198 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_5_ADAPTIVE_EXPERT_RESEARCH_MACHINE_CONTRACT_20261123_R0",
+  "state": "R43_4_ADMIN_RESEARCH_CHECKPOINT_BOUND_R43_5_ADAPTIVE_METHOD_RESEARCH_OPEN_C1",
+  "lineage": {
+    "r43_4_issue": 412,
+    "r43_4_pr": 413,
+    "r43_4_head": "667220de0ce8d2e96b729a1622e4f96b675e634a",
+    "r43_4_manifest_sha256": "1389a17c318ab97c55770867f7b999502db9f288930e6c85b9764441e729edb8",
+    "r43_5_issue": 414,
+    "r43_5_pr": "PENDING_OPEN_DRAFT",
+    "cursor_target": "DO_NOT_DISPATCH"
+  },
+  "original_sources": {
+    "zai_outer": {
+      "bytes": 133654,
+      "sha256": "502561e65648ce4692274cbd55b118edcfb1871ca0110d5c9e52f7d26716f66e",
+      "crc": "PASS",
+      "nested_bytes": 125112,
+      "nested_sha256": "ff9e36b6aec1a407acace75e54b85bf969790bf7e3518343a908700c518b978a",
+      "nested_manifest": "15_OF_15_MATCH"
+    },
+    "offchain_outer": {
+      "bytes": 40308,
+      "sha256": "e156994f3b5b05a057c545f70aa86f8559490ba412c586a154a055de5d22bbbf",
+      "crc": "PASS",
+      "nested_bytes": 27902,
+      "nested_sha256": "69474847fa79a4c68900d4639f4afae36a11b136d577f2bd5c3b032e93833912",
+      "nested_manifest": "9_OF_9_MATCH"
+    },
+    "p04_retransfer": {
+      "bytes": 58758,
+      "sha256": "12d300abb0056440f84fbac73140fadfd0ea8d54bd12068c8cf2b9d50862d9ad",
+      "nested_bytes": 70866,
+      "nested_sha256": "d89a47bcce2dc2e416f124f6bb04939826ebcb961eee71f48cd4af1098015430",
+      "nested_manifest": "17_OF_17_MATCH",
+      "status_line": "NOT_VERIFIED",
+      "browser_parity": "NOT_VERIFIED",
+      "second_actor": "NOT_ESTABLISHED"
+    },
+    "github_413_readback": {
+      "bytes": 46301,
+      "sha256": "233a35cd7eb2dac33f47ee4253f334f306e9b72cf8eddd0b16929f07a9df7a68",
+      "crc": "PASS",
+      "duplicated_source_paths": "NOT_INDEPENDENT_ACTORS"
+    }
+  },
+  "source_based_replays": {
+    "e28_zai_v4": {
+      "original_path": "code/r43_4_e28_dsse_v4_cross_verifier.py",
+      "source_sha256": "40d1483ee51cb5428f823c0a4e59304a8e376adb8fdb292c62bf63361a43f3cf",
+      "original_exec": "EXIT0_ONLY_OUT_DIR_CHANGED",
+      "cases": "12_OF_12_EXPECTED_MATCH",
+      "novelty": "CORRECTED_NONSTANDARD_V3_PAE",
+      "production_root": "NOT_ESTABLISHED",
+      "concurrency": "SEQUENTIAL_ONLY",
+      "same_actor": true
+    },
+    "e32_zai_ident": {
+      "original_path": "code/r43_4_e32e33_identifiability.py",
+      "sha256": "baf76d601f5d88f30769951b1885ce0b603b17e0566e57ca99d892e350503fc9",
+      "original_exec": "EXIT0_ONLY_OUT_DIR_CHANGED",
+      "receipt_semantics": "MATCH_EXCEPT_TIMESTAMP",
+      "conditional_fixed_assembly_coverage": {
+        "sigma_s6_rho0": 0.0806,
+        "sigma_s6_rho_minus05": 0.0666
+      },
+      "independent_synthetic_reference_coverage": [
+        0.9496,
+        0.949,
+        0.9485,
+        0.9497
+      ],
+      "u_fused": [
+        0.2499,
+        0.9931,
+        3.619,
+        7.8205
+      ],
+      "limit": "SYNTHETIC_ONLY_NO_OPPO_REFERENCE"
+    },
+    "offchain_e28": {
+      "original_script": "r43_4_e28_dsse_interop_script.py",
+      "path_dependency": "R43_3_SIGNER_NOT_INCLUDED",
+      "source_grade": "RECEIPT_PRODUCER_REPORTED_OFFLINE",
+      "binary_PAE": "BIG_ENDIAN_UINT32_RECONSTRUCTION",
+      "original_zai_V3": "LITTLE_ENDIAN_UINT32_CUSTOM_PAE",
+      "identical_scheme": false
+    },
+    "offchain_e32": {
+      "original_script": "r43_4_e32_identifiability_script.py",
+      "source_grade": "PRODUCER_REPORTED_MODEL_CLASS_REPLICATION",
+      "assumptions": "DIFFERENT_PARAMETERS_AND_CONDITIONALITY_NO_CROSS_MODEL_HASH_IDENTITY"
+    }
+  },
+  "adaptive_method_experiment": {
+    "primary_outcome": "INDEPENDENTLY_VERIFIED_NEW_EVIDENCE_DELTA_NOT_SELF_SCORE",
+    "hypothesis_null": "ADAPTIVE_NO_REPLICABLE_VALID_EVIDENCE_GAIN_OVER_FROZEN_METHOD",
+    "hypothesis_alt": "ADAPTIVE_MORE_VERIFIED_EVIDENCE_AT_MATCHED_BUDGET_AND_SAME_GATE_FLOORS",
+    "iterations": {
+      "baseline": "v0_FROZEN",
+      "adaptive": [
+        "v1",
+        "v2"
+      ],
+      "max_initial": 3,
+      "extra_requires_new_evidence_or_operator_scope": true
+    },
+    "sources": {
+      "task_bank_size_min": 8,
+      "holdout_separation": true,
+      "source_exact": true,
+      "unique_artifact_version": true
+    },
+    "required_analytics": [
+      "unique_accepted_findings_delta",
+      "false_positive_rate",
+      "negative_mutation_catch_rate",
+      "original_source_rehash_pass_rate",
+      "correct_source_gap_abstention",
+      "novel_source_artifact_rate",
+      "time_cost_per_verified_finding",
+      "independent_replay_success",
+      "paired_CI_or_small_sample_unresolved",
+      "strategy_diff_and_rollback"
+    ],
+    "evaluation_auth": "INDEPENDENT_NON_WRITABLE_ADJUDICATOR_ONLY",
+    "repeated_paraphrase_or_tokens_as_progress": false,
+    "promotion_rule": "INDEPENDENT_METRIC_IMPROVEMENT_AND_ZERO_SAFETY_OR_VALIDITY_REGRESSIONS",
+    "if_no_evaluator": "NOT_ESTABLISHED"
+  },
+  "lanes": [
+    "E27_ADAPTIVE_SOURCE_RETRIEVAL",
+    "E28_ADAPTIVE_CRYPTO_INTEROP_FALSIFICATION",
+    "E29_ADAPTIVE_W1_VANTAGE_DISCOVERY",
+    "E30_ADAPTIVE_BIOMECHANICAL_REFERENCE_SEEKING",
+    "E31_ADAPTIVE_ARTIFACT_LICENSE_TRIAGE",
+    "E32_ADAPTIVE_IDENTIFIABILITY_MODEL_CRITIQUE",
+    "E33_ADAPTIVE_EXPERIMENTAL_DESIGN",
+    "E34_ADAPTIVE_INDEPENDENT_AUDIT_GOVERNANCE"
+  ],
+  "inherited_debts": {
+    "full_passes": "0_OF_10",
+    "quorum": "0_OF_3",
+    "original_android_fc2_gradle_w1": "SOURCE_GAP",
+    "w1_second_party_full": "OPEN",
+    "privacy_v3": "HOLD",
+    "e28_prod_identity": "NOT_ESTABLISHED",
+    "e33_c5_original": "SOURCE_GAP",
+    "benchmark_data_ground_truth": "NOT_ESTABLISHED",
+    "gum_physical": "NOT_ESTABLISHED",
+    "physical_gates": "14_HOLD"
+  },
+  "confidentiality": {
+    "no_sensitive_raw_public": true,
+    "no_reuse_keys": true,
+    "no_self_registration": true,
+    "no_external_auto_write": true,
+    "no_cursor_order": true,
+    "no_hostinger_write": true,
+    "no_www_write": true,
+    "no_apk": true,
+    "no_capture": true,
+    "no_merge": true,
+    "no_claim_promotion": true,
+    "no_captcha_bypass": true
+  },
+  "external_actor_ack": "NOT_RECEIVED",
+  "authenticated_quorum": "0_OF_3",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "alt_d_do_not_run": true,
+  "required_expert_return_fields": [
+    "lane",
+    "actor_id",
+    "registration",
+    "preexposure",
+    "baseline_strategy_sha256",
+    "v1_strategy_sha256",
+    "v2_strategy_sha256",
+    "reasoned_diff",
+    "predicted_delta",
+    "observed_delta",
+    "baseline_task_ids",
+    "heldout_task_ids_unseen",
+    "source_immutable_refs",
+    "original_artifact_sha256",
+    "runner_environment",
+    "actual_neg_and_pos_control_results",
+    "failure_and_rollback_log",
+    "source_gap_ledger",
+    "budget_consumed",
+    "independent_evaluator_id",
+    "external_evaluation_ci_or_insufficient_data",
+    "ten_pass_ledger",
+    "claim_ceiling"
+  ],
+  "next": "R43_5_ADAPTIVE_EXPERT_SOURCE_EXACT_RESEARCH_RETURNS_THEN_AXIOM_META_ADJUDICATION_THEN_OPERATOR_DECISION_ONLY"
+}
