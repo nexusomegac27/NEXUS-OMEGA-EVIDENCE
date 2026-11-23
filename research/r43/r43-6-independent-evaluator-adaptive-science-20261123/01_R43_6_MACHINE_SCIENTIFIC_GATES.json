@@ -1,0 +1,158 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_5_TO_R43_6_INDEPENDENT_ADAPTIVE_SCIENCE_MACHINE_CONTRACT_20261123_R0",
+  "state": "R43_5_REPRODUCED_LOCAL_SYNTHETIC_DELTAS_BUT_EVALUATOR_MUTATED_R43_6_HARD_GATES",
+  "ancestor": {
+    "r43_5_issue": 414,
+    "r43_5_pr": 415,
+    "head": "3155025114849d92cf4376e7295957af38f52d92",
+    "manifest_sha256": "6ac429f360bf691e2c4398876f1ed06cf4667867a41558375be7c1e93b43e5c3",
+    "r43_6_issue": 416
+  },
+  "sources": {
+    "offchain_outer": {
+      "bytes": 61489,
+      "sha256": "344db25b5fcbe55638494061713ae8931b4a247536c0ef3f7069b88faa5e6d6c",
+      "crc": "PASS",
+      "inner_bytes": 52272,
+      "inner_sha256": "c7bcfb8a0c625095cf945d9758a29696495d6444a5e5904f2c03dd46741dd1f7",
+      "manifest": "22_OF_22_MATCH",
+      "sidecar": "MATCH"
+    },
+    "zai_outer": {
+      "bytes": 75742,
+      "sha256": "1251c0d8eb5a1d12b6e209f6c2ac668ea36139863c032c2a5e14137b99a77100",
+      "crc": "PASS",
+      "inner_bytes": 71972,
+      "inner_sha256": "7881a8a1c4baaec77a6fe6af6c58f3040fde5e07fa2a2cc74a08ef197c293053",
+      "manifest": "63_OF_63_MATCH",
+      "sidecar": "MATCH"
+    },
+    "binding_outer": {
+      "bytes": 149051,
+      "sha256": "44685af1228fc4e8ce7beaf02212b23884dd5e515319089ba6c79f90bf16c814",
+      "crc": "PASS",
+      "manifest": "13_OF_13_MATCH"
+    },
+    "readbacks": [
+      {
+        "filename": "NEXUS-~2(20261123-125415).MD",
+        "sha256": "e1775573b0d884328be0be206a099abdc0eb3d2e0d88f640c4db6f0452d6b292"
+      },
+      {
+        "filename": "NEXUS-~1(20261123-125416).MD",
+        "sha256": "e02b6bb665b74ea3979a50676f13df4c8f17030ae398678e95a998143a43682a"
+      },
+      {
+        "filename": "NEXUS_~1(20261123-125421).MD",
+        "sha256": "edc53465cced95497e9a9845ae8a00e98a4102216c087203fde05faed2a91ca9"
+      }
+    ]
+  },
+  "independent_zai_recomputation": {
+    "command_type": "ARCHIVED_EVALUATOR_REPLAY_IN_PRIVATE_TEMP_SCRATCH_BASE_PATH_ONLY_CHANGED",
+    "exit": 0,
+    "summary_semantic_match": true,
+    "synthetic_eval_sessions": 28,
+    "recovery_successes": {
+      "v0": 18,
+      "v1": 20,
+      "v2": 26
+    },
+    "assumption_correct": {
+      "v0": 14,
+      "v1": 5,
+      "v2": 23
+    },
+    "delta0_false_positive": {
+      "v0": 1,
+      "v1": 0,
+      "v2": 0
+    },
+    "mean_interval_halfwidth": {
+      "v0": 0.876523,
+      "v1": 7.0373,
+      "v2": 10.6926
+    },
+    "coverage_v2_minus_v0": 0.2857142857142857,
+    "assumption_delta_v2_minus_v0": 0.32142857142857145,
+    "exploratory_mcnemar_p": {
+      "coverage": 0.0078125,
+      "assumption": 0.049041748046875
+    },
+    "pairing": "SAME_28_SYNTHETIC_SESSIONS",
+    "original_frozen_evaluator_sha256": "94fad101faa49cae1955235857b097e59f1b6dee92fd8338bcea84ee7563f11a",
+    "shipped_evaluator_sha256": "9fa701a5fa51c226d771daf4787ecccf91ac8a3830594da4deea02eaf78b0092",
+    "frozen_evaluator_match": false,
+    "posthoc_amendment": "DECLARED_REJECT_NORMALIZATION_AND_BROWSER_SCORING_WITH_NO_ORIGINAL_EVALUATOR_BYTES",
+    "frozen_strategy_v2_included_before_arm_runs": true,
+    "causal_v1_feedback_then_v2_patch": "NOT_ESTABLISHED",
+    "arm_wall_seconds": {
+      "v0": 32.2,
+      "v1": 207.6,
+      "v2": 209.4
+    },
+    "cost_parity": "FAILED_IN_OBSERVED_WALL_SECONDS",
+    "holdout_external_acl": "NOT_ESTABLISHED_LABELS_IN_PRODUCER_PACKAGE",
+    "primary_scientific_claim": "REPRODUCED_POSTHOC_SCORER_ONLY_NOT_PROVEN_SELF_OPTIMIZATION",
+    "interval_sharpness_ratio_v2_to_v0": 12.199201369081576
+  },
+  "offchain_evidence": {
+    "new_source_hunt_self_reported": 3,
+    "novelty_vs_canonical_registry": "NOT_ADJUDICATED_OPEN_SIM_OPENCAP_PREVIOUSLY_KNOWN",
+    "no_external_holdout_adjudicator": true,
+    "github_api_rate_limit_workaround": "PRODUCER_REPORTED_EXECUTION_TRACE",
+    "w1_timed_out": "4_OF_4",
+    "original_fc2_kotlin_gradle_c5": "SOURCE_GAP"
+  },
+  "mandatory_hard_gates": [
+    "G0_SOURCE_INTEGRITY",
+    "G1_AUTHENTICATED_INDEPENDENT_EVALUATOR",
+    "G2_PRECOMMITTED_IMMUTABLE_EVALUATOR_AND_HOLDOUT",
+    "G3_REAL_BUDGET_PARITY",
+    "G4_CAUSAL_VERSION_CHRONOLOGY",
+    "G5_PROPER_INTERVAL_SCORE_SHARPNESS",
+    "G6_FRESH_UNSEEN_ORIGINAL_SOURCE_TASKS",
+    "G7_DISCRIMINATING_ADVERSARIAL_MUTATIONS",
+    "G8_NOVELTY_GROUND_TRUTH_LICENSE_AND_PROVENANCE",
+    "G9_C1_NO_HARDWARE_OR_WWW_ACTIONS"
+  ],
+  "research_lanes": [
+    "E27_SOURCE_CUSTODY_ADAPTATION",
+    "E28_NORMATIVE_DSSE_NONASCII_AND_CONCURRENT_RACE",
+    "E29_BODYTWIN_EVIDENCE_VOI",
+    "E30_BIOMECHANICAL_REFERENCE",
+    "E31_LAWFUL_NEW_BENCHMARK",
+    "E32_CONDITIONAL_VS_MARGINAL_PROPER_SCORE",
+    "E33_CLASSICAL_NULL_C5_SOURCE",
+    "E34_PROTECTED_INDEPENDENT_EVALUATOR"
+  ],
+  "science_debts": {
+    "substantive_passes": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "protected_evaluator": "NOT_ESTABLISHED",
+    "adaptive_method_better": "NOT_PROVEN",
+    "w1_full": "OPEN",
+    "e23_privacy": "HOLD",
+    "fc2_prod_trust": "NOT_ESTABLISHED",
+    "kotlin_original": "SOURCE_GAP",
+    "c5_original": "SOURCE_GAP"
+  },
+  "governance": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "physical_14_gates": "HOLD",
+    "alt_d_do_not_run": true,
+    "cursor_order_sent": false,
+    "external_write": false,
+    "pr_merge": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "device_capture": false,
+    "apk_install": false,
+    "captcha_bypass": false,
+    "claim_promotion": false
+  },
+  "actor_ack": "NOT_RECEIVED",
+  "independent_quorum": "0_OF_3",
+  "next": "R43_6_EXPERT_RESEARCH_ORIGINAL_SOURCE_REPLAY_AND_TRUE_INDEPENDENT_HOLDOUT_RETURN_TO_AXIOM_ONLY_THEN_OPERATOR_DECISION"
+}
