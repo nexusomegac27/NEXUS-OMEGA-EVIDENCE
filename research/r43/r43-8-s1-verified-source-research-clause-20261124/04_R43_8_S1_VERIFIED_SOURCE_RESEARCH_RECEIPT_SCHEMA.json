@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS OMEGA VSRD-C1 research source receipt (example machine contract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "lane",
+    "actor_id",
+    "actor_auth_class",
+    "research_question",
+    "search_queries",
+    "source_routes",
+    "sources",
+    "counterhypothesis",
+    "discriminating_negative",
+    "verified_class",
+    "claim_ceiling",
+    "actual_test_result"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor_auth_class": {
+      "enum": [
+        "AUTHENTICATED_REGISTERED",
+        "SELF_DECLARED_ADVISORY",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "H0": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "H1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "search_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "query",
+          "date_utc"
+        ],
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "date_utc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "source_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "route",
+          "independence_type"
+        ],
+        "properties": {
+          "route": {
+            "type": "string"
+          },
+          "independence_type": {
+            "enum": [
+              "ORIGINAL_SOURCE",
+              "METADATA_CROSSCHECK",
+              "INDEPENDENT_EMPIRICAL_SOURCE",
+              "MIRROR_DUPLICATE",
+              "OTHER"
+            ]
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "original_url",
+          "status",
+          "evidence_class",
+          "bytes_sha256_or_NOT_OBTAINED"
+        ],
+        "properties": {
+          "original_url": {
+            "type": "string"
+          },
+          "final_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "publisher_domain": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "response_status": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "checked_at_utc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "persistent_identifier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_date_version_commit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title_authors": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "content_scope_read": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bytes_sha256_or_NOT_OBTAINED": {
+            "type": "string"
+          },
+          "rights_privacy": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retractions_corrections": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "registry_prior_duplicate_check": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_class": {
+            "enum": [
+              "Q0_CANDIDATE_UNVERIFIED",
+              "Q1_ADDRESS_IDENTITY_VERIFIED",
+              "Q2_METADATA_CROSSCHECKED",
+              "Q3_PRIMARY_CONTENT_READ",
+              "Q4_ORIGINAL_BYTES_REHASHED",
+              "Q5_INDEPENDENT_REPLAY",
+              "QX_ACCESS_LIMITED_OR_SOURCE_GAP"
+            ]
+          },
+          "source_gap_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "counterhypothesis": {
+      "type": "string"
+    },
+    "discriminating_negative": {
+      "type": "string"
+    },
+    "actual_test_result": {
+      "type": "string"
+    },
+    "verified_class": {
+      "enum": [
+        "Q0_CANDIDATE_UNVERIFIED",
+        "Q1_ADDRESS_IDENTITY_VERIFIED",
+        "Q2_METADATA_CROSSCHECKED",
+        "Q3_PRIMARY_CONTENT_READ",
+        "Q4_ORIGINAL_BYTES_REHASHED",
+        "Q5_INDEPENDENT_REPLAY",
+        "QX_ACCESS_LIMITED_OR_SOURCE_GAP"
+      ]
+    },
+    "uncertainty_and_transfer_limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "independent_adjudicator_provenance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resource_budget": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requested_next_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_ceiling": {
+      "const": "C1_DESCRIPTIVE_ONLY"
+    }
+  }
+}
