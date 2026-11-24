@@ -1,0 +1,52 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R44_5_TO_R44_6_SOURCE_ACCESS_EXPERT_MAXI_ORDER_20261124_R0",
+  "status": "PREPARED_NOT_DISPATCHED_C1",
+  "parent": {
+    "issue": 439,
+    "pr": 440,
+    "head": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a"
+  },
+  "seal": "NEXUS Ω OMEGA",
+  "transfer": "GITHUB_ONLY_ZIP_SHA256_RECEIVER_READBACK",
+  "required_source_ack": true,
+  "source_missing_scoped_only": true,
+  "source_substitution": false,
+  "original_r44_5_r1": "LOCAL_MATCH_GITHUB_PUBLICATION_PENDING",
+  "mandates": [
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34"
+  ],
+  "counts": {
+    "inherited_canonical_negative": "0/24",
+    "r44_5_designs": 28,
+    "r44_6_designs": 18,
+    "r44_6_executed": 0,
+    "authenticated_quorum": "0/3",
+    "full_science": "0/10"
+  },
+  "walls": {
+    "bodytwin_validated": false,
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23_privacy": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "cursor": false,
+    "merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "live_exploit": false,
+    "expert_dispatch": false,
+    "execution": false,
+    "claim_promotion": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "next": "SOURCE_RECEIVER_PREFLIGHT_AND_EXACT_ORIGINAL_GITHUB_CUSTODY_THEN_OPERATOR_SCOPED_START"
+}

@@ -1,0 +1,256 @@
+{
+  "state": "DESIGN_ONLY_NOT_RUN",
+  "inherited_R44_3": "N01-N24 preserve 0/24, source #435/#436",
+  "R44_5": [
+    {
+      "id": "GI-N01",
+      "scope": "per-feed freshness",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N02",
+      "scope": "PR missing from stale viewer",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N03",
+      "scope": "304 not new evidence",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N04",
+      "scope": "browser clock not authenticated",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N05",
+      "scope": "Cursor inactivity not always-on proof",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N06",
+      "scope": "comment revision dedupe",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N07",
+      "scope": "reject 66 hex",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N08",
+      "scope": "FDA alias dedupe",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N09",
+      "scope": "live asset vs archive byte parity",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N10",
+      "scope": "untrusted markup inert",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N11",
+      "scope": "403/429 not fresh",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-N12",
+      "scope": "CI/hash not science",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-P01",
+      "scope": "pinned per-lane source",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-P02",
+      "scope": "three synthetic distinct keys",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-P03",
+      "scope": "scoped deny capture permits read",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GI-P04",
+      "scope": "missing FDA time abstain",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N01",
+      "scope": "canonical roundtrip/duplicate/nonfinite",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N02",
+      "scope": "independent anchor missing or swapped",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N03",
+      "scope": "retry/cache/unmatched starts",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N04",
+      "scope": "test convention and multiplicity",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N05",
+      "scope": "same key/principal alias",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N06",
+      "scope": "no source substitution",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N07",
+      "scope": "feed not run",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-N08",
+      "scope": "synthetic not live",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-P01",
+      "scope": "canonical roundtrip and external anchor",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-P02",
+      "scope": "exact statistical grid",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-P03",
+      "scope": "scoped deny",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    },
+    {
+      "id": "GLM-P04",
+      "scope": "source gap leaves unrelated approved lane available",
+      "status": "NOT_RUN_BY_THIS_ORDER"
+    }
+  ],
+  "R44_6": [
+    {
+      "id": "SA-N01",
+      "scope": "Issue/PR without content or manifest must not be receiver-ready",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N02",
+      "scope": "Wrong ref, missing file, case mismatch or moved branch must not satisfy pinned bytes",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N03",
+      "scope": "403/429/timeout/cache/truncated or HTML bytes must not be FRESH_MATCH",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N04",
+      "scope": "Alternate dataset/CPython/Iris/openFDA must not satisfy NEXUS/FDA dual phone original",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N05",
+      "scope": "Valid hash but no license/privacy clearance cannot authorize publication",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N06",
+      "scope": "Branch or tool error without readback not delivery",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N07",
+      "scope": "Lease seq38 hash mismatch must fail even when links/head match",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N08",
+      "scope": "Same-writer custody anchor must not be independent",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N09",
+      "scope": "8 unique configurations cannot be 16; repeated receipts not independent",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N10",
+      "scope": "Full rank but ill-conditioned must not imply practical identifiability",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N11",
+      "scope": "GN nonconvergence / single-vector covariance must not yield calibrated PASS by omission",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N12",
+      "scope": "Test probability ordering mislabeled or numerical underflow treated as exact zero must fail",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N13",
+      "scope": "Untrusted archive path/duplicate/expansion reject safely",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-N14",
+      "scope": "python -O must not bypass verification gate",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-P01",
+      "scope": "Commit-pinned original, manifest and receiver SHA agree; transport only",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-P02",
+      "scope": "One authorized lane continues despite unrelated missing source",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-P03",
+      "scope": "Two lawful routes to identical bytes agree without independent-source double count",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    },
+    {
+      "id": "SA-P04",
+      "scope": "Negative failure preserved with append-only correction and independent new check",
+      "status": "NOT_RUN",
+      "required": "prereg+positive/negative receipt+lease or exact NOT_RUN"
+    }
+  ]
+}
