@@ -1,0 +1,97 @@
+{
+  "schema": "nexus-omega/r44-5/operator-start-binding/v0",
+  "object": "NEXUS_OMEGA_AXIOM_R44_4_TO_R44_5_GITHUB_IMPLANT_BODYTWIN_EVIDENCE_BRIDGE_RESEARCH_ORDER_20261124_R1",
+  "state": "R44_5_OPERATOR_START_BOUND_STACK_PUBLISHING_PENDING_C1",
+  "authority": "OPERATOR_ALEXANDER_BOURAS_VIA_CHAT_2026_11_24",
+  "executor_binding": "MISTRAL_VIBE_INDEPENDENT_ADJUDICATOR_PUBLICATION_ONLY",
+  "created_at": "2026-11-24T17:57:14.716Z",
+  "operator_start": {
+    "given": true,
+    "channel": "WEBAPP_CHAT",
+    "binding_phrase": "R44-5 MAXIAUFTRAG starten",
+    "expert_dispatch": "ORDER_OPEN_PENDING_STACK_PUBLICATION_ON_GITHUB",
+    "expert_live_dispatch_by_issue": false
+  },
+  "parent": {
+    "R44_4_issue": 437,
+    "R44_4_pr": 438,
+    "R44_4_head": "e4680dde61203e7e22a5e44579a94448f411d290",
+    "R44_4_manifest": "e38f18beaa334bf3e3986827fca5fc5516820417f9db56e3cd25b596758594e4",
+    "R44_3_issue": 435,
+    "R44_3_pr": 436,
+    "R44_3_head": "8abd8ddd3afa7099322996625b8d09bbe1494f0e",
+    "R44_3_manifest": "7764ff7a13b39cd88117db7631e449f653caab21806289c5a3eb03303bf6f350",
+    "R44_R2_issue": 433,
+    "R44_R2_pr": 434,
+    "R44_R2_head": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+    "VSRD_issue": 422
+  },
+  "stack_custody": {
+    "status": "LOCAL_SEALED_NOT_YET_PUBLISHED",
+    "files_reported": 11,
+    "bytes_reported": 33427,
+    "zip_sha256_reported": "303a4761580dcbaa604e6e723bc8972d215f6660b86488fa8e4b57a76f541b67",
+    "manifest_claim": "10_OF_10_MATCH_REPORTED",
+    "publication": "PENDING_OPERATOR_UPLOAD_ADDITIVE_COMMIT_OWN_MANIFEST",
+    "reconstruction_forbidden": true
+  },
+  "inherited_custody_reported": {
+    "glm_archive_bytes": 1478570,
+    "glm_archive_sha256": "9bd62223f43a536077b795c91e04b8152a4100b9fc5fcddde05409a15a1f88b3",
+    "glm_original_manifest": "141_OF_141_MATCH",
+    "missing_originals": 0,
+    "retained_files": 283,
+    "distinct_hashes": 141,
+    "receipt_ledger_entries": 30,
+    "receipt_strict_canonical": "29_OF_30",
+    "receipt_hash_stored_order": "30_OF_30",
+    "receipt_chain": "30_OF_30",
+    "strict_status": "FAIL_SEQ3_PRESERVED",
+    "seq11_correction": "IDENTICAL_OBSERVABLES_ORIGINAL_POINTER",
+    "lease_ledger": "249_OF_249_MATCH",
+    "prereg_R1": "MATCH",
+    "prereg_R2": "MATCH",
+    "independent_glm_replay": "NOT_RUN",
+    "qwen_return": "50_OF_50_MATCH",
+    "fda_uci_samples": "SHA256_MATCH"
+  },
+  "cr04": {
+    "id": "CR-04_EQUAL_TAIL_MISLABELLED_PROBABILITY_ORDER",
+    "reported_source": "expB/run_B.py pvalue_minlike",
+    "n": 50, "k": 47, "p": 0.95,
+    "glm_doubled_tail": 0.918934,
+    "scipy_probability_order": 0.738899,
+    "difference": 0.180035,
+    "independent_recomputation": "MATCH_3_OF_3_BY_MISTRAL_VIBE_2026_11_24_ARITHMETIC_ONLY"
+  },
+  "execution": {
+    "R44_4": "ADMINISTRATIVE_CHECKPOINT_CLOSED_OPERATOR_LEVEL_GITHUB_NOT_EXECUTED_C1",
+    "R44_5": "START_BY_OPERATOR_GIVEN",
+    "canonical_negatives": "0_OF_24_EXECUTED",
+    "falsifier_designs_reported": 28,
+    "counter_merge_rule": "28_AND_24_REPORTED_SEPARATELY_NEVER_MERGED"
+  },
+  "permissions": {
+    "github_write": "YES_SCOPE_START_BINDING_ONLY_VIA_OPERATOR_CHAT_2026_11_24",
+    "merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "live_exploit": false,
+    "cursor_order": "NOT_SENT",
+    "external_expert_auto_run": false
+  },
+  "inherited_walls": {
+    "authenticated_quorum": "0_OF_3",
+    "full_scientific_passes": "0_OF_10",
+    "bodytwin_validated": false,
+    "physical_14_gates": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "e23_privacy": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "claim_promotion": false
+  },
+  "next": "STACK_PUBLISH_ON_GITHUB -> EXPERT_DISPATCH_E27_E34 -> RETURNS -> AXIOM_INDEPENDENT_ADJUDICATION -> OPERATOR_DECISION"
+}
