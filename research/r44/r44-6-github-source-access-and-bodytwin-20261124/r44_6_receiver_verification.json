@@ -1,0 +1,231 @@
+{
+  "schema": "nexus/r44-6/receiver-verification/v0",
+  "actor": "GLM UNREGISTERED_ADVISORY_C1 (n_eff=1, append-only, advisory-only; NOT EXPERT_ACK, NOT quorum)",
+  "verification_date": "2026-11-25 (Europe/Berlin)",
+  "results": {
+    "00_START_HERE_EXPERT_MANUAL.md": {
+      "bytes": 4896,
+      "sha256": "355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346",
+      "size_match": true,
+      "hash_match": true
+    },
+    "01_EXPERT_MAXI_ORDER.md": {
+      "bytes": 5216,
+      "sha256": "8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8",
+      "size_match": true,
+      "hash_match": true
+    },
+    "02_SOURCE_REGISTRY.json": {
+      "bytes": 17904,
+      "sha256": "4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70",
+      "size_match": true,
+      "hash_match": true
+    },
+    "03_CONTROL_MATRIX.json": {
+      "bytes": 7572,
+      "sha256": "cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71",
+      "size_match": true,
+      "hash_match": true
+    },
+    "04_RETURN_SCHEMA.json": {
+      "bytes": 2256,
+      "sha256": "39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7",
+      "size_match": true,
+      "hash_match": true
+    },
+    "05_INTAKE_FINDINGS.md": {
+      "bytes": 2627,
+      "sha256": "ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc",
+      "size_match": true,
+      "hash_match": true
+    },
+    "06_MACHINE_CONTRACT.json": {
+      "bytes": 1353,
+      "sha256": "5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a",
+      "size_match": true,
+      "hash_match": true
+    },
+    "99_SHA256SUMS.txt": {
+      "bytes": 633,
+      "sha256": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1",
+      "selfhash_pin_match": true
+    },
+    "manifest_7_of_7": {
+      "lines": 7,
+      "all_match": true,
+      "detail": [
+        {
+          "member": "00_START_HERE_EXPERT_MANUAL.md",
+          "match": true
+        },
+        {
+          "member": "01_EXPERT_MAXI_ORDER.md",
+          "match": true
+        },
+        {
+          "member": "02_SOURCE_REGISTRY.json",
+          "match": true
+        },
+        {
+          "member": "03_CONTROL_MATRIX.json",
+          "match": true
+        },
+        {
+          "member": "04_RETURN_SCHEMA.json",
+          "match": true
+        },
+        {
+          "member": "05_INTAKE_FINDINGS.md",
+          "match": true
+        },
+        {
+          "member": "06_MACHINE_CONTRACT.json",
+          "match": true
+        }
+      ]
+    },
+    "sidecar": {
+      "bytes": 92,
+      "sha256": "f4b5e376e0c305059fffdaedc13f6a933c6537cba425cfea27913effce3d7524",
+      "size_match": true,
+      "hash_match": true,
+      "contains_zip_pin": true
+    },
+    "zip": {
+      "bytes": 43449,
+      "sha256": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a",
+      "size_match": true,
+      "hash_match": true
+    },
+    "zip_safety": {
+      "member_count": 8,
+      "names": [
+        "00_START_HERE_EXPERT_MANUAL.md",
+        "01_EXPERT_MAXI_ORDER.md",
+        "02_SOURCE_REGISTRY.json",
+        "03_CONTROL_MATRIX.json",
+        "04_RETURN_SCHEMA.json",
+        "05_INTAKE_FINDINGS.md",
+        "06_MACHINE_CONTRACT.json",
+        "99_SHA256SUMS.txt"
+      ],
+      "duplicates": false,
+      "unsafe_paths": [],
+      "crc_all_pass": true,
+      "member_hashes": {
+        "00_START_HERE_EXPERT_MANUAL.md": {
+          "bytes": 4896,
+          "sha256": "355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346"
+        },
+        "01_EXPERT_MAXI_ORDER.md": {
+          "bytes": 5216,
+          "sha256": "8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8"
+        },
+        "02_SOURCE_REGISTRY.json": {
+          "bytes": 17904,
+          "sha256": "4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70"
+        },
+        "03_CONTROL_MATRIX.json": {
+          "bytes": 7572,
+          "sha256": "cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71"
+        },
+        "04_RETURN_SCHEMA.json": {
+          "bytes": 2256,
+          "sha256": "39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7"
+        },
+        "05_INTAKE_FINDINGS.md": {
+          "bytes": 2627,
+          "sha256": "ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc"
+        },
+        "06_MACHINE_CONTRACT.json": {
+          "bytes": 1353,
+          "sha256": "5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a"
+        },
+        "99_SHA256SUMS.txt": {
+          "bytes": 633,
+          "sha256": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1"
+        }
+      },
+      "internal_manifest_checks": [
+        {
+          "line_member": "00_START_HERE_EXPERT_MANUAL.md",
+          "target": "00_START_HERE_EXPERT_MANUAL.md",
+          "match": true
+        },
+        {
+          "line_member": "01_EXPERT_MAXI_ORDER.md",
+          "target": "01_EXPERT_MAXI_ORDER.md",
+          "match": true
+        },
+        {
+          "line_member": "02_SOURCE_REGISTRY.json",
+          "target": "02_SOURCE_REGISTRY.json",
+          "match": true
+        },
+        {
+          "line_member": "03_CONTROL_MATRIX.json",
+          "target": "03_CONTROL_MATRIX.json",
+          "match": true
+        },
+        {
+          "line_member": "04_RETURN_SCHEMA.json",
+          "target": "04_RETURN_SCHEMA.json",
+          "match": true
+        },
+        {
+          "line_member": "05_INTAKE_FINDINGS.md",
+          "target": "05_INTAKE_FINDINGS.md",
+          "match": true
+        },
+        {
+          "line_member": "06_MACHINE_CONTRACT.json",
+          "target": "06_MACHINE_CONTRACT.json",
+          "match": true
+        }
+      ]
+    },
+    "r44_5_additive_at_a63ee946": {
+      "10_R44_5_R1_ORDER_CHAT_TRANSMISSION_SNAPSHOT_RECEIVER_PUBLISHED.md": {
+        "github_bytes": 11089,
+        "github_sha256": "f7f47387d05531c59533c61c4cf466978ccb52b50b4f7443b84549ebfc5b86a8",
+        "local_bytes": null,
+        "local_sha256": null,
+        "github_vs_local_identical": false,
+        "github_matches_r44_5_receipt_pin_bytes": true,
+        "github_matches_r44_5_receipt_pin_sha": true
+      },
+      "11_R44_5_RECEIVER_CUSTODY_AND_SCOPE_CONTRACT_C1.json": {
+        "github_bytes": 6488,
+        "github_sha256": "ccd2117505d528499db6ccaad7d3a9e75658093f1ff4e2a85c21c2d06d349b98",
+        "local_bytes": null,
+        "local_sha256": null,
+        "github_vs_local_identical": false,
+        "github_matches_r44_5_receipt_pin_bytes": true,
+        "github_matches_r44_5_receipt_pin_sha": true
+      },
+      "99_SHA256SUMS_R44_5_RECEIVER_ADDITIVE_20261124.txt": {
+        "github_bytes": 252,
+        "github_sha256": "1ff92b06db04c32f50c3168e2c40a13fdeb344ba6f79fac6f87f8a4c9a4ab29f",
+        "local_bytes": null,
+        "local_sha256": null,
+        "github_vs_local_identical": false,
+        "github_matches_r44_5_receipt_pin_bytes": true,
+        "github_matches_r44_5_receipt_pin_sha": true
+      }
+    },
+    "r44_5_additive_manifest_selfhash": {
+      "sha256": "1ff92b06db04c32f50c3168e2c40a13fdeb344ba6f79fac6f87f8a4c9a4ab29f",
+      "matches_local_receipt_selfhash": true
+    },
+    "verdict": {
+      "package_7_files_hash_and_size_match": true,
+      "manifest_selfhash_match": true,
+      "manifest_lines_all_match": true,
+      "sidecar_match": true,
+      "zip_bytes_and_sha_match": true,
+      "zip_safe_and_crc_pass": true,
+      "internal_manifest_all_match": true,
+      "r44_5_additive_github_equals_local": false
+    }
+  }
+}

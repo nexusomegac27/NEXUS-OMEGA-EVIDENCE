@@ -1,0 +1,20 @@
+rc=0 http=200 bytes=43449 sha256=cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a file=R44_6_EXPERT_ORDER_R0.zip
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/R44_6_EXPERT_ORDER_R0.zip
+rc=0 http=200 bytes=92 sha256=f4b5e376e0c305059fffdaedc13f6a933c6537cba425cfea27913effce3d7524 file=R44_6_EXPERT_ORDER_R0.zip.sha256
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/R44_6_EXPERT_ORDER_R0.zip.sha256
+rc=0 http=200 bytes=4896 sha256=355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346 file=00_START_HERE_EXPERT_MANUAL.md
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/00_START_HERE_EXPERT_MANUAL.md
+rc=0 http=200 bytes=5216 sha256=8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8 file=01_EXPERT_MAXI_ORDER.md
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/01_EXPERT_MAXI_ORDER.md
+rc=0 http=200 bytes=17904 sha256=4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70 file=02_SOURCE_REGISTRY.json
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/02_SOURCE_REGISTRY.json
+rc=0 http=200 bytes=7572 sha256=cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71 file=03_CONTROL_MATRIX.json
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/03_CONTROL_MATRIX.json
+rc=0 http=200 bytes=2256 sha256=39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7 file=04_RETURN_SCHEMA.json
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/04_RETURN_SCHEMA.json
+rc=0 http=200 bytes=2627 sha256=ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc file=05_INTAKE_FINDINGS.md
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/05_INTAKE_FINDINGS.md
+rc=0 http=200 bytes=1353 sha256=5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a file=06_MACHINE_CONTRACT.json
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/06_MACHINE_CONTRACT.json
+rc=0 http=200 bytes=633 sha256=97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1 file=99_SHA256SUMS.txt
+     url=https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/99_SHA256SUMS.txt

@@ -1,0 +1,446 @@
+{
+  "schema": "nexus/r44-6/receiver-preflight/v1",
+  "generated_utc": "2026-11-24T19:20:25.666571+00:00",
+  "actor": {
+    "github_login": "nexusomegac27",
+    "role": "OFF_CHAIN_UNREGISTERED_ADVISORY_RECEIVER",
+    "registration_state": "UNREGISTERED_ADVISORY_C1",
+    "n_eff": 1,
+    "same_writer_caveat": "GitHub writes and readbacks run under the operator-owned account nexusomegac27; this receiver round is advisory off-chain, NOT an independent external receiver ACK, NOT EXPERT_ACK, no quorum credit.",
+    "expert_ack": false,
+    "quorum_credit": false
+  },
+  "lane": "receiver_preflight_only_no_lane_start",
+  "order_commit": "89ccff827d564309cba3274bff94a6d577e6853a",
+  "tool_capability": {
+    "terminal": true,
+    "curl": true,
+    "python3": true,
+    "sha256": true,
+    "network_egress": "raw.githubusercontent.com reachable, HTTP 200"
+  },
+  "results": {
+    "sidecar": {
+      "bytes": 92,
+      "sha256_of_sidecar_file": "f4b5e376e0c305059fffdaedc13f6a933c6537cba425cfea27913effce3d7524",
+      "declared_zip_sha256": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a",
+      "declared_zip_name": "R44_6_EXPERT_ORDER_R0.zip",
+      "matches_claim": true
+    },
+    "zip": {
+      "bytes": 43449,
+      "bytes_match": true,
+      "sha256": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a",
+      "sha256_match": true
+    },
+    "zip_safety": {
+      "member_count": 8,
+      "duplicates": [],
+      "absolute_paths": [],
+      "traversal": [],
+      "backslash": [],
+      "symlinks": [],
+      "total_uncompressed_bytes": 42457,
+      "safe": true
+    },
+    "zip_crc": {
+      "testzip": null,
+      "all_crc_pass": true
+    },
+    "zip_members": {
+      "00_START_HERE_EXPERT_MANUAL.md": {
+        "bytes": 4896,
+        "sha256": "355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346"
+      },
+      "01_EXPERT_MAXI_ORDER.md": {
+        "bytes": 5216,
+        "sha256": "8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8"
+      },
+      "02_SOURCE_REGISTRY.json": {
+        "bytes": 17904,
+        "sha256": "4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70"
+      },
+      "03_CONTROL_MATRIX.json": {
+        "bytes": 7572,
+        "sha256": "cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71"
+      },
+      "04_RETURN_SCHEMA.json": {
+        "bytes": 2256,
+        "sha256": "39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7"
+      },
+      "05_INTAKE_FINDINGS.md": {
+        "bytes": 2627,
+        "sha256": "ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc"
+      },
+      "06_MACHINE_CONTRACT.json": {
+        "bytes": 1353,
+        "sha256": "5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a"
+      },
+      "99_SHA256SUMS.txt": {
+        "bytes": 633,
+        "sha256": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1"
+      }
+    },
+    "manifest": {
+      "manifest_bytes": 633,
+      "manifest_sha256": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1",
+      "manifest_sha256_matches_claim": true,
+      "entries": 7,
+      "file_readback_7": [
+        {
+          "file": "00_START_HERE_EXPERT_MANUAL.md",
+          "manifest_sha": "355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "01_EXPERT_MAXI_ORDER.md",
+          "manifest_sha": "8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "02_SOURCE_REGISTRY.json",
+          "manifest_sha": "4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "03_CONTROL_MATRIX.json",
+          "manifest_sha": "cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "04_RETURN_SCHEMA.json",
+          "manifest_sha": "39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "05_INTAKE_FINDINGS.md",
+          "manifest_sha": "ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        },
+        {
+          "file": "06_MACHINE_CONTRACT.json",
+          "manifest_sha": "5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a",
+          "repo_match": true,
+          "zip_member_match": true,
+          "repo_vs_zip_byte_equal": true
+        }
+      ],
+      "manifest_in_zip_present": true,
+      "manifest_repo_vs_zip_byte_equal": true
+    },
+    "repo_files": {
+      "00_START_HERE_EXPERT_MANUAL.md": {
+        "bytes": 4896,
+        "sha256": "355eeb9aa097a2e897c3fbc0a039d531d0e6f2747709c2874cf43936801e5346"
+      },
+      "01_EXPERT_MAXI_ORDER.md": {
+        "bytes": 5216,
+        "sha256": "8e80f59b4c7c601e946baee80b5b87e5987dea2af2c9bb5736054a7ce7425da8"
+      },
+      "02_SOURCE_REGISTRY.json": {
+        "bytes": 17904,
+        "sha256": "4881502cd08c9fb3236fb7b424b478f02996636d771e6fde178bcc693481dc70"
+      },
+      "03_CONTROL_MATRIX.json": {
+        "bytes": 7572,
+        "sha256": "cf86217b17d1478de392f0c32808b091e87be58d606bc773dbcd1ae64fb14b71"
+      },
+      "04_RETURN_SCHEMA.json": {
+        "bytes": 2256,
+        "sha256": "39a28fa2317dfdf3dc9924dcbcca569f7c50df5c1e8292c18ad45c79a08ed4f7"
+      },
+      "05_INTAKE_FINDINGS.md": {
+        "bytes": 2627,
+        "sha256": "ffe9ea9b80f69e6b63cd68f2adb5fc84b346d18a5186f6f4294a47b5236daafc"
+      },
+      "06_MACHINE_CONTRACT.json": {
+        "bytes": 1353,
+        "sha256": "5d2da4a5757ec7321dd391076038cf27ba1360e9dd65ea3277aad3656bf6af2a"
+      },
+      "99_SHA256SUMS.txt": {
+        "bytes": 633,
+        "sha256": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1"
+      },
+      "R44_6_EXPERT_ORDER_R0.zip": {
+        "bytes": 43449,
+        "sha256": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a"
+      },
+      "R44_6_EXPERT_ORDER_R0.zip.sha256": {
+        "bytes": 92,
+        "sha256": "f4b5e376e0c305059fffdaedc13f6a933c6537cba425cfea27913effce3d7524"
+      }
+    },
+    "registry_public_rehash": {
+      "public_exact_total": 13,
+      "match": 13,
+      "receipts": [
+        {
+          "source_id": "R44_R2:99_SHA256SUMS_R44_R2_20261124.txt",
+          "ref": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+          "path": "research/r44/r44-r2-epistemic-learning-function-process-20261124/99_SHA256SUMS_R44_R2_20261124.txt",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4c54cea305b3edf0e0636af45b039cedaec7b302/research/r44/r44-r2-epistemic-learning-function-process-20261124/99_SHA256SUMS_R44_R2_20261124.txt",
+          "expected_bytes": 1350,
+          "expected_sha256": "99d21c91079eaaae5a5154684f56b942f5f469945beba2306676b944b3997f46",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 1350,
+          "computed_sha256": "99d21c91079eaaae5a5154684f56b942f5f469945beba2306676b944b3997f46",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_R2:07_NELFP_V0_REFERENCE_VALIDATOR.py",
+          "ref": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+          "path": "research/r44/r44-r2-epistemic-learning-function-process-20261124/07_NELFP_V0_REFERENCE_VALIDATOR.py",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4c54cea305b3edf0e0636af45b039cedaec7b302/research/r44/r44-r2-epistemic-learning-function-process-20261124/07_NELFP_V0_REFERENCE_VALIDATOR.py",
+          "expected_bytes": 6447,
+          "expected_sha256": "7c9c9e77d4a23405308a93852afc4c776958b83b13e0dbef816c02a112f4b30a",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 6447,
+          "computed_sha256": "7c9c9e77d4a23405308a93852afc4c776958b83b13e0dbef816c02a112f4b30a",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_R2:08_NELFP_V0_REFERENCE_VALIDATOR_SYNTHETIC_RESULTS.json",
+          "ref": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+          "path": "research/r44/r44-r2-epistemic-learning-function-process-20261124/08_NELFP_V0_REFERENCE_VALIDATOR_SYNTHETIC_RESULTS.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4c54cea305b3edf0e0636af45b039cedaec7b302/research/r44/r44-r2-epistemic-learning-function-process-20261124/08_NELFP_V0_REFERENCE_VALIDATOR_SYNTHETIC_RESULTS.json",
+          "expected_bytes": 2791,
+          "expected_sha256": "d5ff013a0805bca79098644e4060e70f1a1fbe1fd7a719ac0b5f39b509ee962d",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 2791,
+          "computed_sha256": "d5ff013a0805bca79098644e4060e70f1a1fbe1fd7a719ac0b5f39b509ee962d",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_R2:01_R44_R2_MACHINE_EPISTEMIC_LEARNING_CONTRACT.json",
+          "ref": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+          "path": "research/r44/r44-r2-epistemic-learning-function-process-20261124/01_R44_R2_MACHINE_EPISTEMIC_LEARNING_CONTRACT.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4c54cea305b3edf0e0636af45b039cedaec7b302/research/r44/r44-r2-epistemic-learning-function-process-20261124/01_R44_R2_MACHINE_EPISTEMIC_LEARNING_CONTRACT.json",
+          "expected_bytes": 7909,
+          "expected_sha256": "254ee2a57cb71fd1a2cb4a3e765e91e335a13aa3b90fa9c24d103c2e58c9df7a",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 7909,
+          "computed_sha256": "254ee2a57cb71fd1a2cb4a3e765e91e335a13aa3b90fa9c24d103c2e58c9df7a",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:99_SHA256SUMS_R44_4_20261124.txt",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/99_SHA256SUMS_R44_4_20261124.txt",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/99_SHA256SUMS_R44_4_20261124.txt",
+          "expected_bytes": 1178,
+          "expected_sha256": "e38f18beaa334bf3e3986827fca5fc5516820417f9db56e3cd25b596758594e4",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 1178,
+          "computed_sha256": "e38f18beaa334bf3e3986827fca5fc5516820417f9db56e3cd25b596758594e4",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:00_R44_3_TO_R44_4_CANONICAL_DEPTH_RESEARCH_ORDER_ISSUE437.md",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/00_R44_3_TO_R44_4_CANONICAL_DEPTH_RESEARCH_ORDER_ISSUE437.md",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/00_R44_3_TO_R44_4_CANONICAL_DEPTH_RESEARCH_ORDER_ISSUE437.md",
+          "expected_bytes": 16912,
+          "expected_sha256": "a69920db1bac0b5efd086a83cf03d14b4bb556763073961b0faecc2c5506fd5d",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 16912,
+          "computed_sha256": "a69920db1bac0b5efd086a83cf03d14b4bb556763073961b0faecc2c5506fd5d",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:01_R44_4_MACHINE_RESEARCH_DELTA_AND_RESOURCE_CONTRACT.json",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/01_R44_4_MACHINE_RESEARCH_DELTA_AND_RESOURCE_CONTRACT.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/01_R44_4_MACHINE_RESEARCH_DELTA_AND_RESOURCE_CONTRACT.json",
+          "expected_bytes": 4269,
+          "expected_sha256": "2fe356388a8a831a5591f628df2f258e503b9907ebd06f0941237576d1caf667",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 4269,
+          "computed_sha256": "2fe356388a8a831a5591f628df2f258e503b9907ebd06f0941237576d1caf667",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:03_R44_4_E27_E34_DEEP_DOSSIERS_AND_NONREDUNDANT_RESEARCH_DELIVERABLES.md",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/03_R44_4_E27_E34_DEEP_DOSSIERS_AND_NONREDUNDANT_RESEARCH_DELIVERABLES.md",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/03_R44_4_E27_E34_DEEP_DOSSIERS_AND_NONREDUNDANT_RESEARCH_DELIVERABLES.md",
+          "expected_bytes": 3783,
+          "expected_sha256": "9ec1c5950c8b315e2fe537aa25c09e9a91be89299fa01da0da35983fdc04daee",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 3783,
+          "computed_sha256": "9ec1c5950c8b315e2fe537aa25c09e9a91be89299fa01da0da35983fdc04daee",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:04_R44_4_FOUR_PRIORITY_EXECUTION_FAMILIES_PRE_REGISTERED_DESIGNS.json",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/04_R44_4_FOUR_PRIORITY_EXECUTION_FAMILIES_PRE_REGISTERED_DESIGNS.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/04_R44_4_FOUR_PRIORITY_EXECUTION_FAMILIES_PRE_REGISTERED_DESIGNS.json",
+          "expected_bytes": 5423,
+          "expected_sha256": "d38adba06a946103c89edff0f8ea3877bb2a276af171b4848a87c33012bfe319",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 5423,
+          "computed_sha256": "d38adba06a946103c89edff0f8ea3877bb2a276af171b4848a87c33012bfe319",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_4:08_R44_4_DEEP_EXPERT_RETURN_TEMPLATE_AND_NO_FALSE_PASS_SCHEMA.json",
+          "ref": "e4680dde61203e7e22a5e44579a94448f411d290",
+          "path": "research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/08_R44_4_DEEP_EXPERT_RETURN_TEMPLATE_AND_NO_FALSE_PASS_SCHEMA.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/e4680dde61203e7e22a5e44579a94448f411d290/research/r44/r44-4-evidence-yield-depth-efficient-research-20261124/08_R44_4_DEEP_EXPERT_RETURN_TEMPLATE_AND_NO_FALSE_PASS_SCHEMA.json",
+          "expected_bytes": 3518,
+          "expected_sha256": "5925cccd6d319830daeb7859039f4c5cb5c8ee685ae9005718bbe60d592feadd",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 3518,
+          "computed_sha256": "5925cccd6d319830daeb7859039f4c5cb5c8ee685ae9005718bbe60d592feadd",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_5_START:99_SHA256SUMS_R44_5_START_20261124.txt",
+          "ref": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+          "path": "research/r44/r44-5-operator-start-binding-20261124/99_SHA256SUMS_R44_5_START_20261124.txt",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a/research/r44/r44-5-operator-start-binding-20261124/99_SHA256SUMS_R44_5_START_20261124.txt",
+          "expected_bytes": 232,
+          "expected_sha256": "d5291d51a4b75135e8cf65ac7d60094715a177754daf54ef269f5fd00804d4ea",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 232,
+          "computed_sha256": "d5291d51a4b75135e8cf65ac7d60094715a177754daf54ef269f5fd00804d4ea",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_5_START:00_R44_5_OPERATOR_START_CHECKPOINT_ISSUE439.md",
+          "ref": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+          "path": "research/r44/r44-5-operator-start-binding-20261124/00_R44_5_OPERATOR_START_CHECKPOINT_ISSUE439.md",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a/research/r44/r44-5-operator-start-binding-20261124/00_R44_5_OPERATOR_START_CHECKPOINT_ISSUE439.md",
+          "expected_bytes": 4240,
+          "expected_sha256": "f0945b6fd579e4428545e7ee21e99f17b2887f470bb58535db5ab89d404d430c",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 4240,
+          "computed_sha256": "f0945b6fd579e4428545e7ee21e99f17b2887f470bb58535db5ab89d404d430c",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        },
+        {
+          "source_id": "R44_5_START:01_R44_5_START_STATE_AND_STACK_CUSTODY_CONTRACT.json",
+          "ref": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+          "path": "research/r44/r44-5-operator-start-binding-20261124/01_R44_5_START_STATE_AND_STACK_CUSTODY_CONTRACT.json",
+          "route": "raw.githubusercontent pinned commit",
+          "url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a/research/r44/r44-5-operator-start-binding-20261124/01_R44_5_START_STATE_AND_STACK_CUSTODY_CONTRACT.json",
+          "expected_bytes": 3826,
+          "expected_sha256": "426e7f6faa262a13590843556a71575d7ae21d28c86529135f585e432b06ab8b",
+          "access_class": "public_exact",
+          "license": "UNKNOWN",
+          "privacy": "PUBLIC_REPO_FILE",
+          "http_status": 200,
+          "actual_bytes": 3826,
+          "computed_sha256": "426e7f6faa262a13590843556a71575d7ae21d28c86529135f585e432b06ab8b",
+          "bytes_match": true,
+          "sha256_match": true,
+          "result": "MATCH"
+        }
+      ],
+      "pending_or_restricted_ids": [
+        "R44_5_R1_ORIGINAL_ZIP",
+        "GLM_R44_4_ORIGINAL_ZIP",
+        "GLM_R44_5_ORIGINAL_ZIP",
+        "QWEN_R44_4_ORIGINAL_ZIP",
+        "FISHER_ORIGINAL_AND_CANDIDATE",
+        "FDA_SAMPLE",
+        "UCI_341",
+        "SYNTHETIC_TRUST_ROOT",
+        "BUDGET_LEASE"
+      ],
+      "pending_count": 9
+    }
+  },
+  "verdict": {
+    "zip_bytes_sha256_sidecar": "MATCH",
+    "manifest_sha256": "MATCH",
+    "manifest_file_readback": "7/7_MATCH",
+    "zip_crc": "PASS",
+    "zip_members": "8_MEMBERS_SAFE",
+    "registry_public_rehash": "13/13_MATCH"
+  }
+}

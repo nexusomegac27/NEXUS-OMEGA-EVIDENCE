@@ -1,0 +1,107 @@
+{
+  "schema": "nexus-omega/r44-6/receiver-round-receipt/v0",
+  "state": "R44_6_ORDER_RECEIVED_READ_IN_FULL_AND_REHASHED_FILE_PLUS_BINARY_ZIP_LAYER_C1",
+  "round_date": "2026-11-25 (Europe/Berlin)",
+  "published_by": "OFFCHAIN_UNREGISTERED_ADVISORY_C1 (n_eff=1, append-only, advisory-only; NOT an EXPERT_ACK, NOT counted in Quorum)",
+  "authorization": "Operator chat 2026-11-25: R44-6 Forschungsauftrag vollstaendig be- und abarbeiten ('Vollstaendig be und abarbeiten'); continuation 'kausal-kanonisch fortsetzen' 2026-11-25",
+  "object": "NEXUS_OMEGA_AXIOM_R44_5_TO_R44_6_SOURCE_ACCESS_EXPERT_MAXI_ORDER_20261124_R0",
+  "parent_binding": {
+    "issue": 439,
+    "draft_pr": 440,
+    "branch": "axiom/r44-5-operator-start-binding-20261124-c1",
+    "head_at_round_start": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+    "head_at_round_end": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+    "parent_unchanged": true,
+    "r44_6_issue": 441,
+    "r44_6_draft_pr": 442,
+    "r44_6_branch": "axiom/r44-6-github-source-access-and-bodytwin-20261124-c1",
+    "order_commit": "89ccff827d564309cba3274bff94a6d577e6853a",
+    "pr_442_state": "open/draft/not_merged/unstable/10 files/+665/1 commit",
+    "pr_442_base": "axiom/r44-5-operator-start-binding-20261124-c1 @ 9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a"
+  },
+  "intake": {
+    "files_read_in_full": [
+      "00_START_HERE_EXPERT_MANUAL.md (4896 B)",
+      "01_EXPERT_MAXI_ORDER.md (5216 B)",
+      "02_SOURCE_REGISTRY.json (17904 B)",
+      "03_CONTROL_MATRIX.json (7572 B)",
+      "04_RETURN_SCHEMA.json (2256 B)",
+      "05_INTAKE_FINDINGS.md (2627 B)",
+      "06_MACHINE_CONTRACT.json (1353 B)",
+      "99_SHA256SUMS.txt (633 B)"
+    ],
+    "mandates_registered_not_run": ["E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34"],
+    "r44_6_controls_registered_not_run": 18,
+    "r44_6_control_ids": "SA-N01..SA-N14, SA-P01..SA-P04",
+    "inherited_negatives_preserved": "N01-N24 (0/24), separate",
+    "r44_5_designs_preserved": 28,
+    "source_registry_public_exact_count": 13,
+    "source_registry_pending_or_restricted_count": 9
+  },
+  "independent_verification": {
+    "route": "raw.githubusercontent.com pinned by full commit 89ccff827d564309cba3274bff94a6d577e6853a; curl --fail --location --max-time; TLS on; no bypass; no connector-hash reuse; all hashes recomputed locally from downloaded bytes",
+    "tool_capability": "curl + Python hashlib (SHA-256) + zipfile CRC",
+    "fetch_result": "13/13 files rc=0",
+    "zip_bytes": 43449,
+    "zip_sha256_computed": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a",
+    "zip_sha256_issue_pin_match": true,
+    "binary_zip_rehash_note": "This round independently rehashes the binary ZIP, closing the gap left by the earlier MISTRAL/VIBE file-layer ACK (2026-11-24T19:23:59Z) which could not rehash the binary in its sandbox.",
+    "sidecar_bytes": 92,
+    "sidecar_sha256_computed": "f4b5e376e0c305059fffdaedc13f6a933c6537cba425cfea27913effce3d7524",
+    "sidecar_match": true,
+    "manifest_selfhash_computed": "97410f2598c93837c94b11b5bc83638dee81a732360447a8b4c8f751f77710f1",
+    "manifest_selfhash_pin_match": true,
+    "manifest_lines": "7/7 MATCH",
+    "package_content_files": "7/7 size+sha256 MATCH at pinned commit",
+    "zip_safety": {
+      "member_count": 8,
+      "duplicates": false,
+      "unsafe_paths": false,
+      "crc_all_pass": true,
+      "internal_manifest": "7/7 lines MATCH against members"
+    },
+    "verification_evidence_file": "r44_6_receiver_verification.json"
+  },
+  "r44_5_additive_supersede_analysis": {
+    "observed_branch": "axiom/r44-5-receiver-additive-publication-20261124-c1",
+    "observed_head": "a63ee94607b73fa4f5b1ae788306f462d93cfcc9",
+    "observed_commit_date": "2026-11-24T18:17:47Z",
+    "observed_author": "NEXUS_OMEGA (nexusomegac27)",
+    "pr_binding": "NO_PR_FOUND_FOR_THIS_BRANCH (open PR inventory: #425..#442 all draft, none merged)",
+    "byte_comparison": "10_/11_/99_ at a63ee946 are byte-identical (3/3 SHA-256) to the receiver custody package R44_5_RECEIVER_ADDITIVE_PACKAGE_20261125_R0.zip members; package ZIP re-verified 18318 B sha256 f02000fa960da49e6b9446f2842a01155ce73a3e922f3db07c18dab2a65eb8d8",
+    "matched_pins": {
+      "10_R44_5_R1_ORDER_CHAT_TRANSMISSION_SNAPSHOT_RECEIVER_PUBLISHED.md": "f7f47387d05531c59533c61c4cf466978ccb52b50b4f7443b84549ebfc5b86a8",
+      "11_R44_5_RECEIVER_CUSTODY_AND_SCOPE_CONTRACT_C1.json": "ccd2117505d528499db6ccaad7d3a9e75658093f1ff4e2a85c21c2d06d349b98",
+      "99_SHA256SUMS_R44_5_RECEIVER_ADDITIVE_20261124.txt_selfhash": "1ff92b06db04c32f50c3168e2c40a13fdeb344ba6f79fac6f87f8a4c9a4ab29f"
+    },
+    "decision": "RETRY_RECEIVER_ADDITIVE_PUSH = SUPERSEDED_BY_EXISTING_BYTE_IDENTICAL_PUBLICATION_A63EE946; no duplicate push performed; receiver branch receiver/r44-5-receiver-additive-20261124-c1 remains at 9f968999... (0 commits) as append-only evidence of the earlier failed emission; no ancestor edit; no deletion"
+  },
+  "open_corrections_append_only": [
+    "R44-5 receipt (13_R44_5_RECEIVER_ROUND_MACHINE_RECEIPT_20261125.json) recorded issue_439_comments=0, new_prs=0 and additive publication as not landed. At this round's readback: comment 7141563622 (2026-11-24T19:04:40Z), PR #442 (created 2026-11-24T19:04:31Z) and byte-identical additive publication a63ee946 (commit date 2026-11-24T18:17:47Z) are observable. Cause not adjudicated here (stale read view or session timing); 05_INTAKE_FINDINGS.md already flags the 2026-11-25 round date as a supplied producer timestamp. No erasure; this correction is recorded.",
+    "The R44-5 custody contract (11_...json) self-describes a publication; observable state now shows the content byte-identical on GitHub at a63ee946, so that self-description is now consistent with GitHub, not contradicted."
+  ],
+  "writes_this_round": {
+    "commits_created": 0,
+    "branches_created": 0,
+    "prs_opened": 0,
+    "pr_merge": "NO",
+    "ancestor_edited": false,
+    "issue_comments_posted": "1 advisory SOURCE_RECEIVER_ACK on Issue #441 (evidence-based, per 00_START_HERE step 5; NOT an EXPERT_ACK, NOT quorum)",
+    "operator_zip_rehosted": false
+  },
+  "role_boundaries": {
+    "authenticated_quorum": "0_OF_3",
+    "full_scientific_passes": "0_OF_10",
+    "canonical_negative_tests": "0_OF_24",
+    "r44_5_falsifier_designs_reported": 28,
+    "r44_6_controls_registered": 18,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY; CLAIM_PROMOTION = NO",
+    "bodytwin_validated": "NO",
+    "physical_14_gates": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23_privacy": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN"
+  },
+  "next": "SOURCE_RECEIVER_PREFLIGHT_AND_EXACT_ORIGINAL_GITHUB_CUSTODY_THEN_OPERATOR_SCOPED_START; R44-5 R1 original ZIP (33427 B, sha256 303a4761580dcbaa604e6e723bc8972d215f6660b86488fa8e4b57a76f541b67) remains LOCAL_MATCH_GITHUB_ORIGINAL_NOT_PRESENT; per-lane scoped operator start and finite lease required before any E27-E34 execution"
+}
