@@ -1,0 +1,175 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_8_S1_VSRD_MACHINE_SOURCE_RESEARCH_CONTRACT_20261124_R0",
+  "parent": {
+    "r43_8_issue": 420,
+    "r43_8_pr": 421,
+    "r43_8_head": "4d02196ba608191e3336265465baf99143317272",
+    "r43_8_manifest_sha256": "66430ed79935eec9be36bc81298ddaba2b4f67b1e3aad82270db63e7688554a1",
+    "amendment_issue": 422
+  },
+  "status": "SOURCE_ONLY_CLAUSE_PREPARED_IN_GITHUB_NOT_AUTO_EXECUTED",
+  "applicability": {
+    "lanes": [
+      "E27",
+      "E28",
+      "E29",
+      "E30",
+      "E31",
+      "E32",
+      "E33",
+      "E34"
+    ],
+    "future_research_orders": "DEFAULT_MANDATORY_ON_BIND",
+    "curated_hosts": "DISCOVERY_SEEDS_NOT_CLOSED_ALLOWLIST",
+    "claim_promotion": "PROHIBITED"
+  },
+  "classification": {
+    "Q0": "CANDIDATE_UNVERIFIED",
+    "Q1": "ADDRESS_IDENTITY_VERIFIED_NOT_CONTENT",
+    "Q2": "METADATA_CROSSCHECKED_NOT_RAW_DATA",
+    "Q3": "PRIMARY_CONTENT_READ_WITH_SCOPE",
+    "Q4": "ORIGINAL_DATA_CODE_BYTES_REHASHED_WITH_RIGHTS",
+    "Q5": "INDEPENDENT_REPLAY_WITH_SEPARATE_PROVENANCE",
+    "QX": "ACCESS_LIMITED_OR_SOURCE_GAP",
+    "rule": "classifications_orthogonal_to_C1_claim_ceiling_and_independent_actor_quorum"
+  },
+  "mandatory_actions": [
+    "SEARCH_TWO_NON_REDUNDANT_ROUTES_FOR_MATERIAL_CLAIM_UNLESS_LEGAL_ACCESS_IMPOSSIBLE",
+    "ORIGIN_URL_FINAL_URL_PUBLISHER_DOMAIN_DOI_VERSION_DATE_UTC_CHECK",
+    "SOURCE_TYPE_METADATA_VS_ORIGINAL_DATA_VS_COPY_VS_ORACLE_EXPLICIT",
+    "CROSSCHECK_DOI_REGISTRY_OR_OFFICIAL_METADATA_AND_RETRACTIONS",
+    "READ_ACTUAL_PRIMARY_METHODS_OR_FAIL_CLOSED_SOURCE_GAP",
+    "HASH_ONLY_BYTES_ACTUALLY_OBTAINED_AND_PIN_EXACT_GIT_COMMIT",
+    "VERIFY_DATA_LICENSE_SEPARATELY_FROM_REPO_CODE_LICENSE",
+    "CHALLENGE_FAVORED_HYPOTHESIS_WITH_REAL_NEGATIVE_AND_ALTERNATE",
+    "STORE_QUERY_RESULTS_FAILURES_SOURCE_ACCESS_STATUS_AND_UNCERTAINTY",
+    "NO_RESEARCH_PARALYSIS_ON_401_403_404_429_PROXIES",
+    "IF_NO_PRIMARY_SOURCE_NO_ORIGINAL_DATA_PASS"
+  ],
+  "expected_field_names": [
+    "claim_id",
+    "lane",
+    "actor_id",
+    "actor_auth_class",
+    "research_question",
+    "H0",
+    "H1",
+    "search_queries",
+    "source_routes",
+    "original_url",
+    "final_url",
+    "publisher_domain",
+    "response_status",
+    "checked_at_utc",
+    "persistent_identifier",
+    "source_date_version_commit",
+    "title_authors",
+    "content_scope_read",
+    "method_or_data_relevant_to_claim",
+    "bytes_sha256_or_NOT_OBTAINED",
+    "rights_privacy",
+    "retractions_corrections",
+    "registry_prior_duplicate_check",
+    "verified_class_Q0_Q5_or_QX",
+    "counterhypothesis",
+    "discriminating_negative",
+    "actual_test_result_or_NOT_RUN",
+    "uncertainty_and_transfer_limit",
+    "independent_adjudicator_provenance",
+    "resource_budget",
+    "source_gap_reason",
+    "claim_ceiling",
+    "requested_next_action"
+  ],
+  "source_evidence": {
+    "r43_8_offchain": {
+      "outer_bytes": 85788,
+      "outer_sha256": "d0250a2e3e026847f62f107cdc4833e266c105e01e3818312056ed2e3f218227",
+      "inner_bytes": 61362,
+      "inner_sha256": "b1a802d87b444f33eb525815c1d85d2a3446400c7d4c0a2d61002ec97acbe982",
+      "inner_manifest": "13_OF_13_MATCH",
+      "crc": "PASS",
+      "probe_urls": 11,
+      "probe_result": {
+        "http200_title_match": 5,
+        "http200_generic": 1,
+        "http200_title_missing": 1,
+        "http203_proxy": 3,
+        "http401_blocked": 1
+      },
+      "fda_catalog": "BLOCKED_401_SOURCE_SCOPE_ONLY",
+      "fda_repository": "HTTP200_TITLE_AND_GIT_REMOTE_NOT_DATASET_REPLAY"
+    },
+    "r43_8_c2_label_artifact": {
+      "outer_bytes": 838239,
+      "outer_sha256": "2af0707d3b91e28fd58c623f54e2444540e85479fe183ad23628cd35a6b359d7",
+      "payload_manifest": "5_OF_5_MATCH",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "note": "C2_WORD_IN_ARCHIVE_LABEL_IS_NOT_C2_AUTHORIZATION"
+    },
+    "build_archive": {
+      "outer_bytes": 2019507,
+      "outer_sha256": "e9175fdc2b1b333a92817556af72831d998e03efe283335bb4eea826377b532b",
+      "crc": "PASS",
+      "desc": "HISTORICAL_SOURCE_DERIVATIVES_AND_CONTEXT_NO_NEW_INDEPENDENT_MEASUREMENT"
+    },
+    "advisory_readbacks": [
+      {
+        "file": "NEXUS_~1(20261124-014716).MD",
+        "bytes": 9464,
+        "sha256": "739f6e3c22edf6f3f3a1966de251b49d07a55b5293617ff7593d1bacb307ea90"
+      },
+      {
+        "file": "NEXUS-~1(20261124-014716).MD",
+        "bytes": 18850,
+        "sha256": "855763a1abbcb8e0d0a1023a0e5d18352025d0c3c0580a1d571b8e9d381f5de7"
+      },
+      {
+        "file": "R43-8-~1.MD",
+        "bytes": 20153,
+        "sha256": "d95f5e87bdce30ae36af90a4e833c4694794513215fc1751bac572f2ba197257"
+      }
+    ]
+  },
+  "public_standards": [
+    {
+      "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "role": "METADATA_VERIFICATION_NOT_FULLTEXT"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+      "role": "BIOMEDICAL_BIBLIOGRAPHY_AND_E_UTILITIES"
+    },
+    {
+      "url": "https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files",
+      "role": "PIN_SOURCE_TO_COMMIT"
+    },
+    {
+      "url": "https://archive.ics.uci.edu/dataset/319/mhealth%2Bdataset",
+      "role": "DATASET_DESCRIPTION_AND_LICENSE_NOT_BENCHMARK_REPLAY"
+    },
+    {
+      "url": "https://github.com/dbp-osel/wearables-for-gait-synchronized-smartphone-imu-and-walkway-data",
+      "role": "FDA_SOURCE_REPO_NOT_370_TRIALS_REPLAY"
+    }
+  ],
+  "inherited_science_status": {
+    "bodytwin_validated": false,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "full_research_passes": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "mhealth_raw_independent_replay": "NOT_PERFORMED",
+    "fda_full_dataset_rehash": "NOT_PERFORMED",
+    "independent_adaptive_gain": "NOT_DEMONSTRATED_ON_PRIMARY_R43_7_TEST",
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "w1_witness": "OPEN",
+    "e23_privacy": "HOLD",
+    "cursor_implementation_order": "NOT_SENT",
+    "merge": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "capture": false
+  },
+  "next": "EXPERTS_MUST_ACK_AND_APPLY_CLAUSE_WITH_ACTUAL_SOURCE_EXACT_RETURNS_THEN_AXIOM_META_ADJUDICATION"
+}
