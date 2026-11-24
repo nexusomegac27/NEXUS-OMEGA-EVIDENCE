@@ -1,0 +1,188 @@
+{
+  "schema": "nexus-omega/r44-3/expert-research-contract/v0",
+  "object": "NEXUS_OMEGA_AXIOM_R44_2_TO_R44_3_NODE_RESILIENCE_CRYPTO_TRUST_RESOURCE_PARITY_AND_COORDINATED_DISCLOSURE_RESEARCH_ORDER_20261124_R0",
+  "state": "R44_3_EXPERT_RESEARCH_ORDER_SOURCE_DOCUMENTED_C1_NOT_EXECUTED",
+  "recorded_date": "2026-11-24",
+  "parent": {
+    "issue": 433,
+    "draft_pr": 434,
+    "head": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+    "manifest_sha256": "99d21c91079eaaae5a5154684f56b942f5f469945beba2306676b944b3997f46",
+    "constructive_addendum_comment": 7131877897,
+    "parent_r44_1_issue": 431,
+    "parent_r44_1_draft": 432,
+    "parent_r44_1_head": "b4ca54a54f1b2edba553218b3709ecb8a35cd075"
+  },
+  "threat_model": [
+    "UNTRUSTED_SELF_DECLARED_AUTHENTICATED_ACTOR_COUNT",
+    "SIGNATURE_VALID_BUT_UNTRUSTED_ROOT",
+    "ROLE_SCOPE_SUBSTITUTION",
+    "EXPIRED_REVOKED_OR_REPLAYED_ATTESTATION",
+    "SAME_ACTOR_MULTIPLE_SIGNERS",
+    "SOURCE_COMMON_CAUSE_ERROR",
+    "ORACLE_AND_HOLDOUT_LEAK",
+    "HIDDEN_RESOURCE_COST",
+    "INADVERTENT_PUBLIC_DISCLOSURE",
+    "FALSE_GLOBAL_NODE_BAN",
+    "GENERIC_CVE_INFERRED_HOST_IMPACT"
+  ],
+  "verified_source_bounded": {
+    "vendor_research": "OpenAI_2026_11_04_2308_CANDIDATES_1724_REPRODUCED_948_LPE_LAB",
+    "silicon_or_host_impact": "NOT_ESTABLISHED_FOR_NEXUS",
+    "static_validator_15of15": "PREVIOUS_SYNTHETIC_VALIDATION_AND_UNREGISTERED_ADVISORY_REPLAY",
+    "new_negative": {
+      "name": "SELF_DECLARED_3_OF_3",
+      "status": "UNREGISTERED_ADVISORY_SOURCE_REPORTED_ACCEPTANCE",
+      "validated_crypto_source": "NO",
+      "actual_authenticated_quorum": "0_OF_3"
+    },
+    "fda_offchain": {
+      "bytes": 18611028,
+      "sha256": "27f5bf94debf486b3028a1b139dde86994710efe37f6f678ddd72588733180aa",
+      "class": "REPORTED_IN_OFFCHAIN_RECEIVER_ORIGIN_Q4_NOT_DIRECT_AXiOM_REHASH_THIS_TURN"
+    },
+    "uci341_offchain": {
+      "bytes": 79596192,
+      "sha256": "4ac4ae064227c07045a99551876b54d204837e995e298b6488559e209b3deb09",
+      "class": "REPORTED_IN_OFFCHAIN_RECEIVER_ORIGIN_Q4_NOT_DIRECT_AXIOM_REHASH_THIS_TURN"
+    },
+    "fim_original": {
+      "source_sha256": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+      "checks": "33_OF_51",
+      "exit": 1,
+      "scope": "AXIOM_LOCAL_PREVIOUS_ORIGINAL"
+    },
+    "fim_candidate": {
+      "source_sha256": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
+      "checks": "51_OF_51",
+      "exit": 0,
+      "scope": "AXIOM_LOCAL_LINEAR_TOY_ONLY"
+    },
+    "fim_extra_negatives": [
+      "COVARIANCE_WHITENING_OMITTED",
+      "NONLINEAR_FORWARD_NOT_REPAIRED_BY_LINEAR_HX"
+    ],
+    "full_77_line_external_replay": "NOT_ESTABLISHED"
+  },
+  "independence_axes": [
+    "ORIGINAL_SOURCE_Q0_TO_Q5",
+    "CRYPTO_SIGNATURE_PAYLOAD_AND_TRUST_ROOT",
+    "OPERATOR_AUTHORIZED_ACTOR_ROLE_REGISTRATION_FRESHNESS",
+    "FROZEN_EXPERIMENT_AND_INDEPENDENT_SCIENCE_REPLAY",
+    "OPERATOR_SEPARATE_RELEASE_RIGHT"
+  ],
+  "research_experts": [
+    "E27_ANDROID_CLOCK_CAPABILITY_ISOLATION",
+    "E28_DSSE_ED25519_ACTOR_ADMISSION",
+    "E29_W1_PRIVACY_COORDINATED_DISCLOSURE",
+    "E30_BIOMECHANIC_REFERENCE_SOURCE",
+    "E31_ORIGINAL_DATA_LICENSE_AND_SPLITS",
+    "E32_FISHER_GUM_COUNTEREXAMPLES",
+    "E33_INDEPENDENT_ADVERSARIAL_FALSIFIERS",
+    "E34_PROTECTED_EVALUATOR_AND_LEASE"
+  ],
+  "research_fixtures": [
+    "R44-3-N01",
+    "R44-3-N02",
+    "R44-3-N03",
+    "R44-3-N04",
+    "R44-3-N05",
+    "R44-3-N06",
+    "R44-3-N07",
+    "R44-3-N08",
+    "R44-3-N09",
+    "R44-3-N10",
+    "R44-3-N11",
+    "R44-3-N12",
+    "R44-3-N13",
+    "R44-3-N14",
+    "R44-3-N15",
+    "R44-3-N16",
+    "R44-3-N17",
+    "R44-3-N18",
+    "R44-3-N19",
+    "R44-3-N20",
+    "R44-3-N21",
+    "R44-3-N22",
+    "R44-3-N23",
+    "R44-3-N24"
+  ],
+  "acceptance_gates": [
+    "R44-3-G0",
+    "R44-3-G1",
+    "R44-3-G2",
+    "R44-3-G3",
+    "R44-3-G4",
+    "R44-3-G5",
+    "R44-3-G6",
+    "R44-3-G7",
+    "R44-3-G8",
+    "R44-3-G9"
+  ],
+  "lease": {
+    "budget_amounts": "NOT_DEFINED_REQUIRE_STUDY_SPECIFIC_PRE_REG_AND_OPERATOR_APPROVED_CAPS",
+    "fields": [
+      "wall_monotonic_seconds",
+      "cpu_seconds_including_descendants",
+      "peak_rss_bytes",
+      "token_input",
+      "token_output",
+      "model_id_and_price_version",
+      "network_bytes_out",
+      "network_requests",
+      "storage_bytes",
+      "retry_count",
+      "third_party_api_cost",
+      "evaluation_cost",
+      "source_acquisition_cost"
+    ],
+    "parity_rule": "SAME_TOTAL_BUDGET_ALL_ARMS_INCLUDING_RETRIES_EVALUATOR_AND_TOOLS",
+    "missing_or_negative_elapsed": "UNKNOWN_COST_INELIGIBLE_FOR_PERFORMANCE_COMPARISON",
+    "stop_rule": "SCOPED_SUSPEND_EXPENSIVE_OPERATION_NOT_PUNITIVE_NODE_BAN",
+    "claim_gain": "PREDECLARED_PRIMARY_SCIENCE_METRIC_AND_SOURCE_SCOPED_CI_NOT_FLAT_AGENT_COUNT"
+  },
+  "disclosure": {
+    "public": "REDACTED_SOURCE_SAFE_RESEARCH_METADATA_ONLY",
+    "private": "AUTHORIZED_SECURITY_REPORTING_ROUTE_NO_PUBLIC_POC_OR_KEYS",
+    "owner": "AUTHORIZED_OPERATOR_OR_MAINTAINER",
+    "coordinated": "MAINTAINER_CONFIRMATION_AND_OPERATOR_RELEASE_SEPARATE"
+  },
+  "learning": {
+    "original_fail_retained": true,
+    "nonpunitive_good_faith_reporting": true,
+    "capability_isolation_not_blanket_ban": true,
+    "return_after_review_not_auto_unblock": true,
+    "no_source_alias_credit": true,
+    "maximum_revision_without_new_source": 3,
+    "not_autonomous_training": true
+  },
+  "hard_science_state": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "full_P01_P10": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "privacy_E23": "HOLD",
+    "bodytwin_validated": false,
+    "B01_B05": "OPEN",
+    "W1": "OPEN",
+    "new_science_experiments": "NOT_EXECUTED",
+    "new_expert_ack": "NOT_RECEIVED"
+  },
+  "prohibitions": {
+    "cursor_order": false,
+    "cursor_implementation": false,
+    "github_merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "adb": false,
+    "apk": false,
+    "real_host_exploitation": false,
+    "private_raw_publication": false,
+    "secret_publication": false,
+    "actor_self_registration": false,
+    "physical_claim_promotion": false
+  },
+  "next": "E27_E34_REAL_ORIGINAL_SOURCE_AND_SANDBOX_FALSIFICATION_RETURNS_TO_AXIOM_THEN_OPERATOR_DECISION"
+}
