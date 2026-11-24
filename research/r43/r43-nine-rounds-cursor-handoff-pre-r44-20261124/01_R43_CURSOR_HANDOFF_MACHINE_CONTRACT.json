@@ -1,0 +1,189 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_CURSOR_R43_ALL_NINE_ROUNDS_MACHINE_HANDOFF_CONTRACT_20261124_R0",
+  "authority": "OPERATOR_EXPRESS_CURSOR_TRANSFER_20261124",
+  "state": "CURSOR_HANDOFF_GITHUB_DRAFT_SOURCE_SEALED_ACK_PENDING_C1",
+  "source_repo": "nexusomegac27/NEXUS-OMEGA-EVIDENCE",
+  "new_issue": 426,
+  "pr": "PENDING",
+  "last_cursor": {
+    "issue": 404,
+    "pr": 405,
+    "head": "c03b3469f6b70c51eaeda428360af5ea70d79259",
+    "manifest_sha256": "ccc720e733fbde72e08f5f43362508c3847380f3f87eabd18a4e9a041ff34510",
+    "return_file": "NEXUS_OMEGA_CURSOR_R42_R2_IMPLEMENTATION_RETURN_20261123_R0.zip",
+    "return_bytes": 6055,
+    "return_sha256": "2cf901eaab21a8e9d4d93706159e71c67d8b02fa83db15357be698e3f33ecc4c",
+    "return_status": "PASS_WITH_MATERIAL_CAVEATS_C1_OFFLINE"
+  },
+  "rounds": [
+    {
+      "round": "R43-1",
+      "issue": 406,
+      "pr": 407,
+      "head": "d226c7807b9ce76ea9b97b1033b88883a86f81c6",
+      "scope": "E27-E34 original-source science foundation, 10-pass falsification and external actor registry",
+      "claim": "C1_RESEARCH_DESIGN_ONLY"
+    },
+    {
+      "round": "R43-2",
+      "issue": 408,
+      "pr": 409,
+      "head": "6799d042002278ab770c66f15ed03dbd45f52739",
+      "scope": "R43-1 custody and X19/E28/E29 research continuity",
+      "claim": "C1_RESEARCH_SCOPE"
+    },
+    {
+      "round": "R43-3",
+      "issue": 410,
+      "pr": 411,
+      "head": "7a576c8d2dfb2b8570807ea0bb79c016247949be",
+      "scope": "E23 privacy reseal, E28 crypto replay, P04 W1 partial provenance",
+      "claim": "C1_DESCRIPTIVE_PARTIAL"
+    },
+    {
+      "round": "R43-4",
+      "issue": 412,
+      "pr": 413,
+      "head": "667220de0ce8d2e96b729a1622e4f96b675e634a",
+      "scope": "DSSE normative v1 byte PAE vs BE/LE custom, E32 model identifiability, W1 challenge",
+      "claim": "C1_LOCAL_TESTS"
+    },
+    {
+      "round": "R43-5",
+      "issue": 414,
+      "pr": 415,
+      "head": "3155025114849d92cf4376e7295957af38f52d92",
+      "scope": "adaptive baseline v0/v1/v2 protocol, original scorer modified, no actual external blind eval/cost parity",
+      "claim": "C1_NO_INDEPENDENT_ADAPTIVE_GAIN"
+    },
+    {
+      "round": "R43-6",
+      "issue": 416,
+      "pr": 417,
+      "head": "4480fc5129023c421af40204abc6e786b074f24c",
+      "scope": "byte-identical evaluator local, scoring/sharpness improved synthetic, fake nonempty ACK + partial overlap missed, real budgets unmatched",
+      "claim": "C1_LOCAL_REPLAY_PLUS_HARD_NEGATIVES"
+    },
+    {
+      "round": "R43-7",
+      "issue": 418,
+      "pr": 419,
+      "head": "d0accbc36a5665ce1ab47c3f839feb4b27d38a3a",
+      "scope": "signed-ACK/overlap local tests; 6-case primary test one domain no adaptive improvement v0=v2=fusion",
+      "claim": "C1_PRIMARY_NO_GAIN_NARROW_SYNTHETIC"
+    },
+    {
+      "round": "R43-8",
+      "issue": 420,
+      "pr": 421,
+      "head": "4d02196ba608191e3336265465baf99143317272",
+      "scope": "international FDA/MHEALTH/optical research and 14 falsifiable spaces K01-K14, L0-L4 maturity",
+      "claim": "C1_RESEARCH_SYNTHESIS_NO_REAL_TWIN_PROOF"
+    },
+    {
+      "round": "R43-8-S1",
+      "issue": 422,
+      "pr": 423,
+      "head": "0853ae39217283d968a8113ae5dbaa748fed3fb8",
+      "scope": "VSRD-C1 verified source address+actual-content/original-bytes+independent counterresearch, Q0-Q5/QX",
+      "claim": "MANDATORY_METHODOLOGY_ONLY"
+    },
+    {
+      "round": "R43-9",
+      "issue": 424,
+      "pr": 425,
+      "head": "2c943a7294ca620e9dc9cfe98f78d7a51c6fa43e",
+      "scope": "Fisher/Bayes/GUM/UKF target-specific ABSTAIN, 16 canonical M9 original fixtures; new 8 papers, local math and MHEALTH original",
+      "claim": "C1_RESEARCH_CHECKPOINT_MATERIAL_MAPPING_AND_DATA_GAPS"
+    }
+  ],
+  "operator_original_paths": "TO_BE_SUPPLIED_DIRECTLY_TO_CURSOR_NOT_GUESSED_OR_PUBLISHED",
+  "raw_transfer": "NO_RAW_ORIGINAL_DATA_PUBLIC_GITHUB_ONLY_SOURCE_SAFE_MANIFESTS_AND_RECEIPTS",
+  "source_classes": [
+    "OPERATOR_SUPPLIED_ORIGINAL_BYTES_REHASHED_C1",
+    "GITHUB_PINNED_SOURCE_FETCH_AND_REHASHED_C1",
+    "PRODUCER_LOCAL_REPORT_UNREPLAYED_C1",
+    "DESIGN_THEORY_C1",
+    "ORIGINAL_BYTES_NOT_RECEIVED",
+    "SCIENCE_EXPERIMENT_NOT_RUN"
+  ],
+  "hard_blockers": [
+    "B01_FDA_370_VS_374_PRIMARY_SOURCE_CONFLICT",
+    "B02_MANUS_M9_NAMESPACE_SUBSTITUTION",
+    "B03_LOCAL_MANUS_MANIFEST_7_CLAIM_6_PRESENT",
+    "B04_FAKE_ACTOR_OR_HOLDOUT_OR_BUDGET_CANNOT_PROMOTE"
+  ],
+  "proven_custody": {
+    "mhealth_source_bytes": 75567983,
+    "mhealth_sha256": "16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0",
+    "mhealth_zip_crc": "PASS",
+    "mhealth_subject_log_hashes": "10_OF_10_MATCH",
+    "mhealth_people": 10,
+    "mhealth_first_last_columns": 24,
+    "benchmark_execution_by_AXIOM": "NOT_PERFORMED",
+    "remote_download_by_AXIOM": "NOT_PERFORMED"
+  },
+  "canonical_identifiers": {
+    "K04": "STRUCTURAL_IDENTIFIABILITY",
+    "K05": "TRACEABLE_COVARIANCE_GUM",
+    "K13": "RISK_CALIBRATED_TARGET_ABSTAIN",
+    "M9_01": "SAME_MOUNT_INDEPENDENT_NOISE",
+    "M9_05": "UNITS_REPARAMETERIZATION",
+    "M9_07": "PRIOR_ONLY_NULLSPACE",
+    "M9_15": "ORIGINAL_DATA_LICENSE_AND_NOVELTY",
+    "M9_16": "PRIMARY_POSTHOC_SCORE"
+  },
+  "scientific_status": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "physical_14_hard_gates": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "full_substantive_passes": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "P04_W1": "OPEN_PARTIAL",
+    "E23_privacy": "HOLD",
+    "production_FC2": "NOT_ESTABLISHED",
+    "original_C5": "SOURCE_GAP",
+    "FDA_full_original": "NOT_RECEIVED",
+    "FDA_source_counts": "370_VS_374_CONFLICT",
+    "Grok_ABSTAIN_original": "NOT_RECEIVED",
+    "independent_adaptive_gain": "NOT_PROVEN",
+    "R44": "NOT_STARTED"
+  },
+  "operational_phases": [
+    {
+      "id": "C0",
+      "name": "GITHUB_ACK_AND_SOURCE_CENSUS",
+      "authority": "READ_ONLY"
+    },
+    {
+      "id": "C1",
+      "name": "OPERATOR_ORIGINAL_PATH_INTAKE_AND_SOURCE_REHASH_CONTRADICTIONS",
+      "authority": "READ_ONLY_LOCAL_QUARANTINE"
+    },
+    {
+      "id": "C2",
+      "name": "SCOPED_REVERSIBLE_OFFLINE_SOURCE_TEST_REPAIR",
+      "authority": "NO_LIVE_NO_PHYSICAL_NO_DEPLOY"
+    },
+    {
+      "id": "C3",
+      "name": "GITHUB_DRAFT_RETURN_AND_R44_GATE_RECOMMENDATION",
+      "authority": "NO_MERGE_NO_AUTO_R44"
+    }
+  ],
+  "no_go": {
+    "merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "adb": false,
+    "apk_install": false,
+    "physical_14_release": false,
+    "claim_promotion": false,
+    "external_unregistered_write": false,
+    "captcha_bypass": false,
+    "export_private_headers": false
+  },
+  "next": "CURSOR_GITHUB_ACK_AFTER_OPERATOR_PATHS→BYTE_EXACT_REHASH_OFFLINE_REPAIRS→AXIOM_INDEPENDENT_ADJUDICATION→OPERATOR_R44_DECISION"
+}
