@@ -1,0 +1,123 @@
+{
+  "schema": "nexus-omega/r44-4/expert-scientific-return-template/v0",
+  "state": "EMPTY_TEMPLATE_NOT_EXECUTED",
+  "canonical_lane": "E27_TO_E34_SELECT_ONE",
+  "source_local_role_alias": null,
+  "actor_identity": {
+    "label": "UNREGISTERED_UNLESS_OPERATOR_ROOT_VERIFIED",
+    "operator_issued_actor_id": null,
+    "root_id": null,
+    "independent_actor_proof": "NOT_ESTABLISHED",
+    "model_family": null,
+    "source_lineage": [],
+    "holdout_access": "NONE_OR_DECLARED"
+  },
+  "source_evidence": [
+    {
+      "source_id": "PRIMARY_1",
+      "original_url": null,
+      "publisher": null,
+      "version_commit_doi": null,
+      "checked_at": null,
+      "source_q": "NOT_OBTAINED",
+      "license": null,
+      "original_bytes_sha256": null,
+      "source_methods_read": null
+    },
+    {
+      "source_id": "INDEPENDENT_COUNTERROUTE_2",
+      "original_url": null,
+      "publisher": null,
+      "version_commit_doi": null,
+      "checked_at": null,
+      "source_q": "NOT_OBTAINED",
+      "license": null,
+      "original_bytes_sha256": null,
+      "source_methods_read": null
+    }
+  ],
+  "new_versus_parent": {
+    "parent_head": "8abd8ddd3afa7099322996625b8d09bbe1494f0e",
+    "reused_source_objects": [],
+    "genuine_new_source_objects": [],
+    "counterevidence_retained": [],
+    "claimed_knowledge_delta": "NOT_YET_RECEIVED",
+    "uniqueness_key": null
+  },
+  "research_question": {
+    "primary_h0": null,
+    "primary_h1": null,
+    "rival_mechanisms": [
+      null,
+      null,
+      null
+    ],
+    "observable_and_units": null,
+    "scientific_target_scope": null,
+    "uncertainty_model": null
+  },
+  "prereg": {
+    "pre_frozen_score_code_sha256": null,
+    "pre_frozen_holdout_id_hash": null,
+    "pre_frozen_time": null,
+    "negative_controls": [],
+    "positive_controls": [],
+    "null_models": [],
+    "expected_red_reason": null,
+    "expected_green_reason": null,
+    "matched_total_cost_required": true
+  },
+  "execution": {
+    "status": "NOT_RUN",
+    "runner_source_sha256": null,
+    "data_source_sha256": null,
+    "environment_sha256": null,
+    "run_actor_id": null,
+    "exit_code": null,
+    "actual_negative_results": [],
+    "actual_positive_results": [],
+    "raw_log_digest": null,
+    "independent_replay_ref": null,
+    "conditional_on_operator_permission": true
+  },
+  "costs": {
+    "lease_id": null,
+    "operator_approved": true,
+    "approval_proof": "NOT_PROVIDED",
+    "max_wall_s": null,
+    "max_cpu_s": null,
+    "max_network_bytes": null,
+    "max_token_count": null,
+    "max_total_cost": null,
+    "actual_wall_monotonic_s": null,
+    "actual_cpu_all_processes_s": null,
+    "peak_rss_bytes": null,
+    "tokens_in": null,
+    "tokens_out": null,
+    "network_egress_bytes": null,
+    "retries": null,
+    "evaluator_cost": null,
+    "source_acquisition_cost": null,
+    "cost_complete": false,
+    "comparative_efficiency_claim": "NOT_ELIGIBLE_UNTIL_COMPLETE"
+  },
+  "disclosure": {
+    "public_safe": true,
+    "restricted_vulnerability_data_in_public": false,
+    "medical_private_raw_data_in_public": false,
+    "restricted_operator_channel_id": null
+  },
+  "verdict": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "source_only_acceptance": false,
+    "actual_scientific_q5_independent_replay": false,
+    "full_P01_P10_science_pass": false,
+    "authenticated_actor_quorum_credit": 0,
+    "bodytwin_validated": false,
+    "highest_information_next_step": null,
+    "blockers": [
+      "ALL_RESULTS_PENDING"
+    ]
+  },
+  "no_cursor_handoff": true
+}
