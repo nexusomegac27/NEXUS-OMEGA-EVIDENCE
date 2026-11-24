@@ -1,0 +1,158 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_8_S1_TO_R43_9_MACHINE_EVIDENCE_CONTRACT_20261124_R0",
+  "status": "SOURCE_ONLY_RESEARCH_FOUNDATION_PREPARED_C1",
+  "parent": {
+    "r43_8": {
+      "issue": 420,
+      "pr": 421,
+      "head": "4d02196ba608191e3336265465baf99143317272",
+      "manifest_sha256": "66430ed79935eec9be36bc81298ddaba2b4f67b1e3aad82270db63e7688554a1"
+    },
+    "vsrd": {
+      "issue": 422,
+      "pr": 423,
+      "head": "0853ae39217283d968a8113ae5dbaa748fed3fb8",
+      "manifest_sha256": "b8e94ac1b0630049209a5cadfdbaea871dec457ce0e73356f21bfce5a64b4175"
+    },
+    "current_issue": 424
+  },
+  "user_input": {
+    "filename": "GROK_INPUT_R43-9.txt",
+    "bytes": 30412,
+    "sha256": "c2bf195a31862be7d53e68d82adf71749a13a743d15bc541d5fbd2137d2506b5",
+    "fully_read": true,
+    "class": "DESIGN_THEORY_THOUGHT_STARTER_NOT_REPLAYED_SCRIPT",
+    "reported_script_path": "artifacts/NEXUS_OMEGA_R43_8_ABSTENTION_THRESHOLD_C1_20261124/abstention_threshold.py",
+    "reported_script_sha256": "292c77727081ab6117eb3f23b27527c0be5c855897dfece193573ec15bf606a6",
+    "script_bytes_received": false,
+    "claim_selftests": "3/3_SELF_REPORTED_UNVERIFIED",
+    "reported_eps_rank": 1e-8,
+    "reported_kappa_crit": 100000000,
+    "reported_tau_crit": 0.85,
+    "reported_weak_frac": 0.05,
+    "thresholds_validated": false
+  },
+  "independent_math_counterexample": {
+    "method": "AXIOM_ISOLATED_LOCAL_NUMPY_MATH_CALCULATION_NOT_BODYTWIN_VALIDATION",
+    "equal_geometry_two_scalar_gaussian_sensors": {
+      "variance_each": 1,
+      "I_single": 1,
+      "I_joint_by_noise_correlation": {
+        "0": 2,
+        "0.5": 1.3333333333333333,
+        "0.9": 1.0526315789473681
+      },
+      "interpretation": "IDENTICAL_MOUNT_CANNOT_IMPLY_NO_INCREMENTAL_INFO_IF_NOISE_INNOVATION"
+    },
+    "two_parameter_sum_measurement": {
+      "FIM": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "rank": 1,
+      "likelihood_information_on_difference_axis": 0,
+      "prior_information_on_difference_axis": 1,
+      "posterior_precision_rank": 2,
+      "target_sum_is_identifiable": true,
+      "target_difference_is_not": true
+    },
+    "reparam_units": {
+      "scale_original": 1,
+      "FIM_original": 1,
+      "scale_new": 1000000,
+      "FIM_new": 1e-12,
+      "eps_rank_raw": 1e-8,
+      "erroneously_changes_rank": true
+    },
+    "kernel_ratio_problem": "SUM_OF_ZERO_EIGENVALUES_OVER_TRACE_IS_ZERO_EVEN_WHEN_NULLITY_POSITIVE"
+  },
+  "scientific_errata": [
+    "FIM_FULL_RANK_IS_REGULAR_LOCAL_NOT_GLOBAL_IDENTIFICATION",
+    "PRIOR_REGULARIZES_POSTERIOR_BUT_NOT_MISSING_LIKELIHOOD_INFORMATION",
+    "RANK_DEFICIENCY_SHOULD_TRIGGER_TARGET_SPECIFIC_NOT_UNIVERSAL_ABSTENTION",
+    "SAME_PLACEMENT_AND_SAME_MARGINAL_COVARIANCE_DOES_NOT_IMPLY_ZERO_INFO",
+    "FIM_EIGENVALUE_ABSOLUTE_THRESHOLDS_NOT_UNIT_INVARIANT",
+    "ZERO_EIGENVALUE_TRACE_RATIO_BAD_NULLSPACE_METRIC",
+    "CRB_UNBIASED_REGULAR_INVERTIBLE_NOT_GENERIC_GUM_COVARIANCE",
+    "BAYES_PRIOR_ADD_IS_LOCAL_HESSIAN_OR_EXPECTED_VAN_TREES_UNDER_ASSUMPTIONS_NOT_GENERAL_EXACT_POST_COVARIANCE",
+    "CORRELATED_SENSOR_LIKELIHOOD_INFORMATION_NOT_SIMPLE_INDEPENDENT_SUM",
+    "ONE_PRIOR_ONLY_BOTH_SENSOR_POSTERIORS",
+    "R43_7_PRIMARY_NO_ADAPTIVE_GAIN_AND_REFERENCE_INPUT_LEAKAGE_PRESERVED"
+  ],
+  "hard_fixtures": [
+    "M9-01",
+    "M9-02",
+    "M9-03",
+    "M9-04",
+    "M9-05",
+    "M9-06",
+    "M9-07",
+    "M9-08",
+    "M9-09",
+    "M9-10",
+    "M9-11",
+    "M9-12",
+    "M9-13",
+    "M9-14",
+    "M9-15",
+    "M9-16"
+  ],
+  "experts": [
+    "E27_SOURCE_TIME",
+    "E28_CRYPTO_EVALUATOR_TRUST",
+    "E29_W1_WITNESS",
+    "E30_BIOMECHANICS_OBSERVABILITY",
+    "E31_ORIGINAL_INTERNATIONAL_DATA",
+    "E32_FIM_BAYES_GUM",
+    "E33_DIFFERENTIAL_NULL_ADVERSARY",
+    "E34_EXTERNAL_EVALUATOR_AND_HOLDOUT"
+  ],
+  "objective": {
+    "H0": "NO_POSITIVE_SECOND_PHONE_OR_ADAPTIVE_GAIN_VS_BEST_SINGLE_AT_EQUAL_INPUTS_RESOURCES_AND_INDEPENDENT_GROUND_TRUTH",
+    "H1": "SCOPED_INDEPENDENT_ORIGINAL_REFERENCE_GAIN_WITH_PROPER_SCORING_TARGET_OBSERVABILITY_AND_NONLEAKAGE",
+    "source_fidelity": "VSRD_C1_REQUIRED_FOR_EVERY_MATERIAL_CLAIM",
+    "max_revisions": 3
+  },
+  "evidence": {
+    "original_MHEALTH_replay_by_AXIOM": "NOT_PERFORMED",
+    "FDA_full_raw_rehash": "NOT_PERFORMED",
+    "Grok_script_original_rehash": "NOT_PERFORMED",
+    "external_auth_evaluator": "NOT_ESTABLISHED",
+    "full_science_passes": "0_OF_10",
+    "registered_quorum": "0_OF_3",
+    "R43_7_primary_score": {
+      "v0": 18.303982903117085,
+      "v2": 18.303982903117085,
+      "fusion": 18.303982903117085,
+      "ref_only": 6.6217,
+      "primary_n": 6,
+      "domains": 1,
+      "ref_is_test_input": true
+    }
+  },
+  "governance": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "physical_14": "HOLD",
+    "alt_d_do_not_run": true,
+    "privacy_E23": "HOLD",
+    "W1_full": "OPEN",
+    "original_C5": "SOURCE_GAP",
+    "original_Kotlin_Gradle_FC2": "SOURCE_GAP",
+    "cursor_order_sent": false,
+    "merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "apk_install": false,
+    "public_private_bytes": false,
+    "unregistered_expert_direct_write": false
+  },
+  "next": "R43_9_E27_E34_ORIGINAL_SOURCE_MATH_AND_REAL_DATA_RETURNS_TO_AXIOM_THEN_INDEPENDENT_ADJUDICATION_THEN_OPERATOR_DECISION"
+}
