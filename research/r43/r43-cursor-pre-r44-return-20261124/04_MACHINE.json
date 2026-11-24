@@ -1,0 +1,44 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R43_ALL_NINE_ROUNDS_SCIENTIFIC_CUSTODY_AND_OFFLINE_REPAIR_RETURN_20261124_R0",
+  "order": "NEXUS_OMEGA_AXIOM_CURSOR_R43_ALL_NINE_ROUNDS_SCIENTIFIC_CUSTODY_AND_OFFLINE_REPAIR_HANDOFF_20261124_R0",
+  "recorded_utc": "2026-11-24T06:35:00Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "issue": 426,
+  "source_pr": 427,
+  "source_head": "6ff5f7e2877eb4c91ec356e435d3aad319267417",
+  "source_documents_rehash": "9_OF_9_MATCH",
+  "manifest_sha256": "a1e54f2847f55b4ec3afc2aa980c0813964e4e552ad576a831c41a6ab93c021f",
+  "c0_ack_comment_id": 7123994855,
+  "mhealth_bytes": 75567983,
+  "mhealth_sha256": "16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0",
+  "mhealth_subjects": "10_OF_10_MATCH",
+  "receiver_internal": "PASS_19_OF_19",
+  "manus_payload": "INCOMPLETE_6_OF_7",
+  "fc2_rerun": {
+    "verdict": "PASS_FC2_FAIL_CLOSED_C1",
+    "negatives": "13_OF_13",
+    "positives": "7_OF_7",
+    "receipt_sha256": "00612c1325cd51ee6510cb85bdb14dcd30569b4a6898d79b5a1f2b909023784d"
+  },
+  "contradictions": {
+    "B01": "FDA_370_VS_374_PRESERVE",
+    "B02": "M9_NAMESPACE_OPEN",
+    "B03": "MANUS_6_OF_7",
+    "B04": "EVALUATOR_NOT_ESTABLISHED"
+  },
+  "source_gaps": [
+    "GROK_ABSTENTION_THRESHOLD_PY",
+    "FDA_SAMPLERAWDATA_27f5bf94"
+  ],
+  "prohibitions": {
+    "pr_merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "claim_promotion": false,
+    "r44": "NOT_STARTED"
+  },
+  "cursor_action": "NONE",
+  "next": "AXIOM_INDEPENDENT_ADJUDICATION"
+}
