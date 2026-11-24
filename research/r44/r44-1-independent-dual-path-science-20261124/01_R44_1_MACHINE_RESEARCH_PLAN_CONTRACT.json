@@ -1,0 +1,133 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R44_0_TO_R44_1_INDEPENDENT_DUAL_PATH_SCIENCE_AND_BODYTWIN_EXPERIMENTAL_RESEARCH_PLAN_20261124_R0",
+  "status": "R44_1_SCIENCE_RESEARCH_PLAN_ON_GITHUB_NOT_EXECUTED_C1",
+  "parent": {
+    "r43_cursor_ack_issue": 426,
+    "r43_cursor_return_draft": 428,
+    "r43_return_head": "031430f2f6846065b624b3f30006cf5644f8e800",
+    "r44_issue": 429,
+    "r44_pr": 430,
+    "r44_head": "05c6e19a56d859aee514558ee3fdc83a7695fff5",
+    "r44_manifest": "21a799b82f6468571e2ed4e60ad8d48e29264328ec563849f53fef8f33ef9716",
+    "r44_bind_ack_comment": 7126774537,
+    "r44_1_issue": 431
+  },
+  "newest_operator_return": {
+    "original_zip": "NEXUS_OMEGA_CURSOR_R43_ADJUDICATION_AND_R44_0_FOUNDATION_BIND_RETURN_20261124_R0.zip",
+    "bytes": 3928,
+    "sha256": "2651acd19d285dad80a85c41056d5081adcde099aad6a12f816e02ecf10da45d",
+    "sidecar_bytes": 151,
+    "sidecar_sha256": "ff349f18204166fe0d8aa67f0a6638cf483b8c4056f286f7a056d99f801610cc",
+    "zip_crc": "PASS",
+    "zip_entries": 7,
+    "manifest_listed_payloads": "6_OF_6_MATCH",
+    "operator_metadata_class": "ORIGINAL_RECEIVED_AND_INDEPENDENTLY_REHASHED_C1",
+    "r44_science_in_latest_cursor_return": "NOT_STARTED",
+    "new_cursor_order": "NOT_SENT"
+  },
+  "gemini_check": {
+    "context": "USER_SUPPLIED_GEMINI_TEXT_WITH_VIDEO_URL",
+    "video_url": "https://www.youtube.com/watch?v=CcIwi0Pr64E",
+    "original_video_page_retrieved_by_AXIOM": false,
+    "anthropic_original": "https://www.anthropic.com/research/claude-black-hole-physics",
+    "anthropic_publication_date": "2026-11-17",
+    "anthropic_agent_provenance": "22_CANDIDATE_TASKS_APPROX_6_WEEKS_DOUBLE_COMPUTATION",
+    "hawking_preprint": "https://hexagonmath.org/2611.00175v1",
+    "hawking_preprint_b": "-1.48e-3 * lambda^2",
+    "b_value_validation": "FIRST_PARTY_PREPRINT_ABSTRACT_ONLY_NOT_INDEPENDENT_PHYSICS_REPRODUCTION",
+    "hawking_lean_verified": "NOT_ESTABLISHED",
+    "modular_bootstrap_preprint": "https://hexagonmath.org/2611.00174v1",
+    "modular_bootstrap_lean": "ANTHROPIC_REPORTS_FORMAL_LEAN_VERIFICATION_FOR_THIS_SEPARATE_WORK",
+    "grok_gemini_14_diagrams_13_infinites": "NOT_VERIFIED_PRIMARY",
+    "crossdomain_physics_b_to_nexus_gate": "METHODOLOGICAL_ANALOGY_NOT_MATHEMATICAL_IDENTITY",
+    "claim_and_actor_independence": "TO_BE_MEASURED_NOT_INFERRED_FROM_DISTINCT_AGENT_LABELS"
+  },
+  "science_lanes": [
+    {
+      "id": "A",
+      "type": "MATHEMATICAL_DOUBLE_PROOF",
+      "primary": "TARGET_SPECIFIC_FIM_PRIOR_AND_CORRELATED_SENSOR_ORIGINAL_PROOF"
+    },
+    {
+      "id": "B",
+      "type": "LEGALLY_OBTAINED_DATA",
+      "primary": "UCI319_WEARABLE_VS_UCI341_PHONE_VS_FDA_MULTI_PHONE_NONEXCHANGEABLE"
+    },
+    {
+      "id": "C",
+      "type": "BLIND_AGENT_INDEPENDENCE",
+      "primary": "SOURCE_ORIGIN_ERROR_CORRELATION_REAL_COST_PROTECTED_HOLDOUT"
+    },
+    {
+      "id": "D",
+      "type": "PACKAGE_SEAL_DEPENDENCY",
+      "primary": "B05_NON_CYCLIC_FINAL_RECEIPT_APPEND_ONLY"
+    }
+  ],
+  "prereg_experiments": [
+    "R44_1_DUAL_METHOD_ANALYTIC_VS_NUMERICAL_FISHER",
+    "R44_1_DATASET_THREE_TOPOLOGY_SOURCE_Q4_PILOT",
+    "R44_1_SINGLE_VS_TWO_SENSOR_MATCHED_INPUTS_IF_REAL_REF_EXISTS",
+    "R44_1_AGENT_INDEPENDENCE_WITH_SOURCE_LINEAGE",
+    "R44_1_EVAL_AWARENESS_BENIGN_SANDBOX_MUTANTS",
+    "R44_1_B05_SEAL_FINAL_SNAPSHOT_REPAIR_DESIGN"
+  ],
+  "experimental_rules": {
+    "primary_metric": "INDEPENDENTLY_REFERENCED_GROUP_HOLDOUT_PROPER_INTERVAL_SCORE_OR_PREREG_SPECIFIED_MAE_IF_INTERVAL_INAPPLICABLE",
+    "null": "BEST_SINGLE_SENSOR_EQUAL_INPUT_AND_COST",
+    "cross_reference": "ORACLE_REFERENCE_NOT_ALLOWED_AT_INFERENCE",
+    "evaluators": "REAL_OPERATOR_REGISTERED_IDENTITY_OR_NOT_RUN_Q5",
+    "grouping": "SUBJECT_PHONE_MOUNT_SESSION_TIME",
+    "confidence": "PARTICIPANT_CLUSTERED_CI_WITH_95_PERCENT_INTERVAL_AND_PREDECLARED_EFFECT_SIZE",
+    "adaptive_holdout": "EVALUATOR_FROZEN_HIDDEN_LABELS_AND_REUSE_PROTOCOL",
+    "time_budget": "MEASURED_NOT_SUGGESTED",
+    "sources": "VSRD_C1_Q0_Q5_QX"
+  },
+  "source_gaps": [
+    "B01_FDA_370_VS_374",
+    "B02_M9_ID_ALIAS_FULL_MAP",
+    "B03_MANUS_MISSING_PDF",
+    "B04_REGISTERED_ACTOR_HOLDOUT_AND_COST",
+    "B05_R43_CURSOR_EMBEDDED_RECEIPT_STALE"
+  ],
+  "gates": [
+    "G44-1-0",
+    "G44-1-1",
+    "G44-1-2",
+    "G44-1-3",
+    "G44-1-4",
+    "G44-1-5",
+    "G44-1-6",
+    "G44-1-7",
+    "G44-1-8",
+    "G44-1-9"
+  ],
+  "experts": [
+    "E27_ANDROID_TIME_SOURCE",
+    "E28_DSSE_AND_B05_SEAL",
+    "E29_REAL_W1_WITNESS",
+    "E30_BIOMECHANICS_REFERENCE",
+    "E31_ORIGINAL_DATASET_RIGHTS",
+    "E32_TARGET_FIM_GUM_SCORE",
+    "E33_INDEPENDENT_NULLS",
+    "E34_AUTHENTICATED_EVALUATOR_AUDIT"
+  ],
+  "original_science_status": {
+    "full_substantive_passes": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "bodytwin_validated": false,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "privacy": "HOLD",
+    "w1": "OPEN",
+    "real_dual_phone_reference_data_in_hand": false,
+    "r44_1_experiments": "NOT_EXECUTED",
+    "R44_Cursor_order": false,
+    "merge": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "device_capture": false
+  },
+  "next": "R44_1_ORIGINAL_E27_E34_SCIENCE_RETURNS_TO_AXIOM_FOR_INDEPENDENT_ADJUDICATION"
+}
