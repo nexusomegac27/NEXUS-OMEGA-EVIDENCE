@@ -1,0 +1,198 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R43_HANDOFF_ORIGINAL_ARTIFACT_BYTE_AND_SOURCE_CUSTODY_LEDGER_20261124_R0",
+  "source_class": "AXIOM_INDEPENDENT_CONTAINER_SHA256_AND_ZIP_CRC_ON_USER_OPERATOR_UPLOADED_BYTES",
+  "original_paths": "NOT_IN_GITHUB_TO_BE_SUPPLIED_SEPARATELY_BY_OPERATOR",
+  "files": [
+    {
+      "filename": "GROK_INPUT_R43-9(1).txt",
+      "bytes": 30412,
+      "sha256": "c2bf195a31862be7d53e68d82adf71749a13a743d15bc541d5fbd2137d2506b5",
+      "class": "USER_SOURCE_DESIGN_THOUGHT_STARTER"
+    },
+    {
+      "filename": "R43-9-~1.MD",
+      "bytes": 20290,
+      "sha256": "02f28d5dc11804a31424f8cc48fc82416264bb70368e620f1eae153c74d0024e",
+      "class": "ADVISORY_SOURCE_READBACK"
+    },
+    {
+      "filename": "NEXUS-~1(20261124-055838).MD",
+      "bytes": 18118,
+      "sha256": "985d9f3468bb8d4fe8dc1cb343a4192c05449c4616abf2200ff684272558a787",
+      "class": "ADVISORY_PUBLIC_GITHUB_AUDIT"
+    },
+    {
+      "filename": "NEXUS_~1(20261124-055844).MD",
+      "bytes": 10723,
+      "sha256": "4aa7979db052f879abcad05ab352d4455af64fd7dcaab340068a664f9cab052a",
+      "class": "GROK_SELF_DECLARED_ADVISORY"
+    },
+    {
+      "filename": "R43-9_~1.ZIP",
+      "bytes": 786377,
+      "sha256": "2e586fd9b247eda23c27b636397a1426460bb419978910be5b7bf483ebc0d9b5",
+      "zip_crc": "PASS",
+      "manifest": "6_OF_7_FILE_PAYLOADS_MATCH_ONE_PDF_MISSING",
+      "class": "PRODUCER_LOCAL_FIXTURE_NOT_INDEPENDENT_RUN"
+    },
+    {
+      "filename": "R43_9_~1.ZIP",
+      "bytes": 111908,
+      "sha256": "707cc27a79883808ed1a34556e08103b83184b12ab9020a678b35fc211ff0f27",
+      "zip_crc": "PASS",
+      "inner_file_bytes": 101342,
+      "inner_sha256": "be4361751059cd56fd81554aba9153025d66ef5fab180ee38c515275927c17f6",
+      "inner_manifest": "19_OF_19_MATCH",
+      "class": "UNREGISTERED_OFFCHAIN_RECEIVER_ADVISORY"
+    },
+    {
+      "filename": "NEXUSO~1(6).ZIP",
+      "bytes": 152308678,
+      "sha256": "85b3a7216512edda87f10516a78e7741e28e493ae31c67e64fa8784ab6ee4876",
+      "zip_crc": "PASS",
+      "inner_tar_gz_bytes": 152134804,
+      "inner_tar_gz_sha256": "1acb34cf0c7f34b60b7e3173ace822dd103a1de53c07c201545d7d0daad04262",
+      "tar_members": 24,
+      "class": "PRODUCER_RESEARCH_REPORTS_PLUS_MHEALTH_ORIGINAL_BYTES_RECEIVED"
+    },
+    {
+      "filename": "NEXUS_OMEGA_CURSOR_R42_R2_IMPLEMENTATION_RETURN_20261123_R0.zip",
+      "bytes": 6055,
+      "sha256": "2cf901eaab21a8e9d4d93706159e71c67d8b02fa83db15357be698e3f33ecc4c",
+      "class": "LAST_CURSOR_C1_OFFLINE_IMPLEMENTATION_REPORT"
+    }
+  ],
+  "mhealth": {
+    "dataset": "UCI_MHEALTH_10_SUBJECTS_3_SHIMMER2_WEARABLES_NOT_TWO_SMARTPHONES",
+    "original_zip_basename": "mhealth.zip",
+    "bytes": 75567983,
+    "sha256": "16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0",
+    "crc": "PASS",
+    "zip_entries": 12,
+    "subject_files": [
+      {
+        "filename": "mHealth_subject1.log",
+        "bytes": 30019680,
+        "rows": 161280,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "da8d1bbf644a206886333f945a1dd7fe5081382b3bb3ee42821f08ad765732e4"
+      },
+      {
+        "filename": "mHealth_subject2.log",
+        "bytes": 24446574,
+        "rows": 130561,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "20e288750fe9f4f0495686fabf1500bfe655a549f0d2c3a9be5aa6456461b8f1"
+      },
+      {
+        "filename": "mHealth_subject3.log",
+        "bytes": 22788438,
+        "rows": 122112,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "90ead135c9fa9f1188e3b1f7afc0c95899a0614a15917cf3590f52923d6e03fd"
+      },
+      {
+        "filename": "mHealth_subject4.log",
+        "bytes": 21833916,
+        "rows": 116736,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "3b66f87a292f4cc457aea18cb7e15a10c18055c803df27f5284c6a1c5751a469"
+      },
+      {
+        "filename": "mHealth_subject5.log",
+        "bytes": 22285024,
+        "rows": 119808,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "380e526a85bde64baebd1d1a2478c4cfad947a4ab994c8b39b8dcda195f78a30"
+      },
+      {
+        "filename": "mHealth_subject6.log",
+        "bytes": 18243582,
+        "rows": 98304,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "4b8bc81186229e096937f37f9ae070017ee653005b21f88fcd0504e9195f8926"
+      },
+      {
+        "filename": "mHealth_subject7.log",
+        "bytes": 19460454,
+        "rows": 104448,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "5e372b2fad64a3ebaadd103ec09cde68d448ef5b707b010d02f438b8b9203b1f"
+      },
+      {
+        "filename": "mHealth_subject8.log",
+        "bytes": 24087426,
+        "rows": 129024,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "c6ddb8926be4c193890a28cc84cafe35c16a4bc14f23c3e696d504643652a61b"
+      },
+      {
+        "filename": "mHealth_subject9.log",
+        "bytes": 25148835,
+        "rows": 135168,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "fa68f90a9dfeda47abce41ebc1dec8ce55f66dc56d513ab90a6ae20ad045f2c9"
+      },
+      {
+        "filename": "mHealth_subject10.log",
+        "bytes": 18500501,
+        "rows": 98304,
+        "first_row_columns": 24,
+        "last_row_columns": 24,
+        "sha256": "382d3d7b58e1fe24679fb241fd7e48ce1992757f6b1b237a56cd660e8f1fabda"
+      }
+    ],
+    "original_zip_subject_logs_sha_match_against_expanded_archive": "10_OF_10_MATCH",
+    "Q4": "ORIGINAL_BYTES_REHASHED_FROM_OPERATOR_ARTIFACT",
+    "independent_remote_download_Q5": "NOT_PERFORMED",
+    "independent_subject_group_model_benchmark": "NOT_RUN",
+    "FDA_two_phone_validation": "NOT_ESTABLISHED"
+  },
+  "manus_manifest_discrepancy": {
+    "source_archive": "R43-9_~1.ZIP",
+    "manifest": "MANIFEST_SHA256.txt",
+    "claimed_payloads": 7,
+    "present_sha256_matching_payloads": 6,
+    "missing_payload": {
+      "filename": "R43-9_Wissenschaftliche_Gesamtsynthese.pdf",
+      "claimed_bytes": 532682,
+      "claimed_sha256": "91355f080d9ec72526da716135e5180481cdda8180cbb3b5a50e90771c19944"
+    },
+    "six_present_payloads_all_match": true,
+    "transport_crc": "PASS",
+    "verdict": "FAIL_COMPLETENESS_NO_7_OF_7"
+  },
+  "FDA": {
+    "official_catalog": {
+      "url": "https://www.fda.gov/medical-devices/regulatory-science-tools-catalog/open-access-wearables-dataset-evaluate-factors-impacting-accuracy-smartphone-gait-metrics",
+      "designed": 400,
+      "discarded": 26,
+      "usable": 374,
+      "source_class": "OFFICIAL_FDA_ORIGINAL_TEXT_CURRENTLY_VISIBLE"
+    },
+    "original_github": {
+      "url": "https://github.com/dbp-osel/wearables-for-gait-synchronized-smartphone-imu-and-walkway-data",
+      "designed": 400,
+      "discarded": 30,
+      "usable": 370,
+      "source_class": "OFFICIAL_FDA_RESEARCHER_GIT_ORIGINAL_README"
+    },
+    "conflict": "UNRESOLVED",
+    "reported_sample_sha_prefix": "27f5bf94",
+    "reported_sample_bytes": 18611028,
+    "actual_sample_bytes_received_in_current_uploads": false,
+    "independent_data_sample_rehash": "NOT_PERFORMED"
+  },
+  "Grok_ABSTAIN_reported_sha256": "292c77727081ab6117eb3f23b27527c0be5c855897dfece193573ec15bf606a6",
+  "Grok_ABSTAIN_original_code_received": false,
+  "source_note": "This public-safe index intentionally omits raw MHEALTH data and all user-private local absolute paths. Source trust and actual scientific validity remain separate."
+}
