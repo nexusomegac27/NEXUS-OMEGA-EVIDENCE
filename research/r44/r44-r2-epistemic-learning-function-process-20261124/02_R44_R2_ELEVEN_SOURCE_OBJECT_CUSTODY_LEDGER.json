@@ -91,9 +91,11 @@
     "full_study": false
   },
   "material_source_test": {
-    "original": "33_OF_51_FAIL_EXPECTED_AF_EXAMINATION",
-    "candidate": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
-    "candidate_result": "51_OF_51_LOCAL_CANDIDATE_MATCH"
+    "original_script_sha256": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+    "original_test_result": "33_OF_51_PASS_PROCESS_EXIT_1",
+    "candidate_script_sha256": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
+    "candidate_test_result": "51_OF_51_PASS_PROCESS_EXIT_0",
+    "candidate_is_original_overwrite": false
   },
   "warnings": [
     "NOT_ALL_ARCHIVES_HAVE_MACHINE_MANIFESTS",
