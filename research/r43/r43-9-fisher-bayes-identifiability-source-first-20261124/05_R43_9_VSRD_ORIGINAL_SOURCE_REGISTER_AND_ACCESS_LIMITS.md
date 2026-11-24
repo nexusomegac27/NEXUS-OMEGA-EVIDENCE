@@ -1,0 +1,20 @@
+# R43-9 VSRD-C1 verified-address reference starting points, 24 Nov 2026
+
+Purpose: route experts to **original publisher/normative data** with independent crosschecks. A link from this document has only the evidence class Q0/Q1 unless content was actually inspected; some authoritative sources have been read at official landing pages to Q2/Q3 limited. **No original dataset bytes or package manuscript was downloaded for this R43-9 creation.** Each expert MUST refresh sources and exact commit/version/access date.
+
+| ID | Original source | Current source scope | Hard caution |
+|---|---|---|---|
+| SRC-R43-9-01 | Rothenberg 1971 original Econometrica paper https://pages.stern.nyu.edu/~dbackus/Identification/id/Rothenberg_id_Econometrica_71.pdf | original paper text regarding local vs global FI rank | only regular-point conditions, not dynamic practical global identification |
+| SRC-R43-9-02 | Structural/practical identifiability method https://www.sciencedirect.com/science/article/pii/S245231002100007X | published methods, profile likelihood alternative | do not force all real observations into a single local FIM |
+| SRC-R43-9-03 | Stanford lecture van Trees https://web.stanford.edu/class/ee378c/lecture14_annotated.pdf | Bayes MSE lower-bound + prior Fisher information formula | not a general equation for exact posterior covariance |
+| SRC-R43-9-04 | NIST measurement uncertainty https://www.nist.gov/itl/sed/topic-areas/measurement-uncertainty | official uncertainty guidance | GUM not simply FI inverse |
+| SRC-R43-9-05 | BIPM JCGM100:2008(E) https://www.bipm.org/en/doi/10.59161/jcgm100-2008e | official uncertainty guide/DOI | traceability and input covariance need actual model |
+| SRC-R43-9-06 | BIPM JCGM101:2008 https://www.bipm.org/en/doi/10.59161/jcgm101-2008 | official Monte Carlo supplement | genuine model + data rights needed |
+| SRC-R43-9-07 | 2025 identifiability experimental active search https://spj.science.org/doi/full/10.1016/j.csbj.2025.10.058 | adjacent methodological research on profile likelihood | not an IMU empirical study |
+| SRC-R43-9-08 | 2026 sensor informativeness Bayesian inverse https://www.sciencedirect.com/science/article/pii/S0888327026007636 | multidisciplinary methodology candidate | structural health not human movement, so transfer is theoretical only |
+| SRC-R43-9-09 | FDA OSEL official source https://www.fda.gov/medical-devices/regulatory-science-tools-catalog/open-access-wearables-dataset-evaluate-factors-impacting-accuracy-smartphone-gait-metrics | regulatory tool catalogue | blocked for some agents, no claim of universal source accessibility |
+| SRC-R43-9-10 | FDA repo original https://github.com/dbp-osel/wearables-for-gait-synchronized-smartphone-imu-and-walkway-data | original README: 20 people, 400 planned/370 retained, phones at different body sites, code and *sample of raw data* mentioned, archive read-only | do not claim all 370 original files retrievable based on README; freeze commit and rights |
+| SRC-R43-9-11 | UCI original MHEALTH https://archive.ics.uci.edu/dataset/319/mhealth%2Bdataset | 10 people, 12 activities, 3 wearable devices | not a dual smartphone trial; prior producer-reported 80/81 not AXIOM-replayed |
+| SRC-R43-9-12 | GitHub permanent source version docs https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files | source exact pin to commit | main branch is mutable; need raw file SHA and legal rights |
+
+**VSRD required for every expert claim**: actual URL+final redirect/checked_at; claim-specific methods/paragraph; DOI/PMID/commit and original SHA only if actually obtained, else `NOT_OBTAINED`; original/mirror/original DOI identification, source corrections/withdrawal, negative evidence, license specific to DATA not only code, independent measurement and confidence limitation. Classify Q0–Q5/QX; Q5 genuinely authenticated independent replay, source publication not an expert ACK. Never invent sources or declare a website absent after one 401/403/timeout.
