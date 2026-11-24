@@ -1,0 +1,100 @@
+{
+  "schema": "nexus/r44-6/return-template/v1",
+  "state": "NOT_RUN",
+  "actor": {
+    "id": null,
+    "role": null,
+    "operator_registration": "UNVERIFIED",
+    "independence": "UNVERIFIED"
+  },
+  "parent": {
+    "issue": 439,
+    "pr": 440,
+    "commit": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a"
+  },
+  "receiver_ack": {
+    "order_commit": null,
+    "zip_bytes": null,
+    "zip_expected_sha256": null,
+    "zip_computed_sha256": null,
+    "manifest_matches": null,
+    "source_receipts": [
+      {
+        "source_id": null,
+        "exact_url": null,
+        "ref": null,
+        "route": null,
+        "attempts": [],
+        "http_status": null,
+        "actual_bytes": null,
+        "expected_sha256": null,
+        "computed_sha256": null,
+        "access": "NOT_RUN",
+        "license": "UNKNOWN",
+        "privacy": "UNKNOWN",
+        "missing_owner": null
+      }
+    ]
+  },
+  "prereg": {
+    "sha256": null,
+    "frozen_time": null,
+    "estimand": null,
+    "H0": null,
+    "H1": null,
+    "rivals": [],
+    "seeds": [],
+    "decision_family": null,
+    "method": null,
+    "independent_units": null,
+    "lease_id": null
+  },
+  "run_receipts": [
+    {
+      "test_id": null,
+      "run_id": null,
+      "source_hashes": [],
+      "script_hash": null,
+      "environment": null,
+      "started": null,
+      "ended": null,
+      "exit_code": null,
+      "raw_result_path": null,
+      "gate": "NOT_RUN",
+      "verdict": "NOT_RUN",
+      "blocker": null
+    }
+  ],
+  "lease": {
+    "limits": null,
+    "wall_s": null,
+    "cpu_tree_s": null,
+    "net_rx_bytes": null,
+    "net_tx_bytes": null,
+    "provider_tokens": null,
+    "retry_count": null,
+    "cache_count": null,
+    "unmatched_starts": null,
+    "completeness": "UNKNOWN",
+    "efficiency": "NOT_ELIGIBLE"
+  },
+  "separate_counts": {
+    "unique_tests": 0,
+    "receipt_entries": 0,
+    "canonical_negative_24": 0,
+    "r44_5_design_28": 0,
+    "r44_6_controls_18": 0,
+    "quorum_credit": 0,
+    "full_passes": 0
+  },
+  "publication": {
+    "visibility": "REVIEW_REQUIRED",
+    "return_branch": null,
+    "return_commit": null,
+    "zip_sha256": null,
+    "manifest_sha256": null,
+    "readback": "NOT_RUN"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "promotion": false
+}
