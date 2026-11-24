@@ -1,0 +1,65 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R44_4_R44_3_RETURNS_ORIGINAL_CUSTODY_20261124_R0",
+  "files": [
+    {
+      "name": "AXIOMR~1(1).MD",
+      "bytes": 4471,
+      "sha256": "8446a668f850e11a46b57b57ca75c82b8bd2fc17b95d3de2bfdeb2c198b7304f",
+      "scope": "read-only report; no expert execution",
+      "raw_uploaded_to_public_github": false
+    },
+    {
+      "name": "NEXUSO~1(5).TXT",
+      "bytes": 9511,
+      "sha256": "d6dbb85ae6683634a673742e096e46ac94e68043d5a29a8f5ae6be4fc587ea5a",
+      "scope": "offchain unregistered receiver 9/9 + manifest; no expert ACK",
+      "raw_uploaded_to_public_github": false
+    },
+    {
+      "name": "NEXUS-~1(20261124-145619).MD",
+      "bytes": 16855,
+      "sha256": "3d8dd4647c2ee743572a25fece03554cd143856121207060ae055172af24ae3d",
+      "scope": "double-channel GitHub audit and 11/11 parent; no new experiment",
+      "raw_uploaded_to_public_github": false
+    },
+    {
+      "name": "R44-3-~1.MD",
+      "bytes": 21582,
+      "sha256": "bb2661d0ed3314e47d8eb12b5c05f4aa8dcbd240c6b5fb8a710b22687813899a",
+      "scope": "Mistral/Vibe readback; four state aliases; no science test",
+      "raw_uploaded_to_public_github": false
+    },
+    {
+      "name": "SCHIED~1(1).TXT",
+      "bytes": 15979,
+      "sha256": "91ce82eee7792c0d77cada2059c3d3a96a26ea0fa429b94d2a67fe4a4f87f02b",
+      "scope": "research order adjudication; original file hashes operator-attested by this adjudicator",
+      "raw_uploaded_to_public_github": false
+    },
+    {
+      "name": "SOURCE~1(2).ZIP",
+      "bytes": 107259,
+      "sha256": "ed2d0f2928b3964cb75eedfdc8bff26c01ae025869238e924fd4104b066f4540",
+      "scope": "18 payload files + 1 dir CRC PASS, own sha256sums 16/16, JSON manifest 17/17, includes copies of previous 10 R44-3 GitHub source objects",
+      "raw_uploaded_to_public_github": false
+    }
+  ],
+  "independent_checks": {
+    "six_uploads_sha": "6_OF_6_COMPUTED",
+    "source_zip_crc": "PASS",
+    "sha256sums_in_zip": "16_OF_16_MATCH",
+    "zip_manifest_json": "17_OF_17_MATCH",
+    "source_zip_payloads": 18,
+    "r44_3_frozen_files": 10,
+    "new_or_supporting_files": 8
+  },
+  "scientific_findings": {
+    "actual_new_N01_N24_test_receipts": 0,
+    "external_registered_expert_identity_receipts": 0,
+    "bodytwin_data_benchmark_returns": 0,
+    "scientific_conclusion": "SOURCE_AND_ORDER_CUSTODY_IMPROVED_NOT_SCIENTIFIC_FALSIFICATION_COMPLETED"
+  },
+  "interpretation": "R44_3_OPERATOR_ADMINISTRATIVE_DONE_NOT_R44_3_FULL_SCIENCE_PROVEN",
+  "old_parent_head": "8abd8ddd3afa7099322996625b8d09bbe1494f0e",
+  "restricted_data_policy": "ONLY_PUBLIC_SAFE_METADATA_HASHES_AND_NONEXPLOIT_DETAILS"
+}

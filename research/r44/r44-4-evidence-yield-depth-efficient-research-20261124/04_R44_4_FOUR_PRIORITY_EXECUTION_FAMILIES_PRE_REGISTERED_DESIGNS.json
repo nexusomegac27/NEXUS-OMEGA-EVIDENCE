@@ -1,0 +1,165 @@
+{
+  "schema": "nexus-omega/r44-4/priority-test-family-design/v0",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "families": [
+    {
+      "id": "R44-4-A",
+      "parents": [
+        "R44-3-N01",
+        "R44-3-N02",
+        "R44-3-N03",
+        "R44-3-N04",
+        "R44-3-N05",
+        "R44-3-N06",
+        "R44-3-N07"
+      ],
+      "owner": "E28",
+      "review": "E34",
+      "question": "Does static claimed quorum 3/3 pass without actual operator trusted actor roots?",
+      "h0": "Untrusted actor claims must always be rejected even if selfdeclared counts match",
+      "negatives": [
+        "freeform claimed quorum3 registered3 with no root",
+        "valid signature unknown key",
+        "trusted key wrong role",
+        "nonce replay",
+        "one signer thrice"
+      ],
+      "positives": [
+        "synthetic TEST key registered under synthetic TEST root for correct role and fresh nonce passes source exact envelope verification"
+      ],
+      "prereq": [
+        "original static NELFP reference code pinned 7c9c9e77d4a23405308a93852afc4c776958b83b13e0dbef816c02a112f4b30a",
+        "authorized sandbox",
+        "synthetic test keys not production"
+      ],
+      "measurement": [
+        "expected/actual reason code",
+        "bytes signed",
+        "root id/role registry",
+        "process exit",
+        "test vector SHA"
+      ],
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R44-4-B",
+      "parents": [
+        "R44-3-N10",
+        "R44-3-N11"
+      ],
+      "owner": "E32",
+      "review": "E33",
+      "question": "Does linear Hx repair survive covariance whitening and nonlinear forward model?",
+      "h0": "51/51 candidate only addresses original linear residual bug; not arbitrary nonlinear/correlated setting",
+      "negatives": [
+        "H-transpose-H wrongly used when Sigma != I",
+        "linear H@x substituted for nonlinear f(theta)",
+        "shared prior counted twice",
+        "unit scaling flips raw eigenvalue gate"
+      ],
+      "positives": [
+        "analytically independent HᵀSigma^-1H and numeric Hessian/Jacobian agree in prespecified linear case",
+        "nonlinear correct local Jacobian matches numerical derivative within prereg tolerance"
+      ],
+      "prereq": [
+        "original 77-line file SHA 4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+        "independent numeric implementation and data receipt",
+        "no real hardware claim"
+      ],
+      "measurement": [
+        "matrix residuals",
+        "conditioning",
+        "units",
+        "seed",
+        "tolerance",
+        "exit/log"
+      ],
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R44-4-C",
+      "parents": [
+        "R44-3-N16",
+        "R44-3-N17",
+        "R44-3-N18",
+        "R44-3-N19",
+        "R44-3-N20",
+        "R44-3-N21"
+      ],
+      "owner": "E34",
+      "review": "E33",
+      "question": "Can any measured scientific superiority survive true total-cost and blind holdout parity?",
+      "h0": "If cost unmeasured/negative elapsed or hidden labels leaked, comparative improvement is not admissible",
+      "negatives": [
+        "elapsed=-15759.254 returned as benefit",
+        "subprocess CPU missing",
+        "retry egress hidden",
+        "scorer modified after protected test",
+        "partial subject/seed split overlap"
+      ],
+      "positives": [
+        "same single vs multiple agent task with all cost fields observed under operator-approved TEST lease, frozen score and no overlap"
+      ],
+      "prereq": [
+        "finite operator-approved research-only budget",
+        "available instrumentation",
+        "no new paid API automatically initiated"
+      ],
+      "measurement": [
+        "monotonic wall",
+        "cpu full tree",
+        "RSS",
+        "network",
+        "tokens",
+        "retries",
+        "evaluator cost",
+        "score/CIs"
+      ],
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R44-4-D",
+      "parents": [
+        "R44-3-N22",
+        "R44-3-N23",
+        "R44-3-N24"
+      ],
+      "owner": "E27",
+      "review": "E29",
+      "question": "Can unsafe capability be isolated while safe independent read-only research remains available?",
+      "h0": "Whole-node quarantine is overbroad when risk can be provably capability-scoped",
+      "negatives": [
+        "unsafe capability still reachable after targeted deny",
+        "unrelated safe read-only source retrieval blocked by blanket deny",
+        "public log leaks sensitive security detail",
+        "generic CVE falsely mapped to user's host"
+      ],
+      "positives": [
+        "synthetic unsafe function blocked and legitimate read-only sandbox/source work allowed; rollback and operator release distinct"
+      ],
+      "prereq": [
+        "synthetic local mocked capabilities",
+        "no live host exploits",
+        "public-safe redacted logs"
+      ],
+      "measurement": [
+        "false holds",
+        "false permits",
+        "rollback evidence",
+        "permission scopes"
+      ],
+      "execution": "NOT_RUN"
+    }
+  ],
+  "each_return": [
+    "original data/source content hash",
+    "pre-frozen scorer and test labels",
+    "positive and negative full runs with exit",
+    "independent reviewer receipt",
+    "cost lease",
+    "claim source level",
+    "actor provenance",
+    "failure retained"
+  ],
+  "science_trust": "ACTUAL_TEST_WILL_REQUIRE_NEW_SOURCE_RECEIPTS; DESIGN_NOT_FULL_P01_P10"
+}
