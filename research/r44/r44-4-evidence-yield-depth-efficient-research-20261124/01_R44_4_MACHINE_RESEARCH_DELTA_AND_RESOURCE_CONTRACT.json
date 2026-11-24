@@ -1,0 +1,119 @@
+{
+  "schema": "nexus-omega/r44-4/evidence-yield-research-contract/v0",
+  "object": "NEXUS_OMEGA_AXIOM_R44_3_TO_R44_4_SCIENTIFIC_DEPTH_THROUGHPUT_AND_INDEPENDENT_EXPERIMENT_EXPERT_ORDER_20261124_R0",
+  "state": "R44_4_RESEARCH_ORDER_PREPARED_NOT_EXECUTED_C1",
+  "authority": "OPERATOR_VIA_AXIOM",
+  "parent": {
+    "R44_3_issue": 435,
+    "R44_3_pr": 436,
+    "head": "8abd8ddd3afa7099322996625b8d09bbe1494f0e",
+    "manifest": "7764ff7a13b39cd88117db7631e449f653caab21806289c5a3eb03303bf6f350",
+    "parent_source_state": "ORDER_READBACK_CLOSED_BY_OPERATOR_RESEARCH_EXECUTION_NOT_PROVEN",
+    "R44_R2_issue": 433,
+    "R44_R2_pr": 434,
+    "head_r2": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+    "VSRD_issue": 422,
+    "R44_4_issue": 437
+  },
+  "evidence_census": {
+    "source_uploads": "6_OF_6_DIRECT_SHA256",
+    "source_zip_bytes": 107259,
+    "source_zip_sha256": "ed2d0f2928b3964cb75eedfdc8bff26c01ae025869238e924fd4104b066f4540",
+    "zip_crc": "PASS",
+    "source_zip_files": 18,
+    "source_zip_directories": 1,
+    "sha256sums": "16_OF_16_MATCH",
+    "embedded_manifest_json": "17_OF_17_MATCH",
+    "prior_frozen_source_files_in_zip": 10,
+    "prior_frozen_uncompressed_bytes": 44564,
+    "new_or_supporting_zip_files": 8,
+    "new_or_supporting_uncompressed_bytes": 114483,
+    "prior_r44_3_original_9_of_9_hash": "INDEPENDENT_EXTERNAL_AND_PREVIOUS_AXIOM_REHASH_VERIFIED",
+    "new_E27_to_E34_experimental_returns": "NOT_RECEIVED",
+    "r44_3_negative_24": "DESIGN_NOT_RUN",
+    "auth_quorum": "0_OF_3"
+  },
+  "experiment_strategy": {
+    "target": "INCREASE_SCIENTIFIC_DEPTH_AND_UNIQUE_VERIFIABLE_FINDINGS_WITH_EFFICIENT_COST",
+    "output_requirements": [
+      "8_UNIQUE_SOURCE_EXACT_TECHNICAL_DOSSIERS",
+      "4_PRIORITY_FAMILY_ATTEMPTS_OR_REASONED_NOT_RUN",
+      "1_INTEGRATED_ORIGINAL_SCIENCE_SYNTHESIS",
+      "ORIGINAL_CODE_DATA_RECEIPTS_ONLY_WHEN_ACTUALLY_RUN",
+      "INDEPENDENT_CROSS_CHALLENGES_E28_E34_AND_E32_E33",
+      "PRIVATE_PUBLIC_DATA_CLASSIFICATION"
+    ],
+    "priority_families": [
+      {
+        "id": "F44-4-A",
+        "target": "R44-3-N01_AUTHENTICATED_3OF3_FALLTHROUGH",
+        "canonical_lanes": [
+          "E28",
+          "E34"
+        ],
+        "test_state": "NOT_RUN"
+      },
+      {
+        "id": "F44-4-B",
+        "target": "R44-3-N10_N11_FIM_WHITENING_NONLINEAR_JACOBIAN",
+        "canonical_lanes": [
+          "E32",
+          "E33"
+        ],
+        "test_state": "NOT_RUN"
+      },
+      {
+        "id": "F44-4-C",
+        "target": "R44-3-N16_N17_N18_N19_MONOTONIC_CHILD_API_COST_LEASE",
+        "canonical_lanes": [
+          "E34",
+          "E33"
+        ],
+        "test_state": "NOT_RUN"
+      },
+      {
+        "id": "F44-4-D",
+        "target": "R44-3-N23_SCOPED_CAPABILITY_ISOLATION_POSITIVE_NEGATIVE",
+        "canonical_lanes": [
+          "E27",
+          "E29"
+        ],
+        "test_state": "NOT_RUN"
+      }
+    ],
+    "qos": {
+      "unique_claim_unit": "EXACT_ORIGINAL_SOURCE_AND_ESTIMAND_AND_TEST_ID",
+      "novel_evidence": "ACTUALLY_REPRODUCED_ORIGINAL_SOURCE_FINDING_OR_INDEPENDENT_DISCRIMINATING_FAILURE",
+      "copyback_source_receipt_credit": "PROVENANCE_NOT_DISCOVERY",
+      "cost": "TOTAL_MONOTONIC_CPU_CHILDREN_MEMORY_TOKENS_NETWORK_RETRIES_EVALUATOR_AND_LICENSED_DATA_ACQUISITION",
+      "cost_unmeasured": "UNKNOWN_NO_EFFICIENCY_VICTORY",
+      "no_hard_word_floor": true,
+      "required_methods_depth": "ORIGINAL_SOURCES_HYPOTHESIS_NULL_METHOD_RED_GREEN_MISSINGNESS_NEXT_VALUE",
+      "prereg_before_test": true,
+      "actor_registration_required_for_quorum": true,
+      "max_source_unchanged_revision_cycles": 3
+    }
+  },
+  "science_hard_limits": {
+    "C1_DESCRIPTIVE_ONLY": true,
+    "P01_P10_FULL": "0_OF_10",
+    "quorum": "0_OF_3",
+    "physical_14": "HOLD",
+    "ALT_D": "DO_NOT_RUN_ACTIVE",
+    "E23_privacy": "HOLD",
+    "W1": "OPEN",
+    "B01_B05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "permissions": {
+    "cursor_order": false,
+    "merge": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "device_capture": false,
+    "raw_private_publication": false,
+    "live_exploitation": false,
+    "external_expert_auto_run": false
+  },
+  "next": "R44_4_REAL_E27_E34_ORIGINAL_EXECUTED_SCIENCE_RETURNS_TO_AXIOM_THEN_OPERATOR_DECISION"
+}
