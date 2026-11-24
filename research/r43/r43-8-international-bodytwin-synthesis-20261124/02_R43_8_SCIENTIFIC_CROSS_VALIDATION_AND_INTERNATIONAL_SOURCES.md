@@ -1,0 +1,35 @@
+# R43-8 independent scientific assessment — primary vs secondary results and claims
+
+## Five core findings adjudicated against original uploaded files
+**1 — Chain/source integrity**: Outer user ZIPs rehashed and CRC checked (offchain 66342 B, original z.ai 67854 B, canonical 723548 B). Nested offchain ZIP 48421B has 11/11 SHA manifest, z.ai 81/81 and canonical outer 13/13. This proves bytes intact only. Three advisory reports have their own original byte hashes; no legitimate additional actor authority.
+
+**2 — Primary score fully independently recomputed** from original six TEST label and prediction JSON values with half-scaled interval score at alpha=.1. Per case `IS/2 = halfwidth + 10*(max(0,p-h-y)+max(0,y-p-h))`, y independent truth stored in producer-owned label file (NOT independent external oracle). Verified values:
+- v0 18.303982903117085, 3/6 covered.
+- v2 18.303982903117085, 3/6 covered, six prediction dicts equal to v0.
+- fusion 18.303982903117085, 3/6 covered; dicts equal to v0.
+- reference only 6.6217, 6/6 covered; reference_measurement appears IN THE TASK object; not a deployable phone-only inference method unless runtime actually has that input.
+- over-wide baseline 1000, 6/6 covered, correct scoring penalty.
+This is **no adaptive gain under one six-case test domain**. The underlying generator produces 24 tasks over 4 domains but split train=first 12 (clock_jump_drift and mount_slip), dev=6 sensor_noise, test=6 network_latency_correlation, a complete domain confound, no claim of general 4-domain external validation.
+
+**3 — Secondary sensitivity**: producer `scores_and_budgets.json` has v0 WIS 18.275750, v2 15.195830, ref_only 4.067800, overall coverage .5/.75/1.0; post hoc per-stratum 8/8/8 sensitivity not primary precommit, p=.729 for v2 vs v0 and sample insufficient. Must be preserved, not silently replace original unfavorable primary.
+
+**4 — R43-7 E31 real data candidate**: UCI MHEALTH exists, DOI 10.24432/C5TW22, CC BY 4.0 first-party page verified. Producer receipt reports archive 75567983 B SHA256 16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0 and S1→S2 binary rest/run correct 80/81, CI [0.933124,0.999687]; original raw MHEALTH archive is excluded from uploaded R43-7 ZIP, so AXIOM did not rehash the dataset or independently rerun the model; population-size/pseudoreplication effects, split purpose, rest/run imbalance and cross-subject transfer need an independent reproducible benchmark. UCI data is body-worn Shimmer sensors, not two smartphones, and cannot validate NEXUS's dual-phone sensor fusion claim.
+
+**5 — E34 and W1**: z.ai reports 11 negative+2 positive red-green ACK/holdout demo under local test roots; operator-authorized external trust registry and protected ACL remain absent. E29 original 2×4 parity result explicitly `SYNTHETIC_LOCAL_VANTAGE`, not public HTTP-200/browser witness. E27 original Kotlin/FC2 source missing, E33 C5 missing. E30 synthetic clock/mount tests are not real calibration.
+
+## International scientific source ladder
+- FDA original: 400 planned trial combinations but 370 retained per source README, 20 participants not 370 subjects. Different smartphones on different body sites each capture; synchronized 100Hz, not two colocated phones. Two reference IMUs plus walkway; post-hoc impulse-based sync and resampling. Source: https://github.com/dbp-osel/wearables-for-gait-synchronized-smartphone-imu-and-walkway-data and regulatory catalogue https://www.fda.gov/medical-devices/regulatory-science-tools-catalog/open-access-wearables-dataset-evaluate-factors-impacting-accuracy-smartphone-gait-metrics . Repo archived 2026-06-08, full dataset 'pending' in README. *Availability and derivative license MUST be freshly tested.* Higher topology relevance than wearables-only MHEALTH, lower physical equivalence than true OPPO+Pixel.
+- 2026 multimodal OMC/IMC/pressure reference dataset: https://www.nature.com/articles/s41597-026-07595-4 ; twelve healthy people, optical/IMC/treadmill/insoles. Clear real reference modality, must verify raw availability and data rights.
+- Smartphone-placement external validation 2026 DOI 10.1016/j.gaitpost.2026.110649 https://pubmed.ncbi.nlm.nih.gov/42925673/ >3000 validation participants, cannot infer NEXUS accuracy.
+- 2026 uncertainty calibration https://pubmed.ncbi.nlm.nih.gov/42096387/ and 2026 portable biomechanics laboratory https://www.nature.com/articles/s41746-026-02825-w inform independent reference and reliability metrics, not proof of this BodyTwin.
+- FDA WearGait-PD longitudinal https://origin-cdrh-rst.fda.gov/weargait-pd-longitudinal-multi-session-wearables-dataset-gait-parkinsons-disease for long-session drift validation research if appropriately licensed, no disease predictions.
+- Sensor-biomechanical twin co-simulation https://pmc.ncbi.nlm.nih.gov/articles/PMC10132030/ as conceptual method for IMU mount position and motion constraints, no real device transfer.
+- 2026 physiological observation contracts https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2026.1947699/full is conceptual and explicitly no new clinical participants; not a source of empirical validity.
+- 2026 bilateral temporally constrained gait episodes https://pubmed.ncbi.nlm.nih.gov/42973676/ as event-semantic model candidate, not same devices.
+All source entries must retain publication/access context, DOI/URL/license/commit and a falsifier; a hyperlink alone is not an accepted original research pass.
+
+## Critical measurement design
+Primary estimand to preregister: extra information supplied by phone B under fixed truth, placement, synchronization, available inputs and matched acquisition/research cost. The ground-truth reference should be scored as an ORACLE upper bound when unavailable at inference, not inserted as a feature without documenting reference access. Baselines: phone A only, phone B only, best phone, naive mean, differential, SR-UKF/UKF fusion, information-matched reference-assisted fusion, optional optical/walkway oracle, permutation null and clock/mount/crosscovariance mutants. Participant/mount/day/dataset must be split as grouping variable; never 370 trial rows as 370 independent subjects. Evaluate residual bias, MAE/RMSE, interval/quantile proper score with sharpness, calibrated per stratum, NIS/NEES when truth/covariance available, negative mutation recall, abstention when unobservable, and real measured compute/network cost. Robustness to drift/time base/reference unreliability is required.
+
+## Acceptance logic
+`SYNTHETIC_REPLAY_PASS_C1` and `ORIGINAL_DATA_PRIMARY_SOURCE_HASH_MATCH_C1` are separate classes. `BENCHMARK_ORIGINAL_REPLAYED_C1` demands original licensed bytes and independent pipeline; `DUAL_PHONE_REAL_VALUE_CONFIRMED_C1` demands actual reference and independent split/ablation and no competing method outperforming solely due to more inputs. `BODYTWIN_VALIDATED=NO` and physical gates HOLD are not affected by any of these narrow research-only evaluations. No C2, physiological/disease or deployment claim.
