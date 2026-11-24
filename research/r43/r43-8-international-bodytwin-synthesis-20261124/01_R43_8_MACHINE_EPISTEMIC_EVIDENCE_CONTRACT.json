@@ -1,0 +1,281 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_8_BODYTWIN_INTERNATIONAL_EVIDENCE_CHECKPOINT_20261124_R0",
+  "state": "R43_7_RESEARCH_CHECKPOINT_SOURCE_INTAKE_COMPLETED_R43_8_INTERNATIONAL_SCIENCE_SYNTHESIS_BOUND_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "parent": {
+    "issue": 418,
+    "pr": 419,
+    "head": "d0accbc36a5665ce1ab47c3f839feb4b27d38a3a",
+    "manifest_sha256": "5a8ded5335d48452a6d3c53c7c28dfab62b7bb86a12302e7483aefbfd76c5abc",
+    "old_pr": "OPEN_DRAFT_NOT_MERGED"
+  },
+  "current": {
+    "issue": 420,
+    "draft_pr": "PENDING_UNTIL_CREATED",
+    "source_files": 6
+  },
+  "original_sources": [
+    {
+      "filename": "R43_7_~1.ZIP",
+      "bytes": 66342,
+      "sha256": "6c067d212984e11f207894188fdc286ac7e8df8f6aca840ff2240a6199fe864b",
+      "crc": "PASS",
+      "nested_bytes": 48421,
+      "nested_sha256": "430768a66f2c609a939c41cc8bea8f5dc1cca9a8733d6dc367f744ad3cdbc17a",
+      "nested_manifest": "11_OF_11_MATCH",
+      "provenance": "UNREGISTERED_ADVISORY"
+    },
+    {
+      "filename": "R43_7_~2.ZIP",
+      "bytes": 67854,
+      "sha256": "38c091449c1be27fdffb4457c1b2413305015f7fa30abd7fb52aba4e61e78b4e",
+      "crc": "PASS",
+      "manifest": "81_OF_81_MATCH",
+      "provenance": "ZAI_RESEARCHER_SELF_CREATED_TESTS_AND_LABELS"
+    },
+    {
+      "filename": "SOURCE~1(1).ZIP",
+      "bytes": 723548,
+      "sha256": "058b5784cb2cdf7377d916c8c4163371578dea5d3715e74c6a97aa3e2af69fea",
+      "crc": "PASS",
+      "manifest": "13_OF_13_MATCH",
+      "prior_source_mirror": "5_OF_5_MATCH",
+      "originality": "PRIOR_SOURCES_NOT_NEW_ACTORS"
+    }
+  ],
+  "advisory_readbacks": [
+    {
+      "filename": "NEXUS_~1(20261123-235217).MD",
+      "bytes": 9674,
+      "sha256": "e4e8a10bf8b6af4b0933f895f2637038ed8aad871d4d0ccdcffde8f21dbc8286"
+    },
+    {
+      "filename": "NEXUS-~1(20261123-235217).MD",
+      "bytes": 25462,
+      "sha256": "8a290f85fd4bb8be6bdef9c42ab707381b4f4ce3d50fb220d45568ccd1063b3a"
+    },
+    {
+      "filename": "NEXUS-~2(20261123-235218).MD",
+      "bytes": 21458,
+      "sha256": "1ff0986e612cec7fb8d2a5c5c758468401b26df10cf66a520ec9d37fe1d30ff0"
+    }
+  ],
+  "independent_arithmetic": {
+    "input": "EXACT_ORIGINAL_ZAI_HOLDOUT_LABELS_AND_PREDICTIONS",
+    "score": "IS_0.1/2 = halfwidth + 10*sum(outside_limit_distance)",
+    "test_ids": [
+      "F30_network_latency_correlation",
+      "F31_network_latency_correlation",
+      "F32_network_latency_correlation",
+      "F33_network_latency_correlation",
+      "F34_network_latency_correlation",
+      "F35_network_latency_correlation"
+    ],
+    "primary_test_n": 6,
+    "primary_test_domains": 1,
+    "original_total_tasks": 24,
+    "original_categories": [
+      "clock_jump_drift",
+      "mount_slip",
+      "sensor_noise",
+      "network_latency_correlation"
+    ],
+    "primary_by_arm": {
+      "v0_frozen": {
+        "mean_score": 18.303982903117085,
+        "covered": 3
+      },
+      "v2_adaptive": {
+        "mean_score": 18.303982903117085,
+        "covered": 3,
+        "point_and_halfwidth_identical_to_v0": true
+      },
+      "fusion_cost_matched": {
+        "mean_score": 18.303982903117085,
+        "covered": 3,
+        "point_and_halfwidth_identical_to_v0": true
+      },
+      "ref_only": {
+        "mean_score": 6.6217,
+        "covered": 6,
+        "reference_measurement_is_task_input": true
+      },
+      "b_wide": {
+        "mean_score": 1000,
+        "covered": 6
+      }
+    },
+    "primary_adaptive_gain": 0,
+    "primary_h0_rejected": false,
+    "stratified_secondary": {
+      "source": "PRODUCER_SENSITIVITY_RECEIPT_NOT_INDEPENDENT_REPLAY",
+      "v0_score": 18.27575,
+      "v2_score": 15.19583,
+      "ref_score": 4.0678,
+      "interpretation": "EXPLORATORY_NONPRIMARY"
+    },
+    "reference_caution": "REFERENCE_MEASUREMENT_PRESENT_AS_INPUT_AND_GOLD_STANDARD_TRUTH_SEPARATE; DO_NOT_CONFLATE_ORACLE_AND_DEPLOYABLE_MODELS"
+  },
+  "other_zai_results": {
+    "e27": "SOURCE_SUBSTITUTION_DEMO_ONLY_NO_ORIGINAL_APP",
+    "e28": "DSSE_LOCAL_PUBLIC_TEST_ROOT_NONASCII_AND_BE_LE_DEMO",
+    "e29": "LOCALHOST_2X4_HTTP_PARITY_DEMO_NOT_LIVE_W1",
+    "e30": "SYNTHETIC_METROLOGY_INJECTION_NOT_REAL_IMU_REFERENCE",
+    "e31": {
+      "dataset": "UCI MHEALTH",
+      "doi": "10.24432/C5TW22",
+      "reported_dataset_bytes": 75567983,
+      "reported_dataset_sha256": "16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0",
+      "data_original_in_operator_upload": false,
+      "reported_cross_subject_binary_accuracy": "80_OF_81",
+      "verified_license": "UCI_CC_BY_4_0",
+      "independent_data_rehash": "NOT_PERFORMED"
+    },
+    "e32": "PRIMARY_NO_GAIN_ON_6_CASE_ONE_DOMAIN",
+    "e33": "SYNTHETIC_DIFFERENTIAL_MOUNT_CLOCK_CONFOUNDER_ORIGINAL_C5_SOURCE_GAP",
+    "e34": "LOCAL_SELF_CREATED_TEST_ROOT_RED_GREEN_NO_REGISTERED_EXTERNAL_EVALUATOR"
+  },
+  "source_registry": [
+    {
+      "id": "FDA_SMARTPHONE_IMU_WALKWAY",
+      "year": 2023,
+      "source": "https://www.fda.gov/medical-devices/regulatory-science-tools-catalog/open-access-wearables-dataset-evaluate-factors-impacting-accuracy-smartphone-gait-metrics",
+      "repo": "https://github.com/dbp-osel/wearables-for-gait-synchronized-smartphone-imu-and-walkway-data",
+      "planned_trials": 400,
+      "accepted_trials": 370,
+      "people": 20,
+      "actual_data_download": "NOT_PERFORMED",
+      "paired_phones": "DIFFERENT_BODY_PLACEMENTS_NOT_COLLOCATED",
+      "rights": "REPO_CC0_DATASET_SPECIFIC_RIGHTS_TO_VERIFY"
+    },
+    {
+      "id": "UCI_MHEALTH",
+      "year": 2014,
+      "source": "https://archive.ics.uci.edu/dataset/319/mhealth%2Bdataset",
+      "doi": "10.24432/C5TW22",
+      "license": "CC_BY_4_0",
+      "topology": "WEARABLE_CHEST_ANKLE_WRIST_NOT_DUAL_SMARTPHONE"
+    },
+    {
+      "id": "NATURE_MULTIMODAL_FULL_BODY",
+      "year": 2026,
+      "source": "https://www.nature.com/articles/s41597-026-07595-4",
+      "subjects": 12,
+      "topology": "OPTICAL_INERTIAL_TREADMILL_INSOLES",
+      "data_license": "NOT_VERIFIED"
+    },
+    {
+      "id": "PLACEMENT_EXTERNAL_VALIDATION",
+      "year": 2026,
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42925673/",
+      "population_external": "OVER_3000",
+      "type": "PLACEMENT_GENERALIZATION_NOT_NEXUS_PROOF"
+    },
+    {
+      "id": "MULTIVIEW_CALIBRATED_UNCERTAINTY",
+      "year": 2026,
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42096387/"
+    },
+    {
+      "id": "PORTABLE_BIOMECHANICS_2026",
+      "year": 2026,
+      "source": "https://www.nature.com/articles/s41746-026-02825-w"
+    },
+    {
+      "id": "FDA_WEAR_GAIT_PD_LONGITUDINAL",
+      "year": 2026,
+      "source": "https://origin-cdrh-rst.fda.gov/weargait-pd-longitudinal-multi-session-wearables-dataset-gait-parkinsons-disease"
+    },
+    {
+      "id": "HUMAN_DIGITAL_TWIN_IMU_COSIMULATION",
+      "year": 2023,
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10132030/"
+    },
+    {
+      "id": "PHYSIOLOGICAL_TWIN_OBSERVATION_CONTRACTS_2026",
+      "year": 2026,
+      "source": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2026.1947699/full",
+      "class": "CONCEPTUAL_NOT_CLINICAL_VALIDATION"
+    },
+    {
+      "id": "SEMANTIC_GAIT_TEMPORAL_PIPELINE_2026",
+      "year": 2026,
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42973676/"
+    }
+  ],
+  "bodytwin_maturity": [
+    {
+      "level": "L0",
+      "label": "SOURCE_TIME_BYTE_RECEIPTS",
+      "state": "PARTIAL_C1"
+    },
+    {
+      "level": "L1",
+      "label": "SENSOR_SIGNAL_METROLOGY",
+      "state": "REAL_REFERENCE_UNVERIFIED"
+    },
+    {
+      "level": "L2",
+      "label": "KINEMATIC_MOVEMENT_ESTIMATOR",
+      "state": "NOT_VALIDATED"
+    },
+    {
+      "level": "L3",
+      "label": "PERSON_SPECIFIC_LONGITUDINAL_KINEMATIC_TWIN",
+      "state": "NOT_ESTABLISHED"
+    },
+    {
+      "level": "L4",
+      "label": "PHYSIOLOGICAL_CLINICAL_TWIN",
+      "state": "NOT_AUTHORIZED_NOT_VALIDATED"
+    }
+  ],
+  "scientific_questions": [
+    "K01_SECOND_PHONE_INFORMATION_GAIN",
+    "K02_PLACEMENT_AS_LATENT_STATE",
+    "K03_EVENT_VS_DELIVERY_CLOCKS",
+    "K04_NONIDENTIFIABILITY_ABSTENTION",
+    "K05_GUM_CROSS_SENSOR_COVARIANCE",
+    "K06_CROSS_SUBJECT_DEVICE_DAY_GENERALIZATION",
+    "K07_REFERENCE_AVAILABILITY_FIREWALL",
+    "K08_MATURITY_LADDER",
+    "K09_OPTICAL_PRESSURE_GEOMETRIC_COREGISTRATION",
+    "K10_CAUSAL_TEMPORAL_EVENT_LEDGER",
+    "K11_ADAPTIVE_EXPERTS_INDEPENDENT_REVIEW",
+    "K12_LONGITUDINAL_PRIVACY_REDACTION",
+    "K13_SELECTIVE_RISK_PREDICTION",
+    "K14_ORIGINAL_DATA_BENCHMARK_REPRODUCIBILITY"
+  ],
+  "gates": {
+    "registered_actors": "0_OF_3",
+    "full_scientific_passes": "0_OF_10",
+    "external_evaluator": "NOT_ESTABLISHED",
+    "verified_full_W1": "OPEN",
+    "e23_privacy_release": "HOLD",
+    "kotlin_gradle_fc2_original": "SOURCE_GAP",
+    "e33_c5_original": "SOURCE_GAP",
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "bodytwin_validated": false,
+    "github_external_write": "DENY_PENDING_REGISTRATION",
+    "cursor_implementation_order": "NOT_SENT",
+    "merge": false,
+    "www_write": false,
+    "hostinger_write": false,
+    "capture": false,
+    "apk": false,
+    "claim_promotion": false
+  },
+  "expert_lanes": [
+    "E27_SOURCE_CUSTODY_AND_TIME",
+    "E28_CRYPTO_TRUST",
+    "E29_W1_WITNESS",
+    "E30_BIOMECHANICAL_REFERENCES",
+    "E31_REAL_DATA_RIGHTS_REPRODUCIBILITY",
+    "E32_UKF_SR_UKF_NIS_NEES_GUM_IDENTIFIABILITY",
+    "E33_DUAL_SENSOR_NULLS_C5",
+    "E34_INDEPENDENT_ACTOR_EVALUATOR"
+  ],
+  "next": "R43_8_SOURCE_EXACT_DATASET_AND_INTERNATIONAL_EXPERT_RETURNS_TO_AXIOM_THEN_OPERATOR_DECISION"
+}
