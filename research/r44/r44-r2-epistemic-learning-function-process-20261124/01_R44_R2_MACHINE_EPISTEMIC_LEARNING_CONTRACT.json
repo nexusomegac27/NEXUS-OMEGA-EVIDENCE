@@ -1,0 +1,254 @@
+{
+  "schema": "nexus-omega/r44-r2/epistemic-learning-contract/v0",
+  "object": "NEXUS_OMEGA_AXIOM_R44_R2_EPISTEMIC_LEARNING_FUNCTION_PROCESS_SCIENTIFIC_CHECKPOINT_20261124_R0",
+  "authority": "OPERATOR_VIA_AXIOM",
+  "status": "R44_R2_RESEARCH_CHECKPOINT_SOURCE_ADJUDICATED_WITH_LOCAL_MATH_NEGATIVE_AND_CORRECTION_CANDIDATE_C1",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "canonical_parent": {
+    "r43_9": {
+      "issue": 424,
+      "pr": 425,
+      "head": "2c943a7294ca620e9dc9cfe98f78d7a51c6fa43e",
+      "manifest": "3f24030cb041714e832a9a9fd2b3409175a958a33bd919412f8ac5704d2f1968"
+    },
+    "r44_0": {
+      "issue": 429,
+      "pr": 430,
+      "head": "05c6e19a56d859aee514558ee3fdc83a7695fff5",
+      "manifest": "21a799b82f6468571e2ed4e60ad8d48e29264328ec563849f53fef8f33ef9716"
+    },
+    "r44_1": {
+      "issue": 431,
+      "pr": 432,
+      "head": "b4ca54a54f1b2edba553218b3709ecb8a35cd075",
+      "manifest": "820bab8383f37c68243a63f42a99966b7e6943e11d0bbf2c1d2b098af5f81628"
+    },
+    "current": {
+      "issue": 433,
+      "pr": "PENDING"
+    }
+  },
+  "user_intent": {
+    "expandable_learning_structure": true,
+    "science_checkpoint": true,
+    "public_github_causal_chain": true,
+    "cursor_handoff": false,
+    "execute_external_agents": false
+  },
+  "source_uploads": [
+    {
+      "filename": "NEXUSO~1(7).ZIP",
+      "bytes": 163023,
+      "sha256": "5ad77dab21cb2763a79452503e635faf2469646c341e718c1b9a682b463fe35a",
+      "raw_publication": false
+    },
+    {
+      "filename": "NEXUS-~1(20261124-104529).MD",
+      "bytes": 19739,
+      "sha256": "727ea5506f3f28410f65928b1bd4668555bc7ebb5dc4bf9bf91932bac7835b66",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44_1_~1.ZIP",
+      "bytes": 142880,
+      "sha256": "50c7937e19939ab6424559f43f98a283daac6b2fa9a6ffa6dbe2291292c08cde",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44_1_~1.SHA",
+      "bytes": 130,
+      "sha256": "f29880cd06ea7128271a504de45c85de36554fd6cfade814cdddab327bf61f57",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44_1_~1.MD",
+      "bytes": 36961,
+      "sha256": "207e3d7b615a6f78cc022dc122a0e5d0f29078ae8ece3063c9ebf2cc97af4adf",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44_1_~1.TXT",
+      "bytes": 3058,
+      "sha256": "2a76502d0627b519952f418bea41c1761d4945cf2e8479863aa42702a87bacf6",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44_1_STACK.zip",
+      "bytes": 636457,
+      "sha256": "5df244cddb3f9b4438cc0dbc684b40fc9c430705aeaa3cef43dffc8b32459ba1",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44-1_~1.ZIP",
+      "bytes": 1342580,
+      "sha256": "0f373ca25c27a9d59e4f8f94f734461f0ab19ea12b36339042801c1cedaffa76",
+      "raw_publication": false
+    },
+    {
+      "filename": "R44-1-~1.MD",
+      "bytes": 20157,
+      "sha256": "6444753bed19e1784c1d2ea7301bfdc6e79f6dfe59f8faf5641307e2a618dbcc",
+      "raw_publication": false
+    },
+    {
+      "filename": "workspace.tar(7).gz",
+      "bytes": 19787441,
+      "sha256": "c24fbb6fec9a55b159ad42520c2b26e346a8f9dd53014ca8210217468ded9f21",
+      "raw_publication": false
+    },
+    {
+      "filename": "NEXUS_~1(20261124-104550).MD",
+      "bytes": 9732,
+      "sha256": "7c0344856d7651a12b83a3c5fde7cab6a6406b73afd0a314abd4b09462fa37a8",
+      "raw_publication": false
+    }
+  ],
+  "verification": {
+    "current_uploads_sha": "11_OF_11_COMPUTED",
+    "offchain_receiver_archive": "30_OF_30_MANIFEST_MATCH",
+    "r44_source_stack": "6_OF_6_MATCH",
+    "local_manus_package": "8_OF_8_MANIFEST_MATCH_WITH_ANNOTATION_FORMAT",
+    "FDA_sample": {
+      "bytes": 18611028,
+      "sha256": "27f5bf94debf486b3028a1b139dde86994710efe37f6f678ddd72588733180aa",
+      "archive_members": 57,
+      "crc": "PASS",
+      "scope": "OPERATOR_UPLOAD_COPY_Q4_NOT_OFFICIAL_FULL_DATA"
+    },
+    "math": {
+      "original_script_sha256": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+      "original_checks_passed": 33,
+      "original_checks_total": 51,
+      "original_exit_code": 1,
+      "error": "NUMERICAL_LOGLIK_OMITS_H_IN_FORWARD_MODEL",
+      "corrected_candidate_sha256": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
+      "candidate_line": "r=H@np.asarray(x)-mu",
+      "candidate_checks_passed": 51,
+      "candidate_checks_total": 51,
+      "candidate_exit_code": 0,
+      "source_patch_permanent": false,
+      "external_independent_actor": false,
+      "real_sensor_validation": false
+    },
+    "manus_mhealth": {
+      "reported_total_windows": 3356,
+      "reported_train": 2365,
+      "reported_test": 991,
+      "reported_fused_macro_f1": 0.9232787898397299,
+      "reported_best_single_macro_f1": 0.841185183890576,
+      "reported_leakage_train_windows": 3921633,
+      "reported_leakage_test_windows": 1708057,
+      "verdict": "INTERNAL_COUNT_CONFLICT_SCIENTIFIC_GAIN_NOT_INDEPENDENTLY_VALIDATED",
+      "sensor_topology": "MULTIPLE_WEARABLE_PLACEMENTS_NOT_TWO_SMARTPHONES"
+    },
+    "qwen_pilot": {
+      "UCI341_original_bytes_received_in_current_tar": false,
+      "producer_reported_uci341_bytes": 79596192,
+      "producer_reported_uci341_sha256": "4ac4ae064227c07045a99551876b54d204837e995e298b6488559e209b3deb09",
+      "reported_mhealth_lo_so_people": 10,
+      "reported_uci341_lo_so_people": 30,
+      "negative_elapsed_seconds": -15759.254002452,
+      "clock_duration_valid": false,
+      "actor_independent_replay": false,
+      "clinical_inference": false
+    },
+    "role_alias_collision": "NEXUSO_E27_E31_LOCAL_REPORTS_DIFFER_FROM_PR432_CANONICAL_E27_E31"
+  },
+  "model": {
+    "graph_nodes": [
+      "SourceObject",
+      "ActorIdentity",
+      "Claim",
+      "Hypothesis",
+      "ExperimentPlan",
+      "RunReceipt",
+      "Falsifier",
+      "CorrectionCandidate",
+      "Adjudication",
+      "KnowledgeDelta",
+      "AuthorityDecision"
+    ],
+    "allowed_relations": [
+      "WAS_DERIVED_FROM",
+      "USED",
+      "GENERATED_BY",
+      "HYPOTHESIZES",
+      "TESTS",
+      "CHALLENGES",
+      "REPRODUCES",
+      "REFUTES",
+      "CORRECTS",
+      "REQUIRES",
+      "BLOCKED_BY",
+      "AUTHORIZED_BY",
+      "SUPERSEDES_SCOPE_ONLY",
+      "NO_INDEPENDENT_ORIGIN"
+    ],
+    "evidence_axis": [
+      "ORIGINAL_BYTES_Q0_Q4",
+      "REPLAY_Q5_WITH_REAL_METHOD",
+      "AUTHENTICATED_ACTOR_ID",
+      "SCIENCE_PHYSICAL_AUTHORITY"
+    ],
+    "process": [
+      "DISCOVER",
+      "SOURCE_CHECK",
+      "HYPOTHESIZE",
+      "PREREGISTER",
+      "CHALLENGE",
+      "EXECUTE_IF_AUTHORIZED",
+      "INDEPENDENT_REPLAY",
+      "ADJUDICATE",
+      "APPEND_MEMORY",
+      "NEXT_VALUE_OF_INFORMATION"
+    ],
+    "source_rule": "VSRD_C1_TWO_NONREDUNDANT_ROUTES_OR_HONEST_QX",
+    "max_autorevisions_without_new_original_source": 3,
+    "never_automatic": [
+      "MODEL_WEIGHT_MUTATION",
+      "ACTOR_REGISTRATION",
+      "PRIVATE_DATA_PUBLICATION",
+      "HARDWARE_CAPTURE",
+      "MERGE",
+      "DEPLOY",
+      "CLAIM_PROMOTION"
+    ]
+  },
+  "new_adversarial_tests": [
+    "R2-N01",
+    "R2-N02",
+    "R2-N03",
+    "R2-N04",
+    "R2-N05",
+    "R2-N06",
+    "R2-N07",
+    "R2-N08",
+    "R2-N09",
+    "R2-N10",
+    "R2-N11",
+    "R2-N12",
+    "R2-N13",
+    "R2-N14",
+    "R2-N15",
+    "R2-N16"
+  ],
+  "science_gates": {
+    "P01_P10_full": "0_OF_10",
+    "actor_quorum": "0_OF_3",
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "bodytwin_validated": false,
+    "privacy_E23": "HOLD",
+    "w1": "OPEN",
+    "B01_B05": "OPEN",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "cursor_handoff": false
+  },
+  "work_status": {
+    "architecture_source_draft": true,
+    "independent_research_from_R44_R2_external_agents": false,
+    "production_functional_learning_runtime": false,
+    "experimental_evidence_repair_candidates": true
+  },
+  "next": "R44_R2_EXPERT_ORIGINAL_SCIENCE_REPLAY_AND_ADVERSARIAL_RETURNS_TO_AXIOM_THEN_OPERATOR_DECISION"
+}
