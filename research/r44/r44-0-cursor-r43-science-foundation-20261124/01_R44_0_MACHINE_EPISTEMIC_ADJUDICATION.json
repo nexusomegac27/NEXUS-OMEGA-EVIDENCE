@@ -1,0 +1,119 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R43_CURSOR_RETURN_INDEPENDENT_ADJUDICATION_AND_R44_FOUNDATIONAL_SCIENCE_ENTRY_20261124_R0",
+  "state": "R43_OPERATIONAL_HANDOFF_PASS_WITH_MATERIAL_CAVEATS_R44_RESEARCH_FOUNDATION_OPEN_C1",
+  "original_source_anchors": {
+    "R42_last_cursor_issue": 404,
+    "R42_last_cursor_draft": 405,
+    "R43_root_issue": 406,
+    "R43_9_issue": 424,
+    "R43_9_draft": 425,
+    "R43_full_cursor_order_issue": 426,
+    "R43_full_cursor_order_draft": 427,
+    "R43_cursor_return_draft": 428,
+    "R43_cursor_return_head": "031430f2f6846065b624b3f30006cf5644f8e800",
+    "R43_cursor_c0_comment": 7123994855,
+    "R43_cursor_c3_comment": 7125749685,
+    "R44_foundation_issue": 429
+  },
+  "current_original_operator_return": {
+    "zip_basename": "NEXUS_OMEGA_CURSOR_R43_ALL_NINE_ROUNDS_SCIENTIFIC_CUSTODY_AND_OFFLINE_REPAIR_RETURN_20261124_R0.zip",
+    "zip_bytes": 11447,
+    "zip_sha256": "a47e0175ea33d6f1b4082ce0feb25695f9215eac0ec2ebb77dbb5833a7ae5055",
+    "sidecar_bytes": 167,
+    "sidecar_sha256": "4718eeab7b59d9d79215784dd02a67b38276e0ab5083f5ff4230987b7e58ea17",
+    "zip_crc": "PASS",
+    "zip_entries": 12,
+    "github_files_same_sha256": "12_OF_12_MATCH",
+    "internal_manifest": {
+      "name": "99_SHA256SUMS.txt",
+      "bytes": 878,
+      "sha256": "b377dab6690d6add74ec3b56ec5b0bed1342acb84a0ad3f460e8bdc95d87b622",
+      "listed_payloads": "10_OF_10_MATCH",
+      "not_listed": [
+        "10_PACKAGE_RECEIPT.json",
+        "99_SHA256SUMS.txt"
+      ],
+      "listing_rule": "MANIFEST_DOES_NOT_SELF_HASH_BY_CONVENTION; RECEIPT_UNLISTED_IS_ISSUE"
+    },
+    "embedded_receipt": {
+      "filename": "10_PACKAGE_RECEIPT.json",
+      "bytes": 2051,
+      "sha256": "560188c01b2cd3269b116499d44762c5f5cf26907878a5decac27ba092ab5761",
+      "claimed_old_zip_bytes": 10336,
+      "claimed_old_zip_entries": 11,
+      "claimed_old_zip_sha256": "f70eb6bc5ebcbdebdaa6f757805162c90b7e0c2fa0809022fc298d54b868098a",
+      "claimed_old_sidecar_bytes": 166,
+      "claimed_old_sidecar_sha256": "4f03bb1f0cc53cc31c3238640296310bc1ac75c749c4dbc29ea14fc0ae0c1f22",
+      "claimed_old_manifest_bytes": 868,
+      "claimed_old_manifest_sha256": "6d4b5ce0a709699df18fefa16a87759922c20070f784d7ddc7439223950f85a9",
+      "interpretation": "PRE_APPEND_SNAPSHOT_PROBABLE_NOT_INDEPENDENTLY_PROVEN_FINAL_RECEIPT",
+      "status": "B05_OPEN"
+    },
+    "source_transfer_status": "12_OF_12_ACTUAL_GITHUB_FILES_BYTE_EQUAL_TO_ACTUAL_ZIP",
+    "fc2_rerun": {
+      "source_class": "CURSOR_REPORT_NOT_AXIOIM_REPLAY",
+      "negatives": "13_OF_13_REPORT",
+      "positives": "7_OF_7_REPORT",
+      "claimed_receipt_bytes": 9803,
+      "claimed_receipt_sha256": "00612c1325cd51ee6510cb85bdb14dcd30569b4a6898d79b5a1f2b909023784d",
+      "receipt_bytes_in_operator_zip": false,
+      "independently_run_by_AXIOM": false
+    },
+    "mhealth": {
+      "prior_original_operator_bytes_sha256": "16ad0ce709f3f00df18f348610d15bce0884b79e2143f57f446493673f02b8e0",
+      "bytes": 75567983,
+      "prior_independent_sha_rehash": "OBSERVED_IN_PRIOR_R43_HANDOFF_AND_CURSOR_REPORT",
+      "in_current_return_zip": false,
+      "independent_benchmark": "NOT_PERFORMED",
+      "dual_smartphone_claim": "NOT_ESTABLISHED"
+    }
+  },
+  "contradictions": [
+    "B01_FDA_OFFICIAL_374_VS_OSEL_OFFICIAL_370",
+    "B02_M9_ID_NAMESPACE_9_EXAMPLES_NOT_16_COMPLETE",
+    "B03_MANUS_CLAIMS_7_FILES_6_PRESENT",
+    "B04_AUTHENTICATED_EXTERNAL_EVAL_NOT_ESTABLISHED",
+    "B05_CURSOR_FINAL_PACKAGE_EMBEDDED_RECEIPT_OLD_SEAL"
+  ],
+  "new_source_candidate": {
+    "name": "UCI Smartphone-Based Recognition of Human Activities and Postural Transitions",
+    "id": 341,
+    "url": "https://archive.ics.uci.edu/dataset/341/smartphone%2Bbased%2Brecognition%2Bof%2Bhuman%2Bactivities%2Band%2Bpostural%2Btransitions",
+    "class": "PUBLIC_OFFICIAL_METADATA_AND_RAW_SIGNALS_POINTER_NOT_ORIGINAL_BYTES_REHASHED",
+    "not": "NOT_DUAL_SIMULTANEOUS_PHONE_OR_BODY_KINEMATIC_TRUTH"
+  },
+  "program": {
+    "round": "R44-0",
+    "status": "RESEARCH_FOUNDATION_OPEN",
+    "priority_0": [
+      "ARCHIVE_SEAL_PROVENANCE_B05",
+      "FDA_TRIAL_ID_VERSION_CONFLICT",
+      "RAW_LICENSED_ORIGINAL_DATA_REPRODUCIBILITY",
+      "TARGET_IDENTIFIABILITY_AND_REFERENTIAL_FIREWALL",
+      "INDEPENDENT_EVALUATOR_REGISTRY",
+      "M9_SOURCE_EXACT_RECONCILIATION"
+    ],
+    "experts": "E27_E34_RESEARCH_LANES_NO_NEW_AUTH_REGISTERED",
+    "source_clause": "VSRD_C1"
+  },
+  "science_gate": {
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "full_research_passes": "0_OF_10",
+    "authenticated_quorum": "0_OF_3",
+    "bodytwin_validated": false,
+    "physical_14_gates": "HOLD",
+    "alt_d": "DO_NOT_RUN_ACTIVE",
+    "privacy_E23": "HOLD",
+    "W1_full": "OPEN",
+    "FDA_full_raw": "NOT_IN_HAND",
+    "Grok_ABSTAIN_original": "NOT_IN_HAND",
+    "R44_research": true,
+    "R44_physical": false,
+    "R44_Cursor_order": false,
+    "R44_merge": false,
+    "R44_WWW": false,
+    "R44_Hostinger": false,
+    "R44_APK_ADB_capture": false
+  },
+  "next": "R44_E27_E34_VSRD_ORIGINAL_DATA_AND_B05_SEAL_RESEARCH_RETURNS_TO_AXIOM_THEN_OPERATOR_RELEASE_DECISION"
+}
