@@ -1,0 +1,100 @@
+{
+  "object": "R44_R2_NELFP_V0_SYNTHETIC_REFERENCE_TEST",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "actual_source_data_executed": false,
+  "actor_authentication": false,
+  "passed": 15,
+  "total": 15,
+  "checks": [
+    {
+      "fixture": "local_toy_green",
+      "expected": "ACCEPTED_ONLY_WITHIN_DECLARED_C1_SCOPE",
+      "actual": "ACCEPTED_ONLY_WITHIN_DECLARED_C1_SCOPE",
+      "match": true
+    },
+    {
+      "fixture": "original_math_33_of_51",
+      "expected": "LOCAL_PASS_WITH_FAILED_TEST_OR_EXIT",
+      "actual": "LOCAL_PASS_WITH_FAILED_TEST_OR_EXIT",
+      "match": true
+    },
+    {
+      "fixture": "q4_missing_bytes",
+      "expected": "Q4_WITHOUT_ORIGINAL_BYTES",
+      "actual": "Q4_WITHOUT_ORIGINAL_BYTES",
+      "match": true
+    },
+    {
+      "fixture": "impossible_mhealth_windows",
+      "expected": "WINDOW_COUNTS_INCONSISTENT",
+      "actual": "WINDOW_COUNTS_INCONSISTENT",
+      "match": true
+    },
+    {
+      "fixture": "negative_duration",
+      "expected": "NEGATIVE_ELAPSED_DURATION",
+      "actual": "NEGATIVE_ELAPSED_DURATION",
+      "match": true
+    },
+    {
+      "fixture": "external_E27_alias",
+      "expected": "ROLE_NAMESPACE_SUBSTITUTION",
+      "actual": "ROLE_NAMESPACE_SUBSTITUTION",
+      "match": true
+    },
+    {
+      "fixture": "wearable_vs_phone",
+      "expected": "SOURCE_TOPOLOGY_SUBSTITUTION",
+      "actual": "SOURCE_TOPOLOGY_SUBSTITUTION",
+      "match": true
+    },
+    {
+      "fixture": "fda_one_subject_full_cohort",
+      "expected": "SAMPLE_CLAIMED_AS_COHORT",
+      "actual": "SAMPLE_CLAIMED_AS_COHORT",
+      "match": true
+    },
+    {
+      "fixture": "self_reported_quorum",
+      "expected": "UNAUTHENTICATED_ACTOR_QUORUM",
+      "actual": "UNAUTHENTICATED_ACTOR_QUORUM",
+      "match": true
+    },
+    {
+      "fixture": "b05_receipt",
+      "expected": "STALE_EMBEDDED_RECEIPT",
+      "actual": "STALE_EMBEDDED_RECEIPT",
+      "match": true
+    },
+    {
+      "fixture": "r43_primary_no_gain",
+      "expected": "NO_GAIN_PRIMARY_NOT_PRESERVED",
+      "actual": "NO_GAIN_PRIMARY_NOT_PRESERVED",
+      "match": true
+    },
+    {
+      "fixture": "holdout_overlap",
+      "expected": "HOLDOUT_CONTAMINATED",
+      "actual": "HOLDOUT_CONTAMINATED",
+      "match": true
+    },
+    {
+      "fixture": "source_only_q5",
+      "expected": "Q5_WITHOUT_INDEPENDENT_REPLAY",
+      "actual": "Q5_WITHOUT_INDEPENDENT_REPLAY",
+      "match": true
+    },
+    {
+      "fixture": "physical_claim",
+      "expected": "RESEARCH_CLAIM_CANNOT_AUTHORIZE_PHYSICAL",
+      "actual": "RESEARCH_CLAIM_CANNOT_AUTHORIZE_PHYSICAL",
+      "match": true
+    },
+    {
+      "fixture": "honest_hold",
+      "expected": "HOLD_WITH_NEGATIVE_EVIDENCE_PRESERVED",
+      "actual": "HOLD_WITH_NEGATIVE_EVIDENCE_PRESERVED",
+      "match": true
+    }
+  ]
+}

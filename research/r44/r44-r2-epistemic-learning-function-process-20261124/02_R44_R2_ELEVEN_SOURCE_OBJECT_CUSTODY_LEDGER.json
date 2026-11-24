@@ -1,0 +1,105 @@
+{
+  "object": "NEXUS_OMEGA_R44_R2_PUBLIC_SAFE_11_SOURCE_CUSTODY_20261124_R0",
+  "timestamp": "2026-11-24",
+  "source_class": "ACTUAL_USER_UPLOADED_BYTES_REHASHED_BY_AXIOM",
+  "files": [
+    {
+      "filename": "NEXUSO~1(7).ZIP",
+      "bytes": 163023,
+      "sha256": "5ad77dab21cb2763a79452503e635faf2469646c341e718c1b9a682b463fe35a",
+      "verified_contents": "13 entries CRC PASS, E27-E34 roles locally incompatible",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "NEXUS-~1(20261124-104529).MD",
+      "bytes": 19739,
+      "sha256": "727ea5506f3f28410f65928b1bd4668555bc7ebb5dc4bf9bf91932bac7835b66",
+      "verified_contents": "GitHub audit 6/6 historical producer report",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44_1_~1.ZIP",
+      "bytes": 142880,
+      "sha256": "50c7937e19939ab6424559f43f98a283daac6b2fa9a6ffa6dbe2291292c08cde",
+      "verified_contents": "31 members CRC PASS; inner 30/30 SHA MATCH",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44_1_~1.SHA",
+      "bytes": 130,
+      "sha256": "f29880cd06ea7128271a504de45c85de36554fd6cfade814cdddab327bf61f57",
+      "verified_contents": "sidecar matches 142880B receiver ZIP",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44_1_~1.MD",
+      "bytes": 36961,
+      "sha256": "207e3d7b615a6f78cc022dc122a0e5d0f29078ae8ece3063c9ebf2cc97af4adf",
+      "verified_contents": "offchain receiver readback; advisory n_eff=1",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44_1_~1.TXT",
+      "bytes": 3058,
+      "sha256": "2a76502d0627b519952f418bea41c1761d4945cf2e8479863aa42702a87bacf6",
+      "verified_contents": "manifest sidecar lines for 30 files",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44_1_STACK.zip",
+      "bytes": 636457,
+      "sha256": "5df244cddb3f9b4438cc0dbc684b40fc9c430705aeaa3cef43dffc8b32459ba1",
+      "verified_contents": "29 entries CRC PASS; 6/6 pinned source_mainline SHA",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44-1_~1.ZIP",
+      "bytes": 1342580,
+      "sha256": "0f373ca25c27a9d59e4f8f94f734461f0ab19ea12b36339042801c1cedaffa76",
+      "verified_contents": "9 members CRC PASS; 8/8 local package manifest matches; claim counts inconsistent",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "R44-1-~1.MD",
+      "bytes": 20157,
+      "sha256": "6444753bed19e1784c1d2ea7301bfdc6e79f6dfe59f8faf5641307e2a618dbcc",
+      "verified_contents": "external Mistral/Vibe advisory readback",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "workspace.tar(7).gz",
+      "bytes": 19787441,
+      "sha256": "c24fbb6fec9a55b159ad42520c2b26e346a8f9dd53014ca8210217468ded9f21",
+      "verified_contents": "88 TAR members; real FDA raw sample 18.6 MB; math original fails",
+      "original_raw_uploaded_to_github": false
+    },
+    {
+      "filename": "NEXUS_~1(20261124-104550).MD",
+      "bytes": 9732,
+      "sha256": "7c0344856d7651a12b83a3c5fde7cab6a6406b73afd0a314abd4b09462fa37a8",
+      "verified_contents": "GROK self-declared advisory review, 0/3 quorum",
+      "original_raw_uploaded_to_github": false
+    }
+  ],
+  "sample_FDA": {
+    "filename": "SAMPLERAWDATA.zip",
+    "bytes": 18611028,
+    "sha256": "27f5bf94debf486b3028a1b139dde86994710efe37f6f678ddd72588733180aa",
+    "source": "NESTED_19_MB_TAR_OPERATOR_UPLOAD",
+    "crc": "PASS",
+    "entries": 57,
+    "full_study": false
+  },
+  "material_source_test": {
+    "original_script_sha256": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+    "original_test_result": "33_OF_51_PASS_PROCESS_EXIT_1",
+    "candidate_script_sha256": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
+    "candidate_test_result": "51_OF_51_PASS_PROCESS_EXIT_0",
+    "candidate_is_original_overwrite": false
+  },
+  "warnings": [
+    "NOT_ALL_ARCHIVES_HAVE_MACHINE_MANIFESTS",
+    "Q4_OPERATOR_COPY_DOES_NOT_PROVE_OFFICIAL_ORIGIN",
+    "NO_PRIVATE_RAW_DATA_IN_PUBLIC_REPO"
+  ]
+}

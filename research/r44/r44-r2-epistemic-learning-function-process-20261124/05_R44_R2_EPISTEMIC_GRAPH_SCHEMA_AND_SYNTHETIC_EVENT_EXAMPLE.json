@@ -1,0 +1,258 @@
+{
+  "schema": "nexus-omega/epistemic-graph/v0",
+  "version": "0.1.0",
+  "clock_rule": "UTC_8601_WITH_EXPLICIT_CLOCK_DOMAIN_AND_MONOTONIC_FOR_DURATION",
+  "metadata_privacy": "PUBLIC_SAFE_HASHES_ONLY",
+  "node_types": {
+    "SourceObject": [
+      "id",
+      "version",
+      "source_url_or_private_locator",
+      "original_bytes_status",
+      "sha256_or_not_obtained",
+      "source_q",
+      "rights",
+      "checked_at"
+    ],
+    "ActorIdentity": [
+      "id",
+      "actor_label",
+      "registered_by_operator",
+      "signature_root_id_or_null",
+      "source_lineage",
+      "model_lineage"
+    ],
+    "Claim": [
+      "id",
+      "text_exact",
+      "domain",
+      "target",
+      "units",
+      "claim_ceiling",
+      "source_object_ids",
+      "scope"
+    ],
+    "Hypothesis": [
+      "id",
+      "H0",
+      "H1",
+      "rival_hypotheses",
+      "observable",
+      "source_claims"
+    ],
+    "ExperimentPlan": [
+      "id",
+      "sha256_frozen_before_result",
+      "target",
+      "metric",
+      "group_split",
+      "nulls",
+      "falsifiers",
+      "budget",
+      "actor_scope"
+    ],
+    "RunReceipt": [
+      "id",
+      "code_sha256",
+      "source_sha256",
+      "exit_code",
+      "passed",
+      "total",
+      "elapsed_seconds_or_not_measured",
+      "replay_scope",
+      "run_actor"
+    ],
+    "Falsifier": [
+      "id",
+      "target_claim_id",
+      "negative_design",
+      "expected_failure",
+      "observed_failure_or_not_run"
+    ],
+    "CorrectionCandidate": [
+      "id",
+      "original_code_sha256",
+      "candidate_code_sha256",
+      "exact_diff",
+      "original_red_receipt_id",
+      "candidate_green_receipt_id",
+      "independent_replay_status"
+    ],
+    "Adjudication": [
+      "id",
+      "authority",
+      "scope_verdict",
+      "original_source_scope",
+      "blockers",
+      "separate_gate_status"
+    ],
+    "KnowledgeDelta": [
+      "id",
+      "parent_event_id",
+      "event_kind",
+      "affected_claim_ids",
+      "source_refs",
+      "result",
+      "timestamp"
+    ],
+    "AuthorityDecision": [
+      "id",
+      "operator_authority",
+      "authorized_scope",
+      "expires_at",
+      "separate_from_research"
+    ]
+  },
+  "relation_types": [
+    "WAS_DERIVED_FROM",
+    "USED",
+    "GENERATED_BY",
+    "HYPOTHESIZES",
+    "TESTS",
+    "CHALLENGES",
+    "REPRODUCES",
+    "REFUTES",
+    "CORRECTS",
+    "REQUIRES",
+    "BLOCKED_BY",
+    "AUTHORIZED_BY",
+    "SUPERSEDES_SCOPE_ONLY",
+    "NO_INDEPENDENT_ORIGIN"
+  ],
+  "states": [
+    "DISCOVERY_CANDIDATE",
+    "SOURCE_READ_C1",
+    "Q4_ORIGINAL_BYTE_RECEIPT_C1",
+    "PREREGISTERED_DESIGN_C1",
+    "LOCAL_REPLAY_REPORTED_C1",
+    "LOCAL_REPLAY_VERIFIED_C1",
+    "INDEPENDENT_Q5_REPLAY_C1",
+    "AXIOM_ADJUDICATED_C1",
+    "SOURCE_GAP",
+    "NOT_RUN",
+    "CONTRADICTED",
+    "QUARANTINED",
+    "HOLD",
+    "ABSTAIN"
+  ],
+  "rules": [
+    {
+      "id": "R-01",
+      "if": "source_q_Q4",
+      "require": "actual_original_bytes_and_sha256_or_private_Q4_receipt",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-02",
+      "if": "result_is_PASS",
+      "require": "passed_equals_total_and_exit_code_equals_0",
+      "on_fail": "REJECTED"
+    },
+    {
+      "id": "R-03",
+      "if": "numeric_count_claim",
+      "require": "nonnegative_counts_and_sum_not_exceed_declared_population",
+      "on_fail": "REJECTED"
+    },
+    {
+      "id": "R-04",
+      "if": "elapsed_duration_claim",
+      "require": "monotonic_nonnegative_elapsed",
+      "on_fail": "REJECTED"
+    },
+    {
+      "id": "R-05",
+      "if": "canonical_lane_credit",
+      "require": "exact_canonical_lane_object_identity_not_external_alias",
+      "on_fail": "REJECTED"
+    },
+    {
+      "id": "R-06",
+      "if": "actor_registered_quorum_credit",
+      "require": "operator_authenticated_root_and_distinct_actor_and_independent_data_model_lineage",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-07",
+      "if": "dual_smartphone_empirical_gain_claim",
+      "require": "physically_two_simultaneous_phones_and_valid_independent_reference_and_grouped_holdout_equal_cost",
+      "on_fail": "REJECTED"
+    },
+    {
+      "id": "R-08",
+      "if": "self_learning_autonomy_claim",
+      "require": "separate_user_operator_authorization_and_executable_scoped_runtime_replay",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-09",
+      "if": "source_code_correction",
+      "require": "original_sha_preserved_candidate_sha_new_and_before_after_receipts_and_no_retroactive_state_mutation",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-10",
+      "if": "holdout_eval",
+      "require": "pre_frozen_evaluator_and_no_test_label_exposure_or_overlap",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-11",
+      "if": "final_archive_claim",
+      "require": "outer_sha_current_and_inner_receipt_same_version_and_manifest_coverage",
+      "on_fail": "HOLD"
+    },
+    {
+      "id": "R-12",
+      "if": "public_github_write",
+      "require": "only_public_safe_metadata_no_raw_human_biometric_credentials_or_unregistered_write",
+      "on_fail": "REJECTED"
+    }
+  ],
+  "sample_event_graph": [
+    {
+      "event_id": "SYN-R44R2-E0001",
+      "type": "KnowledgeDelta",
+      "event_kind": "ORIGINAL_NEGATIVE",
+      "affected_claim_ids": [
+        "SYN-FIM-COORDINATE"
+      ],
+      "before_script_sha": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+      "run": {
+        "passed": 33,
+        "total": 51,
+        "exit_code": 1
+      },
+      "status": "CONTRADICTED",
+      "source": "R44-R2_OPERATOR_UPLOAD_TAR",
+      "actor_authority": "AXIOM_LOCAL_NOT_EXTERNAL_ACTOR"
+    },
+    {
+      "event_id": "SYN-R44R2-E0002",
+      "parent_event_id": "SYN-R44R2-E0001",
+      "type": "CorrectionCandidate",
+      "event_kind": "CANDIDATE_REPAIR",
+      "original_script_sha": "4183a25a12ba03d30adaf10a0b04815d1334f647a2b5dc44d98b41e8d5f247ff",
+      "candidate_script_sha": "03122b59bf55a088c7bee2c9959088ad375ce4c5c0ed44f09073e1775567b455",
+      "change": "r=H@np.asarray(x)-mu",
+      "run": {
+        "passed": 51,
+        "total": 51,
+        "exit_code": 0
+      },
+      "status": "LOCAL_REPLAY_VERIFIED_C1",
+      "actor_authority": "AXIOM_LOCAL_NOT_EXTERNAL_ACTOR",
+      "independent_external_actor_replay": false
+    },
+    {
+      "event_id": "SYN-R44R2-E0003",
+      "parent_event_id": "SYN-R44R2-E0002",
+      "type": "Adjudication",
+      "event_kind": "SCOPED_RESULT",
+      "status": "HOLD",
+      "scope": "SYNTHETIC_GAUSSIAN_FIM_ONLY",
+      "reason": "REAL_DEVICE_AND_EXTERNAL_REGISTERED_ACTOR_NOT_ESTABLISHED",
+      "old_negative_event_retained": "SYN-R44R2-E0001"
+    }
+  ]
+}
