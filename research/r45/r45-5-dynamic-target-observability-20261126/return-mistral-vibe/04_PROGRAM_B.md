@@ -7,11 +7,11 @@ STATUS = DESIGN_ONLY, NOT_RUN_FORMAL. Das AXIOM-Register sieht 20 Negativ- und 4
 
 ## B.2 Eigene Desk-Schranken fuer das Design
 - Numerische Empfindlichkeit sigma_b_hat = Wurzel(2) * sigma / |lambda|; Verifikation im Monte-Carlo-Lauf (siehe 03). Das Design muss die Konditionierung der Designmatrix mitpruefen, nicht nur den Rang.
-- Drift als Stoergraeße: ohne unabhaengige, bechraenkte Driftreferenz bleibt die Zielgroesse nicht identifizierbar (Rang 2, Zielraum 3). Robuste Auswahl muss mindestens eine Koordinate enthalten, die die Driftkomponente unabhaengig begrenzt.
-- Rauschen kann historisch rangdefiziente Matrizen formal vollrangig erscheinen lassen (AXIOM Paragraf 7); daraus folgt für B: formale Ranggleichheit in Trainingsdaten ist kein Identifizierbarkeitsnachweis.
+- Drift als Stoergroesse: ohne unabhaengige, beschraenkte Driftreferenz bleibt die Zielgroesse nicht identifizierbar (Rang 2, Zielraum 3). Robuste Auswahl muss mindestens eine Koordinate enthalten, die die Driftkomponente unabhaengig begrenzt.
+- Rauschen kann historisch rangdefizite Matrizen formal vollrangig erscheinen lassen (AXIOM Paragraf 7); daraus folgt fuer B: formale Ranggleichheit in Trainingsdaten ist kein Identifizierbarkeitsnachweis.
 
 ## B.3 Grenzen
-Kein Optimierer ausgeführt, keine Hardware-Hypothese, keine FIT-, Energie- oder Hardwarewerte auf NEXUS-Geraete (OPPO, Pixel, Windows, Hostinger) uebertragen. Physikalische Tests nicht durchgefuehrt.
+Kein Optimierer ausgefuehrt, keine Hardware-Hypothese, keine FIT-, Energie- oder Hardwarewerte auf NEXUS-Geraete (OPPO, Pixel, Windows, Hostinger) uebertragen. Physische Tests nicht durchgefuehrt.
 
 NEXUS Ω OMEGA
 

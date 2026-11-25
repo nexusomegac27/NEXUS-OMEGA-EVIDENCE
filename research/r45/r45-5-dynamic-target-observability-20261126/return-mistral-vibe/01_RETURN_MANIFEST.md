@@ -14,8 +14,10 @@ Member dieses Returns (12 Dateien im Repo-Ordner):
 | 07_RECEIPTS.json | strukturierte Belege |
 | 08_LIMITATIONS.md | Grenzen und Selbstkorrektur |
 | 99_SHA256SUMS.txt | SHA-256 aller Inhaltsdateien und des ZIP-Sidecars |
-| r45-5-stack_R0.zip.b64 | vollstaendiger Stack als ZIP-Bytefolge, Base64-kodiert (STORE) |
+| r45-5-stack_R0_1.zip.b64 | vollstaendiger Stack als ZIP-Bytefolge, Base64-kodiert (STORE) |
 | STACK_ZIP_SHA256.txt | SHA-256 der dekodierten ZIP-Bytes, zusaetzlich im Issue-Kommentar |
+
+Hinweis zur Version: Die erste Fassung (R0, Commit c2f031e346eb098c200b873283049972c4f3db99) enthielt Textmaengel (unter anderem eine verfaelschte Tokenfolge in 07_RECEIPTS.json sowie Tippfehler). Diese Revision R0.1 ersetzt alle zwolf Dateien; die alte ZIP-Seitendatei r45-5-stack_R0.zip.b64 bleibt als historischer Stand am Branch erhalten und ist ausserhalb der Bindung dieser Revision.
 
 Externe Referenz, nicht Teil dieses Stacks, Operator-Kustodie:
 R45_5_INTERNAL_PREVALIDATION_R0.zip, ZIP_SHA256 cd51a99557a52ccfbfb8810bf568d5a2eda43f0cead091d175d454fa23ef4841,

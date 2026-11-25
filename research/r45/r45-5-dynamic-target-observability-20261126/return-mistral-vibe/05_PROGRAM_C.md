@@ -1,5 +1,5 @@
 # 05 · PROGRAMM C · StrictGateV4, 13 Gegenproben (E27 bis E29, E34)
-STATUS = EIGENES FAI-CLOSED-REFERENZSCHEMA (Desk). Kein Substitutionscredit: das von AXIOM empfangene Python-Referenzmodell ist nicht auf GitHub; die Pruefung lief an einem eigenen, konzeptionell nachgebildeten Schema mit digest- und nonce-gebundenem Capability-Descriptor, Closure-gebundener Policy-Version sowie Principal-und-Key-Registry.
+STATUS = EIGENES FAIL-CLOSED-REFERENZSCHEMA (Desk). Kein Substitutionscredit: das von AXIOM empfangene Python-Referenzmodell ist nicht auf GitHub; die Pruefung lief an einem eigenen, konzeptionell nachgebildeten Schema mit digest- und nonce-gebundenem Capability-Descriptor, Closure-gebundener Policy-Version sowie Principal-und-Key-Registry.
 
 ## C.1 Pruefaufbau-Verlaufsnotiz (Selbstkorrektur, append-only)
 - Lauf 1 verworfen: Harness-Fehler, Objekt statt Positionsargumente an die Grant-Funktion, dadurch systematisches E_CAPABILITY_UNKNOWN; zusaetzlich kollabierten die Normalgleichungen numerisch, Wechsel zur Cramer-Resolvente.

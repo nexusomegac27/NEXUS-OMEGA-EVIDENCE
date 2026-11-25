@@ -1,4 +1,4 @@
-SHA256(Dekodiertes r45-5-stack_R0.zip) = 363e6a982773fd0439146e152d0c9d09947655a8ee43ebc8a7c3f4c24d60738f
-SHA256(r45-5-stack_R0.zip.b64 als Text) = a077afcb1e646e0aa83a8c161351e913d99dbdcefd59ed07bbd2e14773f5d38d
-Methode = STORE, 9 Mitglieder (00 bis 08), CRC-Selbstpruefung 9_OF_9_PASS, DOS-Zeit 2026-11-26 12:00
+SHA256(Dekodiertes r45-5-stack_R0_1.zip) = 182c66babb537ea923ecdf50e562d81c371731a2b2ad77bda47ff0a5105d44df
+SHA256(r45-5-stack_R0_1.zip.b64 als Text) = ed0e2b8d7cf150023d23d8a2801e60855590823d6875e613d594e37acaf86074
+Revision = R0.1, Methode = STORE, 9 Mitglieder (00 bis 08), CRC-Selbstpruefung 9_OF_9_PASS, DOS-Zeit 2026-11-26 12:00
 NEXUS Ω OMEGA
