@@ -1,0 +1,10 @@
+# MINIMAL REPAIR SEQUENCE (PROPOSED, NOT EXECUTED)
+
+1. **P0** — Extract r45_stop_gate to isolated test harness; replace assert with explicit raise; add 7 AXIOM negatives + prior 16 (`SEPARATE_REPAIR_ORDER`)
+2. **P0** — Map/align node-bus lease semantics vs STOP-gate or document NON_IDENTITY (`SEPARATE_REPAIR_ORDER`)
+3. **P0** — Bind AR(1) stationary covariance helper with exact f_n; freeze GLM wrong-factor as FAIL fixture (`SEPARATE_REPAIR_ORDER`)
+4. **P0** — Locate or declare ABSENT whitening/joint_coverage/Fisher modules; no silent invention (`SEPARATE_REPAIR_ORDER`)
+5. **P0** — Private original custody plan: path/size/SHA for missing historical scripts; no public leak (`OPERATOR_CUSTODY`)
+6. **P0** — Merkle inclusion+consistency + Ed25519 verify as independent offline suite; do not credit GLM vectors as runtime (`SEPARATE_REPAIR_ORDER`)
+7. **P1** — Epistemic graph + independent evaluator lane — design only until authorized (`LATER`)
+8. **P2** — Magnonics continuous-error — research only; ANALOGY_NOT_IDENTITY (`NO_IMPL`)

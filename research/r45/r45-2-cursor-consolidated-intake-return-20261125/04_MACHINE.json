@@ -1,0 +1,43 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R44_1_TO_R45_1_CONSOLIDATED_RESEARCH_INTAKE_RETURN_20261125_R0",
+  "parent": "NEXUS_OMEGA_AXIOM_CURSOR_R44_1_TO_R45_1_CONSOLIDATED_RESEARCH_INTAKE_20261125_R0",
+  "issue_455": "OPEN",
+  "pr_454": "OPEN_DRAFT_NOT_MERGED",
+  "pr_454_head": "9449f764938c099e6dbe27f19c10de98726659f8",
+  "package_verify": {
+    "pr454_head": "9449f764938c099e6dbe27f19c10de98726659f8",
+    "zip_bytes": 24756,
+    "zip_sha256": "982e164acdbbee1199c1cd21c535b04c8ac04343cd18b1eaedde1db389606975",
+    "zip_sha_match": true,
+    "sidecar_match": true,
+    "zip_entries": 10,
+    "zip_crc": "PASS",
+    "manifest_sha256": "172e578d0b099c17655b4adf3e2fa93e8e6f3da78f692ce62bf26d98bf4aecc7",
+    "manifest_match": true,
+    "member_rehash": "9_OF_9"
+  },
+  "member_rehash": "9_OF_9_MATCH",
+  "ar1": {
+    "rho": 0.8,
+    "sigma2_marginal": 1.0,
+    "formula": "f_n=1+2*sum_{k=1}^{n-1}(1-k/n)*rho^k; Var(mean)=f_n*sigma2/n",
+    "n5": {
+      "f_n": 3.6214400000000007,
+      "var_mean": 0.7242880000000002
+    },
+    "n10": {
+      "f_n": 5.429496729600001,
+      "var_mean": 0.5429496729600001
+    },
+    "axiom_n5_f": 3.62144,
+    "axiom_n10_f": 5.4294967296,
+    "local_match_n5": true,
+    "local_match_n10": true,
+    "status": "BOUND_MATCH_C1"
+  },
+  "implementation_edits": "NONE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "bodytwin_validated": false,
+  "cursor_action": "NONE",
+  "next": "AXIOM_INDEPENDENT_ADJUDICATION"
+}
