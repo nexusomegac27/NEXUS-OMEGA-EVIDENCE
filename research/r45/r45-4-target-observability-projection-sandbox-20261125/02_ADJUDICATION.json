@@ -61,7 +61,7 @@
     "links": "20 internal plus prior pin",
     "previous": "e94dc5ba554e2ea2ba2e7ef0b7e5536a743ffcc9d9f3dab0e1acc386e2a7faf4",
     "head": "4f2256ca10691808674aa0600d636159e546214127c8fe1e61567cd232ccac1b",
-    "current_script_match": "12/21",
+    "current_script_match": "11/21",
     "mismatch": [
       54,
       55,
@@ -74,7 +74,7 @@
       66,
       69
     ],
-    "note": "actual mismatch list has ten entries; correct current match count 11/21, supersedes preliminary 12/21 count",
+    "note": "Ten mismatches listed explicitly, 21-10=11; preliminary 12/21 was a transcription error. Ledger hash and chain counts unchanged.",
     "prereg": "f29b50f72c183670d513ee00ea9bf6f2b5f73efaeba1d4734ff406f9c7b018b6"
   },
   "gate": {
