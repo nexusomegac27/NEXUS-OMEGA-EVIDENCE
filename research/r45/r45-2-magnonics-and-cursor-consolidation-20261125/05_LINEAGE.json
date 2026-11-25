@@ -1,0 +1,110 @@
+{
+  "scope": "R44-1..R44-9 plus R45-1, 10 completed checkpoints by operator/context; R45-2 new",
+  "verified_issue_titles_and_PR_heads": true,
+  "not_full_historical_byte_rehash": true,
+  "last_cursor_reported": {
+    "issue": 429,
+    "comment": 7126774537,
+    "source": 432,
+    "zip_bytes": 3928,
+    "sha256": "2651acd19d285dad80a85c41056d5081adcde099aad6a12f816e02ecf10da45d",
+    "receiver_ack_current": "NOT_OBSERVED"
+  },
+  "rounds": [
+    {
+      "round": "R44-1",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/431",
+      "pr": null,
+      "pin": "R44-1 primary issue; companion #432, R44-0 #429/#430 @ 05c6e19a56d859aee514558ee3fdc83a7695fff5",
+      "delta": "independent methods, Fisher, original sources, blind evaluator",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-2",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/433",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/434",
+      "pin": "4c54cea305b3edf0e0636af45b039cedaec7b302",
+      "delta": "NELFP epistemic graph and Fisher fail",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-3",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/435",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/436",
+      "pin": "8abd8ddd3afa7099322996625b8d09bbe1494f0e",
+      "delta": "node error culture, authenticated evidence, budget and disclosure",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-4",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/437",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/438",
+      "pin": "e4680dde61203e7e22a5e44579a94448f411d290",
+      "delta": "VSRD evidence yield, independent tests, statistical convention",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-5",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/439",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/440",
+      "pin": "9f968999d7b4e93943ae27fc7bf1fd0fe9167b8a",
+      "delta": "operator start, source custody, R1 original ZIP gap",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-6",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/441",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/442",
+      "pin": "89ccff827d564309cba3274bff94a6d577e6853a",
+      "delta": "source access and exact receivers",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-7",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/443",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/444",
+      "pin": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+      "delta": "whitening and self optimization",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-8",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/446",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/447",
+      "pin": "a46d8e34efacd08a970949d43bb64e7210aa6018",
+      "delta": "joint coverage and collective corrigibility",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R44-9",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/448",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/449",
+      "pin": "3a84c7da725b97093af257170e52db21181ebb1a",
+      "delta": "measurement limits, analogy and source counterexamples",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    },
+    {
+      "round": "R45-1",
+      "issue": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/451",
+      "pr": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/pull/452",
+      "pin": "4740427fde013ccff5bafff21c74e69d54e765cc",
+      "delta": "R45 foundation plus locally received R45-1 expert returns; original upload pending",
+      "verification": "live issue and available PR head metadata, not all historical source bytes"
+    }
+  ],
+  "advisory": [
+    {
+      "pr": 445,
+      "head": "45bbde39c941a63321efe71546e13f1714204e3b"
+    },
+    {
+      "pr": 450,
+      "head": "7999befa3ce8c3ed394454e522208720681ddc3d"
+    },
+    {
+      "issue": 451,
+      "comment": 7169095738
+    }
+  ],
+  "missing_originals": "R44 and R45-1 raw archives local/operator custody; no private publication or source substitution"
+}
