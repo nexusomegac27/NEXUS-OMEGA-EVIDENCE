@@ -1,0 +1,80 @@
+{
+  "schema": "nexus/r44-7/return/v1",
+  "status": "PREPARED_NOT_DISPATCHED_C1",
+  "parent": "89ccff827d564309cba3274bff94a6d577e6853a",
+  "transfer": "GITHUB_ONLY",
+  "directive": "AXIOM_RETURN_SELF_OPTIMIZATION_V1",
+  "required": [
+    "source_receiver_ack_or_precise_gap",
+    "immutable_original_receipt",
+    "executed_source_sha256_and_dependencies",
+    "preregistered_hypothesis",
+    "run_id_and_actual_logs",
+    "unique_trial_outcomes",
+    "bounded_lease",
+    "actual_delta",
+    "independent_adjudication",
+    "publication_readback"
+  ],
+  "return_fields": {
+    "actor": null,
+    "lane": null,
+    "source_commit": null,
+    "source_hashes": [],
+    "source_ack": null,
+    "blocked_sources": [],
+    "original_receipt_hash": null,
+    "correction_hash": null,
+    "script_versions": [],
+    "prereg_hash": null,
+    "run_ids": [],
+    "raw_evidence": [],
+    "gate": null,
+    "verdict": null,
+    "unique_tests": null,
+    "receipt_entries": null,
+    "lease": {
+      "wall": null,
+      "cpu_tree": null,
+      "network": null,
+      "tokens": null,
+      "retries": null,
+      "cache": null,
+      "completeness": "UNKNOWN"
+    },
+    "correction_adjudication": "NOT_RUN",
+    "publication": {
+      "commit": null,
+      "zip_sha256": null,
+      "manifest": null,
+      "readback": "NOT_RUN"
+    }
+  },
+  "counts": {
+    "canonical_negative": "0/24",
+    "r44_5_designs": 28,
+    "r44_6_designs": 18,
+    "r44_6_advisory_receipts": 49,
+    "r44_6_distinct_test_ids": 30,
+    "r44_7_designs": 14,
+    "r44_7_formal_executed": 0,
+    "quorum": "0/3",
+    "full_science": "0/10"
+  },
+  "walls": {
+    "bodytwin": false,
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "cursor": false,
+    "merge": false,
+    "hostinger": false,
+    "www": false,
+    "device": false,
+    "dispatch": false,
+    "promotion": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}

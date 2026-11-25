@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-25",
+  "parent": "89ccff827d564309cba3274bff94a6d577e6853a",
+  "source_archive": {
+    "name": "R44-6_Stack.zip",
+    "bytes": 371551,
+    "sha256": "529c0778211c9705acdacc66350b7816ef1adeeeb3c7f7443c6791221587f799",
+    "manifest": "44/44 match after explicit directory mapping",
+    "receipt": "49/49 hash+links",
+    "lease": "22/22 hash+links; 11 start/end pairs rc0",
+    "custody": "71/71 hash+links; same writer not independent",
+    "heads": "receipt and lease count/head match",
+    "prereg": "all 49 receipts bind c4ebdd9f304dad836e01e8597f8c8a76fb796a69281f4bef4cf9d20a0940dc38",
+    "historical_script_missing_receipts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "receipt_gates": {
+      "green": 33,
+      "red": 12,
+      "na": 4
+    },
+    "latest_unique": {
+      "total": 30,
+      "green": 23,
+      "red": 4,
+      "na": 3
+    },
+    "SA_latest": {
+      "green": 15,
+      "red": 3
+    },
+    "prereg_assert_entrypoints": [
+      "e33_adversarial.py:75",
+      "e28_nelfp.py:32",
+      "e32_identifiability.py:35",
+      "e34_ledger.py:69",
+      "e29_preflight.py:31",
+      "sa_xref.py:18",
+      "e273031_isolation.py:17"
+    ]
+  },
+  "order_copy": {
+    "outer": "R44_6_STACK.zip",
+    "sha256": "3982b0fc42a2ec2e788edc399eb8255e983b4d53f3c35a136b8f354180875969",
+    "inner_bytes": 43449,
+    "inner_sha256": "cf10b2bc1a3284eb1858b36724b444603b526b8ba4878063dc60820f427f660a",
+    "crc": "PASS"
+  },
+  "terminal": {
+    "outer_sha256": "da2f1ea22b53564b22efba434e16fde9bd439283fe200d044b87b57f462d50e0",
+    "selfhash_match": true,
+    "sidecar_match": true,
+    "receiver_return_sha256": "19152e6a3884c08b632329c10d488b857f36781e2a8174d75298c9e47d86d1da",
+    "receiver_ack": 7142684030,
+    "mistral_ack": 7142039997,
+    "terminal_pin": 7154246406,
+    "receiver_push": "SUPERSEDED_BY_OPERATOR_PUBLICATION_REPORTED_a63ee94607b73fa4f5b1ae788306f462d93cfcc9",
+    "discrepancy": "cause open; no retry"
+  },
+  "own_diagnostics": {
+    "historical_seq38": {
+      "stored": "00f3a11ca69a6737837356b8a065abd8a8195cba39e356e233af7dd3be0fdd4f",
+      "recomputed": "0a1026570690f0c928717664420199cad035751879500ce2aedc086f87b92f6b",
+      "match": false
+    },
+    "fisher_condition_analytic": [
+      {
+        "span": 0.8,
+        "cond": 8910094.14751141
+      },
+      {
+        "span": 2,
+        "cond": 90455.78553056261
+      },
+      {
+        "span": 4,
+        "cond": 8228.447693526987
+      }
+    ],
+    "whitening_objective": [
+      {
+        "rho": 0.3,
+        "expected": 7.717032967032966,
+        "original": 7.815934065934064,
+        "corrected": 7.717032967032965
+      },
+      {
+        "rho": 0.8,
+        "expected": 28.916666666666686,
+        "original": 30.69444444444444,
+        "corrected": 28.91666666666668
+      }
+    ],
+    "archive_fixture": {
+      "valid": [
+        "ACCEPT",
+        "ACCEPT"
+      ],
+      "case_collision": [
+        "ACCEPT",
+        "REJECT"
+      ],
+      "unicode_collision": [
+        "ACCEPT",
+        "REJECT"
+      ],
+      "file_directory": [
+        "REJECT_LATE_NotADirectoryError",
+        "REJECT_PREFLIGHT"
+      ],
+      "windows_reserved": [
+        "ACCEPT",
+        "REJECT"
+      ],
+      "windows_trailing": [
+        "ACCEPT",
+        "REJECT"
+      ]
+    },
+    "replay_status": "E28-B GREEN historical; adjudicated PARTIAL, duplicate accepted",
+    "nonlinear_coverage": "768/2000 reported; failure counter 853 not proven unique"
+  },
+  "custody_gaps": {
+    "R44_5_R1": "local exact SHA256 303a4761580dcbaa604e6e723bc8972d215f6660b86488fa8e4b57a76f541b67; GitHub original absent per terminal, no exact binary upload performed",
+    "GLM_originals": "local supplied; public/authorized private route review pending",
+    "missing_historical_scripts": "19 receipts reference unavailable versions; do not recreate"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "formal_expert_execution": false
+}
