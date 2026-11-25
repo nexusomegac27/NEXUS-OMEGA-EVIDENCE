@@ -1,0 +1,127 @@
+{
+  "schema": "nexus/r44-8/controls/v1",
+  "state": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "inherited": {
+    "R44_3": 24,
+    "R44_5": 28,
+    "R44_6": 18,
+    "R44_7": 14,
+    "canonical_credit": "0/24"
+  },
+  "R44_8": [
+    {
+      "id": "R8-N01",
+      "scope": "Product of marginals is not joint coverage; same marginals with different joint outcomes",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N02",
+      "scope": "Invalid/abstained/failed trials must not disappear from unconditional denominator",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N03",
+      "scope": "Marginal 95% must not be asserted as joint 95%; predeclare simultaneous target",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N04",
+      "scope": "Raw objective values from different weight matrices not directly comparable; common W reference",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N05",
+      "scope": "span and sample count confounded; orthogonal design",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N06",
+      "scope": "termination/cap/stall not proof of convergence; independent stationarity/boundary tests",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N07",
+      "scope": "rank/pinv/negative variance/finite CI not calibration; reject nonidentifiability and test robust/profile alternatives",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N08",
+      "scope": "single-vector unstructured covariance rank failure distinct from structured estimator; r6/r30 quality",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N09",
+      "scope": "fixed theta Wald coverage not Bayesian SBC",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N10",
+      "scope": "all individual ACKs cannot override absent external gate, revoked/expired lease or stop",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N11",
+      "scope": "post-stop queued dispatch/retry and stale scope must deny; explicit fresh authority",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N12",
+      "scope": "verbal compliant reports cannot replace observed benign holdout behavior",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N13",
+      "scope": "hash/sidecar/own anchor not authenticated independent witness; signed checkpoint consistency",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N14",
+      "scope": "original receiver ZIP unavailable/divergent remote files; no substitution; script and prereg exact hash required",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N15",
+      "scope": "synthetic lineage contamination and metric feedback must not replace independent empirical validation",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-N16",
+      "scope": "philosophical self-report or dialogue drift not consciousness proof; C1 ceiling",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-P01",
+      "scope": "paired exact source pilot + corrected empirical joint reducer, reproduce counterexample; local diagnostic only",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    },
+    {
+      "id": "R8-P02",
+      "scope": "external group predicate permits only all authorized fresh conditions and no stop; 128-state local Boolean reference, temporal/runtime not proven",
+      "status": "NOT_RUN_FORMAL",
+      "required": "prereg, source SHA, real execution receipt, positive/negative control, lease, independent review"
+    }
+  ],
+  "local_diagnostics": [
+    "R8-N01 minimal counterexample",
+    "R8-P01 exploratory original model pilot",
+    "R8-P02 static boolean reference, 128 states"
+  ],
+  "do_not_sum": true
+}

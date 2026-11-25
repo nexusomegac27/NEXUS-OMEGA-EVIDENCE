@@ -1,0 +1,100 @@
+{
+  "policy": "GitHub only canonical exchange; text route does not equal ZIP identity; exact local originals reviewed before any authorized public/private publication",
+  "pinned": [
+    {
+      "ref": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+      "path": "research/r44/r44-7-self-optimization-and-whitening-20261125/R44_7_EXPERT_ORDER_R0.zip",
+      "sha256": "6b5661e84e999eebff4903144641b551507053848b5cb089352cd44355108778",
+      "state": "LOCAL_COPY_MATCH_PARENT_HEAD_VERIFIED",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4b37f7df377c2dfb39eab05830d3155ae6bf11c1/research/r44/r44-7-self-optimization-and-whitening-20261125/R44_7_EXPERT_ORDER_R0.zip",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-self-optimization-and-whitening-20261125/R44_7_EXPERT_ORDER_R0.zip?ref=4b37f7df377c2dfb39eab05830d3155ae6bf11c1"
+    },
+    {
+      "ref": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+      "path": "research/r44/r44-7-self-optimization-and-whitening-20261125/99_SHA256SUMS.txt",
+      "sha256": "5f94facff9b89b2774f8a6a7e245e72779c49f2f2e3f5fe0a0ba28ff578e9d81",
+      "state": "PARENT_PIN",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/4b37f7df377c2dfb39eab05830d3155ae6bf11c1/research/r44/r44-7-self-optimization-and-whitening-20261125/99_SHA256SUMS.txt",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-self-optimization-and-whitening-20261125/99_SHA256SUMS.txt?ref=4b37f7df377c2dfb39eab05830d3155ae6bf11c1"
+    },
+    {
+      "ref": "45bbde39c941a63321efe71546e13f1714204e3b",
+      "path": "research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/00_RETURN_REPORT_MISTRAL_VIBE.md",
+      "sha256": "c723b8d4baaa1ad72e5d7893a6f60036f1999b102b24ba211261d6c7097dafbf",
+      "state": "LOCAL_MANIFEST_MATCH_HEAD_VERIFIED",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/45bbde39c941a63321efe71546e13f1714204e3b/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/00_RETURN_REPORT_MISTRAL_VIBE.md",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/00_RETURN_REPORT_MISTRAL_VIBE.md?ref=45bbde39c941a63321efe71546e13f1714204e3b"
+    },
+    {
+      "ref": "45bbde39c941a63321efe71546e13f1714204e3b",
+      "path": "research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/01_PREREG_FACTORIAL.json",
+      "sha256": "a7f9e1df476684f4aee5ea566863a55db6a0cbbb57332d272280c732cefcc968",
+      "state": "LOCAL_MANIFEST_MATCH_HEAD_VERIFIED",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/45bbde39c941a63321efe71546e13f1714204e3b/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/01_PREREG_FACTORIAL.json",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/01_PREREG_FACTORIAL.json?ref=45bbde39c941a63321efe71546e13f1714204e3b"
+    },
+    {
+      "ref": "45bbde39c941a63321efe71546e13f1714204e3b",
+      "path": "research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/02_RESULT_EVIDENCE.json",
+      "sha256": "2ac085c1464075ea4f29b83f18920373c40f319476f3320c00181cb9341d7ebe",
+      "state": "LOCAL_MANIFEST_MATCH_HEAD_VERIFIED",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/45bbde39c941a63321efe71546e13f1714204e3b/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/02_RESULT_EVIDENCE.json",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/02_RESULT_EVIDENCE.json?ref=45bbde39c941a63321efe71546e13f1714204e3b"
+    },
+    {
+      "ref": "45bbde39c941a63321efe71546e13f1714204e3b",
+      "path": "research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/03_EXECUTED_SCRIPT_V4.md",
+      "sha256": "9038eb24c52fc903e61ea28e781bc220fd80782f5cc57191172a7ac2f926772f",
+      "state": "PSEUDOCODE_NOT_FULL_EXECUTED_SOURCE",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/45bbde39c941a63321efe71546e13f1714204e3b/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/03_EXECUTED_SCRIPT_V4.md",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/03_EXECUTED_SCRIPT_V4.md?ref=45bbde39c941a63321efe71546e13f1714204e3b"
+    },
+    {
+      "ref": "d65f64b11e1dc88f2f2e50aa0a31b02645313dc4",
+      "path": "research/r44/r44-7-receiver-return-20261125/17_CONTRAST_ANALYSIS.txt",
+      "sha256": "6490138b84a4651a1485da51eddbf28112723edefe077715705bad08bac3c6c0",
+      "state": "LOCAL_GIT_BLOB_MATCH_HISTORICAL_PRODUCT_NOT_JOINT",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/d65f64b11e1dc88f2f2e50aa0a31b02645313dc4/research/r44/r44-7-receiver-return-20261125/17_CONTRAST_ANALYSIS.txt",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-receiver-return-20261125/17_CONTRAST_ANALYSIS.txt?ref=d65f64b11e1dc88f2f2e50aa0a31b02645313dc4"
+    },
+    {
+      "ref": "d65f64b11e1dc88f2f2e50aa0a31b02645313dc4",
+      "path": "research/r44/r44-7-receiver-return-20261125/99_SHA256SUMS.txt",
+      "sha256": "ede363fee4389516a21c3109db9a78a0c6171caad9777a55278c5c70f7db7f10",
+      "state": "LOCAL_GIT_BLOB_MATCH_BUT_REMOTE_STACK_INCOMPLETE",
+      "raw_url": "https://raw.githubusercontent.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/d65f64b11e1dc88f2f2e50aa0a31b02645313dc4/research/r44/r44-7-receiver-return-20261125/99_SHA256SUMS.txt",
+      "api_url": "https://api.github.com/repos/nexusomegac27/NEXUS-OMEGA-EVIDENCE/contents/research/r44/r44-7-receiver-return-20261125/99_SHA256SUMS.txt?ref=d65f64b11e1dc88f2f2e50aa0a31b02645313dc4"
+    }
+  ],
+  "inherited_registry": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/blob/89ccff827d564309cba3274bff94a6d577e6853a/research/r44/r44-6-github-source-access-and-bodytwin-20261124/02_SOURCE_REGISTRY.json",
+  "local_pending": [
+    {
+      "id": "MODEL5_ORIGINAL",
+      "sha256": "9c34bfec2709de8a5c7f45d03c4cf880e2dac8afb6fc7a75f1b64004aa3217c2",
+      "local_archive_member": "R44-5_Stack.zip/R44-5_Stack/scripts_r45/exp/model5.py",
+      "status": "LOCATED_EXACT_LOCAL; rights and authorized GitHub route pending",
+      "owner": "operator/original custodian"
+    },
+    {
+      "id": "RECEIVER_ORIGINAL_ZIP",
+      "bytes": 93663,
+      "sha256": "1be1803c09e8a711df75d56b60972f57864b4a039d7badbc12de6b9f2fb04c08",
+      "status": "LOCAL_MATCH; authorized original upload pending; public branch partial",
+      "owner": "authorized publisher"
+    },
+    {
+      "id": "EXT_PARALLELS_ORIGINAL",
+      "sha256": "64c26ad0d65ff1d65d018442055145a0d03ccd44a445055c515934f20f475137",
+      "status": "LOCAL_MIXED_NOTE; derived research mapping published, no raw third-party material republished"
+    },
+    {
+      "id": "R44_5_R1",
+      "sha256": "303a4761580dcbaa604e6e723bc8972d215f6660b86488fa8e4b57a76f541b67",
+      "status": "historical exact GitHub upload unresolved"
+    },
+    {
+      "id": "MISTRAL_V1_V4_EXECUTABLES",
+      "status": "full exact bytes not in report; request once, do not reconstruct history"
+    }
+  ]
+}

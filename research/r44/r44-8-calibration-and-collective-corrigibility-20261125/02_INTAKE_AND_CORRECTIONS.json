@@ -1,0 +1,499 @@
+{
+  "date": "2026-11-25",
+  "parent": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+  "local_intake": {
+    "continuation_zip": {
+      "bytes": 108803,
+      "sha256": "8299ae8bca61f555fb53f61e5a52975409bf10920e4bf509da58a55f16d42049",
+      "crc": "PASS"
+    },
+    "receiver_inner": {
+      "bytes": 93663,
+      "sha256": "1be1803c09e8a711df75d56b60972f57864b4a039d7badbc12de6b9f2fb04c08",
+      "crc": "PASS",
+      "manifest": "23/23",
+      "script_version_hashes": "10/10 MATCH",
+      "prereg_sha256": "8b277fe31897c3e329cfa8e09ba7bacc69ad5faf3ad8da70c5412c1811677e1e"
+    },
+    "binding_zip": {
+      "bytes": 699379,
+      "sha256": "a7a77661a4d452c84ebd3678fd0e1c11af3a5a37436c91b89adc2a6b2555e01a",
+      "crc": "PASS",
+      "manifest": "22/22"
+    },
+    "order_inner": {
+      "bytes": 17379,
+      "sha256": "6b5661e84e999eebff4903144641b551507053848b5cb089352cd44355108778"
+    },
+    "external_note_mixed_file": {
+      "bytes": 31319,
+      "sha256": "64c26ad0d65ff1d65d018442055145a0d03ccd44a445055c515934f20f475137",
+      "role": "not_qwen_instance; external parallels advisory plus appended Gemini commentary"
+    }
+  },
+  "receiver": {
+    "status": "LOCAL_ADVISORY_EXECUTED_20_CELLS",
+    "results_sha256": "fbc0baa2d03321cffb4a675e514c48b4a039515857da645e95d95afdb36d22a6",
+    "code_sha256": "700040b442d70bf3b34d4e85a8ad59ffc9d3e93d5a40854820191f11ba04571c",
+    "defect": "coverage_joint = float(np.prod(covered/N)); product not joint observed; only first 20 raw outcomes per cell retained, full joint cannot be recovered",
+    "frechet_columns": [
+      "phase",
+      "covariance",
+      "span",
+      "weighting",
+      "marginals",
+      "historical_product_rounded",
+      "joint_lower",
+      "joint_upper",
+      "valid_ci"
+    ],
+    "frechet_bounds": [
+      [
+        "P1",
+        "known",
+        0.8,
+        "orig",
+        [
+          0.6475,
+          0.7855,
+          0.7365
+        ],
+        0.374592,
+        0.1695,
+        0.6475,
+        1571
+      ],
+      [
+        "P1",
+        "known",
+        0.8,
+        "corr",
+        [
+          0.6845,
+          0.8615,
+          0.798
+        ],
+        0.470578,
+        0.344,
+        0.6845,
+        1723
+      ],
+      [
+        "P1",
+        "known",
+        4,
+        "orig",
+        [
+          0.919,
+          0.996,
+          0.9555
+        ],
+        0.874592,
+        0.8705,
+        0.919,
+        2000
+      ],
+      [
+        "P1",
+        "known",
+        4,
+        "corr",
+        [
+          0.928,
+          0.986,
+          0.974
+        ],
+        0.891218,
+        0.888,
+        0.928,
+        2000
+      ],
+      [
+        "P2",
+        "r30",
+        0.8,
+        "orig",
+        [
+          0.634,
+          0.7745,
+          0.72
+        ],
+        0.353544,
+        0.1285,
+        0.634,
+        1549
+      ],
+      [
+        "P2",
+        "r30",
+        0.8,
+        "corr",
+        [
+          0.6755,
+          0.849,
+          0.7785
+        ],
+        0.446469,
+        0.303,
+        0.6755,
+        1698
+      ],
+      [
+        "P2",
+        "r30",
+        4,
+        "orig",
+        [
+          0.911,
+          0.985,
+          0.942
+        ],
+        0.84529,
+        0.838,
+        0.911,
+        2000
+      ],
+      [
+        "P2",
+        "r30",
+        4,
+        "corr",
+        [
+          0.912,
+          0.964,
+          0.957
+        ],
+        0.841364,
+        0.833,
+        0.912,
+        2000
+      ],
+      [
+        "P2",
+        "r6",
+        0.8,
+        "orig",
+        [
+          0.5455,
+          0.676,
+          0.6075
+        ],
+        0.22402,
+        0,
+        0.5455,
+        1362
+      ],
+      [
+        "P2",
+        "r6",
+        0.8,
+        "corr",
+        [
+          0.5795,
+          0.7335,
+          0.6495
+        ],
+        0.276079,
+        0,
+        0.5795,
+        1518
+      ],
+      [
+        "P2",
+        "r6",
+        4,
+        "orig",
+        [
+          0.8495,
+          0.9015,
+          0.885
+        ],
+        0.677754,
+        0.636,
+        0.8495,
+        1999
+      ],
+      [
+        "P2",
+        "r6",
+        4,
+        "corr",
+        [
+          0.7045,
+          0.7485,
+          0.7955
+        ],
+        0.419482,
+        0.2485,
+        0.7045,
+        1997
+      ],
+      [
+        "P2",
+        "r1",
+        0.8,
+        "orig",
+        [
+          0,
+          0,
+          0
+        ],
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        "P2",
+        "r1",
+        4,
+        "orig",
+        [
+          0,
+          0,
+          0
+        ],
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        "P2",
+        "r1",
+        0.8,
+        "corr",
+        [
+          0,
+          0,
+          0
+        ],
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        "P2",
+        "r1",
+        4,
+        "corr",
+        [
+          0,
+          0,
+          0
+        ],
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        "P3",
+        "known_misspec",
+        0.8,
+        "orig",
+        [
+          0.684,
+          0.834,
+          0.7635
+        ],
+        0.435543,
+        0.2815,
+        0.684,
+        1668
+      ],
+      [
+        "P3",
+        "known_misspec",
+        0.8,
+        "corr",
+        [
+          0.7275,
+          0.9065,
+          0.8305
+        ],
+        0.547697,
+        0.4645,
+        0.7275,
+        1813
+      ],
+      [
+        "P3",
+        "known_misspec",
+        4,
+        "orig",
+        [
+          0.8785,
+          0.755,
+          0.9275
+        ],
+        0.615181,
+        0.561,
+        0.755,
+        2000
+      ],
+      [
+        "P3",
+        "known_misspec",
+        4,
+        "corr",
+        [
+          0.8925,
+          0.746,
+          0.9615
+        ],
+        0.640172,
+        0.6,
+        0.746,
+        2000
+      ]
+    ],
+    "local_vs_github": {
+      "head": "d65f64b11e1dc88f2f2e50aa0a31b02645313dc4",
+      "method": "local Git blob SHA1 vs remote tree metadata",
+      "matching": [
+        "10_SCOPE_LEASE_PREREG_RECEIPT.md",
+        "17_CONTRAST_ANALYSIS.txt",
+        "99_SHA256SUMS.txt"
+      ],
+      "different": [
+        "11_RECEIVER_ACK_R44_7.json",
+        "12_RUN_RECEIPTS_R44_7.json",
+        "13_RC01_RESULTS.json",
+        "14_RC02_RESULTS.json",
+        "16_FALSIFICATION_REPORT.md"
+      ],
+      "missing": [
+        "15_RC03_RESULTS.json",
+        "scripts/r44_7_rc03_falsification.py",
+        "R44_7_RECEIVER_RETURN_R0.zip"
+      ],
+      "cause": "NOT_ADJUDICATED; not full byte custody"
+    },
+    "other": "load_prereg checks schema and denominator but hash is computed/reported rather than compared against expected within script; hardcoded paths; aggregate lease not complete with tokens UNKNOWN; R1 rank-deficient unstructured covariance distinct from structured one-vector estimation"
+  },
+  "mistral": {
+    "pr": 445,
+    "head": "45bbde39c941a63321efe71546e13f1714204e3b",
+    "reported_scalar": [
+      0.821,
+      0.888,
+      0.855,
+      0.8695
+    ],
+    "reported_coverage_effects_pp": [
+      6.7,
+      1.45
+    ],
+    "reported_fits": 8000,
+    "limitations": "full executed source not present in 03 md; only core pseudocode and narrative v1-v4; n=10 vs20 and span=2 vs4 confounded; cap/stall not verified convergence; coverage reducer unknown; Wald causal attribution unproven; UNKNOWN_WALL"
+  },
+  "original_model_pilot": {
+    "source_sha256": "9c34bfec2709de8a5c7f45d03c4cf880e2dac8afb6fc7a75f1b64004aa3217c2",
+    "patched_sha256": "a7716410f46f1c937722db8f654a9e7db335387494045942cafc8b914f3463db",
+    "script_sha256": "1743723490d601034a4b1afe570846926b9dc1a97c9d717bb73d5aad22853331",
+    "seed": 8448001,
+    "n_per_arm": 64,
+    "fit_calls": 256,
+    "rho": 0.8,
+    "init": "theta_true",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "wall_s": 4.326757433,
+    "rows": [
+      {
+        "span": 0.8,
+        "arm": "OLD",
+        "success": 35,
+        "valid": 32,
+        "marginal_hits": [
+          31,
+          31,
+          32,
+          27
+        ],
+        "joint_hits": 27,
+        "mean_target_sse_success": 2.7201169793531754,
+        "rmse_success": [
+          2.127194350946722,
+          2.855626293430091,
+          4.476302645548806,
+          2.7299393844555895
+        ]
+      },
+      {
+        "span": 0.8,
+        "arm": "COR",
+        "success": 33,
+        "valid": 31,
+        "marginal_hits": [
+          31,
+          29,
+          29,
+          25
+        ],
+        "joint_hits": 24,
+        "mean_target_sse_success": 2.0335796827572037,
+        "rmse_success": [
+          38.121496908812745,
+          38.331137616927435,
+          3.1599384814537252,
+          10.55542297448546
+        ]
+      },
+      {
+        "span": 4,
+        "arm": "OLD",
+        "success": 48,
+        "valid": 48,
+        "marginal_hits": [
+          47,
+          37,
+          31,
+          46
+        ],
+        "joint_hits": 30,
+        "mean_target_sse_success": 1.914434185937943
+      },
+      {
+        "span": 4,
+        "arm": "COR",
+        "success": 46,
+        "valid": 46,
+        "marginal_hits": [
+          45,
+          38,
+          29,
+          44
+        ],
+        "joint_hits": 29,
+        "mean_target_sse_success": 1.338839280447659,
+        "rmse_success": [
+          48.43685911122133,
+          48.857247621576796,
+          11.991127984193179,
+          2.4434762765331994
+        ]
+      }
+    ],
+    "limits": "exploratory, optimistic truth start, same historical CI routine, not full historical replay; successful subsets differ; no formal credit"
+  },
+  "reference_controls": {
+    "script_sha256": "292babdbf779f2151540094e37b1ea6441866493ef1e565b9d4a075b021ccc20",
+    "normal_and_optimized": "PASS",
+    "same_marginals": [
+      0.5,
+      0.5
+    ],
+    "product": 0.25,
+    "joint_examples": [
+      0.5,
+      0
+    ],
+    "group_boolean_states": 128,
+    "allowed": 1,
+    "not_runtime_proof": true
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
