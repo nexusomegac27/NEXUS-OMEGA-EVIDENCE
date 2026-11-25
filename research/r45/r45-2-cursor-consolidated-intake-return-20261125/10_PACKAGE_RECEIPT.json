@@ -1,0 +1,47 @@
+{
+  "return_dir": "C:\\omega_bridge\\NEXUS_OMEGA_TRANSFER\\10_TO_AXIOM\\NEXUS_OMEGA_CURSOR_R44_1_TO_R45_1_CONSOLIDATED_RESEARCH_INTAKE_RETURN_20261125_R0",
+  "zip_bytes": 10107,
+  "zip_sha256": "ffefe6c510e402b73deb652eac17e1b1272b4c64aa9e16ef627a930d21465d67",
+  "zip_entries": 9,
+  "zip_crc": "PASS",
+  "members": {
+    "00_EXECUTIVE.md": {
+      "bytes": 1345,
+      "sha256": "85551beed0d02b4d42e6f1d64da8b7206040adc473ca56f8c523b96b347b8a6e"
+    },
+    "01_HANDSHAKE.md": {
+      "bytes": 652,
+      "sha256": "df3309069e81550092711b4bf7c3444b6ec9d6ed8484b68c4d7cc80b2fedd37a"
+    },
+    "02_EPISTEMIC_WALLS.md": {
+      "bytes": 400,
+      "sha256": "eefeb4aae49d2e13486942fc696a6034f6e4b4ecb208f0b3e7ba85f184efe55e"
+    },
+    "03_RESULT.md": {
+      "bytes": 632,
+      "sha256": "1bbaea390ccaa8c1a862a4e373671e619767e9bb5d1dbdc28ebc66a6bce8cc93"
+    },
+    "04_MACHINE.json": {
+      "bytes": 1443,
+      "sha256": "21e0178b63149b84c0ca68accfa432c0559dc6d4bbfb127e8890bf62cdf87350"
+    },
+    "05_IST_SOLL_GAP_MATRIX.json": {
+      "bytes": 10861,
+      "sha256": "0524b169cede7ace6b72de2c745b33370d4045c10da449a0bec5c26db5202632"
+    },
+    "06_IST_SOLL_GAP_MATRIX.md": {
+      "bytes": 2872,
+      "sha256": "fbc979359376fa81b34d85a9f4b510c7cf51a250128f692c131e4c105cb3dcab"
+    },
+    "07_MINIMAL_REPAIR_SEQUENCE.md": {
+      "bytes": 1059,
+      "sha256": "66fa1df98beb3eb7fe36f4f4b58877d48f81df3d0192ee6def7c4b16fdc209ea"
+    },
+    "99_SHA256SUMS.txt": {
+      "bytes": 695,
+      "sha256": "5ffec29f0eb4786b7776f2db7ba04d823535e77c98f3ac05a86050992e00f563"
+    }
+  },
+  "receipt_class": "EXTERNAL_TO_ZIP_TO_AVOID_SELF_SEAL_CIRCULARITY",
+  "b05_historical": "PRESERVED_OPEN"
+}
