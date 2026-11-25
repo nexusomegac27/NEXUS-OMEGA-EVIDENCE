@@ -1,0 +1,24 @@
+{
+  "schema": "nexus/r44-7/delivery-state/v1",
+  "timestamp_utc": "2026-11-25T07:40:00+00:00",
+  "return_branch": "receiver/r44-7-return-20261125-c1",
+  "first_commit": "01c8e3a8cc79845f40dbfdaee8e17506e5eea805",
+  "completion_commit": "this commit (append-only completion; 16/17/sidecar/18 added)",
+  "readback_at_first_commit": {
+    "files_present": ["00_RETURN_README.md", "10_SCOPE_LEASE_PREREG_RECEIPT.md", "11_RECEIVER_ACK_R44_7.json", "12_RUN_RECEIPTS_R44_7.json", "13_RC01_RESULTS.json", "14_RC02_RESULTS.json", "99_SHA256SUMS.txt"],
+    "defect_found": "first push omitted 16_FALSIFICATION_REPORT.md, 17_CONTRAST_ANALYSIS.txt and the ZIP sidecar although 00_RETURN_README and 99_SHA256SUMS.txt referenced them",
+    "repair": "AXIOM_RETURN_SELF_OPTIMIZATION_V1: single append-only completion commit on the same authorized lane; not a retry loop (no failed push occurred)",
+    "zip_sidecar": "1be1803c09e8a711df75d56b60972f57864b4a039d7badbc12de6b9f2fb04c08"
+  },
+  "package": {
+    "zip_bytes": 93663,
+    "zip_sha256": "1be1803c09e8a711df75d56b60972f57864b4a039d7badbc12de6b9f2fb04c08",
+    "manifest_entries": 23,
+    "local_manifest_selfcheck": "23/23 OK (sha256sum -c)",
+    "zip_bytes_on_github": false,
+    "custody_note": "ZIP bytes are local managed handoff (download/R44_7_RECEIVER_RETURN_R0.zip); binary upload requires authorized publisher per manual step 8"
+  },
+  "delivery_classification": "BRANCH_TEXT_DELIVERY_COMPLETE_AWAITING_INDEPENDENT_REHASH",
+  "walls": {"merge": false, "dispatch": false, "promotion": false, "claim_ceiling": "C1_DESCRIPTIVE_ONLY"},
+  "prereg_frozen_sha256": "8b277fe31897c3e329cfa8e09ba7bacc69ad5faf3ad8da70c5412c1811677e1e"
+}

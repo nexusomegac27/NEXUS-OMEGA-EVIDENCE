@@ -1,0 +1,39 @@
+== A. Weighting-orientation effect (corr - orig), joint coverage ==
+  P1_known_correct/known/narrow: orig=0.3746 corr=0.4706 delta=+0.0960  abstain 0.214->0.139
+  P1_known_correct/known/wide: orig=0.8746 corr=0.8912 delta=+0.0166  abstain 0.000->0.000
+  P2_estimated_correct/estimated_r30/narrow: orig=0.3535 corr=0.4465 delta=+0.0929  abstain 0.226->0.151
+  P2_estimated_correct/estimated_r30/wide: orig=0.8453 corr=0.8414 delta=-0.0039  abstain 0.000->0.000
+  P2_estimated_correct/estimated_r6/narrow: orig=0.2240 corr=0.2761 delta=+0.0521  abstain 0.319->0.241
+  P2_estimated_correct/estimated_r6/wide: orig=0.6778 corr=0.4195 delta=-0.2583  abstain 0.001->0.002
+  P3_known_misspec/known/narrow: orig=0.4355 corr=0.5477 delta=+0.1122  abstain 0.166->0.093
+  P3_known_misspec/known/wide: orig=0.6152 corr=0.6402 delta=+0.0250  abstain 0.000->0.000
+== B. Geometry effect (narrow - wide), joint coverage, per arm (known cov) ==
+  orig: narrow=0.3746 wide=0.8746 delta=-0.5000
+  corr: narrow=0.4706 wide=0.8912 delta=-0.4206
+== C. Covariance estimation effect vs known, joint coverage (wide span) ==
+  orig: known=0.8746 r30=0.8453 r6=0.6778 r1=0.0000 (r1 abstain-all)
+  corr: known=0.8912 r30=0.8414 r6=0.4195 r1=0.0000 (r1 abstain-all)
+== D. Model-structure effect (misspec - correct), joint coverage (wide, known) ==
+  orig: correct=0.8746 misspec=0.6152 delta=-0.2594
+  corr: correct=0.8912 misspec=0.6402 delta=-0.2510
+== E. Bias per param (mean theta_hat - theta_true), known covariance ==
+  correct spec/narrow/orig: bias[theta1=-0.4506, theta2=+3.0406, theta3=+0.3395] rmse[theta1=1.5805, theta2=6.9429, theta3=1.4878] width[1644.42, 65.17, 1644.53]
+  correct spec/narrow/corr: bias[theta1=-0.3863, theta2=+2.8751, theta3=+0.2742] rmse[theta1=1.5109, theta2=6.6122, theta3=1.4143] width[2142.65, 226.30, 2142.15]
+  correct spec/wide/orig: bias[theta1=-0.0085, theta2=+0.0505, theta3=+0.0733] rmse[theta1=0.8627, theta2=0.2156, theta3=1.0527] width[4.20, 0.89, 5.38]
+  correct spec/wide/corr: bias[theta1=+0.0481, theta2=+0.0341, theta3=+0.0201] rmse[theta1=0.8550, theta2=0.1970, theta3=0.9225] width[3.79, 0.79, 4.67]
+  misspec/narrow/orig: bias[theta1=-0.2874, theta2=+3.1241, theta3=+0.3427] rmse[theta1=1.5993, theta2=6.9118, theta3=1.5215] width[1870.20, 63.32, 1870.35]
+  misspec/narrow/corr: bias[theta1=-0.2212, theta2=+2.8716, theta3=+0.2633] rmse[theta1=1.5231, theta2=6.4716, theta3=1.4381] width[1445.61, 270.04, 1445.12]
+  misspec/wide/orig: bias[theta1=-0.2242, theta2=+0.2713, theta3=+0.3636] rmse[theta1=0.7043, theta2=0.3239, theta3=1.1297] width[2.74, 0.69, 4.35]
+  misspec/wide/corr: bias[theta1=-0.1646, theta2=+0.2541, theta3=+0.2420] rmse[theta1=0.6740, theta2=0.3032, theta3=0.9489] width[2.62, 0.64, 4.11]
+== F. Objective-at-truth mismatch (orig/corr ratio), known cov ==
+  narrow: mean ratio=1.298415
+  wide: mean ratio=1.298415
+== G. Convergence / cost ==
+  P1_known_correct/known/narrow/orig: conv=1.0000 mean_nfev=20.0
+  P1_known_correct/known/narrow/corr: conv=1.0000 mean_nfev=16.9
+  P1_known_correct/known/wide/orig: conv=1.0000 mean_nfev=11.9
+  P1_known_correct/known/wide/corr: conv=1.0000 mean_nfev=11.0
+  P2_estimated_correct/estimated_r6/narrow/orig: conv=0.9940 mean_nfev=61.5
+  P2_estimated_correct/estimated_r6/narrow/corr: conv=0.9985 mean_nfev=32.2
+  P2_estimated_correct/estimated_r6/wide/orig: conv=0.9995 mean_nfev=29.8
+  P2_estimated_correct/estimated_r6/wide/corr: conv=1.0000 mean_nfev=19.8
