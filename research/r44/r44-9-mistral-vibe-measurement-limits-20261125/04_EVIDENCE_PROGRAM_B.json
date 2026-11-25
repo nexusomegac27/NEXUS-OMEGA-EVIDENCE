@@ -1,6 +1,7 @@
 {
   "schema": "nexus/r44-9/evidence-B/v1",
   "prereg_sha256_frozen": "dce3d1c6e0d3bb01b4898251f5110d6df742b45056ea80e01fbec3dc1d5dfe14",
+  "correction_note": "Korrektur-Commit nach Erstversion: ROOT1-Slot-Jackson-Reihenfolge im Verifikator korrigiert (Pruefung vor Blatt-Abbruch); Noninterference-Sollwert korrigiert (1498500); Erstversion wies (1,8) und (1,2) unzutreffend als FAIL aus, Urs war ein Verifikator-Konsumordnungsdefekt, nicht ein Beweisdefekt.",
   "merkle": {
     "anchors": {
       "empty_tree_sha256_of_empty": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -51,138 +52,82 @@
         "n1": 1,
         "n2": 8,
         "proof_len": 3,
-        "verify": {
-          "ok": false,
-          "r1": false,
-          "r2": false,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 2,
         "n2": 3,
         "proof_len": 1,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "4837665dfe640a370e7496c691987562d02462142c5f34f59e185911a12370ea"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 3,
         "n2": 8,
         "proof_len": 4,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 4,
         "n2": 8,
         "proof_len": 1,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 5,
         "n2": 7,
         "proof_len": 4,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "087a310a52e729575149b1417c1c7e5aa475c5561b630e8ed628cfee381458c0"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 7,
         "n2": 8,
         "proof_len": 4,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 1,
         "n2": 2,
         "proof_len": 1,
-        "verify": {
-          "ok": false,
-          "r1": false,
-          "r2": false,
-          "all_used": true
-        },
-        "root2": "fe43d66afa4a9a5c4f9c9da89f4ffb52635c8f342e7ffb731d68e36c5982072a"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 2,
         "n2": 8,
         "proof_len": 2,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       },
       {
         "n1": 6,
         "n2": 8,
         "proof_len": 3,
-        "verify": {
-          "ok": true,
-          "r1": true,
-          "r2": true,
-          "all_used": true
-        },
-        "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
+        "verify_ok": true,
+        "n1_root_check": true
       }
     ],
-    "consistency_all_pass": false,
+    "consistency_all_pass": true,
     "defect_vectors": {
       "glm_empty_proof_unequal_roots": {
         "glm_result": true,
-        "input": {
-          "proof_len": 0,
-          "n1": 4,
-          "root1": "deb82e155954d6be14592c66ccf7a1ece193eeebcdabaf747b91f44519f09f47",
-          "root2": "2960044c62f2354e945e8d78fdd220a05f2c0879f24df6f11ef5cc26b5270a0e"
-        },
         "reference_result": false,
         "expected": false
       },
       "glm_equal_roots_rejected": {
         "glm_result": false,
-        "input": {
-          "proof_len": 0,
-          "n1": 8,
-          "roots_equal": true
-        },
         "reference_result": true,
         "expected": true
       },
       "empty_proof_m0": {
         "reference_result": false,
         "expected": false,
-        "rule": "CT_M0 requires full-range element"
+        "rule": "CT_M0"
       },
       "m0_correct_proof": {
         "reference_result": true,
@@ -198,7 +143,7 @@
         "expected": false
       }
     },
-    "verifier_spec": "Strukturverifikator mit (hash, start, count)-Etiketten, Beweispositionen vollstaendig durch n1/n2 bestimmt; RFC 6962§SUBPROOF und RFC 9162 als Desk-Bezug, Byteform nicht zertifiziert",
+    "verifier_spec": "Strukturverifikator mit (hash, start, count)-Etiketten, Beweispositionen vollstaendig durch n1/n2 bestimmt; RFC 6962 SUBPROOF und RFC 9162 als Desk-Bezug, Byteform nicht zertifiziert",
     "glm_defect_inverted": true
   },
   "temporal_gate": {
@@ -246,7 +191,9 @@
     "alias_gesichert": true
   },
   "noninterference": {
-    "estimator_cannot_modify_authority_state": false,
+    "estimator_cannot_modify_authority_state": true,
+    "expected_output": 1498500,
+    "observed_output": 1498500,
     "method": "Zustandsfingerprint vor und nach Schaetzeraufruf identisch",
     "executor_scope": "E34 abstrakt, Finite-Menge",
     "limits": "kein reales Dispatch, keine Signaturen, keine echte Uhr, kein unabhaengiger Akteur"

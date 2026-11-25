@@ -14,7 +14,7 @@ Alle Zahlen in 02 und 04 wurden in der Adjudikations-Sandbox erzeugt mit einer S
 Praeregistrierung gefroren vor den Laeufen (SHA in 02_EVIDENCE). Paired CRN, 256 Ziehungen je Zelle, 6 Zellen (s 0,8/2/4 mal n 5/10),
 OLD naive iid-Wald gegenueber COR mit bekannter AR(1)-Kovarianzform. Vollstaendige Per-Trial-Flags (old, cor, valid) gebunden in 03_PER_TRIAL_MASKS.
 Reduktionsrechner: exakter zweiseitiger McNemar unadjusted, marginal, rowwise joint, kalibrierte simultane Region mit eigenem Kalibrationsstream,
-Bonferroni alle vier. Frechet als Identifikationsgrenzen gemeldet, nie als Konfidenzintervall. Kein Optimizer-Stall im Scope, dies ist ehrlich begrrenzt.
+Bonferroni alle vier. Frechet als Identifikationsgrenzen gemeldet, nie als Konfidenzintervall. Kein Optimizer-Stall im Scope, dies ist ehrlich begrenzt.
 
 ## Programm B (E27, E28, E34): Verifikatoren
 

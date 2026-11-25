@@ -314,8 +314,9 @@
   "status": "EXECUTED_LOCAL_SYNTHETIC_C1_NO_GATE_CREDIT",
   "formel": "R44_9_FORMAL_EXECUTED bleibt 0, lokale synthetische Ausfuehrung ohne kanonisches Gate-Credit, kein Quorum, kein Voll-Wissenschaftskredit",
   "verdict": {
-    "joint_difference": "keine reproduzierbare Superiority von COR in der gemeinsamen Coverage, keine Aequivalenz-Claim, McNemar exakt quantifiziert",
-    "product_claim": "Produkt liegt innerhalb Frechet-Grenzen und wird nie als gemeinsame Coverage ausgegeben",
-    "marginal_vs_simultaneous": "kalibrierte simultane Region unterscheidet sich materialiter von marginaler 0,95-Zusage"
+    "joint_difference": "In 2 von 6 Zellen (s 0,8 mit n 5 und n 10) ist die gemeinsame Coverage unter COR hoeher als unter OLD, unadjusted signifikant (p = 0,015625 beziehungsweise p = 0,000030517578125); in den uebrigen 4 Zellen sind beide gemeinsamen Coveragen praktisch null (p = 1). Keine Aequivalenz-Claim, keine Verallgemeinerung der Superiority ueber dieses Design hinaus.",
+    "product_claim": "Produkt der empirisch marginalen Coverages liegt in jeder Zelle innerhalb der Frechet-Grenzen und wird nie als gemeinsame Coverage ausgegeben (R9-N01, R9-N04 erfuellt in der gebundenen Ausfuehrung)",
+    "marginal_vs_simultaneous": "kalibrierte simultane max-abs-z-Region erreicht 93 bis 95 Prozent in allen Zellen und ist von der marginalen 0,95-Zusage und der Bonferroni-Konstruktion materialiter zu unterscheiden",
+    "scope_note": "Der Valid-Denominator entspricht hier der gemeinsamen Per-Trial-Gueltigkeit (256/256); der GLM-Exaktreplay und die gueltigkeitsgetriebene Kontrastrechnung bleiben Custody-gebundene Restaufgaben (R9-N02, R9-N03 bleiben bindend, nicht durch dieses Replikat abgegolt)"
   }
 }
