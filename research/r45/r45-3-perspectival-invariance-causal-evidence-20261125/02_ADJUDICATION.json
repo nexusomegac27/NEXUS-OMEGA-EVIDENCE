@@ -1,0 +1,146 @@
+{
+  "inputs": {
+    "glm": {
+      "bytes": 1112122,
+      "sha256": "9a1ec3529647827ac520151061ce70358531b492432e2026c37781ca387c5fb9",
+      "manifest": "47/47",
+      "crc": "48/48",
+      "sidecar": "MATCH"
+    },
+    "independent_return": {
+      "bytes": 484981,
+      "sha256": "e6cda5a1dc70d7d41f7c804f061f5397de51fa349ae832d62fea95d16a6bb676",
+      "manifest": "11/11",
+      "crc": "12/12",
+      "sidecar": "MATCH"
+    },
+    "deepseek": {
+      "bytes": 10242,
+      "sha256": "630e921e4eceabf587a273c534db62497ce1ad9a464b4e0ec7780687b6422856",
+      "actor": "advisory, unauthenticated"
+    }
+  },
+  "parent_intake": {
+    "bytes": 24756,
+    "sha256": "982e164acdbbee1199c1cd21c535b04c8ac04343cd18b1eaedde1db389606975",
+    "manifest": "172e578d0b099c17655b4adf3e2fa93e8e6f3da78f692ce62bf26d98bf4aecc7",
+    "nested_crc": "10/10",
+    "loose_nested": "10/10 exact",
+    "external_mistral_manifest_issue": "not a contradiction: exact nested and loose bytes match pinned digest"
+  },
+  "ledger": {
+    "seq": [
+      37,
+      50
+    ],
+    "hash_link": "14/14",
+    "head": "e94dc5ba554e2ea2ba2e7ef0b7e5536a743ffcc9d9f3dab0e1acc386e2a7faf4",
+    "prior_head": "64f9333f37b1614b966eaac40d05a0be5887eb7be8ac3a4a6d627fe490230e68",
+    "reported_closeout_count": 13,
+    "current_script_match": "8/14",
+    "missing_or_changed": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      46
+    ],
+    "prereg_sha": "d4843f7060ea6b2aa883cc30e4e2386f57dd5cea39cbc65424920514c6e9397c",
+    "prior_chain_full_replay": "NOT_RUN_THIS_TURN"
+  },
+  "gate_v2": {
+    "script": "9a82427e8d00b9e3e49796c79abfa1aa5109494b986c6d7a031150784fef0ea1",
+    "method": "isolated AST classes/functions only, deterministic synthetic keys, no original main/I/O or live effects",
+    "probes": {
+      "post_stop_new_grant": "GRANTED/EFFECT_EXECUTED",
+      "nan_ttl": "GRANTED/EFFECT_EXECUTED",
+      "principal_unregistered_after_grant": "EFFECT_EXECUTED",
+      "epoch_rollback": "EFFECT_EXECUTED",
+      "empty_nonce": "GRANTED/EFFECT_EXECUTED",
+      "unbound_callback": "EFFECT_EXECUTED",
+      "inflight_exception": "RuntimeError; consumed true, inflight stranded, only GRANTED receipt"
+    }
+  },
+  "second_gate": {
+    "script": "ddd0a486c6ad2c39d40bbb9ad962815eb382bfc172f97c9f22dc4d815d71292b",
+    "method": "isolated AST TrustWorld/_verify/hardened_gate",
+    "probes": {
+      "no_quorum": "GRANT",
+      "caller_threshold_zero": "GRANT",
+      "unbound_request_id": "GRANT",
+      "unregistered_key": "GRANT",
+      "substring_scope": "GRANT"
+    }
+  },
+  "ar1": {
+    "n5": {
+      "f": 3.62144,
+      "var": 0.724288
+    },
+    "n10": {
+      "f": 5.4294967296,
+      "var": 0.54294967296
+    },
+    "bonferroni": 2.4977054744
+  },
+  "masking": {
+    "source": "f93f95121c8f98e67799b2a98e80edfc9c5a55e11ab01fc0ac059d0e83939316",
+    "method": "AST gen_rows/nearest_rank, seed 45300+n, 20000 rows, 4000 calibration and 16000 eval, same innovation-start noise and COR se, intended mean added vs omitted for calibration; standardized M in both",
+    "n5": {
+      "q_intended": 5.936693301750804,
+      "q_omitted": 19.03699961548076,
+      "defective_eval_intended_q": 0.139375,
+      "defective_eval_omitted_q": 0.9506875
+    },
+    "n10": {
+      "q_intended": 4.127175766668757,
+      "q_omitted": 12.408668131639486,
+      "defective_eval_intended_q": 0.0225,
+      "defective_eval_omitted_q": 0.956
+    },
+    "scope": "mean addition corrected only, nonstationary initialization preserved intentionally; not exact historical rerun"
+  },
+  "frechet": {
+    "four_p": 0.95,
+    "eps": 0.06,
+    "correct": [
+      0.56,
+      1
+    ],
+    "closeout_text": [
+      0.56,
+      0.96
+    ],
+    "detail_json": "correct"
+  },
+  "inverse_design": {
+    "source": "b6c4cdf2db320484b4ed35fe575ca3df822a471fdc74f44eebd84791c9cb6c1f",
+    "historical_direct_error": 1.4141824493324755,
+    "issue": "direct fixed phase and unit gains vs inverse free 8 params, not matched freedom or gain budget; different random perturbations across arms",
+    "axiom_analytic": {
+      "formula": "theta_k=atan2(0.5,0.866) in degrees - basis_angle_k; gain_k=hypot(0.866,0.5)/4",
+      "nominal_error": 1.5700924586837752e-16,
+      "archived_inverse_error": 3.580887152400432e-12,
+      "paired_holdout_seed": 45303,
+      "N": 3000,
+      "phase_uniform_deg": [
+        -1.5,
+        1.5
+      ],
+      "mean_direct": 0.008562255765456522,
+      "mean_inverse": 0.041457935461226975,
+      "q95_direct": 0.020362660139797532,
+      "q95_inverse": 0.0750111701320788,
+      "scope": "unconstrained surrogate, no matched physical gain/power budget, counterexample to superiority from weak baseline only"
+    }
+  },
+  "cursor": {
+    "checkpoint": 7170975294,
+    "bind": 7171095740,
+    "verified": "OBSERVED_GITHUB",
+    "no_handoff_until": "R45_SERIES_CLOSEOUT"
+  },
+  "originals": "local archives, no public raw publication; PDF content not reviewed, receipts and scripts used",
+  "formal_credit": false
+}

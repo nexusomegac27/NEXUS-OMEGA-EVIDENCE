@@ -1,0 +1,46 @@
+{
+  "state": "PREPARED_NOT_DISPATCHED_C1",
+  "mandates": [
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34"
+  ],
+  "required": [
+    "exact source/version and citation",
+    "declared transformations and observation fibers",
+    "independent method and holdout",
+    "all per-trial outcomes and uncertainty",
+    "same units and matched comparator",
+    "raw vs canonical hashes and lineage",
+    "authenticated causal parents and clock scopes",
+    "STOP/replay/failure recovery",
+    "prereg expected hash and full resource lease",
+    "GitHub ZIP sidecar manifest and independent rehash"
+  ],
+  "walls": {
+    "cursor_handoff": "HOLD_UNTIL_R45_SERIES_CLOSEOUT",
+    "cursor_action": false,
+    "bodytwin": false,
+    "hardware_rate": "UNKNOWN",
+    "physical14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "merge": false,
+    "dispatch": false,
+    "device": false,
+    "hostinger": false,
+    "www": false,
+    "promotion": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
