@@ -1,0 +1,115 @@
+{
+  "schema": "nexus/r44-9/controls/v1",
+  "state": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "prior": {
+    "canonical_negative": 24,
+    "r44_5": 28,
+    "r44_6": 18,
+    "r44_7": 14,
+    "r44_8": 18
+  },
+  "controls": [
+    {
+      "id": "R9-N01",
+      "scope": "Reject product-as-joint and product-as-upper-bound claims",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N02",
+      "scope": "Conditional valid denominator cannot equal success count unless sets match",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N03",
+      "scope": "Separate-arm successful SSE not common paired-valid contrast",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N04",
+      "scope": "Marginal .95 not simultaneous .95, bounds not confidence intervals",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N05",
+      "scope": "Nonconvergence and nonfinite union not summed counters",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N06",
+      "scope": "Fixed-theta Wald not Bayesian SBC, marginal rank blind to joint",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N07",
+      "scope": "Rank/low residual/physical analogy not measurement calibration",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N08",
+      "scope": "Future ACK and backward clock must deny",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N09",
+      "scope": "Queue drain no silent drop; explicit terminal receipts",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N10",
+      "scope": "STOP between authorization and effect, stale epoch, retry, race",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N11",
+      "scope": "Same-key alias and unregistered actors cannot form canonical quorum",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N12",
+      "scope": "Empty or mutated Merkle proof, same-size fork and valid append distinguished",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N13",
+      "scope": "Estimator cannot modify gate authority state",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N14",
+      "scope": "Prereg/source guards survive -O; historical script gaps not invented",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N15",
+      "scope": "Subliminal transfer/model collapse not universal or static artifact proof",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-N16",
+      "scope": "Magnetophotonic vs dielectric vs orbital source substitution and isomorphism overclaim",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-P01",
+      "scope": "Exact paired reducer, valid denominator and declared joint target",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-P02",
+      "scope": "Fresh legitimate abstract progress with external gate, epoch, scoped lease",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-P03",
+      "scope": "Independent Merkle consistency/inclusion known vectors and synthetic signed checkpoints",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R9-P04",
+      "scope": "Non-identifiability witness plus additional observable distinguishes pair, physical measurand protocol design",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "local_diagnostics": "R44-8 original AST counterexamples and exact paired flags checked; new small reference 07; no gate credit",
+  "do_not_sum": true
+}
