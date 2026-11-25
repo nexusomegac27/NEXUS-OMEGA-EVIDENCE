@@ -1,0 +1,34 @@
+{
+  "state": "PREPARED_NOT_DISPATCHED_C1",
+  "requirements": [
+    "independent proof + implementation; frozen targets and domains",
+    "complete exact finite outputs or verified bounds and counterexamples",
+    "raw trial flags and joint error distributions",
+    "error model, measurement modality and nuisance parameters",
+    "cost/lease aggregate including retries children and network",
+    "adversarial gate model, actual action binding and negative results",
+    "exact sources, versions, source gaps and append-only fixes",
+    "GitHub ZIP plus sidecar plus manifest and independent rehash"
+  ],
+  "walls": {
+    "cursor_handoff": "HOLD_UNTIL_R45_SERIES_CLOSEOUT",
+    "cursor_action": false,
+    "bodytwin": false,
+    "hardware_rate": "UNKNOWN",
+    "physical14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "merge": false,
+    "dispatch": false,
+    "device": false,
+    "hostinger": false,
+    "www": false,
+    "promotion": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
