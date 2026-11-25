@@ -1,0 +1,136 @@
+{
+  "state": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "controls": [
+    {
+      "id": "R45-3-N01",
+      "scope": "projection conflated with invertible coordinate change",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N02",
+      "scope": "same two silhouettes different property",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N03",
+      "scope": "unregistered transform and changed units",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N04",
+      "scope": "NIS transform covariance omitted",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N05",
+      "scope": "rank loss/pinv misuse",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N06",
+      "scope": "consistent wrong model invariant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N07",
+      "scope": "nontransitive tolerance drift",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N08",
+      "scope": "raw hash vs canonical representation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N09",
+      "scope": "duplicate/nonfinite JSON and lossy normalization",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N10",
+      "scope": "total log order mistaken for causal order",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N11",
+      "scope": "logical clock used as TTL",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N12",
+      "scope": "missing or forged parent and cycle",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N13",
+      "scope": "persistent STOP absent/new grant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N14",
+      "scope": "nonfinite lease/epoch rollback",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N15",
+      "scope": "revoked principal/current policy not revalidated",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N16",
+      "scope": "nonce and action/request not bound",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N17",
+      "scope": "caller quorum/no quorum/unregistered key/substring scope",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N18",
+      "scope": "effect exception/concurrency and receipt recovery",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N19",
+      "scope": "shared source correlated consensus/selection bias",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-N20",
+      "scope": "inverse-design weak comparator or calibration-model masking",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-P01",
+      "scope": "positive transformed NIS/NEES known answer",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-P02",
+      "scope": "positive canonical vectors and exact raw lineage",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-P03",
+      "scope": "positive authenticated DAG/independent order and STOP reference",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-3-P04",
+      "scope": "positive blinded equal-cost comparator with paired holdout",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "inherited_registers": [
+    24,
+    28,
+    18,
+    14,
+    18,
+    20,
+    22,
+    16
+  ],
+  "do_not_sum": true
+}

@@ -1,0 +1,58 @@
+{
+  "state": "AXIOM_NEW_SYNTHETIC_DIAGNOSTICS_NO_FORMAL_CREDIT",
+  "reference_script_sha": "cfb2302db01d39a314e6163569d56b54d73ef8e9f9ec79e40eb5a1d17cd46ff0",
+  "result": {
+    "r": {
+      "nis": 2,
+      "transformed": 2,
+      "wrong": 100.01
+    },
+    "tolerance": [
+      true,
+      true,
+      false
+    ],
+    "orders": [
+      [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      [
+        "B",
+        "A",
+        "C",
+        "D"
+      ]
+    ],
+    "validity": [
+      true,
+      true,
+      false
+    ],
+    "majority_independent": 0.10400000000000004,
+    "majority_correlated": 0.2,
+    "raw_strings_different": true,
+    "toy_canonical_equal": true,
+    "formal_credit": false
+  },
+  "raw_hash_witness": {
+    "raw1": "43258cff783fe7036d8a43033f830adfc60ec037382473548ac742b888292777",
+    "raw2": "3fb75453225c732a76b7899ea2096dda1455189c89817239732182f73fe5a09f",
+    "match": false
+  },
+  "linear_log_witness": {
+    "order1": "17f5f129f4c769967a884bc2c630677b4479d0a5858de30130b9727c6b335432",
+    "order2": "c4902ccaae88059aace63b43904324e91419b56097091cd880d2404932384376",
+    "note": "simple string digest illustration, not protocol"
+  },
+  "source_probes": "12 AST isolated, no original main execution; see 02",
+  "limits": "toy diagonal SPD, finite DAG, independent-vote algebra, ASCII canonical demonstration not RFC8785 implementation. No formal credit or runtime proof."
+}
