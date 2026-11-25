@@ -1,0 +1,425 @@
+{
+  "falsifier_id": "R8-N01_PRODUCT_OF_MARGINALS_IS_NOT_JOINT_COVERAGE",
+  "role": "local diagnostic per 04_CONTROL_MATRIX.json local_diagnostics; NOT_RUN_FORMAL credit not claimed",
+  "exact_counterexamples": [
+    {
+      "cell": "orig_r6_span4",
+      "marginals": [
+        0.8495,
+        0.9015,
+        0.885
+      ],
+      "N0": 20000,
+      "product_of_marginals": 0.6777544612499999,
+      "structure_A_comonotone": {
+        "atoms": {
+          "111": "4782259854314045625/281474976710656",
+          "001": "199847233464565625/281474976710656",
+          "010": "46443371157258125/140737488355328",
+          "000": "138626426029998125/70368744177664"
+        },
+        "joint": 0.8495,
+        "valid": {
+          "marginals_exact": [
+            true,
+            false,
+            true
+          ],
+          "nonneg": true,
+          "total_exact": true
+        }
+      },
+      "structure_B_frechet_lower": {
+        "atoms": {
+          "111": "3580361703759544375/281474976710656",
+          "110": "323696223217254375/140737488355328",
+          "101": "138626426029998125/70368744177664",
+          "011": "847239679899074375/281474976710656",
+          "100": "0",
+          "010": "0",
+          "001": "0",
+          "000": "0"
+        },
+        "joint": 0.636,
+        "valid": {
+          "marginals_exact": [
+            true,
+            true,
+            true
+          ],
+          "nonneg": true,
+          "total_exact": true
+        }
+      },
+      "frechet_bounds": [
+        0.636,
+        0.8495
+      ],
+      "product_in_bounds_but_not_identifiable": true
+    },
+    {
+      "cell": "corr_r6_span4",
+      "marginals": [
+        0.7045,
+        0.7485,
+        0.7955
+      ],
+      "N0": 20000,
+      "product_of_marginals": 0.4194816678750001,
+      "structure_A_comonotone": {
+        "atoms": {
+          "111": "3965982421853143125/281474976710656",
+          "010": "61924494876344375/70368744177664",
+          "001": "132293239054008125/140737488355328",
+          "000": "1151232654746583125/281474976710656"
+        },
+        "joint": 0.7045,
+        "valid": {
+          "marginals_exact": [
+            true,
+            true,
+            false
+          ],
+          "nonneg": true,
+          "total_exact": true
+        }
+      },
+      "structure_B_frechet_lower": {
+        "atoms": {
+          "111": "1398930634251960625/281474976710656",
+          "110": "1151232654746583125/281474976710656",
+          "101": "1415819132854599375/281474976710656",
+          "011": "1663517112359976875/281474976710656",
+          "100": "0",
+          "010": "0",
+          "001": "0",
+          "000": "0"
+        },
+        "joint": 0.24850000000000005,
+        "valid": {
+          "marginals_exact": [
+            true,
+            true,
+            true
+          ],
+          "nonneg": true,
+          "total_exact": true
+        }
+      },
+      "frechet_bounds": [
+        0.24850000000000005,
+        0.7045
+      ],
+      "product_in_bounds_but_not_identifiable": true
+    }
+  ],
+  "gaussian_copula_sweep": [
+    {
+      "cell": "orig_r6_span4",
+      "rho": -0.45,
+      "N": 200000,
+      "joint_empirical": 0.690605,
+      "marginals_empirical": [
+        0.80886,
+        0.86842,
+        0.99049
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.012850538750000084
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": -0.3,
+      "N": 200000,
+      "joint_empirical": 0.65937,
+      "marginals_empirical": [
+        0.83027,
+        0.893145,
+        0.917275
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": -0.018384461249999928
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": -0.15,
+      "N": 200000,
+      "joint_empirical": 0.66388,
+      "marginals_empirical": [
+        0.84352,
+        0.901265,
+        0.89152
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": -0.013874461249999914
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.0,
+      "N": 200000,
+      "joint_empirical": 0.67848,
+      "marginals_empirical": [
+        0.849535,
+        0.902135,
+        0.886
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.0007255387500000321
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.2,
+      "N": 200000,
+      "joint_empirical": 0.69764,
+      "marginals_empirical": [
+        0.839865,
+        0.902055,
+        0.892335
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.019885538750000098
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.4,
+      "N": 200000,
+      "joint_empirical": 0.72243,
+      "marginals_empirical": [
+        0.81704,
+        0.91206,
+        0.915075
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.04467553875000008
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.6,
+      "N": 200000,
+      "joint_empirical": 0.7412,
+      "marginals_empirical": [
+        0.784795,
+        0.93494,
+        0.94774
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.06344553875000003
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.8,
+      "N": 200000,
+      "joint_empirical": 0.748275,
+      "marginals_empirical": [
+        0.75334,
+        0.975425,
+        0.98774
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.07052053875000008
+    },
+    {
+      "cell": "orig_r6_span4",
+      "rho": 0.95,
+      "N": 200000,
+      "joint_empirical": 0.732475,
+      "marginals_empirical": [
+        0.732475,
+        0.99991,
+        1.0
+      ],
+      "product_of_marginals": 0.6777544612499999,
+      "frechet_bounds": [
+        0.6360000000000001,
+        0.8495
+      ],
+      "joint_minus_product": 0.05472053875000005
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": -0.45,
+      "N": 200000,
+      "joint_empirical": 0.428975,
+      "marginals_empirical": [
+        0.67449,
+        0.717795,
+        0.946005
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.00949333212499992
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": -0.3,
+      "N": 200000,
+      "joint_empirical": 0.37065,
+      "marginals_empirical": [
+        0.690145,
+        0.741405,
+        0.830475
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": -0.048831667875000095
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": -0.15,
+      "N": 200000,
+      "joint_empirical": 0.388635,
+      "marginals_empirical": [
+        0.70034,
+        0.748455,
+        0.80199
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": -0.030846667875000067
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.0,
+      "N": 200000,
+      "joint_empirical": 0.419415,
+      "marginals_empirical": [
+        0.70335,
+        0.74864,
+        0.797125
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": -6.666787500009264e-05
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.2,
+      "N": 200000,
+      "joint_empirical": 0.46487,
+      "marginals_empirical": [
+        0.69766,
+        0.751425,
+        0.804425
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.04538833212499993
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.4,
+      "N": 200000,
+      "joint_empirical": 0.50533,
+      "marginals_empirical": [
+        0.67749,
+        0.75884,
+        0.825325
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.08584833212499987
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.6,
+      "N": 200000,
+      "joint_empirical": 0.550205,
+      "marginals_empirical": [
+        0.658755,
+        0.78436,
+        0.867835
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.13072333212499998
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.8,
+      "N": 200000,
+      "joint_empirical": 0.599585,
+      "marginals_empirical": [
+        0.63818,
+        0.845615,
+        0.938365
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.18010333212499996
+    },
+    {
+      "cell": "corr_r6_span4",
+      "rho": 0.95,
+      "N": 200000,
+      "joint_empirical": 0.624365,
+      "marginals_empirical": [
+        0.62492,
+        0.973685,
+        0.998715
+      ],
+      "product_of_marginals": 0.4194816678750001,
+      "frechet_bounds": [
+        0.24849999999999994,
+        0.7045
+      ],
+      "joint_minus_product": 0.20488333212499987
+    }
+  ],
+  "seed": 20261125
+}
