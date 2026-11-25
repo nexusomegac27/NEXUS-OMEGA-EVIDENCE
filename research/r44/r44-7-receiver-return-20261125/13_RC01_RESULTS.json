@@ -1,0 +1,40 @@
+{
+  "replications": [
+    {
+      "corrected": 7.717032967032965,
+      "expected_target": 7.717032967032966,
+      "original": 7.815934065934064,
+      "rho": 0.3
+    },
+    {
+      "corrected": 28.91666666666668,
+      "expected_target": 28.916666666666686,
+      "original": 30.69444444444444,
+      "rho": 0.8
+    }
+  ],
+  "script": "r44_7_rc01_whitening.py v1.0.0",
+  "sweep": [
+    {"objective_gap_r": 0.0, "orthogonality_defect": 0.0, "rho": 0.0},
+    {"objective_gap_r": 0.002506265664158975, "orthogonality_defect": 0.0015761237193534707, "rho": 0.05},
+    {"objective_gap_r": 0.010101010101010131, "orthogonality_defect": 0.006245477958437132, "rho": 0.1},
+    {"objective_gap_r": 0.023017902813297908, "orthogonality_defect": 0.01383935121570166, "rho": 0.15},
+    {"objective_gap_r": 0.04166666666666667, "orthogonality_defect": 0.02410210626393326, "rho": 0.2},
+    {"objective_gap_r": 0.06666666666666526, "orthogonality_defect": 0.036722623392124586, "rho": 0.25},
+    {"objective_gap_r": 0.09890109890110049, "orthogonality_defect": 0.05136751157094753, "rho": 0.3},
+    {"objective_gap_r": 0.13960113960113962, "orthogonality_defect": 0.06771040094146735, "rho": 0.35},
+    {"objective_gap_r": 0.19047619047618922, "orthogonality_defect": 0.08545416978164846, "rho": 0.4},
+    {"objective_gap_r": 0.25391849529780547, "orthogonality_defect": 0.10434555699801763, "rho": 0.45},
+    {"objective_gap_r": 0.33333333333333354, "orthogonality_defect": 0.12418347818864088, "rho": 0.5},
+    {"objective_gap_r": 0.4336917562724011, "orthogonality_defect": 0.1448233492964847, "rho": 0.55},
+    {"objective_gap_r": 0.5625000000000001, "orthogonality_defect": 0.1661801223902281, "rho": 0.6},
+    {"objective_gap_r": 0.7316017316017346, "orthogonality_defect": 0.18823306394260525, "rho": 0.65},
+    {"objective_gap_r": 0.9607843137254898, "orthogonality_defect": 0.21103625527987077, "rho": 0.7},
+    {"objective_gap_r": 1.2857142857142834, "orthogonality_defect": 0.23474166282131056, "rho": 0.75},
+    {"objective_gap_r": 1.7777777777777557, "orthogonality_defect": 0.2596499519459995, "rho": 0.8},
+    {"objective_gap_r": 2.6036036036036037, "orthogonality_defect": 0.28633072204440735, "rho": 0.85},
+    {"objective_gap_r": 4.26315789473688, "orthogonality_defect": 0.3159587848957891, "rho": 0.9},
+    {"objective_gap_r": 9.256410256410032, "orthogonality_defect": 0.3516439070957599, "rho": 0.95}
+  ],
+  "verdict": "REPLICATED: original orientation is not the GLS objective; corrected matches r^T W r"
+}

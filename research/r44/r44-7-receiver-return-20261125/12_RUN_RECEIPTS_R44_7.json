@@ -1,0 +1,113 @@
+{
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "counts_after_return": {
+    "canonical_negative": "0/24 (unchanged)",
+    "full_science": "0/10 (unchanged)",
+    "quorum": "0/3 (unchanged)",
+    "r44_7_designs": 14,
+    "r44_7_formal_canonical": 0,
+    "receiver_reference_evidence": [
+      "RC01 exact replication",
+      "RC02 surrogate trend (H4 falsified)",
+      "RC03/04/05 surrogate falsification 20/20 cells",
+      "RC10 candidate 9/9 fixtures",
+      "D-POST-1 post-hoc mechanism diagnostic"
+    ]
+  },
+  "determinism_check": {
+    "result_sha256_v2.0.3": "1891694125db1fd60802ef8cd567810cf40b6b150ec300550392732941e349d2",
+    "v2.0.2_vs_v2.0.3": "IDENTICAL 20/20 cells, all shared outcome fields"
+  },
+  "directive": "AXIOM_RETURN_SELF_OPTIMIZATION_V1",
+  "failed_attempt_ledger": [
+    {
+      "attempt": "rc10_preflight_selftest v1.0.0",
+      "defect": "symlink fixture built with regular-file external_attr -> preflight legitimately accepted",
+      "resolution": "v1.0.1 fixture metadata; preserved"
+    },
+    {
+      "attempt": "prereg draft 5d9d8f30\u2026",
+      "defect": "4-param surrogate design (1 residual df) collapses in pre-freeze smoke",
+      "resolution": "superseded by v2.0.0 prereg before freeze; preserved"
+    },
+    {
+      "attempt": "surrogate lib v1 gauss_newton",
+      "defect": "stepped along ASCENT direction (grad(Phi)=-2*Jw^T rw); 0/50 convergence; verified by finite differences",
+      "resolution": "normal-equation RHS +g; preserved"
+    },
+    {
+      "attempt": "scipy jac sign",
+      "defect": "+A@J instead of -(A@J): trf froze at init, status 3 at optimality ~1.6e4",
+      "resolution": "sign-corrected jac; re-smoked"
+    },
+    {
+      "attempt": "RC03-FORMAL-20261125-A1 (v2.0.0)",
+      "defect": "crashed P2 ~78s: 1-D reps -> np.cov -> 0-d covariance; nothing persisted",
+      "resolution": "v2.0.1 2-D replicates"
+    },
+    {
+      "attempt": "RC03-FORMAL-20261125-A2 (v2.0.1)",
+      "defect": "crashed P2 ~77s: expected rank-1 single_vector covariance; inv raised outside try",
+      "resolution": "v2.0.2 guard extended; COV_NOT_PD abstain as preregistered"
+    },
+    {
+      "attempt": "RC03-FORMAL-20261125-A3 (v2.0.2)",
+      "defect": "none; 20/20 cells complete; prereg-declared bias/rmse not computed (implementation omission)",
+      "resolution": "v2.0.3 deterministic re-execution; shared fields byte-identical; single credit"
+    }
+  ],
+  "resource_ledger": {
+    "cache": "none",
+    "completeness": "FULL (20/20 formal cells + all declared diagnostics)",
+    "cpu_single_process": true,
+    "network_bytes_downloaded_approx": 60000,
+    "network_retries": 0,
+    "peak_rss_mb": 79.6,
+    "tokens": "UNKNOWN_COST",
+    "wall_seconds_formal_attempts": 343.7,
+    "wall_seconds_smoke_and_diagnostics_approx": 10.0
+  },
+  "run_ids": [
+    "RC10-SELFTEST-20261125",
+    "RC01-REPL-20261125",
+    "RC02-SURR-20261125",
+    "RC03-FORMAL-20261125-A1",
+    "RC03-FORMAL-20261125-A2",
+    "RC03-FORMAL-20261125-A3",
+    "RC03-DETERMINISTIC-COMPLETENESS-20261125",
+    "D-POST-1-20261125"
+  ],
+  "schema": "nexus/r44-7/run-receipts/v1",
+  "script_versions": [
+    {"file": "scripts/rc10_preflight_extract.py", "sha256": "4c3b7040c153260737f0af2ec286e5ce164cc8e3b193254e548b15899762035a"},
+    {"file": "scripts/rc10_preflight_selftest.py", "sha256": "62273b9012980a2187d71583af7c4af5903c1b3920bd6c145128eccfa3db7a91"},
+    {"file": "scripts/r44_7_surrogate_lib.py", "sha256": "6f199694f34ef5745e5e6cdf88cef33afc967fdc21eb85eedcea8cee581d2719"},
+    {"file": "scripts/r44_7_prereg.json", "sha256": "8b277fe31897c3e329cfa8e09ba7bacc69ad5faf3ad8da70c5412c1811677e1e"},
+    {"file": "scripts/r44_7_rc01_whitening.py", "sha256": "2bab8006b2c9a4bc50a8a7c2b463ee9318bfb32cf313c5499cb3bc7e38ea5fd9"},
+    {"file": "scripts/r44_7_rc02_condition.py", "sha256": "827c95e9a0b8daad9596ecf830b0b0d29c6b2956662966887f3b487d8f934ecd"},
+    {"file": "scripts/r44_7_rc03_falsification.py", "sha256": "700040b442d70bf3b34d4e85a8ad59ffc9d3e93d5a40854820191f11ba04571c"},
+    {"file": "scripts/r44_7_smoke.py", "sha256": "09f1bd2426b6a460dd5c9f1ef71e52deddc5fb3ba75b27a86c6f8abef6d50947"},
+    {"file": "scripts/r44_7_dpost1_heavytail.py", "sha256": "56defbfeee4900bbd09be64c2a68321f042535c8a0c854866785b41e1ae88dcb"},
+    {"file": "scripts/r44_7_contrast_analysis.py", "sha256": "d5280ab7855f30fadbd6e231f2fddf928cb76ad527f03b7343112d7e4d1155dc"}
+  ],
+  "seeds": {
+    "P1": 704101,
+    "P2": 704102,
+    "P3": 704103,
+    "calibration_base": 904100,
+    "dpost1": "556001-556500",
+    "smoke": "555001-555050"
+  },
+  "timestamp_utc": "2026-11-25T07:24:22+00:00",
+  "walls": {
+    "alt_d": "DO_NOT_RUN",
+    "b01_b05": "OPEN",
+    "bodytwin": false,
+    "dispatch": false,
+    "e23": "HOLD",
+    "merge": false,
+    "physical_14": "HOLD",
+    "promotion": false,
+    "w1": "OPEN"
+  }
+}

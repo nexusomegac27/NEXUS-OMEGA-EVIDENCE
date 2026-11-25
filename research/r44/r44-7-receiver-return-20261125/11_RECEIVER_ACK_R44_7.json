@@ -1,0 +1,83 @@
+{
+  "actor": {
+    "canonical_credit": false,
+    "n_eff": 1,
+    "registration": "UNREGISTERED_ADVISORY_C1",
+    "role": "advisory expert receiver"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "delivery": {
+    "package_zip_sha256": null,
+    "route": "authorized return branch attempt ONCE per manual step 8 + order no-retry rule; ZIP+sidecar are the handoff objects; result registered in Issue #443 receipt comment (post-package)",
+    "state": "PENDING_POST_PACKAGE_ATTEMPT"
+  },
+  "dispatch": "Operator R44-7 Experten-MAXIAUFTRAG via IM 2026-11-25, canonical entry Issue #443",
+  "errors": [],
+  "prereg_frozen_sha256": "8b277fe31897c3e329cfa8e09ba7bacc69ad5faf3ad8da70c5412c1811677e1e",
+  "privacy_license": "no PII, no restricted raw data, no production keys; synthetic data only; public repo content used per pinned commits",
+  "schema": "nexus/r44-7/receiver-ack/v1",
+  "sources": [
+    {
+      "commit": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+      "files": [
+        "00_START_HERE.md",
+        "01_ORDER.md",
+        "02_AXIOM_INTAKE.json",
+        "03_REPAIR_AND_FALSIFICATION.md",
+        "04_RETURN_CONTRACT.json",
+        "05_whitening_reference.py",
+        "R44_7_EXPERT_ORDER_R0.zip",
+        "R44_7_EXPERT_ORDER_R0.zip.sha256",
+        "99_SHA256SUMS.txt"
+      ],
+      "http": "200 via curl -fsSL",
+      "route": "raw.githubusercontent commit-pinned",
+      "source_id": "R44-7-ORDER-PACKAGE",
+      "status": "SOURCE_RECEIVED_HASHED_MATCH"
+    },
+    {
+      "commit": "89ccff827d564309cba3274bff94a6d577e6853a",
+      "files": [
+        "00_START_HERE_EXPERT_MANUAL.md"
+      ],
+      "route": "GitHub contents API commit-pinned",
+      "source_id": "R44-6-EXPERT-MANUAL",
+      "status": "SOURCE_RECEIVED_READ_APPLIED"
+    },
+    {
+      "source_id": "R44-6-STACK (GLM originals)",
+      "status": "BLOCKED_SOURCE_GAP: not publicly published (code search 0 hits; intake 'not all published'); no substitution used"
+    },
+    {
+      "sha256_expected": "9c34bfec2709de8a5c7f45d03c4cf880e2dac8afb6fc7a75f1b64004aa3217c2",
+      "source_id": "R44-5 model5.py original",
+      "status": "BLOCKED_SOURCE_GAP: not in custody; baseline replay NOT_RUN"
+    }
+  ],
+  "timestamp_utc": "2026-11-25T07:24:22+00:00",
+  "tool_capability": {
+    "cpu": 2,
+    "numpy": "2.1.3",
+    "os": "Linux sandbox",
+    "python": "3.12.16",
+    "ram_gb": 4,
+    "scipy": "1.14.1"
+  },
+  "transfer": "GITHUB_ONLY (commit-pinned raw + contents API)",
+  "transport_verification": {
+    "manifest": {
+      "entries": 6,
+      "match": "6/6",
+      "name": "99_SHA256SUMS.txt",
+      "self_sha256": "5f94facff9b89b2774f8a6a7e245e72779c49f2f2e3f5fe0a0ba28ff578e9d81"
+    },
+    "zip": {
+      "bytes": 17379,
+      "issue_pin_match": true,
+      "name": "R44_7_EXPERT_ORDER_R0.zip",
+      "sha256": "6b5661e84e999eebff4903144641b551507053848b5cb089352cd44355108778",
+      "sidecar_match": true
+    },
+    "zip_vs_github_raw": "7/7 members byte-identical (cmp) to commit-pinned raw files"
+  }
+}

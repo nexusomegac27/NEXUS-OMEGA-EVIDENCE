@@ -1,0 +1,34 @@
+{
+  "disclosure": "surrogate trend-level evidence only; exact E32-A replication requires blocked source bytes",
+  "results": [
+    {
+      "axiom_e32a_reference": 8910094.14751141,
+      "cond_unwhitened": 102.69580820975403,
+      "cond_whitened_corrected": 35.74054372616844,
+      "cond_whitened_original": 77.15835085030876,
+      "span": 0.8
+    },
+    {
+      "axiom_e32a_reference": 90455.78553056261,
+      "cond_unwhitened": 31.73428956764274,
+      "cond_whitened_corrected": 22.21823129041992,
+      "cond_whitened_original": 42.30316806942489,
+      "span": 2.0
+    },
+    {
+      "axiom_e32a_reference": 8228.447693526987,
+      "cond_unwhitened": 40.019235004623475,
+      "cond_whitened_corrected": 39.6031040188173,
+      "cond_whitened_original": 65.69234375273474,
+      "span": 4.0
+    }
+  ],
+  "rho": 0.8,
+  "script": "r44_7_rc02_condition.py v2.0.0",
+  "surrogate_trend_decreasing": false,
+  "theta_true": [
+    2.0,
+    0.8,
+    1.0
+  ]
+}
