@@ -1,0 +1,83 @@
+{
+  "schema": "nexus/r44-8/return/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R44_7_TO_R44_8_CALIBRATION_COLLECTIVE_CORRIGIBILITY_20261125_R0",
+  "status": "PREPARED_NOT_DISPATCHED_C1",
+  "parent": "4b37f7df377c2dfb39eab05830d3155ae6bf11c1",
+  "policy": "GITHUB_ONLY",
+  "directive": "AXIOM_RETURN_SELF_OPTIMIZATION_V1",
+  "mandates": [
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34"
+  ],
+  "fields": {
+    "actor_registration": "UNVERIFIED",
+    "source_receiver_ack": null,
+    "source_gaps": [],
+    "prereg_expected_sha": null,
+    "prereg_actual_sha": null,
+    "lease_limits": null,
+    "run_id": null,
+    "script_versions": [],
+    "per_trial_flags": [],
+    "failure_union": null,
+    "marginal_coverage": null,
+    "joint_coverage": null,
+    "simultaneous_target": null,
+    "paired_contrasts": null,
+    "holdout": null,
+    "raw_logs": [],
+    "correction_original_hash": null,
+    "correction_delta": null,
+    "independent_adjudication": "NOT_RUN",
+    "external_stop_result": null,
+    "actual_resource_cost": {
+      "cpu_tree": null,
+      "wall": null,
+      "network": null,
+      "tokens": null,
+      "retries": null,
+      "cache": null,
+      "completeness": "UNKNOWN"
+    },
+    "publication": {
+      "zip_sha": null,
+      "commit": null,
+      "readback": "NOT_RUN"
+    }
+  },
+  "counts": {
+    "canonical_negative": "0/24",
+    "r44_5_designs": 28,
+    "r44_6_designs": 18,
+    "r44_7_designs": 14,
+    "r44_8_designs": 18,
+    "r44_8_formal_executed": 0,
+    "quorum": "0/3",
+    "full_science": "0/10"
+  },
+  "walls": {
+    "bodytwin": false,
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "w1_2": "CANDIDATE_NOT_VALIDATED",
+    "b01_b05": "OPEN",
+    "cursor": false,
+    "merge": false,
+    "hostinger": false,
+    "www": false,
+    "device": false,
+    "dispatch": false,
+    "promotion": false,
+    "production_model_modification": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "seal": "NEXUS Ω OMEGA"
+}
