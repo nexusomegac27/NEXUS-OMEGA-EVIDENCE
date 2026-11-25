@@ -1,0 +1,30 @@
+{
+  "state": "EXECUTED_SYNTHETIC_REFERENCE_ONLY",
+  "script_sha": "f94f9468bd52f69842b7c990ee60d758f2b6f6a7e5f85150d8822804781047c3",
+  "result": {
+    "envelope": [
+      0.7599999999999998,
+      0.96
+    ],
+    "scalar": [
+      {
+        "d": 0.5,
+        "tolerant_miss": 1
+      },
+      {
+        "d": 1.5,
+        "tolerant_miss": 0.5
+      },
+      {
+        "d": 3,
+        "tolerant_miss": 0.5
+      }
+    ],
+    "separation_pairs": 18,
+    "independent_product": 0.8145062499999999,
+    "formal_credit": false
+  },
+  "scope": "no real hardware or formal credit; bounded algebraic check",
+  "mistral_mask_replay": "1536/1536",
+  "glm_merkle_raw_hex_counterexample": "confirmed locally AST extraction; no full historical rerun"
+}

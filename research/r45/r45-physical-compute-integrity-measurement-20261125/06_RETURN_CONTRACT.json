@@ -1,0 +1,49 @@
+{
+  "state": "PREPARED_NOT_DISPATCHED_C1",
+  "parent": "3a84c7da725b97093af257170e52db21181ebb1a",
+  "transfer": "GITHUB_ONLY",
+  "mandates": [
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34"
+  ],
+  "required": [
+    "source pin",
+    "device/workload/precision/clock/exposure",
+    "prereg expected hash and finite lease",
+    "reference uncertainty and independent oracle",
+    "calibration and holdout split",
+    "fault class and severity",
+    "raw residual and label flags",
+    "false accept/reject and interval",
+    "exact byte integrity",
+    "stop/lease/epoch",
+    "all versions and tree resource ledger",
+    "GitHub ZIP/sidecar/manifest readback"
+  ],
+  "walls": {
+    "bodytwin": false,
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "cursor": false,
+    "merge": false,
+    "hostinger": false,
+    "www": false,
+    "device": false,
+    "dispatch": false,
+    "promotion": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "seal": "NEXUS Ω OMEGA"
+}

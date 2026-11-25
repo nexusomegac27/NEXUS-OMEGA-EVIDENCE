@@ -1,0 +1,124 @@
+{
+  "state": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "controls": [
+    {
+      "id": "R45-N01",
+      "scope": "FIT vs prevalence/exposure",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N02",
+      "scope": "sensor noise vs rounding vs SDC",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N03",
+      "scope": "unknown error bound must not be invented",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N04",
+      "scope": "dependent faults not independent product",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N05",
+      "scope": "zero observed errors not zero risk",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N06",
+      "scope": "pre-seal wrong value hashes correctly",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N07",
+      "scope": "post-seal mutation exact reject",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N08",
+      "scope": "CRC not intent detector",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N09",
+      "scope": "signature not numerical truth",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N10",
+      "scope": "tolerant Freivalds below threshold",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N11",
+      "scope": "shared faulty verifier/common-mode",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N12",
+      "scope": "independent fresh probes and bounded error class",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N13",
+      "scope": "calibration/holdout leakage or threshold drift",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N14",
+      "scope": "nonfinite/missing baseline deny",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N15",
+      "scope": "Mistral missing mu and stationary init",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N16",
+      "scope": "Mistral incorrect Bonferroni target",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N17",
+      "scope": "GLM hex vs raw Merkle and fake signature",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-N18",
+      "scope": "STOP/authority unaffected by numerical tolerance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-P01",
+      "scope": "positive known answer independent oracle",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-P02",
+      "scope": "positive interval arithmetic and coverage bounds",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-P03",
+      "scope": "positive exact Merkle known vector",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-P04",
+      "scope": "positive clean holdout plus receipt",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "prior_registers": [
+    24,
+    28,
+    18,
+    14,
+    18,
+    20
+  ],
+  "do_not_sum": true
+}
