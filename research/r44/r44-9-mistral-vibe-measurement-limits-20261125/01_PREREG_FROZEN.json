@@ -1,0 +1,88 @@
+{
+  "schema": "nexus/r44-9/prereg/v1",
+  "object": "NEXUS_OMEGA_AXIOM_R44_8_TO_R44_9_MEASUREMENT_LIMITS_CORRIGIBILITY_ANALOGIES_20261125_R0",
+  "frozen_before_evidence_write": true,
+  "operator_start": "R44-9_PROGRAMME_A_AND_B_SCOPED",
+  "programme_c": "NOT_STARTED",
+  "date": "2026-11-25",
+  "hypothesis": {
+    "H0_delta_zero": "keine Superiority- und keine Aequivalenz-Claim",
+    "falsifizierer_gebunden": [
+      "R9-N01 Produkt als gemeinsame Coverage",
+      "R9-N02 Nenner aus Erfolgsspanne",
+      "R9-N03 gemeinsame valide Teilmenge fuer SSE",
+      "R9-N04 marginale 0,95 als simultane 0,95"
+    ]
+  },
+  "design": {
+    "model": "4 Sensorreihen AR(1) rho 0,8 sigma 1, Mittelung ueber n in {5,10}, Wahrwerte mu_j = s mal (1, 0.8, 1.1, 1.3), s in {0.8, 2, 4}",
+    "arms": {
+      "OLD": "iid-Normal-Wald, se = s_hat / sqrt(n), z 1,959964",
+      "COR": "AR(1)-Kovarianzformen bekannt, se = s_hat mal sqrt(f_n) / sqrt(n), f_5 = 3,62144, f_10 = 5,4294967296"
+    },
+    "paired_crn": true,
+    "trials_per_cell": 256,
+    "cells": [
+      [
+        0.8,
+        5
+      ],
+      [
+        0.8,
+        10
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        10
+      ]
+    ],
+    "seeds": {
+      "master": 20261125,
+      "cell_stream": "20261125 + 7919 k",
+      "calibration_stream": "999983 + 7919 k + (131071 old | 262143 cor)",
+      "truth_start_only": "ausgeschlossen (geschlossene Schaetzer, keine Optimierung)"
+    },
+    "calibration": {
+      "draws": 4000,
+      "quantile": "empirisch 95 Prozent nearest-rank"
+    },
+    "coverage_types": [
+      "marginal",
+      "rowwise_joint_all4",
+      "simultaneous_calibrated_max_abs_z",
+      "bonferroni_all4_q_2_2414"
+    ],
+    "validity_flag": "alle Schaetzer endlich, sv > 0; Drei-Form-Schaetzer, kein Optimizer-Stall im Scope",
+    "estimand": "frequentistisch festes theta, Coverage als empirische Haeufigkeit; nicht SBC",
+    "frechet": "Identifikationsgrenzen, keine Konfidenzintervalle; Produkt innerhalb, nicht gemeinsame Coverage"
+  },
+  "programme_b_reference": {
+    "gates": "permitStrict mit Epoch-Bindung, TTL, Monotonie, Receipt-Objekt",
+    "queue": "abrieb ohne stillen Verwurf, alle Items erhalten Terminal-Receipt",
+    "quorum": "kanonisch 3, Alias- und Registrierungsschutz",
+    "merkle": "RFC 6962§ reviewSUBPROOF-Form als Desk-Bezug, der Verifikator ist ein vollstaendig spezifizierter Strukturverifikator mit (hash, start, count)-Etiketten, gegen Blindrekonstruktion der Woerter mit bakeoff geprueft; keine RFC-9162-Byteform-Zertifizierung",
+    "noninterference": "E34, abstrakte Finite-Menge, Zustandsfingerprint"
+  },
+  "lease": {
+    "burst": "einmalige Ausfuehrung",
+    "wall_estimate": "UNKNOWN_WALL",
+    "network": "nur GitHub-Connector",
+    "retries": 0
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "no_claim_promotion": true,
+  "dispatch": "NONE",
+  "merge": "NO"
+}

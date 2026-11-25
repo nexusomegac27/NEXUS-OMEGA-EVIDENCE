@@ -1,0 +1,321 @@
+{
+  "schema": "nexus/r44-9/evidence-A/v1",
+  "prereg_sha256_frozen": "dce3d1c6e0d3bb01b4898251f5110d6df742b45056ea80e01fbec3dc1d5dfe14",
+  "rng_impl": "Park-Miller 16807 mod 2147483647 mit Box-Muller, eigentstaendig implementiert, Kontroll-Assertions bestanden",
+  "sha_impl": "FIPS 180-4 Eigenimplementierung, alle drei NIST-Testvektoren bestanden vor Digestverwendung",
+  "cells": [
+    {
+      "span": 0.8,
+      "n": 5,
+      "trials": 256,
+      "marginal_old": [
+        0.3046875,
+        0.25,
+        0.19921875,
+        0.15625
+      ],
+      "marginal_cor": [
+        0.515625,
+        0.5234375,
+        0.4140625,
+        0.359375
+      ],
+      "joint": {
+        "both": 1,
+        "old_only": 0,
+        "cor_only": 7,
+        "neither": 248,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 0.015625,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0.15625,
+        "product": 0.002371072769165039,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0.359375,
+        "product": 0.04016174376010895,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 17.94537972757801,
+        "cov_old": 235,
+        "q95_cor": 9.502946228450803,
+        "cov_cor": 235,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 2,
+        "cov_cor": 17,
+        "n": 256
+      }
+    },
+    {
+      "span": 0.8,
+      "n": 10,
+      "trials": 256,
+      "marginal_old": [
+        0.17578125,
+        0.28515625,
+        0.1796875,
+        0.1328125
+      ],
+      "marginal_cor": [
+        0.50390625,
+        0.640625,
+        0.5234375,
+        0.41015625
+      ],
+      "joint": {
+        "both": 0,
+        "old_only": 0,
+        "cor_only": 16,
+        "neither": 240,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 0.000030517578125,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0.1328125,
+        "product": 0.0011962233111262321,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0.41015625,
+        "product": 0.06930551491677761,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 15.05805005467041,
+        "cov_old": 240,
+        "q95_cor": 6.682278262515887,
+        "cov_cor": 243,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 0,
+        "cov_cor": 26,
+        "n": 256
+      }
+    },
+    {
+      "span": 2,
+      "n": 5,
+      "trials": 256,
+      "marginal_old": [
+        0.015625,
+        0.0546875,
+        0.01171875,
+        0
+      ],
+      "marginal_cor": [
+        0.078125,
+        0.1640625,
+        0.046875,
+        0.015625
+      ],
+      "joint": {
+        "both": 0,
+        "old_only": 0,
+        "cor_only": 0,
+        "neither": 256,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 1,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0.015625,
+        "product": 0.000009387731552124023,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 36.706228502264864,
+        "cov_old": 244,
+        "q95_cor": 18.90133059608848,
+        "cov_cor": 244,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 0,
+        "cov_cor": 0,
+        "n": 256
+      }
+    },
+    {
+      "span": 2,
+      "n": 10,
+      "trials": 256,
+      "marginal_old": [
+        0.01171875,
+        0.04296875,
+        0.0078125,
+        0
+      ],
+      "marginal_cor": [
+        0.078125,
+        0.18359375,
+        0.0546875,
+        0.0234375
+      ],
+      "joint": {
+        "both": 0,
+        "old_only": 0,
+        "cor_only": 0,
+        "neither": 256,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 1,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0.0234375,
+        "product": 0.000018384307622909546,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 28.422221719808995,
+        "cov_old": 239,
+        "q95_cor": 12.285595119194257,
+        "cov_cor": 240,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 0,
+        "cov_cor": 0,
+        "n": 256
+      }
+    },
+    {
+      "span": 4,
+      "n": 5,
+      "trials": 256,
+      "marginal_old": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "marginal_cor": [
+        0,
+        0.00390625,
+        0,
+        0
+      ],
+      "joint": {
+        "both": 0,
+        "old_only": 0,
+        "cor_only": 0,
+        "neither": 256,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 1,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 67.51090304282006,
+        "cov_old": 239,
+        "q95_cor": 35.715680224907416,
+        "cov_cor": 239,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 0,
+        "cov_cor": 0,
+        "n": 256
+      }
+    },
+    {
+      "span": 4,
+      "n": 10,
+      "trials": 256,
+      "marginal_old": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "marginal_cor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "joint": {
+        "both": 0,
+        "old_only": 0,
+        "cor_only": 0,
+        "neither": 256,
+        "n": 256
+      },
+      "valid_trials_shared": 256,
+      "mcnemar_exact_p_unadjusted": 1,
+      "frechet_old": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "frechet_cor": {
+        "lo": 0,
+        "hi": 0,
+        "product": 0,
+        "product_within_bounds": true
+      },
+      "simultaneous_calibrated": {
+        "q95_old": 52.90102653247319,
+        "cov_old": 244,
+        "q95_cor": 22.57006306873709,
+        "cov_cor": 244,
+        "n": 256
+      },
+      "bonferroni": {
+        "q": 2.241402727604947,
+        "cov_old": 0,
+        "cov_cor": 0,
+        "n": 256
+      }
+    }
+  ],
+  "status": "EXECUTED_LOCAL_SYNTHETIC_C1_NO_GATE_CREDIT",
+  "formel": "R44_9_FORMAL_EXECUTED bleibt 0, lokale synthetische Ausfuehrung ohne kanonisches Gate-Credit, kein Quorum, kein Voll-Wissenschaftskredit",
+  "verdict": {
+    "joint_difference": "keine reproduzierbare Superiority von COR in der gemeinsamen Coverage, keine Aequivalenz-Claim, McNemar exakt quantifiziert",
+    "product_claim": "Produkt liegt innerhalb Frechet-Grenzen und wird nie als gemeinsame Coverage ausgegeben",
+    "marginal_vs_simultaneous": "kalibrierte simultane Region unterscheidet sich materialiter von marginaler 0,95-Zusage"
+  }
+}
