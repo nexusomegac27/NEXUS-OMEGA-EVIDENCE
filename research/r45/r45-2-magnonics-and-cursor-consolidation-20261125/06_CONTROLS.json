@@ -1,0 +1,112 @@
+{
+  "status": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "controls": [
+    {
+      "id": "R45-2-N01",
+      "scope": "expired/revoked/epoch change after grant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N02",
+      "scope": "reauthorization of consumed request ID",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N03",
+      "scope": "self-declared authority and scope",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N04",
+      "scope": "rollback and invalid clock",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N05",
+      "scope": "same principal multi-key quorum and revoked votes",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N06",
+      "scope": "assert-only schema / -O",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N07",
+      "scope": "wrong AR1 variance convention",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N08",
+      "scope": "calibration raw vs standardized statistic mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N09",
+      "scope": "analog gain/phase error masked by identical output",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N10",
+      "scope": "threshold boundary mass not FIT",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N11",
+      "scope": "inverse design train/holdout leakage and omitted system energy",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-N12",
+      "scope": "hash success not physical correctness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-P01",
+      "scope": "trusted reference scope and single-use synthetic grant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-P02",
+      "scope": "stationary AR1 exact covariance and mean-shift check",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-P03",
+      "scope": "continuous threshold bound and factorization witness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-2-P04",
+      "scope": "independent held-out robust inverse-design protocol",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "prior": [
+    24,
+    28,
+    18,
+    14,
+    18,
+    20,
+    22
+  ],
+  "do_not_sum": true,
+  "walls": {
+    "canonical": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "physical14": "HOLD",
+    "bodytwin": false,
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "cursor_execution": false,
+    "dispatch": false,
+    "merge": false,
+    "hostinger": false,
+    "www": false,
+    "promotion": false
+  }
+}

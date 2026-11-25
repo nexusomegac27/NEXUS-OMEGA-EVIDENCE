@@ -1,0 +1,98 @@
+{
+  "inputs": [
+    {
+      "file": "R45-1_~1.ZIP",
+      "bytes": 2139554,
+      "sha256": "3b1a7f06b447fa3d6c5a4af47993413201e6dc1e671da0f8d29afeb2f7a49e3e",
+      "crc": "PASS",
+      "manifest": "13/13 via explicit outer/inner member map",
+      "inner": {
+        "bytes": 1317531,
+        "sha256": "0e1703ac51db8ac90872fe7eccf6283a131d909d3c0693eca0314b17a9af9c30",
+        "manifest": "49/49",
+        "crc": "PASS",
+        "sidecar": "MATCH"
+      }
+    },
+    {
+      "file": "R45-1_~2.ZIP",
+      "bytes": 91602,
+      "sha256": "37daa9b053eddf34eb42caabff96219554f41df05e1e5ccebbd7a77b63981fd7",
+      "manifest": "34/34",
+      "crc": "PASS",
+      "sidecar": "MATCH",
+      "inner": {
+        "bytes": 23962,
+        "sha256": "641aa58e3c8d735df42c3ff61586d391a62a2121fd29f004c5fb1650a253fec7",
+        "manifest": "12/12 of extracted return mirror",
+        "crc": "PASS"
+      }
+    },
+    {
+      "file": "Grok presearch",
+      "bytes": 11706,
+      "sha256": "487bd920338abacbf2e2cd728375956b46f039aa16e89079ad227f1bae77fdf2",
+      "identity": "advisory not authenticated"
+    }
+  ],
+  "glm": {
+    "receipts": "16/16 hash and prev link, seq21..36",
+    "head": "64f9333f37b1614b966eaac40d05a0be5887eb7be8ac3a4a6d627fe490230e68",
+    "prior_head": "267fff15508e0ad9980f5e776b5695aeef627a90e13361d55f8c863f9e752311",
+    "prior_chain_full_replay": "NOT_RUN_THIS_TURN",
+    "script_current_match": "8/16",
+    "missing_or_changed": [
+      21,
+      24,
+      25,
+      27,
+      28,
+      29,
+      32,
+      33
+    ],
+    "closeout_report_count": 15,
+    "actual_count": 16,
+    "reported_merkle": "1056/1056 inclusion, 1024/1024 consistency, Ed25519 verify and tamper reject",
+    "credit": "reported diagnostics; not full AXIOM replay"
+  },
+  "receiver": {
+    "script_sha256": "d5d6a163fd6d074648ebca710c94fed570f0b2546cf61437d83c695cb8298334",
+    "original_tests": "16/16 reported",
+    "axiom_ast_counterexamples": {
+      "expired": "EFFECT",
+      "revoked": "EFFECT",
+      "epoch_changed": "EFFECT",
+      "reauthorize_consumed_id": "EFFECT",
+      "self_declared_scope": "GRANT",
+      "clock_rollback": "GRANT",
+      "three_keys_one_principal": 3
+    },
+    "assert_guard": "removed under -O by Python semantics; not executed in optimized subprocess this turn",
+    "new_defects": "7/7 observed undesired behavior; no runtime proof"
+  },
+  "ar1": {
+    "rho": 0.8,
+    "marginal_variance": 1,
+    "rows": [
+      {
+        "n": 5,
+        "f": 3.62144,
+        "var_mean": 0.724288
+      },
+      {
+        "n": 10,
+        "f": 5.4294967296,
+        "var_mean": 0.54294967296
+      }
+    ],
+    "glm_f_true": [
+      10.059555555555555,
+      15.08193536
+    ],
+    "correction": "GLM divided bracket by 1-rho² despite fixed marginal variance; only valid factor relative to innovation variance, not actual marginal variance. Sample variance estimator still biased under correlation.",
+    "masking": "GLM evaluated raw max residual W, not pinned standardized max z; not exact rebuttal of masking claim."
+  },
+  "custody": "local original archives rehashed, not publicly uploaded; no receiver ACK credit",
+  "status": "PASS_INTEGRITY_WITH_MATERIAL_SCIENTIFIC_AND_GOVERNANCE_CAVEATS_C1"
+}
