@@ -1,0 +1,15 @@
+{
+  "status": "EXECUTED_NEW_SYNTHETIC_REFERENCE_ONLY",
+  "script_sha256": "5f3ad10ee52d71deafac18a913f419933ca86be4b82498c5f3c75474a744b7be",
+  "result": {
+    "projection_witness": true,
+    "frechet_four_marginals": [
+      0.7999999999999998,
+      0.95
+    ],
+    "abstract_ack_cases": 500,
+    "not_runtime_proof": true
+  },
+  "scope": "pure JS, 500 ACK cases, no production or formal credit",
+  "note": "Not a state-machine model check, no signature or real clock; no independent actor."
+}

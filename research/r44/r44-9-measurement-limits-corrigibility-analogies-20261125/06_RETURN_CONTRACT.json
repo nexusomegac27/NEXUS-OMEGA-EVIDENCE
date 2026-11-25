@@ -1,0 +1,61 @@
+{
+  "schema": "nexus/r44-9/return/v1",
+  "state": "PREPARED_NOT_DISPATCHED_C1",
+  "parent": "a46d8e34efacd08a970949d43bb64e7210aa6018",
+  "transfer": "GITHUB_ONLY",
+  "directive": "AXIOM_RETURN_SELF_OPTIMIZATION_V1",
+  "mandates": [
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34"
+  ],
+  "deliverables": [
+    "D1 statistical method and falsifiers",
+    "D2 physics primary source comparison",
+    "D3 formal corrigibility",
+    "D4 provenance risk and counterexamples",
+    "D5 bounded synthesis"
+  ],
+  "required": [
+    "source pin, access ACK or scoped blocker",
+    "original hash and append-only correction",
+    "hypothesis, estimand, target, frozen prereg hash",
+    "paired trial flags including valid, failure union and joint",
+    "actual code versions and logs",
+    "analogy mapping and non-claims",
+    "finite resource lease",
+    "independent review",
+    "GitHub ZIP/sidecar/manifest readback"
+  ],
+  "counts": {
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "r44_9_designs": 20,
+    "r44_9_formal_executed": 0
+  },
+  "walls": {
+    "bodytwin": false,
+    "physical_14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "w1_2": "CANDIDATE",
+    "b01_b05": "OPEN",
+    "cursor": false,
+    "merge": false,
+    "hostinger": false,
+    "www": false,
+    "device": false,
+    "dispatch": false,
+    "promotion": false,
+    "model_training": false
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "seal": "NEXUS Ω OMEGA"
+}

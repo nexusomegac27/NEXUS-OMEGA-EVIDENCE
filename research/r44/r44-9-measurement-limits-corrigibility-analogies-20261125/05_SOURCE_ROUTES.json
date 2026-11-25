@@ -1,0 +1,36 @@
+{
+  "parent": "a46d8e34efacd08a970949d43bb64e7210aa6018",
+  "order": "https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/tree/a46d8e34efacd08a970949d43bb64e7210aa6018/research/r44/r44-8-calibration-and-collective-corrigibility-20261125",
+  "order_zip_sha": "dfc3a8300bf31a7539df815706c952aef47b136de10c8d97099ca7171eb170f9",
+  "parent_manifest_sha": "c3ae1313891c856821a00fd005d08f8830c565f38a0edae25961dd493d7871e3",
+  "local_sources": [
+    {
+      "id": "GLM_R44_8_STACK",
+      "sha256": "f9685de47aa60fd3fb82177ffac6f406bca112a8e931803476487f3e59cff5b4",
+      "path": "R44-8_return(1).zip / R44-8_Stack.zip",
+      "state": "LOCAL_MATCH; GitHub exact authorized custody pending"
+    },
+    {
+      "id": "MODEL5",
+      "sha256": "9c34bfec2709de8a5c7f45d03c4cf880e2dac8afb6fc7a75f1b64004aa3217c2",
+      "path": "R44-8_Stack/custody/model5_original_9c34bfec.py",
+      "state": "LOCAL_MATCH; rights-cleared exact transfer pending"
+    },
+    {
+      "id": "QWEN_NOTE",
+      "sha256": "17630b0a23bca54b25ae415977471eecd5ef4866ef1dcf9ef38353ca0f04655f",
+      "state": "derived source review published, raw note not republished"
+    },
+    {
+      "id": "GROK_NOTE",
+      "sha256": "d8e295b7c17cd8bbda82edb56c2106039d5f77ae619afb8bd846bbac2cc756bc",
+      "state": "derived source review published, raw note not republished"
+    },
+    {
+      "id": "RECEIVER_R44_8",
+      "sha256": "254557687d965e56ebc1db66b6ad60c2e4510272ab42f42b30301a2658ac7d7d",
+      "state": "local exact, producer delivery partial"
+    }
+  ],
+  "rule": "No proxy for exact original; use 03 DOI/source routes for independent desk research; no automatic publication of original raw archives; independent access ACK once per changed artifact; restricted inputs scoped to affected lane."
+}

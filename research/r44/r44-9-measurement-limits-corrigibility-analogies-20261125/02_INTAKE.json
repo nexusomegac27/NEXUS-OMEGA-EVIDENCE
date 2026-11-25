@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-25",
+  "parent": "a46d8e34efacd08a970949d43bb64e7210aa6018",
+  "originals": [
+    {
+      "name": "sources_r44_8(1).zip",
+      "bytes": 701541,
+      "sha256": "105139a8305e3e740e818d196e976766f61c79949941bb9aba1c8bae954df095",
+      "manifest": "19/19",
+      "crc": "PASS"
+    },
+    {
+      "name": "R44_8_~1.ZIP",
+      "bytes": 30346,
+      "sha256": "950a1fc06b3e6b8bdb2aeb22e36433004c0eabace69e83b73e676a08256932fb",
+      "crc": "PASS",
+      "inner": {
+        "bytes": 14651,
+        "sha256": "254557687d965e56ebc1db66b6ad60c2e4510272ab42f42b30301a2658ac7d7d",
+        "manifest": "6/6"
+      }
+    },
+    {
+      "name": "R44-8_return(1).zip",
+      "bytes": 766946,
+      "sha256": "0e2aaf4603279a7f330a88b33db0aee215882df19f035040fbdb9d092a359dd8",
+      "crc": "PASS",
+      "inner": {
+        "bytes": 764769,
+        "sha256": "f9685de47aa60fd3fb82177ffac6f406bca112a8e931803476487f3e59cff5b4",
+        "manifest": "44/44",
+        "crc": "PASS",
+        "sidecar": "MATCH"
+      }
+    },
+    {
+      "name": "AXIOMR~1(4).TXT",
+      "bytes": 18976,
+      "sha256": "69009c466929d8312611d09ca3400fd26f998cd403b86110f2b5ba6d3355e023"
+    },
+    {
+      "name": "NEXUS-~1(20261125-115504).MD",
+      "bytes": 20260,
+      "sha256": "9a69449602f35984176f30818e86ede4fa6d39436344dd9c4d0b1597de0bf267"
+    },
+    {
+      "name": "R44-8-~1(1).MD",
+      "bytes": 19437,
+      "sha256": "7e987d16edf360b94c3903192d97e97034dcb21dfc6c624c79af4a2433b767dc"
+    },
+    {
+      "name": "NEXUS_~1(20261125-125920).MD",
+      "bytes": 11203,
+      "sha256": "d8e295b7c17cd8bbda82edb56c2106039d5f77ae619afb8bd846bbac2cc756bc",
+      "role": "GROK-labelled external presearch; unregistered"
+    },
+    {
+      "name": "NEXUSO~1(6).TXT",
+      "bytes": 66907,
+      "sha256": "17630b0a23bca54b25ae415977471eecd5ef4866ef1dcf9ef38353ca0f04655f",
+      "role": "QWEN-associated mixed assignment, clarification, D1-D5 research; identity not authenticated"
+    }
+  ],
+  "local_model": {
+    "original": "9c34bfec2709de8a5c7f45d03c4cf880e2dac8afb6fc7a75f1b64004aa3217c2",
+    "patch": "a7716410f46f1c937722db8f654a9e7db335387494045942cafc8b914f3463db",
+    "status": "LOCAL_MATCH_NOT_GITHUB_ORIGINAL"
+  },
+  "glm": {
+    "receipt_hash_link": "7/7",
+    "script_sha_match": "5/7",
+    "missing_prior_versions": [
+      3,
+      5
+    ],
+    "fits_reported": 1024,
+    "paired_flag_source_sha": "0089f454365319ab5bbf93f6f37287f2a4edda286f8bf0f7f2a2dcf48f45770d",
+    "seed": 20261126,
+    "rows": [
+      {
+        "span": 0.8,
+        "old": 132,
+        "cor": 139,
+        "both": 111,
+        "neither": 96,
+        "old_only": 21,
+        "cor_only": 28,
+        "n": 256,
+        "p_exact": 0.3916029105474905,
+        "bootstrap_old_minus_cor": [
+          -0.08203125,
+          0.0234375
+        ],
+        "valid_old": 143,
+        "valid_cor": 151,
+        "success_old": 144,
+        "success_cor": 151,
+        "conditional_old_corrected": 0.9230769230769231,
+        "conditional_cor": 0.9205298013245033
+      },
+      {
+        "span": 4,
+        "old": 99,
+        "cor": 91,
+        "both": 85,
+        "neither": 151,
+        "old_only": 14,
+        "cor_only": 6,
+        "n": 256,
+        "p_exact": 0.11531829833984375,
+        "bootstrap_old_minus_cor": [
+          -0.00390625,
+          0.06640625
+        ],
+        "valid_old": 179,
+        "valid_cor": 175,
+        "success_old": 180,
+        "success_cor": 175,
+        "conditional_old_corrected": 0.553072625698324,
+        "conditional_cor": 0.52
+      }
+    ],
+    "defects": [
+      "conditional reducer uses converged rather than valid flags",
+      "SSE means on separately successful subsets, not common valid set as predicted",
+      "source/patch guard uses assert",
+      "prereg hash computed not enforced against expected",
+      "product cannot exceed min(p) despite prereg wording",
+      "future ACK and backward clock PERMIT",
+      "fresh queue drain silently discards request",
+      "Merkle consistency verifier accepts empty proof unequal roots; rejects equal roots",
+      "toy quorum 2 not canonical 3"
+    ],
+    "local_test_method": "AST extracted exact TemporalGroupGate and MerkleCT class definitions only; no imports or main I/O; tested synthetic calls. Fresh queue drain returned [] and cleared queue. verify_consistency({},'a','b') True; ({},'a','a') False. Paired flag npz read allow_pickle=False; exact binomial tests. No full simulation replay."
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
