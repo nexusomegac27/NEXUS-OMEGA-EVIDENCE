@@ -34,7 +34,7 @@
       11.83,
       26.37
     ],
-    "invariance_tolerance": "<1e-9 over 5 random invertible T"
+    "invariance_tolerance": "under 1e-9 over 5 random invertible T"
   },
   "masking_own_construction": {
     "note": "eigene Konstruktion, Richtungstest, keine exakte Replikation des AXIOM-Seed-Protokolls",
