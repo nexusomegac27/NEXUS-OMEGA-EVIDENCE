@@ -1,0 +1,128 @@
+{
+  "parent": "3a84c7da725b97093af257170e52db21181ebb1a",
+  "closure": "ADMINISTRATIVE_R44_9_AND_R44_SERIES_CLOSED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "originals": {
+    "glm": {
+      "bytes": 863188,
+      "sha256": "70e544b55fc27e5e09ac0212ef5a100174160a003c33b2c7848bdd9c116aed08",
+      "manifest": "44/44",
+      "sidecar": "MATCH",
+      "crc": "PASS"
+    },
+    "source": {
+      "bytes": 716876,
+      "sha256": "eec96895531cd44eadc409969de423d56c55cf865142722f107d8a2092c4b335",
+      "manifest": "19/19",
+      "crc": "PASS"
+    },
+    "receiver": {
+      "bytes": 6231,
+      "sha256": "066d0747a5903d496dfa9b2bed22b2e897dde542d1b18f23fe4f389a61506444",
+      "crc": "PASS"
+    },
+    "nested_order": {
+      "bytes": 28415,
+      "sha256": "e0fbb47bc8ba45bdb83c6f3e1e20336c95e039fe4a09cef2d5b4b9d9ab4f43a6"
+    }
+  },
+  "glm_receipts": {
+    "hash_link": "19/19",
+    "head": "8d60f87801615f5e6ae18afb73f8caeb7872cfd6c18fec75a867a582bb96c748",
+    "current_script_mismatches": [
+      1,
+      3,
+      6,
+      7,
+      9,
+      10,
+      12,
+      13,
+      15,
+      17
+    ],
+    "merkle_two_leaf_ab": {
+      "expected_raw": "b137985ff484fb600db93107c77b0365c80d78f5b429ded0fd97361d077999eb",
+      "actual_glm_hex": "4c64254e6636add7f281ff49278beceb26378bd0021d1809974994e6e233ec35",
+      "empty_tree": null,
+      "checkpoint": "unkeyed SHA256 digest, not digital signature"
+    }
+  },
+  "mistral": {
+    "pr": 450,
+    "head": "7999befa3ce8c3ed394454e522208720681ddc3d",
+    "manifest_sha": "cc3cef9a1c3cbabba195d6632f025c36c60bfff98c3943d4cab9fade97781e53",
+    "files": [
+      {
+        "name": "00_RETURN_REPORT.md",
+        "expected": "d35576ef1f43959994d3e8caf99e976536b03526a36216f17372ee3bd44f2ada",
+        "actual": "d35576ef1f43959994d3e8caf99e976536b03526a36216f17372ee3bd44f2ada",
+        "match": true
+      },
+      {
+        "name": "01_PREREG_FROZEN.json",
+        "expected": "31b8046cbe909846ade5e02b6ddce0e34eea32f7852b79799b3d460819dd86f7",
+        "actual": "31b8046cbe909846ade5e02b6ddce0e34eea32f7852b79799b3d460819dd86f7",
+        "match": true
+      },
+      {
+        "name": "02_EVIDENCE_PROGRAM_A.json",
+        "expected": "18bd7ac1dc38d05463773c3d87dab132686bed952cc1cc18b74b18a0f0712d55",
+        "actual": "18bd7ac1dc38d05463773c3d87dab132686bed952cc1cc18b74b18a0f0712d55",
+        "match": true
+      },
+      {
+        "name": "03_PER_TRIAL_MASKS.txt",
+        "expected": "65e9d3b20c078e33d6c0cd1d87caeb9f67679c26ef3843eb18414af7550bdeb9",
+        "actual": "65e9d3b20c078e33d6c0cd1d87caeb9f67679c26ef3843eb18414af7550bdeb9",
+        "match": true
+      },
+      {
+        "name": "04_EVIDENCE_PROGRAM_B.json",
+        "expected": "7c39f422f2dc9fc6cde6eb32ff3a9c97a87d376e4247c414662d35c0a8ca8818",
+        "actual": "7c39f422f2dc9fc6cde6eb32ff3a9c97a87d376e4247c414662d35c0a8ca8818",
+        "match": true
+      },
+      {
+        "name": "05_SCRIPT.js",
+        "expected": "4b5ffbdaf6381a4ccacfdada1ff270d8f5300e2300de72f52829e1419470ded9",
+        "actual": "4b5ffbdaf6381a4ccacfdada1ff270d8f5300e2300de72f52829e1419470ded9",
+        "match": true
+      }
+    ],
+    "prereg_evidence_claim": "dce3d1c6e0d3bb01b4898251f5110d6df742b45056ea80e01fbec3dc1d5dfe14",
+    "prereg_actual": "31b8046cbe909846ade5e02b6ddce0e34eea32f7852b79799b3d460819dd86f7",
+    "mask_replay": "1536/1536 exact via exported runCell at pinned source",
+    "limitations": [
+      "mu absent in observations",
+      "nonstationary AR1 initialization",
+      "sample variance does not automatically estimate marginal sigma²",
+      "Bonferroni quantile wrong for four two-sided intervals",
+      "no full formal gate credit",
+      "B full original execution source not established by A script"
+    ],
+    "desk_independence_correct": 0.8145062499999999
+  },
+  "axiom_new_exploratory_numpy": {
+    "seed_rule": "450001+n",
+    "N": 40000,
+    "model": "stationary AR1 rho=.8 sigma=1, 4 independent rows, shared draws across mean shifts",
+    "n5": {
+      "joint_old": 0.0275,
+      "joint_cor_samplevariance": 0.194825,
+      "joint_oracle": 0.81565
+    },
+    "n10": {
+      "joint_old": 0.031325,
+      "joint_cor_samplevariance": 0.363375,
+      "joint_oracle": 0.813675
+    },
+    "note": "separate synthetic model, not exact Mistral re-execution; exploratory results, no formal credit; oracle nominal marginal .95 not simultaneous .95"
+  },
+  "original_custody": "local originals only; not republished pending authorized rights and scope review",
+  "formal_credit": {
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10"
+  }
+}
