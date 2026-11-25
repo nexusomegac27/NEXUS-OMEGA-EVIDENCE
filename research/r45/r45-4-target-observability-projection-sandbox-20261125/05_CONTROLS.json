@@ -1,0 +1,157 @@
+{
+  "status": "DESIGN_ONLY_FORMAL_NOT_RUN",
+  "controls": [
+    {
+      "id": "R45-4-N01",
+      "scope": "silhouette vs line integral",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N02",
+      "scope": "open through bore incorrect silhouette",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N03",
+      "scope": "Falconer existence mistaken for inversion",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N04",
+      "scope": "Hausdorff dimension preservation mistaken for injectivity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N05",
+      "scope": "two-view null witness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N06",
+      "scope": "three orthogonal voxel X-rays parity ambiguity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N07",
+      "scope": "full rank required for target false",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N08",
+      "scope": "wrong linear certificate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N09",
+      "scope": "local rank mistaken for global identification",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N10",
+      "scope": "empty feasible set falsely width zero",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N11",
+      "scope": "noise-free center sweep mistaken for robust worst case",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N12",
+      "scope": "wrong 2eps pair criterion",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N13",
+      "scope": "unmodeled noise excludes truth",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N14",
+      "scope": "redundant or near-collinear sensor",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N15",
+      "scope": "correlated noise treated iid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N16",
+      "scope": "shared bias/nuisance unmodeled",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N17",
+      "scope": "oracle target direct measurement cost mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N18",
+      "scope": "false optimality under solver timeout",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N19",
+      "scope": "pairwise independent errors treated mutual",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N20",
+      "scope": "unbound callback correct digest",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N21",
+      "scope": "missing key/policy revalidation and alias",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N22",
+      "scope": "STOP used as resume",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N23",
+      "scope": "future epoch and pending replay",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-N24",
+      "scope": "malformed input no terminal receipt",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-P01",
+      "scope": "positive independent enumeration and rational certificate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-P02",
+      "scope": "positive bounded-error pair witness and interval oracle",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-P03",
+      "scope": "positive matched geometry covariance and target selection",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-4-P04",
+      "scope": "positive exact joint errors and external authority model",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "inherited_registers": [
+    24,
+    28,
+    18,
+    14,
+    18,
+    20,
+    22,
+    16,
+    24
+  ],
+  "do_not_sum": true
+}

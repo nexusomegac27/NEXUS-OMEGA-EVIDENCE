@@ -1,0 +1,107 @@
+{
+  "groK": {
+    "bytes": 8938,
+    "sha256": "8626a52e41d45def5d2e0e5d10034100b314a09996e8e507ac00b0d1e9ad5349",
+    "classification": "advisory C1, no authenticated actor credit",
+    "correction": "Falconer primary theorem 1986, a.e. / null-set and existence only; arbitrary finite views not always nonunique for restricted classes; opaque closed cavity counterexample, open through bore projects annulus"
+  },
+  "inputs": [
+    {
+      "file": "R45-3_Stack.zip",
+      "bytes": 1152642,
+      "sha256": "7f932f55c717d34d18ac14448c2cfc4e7e4d115736bcd25341ff39f24df1fe31",
+      "manifest": "53/53",
+      "crc": "54/54",
+      "sidecar": "MATCH"
+    },
+    {
+      "file": "NEXUS_~1(20261125-203330).ZIP",
+      "bytes": 762236,
+      "sha256": "3e9f1b9b7bb720b5fb192e0d757a56fc64f3ac9b61b9d850ffb5b94367ddfb4e",
+      "manifest": "13/13",
+      "crc": "14/14",
+      "sidecar": "MATCH"
+    },
+    {
+      "file": "NEXUSO~1(8).ZIP",
+      "bytes": 304105,
+      "sha256": "7fd2c5fb84fe626da9d67edbd17628c86d3d8160cebcf82b8f39bc1a8f803b31",
+      "crc": "PASS",
+      "outer_manifest": "NOT_PRESENT",
+      "nested_complete_sha": "94f99d4153a27923c7b8def078456b9e9c82f98d8c4be25e6a83b22b3887fbd5"
+    },
+    {
+      "file": "R45-3-~1.ZIP",
+      "bytes": 18157,
+      "sha256": "285caca19f68add0cc12a51e78d7e19cef05ac18b479bea1f5472bda01e9f620",
+      "crc": "2/2",
+      "manifest": "NOT_PRESENT"
+    },
+    {
+      "file": "AXIOMR~1(5).TXT",
+      "bytes": 29768,
+      "sha256": "954787562514cbfed67d67bf5ff67f044e7e7fcc77cd548a01d045e9dd516c64"
+    }
+  ],
+  "canonical_nested": {
+    "bytes": 27526,
+    "sha256": "b5cdac156cb0722a8451b7f1b8eed15c7c4c5e80f7bec9df5d1d498783c7030e",
+    "manifest_sha": "1d6d41a7ae981afff0865d64fef8e2a9be59c5a68ad6d8fe53306bf47a279991",
+    "two_nested_copies": "IDENTICAL",
+    "manifest": "9/9",
+    "loose": "10/10",
+    "crc": "10/10"
+  },
+  "ledger": {
+    "seq": [
+      51,
+      71
+    ],
+    "hash": "21/21",
+    "links": "20 internal plus prior pin",
+    "previous": "e94dc5ba554e2ea2ba2e7ef0b7e5536a743ffcc9d9f3dab0e1acc386e2a7faf4",
+    "head": "4f2256ca10691808674aa0600d636159e546214127c8fe1e61567cd232ccac1b",
+    "current_script_match": "11/21",
+    "mismatch": [
+      54,
+      55,
+      56,
+      58,
+      60,
+      61,
+      63,
+      64,
+      66,
+      69
+    ],
+    "note": "Ten mismatches listed explicitly, 21-10=11; preliminary 12/21 was a transcription error. Ledger hash and chain counts unchanged.",
+    "prereg": "f29b50f72c183670d513ee00ea9bf6f2b5f73efaeba1d4734ff406f9c7b018b6"
+  },
+  "gate": {
+    "source": "rc12B01_gate_v3.py",
+    "sha256": "18b27d37a2fa02efc85c86604f8c29f5004ac38a66e70536c55e6ff8d7feb9d6",
+    "method": "isolated AST class/function definitions, synthetic deterministic Ed25519 keys, no original main, no external effect; per-case isolated _grant_keys={}; test lambda appends string only",
+    "probes": {
+      "callback_correct_digest": "EFFECT_EXECUTED",
+      "no_keys_binding_unregistered": "EFFECT_EXECUTED",
+      "scope_changed": "EFFECT_EXECUTED",
+      "quorum_changed": "EFFECT_EXECUTED",
+      "key_rotated": "EFFECT_EXECUTED",
+      "stop_command_used_for_resume": "resumed true",
+      "same_pub_three_principals": "GRANTED",
+      "schema_not_dict": "AttributeError",
+      "nonce_nested": "TypeError",
+      "future_epoch": "GRANTED at epoch1 then EFFECT_EXECUTED epoch2",
+      "duplicate_pending": "second GRANTED overwrites pending grant"
+    }
+  },
+  "glm_caveats": [
+    "cylinder through-bore is annulus under axial opaque orthographic silhouette; correct counterexample enclosed cavity",
+    "V3 test only wrong digest, not matching digest with wrong callback",
+    "second gate class-level model not exact source replay",
+    "closeout NIS reference shows differences rather than actual NIS; detailed evidence values 2,1.9999999999999998,100.01",
+    "19/20 second-return design ledger and 24 canonical formal designs distinct; not aggregate"
+  ],
+  "cursor": "preserved; no write to #455",
+  "formal_credit": false
+}

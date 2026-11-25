@@ -1,0 +1,261 @@
+{
+  "state": "EXECUTED_TWO_IMPLEMENTATIONS_C1_NO_FORMAL_CREDIT",
+  "frozen_local_design_sha": "beab69ea422c9009909252ea8defeacad4587f8d1581832cbbc7f503a793c6ab",
+  "python_source_sha": "1701966966789aac842495973746a3790bb5ef0ee104dd8bdd167136bd61ff17",
+  "python_result_sha": "f6059496d66ece3a504aca0bf55fe126042a79bcbd85b32392f0ffd8ac8adaae",
+  "python_meter": {
+    "wall_s": 2.03,
+    "cpu_user_s": 2.11,
+    "cpu_sys_s": 0.33,
+    "maxrss_kib": 141548,
+    "network": "none in sandbox",
+    "tokens": "UNKNOWN",
+    "measurement": "per command, not aggregate lease"
+  },
+  "python_executed_summary": [
+    {
+      "fibers": 16145,
+      "singleton_states": 6902,
+      "target_identified_states": 12054,
+      "max_target_width": 4,
+      "largest_fiber": 90
+    },
+    {
+      "fibers": 59256,
+      "singleton_states": 54272,
+      "target_identified_states": 60448,
+      "max_target_width": 1,
+      "largest_fiber": 5
+    },
+    {
+      "fibers": 65280,
+      "singleton_states": 65024,
+      "target_identified_states": 65536,
+      "max_target_width": 0,
+      "largest_fiber": 2
+    }
+  ],
+  "js_source_sha": "cb70f02407b845a255249a43261e7542f64ece14149464ef72b3979e1eef7089",
+  "js_result": {
+    "levels": [
+      {
+        "fibers": 16145,
+        "singleton_states": 6902,
+        "target_identified_states": 12054,
+        "max_target_width": 4,
+        "largest_fiber": 90
+      },
+      {
+        "fibers": 59256,
+        "singleton_states": 54272,
+        "target_identified_states": 60448,
+        "max_target_width": 1,
+        "largest_fiber": 5
+      },
+      {
+        "fibers": 65280,
+        "singleton_states": 65024,
+        "target_identified_states": 65536,
+        "max_target_width": 0,
+        "largest_fiber": 2
+      }
+    ],
+    "selected_count": 90,
+    "views": {
+      "sum_diag": {
+        "exact": {
+          "max": 1,
+          "mean": 0.3333333333333333,
+          "identified": 60,
+          "robust_all_observations": 1,
+          "witness": [
+            14790,
+            15420
+          ]
+        },
+        "bounded_1": {
+          "max": 3,
+          "mean": 2.0444444444444443,
+          "identified": 2,
+          "robust_all_observations": 3,
+          "witness": [
+            14790,
+            38505
+          ]
+        },
+        "bounded_2": {
+          "max": 4,
+          "mean": 3.2666666666666666,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        }
+      },
+      "diff_diag": {
+        "exact": {
+          "max": 1,
+          "mean": 0.3333333333333333,
+          "identified": 60,
+          "robust_all_observations": 1,
+          "witness": [
+            14025,
+            15420
+          ]
+        },
+        "bounded_1": {
+          "max": 3,
+          "mean": 2.0444444444444443,
+          "identified": 2,
+          "robust_all_observations": 3,
+          "witness": [
+            14025,
+            27030
+          ]
+        },
+        "bounded_2": {
+          "max": 4,
+          "mean": 3.2666666666666666,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        }
+      },
+      "central_pixel": {
+        "exact": {
+          "max": 3,
+          "mean": 3,
+          "identified": 0,
+          "robust_all_observations": 3,
+          "witness": [
+            14025,
+            27030
+          ]
+        },
+        "bounded_1": {
+          "max": 4,
+          "mean": 4,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        },
+        "bounded_2": {
+          "max": 4,
+          "mean": 4,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        }
+      },
+      "target_sum": {
+        "exact": {
+          "max": 0,
+          "mean": 0,
+          "identified": 90,
+          "robust_all_observations": 0,
+          "witness": null
+        },
+        "bounded_1": {
+          "max": 2,
+          "mean": 1.9777777777777779,
+          "identified": 0,
+          "robust_all_observations": 2,
+          "witness": [
+            13260,
+            27030
+          ]
+        },
+        "bounded_2": {
+          "max": 4,
+          "mean": 3.6,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        }
+      },
+      "both_diags": {
+        "exact": {
+          "max": 0,
+          "mean": 0,
+          "identified": 90,
+          "robust_all_observations": 0,
+          "witness": null
+        },
+        "bounded_1": {
+          "max": 2,
+          "mean": 1.5333333333333334,
+          "identified": 12,
+          "robust_all_observations": 2,
+          "witness": [
+            13740,
+            27030
+          ]
+        },
+        "bounded_2": {
+          "max": 4,
+          "mean": 2.7111111111111112,
+          "identified": 0,
+          "robust_all_observations": 4,
+          "witness": [
+            27030,
+            38505
+          ]
+        }
+      }
+    },
+    "first_four_view_pair": [
+      10260,
+      16770
+    ],
+    "certificate": true,
+    "null_witness": true,
+    "parity": true,
+    "collective": [
+      {
+        "q": [
+          52,
+          36,
+          12,
+          0
+        ],
+        "marginal_numerator_over_300": 60,
+        "pair_numerator_over_600": 24,
+        "majority_percent": 12
+      },
+      {
+        "q": [
+          48,
+          48,
+          0,
+          4
+        ],
+        "marginal_numerator_over_300": 60,
+        "pair_numerator_over_600": 24,
+        "majority_percent": 4
+      }
+    ],
+    "formal_credit": false
+  },
+  "integer_rank_sympy": [
+    7,
+    12,
+    15
+  ],
+  "independence": "two implementations by same AXIOM session, not independent external actors",
+  "extension": "post-initial-run exploratory extension all admissible corrupted observations, not original frozen design; JS independently reproduced; robust worst width 3,3,4,2,2 for sum/diff/pixel/target/both eps1",
+  "limits": "4x4 binary, exact base sums, bounded independent component intervals not stochastic noise, no equal cost or physical availability assumption, no physical device, no runtime gate, no formal execution credit. Prior archive scripts not republished."
+}
