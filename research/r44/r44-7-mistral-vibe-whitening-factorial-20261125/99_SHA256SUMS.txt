@@ -1,0 +1,4 @@
+c723b8d4baaa1ad72e5d7893a6f60036f1999b102b24ba211261d6c7097dafbf  research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/00_RETURN_REPORT_MISTRAL_VIBE.md
+a7f9e1df476684f4aee5ea566863a55db6a0cbbb57332d272280c732cefcc968  research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/01_PREREG_FACTORIAL.json
+2ac085c1464075ea4f29b83f18920373c40f319476f3320c00181cb9341d7ebe  research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/02_RESULT_EVIDENCE.json
+9038eb24c52fc903e61ea28e781bc220fd80782f5cc57191172a7ac2f926772f  research/r44/r44-7-mistral-vibe-whitening-factorial-20261125/03_EXECUTED_SCRIPT_V4.md
