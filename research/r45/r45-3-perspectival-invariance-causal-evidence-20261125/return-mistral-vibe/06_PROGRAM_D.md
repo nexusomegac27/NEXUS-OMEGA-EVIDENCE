@@ -1,0 +1,7 @@
+# R45-3 Programm D — Erkenntnistheoretische Synthese (E27-E34) · Desk-Ergebnisse
+1. Primäranker verifiziert: Debs & Redhead, Objectivity, Invariance, and Convention: Symmetry in Physical Science (Harvard University Press 2007; PhilPapers-Eintrag; LSE Research Online) — Position "Perspectival Invariantism". DeepSeeks wörtliches Seitenzitat bleibt unverifiziert (keine Originalseite); inhaltliche Grundposition bibliografisch gestützt.
+2. Gegenliteratur verifiziert: Nounou, Dorato, Lutz, Hartmann (mit Debs/Redhead), A New Perspective on Objectivity and Conventionalism, Metascience 19(1), 3-27 (2010), DOI 10.1007/s11016-010-9321-7 (LMU-Eintrag epub.ub.uni-muenchen.de/20706/) — kritische Diskussion der Kernbehauptungen, u. a. perspektivische Symmetrie als notwendige und hinreichende Bedingung von Objektivität. Der Ansatz bleibt methodischer Forschungskandidat, kein philosophisches Gesetz.
+3. Terminologie konsolidiert: Koordinatenwechsel = andere Darstellung desselben Zustands; Projektion = Beobachtung mit möglichem Informationsverlust; Messung = Beobachtung unter physikalischer Unsicherheit; Modellwechsel = alternative Beschreibung; Invariante I(gx)=I(x); Äquivarianz f(gx)=rho(g)f(x) mit wohldefiniertem Transformationsverhalten.
+4. Relativität nur als strukturelle Analogie (ANALOGY_NOT_IDENTITY): zeit-/lichtartige Zukunftsordnung invariant unter proper orthochronen Lorentz-Transformationen; raumartige Reihenfolge beobachterabhängig; keine physikalische Relativitäts- oder Bewusstseinsbehauptung.
+
+**NEXUS Ω OMEGA**

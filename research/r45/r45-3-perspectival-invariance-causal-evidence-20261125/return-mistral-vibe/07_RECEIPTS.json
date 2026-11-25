@@ -1,0 +1,113 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R45_2_TO_R45_3_PERSPECTIVAL_INVARIANCE_CAUSAL_EVIDENCE_20261125_R0",
+  "agent": "MISTRAL/VIBE",
+  "date": "2026-11-25",
+  "environment": "sandbox, in-memory, no I/O, deterministic LCG",
+  "sha256_selftest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad (\"abc\")",
+  "witness_raw_json": {
+    "raw1": "{\"a\":1,\"b\":2}",
+    "raw1_sha256": "43258cff783fe7036d8a43033f830adfc60ec037382473548ac742b888292777",
+    "raw1_matches_08_RECEIPT": true,
+    "raw2": "{\"b\":2,\"a\":1}",
+    "raw2_sha256": "3fb75453225c732a76b7899ea2096dda1455189c89817239732182f73fe5a09f",
+    "raw2_matches_08_RECEIPT": true,
+    "toy_canonical_equal": true
+  },
+  "witness_linear_log": {
+    "order1": "A,B,C,D",
+    "order1_sha256": "17f5f129f4c769967a884bc2c630677b4479d0a5858de30130b9727c6b335432",
+    "order1_matches_08_RECEIPT": true,
+    "order2": "A,C,B,D",
+    "order2_sha256": "c4902ccaae88059aace63b43904324e91419b56097091cd880d2404932384376",
+    "order2_matches_08_RECEIPT": true
+  },
+  "nis_reference": {
+    "e": [
+      2,
+      1
+    ],
+    "S": "diag(4,1)",
+    "nis_original": 2,
+    "nis_full_transform": 2,
+    "nis_innovation_only": 100.01,
+    "own_parallel_wrong_range": [
+      11.83,
+      26.37
+    ],
+    "invariance_tolerance": "<1e-9 over 5 random invertible T"
+  },
+  "masking_own_construction": {
+    "note": "eigene Konstruktion, Richtungstest, keine exakte Replikation des AXIOM-Seed-Protokolls",
+    "rho": 0.8,
+    "sigma_inn_sq": 0.36,
+    "delta_mean_defect": 0.5,
+    "calibration_draws": 8000,
+    "evaluation_draws": 8000,
+    "f5": 3.62144,
+    "se5": 0.851051,
+    "f10": 5.4294967296,
+    "se10": 0.736851,
+    "coverage_defective_generator_intended_calibration": {
+      "n5": 0.8881,
+      "n10": 0.8779
+    },
+    "coverage_defective_generator_defective_calibration": {
+      "n5": 0.9504,
+      "n10": 0.9467
+    }
+  },
+  "frechet_bound_4x95pm6pp": {
+    "lower": 0.56,
+    "upper": 1,
+    "glm_closeout_text_rejected": "0.56-0.96"
+  },
+  "comparator_own_surrogate": {
+    "nominal_analytic": 0.000031,
+    "nominal_weak": 0.216665,
+    "holdout_mean_analytic": 0.01838,
+    "holdout_mean_weak": 0.21653,
+    "q95_analytic": 0.03508,
+    "q95_weak": 0.24948,
+    "direction_confirmed": true,
+    "scope": "Richtungstest, kein archivierter Optimierer-Run"
+  },
+  "majority": {
+    "individual_error": 0.2,
+    "three_independent_majority": 0.104,
+    "fully_correlated": 0.2
+  },
+  "topological_sorts_dag": {
+    "valid": [
+      "A,B,C,D",
+      "A,C,B,D"
+    ],
+    "count": 2,
+    "b_before_A_invalid": true
+  },
+  "tolerance_nontransitivity": {
+    "near_0_0p75tau": true,
+    "near_0p75_1p5tau": true,
+    "near_0_1p5tau": false
+  },
+  "gate_v3_probe_results": {
+    "probe01_post_stop_new_grant": "E_STOP_PERSISTENT",
+    "probe02_nan_ttl": "E_LEASE_NOT_FINITE_POSITIVE",
+    "probe03_principal_unregistered_after_grant": "E_UNREGISTERED_PRINCIPAL",
+    "probe04_epoch_rollback": "E_EPOCH_ROLLBACK",
+    "probe05_empty_nonce": "E_NONCE_EMPTY",
+    "probe06_unbound_callback": "E_CALLBACK_NOT_BOUND",
+    "probe07_inflight_exception": "E_EFFECT_TERMINAL_RECEIPT",
+    "probe08_no_quorum": "E_QUORUM_REQUIRED",
+    "probe09_caller_threshold_zero": "E_QUORUM_REQUIRED",
+    "probe10_unbound_request_id": "E_REQUEST_ID_NOT_BOUND_TO_LEASE",
+    "probe11_unregistered_key": "E_UNREGISTERED_KEY",
+    "probe12_substring_scope": "E_SCOPE_SUBSTRING",
+    "all_twelve_denied": true,
+    "positive_path_ok": true,
+    "replay_blocked": true,
+    "stop_durable": true,
+    "note": "eigenes synthetisches fail-closed Modell in-memory; Originale rc11B01_stop_gate_reference.py und r452_verify.py nicht auf GitHub; kein Substitutionscredit"
+  },
+  "formal_credit": false,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
