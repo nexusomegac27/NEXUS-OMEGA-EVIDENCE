@@ -1,0 +1,75 @@
+{
+  "input": [
+    {
+      "object": "GLM R45-7 ACK",
+      "bytes": 31213,
+      "sha256": "6eaf11b1e78740720718b5ce5c6851138669d0255f355e32a9405d2f5ac847f2",
+      "manifest": "17/17",
+      "manifest_sha": "ed48a4bd18a9a7d94064d38a021d06f7cfc4a813a22a5c9342bc6e149ac494dc",
+      "crc": "18/18",
+      "sidecar": "MATCH"
+    },
+    {
+      "object": "GLM slot1 R0",
+      "bytes": 112712,
+      "sha256": "c3942b5d7e83f16d94e7622bad6b06b1584aa46977bb18f23e649200fc66e6be",
+      "manifest": "24/24 JSON;23/23 SHA",
+      "crc": "28/28 incl dirs",
+      "nested_sidecar": "MATCH"
+    },
+    {
+      "object": "GLM slot2 R1",
+      "bytes": 213033,
+      "sha256": "da12d51b0d9b89071145666297ad5c89b98e2eb43cede2adacf80d8c5b1d9794",
+      "manifest": "29/29 JSON;28/28 SHA",
+      "manifest_sha": "729d196ee7386933a7222a1d7891be49825deff492ca86eac089778bbe3154bb",
+      "crc": "30/30",
+      "sidecar": "MATCH"
+    },
+    {
+      "object": "GROK R0",
+      "bytes": 103151,
+      "sha256": "ed540ff2608e6fc691f8afe51fce088fd3014313f2facff6fe114f6ebd5d5ee7",
+      "manifest": "49/49",
+      "manifest_sha": "9c2ed35928d100d3496691ba8e2f628f8466ac5e754f18b8285a3b2e015b8215",
+      "crc": "50/50",
+      "sidecar": "MATCH (short filename ~2, sidecar ~1 exact named object)"
+    }
+  ],
+  "replay": {
+    "glm_r1_source_sha": "9ed7e84559a80fd27d4ebf6295c2f8186ef0fab7cffff38541b5531e6e9c6a72",
+    "method": "isolated inspected AST imports, definitions and assignments only, no main",
+    "historical": "9/9 reconstructed class patterns",
+    "sequences": 156,
+    "violations": 0,
+    "defective_committed": 156,
+    "restored_atomic_committed": 12,
+    "grok_source_sha": "a8aa9e76e469f14c1594e1a2f05d58613a01b29964b1a4e335dd8dc31e715458",
+    "grok_reconstructed": "9/9",
+    "formal_credit": false
+  },
+  "new_probes": {
+    "glm": {
+      "changed_cost_2": "COMMITTED",
+      "boolean_cost": "COMMITTED",
+      "nan_cost": "COMMITTED",
+      "inf_cost": "COMMITTED",
+      "settle_without_effect": "SETTLED; effects=0"
+    },
+    "grok": {
+      "expired_hold_unreleased": "held=1; next grant DENIED",
+      "mutable_grant_action": "RECEIPT",
+      "mutable_expiry": "RECEIPT",
+      "resource_body_tamper_old_hash": "VERIFIED_EFFECT",
+      "settlement_without_observation": "SETTLED; readback UNKNOWN"
+    }
+  },
+  "limits": "Class-level synthetic models, trusted-state mutation probes, no real exploit. R1 156 sequences are sequential perturbations not concurrent linearizability. GROK 26/28 own synthetic controls, N23/N24 open. TLC NOT_RUN. Full PDF/DOCX content and historical receipt chains not independently replayed this turn. Original third-party ZIPs not republished.",
+  "cursor": {
+    "issue": 455,
+    "checkpoint": 7170975294,
+    "bind": 7171095740,
+    "head": "c8bf5bed68d6469185b2a2cc4e58d49870e6e6bf",
+    "handoff": "HOLD_UNTIL_OPERATOR_R45_SERIES_CLOSEOUT"
+  }
+}

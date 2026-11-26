@@ -1,0 +1,190 @@
+{
+  "new_designs": [
+    {
+      "id": "R45-9-N01",
+      "test": "source exact absent",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N02",
+      "test": "raw bytes substituted",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N03",
+      "test": "ns JSON precision loss",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N04",
+      "test": "per-boot clock conflated",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N05",
+      "test": "missing sync error bound",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N06",
+      "test": "reorder/drop/duplicate/conflicting seq",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N07",
+      "test": "unit/frame mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N08",
+      "test": "nonfinite values",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N09",
+      "test": "calibration absent/wrong hash",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N10",
+      "test": "weak excitation/target ambiguity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N11",
+      "test": "whitening orientation wrong",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N12",
+      "test": "NIS correlated samples treated iid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N13",
+      "test": "NEES without reference",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N14",
+      "test": "joint coverage multiplied",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N15",
+      "test": "null model weakened",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N16",
+      "test": "schema divergence Android/WWW",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N17",
+      "test": "private raw or identifier leaks",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N18",
+      "test": "synthetic presented physical",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N19",
+      "test": "stale/304 refreshes timestamp",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N20",
+      "test": "pointer partial publication",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N21",
+      "test": "stale grant and epoch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N22",
+      "test": "STOP vs commit race",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N23",
+      "test": "cost NaN/bool/rebound",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N24",
+      "test": "parallel budget race",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N25",
+      "test": "duplicate request changed body",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N26",
+      "test": "lost ACK and fake settlement",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N27",
+      "test": "observer unavailable or altered body",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-N28",
+      "test": "deadline unreachable or hold starvation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P01",
+      "test": "positive exact signed fixture and independent rehash",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P02",
+      "test": "positive clock interval and valid target certificate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P03",
+      "test": "positive cross-language golden projection with explicit stale",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P04",
+      "test": "positive one local atomic mock effect with separate readback",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P05",
+      "test": "positive inert review no effect",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-9-P06",
+      "test": "positive independent rollback and restore under unchanged authority",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "historical": {
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "physical14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false,
+    "hardware_rate": "UNKNOWN",
+    "tlc": "NOT_RUN",
+    "production_refinement": "NOT_ESTABLISHED"
+  },
+  "do_not_sum": true,
+  "closeout": "R45-9 active; operator declaration required for consolidated Cursor handoff. No merge, dispatch, device, Hostinger/WWW write, claim promotion."
+}
