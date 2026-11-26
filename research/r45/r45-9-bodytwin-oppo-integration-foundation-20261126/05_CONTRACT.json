@@ -1,0 +1,104 @@
+{
+  "version": "NEXUS_BT_OPPO_EVIDENCE_CONTRACT_CANDIDATE_V0",
+  "raw_private": {
+    "required": [
+      "schema_version",
+      "stream_pseudonym",
+      "boot_epoch",
+      "sensor_type",
+      "sequence",
+      "sensor_monotonic_ns_decimal_string",
+      "receive_monotonic_ns_decimal_string",
+      "values_si",
+      "units",
+      "frame_id",
+      "calibration_sha256",
+      "app_build_sha256",
+      "chunk_sha256"
+    ],
+    "units": {
+      "accel": "m/s^2",
+      "gyro": "rad/s"
+    },
+    "time": "separate per boot/device clock; UTC interval and reference provenance optional but required for cross-device synchronization; no precision promotion",
+    "ordering": "sequence scoped to stream/boot; identical bytes duplicate, differing bytes conflict, gaps explicit; reject nonfinite/unsupported/malformed fields"
+  },
+  "derived_private": {
+    "required": [
+      "raw_refs",
+      "transform_version",
+      "estimator_version",
+      "target_definition",
+      "observability_status",
+      "uncertainty_model",
+      "calibration_ref",
+      "sync_ref",
+      "nis_dimension",
+      "nis_status",
+      "nees_reference_status",
+      "claim_ceiling"
+    ],
+    "rules": [
+      "NIS not truth",
+      "NEES only with independent reference",
+      "joint vs marginal distinct",
+      "no inference from empty feasible set",
+      "model and calibration separate",
+      "finite values only"
+    ]
+  },
+  "public_projection": {
+    "allowlist": [
+      "schema_version",
+      "snapshot_version",
+      "classification",
+      "claim_ceiling",
+      "source_freshness",
+      "coarse_time_or_age_band",
+      "approved_aggregate_metrics",
+      "quality_flags",
+      "method_version",
+      "public_safe_provenance_ref"
+    ],
+    "classification": [
+      "SYNTHETIC",
+      "VERIFIED_DERIVED",
+      "NO_DATA",
+      "UNKNOWN"
+    ],
+    "freshness": [
+      "FRESH",
+      "STALE",
+      "AMBIGUOUS",
+      "UNKNOWN"
+    ],
+    "privacy": "E23 HOLD: synthetic only in this round. No raw fields or identifying times; production approval separate.",
+    "freshness_rule": "age range [now_lo-event_hi,now_hi-event_lo]; FRESH only lower>=0 and upper<=TTL; STALE only lower>TTL; else AMBIGUOUS; unavailable clock UNKNOWN; fetch timestamp not source timestamp."
+  },
+  "authority": {
+    "required": [
+      "request_id",
+      "nonce",
+      "principal",
+      "action_descriptor_hash",
+      "payload_hash",
+      "target",
+      "policy_version",
+      "epoch",
+      "resource_fence",
+      "expiry",
+      "aggregate_reservation",
+      "observer_ready"
+    ],
+    "result": [
+      "DENIED",
+      "UNKNOWN",
+      "VERIFIED_EFFECT",
+      "VERIFIED_NO_EFFECT",
+      "CONFLICT"
+    ],
+    "unknown": "no auto-retry of non-idempotent unknown; independent reconciliation"
+  },
+  "formal_credit": "NONE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}

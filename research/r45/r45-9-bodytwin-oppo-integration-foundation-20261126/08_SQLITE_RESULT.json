@@ -1,0 +1,24 @@
+{
+  "budget_overruns": 0,
+  "checks": {
+    "altered_body": "DENIED",
+    "bool_cost": "DENIED",
+    "conflict": "CONFLICT",
+    "cost_changed": "DENIED",
+    "duplicate": "DUPLICATE",
+    "expiry_boundary": "DENIED",
+    "lost_ack": "UNKNOWN",
+    "nan_cost": "DENIED",
+    "readback": "VERIFIED_MOCK",
+    "rollback_before_commit": "ABSENT",
+    "stale_epoch": "DENIED",
+    "stop": "DENIED",
+    "tampered_readback": "HOLD_MISMATCH"
+  },
+  "exactly_one_commit": 100,
+  "formal_credit": false,
+  "limits": "single temporary database; logical clock and trusted preloaded grant fixtures; no real crash, external effect, real signing or OS mediation; no wallclock guarantee",
+  "matched": 13,
+  "sqlite_version": "3.46.1",
+  "two_writer_trials": 100
+}

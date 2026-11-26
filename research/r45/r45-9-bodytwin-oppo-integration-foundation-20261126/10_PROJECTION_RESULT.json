@@ -1,0 +1,76 @@
+{
+  "source_sha256": "f70f1d8f7c8388432484e14af70042211ae892233369d8bbaa293cbe3a868f82",
+  "result": {
+    "tests": [
+      {
+        "id": "decimal_ns_distinct",
+        "pass": true
+      },
+      {
+        "id": "js_number_collides",
+        "pass": true
+      },
+      {
+        "id": "numeric_ns_rejected",
+        "pass": true
+      },
+      {
+        "id": "same_boot_clock_not_utc",
+        "pass": true
+      },
+      {
+        "id": "fresh",
+        "pass": true
+      },
+      {
+        "id": "stale",
+        "pass": true
+      },
+      {
+        "id": "ambiguous",
+        "pass": true
+      },
+      {
+        "id": "future",
+        "pass": true
+      },
+      {
+        "id": "clock_unknown",
+        "pass": true
+      },
+      {
+        "id": "allowlist_only",
+        "pass": true
+      },
+      {
+        "id": "304_not_fresh",
+        "pass": true
+      },
+      {
+        "id": "real_data_not_released",
+        "pass": true
+      },
+      {
+        "id": "promotion_denied",
+        "pass": true
+      },
+      {
+        "id": "nonfinite_denied",
+        "pass": true
+      }
+    ],
+    "matched": 14,
+    "example_public": {
+      "schema_version": "toy-v0",
+      "classification": "SYNTHETIC",
+      "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+      "freshness": "STALE",
+      "metric": 1
+    },
+    "formal_credit": false,
+    "limits": "toy projection, no full schema or privacy proof; clock equality example only, no sync estimation"
+  },
+  "sqlite_source_sha": "b36f888b01924ca9620845a17f69dfcebb61cbb3c798b9ede0a76982bcbcb747",
+  "sqlite_result_sha": "423b49688b7f08fa8fb7c71779ce1aacd819c2f75e723c2c726ef422e24009c8",
+  "scope": "AXIOM local SQLite and JS synthetic diagnostics; no device/WWW or formal gate credit"
+}
