@@ -1,0 +1,4 @@
+SHA256(Dekodiertes r45-6-stack_R0.zip) = 4e19f1e932a5607ccd5ed59da176344a723bc0b54328b73197a453e1cdaef60a
+SHA256(r45-6-stack_R0.zip.b64 als Text) = ddbb1d0f10e3a8a21a32e3d8bb9908ece63df7a293032917ad1d3591f48bc96b
+Methode = STORE, 9 Mitglieder (00 bis 08), CRC-Selbstpruefung 9_OF_9_PASS, DOS-Zeit 2026-11-26 12:00
+NEXUS Ω OMEGA

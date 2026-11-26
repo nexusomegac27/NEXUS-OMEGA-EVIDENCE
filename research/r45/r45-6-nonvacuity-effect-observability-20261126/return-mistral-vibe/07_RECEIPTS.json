@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "object": "NEXUS_OMEGA_AXIOM_R45_5_TO_R45_6_NONVACUITY_EFFECT_OBSERVABILITY_20261126_R0",
+    "return": "MISTRAL_VIBE_RETURN_R45_6_DESK_R0",
+    "date": "2026-11-26",
+    "language": "de",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "transfer_policy": "GITHUB_ONLY",
+    "formal_gate_credit": "NONE",
+    "axiom_adjudication_of_prior_own_work": "LS-Replikation R45-5 = algebraischer Vergleich, kein unabhaengiger Zielnachweis (UEBERNOMMEN)"
+  },
+  "primitive_selftests": {
+    "sha256_abc": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "sha1_abc": "a9993e364706816aba3e25717850c26c9cd0d89d",
+    "crc32_123456789": "cbf43926"
+  },
+  "program_a_model_checker": {
+    "method": "explicit state breadth-first fixed point",
+    "models": "one reference, 11 mutants, 3 vacuity variants",
+    "reference": { "reachable_states": 4704, "transitions_checked": 56576, "effects_executed": 128, "denials_exercised": 18688, "max_depth": 12, "invariant_violations": 0, "progress_witness": true, "stop_witness": true, "grant_witness": true },
+    "mutant_detection": "11_OF_11",
+    "mutation_traces": { "M01_STOP": 3, "M02_LEASE": 4, "M03_KEY": 3, "M04_SCOPE": 3, "M05_POLICY": 3, "M06_EPOCH": 3, "M07_BIND": 2, "M08_REPLAY": 3, "M09_RESUME_AUTH": 2, "M10_RECEIPT_WITHOUT_EFFECT": 2, "M11_EFFECT_WITHOUT_RECEIPT": 2 },
+    "vacuity": { "V1_DENY_ALL": "HOLD (96 states, no effect witness)", "V2_EFFECT_IMPOSSIBLE": "HOLD (1632 states, no effect witness)", "V3_EMPTY_INITIAL": "HOLD (0 states, trivial)" },
+    "run_history": [ { "run": 1, "verdict": "VERWORFEN (Bindungspruefung verglich Label-Text statt Wert, M07 blieb stumm)" }, { "run": 2, "verdict": "FINAL" } ],
+    "axiom_reference_numbers": { "reachable_states": 1424, "transitions": 15664, "model_variants": 15, "mutant_counterexamples": "11_OF_11", "insufficient_support": "3_OF_3", "note": "externe Referenz, nicht eigene Messwerte" }
+  },
+  "program_b": { "observability_witness": { "world_A": "report PASS plus receipt plus resource changed", "world_B": "report PASS plus receipt plus resource unchanged", "report_distinguishes": false, "report_plus_self_receipt_distinguishes": false, "independent_resource_observation_distinguishes": true }, "assumption": "correct, independent, complete resource observation" },
+  "program_c": {
+    "openai_cot_report": { "title": "What affects chain-of-thought monitorability across the model lifecycle?", "published": "2026-11-10", "verified_live": true },
+    "iaps_transparency": { "source": "IAPS report / arXiv:2611.13873", "verified_live_landing_page": true },
+    "arxiv_2611_21799": "zitiert nach Ordnung, nicht selbst geoeffnet"
+  },
+  "program_d": { "empty_admissible_space_rule": "F(D,y) must be non-empty before identifiability claims", "circularity_caveat_accepted": true }
+}
+
