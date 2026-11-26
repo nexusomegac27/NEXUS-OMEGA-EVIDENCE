@@ -1,0 +1,154 @@
+{
+  "scope": "new design register only, not historical canonical gates",
+  "formal": "NOT_RUN",
+  "controls": [
+    {
+      "id": "R45-7E-N01",
+      "test": "expired research transfer permission",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N02",
+      "test": "missing separate real grant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N03",
+      "test": "artifact digest changed",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N04",
+      "test": "action or principal mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N05",
+      "test": "stale epoch after snapshot restore",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N06",
+      "test": "STOP after grant",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N07",
+      "test": "aggregate budget race",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N08",
+      "test": "duplicate request nonce",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N09",
+      "test": "observer missing or degraded",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N10",
+      "test": "effect lease expired",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N11",
+      "test": "invalid or missing source/schema",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N12",
+      "test": "vacuous or inapplicable proof",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N13",
+      "test": "unknown gate value",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N14",
+      "test": "crash before commit",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N15",
+      "test": "crash after effect before receipt",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N16",
+      "test": "late ACK current request mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N17",
+      "test": "external effect survives local rollback",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N18",
+      "test": "unsafe fallback to real interaction",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N19",
+      "test": "dynamically generated capability expands rights",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N20",
+      "test": "delayed cross-process effect missing provenance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N21",
+      "test": "observer event drop or forged report",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N22",
+      "test": "secret or private source in candidate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N23",
+      "test": "deadline never reachable",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-N24",
+      "test": "sham dissent or endless HOLD",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-P01",
+      "test": "positive valid mock effect with current authorization",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-P02",
+      "test": "positive inert review without effect",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-P03",
+      "test": "positive expired artifact new explicit read-only intake",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R45-7E-P04",
+      "test": "positive independent readback reconciles unknown without repeat",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "historical": [
+    "G1-G12",
+    "AX-R7-01..04",
+    "0/24",
+    "0/3",
+    "0/10"
+  ],
+  "do_not_sum": true
+}

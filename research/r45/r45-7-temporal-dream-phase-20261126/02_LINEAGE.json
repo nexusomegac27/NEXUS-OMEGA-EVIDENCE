@@ -1,0 +1,126 @@
+{
+  "parent_git": {
+    "issue": 459,
+    "pr": 460,
+    "head": "5537296533190e6b93a24a504aa34909dc5f2190"
+  },
+  "internal": {
+    "r45_5": {
+      "bytes": 11199,
+      "sha256": "cd51a99557a52ccfbfb8810bf568d5a2eda43f0cead091d175d454fa23ef4841",
+      "status": "prior report pin"
+    },
+    "r45_6": {
+      "bytes": 11831,
+      "sha256": "d091239c767c424207112bd3e8539d71d6124f3f3868e5959411746b301cbcef",
+      "status": "prior report pin"
+    },
+    "r45_7": {
+      "bytes": 17921,
+      "sha256": "b240ea5741061d78685f285adf8fb8c33687a162e37817ec9e68e33cc6503ee8",
+      "manifest": "5780e8beb7aeca0b130a18898dd7dede9f857b35cd57c12c645e4bed81dc3691",
+      "manifest_match": "12/12",
+      "crc": "13/13",
+      "original_zip": "LOCAL_CUSTODY_NOT_REPUBLISHED"
+    }
+  },
+  "received": [
+    {
+      "object": "Temporal Dream Phase handshake",
+      "bytes": 12702,
+      "sha256": "d6233911065dd3dbd298be9c85242256a0c100636ed804030b0a18e5a9938da0"
+    },
+    {
+      "object": "DeepSeek prior",
+      "bytes": 64229,
+      "sha256": "e5a268316d3aba02395f3d48164ef463ba3da1e99ae26e4d8889adb5e49cdc52"
+    },
+    {
+      "object": "Auto-C",
+      "bytes": 75697,
+      "sha256": "c68a0725a62a8626b6dc99f5de0e60dba82e23c24facb2c709085b633b336c9b"
+    },
+    {
+      "object": "AXIOM R45-6 report",
+      "bytes": 29569,
+      "sha256": "f52b337d7441a49695a256580030b3d7450411e85b8c1678e6fe1cc4a2ce97c1"
+    },
+    {
+      "object": "GLM expert",
+      "bytes": 103189,
+      "sha256": "5dfc91c0a517e5d2af1662f9f960a4569c119111fc05d41c502ec1132a679ad3",
+      "sidecar": "MATCH"
+    },
+    {
+      "object": "GLM transfer container",
+      "bytes": 216083,
+      "sha256": "7a402c3ca492881f147f37174dc1ac1fbbcc73c53b8abc0a7c93877d35ae69b1",
+      "nested": {
+        "bytes": 134046,
+        "sha256": "195df299dee0290473759bf463d86f4ffae06b9f5f1b0a7ea4cdfb426f02caa5",
+        "sidecar": "MATCH",
+        "crc": "47/47"
+      }
+    },
+    {
+      "object": "Mistral report",
+      "bytes": 13391,
+      "sha256": "5d27cef8804daffeaeb2e0165a80f9045cbd0d17f0c5feb86410703c04f0cd49"
+    }
+  ],
+  "handshake": {
+    "receiver_ack": "COMPLETE_BYTES",
+    "frame_lock": "HOLD_INCOMPLETE_SPECIFICATION",
+    "research_intake": "ACCEPTED",
+    "execution_authority": false,
+    "original_assumptions_and_SG_definitions": "SOURCE_GAP"
+  },
+  "prior_diagnostics": {
+    "glm_single": [
+      3360,
+      24718
+    ],
+    "glm_two": [
+      49152,
+      413952
+    ],
+    "stale_success": "REPRODUCED_PRIOR_TURN",
+    "cross_node": "REPRODUCED_PRIOR_TURN",
+    "fairness": [
+      24,
+      54,
+      9,
+      0
+    ],
+    "no_tick": [
+      6,
+      10,
+      3,
+      3
+    ],
+    "budget_overrun": [
+      4,
+      0,
+      6
+    ],
+    "e_process": {
+      "n": 8000,
+      "seed": 45707,
+      "alarms_pct": [
+        3.1,
+        99.95,
+        86.95,
+        2.15,
+        99.85
+      ]
+    },
+    "tlc": "NOT_RUN"
+  },
+  "cursor": {
+    "issue": 455,
+    "checkpoint": 7170975294,
+    "bind": 7171095740,
+    "head": "c8bf5bed68d6469185b2a2cc4e58d49870e6e6bf",
+    "handoff": "PROHIBITED_UNTIL_R45_SERIES_CLOSEOUT"
+  }
+}
