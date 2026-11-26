@@ -1,0 +1,66 @@
+{
+  "status": "AXIOM_EXECUTED_SYNTHETIC_DIAGNOSTIC",
+  "source_sha256": "6a020682da57fa999bada300051274a360d7d6b51514b55092234a7a4b8b7bce",
+  "result": {
+    "domain": 4096,
+    "allowed": 1,
+    "denied": 4095,
+    "mutants": {
+      "artifact": 1,
+      "source_schema": 1,
+      "proof_support": 1,
+      "transfer_permission": 1,
+      "separate_real_grant": 1,
+      "identity_action": 1,
+      "epoch_fence": 1,
+      "stop_clear": 1,
+      "reserved_budget": 1,
+      "nonce_unused": 1,
+      "observer_ready": 1,
+      "effect_lease": 1
+    },
+    "unknown": {
+      "artifact": false,
+      "source_schema": false,
+      "proof_support": false,
+      "transfer_permission": false,
+      "separate_real_grant": false,
+      "identity_action": false,
+      "epoch_fence": false,
+      "stop_clear": false,
+      "reserved_budget": false,
+      "nonce_unused": false,
+      "observer_ready": false,
+      "effect_lease": false
+    },
+    "cases": {
+      "expired_transfer": false,
+      "snapshot_stale_epoch": false,
+      "stop_after_grant": false,
+      "real_grant_absent": false,
+      "fresh_grant": true,
+      "inert_review_no_effect": {
+        "terminal": "REVIEW_ELIGIBLE",
+        "effects": 0
+      },
+      "lost_ack": {
+        "first": "UNKNOWN",
+        "before": 1,
+        "readback": "EFFECT",
+        "replay": "DENIED",
+        "after": 1
+      },
+      "local_snapshot_restore": {
+        "local_state": "old",
+        "external_effect_still_present": true
+      }
+    },
+    "formal_credit": false,
+    "limits": "truth table and toy persistent resource only; no actual authority, signature, concurrency or isolation tested"
+  },
+  "formal_credit": false,
+  "external_expert_execution": "NOT_STARTED",
+  "cursor": "UNCHANGED",
+  "production": "NOT_AUTHORIZED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
