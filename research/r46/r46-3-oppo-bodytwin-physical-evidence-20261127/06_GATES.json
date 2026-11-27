@@ -1,0 +1,138 @@
+{
+  "register": "R46-3 new design-only controls, nonadditive historical",
+  "designs": [
+    {
+      "id": "R46-3-N01",
+      "test": "row count vs sensor events",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N02",
+      "test": "requested vs effective interval rate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N03",
+      "test": "zero threshold gaps misread no packet loss",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N04",
+      "test": "norm SD misread axis covariance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N05",
+      "test": "abs(mean-g) misread mean(abs(g residual))",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N06",
+      "test": "same norm different orientation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N07",
+      "test": "same mean and SD different ordering",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N08",
+      "test": "one pose scale/bias nonuniqueness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N09",
+      "test": "gravity-only yaw unobservable under stated model",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N10",
+      "test": "short record long-term drift overclaim",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N11",
+      "test": "independence from untested whiteness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N12",
+      "test": "NIS without model",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N13",
+      "test": "NEES without reference",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N14",
+      "test": "historic replay labeled live",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N15",
+      "test": "producer tick resets source age",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N16",
+      "test": "synthetic presented physical",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N17",
+      "test": "APK built presented installed",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N18",
+      "test": "local browser presented deployed",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N19",
+      "test": "recursive private metadata leak",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-N20",
+      "test": "source hash presented truth",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-P01",
+      "test": "positive source-bound arithmetic",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-P02",
+      "test": "positive target width / abstention",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-P03",
+      "test": "positive historic labeled projection",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-3-P04",
+      "test": "positive source-gap NOT_COMPUTED",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "separate_executed_reference": "7 checks in 05, no formal gate credit",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true
+}
