@@ -1,0 +1,44 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_4_REFERENCE_METROLOGY_EXPERT_RETURN_GLM_R1_20261127_R0",
+  "date": "2026-11-27",
+  "purpose": "Ressourcen- und Rechenschaftsbeleg der GLM-Lane fuer R46-4",
+  "order_input": {
+    "source": "R46_4_EXTERNAL_OPPO_REFERENCE_METROLOGY_ORDER_R0 (Issue #476, Draft-PR #477, HEAD f39aeeb2)",
+    "members_declared": 12,
+    "members_verified": 12,
+    "verification_method": "SHA-256 via base64-bridge + git blob SHA-1 readback, alle MATCH",
+    "local_copy": "02_INPUT/R46_4_ORDER.txt (18431 B, unveraendert)"
+  },
+  "compute": {
+    "runner": "03_WITNESSES_RUNNER.js, deterministic, no external state",
+    "rng": "32-bit LCG (Numerical Recipes), seed 20261127, Box-Muller; used only in W20/W21 and MC cross-checks",
+    "mc_trials_per_validation": 2000000,
+    "simulation": {"trials": 1000, "holdout_poses": 12, "noise_sigma_per_component": 0.001},
+    "execution_note": "Erstlauf enthielt 6 Implementierungsdefekte, alle durch eingebaute Kreuzchecks erkannt und vor Endlauf korrigiert (D04); Prereg-File unveraendert"
+  },
+  "results": {
+    "checks_total": 15,
+    "checks_passed": 15,
+    "acceptance": "ALL_PREREG_CHECKS_PASS",
+    "prereg_divergences": ["D01_W01_METHOD", "D02_MC_TOLERANCE", "D03_CROSSCHECK_STRUCTURE", "D04_EXECUTION_NOTE"]
+  },
+  "deliverables": [
+    "00_START_HERE.md", "01_RETURN_REPORT.md", "02_INPUT/R46_4_ORDER.txt", "02_PREREG.md",
+    "03_WITNESSES_RUNNER.js", "04_RESULTS.json", "05_EVIDENCE_FRAME.json", "06_INTEGRATION_MATRIX.json",
+    "07_SOURCES.md", "08_GATES_AND_HOLDS.json", "09_RESOURCE_RECEIPT.json", "10_LIMITATIONS.md",
+    "99_SHA256SUMS.txt", "R46_4_REFERENCE_METROLOGY_RETURN_20261127_GLM_R1.zip (.zip.b64 + .zip.sha256 sidecar)"
+  ],
+  "unknowns": {
+    "status": "NOT_COMPUTED",
+    "items": [
+      "sigma per axis (komponentenweise Standardabweichung)",
+      "reference orientation uncertainty",
+      "local gravity magnitude (tatsaechlicher Ortswert)",
+      "OPPO clock offset",
+      "temperature sensitivities"
+    ],
+    "reason": "Keine OPPO-Rohdaten und keine physische Referenzmessung in dieser Lane verfuegbar; C1-Ceiling aktiv"
+  },
+  "holds_carried": true,
+  "next": "R46_4_RETURN_FOR_AXIOM_ADJUDICATION"
+}

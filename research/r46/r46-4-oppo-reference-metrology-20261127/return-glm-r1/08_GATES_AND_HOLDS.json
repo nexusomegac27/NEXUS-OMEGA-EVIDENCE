@@ -1,0 +1,46 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_4_REFERENCE_METROLOGY_EXPERT_RETURN_GLM_R1_20261127_R0",
+  "date": "2026-11-27",
+  "purpose": "Gates and Holds: vollstaendige Uebernahme der AXIOM-Holds aus dem Order-ZIP (02_ADJUDICATION.json / 08_R21_PARENT_EVIDENCE.json), unverändert durch R46-4",
+  "holds": [
+    {
+      "id": "HOLD_PHYSICAL_CHAIN",
+      "statement": "Physische Kette: 0/14 Messungen physisch verifiziert",
+      "value": {"verified": 0, "total": 14},
+      "status": "ACTIVE",
+      "changed_by_r46_4": false
+    },
+    {
+      "id": "HOLD_ALT_D",
+      "statement": "Alternative Deutung ALT_D ist aktiv und nicht ausgeräumt",
+      "status": "ACTIVE",
+      "changed_by_r46_4": false
+    },
+    {
+      "id": "HOLD_CLAIM_CEILING",
+      "statement": "Claim ceiling C1_DESCRIPTIVE_ONLY: R21-Aggregate sind deskriptiv, keine Kalibriergrade",
+      "status": "ACTIVE",
+      "changed_by_r46_4": false,
+      "reinforced_by": ["W05 model equivalence", "W19 gauge", "W22 budget unknowns NOT_COMPUTED"]
+    },
+    {
+      "id": "HOLD_CURSOR_HANDOFF",
+      "statement": "Cursor-Handoff verboten bis R46-9-Closeout",
+      "status": "PROHIBITED_UNTIL_R46_9_CLOSEOUT",
+      "changed_by_r46_4": false
+    }
+  ],
+  "gates_opened_by_this_return": [
+    {
+      "gate": "R46_4_RETURN_FOR_AXIOM_ADJUDICATION",
+      "condition": "15/15 prereg checks pass, prereg divergences documented (D01-D04), order input integrity 12/12",
+      "state": "OPEN"
+    }
+  ],
+  "gates_still_closed": [
+    {"gate": "any C2+ claim", "reason": "ceiling C1 active"},
+    {"gate": "physical verification", "reason": "0/14, requires on-device physical chain"},
+    {"gate": "cursor handoff", "reason": "R46-9 closeout not reached"}
+  ],
+  "adjudication_note": "R46-3 wurde von der Nutzerverwaltung 'mit Auflagen angenommen'; deren Auflagen gelten als Konventionen auch fuer R46-4 und werden hier eingehalten (strikte Prereg-Dokumentation, Divergenzregister, Hold-Erhalt)."
+}

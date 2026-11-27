@@ -1,0 +1,60 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_4_REFERENCE_METROLOGY_EXPERT_RETURN_GLM_R1_20261127_R0",
+  "date": "2026-11-27",
+  "lane": "GLM_independent_expert",
+  "purpose": "Strenger Evidence-Contract und Projektionsvalidierung fuer BodyTwin [C1], verifiziert durch W23-W34",
+  "prereg_sha256": "4f30fa5b8658db6b068a25033719de4ee26b57b6e43e8c107e60854863f0e55f",
+  "validator": {
+    "kind": "strict_recursive_allowlist_typed_projection",
+    "implementation": "03_WITNESSES_RUNNER.js (W23-W34)",
+    "rules": [
+      "R1 top-level keys restricted to fixed allowlist; unknown key => E_ALLOWLIST_TOP",
+      "R2 nested objects restricted to per-class allowlists; unknown nested key => E_ALLOWLIST_AGG",
+      "R3 enums case-sensitive: evidence_class, mode, status, channel => E_ENUM / E_ENUM_CASESENSITIVE",
+      "R4 required fields: evidence_class, mode, status, channel, units, created => E_REQUIRED",
+      "R5 all numeric values finite (NaN/Infinity rejected) => E_FINITE",
+      "R6 time ordering: capture_ts <= fetch_ts => E_TIMEORDER",
+      "R7 status VERIFIED requires source identity with kind PERMITTED_READBACK => E_SOURCE",
+      "R8 age_basis rules per status (AGGREGATE_ONLY: aggregate_window required; UNKNOWN/ABSTAIN: no claims)",
+      "R9 source ids must not match PRIVATE_PATTERN => E_PRIVATE",
+      "R10 class/mode consistency: E1_HISTORICAL_AGGREGATE requires mode HISTORICAL; E2_SYNTHETIC_DERIVED requires SYNTHETIC; E3_PUBLIC_SAFE_PROJECTION allows HISTORICAL or LIVE",
+      "R11 status consistency: AGGREGATE_ONLY only with E1_HISTORICAL_AGGREGATE",
+      "R12 units must be a declared SI-compatible unit string per channel"
+    ],
+    "classes": [
+      "E1_HISTORICAL_AGGREGATE",
+      "E2_SYNTHETIC_DERIVED",
+      "E3_PUBLIC_SAFE_PROJECTION"
+    ],
+    "modes": ["HISTORICAL", "LIVE", "SYNTHETIC"],
+    "statuses": ["AGGREGATE_ONLY", "VERIFIED", "UNKNOWN", "ABSTAIN"],
+    "channels_case_sensitive": [
+      "PHYSICAL_ACC",
+      "PHYSICAL_GYRO",
+      "PHYSICAL_MAG",
+      "SYNTHETIC_ACC",
+      "SYNTHETIC_GYRO",
+      "PROJECTION_DERIVED"
+    ]
+  },
+  "validation_results": {
+    "negative_cases_total": 12,
+    "negative_cases_rejected": 12,
+    "positive_cases_pass": ["P01_typed_historical_verified", "P02_synthetic_only", "P03_abstention_record"],
+    "mutation_control": {
+      "case": "P04_one_defect_mutation_EXPECT_REJECT",
+      "result": "REJECT",
+      "errors": ["E_ENUM_CASESENSITIVE: channel"]
+    },
+    "witness_reference": "04_RESULTS.json#checks.W23_W34_CONTRACT"
+  },
+  "binding_for_r46_5": [
+    "Only records with status VERIFIED and source identity PERMITTED_READBACK may enter fusion as measured data.",
+    "AGGREGATE_ONLY records (R21 parent aggregates) are descriptor-level only; ceiling C1_DESCRIPTIVE_ONLY applies.",
+    "E2_SYNTHETIC_DERIVED must never be labelled VERIFIED.",
+    "Records failing any rule are rejected at ingest; no repair path in R46-5.",
+    "ABSTAIN is an allowed, first-class outcome and must be propagated, not dropped."
+  ],
+  "holds_respected": true,
+  "next": "R46_4_RETURN_FOR_AXIOM_ADJUDICATION"
+}
