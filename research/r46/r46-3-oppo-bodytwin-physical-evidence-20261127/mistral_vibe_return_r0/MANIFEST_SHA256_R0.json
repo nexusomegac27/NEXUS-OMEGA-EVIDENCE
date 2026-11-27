@@ -1,0 +1,89 @@
+{
+  "manifest_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "generated_utc_local": "2026-11-27T13:32:39.952Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "zip_name": "R46_3_MISTRAL_VIBE_RETURN_R0.zip",
+  "zip_bytes": 71181,
+  "zip_sha256": "6fcdc82694ceb5e5832cb1e497f2cf7d790ab5c5f0e5011e320e8804f1cf6fa2",
+  "zip_entry_count": 11,
+  "zip_compression": "STORED (method 0), DOS timestamp 2026-11-27 12:00:00",
+  "self_check": "EOCD parsed, 11/11 CRC-32 entries recomputed and matched",
+  "source_of_members": "byte-exact readback from the return branch immediately before packaging (D2 discipline)",
+  "decode_instructions": "base64 -d R46_3_MISTRAL_VIBE_RETURN_R0.zip.b64 > R46_3_MISTRAL_VIBE_RETURN_R0.zip && sha256sum -c R46_3_MISTRAL_VIBE_RETURN_R0.zip.sha256 && unzip -t R46_3_MISTRAL_VIBE_RETURN_R0.zip",
+  "transport_label": "OPERATOR_AUTHORIZED_GITHUB_SEND_VIA_AGENT_CONNECTOR",
+  "members": [
+    {
+      "name": "00_START_HERE.md",
+      "bytes": 1687,
+      "sha256": "a662ad8aeec97503c7a8b319ac597b6aa7a8005a2b9d30049479520e1245a343",
+      "crc32": "17d94a97"
+    },
+    {
+      "name": "01_PREREG_R0.json",
+      "bytes": 2568,
+      "sha256": "c643555ae7b80c7a484348c9fb6556f436e80eca7ef7ab38f8c41cc06bf1421b",
+      "crc32": "d469c91b"
+    },
+    {
+      "name": "02_RETURN_MAIN.md",
+      "bytes": 13415,
+      "sha256": "6807bb11d73ccf8e5b31aa2527a6ce528d1bd79110e69f091992722d76fd6fdc",
+      "crc32": "eae9efe7"
+    },
+    {
+      "name": "03_SOURCES_LEDGER.json",
+      "bytes": 8519,
+      "sha256": "2119a6fad2b7aa1ff6d72f4ac300ba3c179018f287875d13f448f914e8764f0d",
+      "crc32": "11ffa27a"
+    },
+    {
+      "name": "04_WITNESSES_MISTRAL_VIBE.js",
+      "bytes": 14873,
+      "sha256": "2c2cc37dcc6c413a68b3e63b20eeaee01871c00e8e85ed1a6c978c8e25ef24cc",
+      "crc32": "8e67b3c9"
+    },
+    {
+      "name": "05_RESULTS_R0.json",
+      "bytes": 12456,
+      "sha256": "f0cd4b863798c792d80b15360a786a6e62347bde3211a3e0cd6001b77d1f3cf1",
+      "crc32": "c235b943"
+    },
+    {
+      "name": "06_INTEGRATION_MATRIX.json",
+      "bytes": 4263,
+      "sha256": "11a24f3c1b2cbf678feb6ad8600bd685237213a8ad8a3c003c7e6c9647f794dd",
+      "crc32": "fb89ccd2"
+    },
+    {
+      "name": "07_EVIDENCE_CONTRACT_R0.json",
+      "bytes": 4645,
+      "sha256": "7521ae9d545f14056d8e52bcd124f9bce1a84e79a4b57aa4210ddc3e22fd6185",
+      "crc32": "471c2e54"
+    },
+    {
+      "name": "08_GATES_R0.json",
+      "bytes": 3457,
+      "sha256": "dd8927724413338210368703a857a731ed634a443c849b7cb7896095ed5e5128",
+      "crc32": "bfd64fb4"
+    },
+    {
+      "name": "09_RESOURCE_RECEIPT.json",
+      "bytes": 1244,
+      "sha256": "94457d40b3e1ab23c82d70bed73830532f9f3910b502e358ff6c2160dcb525f8",
+      "crc32": "98e0a609"
+    },
+    {
+      "name": "10_CHECKPOINT_R0.json",
+      "bytes": 2730,
+      "sha256": "c8498cc2f2430e103acdb28b1419ab10cdc012c878d543112f9eb849b033a150",
+      "crc32": "93b5bbef"
+    }
+  ],
+  "flags": {
+    "SELF_ACK": "NO",
+    "ADJUDICATION": "PENDING_AXIOM",
+    "MERGE": "PROHIBITED",
+    "CURSOR_HANDOFF": "PROHIBITED_UNTIL_R46_9_CLOSEOUT"
+  }
+}
