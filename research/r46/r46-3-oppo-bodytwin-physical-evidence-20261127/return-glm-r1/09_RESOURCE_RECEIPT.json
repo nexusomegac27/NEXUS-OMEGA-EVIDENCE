@@ -1,0 +1,21 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_3_RESOURCE_RECEIPT_GLM_R1_R0",
+  "date_utc": "2026-11-27",
+  "window_start_utc": "2026-11-27T15:40:57Z",
+  "wall_clock_cpu_rss": "NOT_INSTRUMENTED (Umgebung stellt keine Prozessmetriken bereit; UNKNOWN bleibt UNKNOWN)",
+  "preregistered_checks_executed": 25,
+  "preregistered_checks_passed": 25,
+  "synthetic_witnesses_executed": ["W07", "W09", "W14", "W15", "W16", "W17", "W18"],
+  "contract_tests": { "negative_rejected": 6, "positive_controls_passed": 2 },
+  "network_gets_readonly": [
+    { "url": "https://developer.android.com/reference/android/hardware/SensorEvent", "status": "OK" },
+    { "url": "https://doi.org/10.3390/s26154685", "status": "OK" }
+  ],
+  "github_access": "read-only (Issue #470 + Kommentare, Repo-Listing, Order-Mitglieder); 0 Branch-Writes zum Zeitpunkt dieser Bilanz",
+  "retries": "mehrere Connector-Batch-Abrufe instabil; Einzelabrufe erfolgreich; keine Auswirkung auf Messwerte",
+  "subagents": 0,
+  "token_budget_cost": "UNKNOWN (kein Budget-Werkzeug verfuegbar)",
+  "new_physical_captures": 0,
+  "private_raw_materials_touched": 0,
+  "honesty_note": "Zeit-/Speichermessung der Berechnungen in dieser Umgebung nicht moeglich; Bilanz qualitativ, nachweisbare Operationen gezaehlt."
+}

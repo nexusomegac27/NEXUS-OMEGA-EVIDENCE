@@ -1,0 +1,50 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_3_GATES_HOLDS_GLM_R1_R0",
+  "round": "R46-3",
+  "date_utc": "2026-11-27",
+  "series_status": {
+    "R46_2": "ADMINISTRATIVELY_CLOSED_WITH_MATERIAL_CAVEATS",
+    "R46_3": "RETURN_READY_FOR_AXIOM_ADJUDICATION",
+    "physical_historical_anchor": "R21",
+    "historical_sensor_events": 14018,
+    "aggregate_arithmetic": "MATCH",
+    "independent_raw_replay": "NOT_ESTABLISHED"
+  },
+  "holds": {
+    "PHYSICAL_14_GATES": "0/14",
+    "CANONICAL_NEGATIVE": "0/24 (historisch, do_not_sum)",
+    "AUTHENTICATED_QUORUM": "0/3",
+    "FULL_SCIENCE": "0/10",
+    "ALT_D": "ACTIVE",
+    "E23": "HOLD",
+    "W1": "OPEN",
+    "B01_B05": "OPEN",
+    "D1_D2_D3": "AWAITING_OWNER"
+  },
+  "prohibitions": {
+    "NEW_PHYSICAL_CAPTURE": "NO",
+    "APK_INSTALL": "NO",
+    "WWW_LIVE_WRITE": "NO",
+    "BODYTWIN_VALIDATED": "NO",
+    "CLAIM_PROMOTION": "NO",
+    "INTERMEDIATE_CURSOR_HANDOFF": "PROHIBITED",
+    "NEXT_CURSOR_HANDOFF": "R46_9_SERIES_CLOSEOUT"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "formal_gate_credit": "NONE",
+  "not_established": [
+    "Rohdaten-Replay",
+    "Kalibrierungsmatrix",
+    "Bias-Vektor",
+    "Allan-Kurve des realen Geraets",
+    "Whiteness",
+    "Drift",
+    "effektive Stichprobengroesse",
+    "Achsen-Kovarianz",
+    "NIS/NEES",
+    "Konfidenzintervalle aus reinen Normstatistiken",
+    "APK-Provenienz",
+    "Produktionsreife"
+  ],
+  "note": "Die registrierten Prüfdesigns R46-3-N01..N20 und R46-3-P01..P04 der Order bleiben NOT_RUN als formale Gates; die hier ausgefuehrten W01-W25 sind unabhaengige Zeugen ohne Gate-Kredit."
+}
