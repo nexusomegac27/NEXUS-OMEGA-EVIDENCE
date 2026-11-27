@@ -1,0 +1,147 @@
+{
+  "chain": {
+    "final_receipt_sha256": "8633e8bc433882ad018506adac4c977a15b286e46c07f0a8802e17c50fa667ed",
+    "genesis_anchors": {
+      "canonical_zip": "d15876f268ad378f220bfb83b9f1ba2ffcc041aa40949b8665d37b8d52f57c55",
+      "head": "167196287c864696baebddca7832221d6854e1ce",
+      "order": "bef961ac1c6c0e24c4f3b29689602847ceeafc9254f60cee9f78c25f69e8f3d6"
+    },
+    "receipts": [
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R00_CHAIN_GENESIS",
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R01_AXIOM_SANDBOX_REPLICATION",
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R02_OWN_COUNTERFINDINGS",
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R03_CONTRACT_AND_PROJECTION",
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R04_GAP_MATRIX",
+      "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R05_METROLOGY_CLOSEOUT"
+    ]
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "files": {
+    "00_README.md": {
+      "bytes": 2382,
+      "sha256": "e8ddd08b726f3d6542913f8254e63a2f569171f2e76689350ae9b0693b348d5f"
+    },
+    "01_INPUT_INTEGRITY.md": {
+      "bytes": 3554,
+      "sha256": "65ea1f9b1bb45676d65a4521d3548b7d64d4fd37e05f0ddaf119a1a765e31b77"
+    },
+    "03_COUNTERFINDINGS.md": {
+      "bytes": 4890,
+      "sha256": "1aaf012e67ba671f79dca438fdafe4f4793125ff94cae3a7c5db5b7f2bd6dbc9"
+    },
+    "04_ACCEPTANCE_A.md": {
+      "bytes": 2923,
+      "sha256": "66017ad889b99e6bee153d548d339eae43825252cb5311bd217996ec0856793d"
+    },
+    "05_TDP_D.md": {
+      "bytes": 3246,
+      "sha256": "c6c6a8eec17a55ec9cc554c272836792ab1f59f96d9ecf7c868e6fc7eb31f1b1"
+    },
+    "06_GAP_MATRIX_E.json": {
+      "bytes": 12198,
+      "sha256": "38e5ed4ae3167725b723828b7694ad06af39e873575d6789fbf338a08d51635f"
+    },
+    "07_RETURN_STATUS.txt": {
+      "bytes": 2464,
+      "sha256": "8e88596ea93115c5d686c1292c9b3bd16d63c0eeb25ffedcff597d874d74c1e9"
+    },
+    "RECEIPTS/R00_CHAIN_GENESIS.json": {
+      "bytes": 1062,
+      "sha256": "26eedfdb587ee398121af29f8f2a2f4cac2e9a884073417bc5543a5e30a26b8d"
+    },
+    "RECEIPTS/R01_AXIOM_SANDBOX_REPLICATION.json": {
+      "bytes": 599,
+      "sha256": "03c2faaf0c401e51d01aa3a87ba3adcf39b688e6a6ea2350b118774a444a4c43"
+    },
+    "RECEIPTS/R02_OWN_COUNTERFINDINGS.json": {
+      "bytes": 669,
+      "sha256": "1f54aef39d6053e28e26f35e3d074001c355cfb0b91dd38f753207b37f833409"
+    },
+    "RECEIPTS/R03_CONTRACT_AND_PROJECTION.json": {
+      "bytes": 657,
+      "sha256": "7f4c3ab6f0b3cd22dacceb2c9779a3ee8fe2d38508960fe1c6368c74143be5aa"
+    },
+    "RECEIPTS/R04_GAP_MATRIX.json": {
+      "bytes": 562,
+      "sha256": "aecd40f1354c483821679e4d7b69c245ee4432a96d7f885fa07cd7519b75a286"
+    },
+    "RECEIPTS/R05_METROLOGY_CLOSEOUT.json": {
+      "bytes": 495,
+      "sha256": "8633e8bc433882ad018506adac4c977a15b286e46c07f0a8802e17c50fa667ed"
+    },
+    "RESOURCE_LEASE.json": {
+      "bytes": 2025,
+      "sha256": "b0d06cd0101e0dc6d9e54eb8bb70859b90aa5cd49ac4077d536ea07a54e7f081"
+    },
+    "SHA256SUMS.txt": {
+      "bytes": 2906,
+      "sha256": "102204cb43b6afb8f8322cc381e93d1b5ec16b0b5eead07c55b4919b858650b7"
+    },
+    "WITNESSES/W_CONTRACT_PROJECTION.txt": {
+      "bytes": 447,
+      "sha256": "552fc4bb26b0ac89be934e34f861e35d3878d24a8239badf0a9a7b5e84913ef3"
+    },
+    "WITNESSES/W_COUNTERFINDINGS.txt": {
+      "bytes": 453,
+      "sha256": "7e10a7d0d4a90fafd950fd2e380038b45cf5199c0af9d47dde03ab81aa5f748f"
+    },
+    "WITNESSES/W_COUNTERPROBE_RED_GREEN_10.txt": {
+      "bytes": 403,
+      "sha256": "b4c2cf5290c3a62101c571793a2f064ec7ddd13c3e86e4bceb4487e4188a9e3f"
+    },
+    "WITNESSES/W_GAP_MATRIX.txt": {
+      "bytes": 214,
+      "sha256": "01f384367401088c5ee1f0892bee3eed9ea2c4613671766bee9a20414c0dce91"
+    },
+    "WITNESSES/W_INPUT_AUDIT.txt": {
+      "bytes": 524,
+      "sha256": "1a1048444fd8e38cf4014476fd69d595cad8740dd61ed42c7f61fe8702bde84c"
+    },
+    "WITNESSES/W_REPLICATION_100.txt": {
+      "bytes": 229,
+      "sha256": "6b45ee2c184a126a7c3c1d92ff1133f322edddc457b739542297834360158e1b"
+    },
+    "contract/axiom_05_CONTRACT_AS_PUBLISHED.json": {
+      "bytes": 2867,
+      "sha256": "895db25b673d5f740e9eb06c9995b291d93c8cd6ef86d33bfd83fb15f78f143b"
+    },
+    "results/axiom_08_SQLITE_RESULT_AS_PUBLISHED.json": {
+      "bytes": 751,
+      "sha256": "423b49688b7f08fa8fb7c71779ce1aacd819c2f75e723c2c726ef422e24009c8"
+    },
+    "results/results_axiom_replication.json": {
+      "bytes": 751,
+      "sha256": "7030b9232bde3d1241c64f464c8c3dacfa63c7cc098cc5281e683d09e4c44288"
+    },
+    "results/results_contract.json": {
+      "bytes": 2458,
+      "sha256": "f780d2427fc488d1d00006928706b2959a6aca9bfe5ad8fa2397cb7184d389f9"
+    },
+    "results/results_js_precision.json": {
+      "bytes": 1520,
+      "sha256": "5e2190b364ab2b04989d6ecdebc7410d84c1faaa1909ac4858ae75e3628fd84c"
+    },
+    "results/results_own_probes.json": {
+      "bytes": 4627,
+      "sha256": "4258e09a59cb8cb136c37b10a11537cbaa7fde0b46ede2648d473e01b4c28426"
+    },
+    "src/axiom_07_SQLITE_SANDBOX_AS_PUBLISHED.py": {
+      "bytes": 4707,
+      "sha256": "b36f888b01924ca9620845a17f69dfcebb61cbb3c798b9ede0a76982bcbcb747"
+    },
+    "src/r45_9_contract_fixtures.py": {
+      "bytes": 5776,
+      "sha256": "d6b1a4f846d3b25cccf3f318b456d8e187f8d21f4aaa71f4f6684f826355b89a"
+    },
+    "src/r45_9_expert_probes.py": {
+      "bytes": 18068,
+      "sha256": "07264710b53f361c392944e78242cc44feec34007b577f1ca6ec2c1bebe45d0d"
+    },
+    "src/r45_9_js_precision.js": {
+      "bytes": 2931,
+      "sha256": "dae2e4386fbd783b1faea9cba6774ef22ba15dbb7134d7a7b6bdb500e1ece364"
+    }
+  },
+  "generated_at_utc": "2026-11-27T06:07:49Z",
+  "object": "NEXUS_OMEGA_R45_9_EXPERT_RETURN_INDEPENDENT_20261127_R1"
+}

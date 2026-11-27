@@ -1,0 +1,15 @@
+{
+  "class": "LOCAL_VERIFIED_SYNTHETIC",
+  "created_utc": "2026-11-27T06:07:49Z",
+  "inputs": {
+    "results": "results/results_own_probes.json",
+    "src": "src/r45_9_expert_probes.py"
+  },
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R02_OWN_COUNTERFINDINGS",
+  "prev_receipt_sha256": "03c2faaf0c401e51d01aa3a87ba3adcf39b688e6a6ea2350b118774a444a4c43",
+  "result": {
+    "counterprobe_10": "RED 10/10 reproduced, GREEN 10/10 blocked",
+    "own_probes": "6/6 match (crash-before ABSENT, crash-after VERIFIED_MOCK, lock-starvation OperationalError, two-resource partial, extended guards 9/9, vocabulary mismatch 5 terms)"
+  },
+  "title": "Program B1+B2 own probes"
+}

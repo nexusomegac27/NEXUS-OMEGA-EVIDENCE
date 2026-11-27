@@ -1,0 +1,3 @@
+Gap-Matrix E
+24 Zeilen: 8 OFFLINE_TESTED, 3 ARCHITECTURE_READY, 2 DESIGN_ONLY, 10 SOURCE_GAP, 1 HOLD; 0 STAGED/LIVE/PHYSICAL.
+Jede Zeile mit Quellenidentität, Ziel, Abnahmekriterium, Gegenprobe, Risiko, Rollback.

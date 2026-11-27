@@ -1,0 +1,7 @@
+Eigene Gegenbefunde B1
+B1.1 crash-before-commit (echter Prozess-Tod os._exit(9)): ABSENT, integrity ok
+B1.2 crash-after-commit: VERIFIED_MOCK, integrity ok (UNKNOWN auflösbar)
+B1.3 Lock-Starvation: OperationalError statt DENIED -> Mapping-Pflicht (G08)
+B1.4 Zwei-Ressourcen: db1 COMMITTED, db2 ABSENT -> keine verteilte Atomarität (G09)
+B1.5 Erweiterte Wächter: 9/9
+B1.6 Vokabular-Lücke Sandbox vs Contract: 5 Terma nur Sandbox, 2 nur Vertrag (G10)

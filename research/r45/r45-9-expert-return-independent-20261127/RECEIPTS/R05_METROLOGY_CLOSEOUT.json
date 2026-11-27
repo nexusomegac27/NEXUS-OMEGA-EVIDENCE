@@ -1,0 +1,17 @@
+{
+  "class": "MEASURED",
+  "created_utc": "2026-11-27T06:07:49Z",
+  "inputs": {
+    "resource_lease": "RESOURCE_LEASE.json",
+    "status": "07_RETURN_STATUS.txt"
+  },
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R05_METROLOGY_CLOSEOUT",
+  "prev_receipt_sha256": "aecd40f1354c483821679e4d7b69c245ee4432a96d7f885fa07cd7519b75a286",
+  "result": {
+    "external_production_writes": 0,
+    "merge_operations": 0,
+    "retries": 0,
+    "tlc": "NOT_RUN"
+  },
+  "title": "Resource lease and status"
+}

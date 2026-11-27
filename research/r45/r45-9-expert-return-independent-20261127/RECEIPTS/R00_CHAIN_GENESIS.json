@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-27T06:07:49Z",
+  "input_side_finding": "AUTOCL stack: 26/33 manifest entries present (7 missing incl. r45_9_sqlite.py and all results_*.json); 26/27 present members SHA MATCH",
+  "inputs": {
+    "auto_c_r45_6_zip": "c68a0725a62a8626b6dc99f5de0e60dba82e23c24facb2c709085b633b336c9b",
+    "autocl_r45_9_stack_zip": "debfb872bccaacaf8732e09be97bedb46d833af504ca932f231d55fc69c8fc7b",
+    "canonical_r45_9_zip_byte_exact": "d15876f268ad378f220bfb83b9f1ba2ffcc041aa40949b8665d37b8d52f57c55",
+    "github_head": "167196287c864696baebddca7832221d6854e1ce",
+    "glm_r45_7_return_zip": "82094ad9557215a12e16e2068c5372ae8e9b021e9c102041de3741e0d7f7588c",
+    "r45_7_order_txt": "4856e44fd3302f0d5da396a351b44deca23872ce4f891c5390e293c2be2c9e27",
+    "r45_9_order_txt": "bef961ac1c6c0e24c4f3b29689602847ceeafc9254f60cee9f78c25f69e8f3d6"
+  },
+  "note": "chain anchored on verified external anchors; append-only",
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R00_CHAIN_GENESIS",
+  "prev_receipt_sha256": "GENESIS",
+  "title": "Input anchors"
+}

@@ -1,0 +1,50 @@
+{
+  "object": "NEXUS_OMEGA_R45_9_EXPERT_RETURN_RESOURCE_LEASE_R1",
+  "generated_utc": "2026-11-27T12:00:00Z",
+  "environment": {
+    "python": "3.12.16",
+    "sqlite": "3.53.1",
+    "node": "v24.22.3",
+    "os": "Linux sandbox",
+    "tlc": "NOT_PRESENT"
+  },
+  "compute": {
+    "wall_seconds_by_experiment": {
+      "axiom_sandbox_replication_100_races_plus_13_checks": "recorded in results_axiom_replication run (approx 2-4 s, incl. 100 thread-race trials)",
+      "own_probe_suite": 0.086,
+      "contract_fixtures": "<0.05",
+      "js_precision": "<0.05",
+      "total_measured_wall_seconds_approx": "<10"
+    },
+    "subprocess_count": 3,
+    "subprocess_detail": "2 child processes for crash-before/crash-after probes (os._exit(9)), 1 node run",
+    "thread_races_executed": 100
+  },
+  "network": {
+    "calls": 6,
+    "targets": [
+      "raw.githubusercontent.com x5 (canonical ZIP + sidecar + 07_SQLITE_SANDBOX.py + 08_SQLITE_RESULT.json + 05_CONTRACT.json)",
+      "GitHub API via plugin: get_me, issue #463 get+comments, PR #464 get (read-only)"
+    ],
+    "bytes_downloaded_approx": 52500,
+    "uploads_via_plugin": "1 branch push (31 text members + ZIP as base64 + sha256 sidecar), 1 DRAFT pull request (not merged), 1 issue comment on #463 (canonical return block); no merge, no dispatch",
+    "retries": 0,
+    "uploads_via_plugin_policy": "GITHUB_ONLY; INTERMEDIATE_CURSOR_HANDOFF PROHIBITED"
+  },
+  "storage": {
+    "temporary_databases_created": 8,
+    "temporary_directory": "auto-cleaned via tempfile.TemporaryDirectory",
+    "persistent_writes_outside_project_dir": 0
+  },
+  "tokens": {
+    "measured": false,
+    "note": "LLM token usage of this session is not instrumented in-sandbox; declared as not measurable per current toolset"
+  },
+  "external_effects": {
+    "production_system_writes": 0,
+    "www_or_hostinger_writes": 0,
+    "device_interaction": 0,
+    "repository_merge_operations": 0
+  },
+  "cost_statement": "No efficiency claim is made; these are measured descriptive records only (C1)."
+}

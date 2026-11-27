@@ -1,0 +1,23 @@
+{
+  "class": "DESIGN_PLUS_OFFLINE_TESTED",
+  "created_utc": "2026-11-27T06:07:49Z",
+  "inputs": {
+    "gap_matrix": "06_GAP_MATRIX_E.json"
+  },
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R04_GAP_MATRIX",
+  "prev_receipt_sha256": "7f4c3ab6f0b3cd22dacceb2c9779a3ee8fe2d38508960fe1c6368c74143be5aa",
+  "result": {
+    "counts": {
+      "ARCHITECTURE_READY": 3,
+      "DESIGN_ONLY": 2,
+      "HOLD": 1,
+      "LIVE": 0,
+      "OFFLINE_TESTED": 8,
+      "PHYSICAL": 0,
+      "SOURCE_GAP": 10,
+      "STAGED": 0
+    },
+    "rows": 24
+  },
+  "title": "Program E"
+}

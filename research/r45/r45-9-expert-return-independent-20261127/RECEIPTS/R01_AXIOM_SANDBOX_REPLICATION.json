@@ -1,0 +1,17 @@
+{
+  "class": "LOCAL_VERIFIED",
+  "created_utc": "2026-11-27T06:07:49Z",
+  "inputs": {
+    "pinned": "results/axiom_08_SQLITE_RESULT_AS_PUBLISHED.json",
+    "src": "src/axiom_07_SQLITE_SANDBOX_AS_PUBLISHED.py"
+  },
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R01_AXIOM_SANDBOX_REPLICATION",
+  "prev_receipt_sha256": "26eedfdb587ee398121af29f8f2a2f4cac2e9a884073417bc5543a5e30a26b8d",
+  "result": {
+    "budget_overruns": 0,
+    "checks": "13/13",
+    "exactly_one_commit": "100/100",
+    "only_json_diff": "sqlite_version 3.46.1 -> 3.53.1 (environment)"
+  },
+  "title": "Program B0 replication"
+}

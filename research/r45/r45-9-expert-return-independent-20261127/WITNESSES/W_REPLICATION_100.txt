@@ -1,0 +1,4 @@
+Replikation AXIOM-Sandbox
+100/100 exactly one commit, 0 budget overruns, 13/13 checks identisch zur gepinnten Datei.
+Einziger JSON-Diff: sqlite_version (3.46.1 -> 3.53.1, Umgebung).
+Quelle: results/results_axiom_replication.json

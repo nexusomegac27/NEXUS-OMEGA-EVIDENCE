@@ -1,0 +1,5 @@
+Datenvertrag und Projektion
+Positive Fixture: PASS. Negative: 8/8 abgelehnt (missing_required, ns_as_number, nan, inf, bool, units, sha, negative-string).
+Frische-Regel: 6/6 (inkl. Korrektur: Fenster 40 s > TTL 30 s korrekt AMBIGUOUS; Fixture war ursprünglich falsch gelabelt, Selbstkorrektur dokumentiert).
+Projektion: 0 Rohfelder im Public-Teil.
+JS-Präzision: 10/10; NEU: bereits das numerische Literal im JS-Quelltext verliert die ns-Stelle.

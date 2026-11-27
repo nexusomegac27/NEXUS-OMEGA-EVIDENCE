@@ -1,0 +1,21 @@
+{
+  "class": "LOCAL_VERIFIED",
+  "created_utc": "2026-11-27T06:07:49Z",
+  "inputs": {
+    "contract_src": "src/r45_9_contract_fixtures.py",
+    "js_src": "src/r45_9_js_precision.js",
+    "results": [
+      "results/results_contract.json",
+      "results/results_js_precision.json"
+    ]
+  },
+  "object": "NEXUS_R45_9_EXPERT_RETURN_RECEIPT_R03_CONTRACT_AND_PROJECTION",
+  "prev_receipt_sha256": "1f54aef39d6053e28e26f35e3d074001c355cfb0b91dd38f753207b37f833409",
+  "result": {
+    "freshness": "6/6",
+    "js_precision": "10/10 (numeric literal itself loses ns digit)",
+    "negative_rejected": "8/8",
+    "projection_leaks": 0
+  },
+  "title": "Program C"
+}

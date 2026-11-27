@@ -1,0 +1,6 @@
+Eingangs-Audit
+R45-9-Order 24.491 B bef961ac1c6c... MATCH
+R45-7-Order 19.045 B 4856e44fd330... MATCH
+AUTOCL-Stack: MANIFEST 33 vs ZIP 27 -> 7 fehlen (r45_9_sqlite.py, results_independent.json, results_projection.json, results_sqlite.json, review.md, SHA256SUMS.txt, SOURCE_REGISTRY_R45_9.json); 26/27 vorhandene Mitglieder SHA MATCH
+Kanonischer R45-9-ZIP byte-exakt geladen: d15876f268ad... MATCH (RV2-Lücke geschlossen)
+GitHub: Issue #463 OPEN, Draft-PR #464 OPEN NOT MERGED, HEAD 167196287c864696baebddca7832221d6854e1ce
