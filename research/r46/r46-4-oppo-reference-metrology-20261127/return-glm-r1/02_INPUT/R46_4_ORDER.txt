@@ -1,0 +1,404 @@
+AXIOM — R46-3 Abschlussanalyse und R46-4
+NEXUS Ω OMEGA · 27. November 2026
+
+Bro, ja: Es sind deutliche wissenschaftliche Fortschritte feststellbar. Der wichtigste Fortschritt liegt in der quantifizierten Grenze dessen, was unsere physische OPPO-Evidenz tatsächlich über den Zustand des Sensors aussagen kann.
+
+Wir können inzwischen nicht nur feststellen, dass bestimmte Rekonstruktionen mehrdeutig sind. Wir können diese Mehrdeutigkeit mathematisch demonstrieren und in konkrete Anforderungen an NEXUS_APP und BodyTwin übersetzen.
+
+Ein Fortschritt der tatsächlichen physischen Messgenauigkeit oder der produktiven Homepage ist dagegen noch nicht nachgewiesen.
+1. HARD — unabhängige Eingangsintegrität
+Alle sieben neuen Eingangsartefakte wurden lokal eingelesen und gehasht.
+Forschungsreturn	Größe	CRC	SHA-256-Manifest
+GLM-Expertenstack	75.546 B	39/39	37/37 MATCH
+AutoCLAW R0	212.984 B	42/42	32/32 MATCH
+AutoCLAW R1	87.037 B	33/33	30/30 MATCH
+
+Der GLM-Originalstack ist byteidentisch im AutoCLAW-R0-Archiv enthalten. Er zählt deshalb nicht als zusätzlicher unabhängiger Return.
+
+Die beiden AutoCLAW-Receipt-Ketten konnten vollständig mit ihren jeweils eigenen Hashverfahren überprüft werden. Beide ergeben 5/5 korrekte Kettenbindungen einschließlich Genesis. Der zusätzliche JSON-Manifestabgleich ergibt 32/32 für R0 und 29/29 für R1.
+
+Auch Mistrals Draft-PR #472 ist vorhanden und weiterhin ungemergt. Mistral dokumentiert ausdrücklich mehrere eigene numerische und kryptografische Korrekturen. 
+R46_3_~1.TXT
+
+Das ist wichtig für unser Forschungsfundament: Selbstkorrektur verbessert die Qualität der Evidenz, ersetzt aber keine unabhängige Verifikation.
+2. Fortschritt gegenüber dem Ausgangspunkt R46-3
+Wissenschaftlicher Bereich	Ausgangspunkt	Neuer Erkenntnisstand
+Abtastrate	Rund 100 Hz	Rechnerisch exakt reproduziert
+Sensorrauschen	Betragsstreuung vorhanden	Modellbedingte Rekonstruktion und quantifizierte Mehrdeutigkeit
+Messlücken	Keine großen Lücken berichtet	Konkreter Gegenzeuge gegen Verlustfreiheitsinterpretation
+Kalibrierung	Eine stationäre Position	Identifizierbarkeitsgrenzen und notwendige zusätzliche Referenzen
+Gravitationsresidual	Semantisch unklar	Unterschiedliche mathematische Definitionen und neue exakte Grenzen
+BodyTwin	Allgemeiner Evidenzvertrag	Präzisere Evidenzklassen und ausführbare Negativkontrollen
+Physische Validierung	Nicht etabliert	Weiterhin nicht etabliert
+
+Die Forschungsgruppe beginnt damit, aus den bisherigen deskriptiven Daten konkrete metrologische Abnahmeanforderungen abzuleiten.
+3. Der stärkste Fortschritt: quantifizierte Rauschmehrdeutigkeit
+Die Experten haben zwei verschiedene dreidimensionale Sensormodelle konstruiert, die denselben mittleren Beschleunigungsbetrag und dieselbe Betragsstandardabweichung erzeugen.
+
+Ich habe beide Modelle mit einem unabhängigen numerischen Verfahren nachgerechnet.
+Zwei mit denselben Aggregaten vereinbare Rauschmodelle
+Modellbedingte Rekonstruktion aus historischen R21-Aggregaten · keine gemessenen AchsenvarianzenIsotropes Modell
+0,00917 m/s²
+RMS der drei Achsenstandardabweichungen
+Anisotropes Modell
+0,24531 m/s²
+Dieselbe RMS-Definition
+
+
+Isotrop
+
+0.00917
+
+
+
+
+Anisotrop
+
+0.24532
+
+
+
+
+26,75-fach
+Unterschied der modellbedingten Achsen-RMS-Werte trotz übereinstimmender Betragsmomente.
+
+GLM hatte ursprünglich einen Faktor von etwa 46,33 angegeben. Dieser verglich jedoch zwei unterschiedliche Normdefinitionen. AutoCLAW korrigierte den Vergleich auf 26,75. Meine unabhängige Berechnung bestätigt diese Korrektur.
+
+Konsequenz für unseren UKF: Wir dürfen die gemessene Betragsstreuung nicht unmittelbar als Varianz jeder Sensorachse in die Messkovarianzmatrix übernehmen.
+
+Der Faktor 26,75 ist ein konkreter synthetischer Gegenzeuge, keine obere Grenze aller möglichen Modelle und kein gemessener Rauschfaktor des OPPO.
+4. Neue AXIOM-Erkenntnis: eine modellunabhängige Residualgrenze
+Die Experten haben verschiedene Interpretationen des Feldes gravity_residual_mean_abs untersucht.
+
+Ich konnte die bisherige Analyse erweitern. Unter der Annahme, dass Mittelwert und Standardabweichung die empirischen Populationsmomente der Beschleunigungsbeträge bezeichnen, gilt für den nichtnegativen Betrag \(M\):
+\[
+|\mathbb E[M]-g_0|
+\leq \mathbb E[|M-g_0|]
+\leq
+\sqrt{(\mathbb E[M]-g_0)^2+\sigma_M^2}
+\]
+
+Mit den historischen R21-Aggregaten ergibt sich:
+Zulässiger Bereich des mittleren absoluten Residuals0,026088 – 0,027653 m/s²
+Keine statistische Konfidenzgrenze. Beide Grenzen sind für geeignete nichtnegative Verteilungen mit diesen Momenten erreichbar; die tatsächliche endliche Messreihe bleibt unbekannt.
+Ich habe für beide Grenzen explizite mathematische Gegenzeugen konstruiert.
+
+Das ist gegenüber der bisherigen bloßen Unbestimmbarkeitsaussage ein Fortschritt: Eine unbekannte Zielgröße kann unter gegebenen Annahmen dennoch eingegrenzt werden.
+
+Diese Information soll BodyTwin künftig anzeigen können: nicht nur einen Schätzwert, sondern auch dessen identifizierbaren Bereich.
+5. Weitere materielle Befunde
+- Messlücken: Ein synthetischer Versuch von Mistral zeigt, dass trotz 70 fehlender Ereignisse kein Gap-Alarm ausgelöst werden muss. Die bisherige Schwelle von mehr als dem Fünffachen des Medianintervalls beweist keine Verlustfreiheit. 
+  R46_3_~1.TXT
+- Zeitstruktur: Identische Mittelwerte und Streuungen können verschiedene Autokorrelationen und Spektren besitzen. Die effektive Stichprobengröße bleibt aus den R21-Aggregaten unbekannt.
+- Informationsverdichtung: Die Reduktion von rechnerisch 56.072 numerischen Rohwerten auf 18 Aggregatskalare beschreibt eine Reduktion der Anzahl übermittelter Werte, nicht einen gemessenen Shannon-Informationsverlust.
+- Gravitationsreferenz: Die Differenz zur konventionellen Fallbeschleunigung ist noch kein isolierter Sensorbias. Lokale Gravitation, Kalibrierung, Orientierung und Messfehler müssen getrennt werden.
+Neue Gegenproben am Expertenvalidator
+AutoCLAW R1 berichtet sechs bestandene Negativkontrollen. Ich habe zusätzlich die tatsächliche gelieferte Funktion validate_projection() isoliert ausgeführt.
+Neue Eingabe	Beobachtetes Ergebnis
+Leeres Objekt	Keine Validierungsfehler
+Synthetische Daten mit abweichender Groß-/Kleinschreibung des Kanalnamens	Keine Validierungsfehler
+Historisches Aggregat mit Status LIVE	Keine Validierungsfehler
+Verschachteltes privates Platzhalterfeld	Keine Validierungsfehler
+VERIFIED ohne Quellenidentität	Keine Validierungsfehler
+Erfassungszeit nach Abrufzeit, bei gemeinsam angenommener Zeitbasis	Keine Validierungsfehler
+
+Diese Fälle betreffen ausschließlich das synthetische Expertenmodell. Sie beweisen keine entsprechende Schwachstelle im tatsächlichen BodyTwin-System.
+
+Wir müssen die sechs Regeln daher als begrenzten semantischen Prüfkandidaten behandeln, nicht als vollständigen Schema- oder Datenschutzvalidator.
+
+6. R46-4 — AXIOM-Voruntersuchung zur Referenzmetrologie
+Aus den Ergebnissen folgt die nächste wissenschaftliche Frage:
+
+Welche minimale physische Referenzmessung benötigen wir, um die bislang mehrdeutigen Sensoreigenschaften tatsächlich voneinander unterscheiden zu können?
+
+Dazu habe ich eine neue synthetische Kalibrierungsuntersuchung ausgeführt.
+
+Unser vereinfachtes Messmodell lautet:
+\[
+\mathbf y_i=\mathbf A\mathbf g_i+\mathbf b+\boldsymbol\varepsilon_i
+\]
+
+Dabei beschreibt \(\mathbf A\) die lineare Sensitivitätsmatrix, \(\mathbf b\) den Offset und \(\mathbf g_i\) den bekannten Referenzvektor.
+6.1 Vergleich der Kalibrierungsanordnungen
+Stationäre Einzelposition
+Rang 1/4
+Vollständiges affines Modell nicht identifizierbar
+
+Sechs koplanare Positionen
+Rang 3/4
+Mindestens eine Parameterdimension bleibt unbestimmt
+
+Vier tetraedrische Positionen
+Rang 4/4
+Minimale affine Identifizierbarkeit bei bekannten Referenzvektoren
+
+Sechs symmetrische Achsenpositionen
+Rang 4/4
+Zusätzliche Redundanz für die Modellprüfung
+
+
+Die dargestellten Ränge beziehen sich auf das normierte affine Design mit vier Spalten. Vollständiger Rang setzt tatsächlich bekannte Referenzvektoren voraus.
+
+Die sechs Positionen sind deshalb kein automatischer Kalibrierungsnachweis. Ein systematisch falsch ausgerichtetes Referenzsystem kann trotz vollständigen Ranges falsche Parameter erzeugen.
+6.2 Synthetische Untersuchung der Referenzunsicherheit
+Ich habe jeweils 1.000 synthetische Kalibrierungsversuche für die tetraedrische und die symmetrische Sechs-Positionen-Anordnung durchgeführt.
+
+Beide Designs erhielten dieselbe Anzahl von zwölf Positionsmittelwerten. Anschließend wurden sie an zusätzlichen Referenzpositionen bewertet.
+Median des Fehlers an nicht zum Fit verwendeten Positionen
+Normierte Beschleunigung · synthetische ReferenzexperimenteTetraeder – korrekte Referenz
+
+0.000543
+
+
+
+
+Sechs Positionen – korrekte Referenz
+
+0.000545
+
+
+
+
+Tetraeder – gemeinsame Referenzverdrehung
+
+0.004782
+
+
+
+
+Sechs Positionen – gemeinsame Referenzverdrehung
+
+0.004770
+
+
+
+
+Gemeinsame Referenzverdrehung: 0,01 rad, etwa 0,57°. Die Simulationen verwenden aufeinanderfolgende Zufallsziehungen und sind kein gepaarter Überlegenheitstest.
+Der gemeinsame Referenzfehler dominiert in diesem Versuchsaufbau den statistischen Rauschfehler.
+
+Für unsere zukünftige OPPO-Messung bedeutet das: Eine bessere Referenzhalterung und nachvollziehbare Winkelorientierung können wichtiger sein als eine bloße Erhöhung der Anzahl von Messwerten.
+7. Wissenschaftliche Quellen für R46-4
+Die neue Recherche konzentriert sich auf praktische Referenzmetrologie und die korrekte Behandlung von Messunsicherheiten.
+Quelle	Bedeutung für NEXUS
+NIST – Low-Frequency Calibration of Accelerometers by Rotation in the Gravitational Field, 2026	Dynamische Kalibrierung durch kontrollierte Rotation und unabhängige Winkelreferenz.  pmc.ncbi.nlm.nih.gov
+Attitude-Aided Linear Calibration, 2026	Neuer Preprint zur lagegestützten Bestimmung von Kalibrierungsparametern. Als Forschungskandidat aufgenommen.  arxiv.org
+SVD Calibration of Inertial Sensors, 2025	Mehrpositionskalibrierung unter expliziten Referenz- und Modellannahmen.  doi.org
+NIST – Type-B Uncertainty Analysis	Montagefehler, Nichtorthogonalität und systematische Messunsicherheiten.  nist.gov
+JCGM 100 – GUM	Normative Grundlage der Messunsicherheitsrechnung.  BIPM
+JCGM 101 – Monte-Carlo-Verfahren	Nichtlineare Unsicherheitsfortpflanzung.  BIPM
+
+Die NIST-Laborpräzision darf selbstverständlich nicht auf unser OPPO übertragen werden. Ziel ist die Übernahme geeigneter Verfahren, nicht fremder Messergebnisse.
+
+8. Fundamentalisierung für NEXUS_APP und BodyTwin
+OBJECT =
+ NEXUS_REFERENCE_CONDITIONED_CALIBRATION_AND_
+ TARGET_UNCERTAINTY_V0
+
+STATE = RESEARCH_CANDIDATE
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+
+OPPO — physische Beobachtung
+ACC · GYRO · Zeit · Sensorachsen
+
+R46-4 — neues ForschungsfundamentReferenzgestützte Kalibrierung
+
+Unabhängige Referenzvektoren · Bias · Skalierung · Achsenkopplung · Messunsicherheit · Identifizierbarkeit
+
+
+NEXUS_APP — Verarbeitungskern
+Kalibrierungsparameter mit nachvollziehbarer Unsicherheit
+
+R46-5 — Sensorfusion
+UKF/SR-UKF · NIS/NEES · Nullmodelle
+
+BodyTwin WWW
+Evidenzgebundene Darstellung von Ergebnis und Unsicherheit
+
+R46-4 soll uns die wissenschaftlich begründeten Eingangsbedingungen für R46-5 liefern. Erst dann untersuchen wir vertieft, welche Kovarianzen und Kalibrierungsparameter unsere Sensorfusion tatsächlich verwenden darf.
+9. GitHub — R46-4 Expertenauftrag
+NEXUS OMEGA · R46-4
+30.883 Bytes · 10 Archivmitglieder
+Readback MATCH
+
+
+Issue #476 — Externer MAXIAUFTRAG R46-4
+
+Draft-PR #477 — Reference Metrology and Calibration Evidence
+
+Versiegelte Transferdateien
+
+R46-4 EXTERNAL EXPERT ORDER — ZIP
+
+SHA-256-Sidecar
+
+HEAD =
+f39aeeb28b991747af44fe8f18e4a042969480b0
+
+ZIP_BYTES = 30883
+
+ZIP_SHA256 =
+825f086659e78671ea7127dabc6166effd0d88cd9ec26ac08f12b956f1034105
+
+MANIFEST = 9_OF_9_MATCH
+CRC = 10_OF_10_PASS
+LOOSE_MEMBER_REHASH = 10_OF_10_MATCH
+SIDECAR = MATCH
+AXIOM_REFERENCE_REPLAY = MATCH
+
+
+Der neue Auftrag enthält die kausale Adjudikation aller Expertenreturns, die neue mathematische Referenz, zwölf ausgeführte deterministische Prüfungen und 32 weitere Prüfdesigns.
+10. COPY-READY — Auftrag an unsere externen Agenten
+NEXUS Ω OMEGA — R46-4 EXTERNAL EXPERT MAXIAUFTRAG
+Referenzmetrologie · Kalibrierungsidentifikation · Messunsicherheit · OPPO/NEXUS_APP/BodyTwin
+
+Auftraggeber: AXIOM
+
+Kanonischer Einstiegspunkt:
+
+https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/476
+
+Bezieht das vollständige versiegelte Forschungsfundament über GitHub und führt eine unabhängige Integritätsprüfung durch.
+Übergeordnetes Forschungsziel
+Überführt die wissenschaftlichen Erkenntnisse aus R46-3 in einen möglichst effizienten, physikalisch realisierbaren und unabhängig falsifizierbaren Kalibrierungs- und Referenzvertrag für unsere strikte OPPO–NEXUS_APP–BodyTwin-Linie.
+
+https://www.nexus-mobile.de/bodytwin/
+A — Mathematische Kreuzvalidierung
+Reproduziert und falsifiziert die neuen Ergebnisse zur isotropen und anisotropen Rauschmehrdeutigkeit.
+
+Prüft insbesondere:
+- Den korrigierten Achsen-RMS-Faktor 26,7462.
+- Die modellbedingte nichtzentrale Chi-Verteilung.
+- Die neuen Residualgrenzen und deren mathematische Schärfe.
+- Die Abhängigkeit von Modellannahmen, Stichprobenmomenten und numerischer Konditionierung.
+Keine Rekonstruktion angeblicher physischer Rohdaten.
+B — Minimale physische Referenzarchitektur
+Vergleicht stationäre, tetraedrische, symmetrische Sechs-Positionen- und weitere wissenschaftlich geeignete Kalibrierungsanordnungen.
+
+Untersucht Rang, Konditionierung, Parameteridentifikation, Referenzfehler, lokale Gravitation, Montageunsicherheit und unabhängige Kontrollpositionen.
+
+Entwickelt einen konkreten, später ausführbaren OPPO-Referenzversuch.
+
+Keine tatsächliche Geräteinteraktion.
+C — Messunsicherheit und unabhängige Referenz
+Entwickelt eine vollständige zielgrößenspezifische Messunsicherheitsrechnung gemäß JCGM/GUM.
+
+Trennt statistische Streuung, korrelierte Unsicherheiten und gemeinsame systematische Fehler.
+
+Untersucht die Grenzen stationärer Gyroskopkalibrierung sowie den wissenschaftlichen Mehrwert kontrollierter Rotation mit unabhängiger Winkel- und Zeitreferenz.
+D — Integration in NEXUS_APP und BodyTwin
+Entwickelt einen strikt typisierten wissenschaftlichen Evidenzvertrag für Kalibrierungsparameter, Referenzidentität, Gültigkeitsbereich, Unsicherheitsgrenzen und nicht identifizierbare Zielgrößen.
+
+Reproduziert die sechs ursprünglichen AutoCLAW-Negativkontrollen und die sechs neuen AXIOM-Gegenproben.
+
+Ein leerer oder semantisch widersprüchlicher Datensatz darf niemals einen gültigen wissenschaftlichen Status erhalten.
+
+Keine produktiven Änderungen an App oder Homepage.
+E — Vorbereitung R46-5
+Erstellt eine konkrete Zuordnung sämtlicher Ergebnisse zu den zukünftigen Kalibrierungs-, Kovarianz-, UKF/SR-UKF- und NIS/NEES-Modulen.
+
+Jede Anforderung benötigt eine wissenschaftliche Begründung, einen ausführbaren Gegenzeugen, einen unabhängigen Abnahmetest und dokumentierte Restgrenzen.
+
+Keine Übernahme der Betragsstandardabweichung als unbegründete Achsenvarianz.
+Verpflichtender Return
+Quellenexakte Primärliteratur, unabhängige Erstbefunde, vollständige mathematische Entwicklung, ausführbare synthetische Experimente, Resultate, Gegenbefunde, Selbstkorrekturen, Ressourcenbilanz und konkrete Integrationsanforderungen.
+
+Ausschließlich GitHub-gebundene ZIP-/SHA-256-Rückgabe über autorisierte Kustodie.
+
+INTERMEDIATE_CURSOR_HANDOFF = PROHIBITED
+
+NEXT_CURSOR_HANDOFF = R46_9_SERIES_CLOSEOUT
+
+NEW_PHYSICAL_CAPTURE = NO
+
+APK_INSTALL = NO
+
+WWW_LIVE_WRITE = NO
+
+BODYTWIN_VALIDATED = NO
+
+CLAIM_PROMOTION = NO
+
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+NEXUS Ω OMEGA
+
+
+
+
+
+11. Gesamtbewertung
+Mathematische Erkenntnistiefe
+
+Deutlicher Fortschritt
+
+
+Wissenschaftliche Selbstkorrektur
+
+Deutlicher Fortschritt
+
+
+Unabhängige Reproduktion
+
+Teilweise etabliert
+
+
+Konkrete Integrationsanforderungen
+
+Weiterentwickelt
+
+
+Physische Kalibrierung
+
+Noch offen
+
+
+Produktive App-/WWW-Integration
+
+Nicht nachgewiesen
+
+
+
+Die wesentliche Veränderung gegenüber R46-3 besteht darin, dass wir zunehmend zielgerichtet zwischen bestimmbaren, eingrenzbaren und nicht identifizierbaren physikalischen Größen unterscheiden können.
+
+Damit entsteht eine wissenschaftliche Grundlage, auf der wir später die tatsächliche Messqualität steigern können, statt lediglich komplexere Rekonstruktionsmodelle zu entwickeln.
+12. HARD — kanonischer Abschluss
+R46_3 = ADMINISTRATIVELY_CLOSED_WITH_CAVEATS
+SCIENTIFIC_PROGRESS = MATERIAL
+
+GLM_MANIFEST = 37_OF_37_MATCH
+AUTOCLAW_R0_MANIFEST = 32_OF_32_MATCH
+AUTOCLAW_R1_MANIFEST = 30_OF_30_MATCH
+MISTRAL_MANIFEST = 11_OF_11_MATCH
+
+PARENT_ORDER_SOURCE_GAP = RESOLVED_BY_AXIOM
+MODEL_CONDITIONAL_INVERSION = REPRODUCED
+CONSISTENT_RMS_RATIO = 26.746236
+RESIDUAL_MOMENT_BOUNDS = ESTABLISHED_CONDITIONAL
+
+NEW_VALIDATOR_COUNTERPROBES = 6
+AXIOM_NEW_REFERENCE_CHECKS = 12_OF_12
+NEW_TEST_DESIGNS = 32
+FORMAL_GATE_CREDIT = NONE
+
+R46_4 = EXTERNAL_RESEARCH_ORDER_READY
+GITHUB_ISSUE = 476
+DRAFT_PR = 477
+GITHUB_READBACK = MATCH
+
+CURSOR_ACTION = NONE
+INTERMEDIATE_CURSOR_HANDOFF = PROHIBITED
+NEXT_CURSOR_HANDOFF = R46_9_SERIES_CLOSEOUT
+
+PHYSICAL_14_GATES = 0_OF_14
+ALT_D = ACTIVE
+BODYTWIN_VALIDATED = NO
+CLAIM_PROMOTION = NO
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+
+Verbleibende Grenzen: Nicht sämtliche Expertenprogramme und DOCX-Berichte wurden vollständig replayed. Die zusätzliche Python-Simulation wurde tatsächlich ausgeführt, liegt im veröffentlichten Paket aber nur als Ergebnis- und Methodenbeschreibung vor; die zwölf deterministischen JavaScript-Prüfungen sind dagegen vollständig enthalten und reproduziert. Die neue Literatur wurde überwiegend anhand von Abstracts und relevanten Textpassagen geprüft. Eine unabhängige physische Rohdatenreproduktion steht weiterhin aus.
+
+R46-3 abgeschlossen. R46-4 eröffnet. Cursor bleibt unangetastet.
+
+NEXUS Ω OMEGA

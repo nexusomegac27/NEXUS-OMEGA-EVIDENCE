@@ -1,0 +1,52 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_4_REFERENCE_METROLOGY_EXPERT_RETURN_GLM_R1_20261127_R0",
+  "date": "2026-11-27",
+  "purpose": "Integrationsmatrix: Uebergabe der R46-4 Erkenntnisse an R46-5 (BodyTwin [C1] Fusions-/Kalibrierstack)",
+  "witness_evidence_base": "04_RESULTS.json (15/15 PASS)",
+  "modules": [
+    {
+      "module": "R46-5.M1_calibration_core",
+      "input": ["six-pose reference design", "external orientation reference"],
+      "binding": [
+        "Design six: lambda_min = 2, kappa = sqrt(3) (W15-W18); tetra = minimum full-rank fallback (lambda_min = 4/3)",
+        "one/planar/clustered designs are NOT admissible for calibration (rank deficient)",
+        "Absolute alignment requires external orientation reference; from magnitudes alone it is a gauge degree of freedom (W19)",
+        "Scale errors propagate 1:1 into gravity magnitude (W22)"
+      ],
+      "forbidden": ["calibration scale/bias derivation from magnitude-moment sigma alone"]
+    },
+    {
+      "module": "R46-5.M2_covariance_model",
+      "input": ["multi-pose residuals", "declared component sigmas"],
+      "binding": [
+        "Isotropic and strongly anisotropic covariances reproduce identical magnitude moments (W05): covariance direction is NOT identifiable from |a| moments",
+        "Covariance must come from multi-pose residual estimation or explicit declaration, never from magnitude SD",
+        "Known unknowns remain NOT_COMPUTED: per-axis sigma, reference orientation uncertainty, local gravity magnitude, clock offset, temperature sensitivities (W22)"
+      ],
+      "forbidden": ["Q/R synthesis from magnitude SD", "covariance direction claims from C1 descriptors"]
+    },
+    {
+      "module": "R46-5.M3_ukf_sr_ukf",
+      "input": ["M1 calibration output", "M2 covariance model", "evidence-framed records"],
+      "binding": [
+        "R21 parent aggregates (acc n=7014, gyro n=7004) enter ONLY as residual diagnostics (NIS/NEES) with an explicit model class, not as process/measurement noise",
+        "Ingest only via 05_EVIDENCE_FRAME.json validator: 12/12 negatives REJECT, positives P01-P03 PASS, mutation control P04 REJECT",
+        "ABSTAIN records propagate as ABSTAIN; AGGREGATE_ONLY never treated as VERIFIED"
+      ],
+      "forbidden": ["feeding unvalidated records into the filter", "treating descriptor-level aggregates as calibration-grade measurements"]
+    },
+    {
+      "module": "R46-5.M4_uncertainty_budget",
+      "input": ["W22 budget skeleton", "JCGM 100/101 conventions"],
+      "binding": [
+        "T1 (Type-A from data), T2 (Type-B reference/declaration), T3 (structurally non-identifiable, e.g. gauge) must be separated",
+        "Only T1+T2 may enter a combined standard uncertainty; T3 forces ABSTAIN or external reference",
+        "Gyro offset Type-A value 7.94e-6 rad/s is CONDITIONAL on iid; systematic terms do not shrink with n; no coverage claim"
+      ],
+      "forbidden": ["coverage statements without declared distributional assumptions", "merging T3 into combined uncertainty"]
+    }
+  ],
+  "ceiling": "C1_DESCRIPTIVE_ONLY (unchanged)",
+  "holds_carried": "08_GATES_AND_HOLDS.json",
+  "next": "R46_4_RETURN_FOR_AXIOM_ADJUDICATION"
+}
