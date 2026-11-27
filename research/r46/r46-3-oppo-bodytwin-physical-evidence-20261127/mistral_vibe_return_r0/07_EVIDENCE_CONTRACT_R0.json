@@ -1,0 +1,139 @@
+{
+  "contract_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "generated_utc_local": "2026-11-27T13:26:56.515Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "lineage_layers": {
+    "L0": {
+      "name": "raw immutable private",
+      "access": "NOT_ACCESSIBLE_TO_EXTERNAL_AGENTS",
+      "note": "no raw bytes or raw digests in this return"
+    },
+    "L1": {
+      "name": "deterministic reconstruction",
+      "requirements": [
+        "target quantity",
+        "uncertainty",
+        "provenance"
+      ],
+      "status": "DESIGN_ONLY"
+    },
+    "L2": {
+      "name": "synthetic Dream",
+      "note": "must remain separate from any historical or live physical claim",
+      "status": "SEPARATE"
+    },
+    "L3": {
+      "name": "approved minimal projection",
+      "note": "public WWW surface, C1_DESCRIPTIVE_ONLY",
+      "golden_schema_example": {
+        "schema": "nexus-bodytwin-live-feed/1",
+        "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+        "trust": "SELF_HOSTED_PUBLIC_C1_NOT_INDEPENDENT_WITNESS",
+        "producer": {
+          "run_utc": "ISO8601",
+          "seq": "integer",
+          "interval_seconds": "number",
+          "source_changed": "boolean"
+        },
+        "gates": {
+          "physical_imu": "NOT_AUTHORIZED",
+          "bodytwin_validated": "NO",
+          "consent": "OPEN"
+        }
+      }
+    }
+  },
+  "evidence_classes": [
+    "RAW_PRIVATE",
+    "RECONSTRUCTED_DETERMINISTIC_L1",
+    "SYNTHETIC_DIAGNOSTIC_L2",
+    "PROJECTED_MINIMAL_APPROVED_L3",
+    "OBSERVED_INDEPENDENT_TEXT_LEVEL",
+    "PRODUCER_REPORTED",
+    "DESIGN_ONLY"
+  ],
+  "states": [
+    "FRESH",
+    "STALE",
+    "UNKNOWN",
+    "NO_DATA"
+  ],
+  "state_assignment": {
+    "bodytwin_page_20261127": "FRESH (text-level, 2026-11-27T13:13:53Z)",
+    "bodytwin_live_current_json": "FRESH (text-level, run_utc 2026-11-27T12:50:02Z, seq 5663, source_changed=false)",
+    "bodytwin_status_json": "NO_DATA (blocked fetch, no outage assertion)",
+    "forschungsstatus_json": "NO_DATA (blocked fetch, no outage assertion)",
+    "r21_aggregate": "STALE relative to live (event date 2026-11-09), integrity of summary arithmetic FRESH (reproduced)",
+    "order_zip_bytes": "UNKNOWN (byte-level hash not obtainable)"
+  },
+  "negative_cases_required": [
+    {
+      "id": "NEG-1",
+      "case": "body pose inferred from phone-on-table magnitudes",
+      "required_behavior": "ABSTAIN / REJECT"
+    },
+    {
+      "id": "NEG-2",
+      "case": "historical aggregate presented with a live label",
+      "required_behavior": "REJECT"
+    },
+    {
+      "id": "NEG-3",
+      "case": "producer tick freshness presented as source freshness",
+      "required_behavior": "REJECT (use source_changed)"
+    },
+    {
+      "id": "NEG-4",
+      "case": "synthetic diagnostic presented as physical evidence",
+      "required_behavior": "REJECT"
+    },
+    {
+      "id": "NEG-5",
+      "case": "recursive private metadata leak through projections",
+      "required_behavior": "REJECT"
+    }
+  ],
+  "receipt_schema": {
+    "route": "url",
+    "status": "FETCHED_TEXT_LEVEL | BLOCKED_NO_CONTENT",
+    "fetched_at_utc": "ISO8601",
+    "chars": "number",
+    "sha256_of_delivered_text": "hex64 | null",
+    "note": "text-level caveat mandatory"
+  },
+  "receipts": [
+    {
+      "route": "https://www.nexus-mobile.de/bodytwin/",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_at_utc": "2026-11-27T13:13:53.684Z",
+      "chars": 4479,
+      "sha256_of_delivered_text": "6415480698a1eb8d422f6e0de1d8d3bd6b327f7993966fc9d150d87c2d328958",
+      "note": "C1_DESCRIPTIVE_ONLY declared; promotion FALSE; phase5 FALSE"
+    },
+    {
+      "route": "https://www.nexus-mobile.de/bodytwin/live/current.json",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_at_utc": "2026-11-27T13:13:54.140Z",
+      "chars": 1130,
+      "sha256_of_delivered_text": "4434ba71548608e876d38ec8abb7238a7d85d6178d4ca6f37f8dfd29e1a36450",
+      "note": "schema nexus-bodytwin-live-feed/1; run_utc 2026-11-27T12:50:02Z; seq 5663; source_changed=false; physical_imu NOT_AUTHORIZED"
+    },
+    {
+      "route": "https://www.nexus-mobile.de/bodytwin/status.json",
+      "status": "BLOCKED_NO_CONTENT",
+      "fetched_at_utc": "2026-11-27T13:13:54.432Z",
+      "chars": null,
+      "sha256_of_delivered_text": null,
+      "note": "transport block placeholder only; no outage assertion"
+    },
+    {
+      "route": "https://www.nexus-mobile.de/forschungsstatus.json",
+      "status": "BLOCKED_NO_CONTENT",
+      "fetched_at_utc": "2026-11-27T13:13:55.801Z",
+      "chars": null,
+      "sha256_of_delivered_text": null,
+      "note": "transport block placeholder only; no outage assertion"
+    }
+  ]
+}

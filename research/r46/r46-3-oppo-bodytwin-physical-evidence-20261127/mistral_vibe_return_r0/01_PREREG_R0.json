@@ -1,0 +1,55 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R46_3_OPPO_BODYTWIN_PHYSICAL_EVIDENCE_EXPERT_ORDER_20261127_R0",
+  "expert": "MISTRAL_VIBE",
+  "prereg_version": "R0",
+  "created_utc_local": "2026-11-27T13:19:02.092Z",
+  "attestation": "LOCAL_ONLY_NOT_EXTERNALLY_TIMESTAMPED",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "statement": "R21 reported ACC and GYRO rates reproduce bit-exactly from (N-1)/duration on the reported n and duration.",
+      "falsifier": "Recomputation differs beyond an ULP-scaled tolerance from the reported rates.",
+      "evaluation": "evaluated_in_return_by_W1"
+    },
+    {
+      "id": "H2",
+      "statement": "Reported gravity_residual_mean_abs equals abs(mean(mag)-g0) evaluated on the rounded mean, not mean(abs(norm-g0)).",
+      "falsifier": "Raw norms show mean(abs(norm-g0)) materially different from the reported value, or the reported value does not match abs(mean-g0).",
+      "evaluation": "evaluated_in_return_by_W2"
+    },
+    {
+      "id": "H3",
+      "statement": "abs(mean-g0) is a strict lower bound of mean(abs(norm-g0)) on distributions consistent with the reported mean/SD (Jensen gap strictly positive).",
+      "falsifier": "Existence of a distribution consistent with reported mean/SD whose gap is <= 0.",
+      "evaluation": "evaluated_in_return_by_W3"
+    },
+    {
+      "id": "H4",
+      "statement": "Magnitude-only aggregates cannot identify device orientation or axis covariance (SO(3)-invariance).",
+      "falsifier": "A demonstrated recovery of orientation or axis covariance from magnitude statistics alone.",
+      "evaluation": "evaluated_in_return_by_W6_W7"
+    },
+    {
+      "id": "H5",
+      "statement": "Zero gaps_gt_5x_median does not imply zero packet loss.",
+      "falsifier": "A proof that the strict > 5x-median rule detects every loss pattern of up to 4 consecutive events.",
+      "evaluation": "evaluated_in_return_by_W10"
+    }
+  ],
+  "hypotheses_sha256": "c94bbeeddd3a25e0ef2ceeb994095de2ad1cf8a73f584de7cdb57c5b8784db13",
+  "binding": {
+    "witness_file": "04_WITNESSES_MISTRAL_VIBE.js",
+    "witness_sha256": "2c2cc37dcc6c413a68b3e63b20eeaee01871c00e8e85ed1a6c978c8e25ef24cc",
+    "hash_algorithm": "SHA-256 self-implementation verified against official NIST test vectors"
+  },
+  "order_branch_head": "d7e1c95d276b20254b8c30a4de4b1310d18a1b31",
+  "constraints": {
+    "no_new_capture": true,
+    "no_public_write": true,
+    "no_install": true,
+    "cursor_prohibited_until": "R46_9_CLOSEOUT",
+    "merge_prohibited": true,
+    "self_ack": false
+  }
+}

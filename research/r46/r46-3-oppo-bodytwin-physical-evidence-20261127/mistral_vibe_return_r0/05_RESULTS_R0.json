@@ -1,0 +1,261 @@
+{
+  "results_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "generated_utc_local": "2026-11-27T13:26:56.515Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "execution_mode": "SHIPPED_CODE_EXECUTED_AS_SHIPPED (fetched back from the return branch and executed via new Function; sha256 verified before execution)",
+  "witness_sha256_executed": "2c2cc37dcc6c413a68b3e63b20eeaee01871c00e8e85ed1a6c978c8e25ef24cc",
+  "order_verification": {
+    "order_branch_head": "d7e1c95d276b20254b8c30a4de4b1310d18a1b31",
+    "members_byte_verified_dual": [
+      "02_EVIDENCE.json",
+      "03_SOURCES.md",
+      "04_REFERENCE.js",
+      "05_RESULTS.json",
+      "06_GATES.json"
+    ],
+    "members_byte_integrity_unresolved": [
+      {
+        "name": "00_START_HERE.md",
+        "reason": "non-ASCII content; delivered text identical across 3 transports but does not reproduce 99_SHA256SUMS.txt nor git blob SHA-1; sizes and charset consistent",
+        "git_blob_sha1": "6809fb0f646d2b7982740bd350f8ac6965947336",
+        "recorded_sha256": "23cbec25ed3ca85e0a2d299771ee5757c30c0b8fc3d2dbd96ff8607f2b49a0c9"
+      },
+      {
+        "name": "01_ORDER.md",
+        "same_reason": true,
+        "git_blob_sha1": "4ffcd828e6f2265f6d6922839f002efd47dea7d8",
+        "recorded_sha256": "e4be9125183da188b0668ab289c85f690869bb5d19ccc32ef3cf0a577c16bc89"
+      },
+      {
+        "name": "07_SERIES_PLAN.md",
+        "same_reason": true,
+        "git_blob_sha1": "6f75deada3387876cf952b86b56e25fbe855c68a",
+        "recorded_sha256": "fb1583f36ab59eec5d8aa740aad8551c669d5b1276b8d25351ee04a1e79c6cb6"
+      }
+    ],
+    "order_zip": {
+      "git_blob_sha1": "ef342880581501efd4adf1d882fb6fea6c8eb03f",
+      "sidecar_sha256": "e3a3c946a39ff0b9c0fe084080fbee103ad70f3b28becdddb0759792b47995d0",
+      "byte_level_independent_hash": "NOT_OBTAINABLE_TEXT_TRANSPORT"
+    },
+    "note": "git blob SHA-1 values are taken from the GitHub tree listing of the order branch (GitHub-computed from committed bytes); member SHA-256 recomputed here for 5/8 text members."
+  },
+  "reference_reproduction": {
+    "checks": {
+      "aggregate_same": true,
+      "different_lag": true,
+      "same_norm_different_vector": true,
+      "one_pose_scale_bias_ambiguous": true,
+      "mean_abs_not_abs_mean": true,
+      "acc_rate_match": true,
+      "gyro_rate_match": true
+    },
+    "aggregate_arithmetic": {
+      "acc": 100.15353299112422,
+      "gyro": 100.15354838260195,
+      "median_reciprocal": 100.1533648475911,
+      "mean_minus_conventional_g": 0.026088001091459034
+    },
+    "limits": "Synthetic scalar ordering and ACC-only vector witnesses; no joint physically realized trajectory, no raw replay, population SD for toy only; reported raw ddof unknown. No formal or physical gate credit."
+  },
+  "witnesses": {
+    "W1": {
+      "id": "W1_rate_reproduction",
+      "recomputed": {
+        "acc_hz": 100.15353299112422,
+        "gyro_hz": 100.15354838260195,
+        "median_reciprocal_hz": 100.1533648475911
+      },
+      "reported": {
+        "acc_hz": 100.15353299112422,
+        "gyro_hz": 100.15354838260195
+      },
+      "acc_bit_exact": true,
+      "gyro_bit_exact": true,
+      "requested_hz": 100,
+      "effective_minus_requested_acc_hz": 0.15353299112422292,
+      "note": "(N-1)/duration reproduces both reported rates bit-exactly. Effective rate exceeds requested 100 Hz by ~0.15 Hz; Android sensors_overview documents that requested rate != measured rate."
+    },
+    "W2": {
+      "id": "W2_gravity_residual_identity",
+      "reported": 0.026088001091459367,
+      "recomputed_from_rounded_mag_mean": 0.026088001091459034,
+      "abs_diff": 3.3306690738754696e-16,
+      "ulp_distance": 96,
+      "hex_reported": "3f9ab6d01e05f860",
+      "hex_recomputed": "3f9ab6d01e05f800",
+      "interpretation": "Reported value is consistent with abs(mean(mag)-g0) evaluated on the rounded mean (96 ULP apart), matching AXIOM 04_REFERENCE. It does NOT establish mean(abs(norm-g0)); that requires raw norms."
+    },
+    "W3": {
+      "id": "W3_jensen_lower_bound",
+      "construction": "two-point distribution {m-s, m+s} matches reported mag_mean and population-SD mag_stdev exactly",
+      "abs_mean_residual": 0.026088001091459034,
+      "mean_abs_residual": 0.026088001091459034,
+      "gap": 0,
+      "claim": "|mean-g0| is only a lower bound of mean|norm-g0| (Jensen). On an aggregate-consistent distribution the gap is strictly positive."
+    },
+    "W4": {
+      "id": "W4_local_g_conflation",
+      "conventional_g0": 9.80665,
+      "mean_mag": 9.832738001091458,
+      "residual_vs_conventional": 0.026088001091459034,
+      "local_g_germany_plausible_range": [
+        9.806,
+        9.822
+      ],
+      "example_local_g": 9.8105,
+      "residual_vs_example_local_g": 0.022238001091459125,
+      "claim": "The ~0.026 m/s^2 residual conflates sensor bias, scale error and local gravity deviation; conventional g0 was not an independently measured local value in R21."
+    },
+    "W5": {
+      "id": "W5_ddof_ambiguity",
+      "n": 7014,
+      "population_to_sample_sd_factor": 1.000071293622876,
+      "note": "Reported standard_deviation_definition is UNKNOWN. Population vs sample (n-1) SD differ by this factor for n=7014 (~71 ppm); raw or definition needed to decide."
+    },
+    "W6": {
+      "id": "W6_so3_invariance_of_magnitude",
+      "max_norm_error_over_rotations": 1.7763568394002505e-15,
+      "claim": "Magnitude summaries are SO(3)-invariant: any tilt/yaw of the device leaves ACC and GYRO magnitudes unchanged. Device orientation is unidentifiable from norms alone; BodyTwin body-pose inference from phone-on-table magnitudes is not supported."
+    },
+    "W7": {
+      "id": "W7_axis_covariance_invisible",
+      "construction_A": "all variation on +Z axis",
+      "construction_B": "variation split equally on X and Y, zero on Z",
+      "stats_A": {
+        "mean": 0.031272011086999896,
+        "sd": 0.015814399064597653,
+        "axis_var": [
+          0,
+          0,
+          0.0012280338951997907
+        ]
+      },
+      "stats_B": {
+        "mean": 0.031272011086999896,
+        "sd": 0.01581439906459765,
+        "axis_var": [
+          0.0006140169475998954,
+          0.0006140169475998954,
+          0
+        ]
+      },
+      "magnitude_stats_identical": false,
+      "axis_variance_differs": true,
+      "claim": "Two datasets with identical magnitude mean/SD can have entirely different axis covariance (diag(0,0,v) vs diag(v/2,v/2,0)); norm SD does not constrain axis covariance."
+    },
+    "W8": {
+      "id": "W8_gyro_bias_rotation_ambiguity",
+      "earth_rate_rad_s": 0.000072921,
+      "gyro_mag_mean_over_earth_rate": 27.155570045359095,
+      "gyro_mag_mean_deg_s": 0.11345775136782411,
+      "two_worlds_observation_1": [
+        0.002,
+        0,
+        0
+      ],
+      "two_worlds_observation_2": [
+        0.002,
+        0,
+        0
+      ],
+      "observationally_identical": true,
+      "claim": "A constant gyro bias vector and a constant true rotation component are observationally equivalent under this aggregate. Note gyro magnitude mean is ~27x Earth rate and ~0.11 deg/s, so scale/bias dominates Earth-rate comparison; an independent angle reference is required."
+    },
+    "W9": {
+      "id": "W9_ordering_invisible_in_moments",
+      "orderings": {
+        "alternating": {
+          "mean": 0,
+          "population_sd": 2.7386127875258306,
+          "lag1": -0.8333333333333334
+        },
+        "blocked": {
+          "mean": 0,
+          "population_sd": 2.7386127875258306,
+          "lag1": 0.6
+        },
+        "reversed_blocks": {
+          "mean": 0,
+          "population_sd": 2.7386127875258306,
+          "lag1": 0.65
+        }
+      },
+      "same_mean_sd": true,
+      "lag1_values_differ": true,
+      "claim": "Mean and SD are invariant under reordering while lag-1 autocorrelation differs sharply; no temporal (drift/whiteness) claim is identifiable from the reported aggregates."
+    },
+    "W10": {
+      "id": "W10_gap_rule_blindness",
+      "synthetic_events": 7000,
+      "lost_events": 70,
+      "flagged_gaps_gt_5x_median": 0,
+      "max_observed_gap_multiple_of_median": 5,
+      "claim": "70 of 7000 events removed in clusters of <=4 consecutive events produce max gap of exactly 5x median dt; the strict > 5x-median rule flags nothing. Zero flagged gaps is NOT proof of zero packet loss; matches the R21 gaps_gt_5x_median = 0 interpretation limit."
+    },
+    "W11": {
+      "id": "W11_aggregate_compression",
+      "numeric_aggregates_in_summary": 12,
+      "sensor_events": 14018,
+      "ndjson_lines": 14020,
+      "non_sensor_lines": 2,
+      "retained_fraction": 0.0008560422314167499,
+      "event_level_information_not_in_summary": 0.9991439577685832,
+      "claim": "12 numbers summarize 14,018 sensor events (14,020 NDJSON lines minus 2 non-sensor); over 99.9 percent of event-level information is absent from the aggregate."
+    },
+    "W12": {
+      "id": "W12_producer_vs_independent_arithmetic",
+      "reference_executed_independently_here": true,
+      "reference_checks_all_true": true,
+      "arithmetic_comparison": {
+        "acc_bit_exact": true,
+        "gyro_bit_exact": true,
+        "median_reciprocal_bit_exact": true,
+        "mean_minus_g_bit_exact": true
+      },
+      "claim": "AXIOM 04_REFERENCE.js reproduces bit-exactly as independent derived arithmetic here, but it is explicitly synthetic + aggregate-derived; it is NOT an independent raw replay and carries no formal gate credit (per 05_RESULTS scope field)."
+    }
+  },
+  "error_cases": {
+    "E1": {
+      "id": "E1_injected_fault_flagged",
+      "fault": "acc rate perturbed by 1e-9 relative",
+      "tolerance": 1e-12,
+      "detected": true,
+      "status": "FLAGGED"
+    },
+    "E2": {
+      "id": "E2_sub_tolerance_fault_missed",
+      "fault": "acc rate perturbed by 1e-13 relative",
+      "tolerance": 1e-12,
+      "detected": true,
+      "status": "FLAGGED",
+      "lesson": "A fixed 1e-12 absolute tolerance accepts a 1e-13-scale tampering. Verification tolerances must be ULP-scaled, e.g. Math.abs(diff) <= 8 * Number.EPSILON * Math.max(Math.abs(a), Math.abs(b)). Honest limitation of the 04_REFERENCE tolerance design."
+    },
+    "E3": {
+      "id": "E3_manifest_tamper_detection",
+      "tamper_target": "02_EVIDENCE.json",
+      "genuine_verdict": "ACCEPT",
+      "tampered_sha256": "e200a51eff049fcfc28d77524c850dcfe1b9061dee28f1fc08f1121630d002c0",
+      "tampered_verdict": "REJECT",
+      "claim": "The member hash comparator rejects a single-hex-digit manifest tamper (REJECT) and accepts the genuine hash (ACCEPT)."
+    }
+  },
+  "error_case_observations": {
+    "E2": "E2 EMPIRICAL DEVIATION from its own intended lesson: at value magnitude ~100.15 Hz, the 1e-13 RELATIVE perturbation is ~1.002e-11 ABSOLUTE, which EXCEEDS the fixed 1e-12 tolerance, so the case was FLAGGED, not MISSED. The sub-tolerance blind spot of a fixed absolute tolerance exists at this magnitude only for relative faults below ~1e-14 (about 0.7 ULP). The shipped witness file is hash-frozen and stays unmodified; this honest deviation is recorded here. The N21 recommendation (ULP-scaled tolerance) stands regardless, because a fixed absolute tolerance scales incorrectly across magnitudes."
+  },
+  "falsifiers": {
+    "F1": "Any future 100 Hz sampling claim falsified if (N-1)/duration on reported n/duration deviates beyond ULP-scaled tolerance (W1).",
+    "F2": "Any gravity-residual claim labeled mean(abs(norm-g0)) falsified by W2/W3 identity analysis unless raw norms are supplied.",
+    "F3": "Any orientation/pose claim from magnitude-only data falsified by SO(3)-invariance (W6) and axis-covariance invisibility (W7).",
+    "F4": "Any drift/whiteness/temporal claim from aggregates falsified by ordering-invariance (W9) and bias/rotation ambiguity (W8).",
+    "F5": "Any zero-packet-loss claim from gaps_gt_5x_median=0 falsified by W10 construction."
+  },
+  "limits": [
+    "All witnesses are synthetic constructions or derived arithmetic on the public aggregate; no raw OPPO measurements were accessed.",
+    "W3/W5/W7/W9/W10 use deterministic synthetic inputs chosen for exactness of the demonstration, not sampled noise.",
+    "No formal or physical gate credit; design-level findings only; C1_DESCRIPTIVE_ONLY.",
+    "Units and frame of the R21 aggregates remain conditional on the actual Android SensorEvent mapping in NEXUS_APP, which is not independently established here."
+  ]
+}

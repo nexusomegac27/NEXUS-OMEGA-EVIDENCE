@@ -1,0 +1,54 @@
+{
+  "checkpoint_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "created_utc_local": "2026-11-27T13:26:56.515Z",
+  "flags": {
+    "RETURN_R0_COMPLETE_C1": true,
+    "SELF_ACK": "NO",
+    "ADJUDICATION": "PENDING_AXIOM",
+    "MERGE": "PROHIBITED",
+    "CURSOR_HANDOFF": "PROHIBITED_UNTIL_R46_9_CLOSEOUT",
+    "NEW_ROUND": "PROHIBITED_UNTIL_AXIOM_ADJUDICATION",
+    "TRANSPORT_LABEL": "OPERATOR_AUTHORIZED_GITHUB_SEND_VIA_AGENT_CONNECTOR",
+    "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+    "NO_NEW_CAPTURE": true,
+    "NO_INSTALL": true,
+    "NO_PUBLIC_WRITE": true
+  },
+  "honest_deviations": [
+    "W6 max norm error is double-precision round-off level, not exactly 0 (recorded value in 05_RESULTS_R0.json).",
+    "E2 executed FLAGGED, not the intended MISSED: at magnitude ~100.15 a 1e-13 relative fault is ~1.0e-11 absolute, above the fixed 1e-12 tolerance. Witness file hash-frozen, unmodified; deviation documented in 05_RESULTS_R0.json error_case_observations.",
+    "W7 magnitude SD differs by 1 ULP between the two constructions (intended identical); W3 gap = 0 attained because both two-point support points lie above g0 (bound strictness requires spread across g0)."
+  ],
+  "bindings": {
+    "order_branch": "axiom/r46-3-oppo-bodytwin-physical-evidence-20261127-c1",
+    "order_head": "d7e1c95d276b20254b8c30a4de4b1310d18a1b31",
+    "return_branch": "vibe/r46-3-mistral-vibe-physical-evidence-return-20261127-c1",
+    "witness_sha256": "2c2cc37dcc6c413a68b3e63b20eeaee01871c00e8e85ed1a6c978c8e25ef24cc",
+    "hypotheses_sha256": "c94bbeeddd3a25e0ef2ceeb994095de2ad1cf8a73f584de7cdb57c5b8784db13",
+    "commit1_member_sha256": {
+      "00_START_HERE.md": "a662ad8aeec97503c7a8b319ac597b6aa7a8005a2b9d30049479520e1245a343",
+      "01_PREREG_R0.json": "c643555ae7b80c7a484348c9fb6556f436e80eca7ef7ab38f8c41cc06bf1421b",
+      "03_SOURCES_LEDGER.json": "2119a6fad2b7aa1ff6d72f4ac300ba3c179018f287875d13f448f914e8764f0d",
+      "04_WITNESSES_MISTRAL_VIBE.js": "2c2cc37dcc6c413a68b3e63b20eeaee01871c00e8e85ed1a6c978c8e25ef24cc",
+      "09_RESOURCE_RECEIPT.json": "94457d40b3e1ab23c82d70bed73830532f9f3910b502e358ff6c2160dcb525f8"
+    },
+    "commit2_pending": [
+      "02_RETURN_MAIN.md",
+      "05_RESULTS_R0.json",
+      "06_INTEGRATION_MATRIX.json",
+      "07_EVIDENCE_CONTRACT_R0.json",
+      "08_GATES_R0.json",
+      "10_CHECKPOINT_R0.json"
+    ],
+    "commit3_pending": [
+      "MANIFEST_SHA256_R0.json",
+      "R46_3_MISTRAL_VIBE_RETURN_R0.zip.sha256",
+      "R46_3_MISTRAL_VIBE_RETURN_R0.zip.b64"
+    ]
+  },
+  "corrections_commit": {
+    "note": "02_RETURN_MAIN.md A3/B3 wording, 06_INTEGRATION_MATRIX M03/M11 wording, this checkpoint honest_deviations extended",
+    "applied_utc_local": "2026-11-27T13:28:54.592Z"
+  }
+}
