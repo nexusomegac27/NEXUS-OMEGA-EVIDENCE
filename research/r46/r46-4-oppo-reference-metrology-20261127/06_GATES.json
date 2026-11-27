@@ -1,0 +1,178 @@
+{
+  "register": "R46-4 designs only",
+  "controls": [
+    {
+      "id": "R46-4-N01",
+      "test": "same norm moments different covariance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N02",
+      "test": "mixed L2/RMS metric",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N03",
+      "test": "conditional fit as actual noise",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N04",
+      "test": "ddof and finite N ambiguity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N05",
+      "test": "residual label as exact raw computation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N06",
+      "test": "strict Jensen gap assumed",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N07",
+      "test": "gap detector as lossless",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N08",
+      "test": "scalar ratio as entropy",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N09",
+      "test": "unknown reference orientation gauge",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N10",
+      "test": "unknown local gravity scale gauge",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N11",
+      "test": "single pose rank deficiency",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N12",
+      "test": "planar/clustered rank deficiency",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N13",
+      "test": "known pose nominal vs actual mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N14",
+      "test": "shared reference error not iid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N15",
+      "test": "fit holdout reuse",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N16",
+      "test": "gyro scale from rest",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N17",
+      "test": "absolute yaw from gravity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N18",
+      "test": "time-offset angle confounding",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N19",
+      "test": "invalid/missing source fields",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N20",
+      "test": "empty projection",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N21",
+      "test": "case enum bypass",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N22",
+      "test": "historical status LIVE",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N23",
+      "test": "nested private placeholder",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N24",
+      "test": "VERIFIED without source",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N25",
+      "test": "invalid time ordering/common clock assumption",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-N26",
+      "test": "nonfinite numeric and bool",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P01",
+      "test": "positive known-vector rank4 exact fit",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P02",
+      "test": "positive independent heldout with reference uncertainty",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P03",
+      "test": "positive moment bound attainment",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P04",
+      "test": "positive typed historical record with source",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P05",
+      "test": "positive unknown/abstention state",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-4-P06",
+      "test": "positive synthetic-only projection",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "executed_reference": "12 checks separate",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true
+}

@@ -1,0 +1,132 @@
+{
+  "parent": {
+    "issue": 470,
+    "pr": 471,
+    "head": "d7e1c95d276b20254b8c30a4de4b1310d18a1b31",
+    "zip_bytes": 22619,
+    "sha256": "e3a3c946a39ff0b9c0fe084080fbee103ad70f3b28becdddb0759792b47995d0",
+    "readback": "8/8 ZIP and loose byte hashes, including 3 previously unresolved nonASCII members",
+    "evidence_sha256": "e200a51eff049fcfc28d77524c850dcfe1b9061dee28f1fc08f1121630d002c6"
+  },
+  "intake": [
+    {
+      "role": "GLM",
+      "bytes": 75546,
+      "sha256": "004d9493be860cfcdf3ed33a30699407d8b5d95bc3499fe70e23ef83b0af36e8",
+      "crc": "39/39",
+      "sha": "37/37",
+      "manifest_sha": "cc7b7d19dd3632f4ef519997d93eb921c62372830ca028a7fc74ad346a01ef6a"
+    },
+    {
+      "role": "AutoCLAW R0",
+      "bytes": 212984,
+      "sha256": "c460907889719c6d79c06d7130b14864700e9b6ac4c4229e9cf247bb43deaf9a",
+      "crc": "42/42 including directories",
+      "sha": "32/32",
+      "json_manifest": "32/32",
+      "embedded_glm": "BYTE_IDENTICAL",
+      "receipt_chain": "5/5 canonical JSON excluding selfhash",
+      "tail": "787d47a6c98550fc7825b1dc3bcfc12494ce4fa9e7e9741d1e5ae806dc090d01"
+    },
+    {
+      "role": "AutoCLAW R1",
+      "bytes": 87037,
+      "sha256": "eb08cb7a9343053fcbac871bb3be3c1b693246169d48de80c7b363ddbce93110",
+      "crc": "33/33",
+      "sha": "30/30",
+      "json_manifest": "29/29",
+      "receipt_chain": "5/5 raw hash links incl genesis",
+      "tail": "f394683dead94bfef254c070fb3b3c9cf46caf52495597773d478da92c26061e",
+      "sidecar": "MATCH"
+    },
+    {
+      "role": "Mistral Vibe",
+      "pr": 472,
+      "head": "1ce38a85d97eef9ef823287a474d9c050e94e6d9",
+      "bytes": 71181,
+      "sha256": "6fcdc82694ceb5e5832cb1e497f2cf7d790ab5c5f0e5011e320e8804f1cf6fa2",
+      "crc": "11/11",
+      "manifest": "11/11",
+      "base64_readback": "MATCH",
+      "sidecar": "MATCH"
+    }
+  ],
+  "text_pins": {
+    "receipt": "e8a37f9f810f24cc304c26928202da5f90d2f20249f01d6474200b7754b70a68",
+    "mistral": "744155540d4d06780952c82d2f5f315bc9622be4b10fd1cd17235a0bcd48bd48",
+    "order": "eaa134419c1c7d443acd081a9e553519a69278f21248775760e0a46ca963bd29",
+    "autoclaw_r1_sidecar": "27cfcecf8241e2252f4df49d0a1da62860ec564312b9bd598e9a541cf9e49fc0"
+  },
+  "findings": {
+    "iso_ACC": {
+      "mu": 9.832729445516133,
+      "sigma": 0.009171949489023268
+    },
+    "iso_GYRO": {
+      "mu": 0.0016546157415949306,
+      "sigma": 0.0007359849609452992
+    },
+    "independent_method": "SciPy brentq + closed-form noncentral chi3 expectation; P2 exponential density quadrature",
+    "p2": {
+      "mean": 9.83273800109146,
+      "sd": 0.009171945497296061,
+      "rms_ratio": 26.74623601675417
+    },
+    "residual": {
+      "lower": 0.026088001091459034,
+      "upper": 0.027653361191483983,
+      "ulp_of_residual": 96,
+      "ulp_of_mean": 0.1875
+    },
+    "new_projection_probes": {
+      "source_sha256": "114b2ac2cebcdf5aa1020fd38f859b44a29bc39f4d91fbeae5fb81b30e60de08",
+      "method": "isolated original validate_projection AST function only",
+      "inputs": [
+        {},
+        {
+          "evidence_class": "E2_SYNTHETIC",
+          "channel": "physical"
+        },
+        {
+          "mode": "HISTORICAL_AGGREGATE",
+          "status": "LIVE"
+        },
+        {
+          "aggregate": {
+            "raw_location": "mock-private"
+          }
+        },
+        {
+          "status": "VERIFIED"
+        },
+        {
+          "capture_ts": 2,
+          "fetch_ts": 1,
+          "age_basis": "capture_ts"
+        }
+      ],
+      "all_returned": "[]"
+    },
+    "local_design_probe": {
+      "rank_one": 1,
+      "rank_planar": 3,
+      "rank_clustered_same_latitude": 3,
+      "rank_tetra": 4,
+      "rank_six": 4,
+      "known_vector_gauge_residual": 2.220446049250313e-16,
+      "changed_matrix_frobenius": 0.014145788506261919,
+      "mc": "1000 synthetic runs per design, sequential RNG draws not paired, 12 pose-average observations each, normalized acceleration, iid additive .001 noise per component; .01 rad common reference rotation; no statistical superiority test",
+      "tetra": {
+        "condition": 1.7320508075688774,
+        "holdout_median_rmse": 0.00054303897855511,
+        "shared_rotation_median_rmse": 0.004782290893037038
+      },
+      "six": {
+        "condition": 1.7320508075688774,
+        "holdout_median_rmse": 0.0005448534662512265,
+        "shared_rotation_median_rmse": 0.004770125977089837
+      }
+    }
+  },
+  "limits": "Original full expert programs, DOCX and all historical receipt payload-to-result links not fully replayed. R0 and R1 use distinct lineage labels but not authenticated independent actors. Mistral own W3/W6/W7/E2 corrections retained; W3 equality, no strict Jensen gap. Parent Unicode issue resolved in AXIOM readback, not retrospectively in Mistral environment. No independent raw replay, actual calibration, UKF/NEES/NIS or live deployment. No formal credit."
+}
