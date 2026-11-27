@@ -1,0 +1,99 @@
+{
+  "runner": "04_REFERENCE.js",
+  "lineage": "GLM_R1_R46_4_ORDER",
+  "all_reference_checks_pass": true,
+  "wr1_one_pose_rank": {
+    "design_rows": 1,
+    "expected_rank": 1,
+    "required_rank": 2,
+    "rank_x_axis": 1,
+    "rank_y_axis": 1,
+    "rank_z_axis": 1,
+    "verdict": "NOT_IDENTIFIABLE (scale/bias inseparable from one pose, cf. R46-3 W17)"
+  },
+  "wr2_six_position_rank": {
+    "design_rows": 6,
+    "required_rank": 2,
+    "rank_x_axis": 2,
+    "rank_y_axis": 2,
+    "rank_z_axis": 2,
+    "verdict": "IDENTIFIABLE per-axis (slope and intercept separated)"
+  },
+  "wr3_full_affine_rank": {
+    "design_rows": 18,
+    "design_cols": 12,
+    "computed_rank": 12,
+    "verdict": "IDENTIFIABLE (S and b identifiable from six standard positions up to documented conventions)"
+  },
+  "wr4_5_finite_sample_uncertainty": {
+    "m_per_position": 3500,
+    "sigma_axis_assumption": "isotropic (UNVERIFIED, R46-3 W12: sigma_axis model-conditional)",
+    "se_scale_rel": 0.000006454032417903367,
+    "se_scale_over_g_rel": 6.581281495621203e-7,
+    "se_bias": 0.00006329243701103205,
+    "class": "E1_MODEL_CONDITIONAL"
+  },
+  "wr6_gap_histogram": {
+    "planned": 7095,
+    "drops": 81,
+    "threshold_count_gt_5x_median": 0,
+    "gap_histogram": {
+      "1x_median": 7013,
+      "2x_median": 81,
+      "gt_5x_median": 0
+    },
+    "verdict": "threshold count alone reports 0 while 81 intervals are doubled; histogram is required (C2)"
+  },
+  "wr7_ddof": {
+    "population_sd": 0.009171945499113295,
+    "sample_sd": 0.009172599400336748,
+    "abs_diff": 6.539012234525073e-7,
+    "requirement": "producer documents ddof (C3)"
+  },
+  "wr8_projection": {
+    "isotropic": 0.009171945498845445,
+    "z_dominant": 0.009171945498845445,
+    "x_dominant": 0.009171945498845445,
+    "observed_mag_stdev": 0.009171945499113295,
+    "verdict": "three different axis covariances reproduce the same magnitude SD; per-axis statements need multi-position (C1)"
+  },
+  "wr9_contract": {
+    "negative_cases": [
+      {
+        "case": "calibration-from-one-pose",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "uncertainty-from-norms-alone",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "design-presented-as-measurement",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "missing-ddof-aggregate",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "threshold-count-as-losslessness",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "local-g-without-reference",
+        "verdict": "REJECT"
+      }
+    ],
+    "positive_cases": [
+      {
+        "verdict": "ACCEPT"
+      },
+      {
+        "verdict": "ACCEPT"
+      }
+    ],
+    "all_reject": true,
+    "positives_pass": true
+  },
+  "limits": "Design-only reference computations; analytic uncertainty values are E1_MODEL_CONDITIONAL under an UNVERIFIED isotropy assumption; no measurement, no capture, no gate credit."
+}
