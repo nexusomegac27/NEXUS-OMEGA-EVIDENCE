@@ -1,0 +1,57 @@
+{
+  "source_sha256": "98298f92f62c5783437923cdf43beb11cef9ebc5207e2ac240cf425842d9f2f2",
+  "prereg_sha256": "74c9424b31d9135d942542682bb87147ec943d4aee1276619c103f0a1b656862",
+  "result": {
+    "checks": {
+      "correct_nees": true,
+      "naive_nees": true,
+      "correct_coverage": true,
+      "wrong_coverage": true,
+      "gated_mean": true,
+      "gating_contracts": true,
+      "equal_mean": true,
+      "variance_distinct": true,
+      "ratio": true
+    },
+    "shared_bias": {
+      "n": 100,
+      "trials": 30000,
+      "P_correct": 0.20025591810620602,
+      "P_naive": 0.0028916143184764187,
+      "expected_naive_NEES": 86.09804326075074,
+      "observed_NEES_correct": 0.9889126417183918,
+      "observed_NEES_naive": 85.39473136176889,
+      "rmse_correct": 0.44501192005849777,
+      "rmse_naive": 0.4969191362064221,
+      "coverage95_correct": 0.949,
+      "coverage95_naive": 0.16946666666666665,
+      "correlation_expected": 0.8620689655172414,
+      "correlation_moment_observed": 0.8539782868326276
+    },
+    "gating": {
+      "threshold": 5.991464547107982,
+      "expected_raw": 2,
+      "expected_accepted": 1.6846597606785272,
+      "observed_raw": 1.9823149117850756,
+      "observed_accepted": 1.6701520670110668,
+      "acceptance": 0.9497666666666666
+    },
+    "mean_equal": {
+      "expected_mean_both": 2,
+      "expected_variance_nominal": 4,
+      "expected_variance_misspecified": 7.239999999999999,
+      "observed_mean_nominal": 1.9823149117850756,
+      "observed_mean_misspecified": 1.9838401740570344,
+      "observed_variance_nominal": 3.9140642086266673,
+      "observed_variance_misspecified": 7.226495637674722
+    },
+    "r21_conditional": {
+      "transverse_variance_ratio": 1073.0417115958767,
+      "expected_3d_NIS_if_P0_and_zero_z_variance": 2146.0834231917534,
+      "normalized_mean_if_P0": 715.3611410639178,
+      "transverse_ratio_with_equal_predictive_var_1": 1.090177555581839
+    },
+    "limits": "Shared scalar bias modeled independent of x; mean of n Gaussian samples drawn directly, not n-step recursive filter. Exact Gaussian posterior and linear comparator, not UKF; iid trajectories; chi2_2 gating only; no actual OPPO raw/physical calibration."
+  },
+  "formal_credit": false
+}
