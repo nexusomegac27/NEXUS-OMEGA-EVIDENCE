@@ -1,0 +1,129 @@
+{
+  "ledger_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "collected_utc": "2026-11-27T13:19:02.092Z",
+  "note": "All fetches are bounded, read-only, text-level through the authoring environment. Byte-level HTTP body hashes are not obtainable through the text transport (see D7).",
+  "sources": [
+    {
+      "id": "SL-01",
+      "name": "Android SensorEvent API reference",
+      "url": "https://developer.android.com/reference/android/hardware/SensorEvent",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "the Y axis is vertical and points up and the Z axis points towards the outside of the front face of the screen. In this system, coordinates behind the screen have negative Z values.",
+      "note": "Defines per-sensor monotonic timestamp, values[] semantics, standard units (ACC m/s^2, GYRO rad/s) and device coordinate convention. Establishes the frame/units the R21 aggregates are CONDITIONAL on, not proof of the actual app mapping."
+    },
+    {
+      "id": "SL-02",
+      "name": "Android Sensors Overview",
+      "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "These sensors measure acceleration forces and rotational forces along three axes. This category includes accelerometers, gravity sensors, gyroscopes, and rotational vector sensors.",
+      "note": "Requested rate != measured rate; API31+ restrictions. Previously captured passage (prior session): SENSOR_DELAY_NORMAL = 200,000 microseconds."
+    },
+    {
+      "id": "SL-03",
+      "name": "Precision and Error Propagation in Static MEMS-IMU Inertial Navigation: A Stochastic Time-Series Analysis (Sensors 2026, 26(15), 4685)",
+      "url": "https://doi.org/10.3390/s26154685",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "The dataset was divided into 75 non-overlapping segments, each comprising 30 s of data sampled at 10 Hz, to enable statistically robust analysis.",
+      "note": "Samsung Galaxy S22+ approx. 40 min calibrated static study; ADF stationarity assessed. Not transferable to OPPO 70 s record; ADF stationarity alone is not whiteness."
+    },
+    {
+      "id": "SL-04",
+      "name": "Review of Smartphone Accelerometers for Usage in Research and Engineering (IEEE Instrum. Meas. Mag. 2025)",
+      "url": "https://doi.org/10.1109/MIM.2025.11198885",
+      "status": "ROBOT_WALL_NOT_READABLE",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": null,
+      "note": "Page returns a JavaScript/robot verification wall (160 chars placeholder). Indexed description only; no passage captured; no NEXUS result claimed."
+    },
+    {
+      "id": "SL-05",
+      "name": "Smartphone MEMS Accelerometer and Gyroscope Measurement Errors (Sensors 2023, 23(17), 7609)",
+      "url": "https://doi.org/10.3390/s23177609",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "we present laboratory test results on the stochastic and deterministic errors observed in MEMS inertial sensor measurements of five different smartphones from different manufacturers.",
+      "note": "Six-position static and distinct deterministic/stochastic error channels; supports the six-position calibration DESIGN, not a result."
+    },
+    {
+      "id": "SL-06",
+      "name": "Time- and Computation-Efficient Calibration of MEMS 3D Accelerometers and Gyroscopes (Sensors 2014, 14(8), 14885)",
+      "url": "https://doi.org/10.3390/s140814885",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "used to obtain the values of 12 calibration parameters. This process enables the static compensation of sensor inaccuracies.",
+      "note": "Multi-position excitation and matrix/bias calibration; basis for design D-R46-4-b; not proof that one norm suffices."
+    },
+    {
+      "id": "SL-07",
+      "name": "NIST Special Publication 1065: Handbook of Frequency Stability Analysis (Riley & Howe)",
+      "url": "https://www.nist.gov/publications/handbook-frequency-stability-analysis",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "Created June 30, 2008, Updated October 12, 2021",
+      "note": "Scoped methodological reference for Allan statistics; no new full PDF audit performed."
+    },
+    {
+      "id": "SL-08",
+      "name": "Piche, NIS consistency (Aircraft Engineering and Aerospace Technology)",
+      "url": "https://doi.org/10.1002/acs.2571",
+      "status": "BLOCKED",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": null,
+      "note": "Blocked fetch; no outage asserted. NIS requires the actual innovation covariance; not computable here."
+    },
+    {
+      "id": "SL-09",
+      "name": "Montanari et al., target observability (PNAS 2021)",
+      "url": "https://doi.org/10.1073/pnas.2113750119",
+      "status": "BLOCKED",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": null,
+      "note": "Blocked fetch; no outage asserted. Observability claims are model-specific, not blanket human-pose observability."
+    },
+    {
+      "id": "SL-10",
+      "name": "JCGM 100:2008(E) - Evaluation of measurement data - Guide to the expression of uncertainty in measurement (GUM)",
+      "url": "https://doi.org/10.59161/JCGM100-2008E",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": "This Guide establishes general rules for evaluating and expressing uncertainty in measurement that are intended to be applicable to a broad spectrum of measurements.",
+      "note": "Uncertainty model required before any calibration uncertainty statement."
+    },
+    {
+      "id": "SL-11",
+      "name": "NEXUS BodyTwin public page",
+      "url": "https://www.nexus-mobile.de/bodytwin/",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "sha256_of_delivered_text": "6415480698a1eb8d422f6e0de1d8d3bd6b327f7993966fc9d150d87c2d328958",
+      "chars": 4479,
+      "relevant_passage_verbatim": "ceiling C1_DESCRIPTIVE_ONLY ... promotion FALSE ... phase5 FALSE ... live_class AUTHORITATIVE_LIVE_SOT ... canon V8.4.5",
+      "note": "Page (as delivered) declares C1_DESCRIPTIVE_ONLY, promotion FALSE, phase5 FALSE; per prior-session capture: BODYTWIN_VALIDATED NO, Consent OPEN, Trial 001 DESIGNED_NOT_EXECUTED, physical IMU NOT AUTHORIZED, last feed 2026-11-22T21:55:02Z, last real source change 2026-11-07T20:50:02Z. Underscores are markdown-escaped in the served page. Supersedes the AXIOM failed fetch at text level only."
+    },
+    {
+      "id": "SL-12",
+      "name": "NEXUS BodyTwin live feed",
+      "url": "https://www.nexus-mobile.de/bodytwin/live/current.json",
+      "status": "FETCHED_TEXT_LEVEL",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "sha256_of_delivered_text": "4434ba71548608e876d38ec8abb7238a7d85d6178d4ca6f37f8dfd29e1a36450",
+      "chars": 1130,
+      "relevant_passage_verbatim": "{\"schema\":\"nexus-bodytwin-live-feed/1\",\"claim_ceiling\":\"C1_DESCRIPTIVE_ONLY\",\"trust\":\"SELF_HOSTED_PUBLIC_C1_NOT_INDEPENDENT_WITNESS\",\"producer\":{\"run_utc\":\"2026-11-27T12:50:02Z\",\"seq\":5663,\"interval_seconds\":300,\"source_changed\":false,...,\"gates\":{\"a72\":\"SOURCE_GAP\",\"r13_stage_ii\":\"HOLD_DEPLOY_GAP\",\"physical_imu\":\"NOT_AUTHORIZED\",\"bodytwin_validated\":\"NO\",\"consent\":\"OPEN\",\"gate_v2\":\"HOLD_R9_MJS_PREREQUISITE\"}}",
+      "note": "FULL text retrieved. trust field explicitly marks the feed as NOT an independent witness."
+    },
+    {
+      "id": "SL-13",
+      "name": "NEXUS BodyTwin status.json and forschungsstatus.json",
+      "url": "https://www.nexus-mobile.de/bodytwin/status.json , https://www.nexus-mobile.de/forschungsstatus.json",
+      "status": "BLOCKED_NO_CONTENT",
+      "fetched_utc": "2026-11-27T13:19:02.092Z",
+      "relevant_passage_verbatim": null,
+      "note": "Both routes returned the transport tooling block placeholder (identical 142-char text, sha256 cefdabfb61352da94048f33bceb07f6cb344c04a73576bc5f48d2624b4347ed5 is the placeholder text hash, NOT page content). Status NO_DATA; no outage assertion."
+    }
+  ]
+}

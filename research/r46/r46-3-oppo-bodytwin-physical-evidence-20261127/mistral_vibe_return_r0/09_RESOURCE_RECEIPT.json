@@ -1,0 +1,26 @@
+{
+  "receipt_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "generated_utc_local": "2026-11-27T13:19:02.092Z",
+  "lease": "bounded read-only public GET + offline synthetic only; no new tool permissions requested or granted",
+  "subagents": 0,
+  "measured_counts_session_to_date": {
+    "note": "counted manually from the session transcript at authoring time; approximate but honest",
+    "run_typescript_programs": 21,
+    "github_get_file_contents_calls": 22,
+    "web_open_url_calls": 14,
+    "bash_calls": 2,
+    "github_push_files_calls": "2 planned (see checkpoint)",
+    "retries_of_failed_calls": 2
+  },
+  "environment_findings": [
+    "bash sha1sum and sha256sum shims are broken (error: Cannot read properties of undefined (reading digest)); SHA-256/SHA-1 self-implemented and verified against official NIST vectors; defect reported to platform team.",
+    "crypto.subtle, TextEncoder, fetch, Node APIs unavailable in sandbox; self-implementation required.",
+    "Non-ASCII text does not survive the text transports byte-faithfully (see 02_RETURN_MAIN.md D7)."
+  ],
+  "unknown_stays_unknown": [
+    "byte-level hash of the order ZIP",
+    "byte-level page content of public routes",
+    "operator-side local verification results"
+  ]
+}
