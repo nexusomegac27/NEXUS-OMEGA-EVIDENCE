@@ -1,0 +1,110 @@
+{
+  "object": "R45_FINAL_CLOSEOUT_C1",
+  "operator": "administrative series close",
+  "source_checkpoint": {
+    "issue": 455,
+    "checkpoint_comment": 7170975294,
+    "bind_comment": 7171095740,
+    "readback": "MATCH",
+    "return_pr": 456,
+    "return_head": "c8bf5bed68d6469185b2a2cc4e58d49870e6e6bf",
+    "return_zip": {
+      "bytes": 10107,
+      "sha256": "ffefe6c510e402b73deb652eac17e1b1272b4c64aa9e16ef627a930d21465d67"
+    },
+    "bind_zip": {
+      "bytes": 2793,
+      "sha256": "cd27a1afc56acb5247cba92a4a0dbb0177f6453cd527e591def7add3eb84761c"
+    },
+    "gaps": 14,
+    "proposed_repairs_not_executed": 8
+  },
+  "inputs": [
+    {
+      "name": "AUTOCL~1(1).ZIP",
+      "bytes": 111172,
+      "sha256": "debfb872bccaacaf8732e09be97bedb46d833af504ca932f231d55fc69c8fc7b",
+      "crc": "29/29 incl dirs",
+      "manifest": "26/33",
+      "manifest_sha": "dd6e61c4889652d4c622c76e85cd5e973dd3b3d9675e1e78fffee02c346d5964",
+      "missing": [
+        "SHA256SUMS.txt",
+        "SOURCE_REGISTRY_R45_9.json",
+        "r45_9_sqlite.py",
+        "results_independent.json",
+        "results_projection.json",
+        "results_sqlite.json",
+        "review.md"
+      ],
+      "receipt_links": "6/6 raw file SHA"
+    },
+    {
+      "name": "AXIOMR~1(9).TXT",
+      "bytes": 24491,
+      "sha256": "bef961ac1c6c0e24c4f3b29689602847ceeafc9254f60cee9f78c25f69e8f3d6"
+    },
+    {
+      "name": "R45_8_~1(1).ZIP",
+      "bytes": 94166,
+      "sha256": "4c029157eeeaffdc8d435f9ec1e3e6e965785735eb5819207a1fdfa76ac57591",
+      "crc": "27/27",
+      "manifest": "26/26",
+      "sha_list": "25/25",
+      "manifest_sha": "b1819f9c0c0162d2b198d6f6fd52512a8027d2e1b39c7d4506db8017b284e202",
+      "sidecar": "MATCH",
+      "receipt_links": "5/5 stored receipt digests",
+      "payload_hashes": "6/6 Python JSON default separators; full receipt digest formula not replayed"
+    },
+    {
+      "name": "R45_9_~1.ZIP",
+      "bytes": 44165,
+      "sha256": "6c958dd7d343d596d73f2f44245307c0b1dc355ea2f1ffe8b9d6c4393e7f6776",
+      "crc": "32/32",
+      "manifest": "31/31",
+      "manifest_sha": "aeb0df35ff5e2af0945abe74fec4450e99e206e56c2837cf021f300caddf9271",
+      "sha_list": "30/30",
+      "sidecar": "MATCH",
+      "receipt_links": "5/5 raw file SHA"
+    },
+    {
+      "name": "NEXUS_~1(20261127-085040).ZIP",
+      "bytes": 35967,
+      "sha256": "201288dca8ef241291e3c9b7b457a7fa6a6879357a0ac3e1ce4a811461900299",
+      "crc": "14/14",
+      "sha_list": "13/13",
+      "manifest_sha": "67546ec116ddd3ad84a408604c4800410029a12530a942b7a5c98d28190028a1",
+      "scope": "R44-4 source stack + R45-9 synthetic quorum receipt, 6/6 producer reported, not full R45 series and not source-exact NELFP"
+    }
+  ],
+  "replay": {
+    "axiom_sqlite": {
+      "source_sha256": "b36f888b01924ca9620845a17f69dfcebb61cbb3c798b9ede0a76982bcbcb747",
+      "result_sha256": "423b49688b7f08fa8fb7c71779ce1aacd819c2f75e723c2c726ef422e24009c8",
+      "json": "MATCH",
+      "trials": 100,
+      "one_commit": 100,
+      "overruns": 0,
+      "controls": 13
+    },
+    "expert_probes": "all JSON fields MATCH except sqlite_version/wall_seconds, true child process exit9 before/after commit, lock exception, two-resource partial; RED/GREEN reconstructed not exact GLM/GROK replay",
+    "expert_contract": "JSON MATCH 8/8 negative 6/6 freshness",
+    "expert_js": "JSON MATCH 10/10",
+    "new_probes": {
+      "validator_malformed_composite": "[]",
+      "validator_string_value": "[]",
+      "reversed_time_interval": "FRESH",
+      "nested_raw_location": "projected",
+      "duplicate_bool_cost": "DUPLICATE",
+      "duplicate_nan_now": "DUPLICATE",
+      "duplicate_none_body": "AttributeError"
+    },
+    "limits": "temporary local test environment only; no power-loss proof, trusted preloaded fixtures, no production signing or physical authority"
+  },
+  "expert_matrices": {
+    "autoclaw": "22 rows 7 architecture,8 offline,7 gap; producer reported; source incomplete",
+    "independent": "24 rows 8 offline,3 architecture,2 design,10 gap,1 hold; separate nonadditive registers"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "formal_credit": "NONE",
+  "production": "NOT_AUTHORIZED"
+}

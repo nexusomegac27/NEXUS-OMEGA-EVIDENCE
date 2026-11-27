@@ -1,0 +1,43 @@
+{
+  "receiver": "CURSOR",
+  "object": "NEXUS_OMEGA_CURSOR_R46_1_VERIFIED_CONNECTIVITY_RETURN",
+  "required": [
+    "exact receiver ACK with ZIP/head/manifest rehash",
+    "source inventory and causal DAG",
+    "checkpoint 14 gaps and 8 repair proposals dispositions",
+    "per-edge verified connectivity receipts with classification and scopes",
+    "source-to-claim trace matrix with remaining caveats",
+    "offline synthetic golden fixture and negative results",
+    "exact runtime versions and original hashes",
+    "aggregate lease and measured resources incl retries, unknowns",
+    "rollback evidence and next allowed delta per lane",
+    "new canonical tip append-only and ZIP SHA sidecar"
+  ],
+  "status": [
+    "VERIFIED_READ_ONLY",
+    "VERIFIED_MOCK",
+    "SOURCE_GAP",
+    "HOLD_SCOPE",
+    "UNKNOWN",
+    "INCOMPATIBLE",
+    "STALE"
+  ],
+  "authorization": {
+    "read_only_existing_sources": true,
+    "offline_disposable_synthetic": true,
+    "production_write": false,
+    "physical_device": false,
+    "adb": false,
+    "apk_install": false,
+    "hostinger_write": false,
+    "www_write": false,
+    "external_expert_dispatch": false,
+    "merge": false,
+    "permission_expansion": false,
+    "claim_promotion": false
+  },
+  "formal_gate_credit": "NONE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "transfer": "GITHUB_ONLY_ZIP_AND_SHA256",
+  "completion": "return for AXIOM adjudication; no automatic next stage"
+}
