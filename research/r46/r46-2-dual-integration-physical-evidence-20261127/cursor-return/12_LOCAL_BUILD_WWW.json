@@ -1,0 +1,103 @@
+{
+  "object": "R46_2_LOCAL_APP_WWW_BUILD_STATUS",
+  "observed_utc": "2026-11-27T10:47:06Z",
+  "app_source": {
+    "path": "c:\\omega_bridge\\Perfect Final Version\\nexus-real\\nexus-mobile\\app\\src\\main\\java\\com\\nexusomega\\maps",
+    "present": true,
+    "kotlin_java_files": 100,
+    "class": "SOURCE_PRESENT"
+  },
+  "apk_build": {
+    "gradle_log_present": true,
+    "gradle_log_bytes": 3780,
+    "local_build_apks_found": [
+      {
+        "name": "app-debug.apk",
+        "bytes": 23008509,
+        "sha256": "99bc2fabdc05ace81e4a90b6e67192d179f20744b904ca994d57b68bcf7dc775"
+      }
+    ],
+    "class": "LOCAL_BUILD_SUCCESS_CANDIDATE",
+    "apk_install": false
+  },
+  "historical_apks_sampled": [
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "e9037cebbdae6e00dca6c18ffed3db37893e9c7c420137a4c8b26e0fc6d28eea"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "e9037cebbdae6e00dca6c18ffed3db37893e9c7c420137a4c8b26e0fc6d28eea"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "debug.apk",
+      "bytes": 144536724,
+      "sha256": "767740a10187a55659693b3bc0729fc8bbe9d76df48e467754f053a11c4984c1"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "75b64c1eb58a26e4c392014ae8f0929cff866223ec2ced9391fb28775becbc04"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "00d76f0124298b4bbf240b5c5056fbc362c616f0af8866afb896542b6878cdf0"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    },
+    {
+      "path_class": "HISTORICAL_APK_READONLY",
+      "name": "local_debug.apk",
+      "bytes": 182900301,
+      "sha256": "3ab055077153ab0e3d820778a14d3bed39d45f9cdf010e123ebbc6e5146046ad"
+    }
+  ],
+  "www_source": {
+    "public_bodytwin_present": true,
+    "out_index_bytes": 77166,
+    "out_index_sha256": "e9b3c5748b3a99a1fa7ccdaee21e58cf9b3e94de19dfaa599f1f625ddb3c5c8c",
+    "class": "SOURCE_PRESENT",
+    "live_deploy": false,
+    "hostinger_write": false
+  },
+  "integration_adapters": {
+    "status": "DESIGN_BOUND_NOT_SHIPPED_TO_DEVICE",
+    "note": "L0-L3 adapter contract documented; no production install this lease"
+  }
+}

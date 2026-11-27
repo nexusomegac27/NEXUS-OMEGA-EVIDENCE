@@ -1,0 +1,36 @@
+{
+  "object": "R46_2_OWNER_ONE_SHOT_APPROVAL_TEMPLATE",
+  "status": "HOLD_SCOPE_NOT_READY",
+  "ready_for_owner_one_shot": false,
+  "fields": {
+    "device_identity": "CPH2219 / CPH2219EEA / wireless serial adb-93bd1037-WQ21VM._adb-tls-connect._tcp",
+    "installed_package_version": "1.3.11-alarm-identity-l1-vc15 / vc15",
+    "installed_signed_build_hash_private": "NOT_FILLED_FULL_APK_PULL_NOT_AUTHORIZED_THIS_LEASE",
+    "protocol_id": "ALT_A_STATIONARY_CONTROLLED_ROLL_CANDIDATE",
+    "protocol_digest": "NOT_FROZEN",
+    "approved_channels": [
+      "TYPE_ACCELEROMETER",
+      "TYPE_GYROSCOPE"
+    ],
+    "rate_request_hz": "NOT_FILLED",
+    "max_duration_s": "NOT_FILLED",
+    "reference_uncertainty": "NOT_FILLED",
+    "fixture_witness": "NOT_FILLED",
+    "stop_watchdog": "NOT_FILLED",
+    "local_private_path": "NOT_FILLED",
+    "retention": "NOT_FILLED",
+    "authorized_receiver": "NOT_FILLED",
+    "revocation": "NOT_FILLED",
+    "owner_ack": "REQUIRED_SEPARATE"
+  },
+  "missing_evidence": [
+    "INSTALLED_SIGNED_APK_FULL_BYTE_HASH",
+    "FROZEN_PROTOCOL_DIGEST",
+    "CALIBRATED_INDEPENDENT_ANGLE_REFERENCE",
+    "STOP_DEADLINE_SOURCE_REPLAY",
+    "AUTHORIZED_HISTORICAL_OR_RECEIVER_PATH"
+  ],
+  "alt_d": "ACTIVE",
+  "apk_install": false,
+  "www_live_write": false
+}
