@@ -1,0 +1,178 @@
+{
+  "register": "R46-5 new design controls only",
+  "designs": [
+    {
+      "id": "R46-5-N01",
+      "test": "R21 magnitude SD assigned axis R",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N02",
+      "test": "R vs S conflation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N03",
+      "test": "mixed RMS metric",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N04",
+      "test": "shared bias treated iid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N05",
+      "test": "reference covariance cross terms omitted",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N06",
+      "test": "wrong Cholesky orientation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N07",
+      "test": "nonfinite/indefinite covariance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N08",
+      "test": "negative weights/downdate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N09",
+      "test": "ill-conditioned factor failure",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N10",
+      "test": "state angle wrapping",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N11",
+      "test": "yaw gauge/unobservable target",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N12",
+      "test": "dynamic acceleration misread tilt",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N13",
+      "test": "clock-offset error omitted",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N14",
+      "test": "gap/irregular dt",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N15",
+      "test": "same mean NIS wrong distribution",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N16",
+      "test": "post-gate NIS compared unconditional",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N17",
+      "test": "NEES reference error ignored",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N18",
+      "test": "correlated NIS treated iid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N19",
+      "test": "tuning holdout reuse",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N20",
+      "test": "unequal information or compute",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N21",
+      "test": "source-free VERIFIED",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N22",
+      "test": "empty/malformed enums",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N23",
+      "test": "nonfinite timestamps",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N24",
+      "test": "nested private placeholder",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N25",
+      "test": "no-data numeric",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-N26",
+      "test": "synthetic historical live confusion",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P01",
+      "test": "positive linear KF analytic oracle",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P02",
+      "test": "positive covariance and SR agreement",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P03",
+      "test": "positive independent reference target",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P04",
+      "test": "positive shared-error model coverage",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P05",
+      "test": "positive selection-aware consistency",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-5-P06",
+      "test": "positive typed abstention and projection",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "executed_reference": "9 checks separately",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true
+}

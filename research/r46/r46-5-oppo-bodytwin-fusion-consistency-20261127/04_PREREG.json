@@ -1,0 +1,36 @@
+{
+  "scope": "AXIOM exploratory synthetic reference; fixed before execution in this tool call, not externally timestamped prereg",
+  "seed": 46505,
+  "trials": 30000,
+  "models": {
+    "shared_bias": {
+      "prior_x_var": 1,
+      "session_bias_var": 0.25,
+      "white_var": 0.04,
+      "n": 100
+    },
+    "gating": {
+      "dimension": 2,
+      "threshold": 5.991464547107982
+    },
+    "mean_equal": {
+      "cov_eigenvalues": [
+        0.1,
+        1.9
+      ]
+    },
+    "r21_noise_witness": {
+      "s": 0.009171949489023268,
+      "t": 0.30044844215811695
+    }
+  },
+  "expectations": [
+    "correct shared-bias posterior error normalized mean within .04 of 1",
+    "naive iid NEES agrees with analytic expectation within 4%",
+    "gate conditional NIS agrees within .04 of analytic",
+    "equal expected NIS but different variance",
+    "transverse ratio >1000 and predictive covariance changes ratio",
+    "positive/negative numerical checks, no physical gate credit"
+  ],
+  "note": "No claim of UKF or SR-UKF execution; analytic scalar Gaussian posterior and synthetic innovations. Benchmark deferred to experts."
+}
