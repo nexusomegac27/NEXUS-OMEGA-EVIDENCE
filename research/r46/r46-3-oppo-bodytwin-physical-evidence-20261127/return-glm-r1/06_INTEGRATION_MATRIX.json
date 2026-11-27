@@ -1,0 +1,110 @@
+{
+  "object": "NEXUS_OMEGA_VIBE_R46_3_INTEGRATION_MATRIX_GLM_R1_R0",
+  "round": "R46-3",
+  "lineage": "VIBE_GLM_R1_FIRST_RUN",
+  "date_utc": "2026-11-27",
+  "scope": "OPPO_NEXUS_APP_BODYTWIN_ONLY",
+  "findings": [
+    {
+      "id": "F01",
+      "finding": "ACC- und GYRO-Effektivraten sind aus Ereigniszahlen und Dauern exakt reproduzierbar (100.15353299112422 / 100.15354838260195 Hz, rel. Abweichung 0); angeforderte 100 Hz weichen um +0.1535 % ab.",
+      "evidence_class": "E1_DERIVED",
+      "module": "NEXUS_APP sensor recording",
+      "acceptance_criterion": "App protokolliert je Kanal angeforderte Rate, effektive Rate (N-1)/T und Median-Intervall in jedem Erfassungsmanifest.",
+      "falsifier": "Manifest-Rate weicht von (N-1)/T der geloggten Zeitstempel um mehr als 1e-9 relativ ab.",
+      "remaining_limit": "Rate ≠ Latenz/Jitter; Verteilung der Intervalle ohne Rohdaten unbekannt (W03/W04)."
+    },
+    {
+      "id": "F02",
+      "finding": "gravity_residual_mean_abs_reported ist numerisch |mag_mean - g0| (rel. Übereinstimmung 1.28e-14, W06); die Lesart Mittel des absoluten Einzelfehlers ist nicht etabliert (W07).",
+      "evidence_class": "E1_DERIVED",
+      "module": "BodyTwin evidence projection",
+      "acceptance_criterion": "Jeder angezeigte Residual trägt seine exakte Rechenformel (z. B. '|mean-g0|') als maschinenlesbares Feld.",
+      "falsifier": "Ein angezeigter Wert ist unter zwei dokumentierten Definitionen nicht eindeutig reproduzierbar.",
+      "remaining_limit": "Ob der Produzent mean|x-g0| berechnete, bleibt SOURCE_GAP ohne Originalberechnung."
+    },
+    {
+      "id": "F03",
+      "finding": "Die Lücken-Schwelle 5xMedian ist lückenblind: 81 Einzelausfälle auf 7095 geplante Ereignisse erzeugen 0 Lücken über der Schwelle bei 1.14 % Verlust (W09).",
+      "evidence_class": "E2_SYNTHETIC",
+      "module": "NEXUS_APP data integrity",
+      "acceptance_criterion": "Erfassungsmanifest enthält Lücken-Histogramm bzw. Verlustzähler, nicht nur einen Schwellenzähler.",
+      "falsifier": "Manifest behauptet Verlustfreiheit allein aus gaps_gt_5x_median == 0.",
+      "remaining_limit": "Tatsächlicher Verlust im R21-Lauf unbekannt; nur Kompatibilitätsaussage."
+    },
+    {
+      "id": "F04",
+      "finding": "Die Zuordnung mag_stdev -> Achsenrauschen ist modellebunden: radiales und isotropes Modell liefern sigma_axis ~ 0.0091719 (<1e-6 relativ gleich), unterscheiden sich aber im implizierten |g+b| um ~8.6e-6 m/s^2; allgemein identifiziert mag_stdev nur die Projektion e_g' Sigma e_g der Rauschkovarianz (W11/W12).",
+      "evidence_class": "E1_MODEL_CONDITIONAL",
+      "module": "R46-4 calibration design",
+      "acceptance_criterion": "Kalibrierdesign (Six-Position) mit unabhängiger Winkellage ist vor jedem sigma_axis-Claim nachgewiesen.",
+      "falsifier": "sigma_axis-Claim allein aus Betrags-SD ohne Modellangabe.",
+      "remaining_limit": "Keine Achsen-Kovarianz aus Betragsstatistiken; keine Kalibrierung."
+    },
+    {
+      "id": "F05",
+      "finding": "Yaw um die Gravitationsachse lässt a_meas unter dem Gravity-only-Modell exakt invariant (1441-Punkt-Gitter, max. Abweichung 0); unter SO(3) bleibt nur der Betrag invariant (W16).",
+      "evidence_class": "E2_SYNTHETIC",
+      "module": "BodyTwin projection",
+      "acceptance_criterion": "Keine Orientierungs-/Heading-Darstellung aus stationären Betragsaggregaten; Yaw-Gauge im Datenvertrag dokumentiert.",
+      "falsifier": "BodyTwin zeigt Orientierung hergeleitet aus stationären Betragsstatistiken.",
+      "remaining_limit": "Betrifft nur stationäres Modell; dynamische Messungen sind R46-5/R46-6."
+    },
+    {
+      "id": "F06",
+      "finding": "Informationsbilanz: 56072 rohe numerische Felder (14018 Events x 4) werden auf 16 publizierte Skalare verdichtet (Faktor 3504.5, W08).",
+      "evidence_class": "E1_DERIVED",
+      "module": "NEXUS_APP evidence contract (L0/L1)",
+      "acceptance_criterion": "L0 bewahrt Rohfelder; L1-Rekonstruktion reproduziert alle publizierten Skalare aus L0 deterministisch.",
+      "falsifier": "Ein publizierter Skalar ist aus L0 nicht reproduzierbar oder L0 löscht Rohfelder vor L1.",
+      "remaining_limit": "Zählregel dokumentiert; echte Rohfeldformate bleiben SOURCE_GAP."
+    },
+    {
+      "id": "F07",
+      "finding": "ACC/GYRO-Phasenoffset ist aus den Aggregaten nicht ableitbar; Dauerdifferenz 0.099857448 s (W10).",
+      "evidence_class": "E1_DERIVED",
+      "module": "R46-6 time foundation",
+      "acceptance_criterion": "Erfassungsprotokoll mit gemeinsamem monotonic-clock-Fundament und je-Kanal-Zeitstempeln.",
+      "falsifier": "Fusions-Claim, der Kanalsynchronität aus Aggregaten ohne gemeinsame Zeitbasis behauptet.",
+      "remaining_limit": "Keine Aussage über tatsächliche Synchronität im R21-Lauf."
+    },
+    {
+      "id": "F08",
+      "finding": "Der Mittelwert-Betrag liegt 0.026088 m/s^2 über der konventionellen Normfallbeschleunigung (z ~ 238 gegen SE aus Betrags-SD); Attribution (Bias/Neigung/Skalierung/lokales g) ist nicht identifizierbar.",
+      "evidence_class": "E1_MODEL_CONDITIONAL",
+      "module": "R46-4 reference metrology",
+      "acceptance_criterion": "Korrektur des lokalen g nur mit unabhängiger Referenz (z. B. barometrisch/geodätisch) und dokumentierter Unsicherheit.",
+      "falsifier": "Lokale g-Korrektur ohne unabhängige Referenz.",
+      "remaining_limit": "ABSTAIN; konventionelles g0=9.80665 nicht als lokales g gemessen."
+    },
+    {
+      "id": "F09",
+      "finding": "Sechs Vertragsverletzungen (historic-als-live, Producer-Tick-Refresh, Body-Pose-aus-Tisch, synthetisch-als-physisch, Quell-Hash-als-Wahrheit, stale/unknown-Vermischung) werden vom Evidenzrahmen zuverlässig REJECT-et; zwei Positivkontrollen bestehen (Non-Vacuity).",
+      "evidence_class": "E2_SYNTHETIC",
+      "module": "BodyTwin status fidelity",
+      "acceptance_criterion": "Die sechs Negativfälle sind als ausführbare Vertragstests in den BodyTwin-Datenvertrag übernommen.",
+      "falsifier": "Eine der sechs Verletzungen wird von der Vertragsprüfung ACCEPT-et.",
+      "remaining_limit": "Testdesign ist nicht Produzentencode; Integration steht aus (R46-7)."
+    },
+    {
+      "id": "F10",
+      "finding": "W12-Prereg-Erwartung (SD(M) ~ sqrt(3)*sigma_axis) wurde durch die Ausführung widerlegt; korrekt ist Var(M) ~ Projektion der Rauschkovarianz auf die Gravitationsrichtung.",
+      "evidence_class": "E2_SYNTHETIC (Falsifikation der eigenen Prereg)",
+      "module": "wissenschaftliche Integrität (D)",
+      "acceptance_criterion": "Prereg-Divergenzen werden immer als eigene Records dokumentiert, nie stillschweigend geglättet.",
+      "falsifier": "Prereg-Datei nach der Ausführung geändert oder Divergenz verschwiegen.",
+      "remaining_limit": "Betrifft die Modellwahl, nicht die OPPO-Messung."
+    }
+  ],
+  "r46_9_evidence_request_list": [
+    "Je-Kanal-Rohzeitstempel und Achsenwerte (L0) für einen autorisierten Replay",
+    "Explizite Frame-/Einheitendeklaration (Android SensorEvent mapping, m/s^2, rad/s)",
+    "SD-Definition (ddof) und exakte Aggregatberechnungsquelle",
+    "Lücken-Histogramm bzw. Verluststatistik statt Schwellenzähler",
+    "Allan-/Stabilitätsrohdaten für eine echte Rauschcharakterisierung",
+    "APK, Kotlin-Originale und Unit-Test-XML zur unabhängigen Build-/Semantikprüfung",
+    "Unabhängige Referenzmessung (Six-Position, Winkelreferenz) als R46-4-Design",
+    "Gemeinsame monotonic Zeitbasis beider Kanäle (R46-6)"
+  ],
+  "note": "Jede Zeile ist an einen Modulvorschlag, ein Abnahmekriterium und einen Falsifikator gebunden; kein Gate-Kredit."
+}

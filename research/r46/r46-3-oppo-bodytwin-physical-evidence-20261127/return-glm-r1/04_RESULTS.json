@@ -1,0 +1,323 @@
+{
+  "runner": "03_WITNESSES_RUNNER.js",
+  "lineage": "VIBE_GLM_R1_FIRST_RUN",
+  "prereg": {
+    "file": "02_PREREG.md",
+    "sha256_frozen_before_run": "0d4926ca6a960be5a15666ac911cfafdd66ac634ae6b37a9d9ea39a035bc20ee",
+    "frozen_utc": "2026-11-27T15:40:57Z",
+    "note": "local notarization only, not externally timestamped"
+  },
+  "inputs": "R21 aggregates from 02_EVIDENCE.json @ HEAD d7e1c95d276b20254b8c30a4de4b1310d18a1b31; NO raw data",
+  "all_preregistered_checks_pass": true,
+  "A_aggregate": {
+    "w01_rate_acc": {
+      "computed": 100.15353299112422,
+      "reported": 100.15353299112422,
+      "abs_diff": 0,
+      "rel_diff": 0,
+      "match_1e9": true
+    },
+    "w02_rate_gyro": {
+      "computed": 100.15354838260195,
+      "reported": 100.15354838260195,
+      "abs_diff": 0,
+      "rel_diff": 0,
+      "match_1e9": true
+    },
+    "w03_median_reciprocal": {
+      "median_reciprocal_acc": 100.1533648475911,
+      "median_reciprocal_gyro": 100.1533648475911,
+      "ppm_vs_effective_acc": -1.6788577306738697
+    },
+    "w04_duration_residual": {
+      "acc": {
+        "duration_minus_n1_median_ms": -0.11755799999946248
+      },
+      "gyro": {
+        "duration_minus_n1_median_ms": -0.12813600001493342
+      }
+    },
+    "w05_requested_vs_effective": {
+      "acc_pct": 0.15353299112422292,
+      "gyro_pct": 0.15354838260195436
+    },
+    "w06_residual_identity": {
+      "abs_mean_minus_g0": 0.026088001091459034,
+      "reported": 0.026088001091459367,
+      "abs_diff": 3.3306690738754696e-16,
+      "rel_diff": 1.276705356688235e-14
+    },
+    "w07_counterexample": {
+      "abs_mean_residual": 0,
+      "mean_abs_residual": 0.09999999999999964,
+      "distinct": true
+    },
+    "w08_information_balance": {
+      "raw_numeric_fields": 56072,
+      "published_scalars": 16,
+      "kept_fraction_pct": 0.028534741047224997,
+      "compression_factor": 3504.5
+    },
+    "w09_gap_blindness": {
+      "planned": 7095,
+      "drops": 81,
+      "recorded": 7014,
+      "loss_pct": 1.1416490486257929,
+      "median_dt": 0.009984687,
+      "max_gap": 0.019969374,
+      "max_gap_over_threshold": 0.4,
+      "gaps_gt_5x_median": 0,
+      "conclusion": "ZERO_REPORTED_GAPS_DO_NOT_PROVE_LOSSLESSNESS"
+    },
+    "w10_phase_offset": {
+      "duration_diff_s": 0.09985744800000873,
+      "derivable": false,
+      "reason": "no common absolute time reference or overlap information in aggregates"
+    }
+  },
+  "B_model_conditional": {
+    "w11_m1_rad": {
+      "model": "M1_RAD folded normal |nu+sigma Z|, radial-only noise",
+      "nu": 9.832738001091458,
+      "sigma_axis_radial": 0.009171945499229379,
+      "lambda_nu_over_sigma": 1072.0449660235768,
+      "p_M_below_g0": 0.0022253396695567917,
+      "e_abs_M_minus_g0": 0.02610001835414902,
+      "note": "E[|M-g0|] exceeds the reported |mean-g0| residual; the two are different quantities."
+    },
+    "w12_m3_iso": {
+      "model": "M3_ISO 3D isotropic, M = sigma_axis * chi'_3(delta), delta-method moments",
+      "nu": 9.832729445507752,
+      "sigma_axis_isotropic": 0.009171952483041588,
+      "delta": 1072.043216936405,
+      "sd_of_magnitude": 0.009171945502718902,
+      "sd_to_axis_factor": 0.9999992389491006,
+      "prereg_expectation_refuted": true,
+      "prereg_expected": "SD(M) ~ sqrt(3) * sigma_axis (prereg W12, frozen)",
+      "executed_finding": "SD(M) ~ sigma_axis to 7.6e-7 relative at delta~1072; the sqrt(3) prereg expectation is FALSIFIED. Correct statement: Var(M) ~ e_g' Sigma e_g (projection of the noise covariance onto the gravity direction); the full axis covariance is NOT identifiable.",
+      "anisotropic_equivalence": {
+        "isotropic_sigma_axis": {
+          "sigma": 0.009171945499113295,
+          "sd_of_magnitude_model": 0.009171945502718902
+        },
+        "z_dominant_sigma_z": {
+          "sigma": 0.009171945499113295,
+          "sd_of_magnitude_model": 0.009171945498845445
+        },
+        "x_dominant_sigma_x": {
+          "sigma": 0.009171945499113295,
+          "sd_of_magnitude_model": 0.009171945498845445
+        },
+        "note": "three structurally different axis covariances reproduce the same magnitude SD to <1e-6 relative while implying completely different full covariances"
+      },
+      "mean_model_split": {
+        "nu_radial_M1": 9.832738001091458,
+        "nu_isotropic_M3": 9.832729445507752,
+        "nu_difference": 0.000008555583706382208,
+        "note": "the models differ in the implied |g+b| by ~sigma^2/nu; E[M] carries a model-dependent O(sigma^2/nu) excess"
+      }
+    },
+    "w13_sd_definition": {
+      "population_sd": 0.009171945499113295,
+      "implied_sample_sd": 0.009172599400336748,
+      "abs_diff": 6.539012234525073e-7,
+      "definition": "UNKNOWN (ddof not documented)"
+    }
+  },
+  "C_identifiability": {
+    "w14_ordering": {
+      "seriesA_lag1": -0.9375,
+      "seriesB_lag1": 0.0625,
+      "aggregates_identical": true,
+      "lag1_differs": true
+    },
+    "w15_direction": {
+      "v1": [
+        0,
+        0,
+        10
+      ],
+      "v2": [
+        10,
+        0,
+        0
+      ],
+      "norm1": 10,
+      "norm2": 10,
+      "same_norm": true,
+      "same_vector": false
+    },
+    "w16_yaw_gauge_so3": {
+      "yaw_grid_points": 1441,
+      "yaw_max_abs_deviation": 0,
+      "yaw_conclusion": "yaw about gravity axis leaves a_meas EXACTLY invariant (gauge)",
+      "so3_samples": [
+        {
+          "a_meas": [
+            0,
+            0,
+            9.80665
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            6.317617382549503,
+            7.500539635933428
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            9.663960594591332,
+            1.6668082819226486
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            8.465192135447179,
+            -4.950849051674188
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            3.2851115427264066,
+            -9.240044717118295
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            -3.4400083398224104,
+            -9.183502972420287
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            -8.54723854853971,
+            -4.807816283600777
+          ],
+          "norm": 9.80665
+        },
+        {
+          "a_meas": [
+            0,
+            -9.63456891359241,
+            1.8290615275978939
+          ],
+          "norm": 9.80665
+        }
+      ],
+      "so3_conclusion": "under arbitrary SO(3) only the magnitude |a_meas| is invariant; vector components are NOT recoverable from magnitude aggregates"
+    },
+    "w17_one_pose_affine": {
+      "models": [
+        {
+          "scale": 1,
+          "bias": 0
+        },
+        {
+          "scale": 0.9,
+          "bias": 1
+        }
+      ],
+      "output_at_10": [
+        10,
+        10
+      ],
+      "output_at_minus10": [
+        -10,
+        -8
+      ],
+      "ambiguous_at_working_point": true,
+      "distinguishable_at_other_point": true
+    },
+    "w18_inconsistent_demo": {
+      "model": "pure constant with sigma_axis = 0",
+      "observed_sd": 0.009171945499113295,
+      "compatible_set": "EMPTY",
+      "verdict": "INCONSISTENT",
+      "note": "demonstrates the empty-set -> INCONSISTENT rule"
+    },
+    "w19_gravity_offset_abstain": {
+      "mean_minus_g0": 0.026088001091459034,
+      "statistical_se_mean_magnitude": 0.0001095162550863118,
+      "z_vs_conventional_g0": 238.21122326451535,
+      "attribution_identifiable": false,
+      "verdict": "ABSTAIN on local-gravity correction: offset is statistically nonzero but attribution to bias/tilt/scale/local-g is not identifiable from magnitude aggregates alone"
+    }
+  },
+  "D_contract": {
+    "rules": [
+      "historic-labeled-live",
+      "producer-tick-age-refresh",
+      "body-pose-from-table",
+      "synthetic-as-physical",
+      "source-hash-as-truth",
+      "stale-unknown-conflation"
+    ],
+    "negative_cases": [
+      {
+        "case": "historic-labeled-live",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "producer-tick-age-refresh",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "body-pose-from-table",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "synthetic-as-physical",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "source-hash-as-truth",
+        "verdict": "REJECT"
+      },
+      {
+        "case": "stale-unknown-conflation",
+        "verdict": "REJECT"
+      }
+    ],
+    "positive_cases": [
+      {
+        "record": {
+          "epoch": "historical",
+          "presentation": "historical"
+        },
+        "verdict": "ACCEPT"
+      },
+      {
+        "record": {
+          "origin": "E2_SYNTHETIC",
+          "displayed_as": "E2_SYNTHETIC"
+        },
+        "verdict": "ACCEPT"
+      }
+    ],
+    "all_reject": true,
+    "positives_pass": true,
+    "nonvacuity_note": "two positive control records pass, so the rules are not vacuously rejecting everything"
+  },
+  "limits": "Synthetic witnesses are E2_SYNTHETIC, never OPPO measurements. Aggregate arithmetic is E1_DERIVED. Model results are E1_MODEL_CONDITIONAL. No raw replay, no axis covariance, no bias vector, no Allan curve, no whiteness, no drift, no effective sample size, no NIS/NEES, no confidence intervals from norms alone. No formal gate credit.",
+  "prereg_divergences": [
+    {
+      "check": "W12",
+      "prereg_expectation": "SD(M) ~ sqrt(3) * sigma_axis",
+      "executed": "SD(M) ~ sigma_axis (relative 7.6e-7 at delta~1072)",
+      "resolution": "prereg expectation falsified by execution; corrected statement recorded in w12.executed_finding; prereg file left frozen unmodified"
+    }
+  ]
+}

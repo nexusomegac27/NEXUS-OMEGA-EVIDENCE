@@ -1,0 +1,300 @@
+AXIOM — R46-3: Physical Evidence & BodyTwin Research
+NEXUS Ω OMEGA · Externe Forschungslinie R46-3 bis R46-9
+
+Bro, damit wechseln wir wieder vollständig in die wissenschaftliche Forschung. R46-2 wird administrativ mit materiellen Vorbehalten abgeschlossen.
+
+Die gesamte nachfolgende Forschungsserie bleibt strikt an der OPPO–NEXUS_APP–BodyTwin-Linie ausgerichtet. Cursor erhält erst nach Abschluss von R46-9 einen konsolidierten Integrationsauftrag. Keine zwischenzeitlichen Reparaturaufträge oder internen Übergaberunden.
+1. HARD — unabhängige Abschlussprüfung R46-2
+Das übermittelte finale Originalarchiv wurde vollständig eingelesen und geprüft.
+Prüfschicht	Ergebnis
+ZIP-Größe	9.375 Bytes MATCH
+SHA-256	MATCH
+Sidecar	MATCH
+Archivintegrität	16/16 CRC PASS
+Manifest	15/15 SHA-256 MATCH
+
+Der neue APK-Kandidat unterscheidet sich tatsächlich in seiner berichteten Artefaktidentität vom vorherigen Build. Die lokalen Browser-Nachweise sind ebenfalls vorhanden.
+
+Die APK-Datei selbst, die vollständigen Kotlin-Originale und die privaten physischen Rohdaten sind jedoch nicht Bestandteil dieses Returns. Deren unabhängige Wiederholung bleibt offen.
+2. Unser erster physischer Forschungsanker für R46
+Der historische OPPO-Referenzlauf vom 9. November 2026 liefert erstmals in dieser Forschungsserie konkrete physische Aggregatdaten.
+Physische Sensorereignisse14.018
+Historischer R21-Lauf
+
+
+Effektive Abtastrate100,15 Hz
+Beide Sensorkanäle
+
+
+
+Messgröße	ACC	GYRO
+Ereignisse	7.014	7.004
+Erfassungsdauer	70,0225 s	69,9226 s
+Median der Zeitabstände	9,984687 ms	9,984687 ms
+Mittlerer Betrag	9,832738	0,00198021
+Standardabweichung des Betrags	0,00917195	0,00066448
+Lücken über 5 × Median	0	0
+
+Quelle: 10_R21_REPLAY_PUBLIC_SAFE_SUMMARY.json aus dem finalen Cursor-Return. Physische Aggregate auf Produzentenebene bestätigt; Rohdaten nicht unabhängig durch AXIOM replayed. ACC in m/s² und GYRO in rad/s unter Voraussetzung der korrekten Android-Sensorzuordnung.Die angegebenen effektiven Abtastraten konnte ich unabhängig aus den Ereigniszahlen und Erfassungsdauern exakt reproduzieren:
+\[
+f_{\mathrm{eff}}=\frac{N-1}{t_{\mathrm{last}}-t_{\mathrm{first}}}
+\]
+
+Die 14.020 NDJSON-Zeilen setzen sich konsistent aus 14.018 Sensorereignissen und zwei weiteren Zeilen zusammen.
+
+NIS und NEES bleiben ausdrücklich unberechnet. Es fehlt die zugehörige Innovationsmodell-Evidenz beziehungsweise eine unabhängige Zustandsreferenz.
+
+3. AXIOM — wissenschaftliche Quellenprüfung
+Für R46-3 habe ich die externe Recherche bewusst auf unmittelbar verwertbare physikalische und mathematische Erkenntnisse beschränkt.
+Wissenschaftliche Quelle	Relevanz für NEXUS
+Precision and Error Propagation in Static MEMS-IMU Inertial Navigation, 2026	Stochastische Charakterisierung stationärer Smartphone-Sensoren und Fehlerfortpflanzung. Die Studie verwendet allerdings eine rund 40-minütige Messung eines anderen Smartphone-Modells.  pubmed.ncbi.nlm.nih.gov
+Review of Smartphone Accelerometers for Usage in Research and Engineering, 2025	Sensorrauschen, Bias, Zeitstempelgenauigkeit und Clock-Drift.  doi.org
+Smartphone MEMS Accelerometer and Gyroscope Measurement Errors, 2023	Unterscheidung deterministischer und stochastischer Fehler sowie Mehrpositionskalibrierung.  pmc.ncbi.nlm.nih.gov
+NIST SP 1065 – Handbook of Frequency Stability Analysis	Allan-Statistik und zeitabhängige Stabilitätsdiagnostik.  nist.gov
+Functional Observability, Montanari et al.	Zielgerichtete Beobachtbarkeit statt unbelegter vollständiger Zustandsrekonstruktion.  pubmed.ncbi.nlm.nih.gov
+Online Tests of Kalman Filter Consistency, Piché	Wissenschaftlich korrekte Einbindung zukünftiger NIS-Diagnostik.  onlinelibrary.wiley.com
+
+Die Konsequenz: Wir dürfen die vorhandene rund 70-sekündige OPPO-Ruhemessung wissenschaftlich nutzen, aber daraus noch keine vollständige Sensorkalibrierung, langfristige Rauschcharakterisierung oder anatomische Rekonstruktion ableiten.
+4. AXIOM — neue unabhängige Falsifikations-Sandbox
+Vor der Übergabe an unsere Experten habe ich sieben eigene synthetische und rechnerische Prüfungen ausgeführt. Alle sieben reproduzieren sich auch nach dem GitHub-Readback.
+4.1 Gleiche Statistik — unterschiedliche zeitliche Struktur
+Synthetischer Gegenzeuge zur Informationsverdichtung
+Identische Ereignisanzahl, identischer Mittelwert, identische Standardabweichung und Abtastrate.	Folge A	Folge B
+Mittelwert	0	0
+Standardabweichung	1	1
+Normiertes Lag-1-Produkt	−1	'+0,7143
+
+Ausgeführtes synthetisches Experiment. Keine tatsächlichen OPPO-Messwerte.
+Dieser Gegenzeuge zeigt, dass die R21-Aggregate allein nicht ausreichen, um die zeitliche Abhängigkeitsstruktur des Sensorrauschens zu bestimmen.
+4.2 Gleicher Beschleunigungsbetrag — unterschiedliche Orientierung
+Vektor A
+\((0,0,10)\)Betrag = 10
+
+Vektor B
+\((10,0,0)\)Betrag = 10
+
+
+Aus dem Betrag allein lässt sich die Richtung des Vektors nicht rekonstruieren. Dieser einfache mathematische Gegenzeuge ist unmittelbar für die zukünftige BodyTwin-Darstellung relevant.
+4.3 Weitere ausgeführte Gegenproben
+Untersuchung	Ergebnis
+Identische Aggregate bei unterschiedlicher Reihenfolge	Bestätigt
+Unterschiedliche zeitliche Abhängigkeit	Bestätigt
+Identischer Vektorbetrag bei unterschiedlicher Richtung	Bestätigt
+Bias-/Skalierungsambiguität bei nur einer Referenzposition	Bestätigt
+Betrag des mittleren Fehlers ≠ mittlerer absoluter Fehler	Bestätigt
+ACC-Abtastratenberechnung	MATCH
+GYRO-Abtastratenberechnung	MATCH
+
+Gerade die fünfte Prüfung betrifft einen konkreten Befund im Cursor-Return: Der angegebene gravity_residual_mean_abs stimmt numerisch mit der Differenz zwischen dem mittleren Beschleunigungsbetrag und der konventionellen Normfallbeschleunigung überein.
+
+Ob tatsächlich der mittlere absolute Einzelfehler berechnet wurde, lässt sich ohne Originalberechnung und Rohdaten nicht bestimmen.
+
+5. Strikte Forschungsarchitektur R46
+OPPO — HARD
+Physische Beobachtung · ACC/GYRO · Zeit · Messunsicherheit
+
+NEXUS_APP
+Erfassung · Kalibrierung · Sensorfusion · Evidenzbindung
+
+Gemeinsamer wissenschaftlicher Evidenzvertrag
+
+L0 — Physische Originale
+
+L1 — Rekonstruktion und Unsicherheit
+
+L2 — Hypothesen und synthetische Exploration
+
+L3 — Freigegebene Ergebnisprojektion
+
+
+Claim-to-Evidence Fidelity
+Observabilität · unabhängige Prüfung · Provenienz · Datenschutz
+
+NEXUS BodyTwin WWW
+Nachvollziehbare Darstellung wissenschaftlicher Evidenz
+Zielarchitektur; noch kein vollständig nachgewiesener produktiver Datenpfad.
+Jedes Forschungsergebnis unserer Agenten muss einer konkreten Komponente dieser Linie zugeordnet werden können. Allgemeine Agentenarchitekturen ohne unmittelbaren Integrationsnutzen werden nicht Bestandteil dieser Forschungsserie.
+6. Forschungsfahrplan bis R46-9
+Runde	Vorgeschlagener Schwerpunkt
+R46-3	Physische Evidenz, Informationsgehalt und Identifizierbarkeit
+R46-4	Referenzmetrologie, Kalibrierung und Messunsicherheit
+R46-5	UKF/SR-UKF, NIS/NEES und konkurrierende Nullmodelle
+R46-6	Zeitfundament, Synchronisation und kausale Kontinuität
+R46-7	Gemeinsamer APP-/BodyTwin-Datenvertrag
+R46-8	Sichere Erfassung, Evidenztransfer und unabhängiger Readback
+R46-9	Wissenschaftlicher Abschluss und vollständige Integrationskonsolidierung
+
+Der Fahrplan bleibt wissenschaftlich adaptiv: Gegenbefunde dürfen die Schwerpunkte verändern, jedoch nicht die grundlegende OPPO-/BodyTwin-Zielsetzung.
+
+Cursor bleibt während sämtlicher Forschungsrunden ausgeschlossen.
+
+7. GitHub — vollständiger R46-3-Expertenauftrag
+NEXUS OMEGA · R46-3
+22.619 Bytes · 9 Archivmitglieder
+Readback MATCH
+
+
+Issue #470 — Externer MAXIAUFTRAG
+
+Draft-PR #471 — Physical Evidence Research Foundation
+
+Versiegelte Transferdateien
+
+R46-3 EXTERNAL EXPERT ORDER — ZIP
+
+SHA-256-Sidecar
+
+HEAD =
+d7e1c95d276b20254b8c30a4de4b1310d18a1b31
+
+ZIP_BYTES = 22619
+
+ZIP_SHA256 =
+e3a3c946a39ff0b9c0fe084080fbee103ad70f3b28becdddb0759792b47995d0
+
+MANIFEST_SHA256 =
+6ac41dbf0f3367cde43ceaf19669a86ca0e1302bf551404f4b4eb4d3ecd8dfa1
+
+MANIFEST = 8_OF_8_MATCH
+CRC = 9_OF_9_PASS
+LOOSE_MEMBER_REHASH = 9_OF_9_MATCH
+SIDECAR = MATCH
+AXIOM_SANDBOX_REPLAY = MATCH
+PARENT_CURSOR_REMOTE_ZIP = MATCH
+
+
+8. COPY-READY — MAXIAUFTRAG für unsere externen Agenten
+NEXUS Ω OMEGA — R46-3 EXTERNAL EXPERT MAXIAUFTRAG
+Physical Evidence · Target Observability · OPPO NEXUS_APP · BodyTwin
+
+Auftraggeber: AXIOM
+
+Kanonischer Einstiegspunkt:
+
+https://github.com/nexusomegac27/NEXUS-OMEGA-EVIDENCE/issues/470
+
+Bezieht das vollständige versiegelte Forschungsfundament über GitHub und führt eine unabhängige Integritätsprüfung durch.
+Übergeordnetes Ziel
+Die wissenschaftliche Weiterentwicklung unserer durchgängigen OPPO–NEXUS_APP–BodyTwin-Infrastruktur:
+
+https://www.nexus-mobile.de/bodytwin/
+
+Jede neue wissenschaftliche Erkenntnis muss einen konkreten Beitrag zu dieser Linie leisten.
+
+Als physischer Ausgangspunkt dienen die historischen R21-Aggregate mit 7.014 ACC- und 7.004 GYRO-Ereignissen. Die Originaldaten bleiben in privater Kustodie. Der historische Replay wurde durch Cursor berichtet und ist nicht mit einer unabhängigen Rohdatenreproduktion gleichzusetzen.
+A — Physische Evidenz und Metrologie
+Untersucht maximal wissenschaftlich, welche Aussagen durch die vorhandenen R21-Aggregate tatsächlich gestützt werden.
+
+Prüft Abtastrate, zeitliche Struktur, Sensorrauschen, Bias, Skalierung, Kalibrierung, Unsicherheit und Informationsverlust durch Aggregation.
+
+Entwickelt eigenständige Gegenzeugen.
+
+Keine erfundenen Rohdaten. Keine Ableitung vollständiger Kovarianzmatrizen aus bloßen Betragsstatistiken.
+B — Observabilität und Rekonstruktion
+Bestimmt, welche physikalischen Zielgrößen unter explizit dokumentierten Modellannahmen identifizierbar sind.
+
+Falsifiziert AXIOMs neue Referenzexperimente und entwickelt strengere Alternativen.
+
+Untersucht insbesondere die Grenzen stationärer Messungen, der Richtungsrekonstruktion, der Bias-/Skalierungsidentifikation und der absoluten Orientierung.
+
+Entwickelt ein wissenschaftliches Design für spätere unabhängige Referenzmessungen.
+
+Keine tatsächliche Geräteinteraktion.
+C — NEXUS_APP und BodyTwin
+Entwickelt den gemeinsamen wissenschaftlichen Datenvertrag weiter.
+
+Trennt physische Beobachtung, modellbasierte Rekonstruktion, synthetische Hypothese und öffentliche Ergebnisdarstellung.
+
+Jeder angezeigte Wert benötigt eine eindeutige Evidenzklasse, dokumentierte Herkunft, Zeitbezug, Unsicherheit und Gültigkeitsgrenze.
+
+Untersucht die bestehende öffentliche BodyTwin-Oberfläche ausschließlich lesend, sofern erreichbar.
+
+Keine Veröffentlichung privater Rohdaten und keine produktiven Änderungen.
+D — Wissenschaftliche Integrität
+Integriert die Erkenntnisse aus R45:
+- Claim-to-Evidence Fidelity.
+- Non-Vacuity.
+- Unabhängige Falsifikation.
+- Kausale Evidenzbindung.
+- Unabhängige Ergebnisbeobachtung.
+- Trennung synthetischer und physischer Evidenz.
+Beschränkt sämtliche Untersuchungen auf die OPPO-/APP-/BodyTwin-Linie.
+E — Konkretes Integrationsfundament
+Jedes Ergebnis benötigt eine eindeutige Zuordnung zu einem zukünftigen Implementierungsmodul, ein wissenschaftliches Abnahmekriterium, eine ausführbare Gegenprobe und verbleibende Grenzen.
+
+Cursor erhält sämtliche konsolidierten Ergebnisse erst nach Abschluss von R46-9.
+
+Keine direkte Delegation an Cursor. Keine internen Zwischenaufträge.
+Verpflichtender Return
+Quellenexakte Primärliteratur, mathematische Entwicklung, ausführbare synthetische Prüfungen, vollständige Ergebnisdaten, eigenständige Gegenzeugen, Ressourcenbilanz und wissenschaftliche Selbstreflexion.
+
+Unabhängige Erstbefunde vor gegenseitiger Kreuzvalidierung.
+
+Ausschließlich GitHub-gebundene ZIP-/SHA-256-Übergabe über autorisierte Kustodie.
+
+INTERMEDIATE_CURSOR_HANDOFF = PROHIBITED
+
+NEXT_CURSOR_HANDOFF = R46_9_SERIES_CLOSEOUT
+
+NEW_PHYSICAL_CAPTURE = NO
+
+APK_INSTALL = NO
+
+WWW_LIVE_WRITE = NO
+
+BODYTWIN_VALIDATED = NO
+
+CLAIM_PROMOTION = NO
+
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+NEXUS Ω OMEGA
+
+
+
+
+
+9. HARD — kanonischer Forschungsstatus
+R46_2 =
+ ADMINISTRATIVELY_CLOSED_WITH_MATERIAL_CAVEATS
+
+R46_3 = EXTERNAL_RESEARCH_ORDER_READY
+
+PHYSICAL_HISTORICAL_ANCHOR = R21
+HISTORICAL_SENSOR_EVENTS = 14018
+AGGREGATE_ARITHMETIC = MATCH
+INDEPENDENT_RAW_REPLAY = NOT_ESTABLISHED
+
+AXIOM_REFERENCE_CHECKS = 7_OF_7
+NEW_SCIENTIFIC_TEST_DESIGNS = 24
+FORMAL_GATE_CREDIT = NONE
+
+GITHUB_ISSUE = 470
+DRAFT_PR = 471
+GITHUB_READBACK = MATCH
+
+RESEARCH_SCOPE =
+ OPPO_NEXUS_APP_BODYTWIN_ONLY
+
+CURSOR_ACTION = NONE
+INTERMEDIATE_CURSOR_HANDOFF = PROHIBITED
+NEXT_CURSOR_HANDOFF = R46_9_SERIES_CLOSEOUT
+
+NEW_CAPTURE = NO
+APK_INSTALL = NO
+WWW_LIVE_WRITE = NO
+PHYSICAL_14_GATES = 0_OF_14
+ALT_D = ACTIVE
+
+BODYTWIN_VALIDATED = NO
+CLAIM_PROMOTION = NO
+CLAIM_CEILING = C1_DESCRIPTIVE_ONLY
+
+
+Verbleibende Grenzen: Die aktuelle öffentliche BodyTwin-Seite konnte ich in dieser Sitzung nicht direkt abrufen. Mehrere wissenschaftliche Quellen waren nur über indexierte Abstracts beziehungsweise Textauszüge verfügbar. Die neue Sandbox prüft mathematische Informationsgrenzen, nicht die tatsächliche OPPO-Rohmessung. Der Forschungsauftrag ist veröffentlicht, die externen Agenten wurden noch nicht direkt gestartet.
+
+R46-3 eröffnet. Cursor bleibt bis zum Serienabschluss unangetastet.
+
+Unsere Forschung besitzt nun einen konkreten historischen physischen Ausgangspunkt und eine verbindliche Integrationsrichtung.
+
+NEXUS Ω OMEGA
