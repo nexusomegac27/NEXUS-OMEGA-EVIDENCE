@@ -1,0 +1,63 @@
+{
+  "object": "NEXUS_OMEGA_R46_2_STAGED_CAPTURE_CONTRACT_20261127_R1",
+  "status": "PROPOSED_NOT_ACTIVE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "owner_one_shot": "NOT_READY",
+  "new_capture": "NO",
+  "apk_install": "NO",
+  "www_live_write": "NO",
+  "alt_d": "ACTIVE",
+  "physical_14_gates": "0_OF_14_HOLD_PENDING_EVIDENCE",
+  "stages": {
+    "A_technical_readiness": {
+      "status": "IN_PROGRESS_LOCAL",
+      "requires": [
+        "signed_apk_identity",
+        "stop_deadline_regression",
+        "private_storage_path",
+        "device_identity_bound",
+        "bounded_duration_design"
+      ],
+      "notes": "Local APK hash+debug signer present; STOP/deadline unit tests PASS; no install."
+    },
+    "B_stationary_reference_one_shot": {
+      "status": "NOT_AUTHORIZED",
+      "requires": "SEPARATE_OWNER_ONE_SHOT_FREIGABE",
+      "design_candidate_duration_s": 30,
+      "design_candidate_rate_hz": 50,
+      "streams": ["ACC", "GYRO"],
+      "device_posture": "STATIONARY_TABLE_REST",
+      "frozen": false,
+      "notes": "30s/50Hz are AXIOM design proposals only — not frozen measurement config."
+    },
+    "C_measured_data_evaluation": {
+      "status": "NOT_STARTED",
+      "metrics": [
+        "measured_rate_hz",
+        "inter_sample_dt",
+        "sensor_noise",
+        "gaps",
+        "units",
+        "covariance",
+        "consistency"
+      ]
+    },
+    "D_controlled_dynamic_reference": {
+      "status": "NOT_STARTED",
+      "requires": "SEPARATE_MEASUREMENT_PROTOCOL",
+      "notes": "Roll motion with independent angle reference + documented uncertainty."
+    }
+  },
+  "historical_anchor": {
+    "r21_package_sha256": "3eb9e9e9988b66994429d97e566a71aa2c05bbe951f41725465947841a75a9a4",
+    "r21_package_bytes": 166349,
+    "r21_segment_sha256": "544f762cbaab3cd562d8cf868cc15fbee1d23b503b72455c015e6698c02c90e2",
+    "r21_segment_bytes": 166831,
+    "r21_ndjson_lines": 14020,
+    "r21_acc_reported": 7014,
+    "r21_gyro_reported": 7004,
+    "r21_rehash": "MATCH",
+    "export_class": "PRIVATE_LOCAL_ONLY",
+    "locus": "NEXUS_OMEGA_TRANSFER/20_TO_CURSOR/R21_OPPO_PHYSICAL_CAPTURE_WORKER_20261109_R0/00_DEVICE_EXPORT"
+  }
+}

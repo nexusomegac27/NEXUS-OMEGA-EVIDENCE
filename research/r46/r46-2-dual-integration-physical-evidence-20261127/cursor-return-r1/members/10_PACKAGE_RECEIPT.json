@@ -1,0 +1,82 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R46_2_CONTINUATION_RETURN_PACKAGE_RECEIPT_20261127_R1",
+  "observed_utc": "2026-11-27T11:22:59Z",
+  "parent_r0_zip_sha256": "9a334680b56fd677832fa1cf42127050a719fcbbaafe9631c7b1637bd870c238",
+  "members": {
+    "00_EXECUTIVE.md": {
+      "bytes": 1318,
+      "sha256": "d2372cacbb660ee1cc723fd3a04075fc8e71049095674081b0ba631848cc7fb6"
+    },
+    "01_HANDSHAKE.md": {
+      "bytes": 311,
+      "sha256": "2520fb41580fe410c34acd046eef194d72c57fdcd503bc04c0ed2ebd0ea25012"
+    },
+    "02_EPISTEMIC_WALLS.md": {
+      "bytes": 403,
+      "sha256": "80fb4723dc4e7a8b3d84eb6a440fece1bd988f1c9df5473486aa12c0237b0eff"
+    },
+    "03_RESULT.md": {
+      "bytes": 384,
+      "sha256": "fc1c6792cec9e7a8674e0844af72ce74827efd0f5a6197d8836aad7acaadb1f2"
+    },
+    "04_MACHINE.json": {
+      "bytes": 773,
+      "sha256": "00758143fbfa99462b646bb86fb6f22e91bc33c0fd5455ce6c746e84455485fc"
+    },
+    "05_TRACE_MATRIX.md": {
+      "bytes": 509,
+      "sha256": "0105ae7ed725f2aa557487d88226f7a5ea0fa579ff72b080e82c3cfa07b37af0"
+    },
+    "06_NEXT_LANES.md": {
+      "bytes": 342,
+      "sha256": "d6db195dbc0b93453a5b613de1a203b76cdde9e417033cac9c0eac51b625155c"
+    },
+    "11_ADB_PREFLIGHT_REDACTED.json": {
+      "bytes": 1908,
+      "sha256": "4689bdc7c50508ff87896954b4ba251d20f5c19f82f092288327e742e014ff15"
+    },
+    "12_APP_INTEGRATION.json": {
+      "bytes": 946,
+      "sha256": "9989a89fcc9cb32eeae24d3ed73db0af90516b2fa5561956d21eaa5c794f847d"
+    },
+    "13_BUILD_IDENTITY.json": {
+      "bytes": 1533,
+      "sha256": "2c182155edddc10ef7054c36b19a9bec434861d648dbd60a3f5700c576c8c861"
+    },
+    "14_WWW_LOCAL_BROWSER.json": {
+      "bytes": 804,
+      "sha256": "da82a226a0bc96ced0f18e18346ab3e80fa3e253fdc3a5cbfc994221ce8c2a1c"
+    },
+    "15_HISTORICAL_R21_RAW.json": {
+      "bytes": 1883,
+      "sha256": "954af8e5d1cd7669acc71615b5e2778d397f15020fac0593551bb6a1c91be4ca"
+    },
+    "16_STAGED_CAPTURE_CONTRACT_PROPOSED.json": {
+      "bytes": 2160,
+      "sha256": "b1ea9651f8b03eb441202c52410a43a5687c9480a2e14a44a561d5313760443b"
+    },
+    "17_ONE_SHOT_FREIGABE_PACKET_FILLED.json": {
+      "bytes": 1997,
+      "sha256": "d8b9669a67eddfb6e4f3889fa6fdf83444a3c620d89847555e592eb4d2061d9f"
+    },
+    "18_PRIVACY_REDACTION.md": {
+      "bytes": 834,
+      "sha256": "41a5282da3bdc3be70b18b2116f37a4fe6735527820b1d4c1ad10bfad406a8f3"
+    },
+    "19_ACCEPTANCE_DELTA.json": {
+      "bytes": 744,
+      "sha256": "3ea60cb4e652eafc0f44e316b57b8ba19997aed4cd04c4ad33f2afa8e5975c31"
+    },
+    "99_SHA256SUMS.txt": {
+      "bytes": 1436,
+      "sha256": "94b327aad61f0695497ef0b096eb9f4d80bac07555b87bdb1c7783efb16bca90"
+    }
+  },
+  "prohibitions": {
+    "new_capture": "NO",
+    "apk_install": "NO",
+    "www_live_write": "NO",
+    "git_history_rewrite": "NO_UNILATERAL"
+  },
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}
