@@ -1,0 +1,84 @@
+{
+  "parent": {
+    "pr": 469,
+    "head": "c2b897c1b4c36987581f9bbaf53ae61d36add682",
+    "issue": 468,
+    "ack": 7217992462,
+    "zip_bytes": 9375,
+    "sha256": "551db6d5a0aadb58344e93928d166bc6d7f4f1ba872531a53af47a4028bd0a0c",
+    "manifest_sha256": "31350c641d4fc827b9de89c2750b62695ef49ff8caf288f05ca49776201a464c",
+    "local_crc": "16/16",
+    "local_manifest": "15/15",
+    "sidecar": "MATCH",
+    "remote_zip": "MATCH",
+    "summary_member_sha256": "c8696fe525df2829b65a088f910b815b4c7f1bb7765781b5723c70c3ed9c0e46"
+  },
+  "classification": "DERIVED_FROM_CURSOR_PUBLIC_SAFE_AGGREGATE_NOT_RAW",
+  "r21": {
+    "date": "2026-11-09",
+    "posture": "reported table rest",
+    "new_capture": false,
+    "ndjson_lines": 14020,
+    "non_sensor_lines": 2,
+    "requested_hz": 100,
+    "acc": {
+      "n": 7014,
+      "duration_s": 70.022492373,
+      "rate_hz": 100.15353299112422,
+      "median_dt_s": 0.009984687,
+      "gaps_gt_5x_median": 0,
+      "mag_mean": 9.832738001091458,
+      "mag_stdev": 0.009171945499113295
+    },
+    "gyro": {
+      "n": 7004,
+      "duration_s": 69.922634925,
+      "rate_hz": 100.15354838260195,
+      "median_dt_s": 0.009984687,
+      "gaps_gt_5x_median": 0,
+      "mag_mean": 0.0019802113232776307,
+      "mag_stdev": 0.000664483224551047
+    },
+    "gravity_residual_mean_abs_reported": 0.026088001091459367,
+    "standard_deviation_definition": "UNKNOWN",
+    "units": "conditional on actual Android sensor mapping; ACC m/s^2; GYRO rad/s",
+    "nis": "NOT_COMPUTED_NO_INNOVATION_MODEL",
+    "nees": "NOT_COMPUTED_NO_INDEPENDENT_REFERENCE",
+    "angle_reference": "ABSENT",
+    "raw_replay_by_axiom": "NOT_RUN_RAW_ABSENT"
+  },
+  "app": {
+    "apk_bytes": 22946537,
+    "apk_sha256": "f191dd09e619e958273eacc3c6085de2d56554cc9deccf3acb33889b9029b6ab",
+    "reported_tests_xml": 226,
+    "reported_failures": 0,
+    "reported_subset": 18,
+    "source_wiring": "PRODUCER_REPORTED",
+    "actual_apk_source_xml": "NOT_IN_RETURN",
+    "install": false
+  },
+  "www": {
+    "local_bodytwin_index_sha256": "e9b3c5748b3a99a1fa7ccdaee21e58cf9b3e94de19dfaa599f1f625ddb3c5c8c",
+    "local_browser": "PRODUCER_RECEIPT",
+    "same_digest_as_R1": true,
+    "live_write": false,
+    "axiom_live_fetch": "FAILED_CACHE_MISS_OR_INACCESSIBLE",
+    "production_update": "NOT_ESTABLISHED"
+  },
+  "holds": {
+    "physical14": "0/14",
+    "alt_d": "ACTIVE",
+    "bodytwin_validated": false,
+    "owner_one_shot": "NOT_READY",
+    "D1_D2_D3": "AWAITING_OWNER",
+    "protocol": "digest reported; full frozen input set absent, design values explicitly not frozen",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+    "cursor_handoff": "PROHIBITED_UNTIL_R46_9_CLOSEOUT"
+  }
+}

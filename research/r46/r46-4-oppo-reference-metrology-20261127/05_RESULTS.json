@@ -1,0 +1,57 @@
+{
+  "reference_sha256": "0454a76669e1743e722813592f6ae5c855c6257f51fc8cc941422eb5687a6ea3",
+  "result": {
+    "checks": {
+      "lower_moments": true,
+      "lower_attained": true,
+      "upper_moments": true,
+      "upper_attained": true,
+      "support_nonnegative": true,
+      "rank_one": true,
+      "rank_planar": true,
+      "rank_clustered": true,
+      "rank_tetra": true,
+      "rank_six": true,
+      "rotation_gauge": true,
+      "rms_ratio": true
+    },
+    "lower": {
+      "mean": 9.832738001091458,
+      "sd": 0.009171945499113932,
+      "meanAbs": 0.026088001091459034
+    },
+    "upper": {
+      "mean": 9.83273800109146,
+      "sd": 0.009171945499113508,
+      "meanAbs": 0.02765336119148465
+    },
+    "lower_support": [
+      9.823566055592345,
+      9.841909946590572
+    ],
+    "upper_support": [
+      9.778996638808515,
+      9.834303361191484
+    ],
+    "upper_weights": [
+      0.028303251984192923,
+      0.9716967480158071
+    ],
+    "ranks": {
+      "one": 1,
+      "planar": 3,
+      "clustered": 3,
+      "tetra": 4,
+      "six": 4
+    },
+    "rotation": {
+      "residual": 2.220446049250313e-16,
+      "delta": 0.014145788506261919
+    },
+    "ratio": 26.74623601675417,
+    "limits": "Moment-class bounds conditional on empirical population moments (not exact finite equal-weight extremizers or CI); normalized known-vector affine rank only; numeric tolerance explicit; synthetic not actual device; no formal credit."
+  },
+  "scope": "AXIOM_EXECUTED_DETERMINISTIC_DIAGNOSTICS",
+  "supplement": "02_ADJUDICATION.json includes auxiliary local Python/SciPy numerical inversion and 1000-run-per-design diagnostic; auxiliary scratch not bundled, not a superiority comparison",
+  "formal_credit": false
+}
