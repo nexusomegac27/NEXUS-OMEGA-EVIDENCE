@@ -1,0 +1,179 @@
+{
+  "register": "R46-1 connectivity design register; NOT_RUN by Cursor",
+  "designs": [
+    {
+      "id": "R46-1-N01",
+      "test": "exact checkpoint and transfer rehash",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N02",
+      "test": "missing source not substitute",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N03",
+      "test": "GitHub repo/path/ref identity",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N04",
+      "test": "authorized read-only route with independent receipt",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N05",
+      "test": "unknown permission deny",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N06",
+      "test": "public route stale vs reachability",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N07",
+      "test": "wrong schema/version",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N08",
+      "test": "duplicate JSON keys",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N09",
+      "test": "malformed composite sensor record",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N10",
+      "test": "string or bool sensor value",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N11",
+      "test": "nonfinite numeric",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N12",
+      "test": "invalid hex digest vs content hash",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N13",
+      "test": "decimal ns exact and bounded",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N14",
+      "test": "invalid interval cannot FRESH",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N15",
+      "test": "nested private field rejected",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N16",
+      "test": "wrong units/frame/dimensions",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N17",
+      "test": "reboot or cross-device clock ambiguity",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N18",
+      "test": "gap/reorder/duplicate conflict",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N19",
+      "test": "304 preserves source age",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N20",
+      "test": "local outbox mock replay",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N21",
+      "test": "STOP/epoch/expiry at commit",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N22",
+      "test": "aggregate budget race",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N23",
+      "test": "duplicate bool/NaN/None rejected before lookup",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N24",
+      "test": "crash/lost ACK reconciliation",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N25",
+      "test": "two-resource partial explicit",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N26",
+      "test": "lock timeout typed outcome",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N27",
+      "test": "readback altered body not old receipt",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-N28",
+      "test": "nonvacuity / claim fidelity weaker theorem",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-P01",
+      "test": "positive exact fixture and readback",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-P02",
+      "test": "positive mock authorized one commit",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-P03",
+      "test": "positive inert review without effect",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "R46-1-P04",
+      "test": "positive independent cross-runtime golden fixture",
+      "execution": "NOT_RUN"
+    }
+  ],
+  "historical": {
+    "canonical_negative": "0/24",
+    "authenticated_quorum": "0/3",
+    "full_science": "0/10",
+    "physical14": "HOLD",
+    "alt_d": "DO_NOT_RUN",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false,
+    "hardware_rate": "UNKNOWN",
+    "tlc": "NOT_RUN"
+  },
+  "do_not_sum": true
+}
