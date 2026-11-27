@@ -1,0 +1,34 @@
+{
+  "register": "R46-4 design-only controls, nonadditive historical",
+  "designs": [
+    { "id": "R46-4-N01", "test": "calibration claim from single pose", "formal": "NOT_RUN" },
+    { "id": "R46-4-N02", "test": "axis covariance claim from magnitude statistics only", "formal": "NOT_RUN" },
+    { "id": "R46-4-N03", "test": "design presented as executed measurement", "formal": "NOT_RUN" },
+    { "id": "R46-4-N04", "test": "aggregate promoted without documented ddof", "formal": "NOT_RUN" },
+    { "id": "R46-4-N05", "test": "losslessness claimed from threshold count only", "formal": "NOT_RUN" },
+    { "id": "R46-4-N06", "test": "local-g correction without independent reference", "formal": "NOT_RUN" },
+    { "id": "R46-4-N07", "test": "orientation claim from stationary magnitude aggregates", "formal": "NOT_RUN" },
+    { "id": "R46-4-N08", "test": "whiteness/drift claim from 70 s record", "formal": "NOT_RUN" },
+    { "id": "R46-4-N09", "test": "cross-phone transfer of noise parameters", "formal": "NOT_RUN" },
+    { "id": "R46-4-N10", "test": "uncertainty budget with numerical placeholders", "formal": "NOT_RUN" },
+    { "id": "R46-4-N11", "test": "historic replay labeled live", "formal": "NOT_RUN" },
+    { "id": "R46-4-N12", "test": "synthetic presented as physical", "formal": "NOT_RUN" },
+    { "id": "R46-4-P01", "test": "positive six-position identifiability arithmetic", "formal": "NOT_RUN" },
+    { "id": "R46-4-P02", "test": "positive uncertainty budget with documented inputs", "formal": "NOT_RUN" },
+    { "id": "R46-4-P03", "test": "positive design labeled as design", "formal": "NOT_RUN" },
+    { "id": "R46-4-P04", "test": "positive source-gap recorded as SOURCE_GAP/NOT_COMPUTED", "formal": "NOT_RUN" }
+  ],
+  "note": "Executed reference computations for the order live in 05_RESULTS.json without formal gate credit; the register stays NOT_RUN until AXIOM adjudication assigns formal credit.",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true
+}

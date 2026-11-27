@@ -1,0 +1,55 @@
+{
+  "object": "NEXUS_OMEGA_AXIOM_R46_4_OPPO_BODYTWIN_REFERENCE_METROLOGY_ORDER_EVIDENCE_20261127_R0",
+  "date_utc": "2026-11-27",
+  "parent_round": {
+    "round": "R46-3",
+    "issue": 470,
+    "return_pr": 473,
+    "return_branch": "r46-3-return-glm-r1",
+    "return_lineage": "GLM_R1",
+    "return_zip_bytes": 87415,
+    "return_zip_sha256": "300e6ef2458e559b5f8f8194ba4bfaf37e2377da3f0d83e951f9f4b452c9c27a",
+    "return_manifest_sha256": "71b888b9043312a6ea4e36855ebe49b5a0ebf1fdb0ca9bcfa1d66eb9960840fd",
+    "return_prereg_sha256": "0d4926ca6a960be5a15666ac911cfafdd66ac634ae6b37a9d9ea39a035bc20ee",
+    "adjudication_receipt_comment": 7222655788,
+    "adjudication": "ACCEPTED_WITH_RESERVATIONS",
+    "reservations_status": "PENDING_SPECIFICATION_BY_AXIOM; standing material caveats binding until then"
+  },
+  "historical_anchor": {
+    "r21_date": "2026-11-09",
+    "sensor_events": 14018,
+    "acc": { "n": 7014, "duration_s": 70.022492373, "rate_hz_derived": 100.15353299112422, "mag_mean": 9.832738001091458, "mag_stdev": 0.009171945499113295 },
+    "gyro": { "n": 7004, "duration_s": 69.922634925, "rate_hz_derived": 100.15354838260195, "mag_mean": 0.0019802113232776307, "mag_stdev": 0.000664483224551047 },
+    "classification": "DERIVED_FROM_CURSOR_PUBLIC_SAFE_AGGREGATE_NOT_RAW",
+    "raw_replay": "NOT_ESTABLISHED"
+  },
+  "binding_constraints_carried": [
+    "C1 axis covariance requires multi-position design (mag_stdev -> e_g' Sigma e_g projection only)",
+    "C2 gap threshold blind; require gap histogram or loss counter",
+    "C3 SD/ddof definitions must be documented at producer",
+    "C4 residuals carry exact formula fields",
+    "C5 local-gravity correction requires independent reference (ABSTAIN standing)",
+    "C6 no orientation/heading from stationary magnitude aggregates"
+  ],
+  "holds": {
+    "PHYSICAL_14_GATES": "0/14",
+    "CANONICAL_NEGATIVE": "0/24 (historical, do_not_sum)",
+    "AUTHENTICATED_QUORUM": "0/3",
+    "FULL_SCIENCE": "0/10",
+    "ALT_D": "ACTIVE",
+    "E23": "HOLD",
+    "W1": "OPEN",
+    "B01_B05": "OPEN",
+    "D1_D2_D3": "AWAITING_OWNER",
+    "CLAIM_CEILING": "C1_DESCRIPTIVE_ONLY",
+    "BODYTWIN_VALIDATED": false,
+    "CLAIM_PROMOTION": false
+  },
+  "prohibitions": {
+    "NEW_PHYSICAL_CAPTURE": "NO",
+    "APK_INSTALL": "NO",
+    "WWW_LIVE_WRITE": "NO",
+    "INTERMEDIATE_CURSOR_HANDOFF": "PROHIBITED",
+    "NEXT_CURSOR_HANDOFF": "R46_9_SERIES_CLOSEOUT"
+  }
+}
