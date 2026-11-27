@@ -1,0 +1,77 @@
+{
+  "object": "R46_2_PACKAGE_RECEIPT",
+  "utc": "2026-11-27T10:47:06Z",
+  "members": [
+    {
+      "name": "00_EXECUTIVE.md",
+      "bytes": 1496,
+      "sha256": "62678807f1a004113093dab9cba224f3931da020732a942cb5ac46304da7b467"
+    },
+    {
+      "name": "01_HANDSHAKE.md",
+      "bytes": 362,
+      "sha256": "33f3549b8a3a279325ec336e3affbd05905c431cadfcb16425d15a2247bca653"
+    },
+    {
+      "name": "02_EPISTEMIC_WALLS.md",
+      "bytes": 420,
+      "sha256": "2255f701003a671ed61fcada4f5a929966fc6c1d79b430f0c1c256ddd81339bb"
+    },
+    {
+      "name": "03_RESULT.md",
+      "bytes": 341,
+      "sha256": "af0593a72a54dee12faee585f095978cc7868f32b35ec93d89a607f98bda55ff"
+    },
+    {
+      "name": "04_MACHINE.json",
+      "bytes": 823,
+      "sha256": "23044dbf9f98e10b82590a3dee6e742fa242862491e97d05e4c2c9183c5cd109"
+    },
+    {
+      "name": "05_TRACE_MATRIX.md",
+      "bytes": 551,
+      "sha256": "844e1f39b85692ad185b1caf1be69085610072652614fbca363bf9e371eacbb4"
+    },
+    {
+      "name": "06_NEXT_LANES.md",
+      "bytes": 419,
+      "sha256": "fb904ce9d94d3811e8ecd1ec5f61367ca7795767c41f1ee5e9b892084a8deb07"
+    },
+    {
+      "name": "10_R46_1_HASH_CORRECTION_R1.json",
+      "bytes": 970,
+      "sha256": "177d8988f5a81a6b60a1bf305522dedd6cc2946f48c929c1c737211151c12a48"
+    },
+    {
+      "name": "11_ADB_PREFLIGHT.json",
+      "bytes": 1857,
+      "sha256": "0ffb897768591eeaf5f3c631732a5db19a1972658a0e437e284c50c6e3c877e3"
+    },
+    {
+      "name": "12_LOCAL_BUILD_WWW.json",
+      "bytes": 3364,
+      "sha256": "e9c05c063154487219945df654279a02fec820281081772f372d2b8c96c36317"
+    },
+    {
+      "name": "13_HISTORICAL_PHYSICAL.json",
+      "bytes": 644,
+      "sha256": "73f0a02fe640939caf1ae47d7892ba56303813f9c557920c9dc211f626ec1936"
+    },
+    {
+      "name": "14_PHYSICAL_GATES.json",
+      "bytes": 3929,
+      "sha256": "1464e8520bf966462882a0c6349feb42063e08e57ac6bcaa17c0ee4b3fa757a8"
+    },
+    {
+      "name": "15_ONE_SHOT_TEMPLATE.json",
+      "bytes": 1282,
+      "sha256": "c398870d14ee04fea96c0f4c383241c8d7d53bf31acca29ebd532c5597575b48"
+    },
+    {
+      "name": "16_ACCEPTANCE_STATUS.json",
+      "bytes": 3209,
+      "sha256": "e799c38fbb95a4531ace8c9b3245d48b8cf251d62840a1f70e00ada28ac1e1b6"
+    }
+  ],
+  "note": "Detached receipt binds archive after ZIP creation; not inside self-hash loop"
+}

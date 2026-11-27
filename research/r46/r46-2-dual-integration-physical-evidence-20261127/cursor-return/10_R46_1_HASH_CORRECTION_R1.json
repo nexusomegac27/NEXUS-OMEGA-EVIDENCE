@@ -1,0 +1,21 @@
+{
+  "object": "NEXUS_OMEGA_CURSOR_R46_1_HASH_REPORT_CORRECTION_APPEND_ONLY_20261127_R1",
+  "observed_utc": "2026-11-27T10:47:06Z",
+  "parent_zip_bytes": 12306,
+  "parent_zip_sha256_actual": "7abb005b254033da360ff600397efcc4423cfdf46e2bb71e301408d510140e5c",
+  "sidecar_content": "7abb005b254033da360ff600397efcc4423cfdf46e2bb71e301408d510140e5c",
+  "axiom_true_sha256": "7abb005b254033da360ff600397efcc4423cfdf46e2bb71e301408d510140e5c",
+  "zip_vs_sidecar": "MATCH",
+  "actual_vs_axiom_true": "MATCH",
+  "ack_reported_typo": "…e391…",
+  "true_hex_locus": "…e301…",
+  "correction_class": "APPEND_ONLY_REPORT_CORRECTION_NOT_ZIP_REWRITE",
+  "zip_rewritten": false,
+  "caveats": [
+    "10_PACKAGE_RECEIPT.json ABSENT_FROM_PUBLISHED_ZIP",
+    "10_PACKAGE_RECEIPT.json PRESENT_IN_TRANSFER_LOOSE_DIR",
+    "MANIFEST_SELFHASH_MISMATCH_PRESERVED",
+    "HARNESS_11_OF_11_REPORTED_NOT_INDEPENDENTLY_REPLAYABLE_WITHOUT_SCRIPTS_IN_ZIP"
+  ],
+  "loose_receipt_present": true
+}

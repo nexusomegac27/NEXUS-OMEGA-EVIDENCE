@@ -1,0 +1,34 @@
+{
+  "object": "R46_2_R1_APP_INTEGRATION",
+  "observed_utc": "2026-11-27T11:22:59Z",
+  "adapters": {
+    "path": "nexus-real/nexus-mobile/app/src/main/java/com/nexusomega/maps/sensor/R45EvidenceLayerAdapters.kt",
+    "bytes": 8722,
+    "sha256": "d90cda4a28a1d0f5ab47f31be2a57172bff88f117a514d728ff0be66d733e87d",
+    "layers": [
+      "L0",
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "tests": {
+    "path": "nexus-real/nexus-mobile/app/src/test/java/com/nexusomega/maps/sensor/R45EvidenceLayerAdaptersTest.kt",
+    "bytes": 3961,
+    "sha256": "be2ab6be9adff22ada0e4b825f3f51435eed1fbb72eafa85957b77220b282e79"
+  },
+  "gradle_unit_tests": {
+    "total": 18,
+    "failures": 0,
+    "errors": 0,
+    "suites": [
+      "R45EvidenceLayerAdaptersTest",
+      "ScientificImuStopDeadlineGateTest",
+      "R42R2FalsificationTest"
+    ],
+    "verdict": "PASS"
+  },
+  "apk_install": "NO",
+  "device_capture": "NO",
+  "status": "PARTIAL_L0_L3_BOUND"
+}

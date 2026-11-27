@@ -1,0 +1,23 @@
+{
+  "object": "R46_2_R1_ACCEPTANCE_DELTA",
+  "observed_utc": "2026-11-27T11:22:59Z",
+  "prior_axiom_table": {
+    "adb_read_only": "ACCEPTED_REPORT_SCOPE",
+    "local_apk_build": "REPORTED_SUCCESS",
+    "app_integration": "NOT_ESTABLISHED",
+    "www_integration": "NOT_ESTABLISHED"
+  },
+  "this_bind": {
+    "app_integration": "PARTIAL_L0_L3_ADAPTERS_TESTS_BOUND",
+    "www_integration": "LOCAL_BROWSER_PASS_LIVE_WRITE_NO",
+    "historical_raw": "R21_MATCH_PRIVATE",
+    "privacy": "REDACTED_PUBLIC_PREPARED",
+    "one_shot": "FILLED_NOT_AUTHORIZED",
+    "physical_14_gates": "0_OF_14",
+    "new_capture": "NO",
+    "apk_install": "NO",
+    "www_live_write": "NO"
+  },
+  "r46_2": "ACTIVE_INCOMPLETE",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}

@@ -1,0 +1,116 @@
+{
+  "object": "R46_2_PHYSICAL_14_GATES_SOURCE_EXACT",
+  "source_contract": "research/r39/oppo-controlled-rotation-expert-prep-20261122/06_R39_MACHINE_EXPERT_RETURN_AND_PHYSICAL_GATE_CONTRACT.json",
+  "source_head": "3514578f2b31510dbdca49640661c76e70bc541d",
+  "source_contract_bytes": 10611,
+  "source_contract_sha256": "7c45e72f2d5f234ae0d08d2d27c7e841d1300c3d107718d963d14f6aa1dc50e1",
+  "gates_enumerated": 14,
+  "alt_d": "DO_NOT_RUN_ACTIVE",
+  "new_capture": false,
+  "apk_install": false,
+  "www_live_write": false,
+  "gates": [
+    {
+      "gate": "SOURCE_BUILD_SIGNED",
+      "verified": false,
+      "decision": "PARTIAL_OBSERVED_HOLD_FULL_BYTE_MATCH",
+      "evidence": "Installed package com.nexusomega.maps versionName=1.3.11-alarm-identity-l1-vc15 versionCode=15 signatures short=838e5094 OBSERVED_READ_ONLY; full APK byte identity vs local assembleDebug NOT_COMPARED_ON_DEVICE_THIS_LEASE",
+      "requires_measurement": false
+    },
+    {
+      "gate": "OWNER_ONE_SHOT_APPROVAL",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": "Separate exact owner one-shot NOT_PRESENT",
+      "requires_measurement": false
+    },
+    {
+      "gate": "STOP_DEADLINE_REPAIR",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": false
+    },
+    {
+      "gate": "INDEPENDENT_ANGLE_REFERENCE",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": true
+    },
+    {
+      "gate": "SENSOR_FRAME_AND_UNITS",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": "Capability meta: icm4x6xx accel+gyro present (dumpsys); SI units / frame mapping NOT validated without capture",
+      "requires_measurement": true
+    },
+    {
+      "gate": "MONOTONIC_EVENT_CLOCK",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": "Android SensorEvent clock design known; device clock not measured this lease",
+      "requires_measurement": true
+    },
+    {
+      "gate": "RATE_REQUESTED_VS_ACTUAL",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": true
+    },
+    {
+      "gate": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": false
+    },
+    {
+      "gate": "PRIVATE_ORIGINAL_RECEIVER",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": "Historical raw ACC/GYRO sessions SOURCE_GAP",
+      "requires_measurement": false
+    },
+    {
+      "gate": "INDEPENDENT_SECOND_SOURCE",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": false
+    },
+    {
+      "gate": "NO_HUMAN_BODY_CLAIMS",
+      "verified": false,
+      "decision": "DESIGN_HOLD_NOT_MEASUREMENT_PASS",
+      "evidence": "Protocol design ALT_A non-body rig; no human instrumentation this lease",
+      "requires_measurement": false
+    },
+    {
+      "gate": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "verified": false,
+      "decision": "OBSERVED_THIS_RETURN_C1_NOT_UNIVERSAL",
+      "evidence": "No private raw hashes published in this return",
+      "requires_measurement": false
+    },
+    {
+      "gate": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": null,
+      "requires_measurement": false
+    },
+    {
+      "gate": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "verified": false,
+      "decision": "HOLD_PENDING_EVIDENCE",
+      "evidence": "Prior R38 execution source NOT independently re-established this lease",
+      "requires_measurement": false
+    }
+  ],
+  "pass_count": 0,
+  "partial_count": 3,
+  "hold_count": 14,
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+}

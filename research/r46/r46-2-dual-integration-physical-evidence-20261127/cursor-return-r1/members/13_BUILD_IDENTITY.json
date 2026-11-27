@@ -1,0 +1,19 @@
+{
+  "object": "R46_2_R1_BUILD_IDENTITY_READ_ONLY",
+  "observed_utc": "2026-11-27T11:22:59Z",
+  "apk_bytes": 23008509,
+  "apk_sha256": "99bc2fabdc05ace81e4a90b6e67192d179f20744b904ca994d57b68bcf7dc775",
+  "signer_dn": "C=US, O=Android, CN=Android Debug",
+  "signer_cert_sha256": "034a69d80f766e48ea68768f124af7294f35da48f7e065cef15bf2a5c2d44a23",
+  "install": "NO",
+  "raw_identity_file": [
+    "APK_PATH=C:\\omega_bridge\\Perfect Final Version\\nexus-real\\nexus-mobile\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "APK_BYTES=23008509",
+    "APK_SHA256=99bc2fabdc05ace81e4a90b6e67192d179f20744b904ca994d57b68bcf7dc775",
+    "APK_MTIME_UTC=2026-11-27T10:43:13.2163153Z",
+    "APKSIGNER_PRESENT=YES",
+    "APKSIGNER_VERIFY_SNIPPET=Signer #1 certificate DN: C=US, O=Android, CN=Android Debug  | Signer #1 certificate SHA-256 digest: 034a69d80f766e48ea68768f124af7294f35da48f7e065cef15bf2a5c2d44a23  | Signer #1 certificate SHA-1 digest: 83fa2d6f06efb58397c99d824b043dc7eb996649  | Signer #1 certificate MD5 digest: 64ac942aaba3ab8e9bf86f0bebd682f0  | ",
+    "SOURCE|8722|d90cda4a28a1d0f5ab47f31be2a57172bff88f117a514d728ff0be66d733e87d|C:\\omega_bridge\\Perfect Final Version\\nexus-real\\nexus-mobile\\app\\src\\main\\java\\com\\nexusomega\\maps\\sensor\\R45EvidenceLayerAdapters.kt",
+    "SOURCE|3961|be2ab6be9adff22ada0e4b825f3f51435eed1fbb72eafa85957b77220b282e79|C:\\omega_bridge\\Perfect Final Version\\nexus-real\\nexus-mobile\\app\\src\\test\\java\\com\\nexusomega\\maps\\sensor\\R45EvidenceLayerAdaptersTest.kt"
+  ]
+}

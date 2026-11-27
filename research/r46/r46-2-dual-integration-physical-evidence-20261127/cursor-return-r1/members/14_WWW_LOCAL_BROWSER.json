@@ -1,0 +1,25 @@
+{
+  "object": "R46_2_R1_WWW_LOCAL_BROWSER",
+  "observed_utc": "2026-11-27T11:22:59Z",
+  "out_index_bytes": 77166,
+  "out_index_sha256": "e9b3c5748b3a99a1fa7ccdaee21e58cf9b3e94de19dfaa599f1f625ddb3c5c8c",
+  "local_http": "PASS_200_127_0_0_1_8768",
+  "www_live_write": "NO",
+  "hostinger": "NO",
+  "rollback_prep": "LOCAL_ONLY",
+  "bodytwin_validated": false,
+  "lines": [
+    "FILE_BYTES=77166",
+    "FILE_SHA256=e9b3c5748b3a99a1fa7ccdaee21e58cf9b3e94de19dfaa599f1f625ddb3c5c8c",
+    "MARKER_BODYTWIN=YES",
+    "MARKER_VALIDATED_TOKEN=NO",
+    "MARKER_VALIDATED_NO=SCAN",
+    "MARKER_HOLD=YES",
+    "MARKER_PANEL=YES",
+    "LOCAL_HTTP_STATUS=200",
+    "LOCAL_HTTP_BYTES=77166",
+    "LOCAL_HTTP_HOST=127.0.0.1:8768",
+    "LOCAL_HTTP_PASS=YES",
+    "LOCAL_BROWSER_VERDICT=PASS_LOCAL_HTTP_AND_MARKERS"
+  ]
+}

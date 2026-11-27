@@ -1,0 +1,96 @@
+{
+  "source": {
+    "pr": 385,
+    "head": "3514578f2b31510dbdca49640661c76e70bc541d",
+    "path": "research/r39/oppo-controlled-rotation-expert-prep-20261122/06_R39_MACHINE_EXPERT_RETURN_AND_PHYSICAL_GATE_CONTRACT.json",
+    "owner_contract": "research/r39/oppo-controlled-rotation-expert-prep-20261122/04_R39_OWNER_CONSENT_RIG_CUSTODY_AND_STOP_READINESS.md",
+    "readback": "SOURCE_EXACT_NAMES_READ",
+    "r40_matrix_pr": 391,
+    "r41_issue": 395
+  },
+  "gates": [
+    {
+      "gate": "SOURCE_BUILD_SIGNED",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "OWNER_ONE_SHOT_APPROVAL",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "STOP_DEADLINE_REPAIR",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "INDEPENDENT_ANGLE_REFERENCE",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "SENSOR_FRAME_AND_UNITS",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "MONOTONIC_EVENT_CLOCK",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "RATE_REQUESTED_VS_ACTUAL",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "REAL_EXISTING_CONSUMER_OR_NOT_CONNECTED",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "PRIVATE_ORIGINAL_RECEIVER",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "INDEPENDENT_SECOND_SOURCE",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "NO_HUMAN_BODY_CLAIMS",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "NO_PUBLIC_PRIVATE_CAS_LEAK",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "SOURCE_MANIFEST_27_OF_27_OR_SOURCE_GAP",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    },
+    {
+      "gate": "R38_T21_TO_T28_EXECUTION_SOURCE",
+      "state": "OPEN_OR_HOLD_PENDING_CURRENT_EVIDENCE",
+      "evidence": null
+    }
+  ],
+  "device": "CPH2219 candidate, actual identity unverified",
+  "channels": [
+    "TYPE_ACCELEROMETER",
+    "TYPE_GYROSCOPE"
+  ],
+  "protocol": "ALT_A candidate non-body rigid rig; stationary baseline and controlled roll; exact rate/duration/reference not yet frozen",
+  "alt_d": "DO_NOT_RUN_ACTIVE",
+  "one_shot": "REQUIRES_SEPARATE_EXACT_OWNER_APPROVAL",
+  "new_capture": false,
+  "apk_install": false,
+  "hostinger_write": false,
+  "public_raw": false,
+  "notes": "No hard gate passes inferred from ADB or owner intent. Do not manufacture pre-capture actual rate; explicit staged amendment if required. No serial or private digest in public return."
+}

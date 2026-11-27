@@ -1,0 +1,45 @@
+{
+  "object": "R46_2_ADB_PREFLIGHT_READ_ONLY",
+  "observed_utc": "2026-11-27T10:47:06Z",
+  "operator_reported_adb_enabled": true,
+  "adb_daemon": "STARTED",
+  "transport": "WIRELESS_TLS_CONNECT",
+  "devices_attached": 1,
+  "device_list": [
+    {
+      "serial": "adb-93bd1037-WQ21VM._adb-tls-connect._tcp",
+      "state": "��d\u0000e\u0000v\u0000i\u0000c\u0000e\u0000\n\u0000\n\u0000",
+      "product": "CPH2219EEA",
+      "model": "��C\u0000P\u0000H\u00002\u00002\u00001\u00009\u0000\n\u0000\n\u0000"
+    }
+  ],
+  "selected_device": "adb-93bd1037-WQ21VM._adb-tls-connect._tcp",
+  "model_observed": "��C\u0000P\u0000H\u00002\u00002\u00001\u00009\u0000\n\u0000\n\u0000",
+  "device_codename": "��O\u0000P\u00004\u0000F\u00001\u00001\u0000L\u00001\u0000\n\u0000\n\u0000",
+  "android_release": "��1\u00003\u0000\n\u0000\n\u0000",
+  "sdk": "��3\u00003\u0000\n\u0000\n\u0000",
+  "display_id": "��C\u0000P\u0000H\u00002\u00002\u00001\u00009\u0000_\u00001\u00001\u0000_\u0000F\u0000.\u00008\u00006\u0000\n\u0000\n\u0000",
+  "package_com_nexusomega_maps": {
+    "installed": true,
+    "versionName": "1.3.11-alarm-identity-l1-vc15",
+    "versionCode": 15,
+    "minSdk": 26,
+    "targetSdk": 35,
+    "lastUpdateTime": "2026-11-01 19:52:14",
+    "codePath_present": true,
+    "signature_digest_short": "838e5094"
+  },
+  "sensors_capability_meta_only": {
+    "accelerometer": "icm4x6xx Accelerometer Non-wakeup | TDK-Invensense",
+    "gyroscope": "icm4x6xx Gyroscope Non-wakeup | TDK-Invensense",
+    "stream_capture": false,
+    "class": "CAPABILITY_METADATA_DUMPSYS_ONLY"
+  },
+  "storage_data_use_pct": "34%",
+  "class": "PASS_ADB_READ_ONLY_IDENTITY_AND_PACKAGE_C1",
+  "apk_install": false,
+  "sensor_start": false,
+  "new_capture": false,
+  "blocker": null,
+  "next_required": "GATES_14_EVIDENCE_THEN_OWNER_ONE_SHOT_BEFORE_NEW_CAPTURE"
+}

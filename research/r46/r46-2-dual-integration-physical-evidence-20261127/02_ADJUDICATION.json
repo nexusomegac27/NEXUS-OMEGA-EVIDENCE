@@ -1,0 +1,46 @@
+{
+  "parent_order": {
+    "issue": 465,
+    "pr": 466,
+    "head": "d3d952ce4e02086ff6ee3c7b9f92af5afbd9093e"
+  },
+  "return": {
+    "pr": 467,
+    "head": "2198a210310500d9ff209eff7ff834c3a194b7ea",
+    "ack": 7214502897,
+    "bytes": 12306,
+    "sha256": "7abb005b254033da360ff600397efcc4423cfdf46e2bb71e301408d510140e5c",
+    "reported_typo": "7abb005b254033da360ff600397efcc4423cfdf46e2bb71e391408d510140e5c",
+    "sidecar_sha256": "2de8cfc1ec697f1af17bbba62d565daa9430d5270ad99eaeabac0ad4b8c54a1a",
+    "crc": "15/15",
+    "manifest_sha256": "95f60c01584649651cec9897a077b0850b24d234e0d03c1e315fe3610796e4a1",
+    "manifest_rows": 16,
+    "matched": 14,
+    "missing": "10_PACKAGE_RECEIPT.json",
+    "bad_selfhash": "99_SHA256SUMS.txt",
+    "present_nonmanifest_payloads": "14/14 MATCH",
+    "local_uploaded_and_prior_remote_sha": "MATCH",
+    "verdict": "PASS_WITH_MATERIAL_CAVEATS_C1_CONNECTIVITY_PREP_ONLY",
+    "contract": "11/11 producer reported",
+    "e2e": "11/11 producer reported",
+    "executable_harness": "ABSENT_IN_ZIP",
+    "historical_gap_rows": "14 generic placeholders",
+    "historical_repair_rows": "8 generic placeholders",
+    "independent_replay": "NOT_ESTABLISHED"
+  },
+  "operator": "R46-2 approved, ADB enabled reported, physical data required",
+  "scope": "read-only device preflight + local integration/build + permitted historical replay + physical gate preparation; exact new capture/install/live write not granted",
+  "walls": {
+    "physical14": "HOLD_PENDING_EVIDENCE",
+    "alt_d": "DO_NOT_RUN",
+    "E23": "HOLD",
+    "W1": "OPEN",
+    "B01_B05": "OPEN",
+    "formal_gate_credit": "NONE",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "bodytwin_validated": false,
+    "claim_ceiling": "C1_DESCRIPTIVE_ONLY"
+  }
+}
