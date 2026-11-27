@@ -1,0 +1,115 @@
+{
+  "register": "MISTRAL/VIBE new design-only controls for R46-3 return, nonadditive historical",
+  "designs": [
+    {
+      "id": "R46-3-N21",
+      "test": "ULP-scaled verification tolerance replaces fixed 1e-12 absolute tolerance (E2 executed FLAGGED at this magnitude; blind spot exists only below ~1e-14 relative)",
+      "formal": "NOT_RUN",
+      "basis": "E1/E2/E3 executed; honest deviation documented"
+    },
+    {
+      "id": "R46-3-N22",
+      "test": "Unicode transport fidelity probe for order/return text files",
+      "formal": "NOT_RUN",
+      "basis": "D7: 3/8 order members byte-integrity unresolved"
+    },
+    {
+      "id": "R46-3-N23",
+      "test": "text-level vs byte-level receipt distinction enforced",
+      "formal": "NOT_RUN",
+      "basis": "C4/D7"
+    },
+    {
+      "id": "R46-3-N24",
+      "test": "Jensen-consistent two-point distribution test for residual metrics",
+      "formal": "NOT_RUN",
+      "basis": "W3"
+    },
+    {
+      "id": "R46-3-N25",
+      "test": "local-g vs bias/scale conflation bound check",
+      "formal": "NOT_RUN",
+      "basis": "W4"
+    },
+    {
+      "id": "R46-3-N26",
+      "test": "ddof declaration requirement for any reported SD",
+      "formal": "NOT_RUN",
+      "basis": "W5"
+    },
+    {
+      "id": "R46-3-N27",
+      "test": "axis-covariance invisibility check for magnitude-only claims",
+      "formal": "NOT_RUN",
+      "basis": "W7"
+    },
+    {
+      "id": "R46-3-N28",
+      "test": "bias-vs-rotation ambiguity check for gyro claims",
+      "formal": "NOT_RUN",
+      "basis": "W8"
+    },
+    {
+      "id": "R46-3-N29",
+      "test": "ordering-invariance check for temporal claims",
+      "formal": "NOT_RUN",
+      "basis": "W9"
+    },
+    {
+      "id": "R46-3-N30",
+      "test": "gap-burst blindness check for <=4 consecutive losses",
+      "formal": "NOT_RUN",
+      "basis": "W10"
+    },
+    {
+      "id": "R46-3-N31",
+      "test": "aggregate compression disclosure (events vs aggregates)",
+      "formal": "NOT_RUN",
+      "basis": "W11"
+    },
+    {
+      "id": "R46-3-N32",
+      "test": "SO(3)-invariance statement requirement for orientation claims",
+      "formal": "NOT_RUN",
+      "basis": "W6"
+    },
+    {
+      "id": "R46-3-N33",
+      "test": "producer-vs-independent execution labeling (synthetic vs raw replay)",
+      "formal": "NOT_RUN",
+      "basis": "W12"
+    },
+    {
+      "id": "R46-3-P05",
+      "test": "positive ULP-scaled comparator accepts genuine values and rejects ULP-scale tampering",
+      "formal": "NOT_RUN",
+      "basis": "E1/E3 executed; comparator design"
+    },
+    {
+      "id": "R46-3-P06",
+      "test": "positive transport round-trip probe with recorded hashes (ASCII and Unicode payload)",
+      "formal": "NOT_RUN",
+      "basis": "D2 readback executed for ASCII; Unicode probe NOT_RUN"
+    },
+    {
+      "id": "R46-3-P07",
+      "test": "positive compression disclosure format check (aggregates vs events)",
+      "formal": "NOT_RUN",
+      "basis": "W11 executed; format design"
+    }
+  ],
+  "executed_reference": "witnesses W1-W12 and error cases E1-E3 executed as shipped (05_RESULTS_R0.json); these carry NO formal gate credit",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true,
+  "nonadditive": true
+}

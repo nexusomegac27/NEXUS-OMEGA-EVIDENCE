@@ -1,0 +1,136 @@
+{
+  "matrix_version": "R0",
+  "expert": "MISTRAL_VIBE",
+  "generated_utc_local": "2026-11-27T13:26:56.515Z",
+  "claim_ceiling": "C1_DESCRIPTIVE_ONLY",
+  "rows": [
+    {
+      "id": "M01",
+      "finding": "A1/W1 rates bit-exact, requested != effective",
+      "module": "NEXUS_APP producer aggregation",
+      "acceptance_requirement": "AR1",
+      "falsifier": "F1",
+      "limits": "aggregate only; no raw"
+    },
+    {
+      "id": "M02",
+      "finding": "A2/W2 residual identity abs(mean-g0), 96 ULP",
+      "module": "NEXUS_APP producer aggregation",
+      "acceptance_requirement": "AR2",
+      "falsifier": "F2",
+      "limits": "rounded mean only"
+    },
+    {
+      "id": "M03",
+      "finding": "A3/W3 Jensen lower bound, gap > 0",
+      "module": "NEXUS_APP statistics",
+      "acceptance_requirement": "AR2",
+      "falsifier": "F2",
+      "limits": "two-point construction"
+    },
+    {
+      "id": "M04",
+      "finding": "A4/W4 local-g vs bias/scale conflation",
+      "module": "OPPO measurement environment",
+      "acceptance_requirement": "AR2",
+      "falsifier": "F2",
+      "limits": "needs independent local-g reference"
+    },
+    {
+      "id": "M05",
+      "finding": "A5/W5 ddof ambiguity factor",
+      "module": "NEXUS_APP statistics",
+      "acceptance_requirement": "AR2",
+      "falsifier": "F2",
+      "limits": "definition UNKNOWN stays UNKNOWN"
+    },
+    {
+      "id": "M06",
+      "finding": "A6/W10 5x-median gap rule blind to <=4 bursts",
+      "module": "NEXUS_APP producer loss detection",
+      "acceptance_requirement": "AR1/AR4",
+      "falsifier": "F5",
+      "limits": "synthetic construction"
+    },
+    {
+      "id": "M07",
+      "finding": "A7 no phase synchronization checkable",
+      "module": "OPPO measurement",
+      "acceptance_requirement": "AR4",
+      "falsifier": "F4",
+      "limits": "timestamps absent (SOURCE_GAP)"
+    },
+    {
+      "id": "M08",
+      "finding": "A8 units/frame conditional on app mapping",
+      "module": "NEXUS_APP sensor mapping",
+      "acceptance_requirement": "AR3",
+      "falsifier": "F3",
+      "limits": "PRODUCER_REPORTED only"
+    },
+    {
+      "id": "M09",
+      "finding": "A9/W11 12 aggregates vs 14,018 events",
+      "module": "BodyTwin presentation",
+      "acceptance_requirement": "AR5",
+      "falsifier": "F5",
+      "limits": "disclosure design only"
+    },
+    {
+      "id": "M10",
+      "finding": "B2/W6 SO(3)-invariance of magnitude (round-off level)",
+      "module": "BodyTwin presentation (pose inference)",
+      "acceptance_requirement": "AR3",
+      "falsifier": "F3",
+      "limits": "deterministic rotations"
+    },
+    {
+      "id": "M11",
+      "finding": "B3/W7 axis covariance invisible",
+      "module": "BodyTwin presentation",
+      "acceptance_requirement": "AR3",
+      "falsifier": "F3",
+      "limits": "deterministic synthetic"
+    },
+    {
+      "id": "M12",
+      "finding": "B4/W9 temporal order invisible in moments",
+      "module": "BodyTwin presentation (drift/whiteness claims)",
+      "acceptance_requirement": "AR4",
+      "falsifier": "F4",
+      "limits": "8-element toy multiset"
+    },
+    {
+      "id": "M13",
+      "finding": "B5/W8 gyro bias vs rotation ambiguity",
+      "module": "OPPO measurement + NEXUS_APP",
+      "acceptance_requirement": "AR4",
+      "falsifier": "F4",
+      "limits": "needs independent angle reference"
+    },
+    {
+      "id": "M14",
+      "finding": "B6 one-pose scale/bias non-uniqueness",
+      "module": "NEXUS_APP calibration module",
+      "acceptance_requirement": "AR2",
+      "falsifier": "F2",
+      "limits": "affine one-pose model only"
+    },
+    {
+      "id": "M15",
+      "finding": "C3/C4 receipts text-level, live feed trust label",
+      "module": "BodyTwin presentation (live)",
+      "acceptance_requirement": "AR5",
+      "falsifier": "F5",
+      "limits": "text transport caveat D7"
+    },
+    {
+      "id": "M16",
+      "finding": "D7 non-ASCII transport infidelity",
+      "module": "transfer pipeline (all lanes)",
+      "acceptance_requirement": "AR5",
+      "falsifier": "F5",
+      "limits": "probe design N22/P06 NOT_RUN"
+    }
+  ]
+}
