@@ -1,0 +1,81 @@
+{
+  "source_sha256": "3aa817dd72ce9563a32c1b83ae78130d9c8bc0105d2badc03787f5121544eefe",
+  "result": {
+    "checks": {
+      "aggregate_same": true,
+      "different_lag": true,
+      "same_norm_different_vector": true,
+      "one_pose_scale_bias_ambiguous": true,
+      "mean_abs_not_abs_mean": true,
+      "acc_rate_match": true,
+      "gyro_rate_match": true
+    },
+    "synthetic": {
+      "one": {
+        "n": 8,
+        "mean": 0,
+        "population_sd": 1,
+        "rate": 99.99999999999999
+      },
+      "two": {
+        "n": 8,
+        "mean": 0,
+        "population_sd": 1,
+        "rate": 99.99999999999999
+      },
+      "lag_product_normalized_A": -1,
+      "lag_product_normalized_B": 0.7142857142857143,
+      "v1": [
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          10
+        ]
+      ],
+      "v2": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ]
+      ],
+      "models": [
+        {
+          "scale": 1,
+          "bias": 0,
+          "output_at_10": 10,
+          "output_at_minus10": -10
+        },
+        {
+          "scale": 0.9,
+          "bias": 1,
+          "output_at_10": 10,
+          "output_at_minus10": -8
+        }
+      ],
+      "ar": {
+        "abs_mean_residual": 0,
+        "mean_abs_residual": 0.09999999999999964
+      }
+    },
+    "aggregate_arithmetic": {
+      "acc": 100.15353299112422,
+      "gyro": 100.15354838260195,
+      "median_reciprocal": 100.1533648475911,
+      "mean_minus_conventional_g": 0.026088001091459034
+    },
+    "limits": "Synthetic scalar ordering and ACC-only vector witnesses; no joint physically realized trajectory, no raw replay, population SD for toy only; reported raw ddof unknown. No formal or physical gate credit."
+  },
+  "scope": "AXIOM_EXECUTED_SYNTHETIC_AND_AGGREGATE_ARITHMETIC",
+  "formal_credit": false
+}
