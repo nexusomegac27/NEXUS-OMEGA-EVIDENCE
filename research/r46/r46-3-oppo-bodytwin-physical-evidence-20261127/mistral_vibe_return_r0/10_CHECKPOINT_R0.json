@@ -17,7 +17,8 @@
   },
   "honest_deviations": [
     "W6 max norm error is double-precision round-off level, not exactly 0 (recorded value in 05_RESULTS_R0.json).",
-    "E2 executed FLAGGED, not the intended MISSED: at magnitude ~100.15 a 1e-13 relative fault is ~1.0e-11 absolute, above the fixed 1e-12 tolerance. Witness file hash-frozen, unmodified; deviation documented in 05_RESULTS_R0.json error_case_observations."
+    "E2 executed FLAGGED, not the intended MISSED: at magnitude ~100.15 a 1e-13 relative fault is ~1.0e-11 absolute, above the fixed 1e-12 tolerance. Witness file hash-frozen, unmodified; deviation documented in 05_RESULTS_R0.json error_case_observations.",
+    "W7 magnitude SD differs by 1 ULP between the two constructions (intended identical); W3 gap = 0 attained because both two-point support points lie above g0 (bound strictness requires spread across g0)."
   ],
   "bindings": {
     "order_branch": "axiom/r46-3-oppo-bodytwin-physical-evidence-20261127-c1",
@@ -45,5 +46,9 @@
       "R46_3_MISTRAL_VIBE_RETURN_R0.zip.sha256",
       "R46_3_MISTRAL_VIBE_RETURN_R0.zip.b64"
     ]
+  },
+  "corrections_commit": {
+    "note": "02_RETURN_MAIN.md A3/B3 wording, 06_INTEGRATION_MATRIX M03/M11 wording, this checkpoint honest_deviations extended",
+    "applied_utc_local": "2026-11-27T13:28:54.592Z"
   }
 }

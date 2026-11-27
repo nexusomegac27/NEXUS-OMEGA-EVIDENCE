@@ -22,7 +22,7 @@
     },
     {
       "id": "M03",
-      "finding": "A3/W3 Jensen lower bound, gap > 0",
+      "finding": "A3/W3 Jensen lower bound (gap = 0 attained in symmetric two-point case; lower bound in general)",
       "module": "NEXUS_APP statistics",
       "acceptance_requirement": "AR2",
       "falsifier": "F2",
@@ -90,7 +90,7 @@
       "module": "BodyTwin presentation",
       "acceptance_requirement": "AR3",
       "falsifier": "F3",
-      "limits": "deterministic synthetic"
+      "limits": "deterministic synthetic; magnitude SD identical only up to 1 ULP between constructions"
     },
     {
       "id": "M12",
