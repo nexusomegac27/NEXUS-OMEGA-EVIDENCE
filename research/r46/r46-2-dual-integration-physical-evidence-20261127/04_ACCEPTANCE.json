@@ -1,0 +1,118 @@
+{
+  "designs": [
+    {
+      "id": "R46-2-01",
+      "test": "source/manifest append-only correction",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-02",
+      "test": "original harness source and replay",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-03",
+      "test": "exact ADB device selection read-only",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-04",
+      "test": "installed package identity vs source",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-05",
+      "test": "local APK build and signer",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-06",
+      "test": "source-safe rollback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-07",
+      "test": "STOP deadline and batching regressions",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-08",
+      "test": "typed private intake and recursive projection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-09",
+      "test": "monotonic ns/cross-runtime fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-10",
+      "test": "historic physical source replay or explicit gap",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-11",
+      "test": "physical 14 gate evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-12",
+      "test": "exact one-shot packet",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-13",
+      "test": "WWW source preserving routes",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-14",
+      "test": "local browser mobile/desktop",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-15",
+      "test": "source age vs producer tick",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-16",
+      "test": "no public private fields",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-17",
+      "test": "no data/unknown/stale",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-18",
+      "test": "independent local resource readback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-19",
+      "test": "duplicate conflict before authority",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-20",
+      "test": "offline failure and rollback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R46-2-21",
+      "test": "claim fidelity scope",
+      "status": "NOT_RUN"
+    }
+  ],
+  "outputs": {
+    "app": "LOCAL_BUILD_CANDIDATE_OR_HOLD",
+    "www": "LOCAL_BROWSER_VERIFIED_CANDIDATE_OR_HOLD",
+    "adb": "VERIFIED_READ_ONLY_OR_HOLD",
+    "physical": "READY_FOR_OWNER_ONE_SHOT_OR_HOLD",
+    "deployment": "NOT_AUTHORIZED",
+    "capture": "NOT_AUTHORIZED_IN_THIS_ORDER"
+  },
+  "no_gate_promotion": true
+}
