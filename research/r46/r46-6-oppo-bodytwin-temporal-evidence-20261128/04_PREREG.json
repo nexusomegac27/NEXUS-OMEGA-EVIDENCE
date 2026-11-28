@@ -1,0 +1,19 @@
+{
+  "scope": "exploratory synthetic witnesses fixed in same tool call before execution; no external timestamp",
+  "seed": 46606,
+  "trials": 6000,
+  "N": 100,
+  "rho": 0.7,
+  "checks": [
+    "constant speed offset phase equivalence",
+    "variable speed offset identifiable in quadratic toy",
+    "one anchor skew ambiguous",
+    "two anchors identify exact affine toy",
+    "NTP equal transcript with distinct offset",
+    "arrival order differs from event order",
+    "finite AR1 squared mean variance ratio empirical within 12%",
+    "BigInt ns exact",
+    "age statuses"
+  ],
+  "limitations": "No actual filter or synchronization of physical devices. No statistical superiority or physical validation."
+}

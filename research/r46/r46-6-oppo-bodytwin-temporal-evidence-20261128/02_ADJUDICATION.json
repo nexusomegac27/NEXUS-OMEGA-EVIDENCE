@@ -1,0 +1,154 @@
+{
+  "parent": {
+    "issue": 479,
+    "pr": 480,
+    "head": "37f186202a288f8ed534c4326c7bf4c5064b8a0a",
+    "tree": "d91bcc2bd809dada98b17ae37b0c1f25e061c908",
+    "zip_bytes": 32428,
+    "sha256": "2dc209d7d5716cb888aa0d292cc49e10e7fdc0cd10c88a38b54ca3aec560bd4e",
+    "embedded_match": true
+  },
+  "intake": [
+    {
+      "role": "parent text",
+      "bytes": 15757,
+      "sha256": "341f26130788bd901ea7f3ecf300059892ca8934ad213519ecad3849aa93a5e1"
+    },
+    {
+      "role": "expert wrapper",
+      "bytes": 111250,
+      "sha256": "a654872e4a9cb14324f8888f315ad1569312f0a93c772e3f156242a2d2427f26",
+      "crc": "6/6",
+      "inner": {
+        "bytes": 101207,
+        "sha256": "3232f9b232b792e931edaf320720c7e0603b0f778e235025cf8d2e0dfeec60ed",
+        "crc": "38/38",
+        "manifest": "36/36",
+        "manifest_sha": "dc487f896cc13eb3d6e72c55f91d40ccc5d715f66f5af882e7a7e1bc35096214",
+        "sidecar": "MATCH"
+      }
+    },
+    {
+      "role": "reference fusion stack",
+      "bytes": 326227,
+      "sha256": "84da3aca4c85cfb298bf8a7b6225c4d56f4f628262557b8145bcdbe1fd44732f",
+      "crc": "46/46",
+      "manifest": "36/36",
+      "manifest_sha": "0e8a6b7480e21cc2e679402c5b3ea4c40ee228b1d2c889bbc909d01119343b73"
+    },
+    {
+      "role": "AutoCLAW wrapper",
+      "bytes": 567283,
+      "sha256": "060c6f571b15baf1de8bfa1c90e214b8b7b4ea08284ba4bdcbfe3a41d1606daa",
+      "crc": "5/5",
+      "inner": {
+        "bytes": 435362,
+        "sha256": "14868c5db2b037e374987f0bdf546edb3ce288309bc089fe9370e6b6713e9f47",
+        "crc": "47/47",
+        "manifest": "42/42",
+        "manifest_sha": "4b4f379347d9194e02e03f5b7ff59913b1eef76f248d4a8b4f6bffd7e4d4690e",
+        "sidecar": "MATCH"
+      }
+    },
+    {
+      "role": "Grok BCI crossvalidation",
+      "bytes": 16188,
+      "sha256": "fc4dc5ff16f7f10c66aa016c2ce4eb148befc9e852ceb4c29f77c4c6d24669c7",
+      "scope": "document only; DeepSeek original absent; no full replay; WP1-4 structural only"
+    }
+  ],
+  "filter_reports": {
+    "expert": {
+      "runs": 120,
+      "steps": 3000,
+      "coverage": {
+        "EKF": 0.001477777777777778,
+        "UKF_A": 0.001561111111111111,
+        "SRUKF_A": 0.001561111111111111,
+        "UKF3C": 0.8392277777777778
+      },
+      "consider_mean_nees": 213.6397240176213,
+      "linear_oracle_reported_pass": "REJECTED_STRICT_EQUIVALENCE",
+      "source_sha": "fc3f7b1942ba8dc8125011521deb3b0d4c99c86f1ef158a5a41379a0589c21dc",
+      "direct_probe": {
+        "steps": 10,
+        "dt": 0.01,
+        "omega": 0.2,
+        "q_th": 0.000001,
+        "q_b": 0.000001,
+        "z": "np.linspace(.1,.2,10)",
+        "r": 0.000016,
+        "kf_final": [
+          0.19334332,
+          -0.76234183
+        ],
+        "ukf_final": [
+          0.19325302,
+          -0.75540984
+        ],
+        "sr_final": [
+          0.15977762,
+          -0.01848588
+        ],
+        "max_abs_ukf": 0.0069319903592716114,
+        "max_abs_sr": 0.7438559499161302,
+        "one_step_sr_max": 0.0003888698848008715,
+        "defects": [
+          "sqrt(SIG_REF) instead of SIG_REF in linear SR noise factor",
+          "unpropagated points in conventional Pxy",
+          "measurement sigma set excludes additive process noise; test exact linear oracle",
+          "consider hybrid HP instead of Pxy; not exact nonlinear moment update"
+        ]
+      }
+    },
+    "reference_stack": {
+      "runs": 100,
+      "steps": 600,
+      "scope": "scalar matched nominal, producer only",
+      "source_sha": "d5a60c577b3183ddc20d8796b340e9ac54a4a6fbc28790ef150851ec14753b6c",
+      "sr_coverage": 0.9505666666666667
+    },
+    "autoclaw": {
+      "runs": 300,
+      "steps": 400,
+      "scope": "range-bearing position, not OPPO tilt; KF direct position vs nonlinear different measurements; one-run null and vectorization unequal; no superiority",
+      "source_sha": "c0986c417634ea6d6b060fc6247ba4d7a5cdbf20dac95a1cf89b5e86bc018949",
+      "sr_coverage_pos": 1
+    }
+  },
+  "validator_probes": {
+    "expert": {
+      "sha": "e3a607ed1c0ff885d430ca3552abd9960258c4f5f4239b21801b18b04fa7e489",
+      "base": "schema fusion-evidence-v1 E1_RECONSTRUCTED CURRENT VERIFIED, fake source a*64 and registry made-up, ACC m/s^2 target tilt estimator v0 time_window empty",
+      "accepted": [
+        "baseline forged registry empty time",
+        "negative pre NIS and NaN post, dimension0 npost>npre",
+        "reference.bound arbitrary nested object",
+        "target arbitrary object",
+        "NO_DATA with numeric NIS",
+        "strict loader NaN"
+      ],
+      "typed_internal": "1x1 SPD covariance produces E_INTERNAL ValueError"
+    },
+    "reference_stack": {
+      "sha": "66d0d672d50aab409a1d93b20fad3509d8fb3d66516a50aec271d4453f3ef512",
+      "base": "positive()",
+      "accepted": [
+        "invalid source status",
+        "bool covariance",
+        "string covariance",
+        "nested unknown summary plus NaN",
+        "arbitrary clock",
+        "unknown top-level field"
+      ],
+      "exception": "level=[] TypeError"
+    }
+  },
+  "bci": {
+    "WP1": "consider design only, known uncertainty vs nonidentifiability",
+    "WP2": "separate statistical gating from effect gate, no causal evidence validator errors",
+    "WP3": "HAC mean uncertainty not full distribution test; no longevity transfer",
+    "WP4": "offline-first architecture not proof"
+  },
+  "limits": "Only selected original definitions executed via AST, no full expert benchmark/fuzz/receipt chain replay; no raw data or device execution; no PDF/DOCX review. Source references scoped abstracts and official documentation. No authenticated quorum or formal credit."
+}
