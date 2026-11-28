@@ -1,0 +1,105 @@
+{
+  "reference_sha256": "2e4a9a5a7518481dfb2cab1872facc592babb0367533b03c65a5e1efd7d6c171",
+  "prereg_sha256": "d72477579c9932c3efa4acc962d5a9efd448b3eddab020c01387eaaaa2e2b4cc",
+  "result": {
+    "checks": {
+      "constant_speed": true,
+      "variable_speed": true,
+      "one_anchor": true,
+      "two_anchors": true,
+      "ntp": true,
+      "replay": true,
+      "ar1_variance": true,
+      "ns": true,
+      "age": true
+    },
+    "phase_offset": {
+      "y": [
+        0.46,
+        2.46,
+        4.46,
+        6.46,
+        8.46
+      ],
+      "y2": [
+        0.46,
+        2.46,
+        4.46,
+        6.46,
+        8.46
+      ],
+      "offset": 0.03,
+      "absorbed_phase": 0.46,
+      "quadratic_recovered": 0.030000000000000582
+    },
+    "clock": {
+      "anchor0": [
+        10,
+        10
+      ],
+      "anchor100": [
+        110,
+        110.01
+      ],
+      "skew_example_ppm": 100
+    },
+    "ntp_worlds": [
+      {
+        "offset": 0,
+        "forward": 10,
+        "reverse": 10,
+        "t": [
+          0,
+          10,
+          12,
+          22
+        ]
+      },
+      {
+        "offset": 8,
+        "forward": 2,
+        "reverse": 18,
+        "t": [
+          0,
+          10,
+          12,
+          22
+        ]
+      }
+    ],
+    "replay": {
+      "ordered": {
+        "x": 2.125,
+        "P": 0.625
+      },
+      "arrival": {
+        "x": 1.7142857142857144,
+        "P": 0.42857142857142855
+      },
+      "scope": "late event naively processed at current time, not correct OOSM"
+    },
+    "AR1": {
+      "N": 100,
+      "M": 6000,
+      "rho": 0.7,
+      "exact_variance_factor": 2.883890811226451,
+      "expected_iid_mean_var": 0.02,
+      "expected_correlated_mean_var": 0.05767781622452902,
+      "empirical_iid_mean": 1.0039692782982668,
+      "empirical_correlated_mean": 1.0045891867761967,
+      "empirical_iid_var": 0.02081203191731973,
+      "empirical_correlated_var": 0.06065797864148248,
+      "empirical_ratio": 2.914563022123901
+    },
+    "ages": [
+      "FRESH",
+      "STALE",
+      "AMBIGUOUS",
+      "INVALID_FUTURE",
+      "UNKNOWN",
+      "INVALID"
+    ],
+    "limits": "Known quadratic motion toy; clocks exact synthetic; four-timestamp fixed-rate toy; stationary Gaussian AR1 independent trajectories; no HAC implementation or physical proof, no formal gate credit."
+  },
+  "formal_credit": false
+}

@@ -1,0 +1,188 @@
+{
+  "register": "R46-6 design-only controls",
+  "designs": [
+    {
+      "id": "R46-6-N01",
+      "test": "same clock numeric cross device",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N02",
+      "test": "one-anchor skew",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N03",
+      "test": "constant motion phase-offset gauge",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N04",
+      "test": "offset/path asymmetry",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N05",
+      "test": "clock reboot",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N06",
+      "test": "wall jump",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N07",
+      "test": "batch event vs arrival",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N08",
+      "test": "precision at 2^53",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N09",
+      "test": "invalid ns range",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N10",
+      "test": "nonmonotonic sequence",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N11",
+      "test": "late duplicate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N12",
+      "test": "conflicting duplicate",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N13",
+      "test": "causal tie ambiguity",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N14",
+      "test": "OOSM naive arrival",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N15",
+      "test": "future information leakage",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N16",
+      "test": "Q(dt) mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N17",
+      "test": "linear KF/SR R mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N18",
+      "test": "Pxy pre-propagation",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N19",
+      "test": "process noise sigma mismatch",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N20",
+      "test": "consider cross covariance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N21",
+      "test": "AR1 NIS iid invalid",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N22",
+      "test": "HAC same mean alternative",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N23",
+      "test": "gate selection statistics",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N24",
+      "test": "fake source registry",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N25",
+      "test": "missing clock/interval",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N26",
+      "test": "NaN JSON and invalid enum",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N27",
+      "test": "nested private placeholder",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-N28",
+      "test": "historical as live / 304 freshness",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P01",
+      "test": "positive independently timed anchors",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P02",
+      "test": "positive variable motion reference",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P03",
+      "test": "positive exact linear oracle",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P04",
+      "test": "positive bounded replay",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P05",
+      "test": "positive correlation-aware synthetic mean variance",
+      "formal": "NOT_RUN"
+    },
+    {
+      "id": "R46-6-P06",
+      "test": "positive typed abstention/age",
+      "formal": "NOT_RUN"
+    }
+  ],
+  "executed_reference": "9 checks separate",
+  "historical": {
+    "physical14": "0/14",
+    "canonical_negative": "0/24",
+    "quorum": "0/3",
+    "full_science": "0/10",
+    "alt_d": "ACTIVE",
+    "e23": "HOLD",
+    "w1": "OPEN",
+    "b01_b05": "OPEN",
+    "bodytwin_validated": false
+  },
+  "do_not_sum": true
+}
